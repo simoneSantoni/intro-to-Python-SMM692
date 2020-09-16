@@ -20,6 +20,8 @@ Presentation given in the 2020/21 induction week.
         * [Spyder](#spyder)
     * [Jupyter *](#jupyter-)
 * [Managing Python environment](#managing-python-environment)
+    * [Managing Python envs with Anaconda](#managing-python-envs-with-anaconda)
+* [Collaborative tools for coding](#collaborative-tools-for-coding)
 
 <!-- vim-markdown-toc -->
 
@@ -43,7 +45,7 @@ Installing a copy of Python on your machine is easy!
 
 # Interacting with Python
 
-There are several ways to interact with Python – let's avoid the boring ones.
+There are sePveral ways to interact with Python – let's avoid the boring ones.
 
 ## Interactive Python shell
 
@@ -112,3 +114,11 @@ freak?
 
 Want to do serious stuff with Python? Create a Python environment first.
 
+## Managing Python envs with Anaconda
+
++ using the GUI
++ from the terminal
+
+# Collaborative tools for coding
+
+Git(Hub) is your friend!
