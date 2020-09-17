@@ -1,6 +1,29 @@
 !_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
 !_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
-!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
-!_TAG_PROGRAM_NAME	Exuberant Ctags	//
-!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
-!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+Agenda	_0/python_walkthrough.md	/^# Agenda$/;"	c
+Atom	_0/python_walkthrough.md	/^### Atom$/;"	S
+Collaborative tools for coding	_0/python_walkthrough.md	/^# Collaborative tools for coding$/;"	c
+Editing Python scripts – text editors	_0/python_walkthrough.md	/^## Editing Python scripts – text editors$/;"	s
+Full-fledged IDEs	_0/python_walkthrough.md	/^## Full-fledged IDEs$/;"	s
+Getting started with Python	_0/python_walkthrough.md	/^# Getting started with Python$/;"	c
+How to get Python	_0/python_walkthrough.md	/^## How to get Python$/;"	s
+Interacting with Python	_0/python_walkthrough.md	/^# Interacting with Python$/;"	c
+Interactive IPython shell	_0/python_walkthrough.md	/^## Interactive IPython shell$/;"	s
+Interactive Python shell	_0/python_walkthrough.md	/^## Interactive Python shell$/;"	s
+Intro to Python, session #0 - README	_0/README.md	/^Intro to Python, session #0 - README$/;"	c
+Intro to Python, session #1 - README	_1/README.md	/^Intro to Python, session #1 - README$/;"	c
+Introduction to Python - SMM692	README.md	/^# Introduction to Python - SMM692$/;"	c
+Jupyter *	_0/python_walkthrough.md	/^## Jupyter *$/;"	s
+Managing Python environment	_0/python_walkthrough.md	/^# Managing Python environment$/;"	c
+Managing Python envs with Anaconda	_0/python_walkthrough.md	/^## Managing Python envs with Anaconda$/;"	s
+OS-specific considerations	_0/python_walkthrough.md	/^## OS-specific considerations$/;"	s
+PyCharm	_0/python_walkthrough.md	/^### PyCharm$/;"	S
+Python walk-through	_0/python_walkthrough.md	/^# Python walk-through$/;"	c
+Spyder	_0/python_walkthrough.md	/^### Spyder$/;"	S
+Vim/Neovim	_0/python_walkthrough.md	/^### Vim\/Neovim$/;"	S
