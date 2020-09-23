@@ -39,7 +39,7 @@ Installing a copy of Python on your machine is easy!
 ## OS-specific considerations
 
 + Python is a cross-platform software – i.e., the code is portable
-+ ... however, installing 'complex' Python packages – e.g., libraries that build on C++ 
++ ... however, installing 'complex' Python packages – e.g., libraries that build on C++
   libraries – in Windows is not a piece of cake:
   - Win users are warmly invited to install [WSL*](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 
@@ -122,3 +122,17 @@ Want to do serious stuff with Python? Create a Python environment first.
 # Collaborative tools for coding
 
 Git(Hub) is your friend!
+
+Advantages of using Git(Hub):
+
++ effortless, effective technology to share code with collaborators
++ every edit to the project is accountable and recorded – so, it is possible
+  to revert the project back to a target state
++ subscribers are notified as repos change - no need to spend time checking
+  for updates
+
+Some tips for Python newbies:
+
++ don't procrastinate – create your own GitHub account early in the process
++ start easy – install a graphical user interface to interact with GitHub.
+  [GitHub Desktop](https://desktop.github.com/) is a good option to start with
