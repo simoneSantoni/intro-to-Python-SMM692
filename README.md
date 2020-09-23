@@ -5,22 +5,26 @@ Materials for an introductory course on Python for social scientists.
 Below is the schema for the set of dirs & sub-dirs:
 
 ```{bash}
+.
 ├── LICENSE
 ├── README.md
-├── _0 (Python walk-through)
-│   └── README.md
-├── _1 (Python fundamentals, episode I)
-│   └── README.md
-├── _2 (Python fundamentals, episode II)
-│   └── README.md
-├── _3 (computation with Python)
-│   └── README.md
-├── _4 (data management within Python)
-│   └── README.md
+├── _0
+
+│   ├── README.md
+│   ├── collaborative_tools.md
+│   └── python_walkthrough.md
+├── _1
+│   ├── README.md
+│   └── python_objects.ipynb
+├── _2
+│   └── README.md
+├── _3
+│   └── README.md
+├── _4
+│   └── README.md
+├── requirements.txt
 ├── tags
 └── term
 
-5 directories, 9 files
+5 directories, 13 files
 ```
-
-
