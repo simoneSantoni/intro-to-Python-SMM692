@@ -26,5 +26,5 @@ Below is the schema for the set of dirs & sub-dirs:
 ├── tags
 └── term
 
-5 directories, 13 files
+5 directories, 12 files
 ```
