@@ -1,22 +1,27 @@
-# %% markdown
-#
-# # Intro to Python objects
-#
-# Agenda:
-#
-# + scalar objects
-# +
-#
-# %% markdown
-#
-# # Scalar objects:
-#
-# + integers
-# + floats
-# + Boolean values
-# + None
-#
-# %% codecell
+#/usr/env/bin python3
+# -*- encoding utf-8 -*-
+
+"""
+-----------------------------------------------------------------------------
+    objects.py  |  Python objects
+-----------------------------------------------------------------------------
+
+Auhor     :
+
+# Intro to Python objects
+
+Agenda:
+
+    + scalar objects
+      + integers
+      + floats
+      + Boolean values
+      + None
+    +
+
+"""
+
+# %% examples of scalar objects
 
 # example of integer
 I = 2
@@ -33,7 +38,7 @@ B = True
 # ... and the 'None' type
 
 
-# %% codecell
+# %% operators involving scalar objects
 
 # operators on objects of type 'int' and 'float'? There we go:
 # --+ sum; it returns an int if addends are int, float otherwise
