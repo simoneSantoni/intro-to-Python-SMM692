@@ -1,4 +1,4 @@
-# Tutorial # 3 - README
+# Tutorial # 3, technical and scientific computation - README
 
 Synopsis: this session concerns the topic of technical and scientific computations with Python, especially, Numpy & Scipy.
 

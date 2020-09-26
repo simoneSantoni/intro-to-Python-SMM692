@@ -1,4 +1,4 @@
-# Tutorial # 4 - README
+# Tutorial # 4, data management - README
 
 Synopsis: this session concerns data management with Pandas.
 
