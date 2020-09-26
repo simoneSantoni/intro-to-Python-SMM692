@@ -10,8 +10,9 @@ Auhor  : simone.santoni.1@city.ac.uk
 
 Agenda :
 
-    + lists:
-      -
+    + tuples
+      - initializing a tuple
+      - changing a tuple?
 
 """
 
