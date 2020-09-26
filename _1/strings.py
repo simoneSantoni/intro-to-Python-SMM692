@@ -127,8 +127,10 @@ S.replace('Diplo', 'ESTA.')
 'hellow world!'.split(' ')
 # 'join' is the inverse of 'split'
 ' '.join(['hello', 'world!'])
-# 'isalpha' returns True if all characters in the string are alphabetic and #    the string is not empty; otherwise return False.
+# 'isalpha' returns True if all characters in the string are alphabetic and
+#    the string is not empty; otherwise return False.
 'hello'.isalpha()
-# 'isdigit' returns True if all characters in the string are digits and the #    string is not empty; otherwise return False.
+# 'isdigit' returns True if all characters in the string are digits and the
+#    string is not empty; otherwise return False.
 '123'.isalpha()
 '123'.isdigit()
