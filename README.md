@@ -9,13 +9,12 @@ Below is the schema for the set of dirs & sub-dirs:
 ├── LICENSE
 ├── README.md
 ├── _0
-
 │   ├── README.md
 │   ├── collaborative_tools.md
 │   └── python_walkthrough.md
 ├── _1
 │   ├── README.md
-│   └── python_objects.ipynb
+│   └── scalars.py
 ├── _2
 │   └── README.md
 ├── _3

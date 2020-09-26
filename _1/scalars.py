@@ -3,21 +3,18 @@
 
 """
 -----------------------------------------------------------------------------
-    objects.py  |  Python objects
+    scalars.py  |  Python objects
 -----------------------------------------------------------------------------
 
-Auhor     :
+Auhor  : simone.santoni.1@city.ac.uk
 
-# Intro to Python objects
-
-Agenda:
+Agenda :
 
     + scalar objects
-      + integers
-      + floats
-      + Boolean values
-      + None
-    +
+      - integers
+      - floats
+      - Boolean values
+      - None
 
 """
 
@@ -36,7 +33,7 @@ F = 0.5
 B = True
 
 # ... and the 'None' type
-
+None
 
 # %% operators involving scalar objects
 
@@ -55,16 +52,15 @@ I%F
 # --+ raising to the power
 F**I
 
-# %% markdown
-#
-# # Variables and assignments
-#
-# In the previous cells, we have associated objects with names:
-#
-# + we call this task 'assignment'
-# + the outcome of the task is variable
-#
-# **WARNING:** some names are reserved for Python keywords!! Don't use those
-#  keywords to name your variables
+# %%  variables and assignments
+'''
+In the previous cells, we have associated objects with names:
 
-# %% codecell
++ we call this task 'assignment'
++ the outcome of the task is variable
+
+**WARNING:** some names are reserved for Python keywords!! Don't use those
+ keywords to name your variables
+'''
+# e.g.:
+variable = I + F
