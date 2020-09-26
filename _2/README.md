@@ -1,4 +1,4 @@
-# Tutorial # 2, control flow – README
+# Tutorial # 2, control flow & iterators/loops – README
 
 Synopsis: mainly, this tutorial focuses on control flows and iterators/loops.
 The set of examples involve diverse iterable objects.
