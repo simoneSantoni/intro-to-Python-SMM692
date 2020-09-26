@@ -13,8 +13,7 @@ Agenda :
     + sets
       - what's a set?
       - initializing a new set
-      - sets: use cases
-      -
+      - sets: use cases & methods
 
 """
 
@@ -34,7 +33,7 @@ type(s)
 s = set(['a', 'b', 'c'])
 type(s)
 
-# %% sets: use cases
+# %% sets: use cases & methods
 
 """
 'set' objects have a wide range of methods corresponding to the properties of
