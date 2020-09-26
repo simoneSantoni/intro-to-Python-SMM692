@@ -14,6 +14,8 @@ Agenda :
       - definition – what's a dictionary?
       - initializing a dictionary
       - querying dictionary's data
+      - changing a dictionary's value(s)
+      - nested dictionaries
 
 """
 
@@ -60,6 +62,22 @@ values = d.values()
 # starting from the set of keys, it's easy to iterate over the dictionary
 for key in keys:
     print('Customer email: {}'.format(d[key]))
+
+# %% changing a dictionary's value(s)
+
+# I don't like playing with the contents of the dictionaries;
+#     if you really want to change the values of a dictionary don't forget
+#     to use keys as indices
+d['customer_0'] = 'unknown_email_address'
+d
+# --+ this doesn't produce the expected resul
+d[0] = 'my_email'
+d
+
+# there's also a dictionary method to update extant values
+d1 = {'customer_0': 'the_new_email@me.com'}
+d.update(d1)
+d
 
 # %% dictionaries nested in dictionaries
 
