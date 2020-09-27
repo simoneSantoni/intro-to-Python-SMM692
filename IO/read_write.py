@@ -3,7 +3,7 @@
 
 """
 -----------------------------------------------------------------------------
-    read_write.py  |  Control flow, iterators/loops
+    read_write.py  |  IO operations
 -----------------------------------------------------------------------------
 
 Auhor  : simone.santoni.1@city.ac.uk
