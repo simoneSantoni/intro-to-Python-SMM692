@@ -23,10 +23,10 @@ statement after another as written in the source code. It is more likely that
 during the program execution, data objects are inspected and blocks of code
 executed conditionally on the basis of some test carried out on them. Thus,
 all practical languages have the equivalent of an if-then-(else) construction.
-(Hill, 2015)
+(Hill, 2015).
 """
 
-# typical conditional execution
+# typical conditional execution of a program
 # --+ data
 fruits = ['apple', 'orange', 'pineapple']
 # --+ foor loop + if statement
