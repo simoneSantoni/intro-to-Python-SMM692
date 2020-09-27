@@ -1,4 +1,3 @@
-
 #/usr/env/bin python3
 # -*- encoding utf-8 -*-
 
@@ -16,7 +15,7 @@ Agenda :
 
 """
 
-# %% the if statements
+# %% the if statement
 
 """
 Few computer programs are executed in a purely linear fashion, one
@@ -26,6 +25,18 @@ executed conditionally on the basis of some test carried out on them. Thus,
 all practical languages have the equivalent of an if-then-(else) construction.
 (Hill, 2015)
 """
+
+# typical conditional execution
+# --+ data
+fruits = ['apple', 'orange', 'pineapple']
+# --+ foor loop + if statement
+for fruit in fruits:
+    if fruit == 'apple':
+        print('{} ― fruit or company?'.format(fruit))
+    elif fruit == 'orange':
+        print('{} contains C vitamin'.format(fruit))
+    else:
+        pass
 
 # %% conditional for loops ― examples
 
