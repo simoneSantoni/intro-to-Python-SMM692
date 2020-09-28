@@ -36,6 +36,7 @@ Programming with Python)
 
 # option 1: including pairs of keys and values within braces
 d = {'customer_0': 'xxxx@gmail.com', 'customer_1': 'yyyy@city.ac.uk'}
+d
 
 # option 2: passing lists to the dict function
 data = ['customer_0', 'xxxx@gmail.com'], ['customer_1', 'yyyy@city.ac.uk']
@@ -55,9 +56,11 @@ d['customer_0']
 
 # the keys of a dictionary can be returned by calling the 'keys' method
 keys = d.keys()
+keys
 
 # ...whereas values can be returned with the 'values' method
-values = d.values()
+values = d.values
+values
 
 # starting from the set of keys, it's easy to iterate over the dictionary
 for key in keys:
@@ -74,6 +77,9 @@ d
 d[0] = 'my_email'
 d
 
+d['customer_2'] = 'dddd@hotmail.COM'
+d
+
 # there's also a dictionary method to update extant values
 d1 = {'customer_0': 'the_new_email@me.com'}
 d.update(d1)
@@ -84,10 +90,10 @@ d
 # NOTE: dictionaries can contain nested data
 # --+ initializing a nested dictionary
 d = {'company_0': {'location': 'UK',
-                   'profit': {'year_0': 4, 'year_1_profit': 10},
+                   'profit': {'year_0': 4, 'year_1': 10},
                    'sector': 'financial_services'},
      'company_1': {'location': 'FR',
-                   'profit': {'year_0': 2, 'year_1_profit': 11},
+                   'profit': {'year_0': 2, 'year_1': 11},
                    'sector': 'insurance'}}
 # --+ clean print of the dictionary
 from pprint import pprint as pp
@@ -95,5 +101,6 @@ pp(d)
 # --+ let's inspect the keys of d – 'location', 'profit', 'sector' are
 #     the three keys nested within the higher level key, that is, the set
 #     of companies
+d.keys()
 for key in d.keys():
     print(key, d[key].keys())

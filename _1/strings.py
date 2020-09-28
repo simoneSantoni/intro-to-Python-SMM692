@@ -46,7 +46,7 @@ S0[-2:]
 S0 + S1
 # --+ use the join method to make your code more elegant and readable
 ''.join([S0, S1])
-# --+ now play with the join method to use custom seprators
+# --+ now play with the join method to use custom separators
 ' -- '.join([S0, S1])
 '******'.join([S0, S1])
 
@@ -86,21 +86,12 @@ print('\n'.join(['Hello', 'world!']))
 print('\t'.join(['Hello', 'world!']))
 
 # %% popular string methods
-Method
-center(width)
-endswith(suffix) startswith(prefix) index(substring) lstrip([chars])
-rstrip([chars]) strip([chars])
-upper() lower() title()
-replace(old, new) split([sep])
-join([list]) isalpha()
-isdigit() Description
-
 # 'center' returns the string centered in a string with total number of characters width
-S.center(50)
+S.center(40)
 # 'endswith' returns True if the string ends with the substring suffix
 S.endswith('hot')
 # 'startswith' returns True if the string starts with the substring prefix.
-S.startswith('Diplo')
+S.startswith('Madonna')
 # 'index' returns the lowest index in the string containing substring
 S.index('hot')
 # 'lstrip' ('rstrip') returns a copy of the string with any of the leading
@@ -124,7 +115,7 @@ S.replace('Diplo', 'ESTA.')
 # 'split' returns a list of substrings from the original string which are
 #    separated by the string sep.If sep is not specified, the separator is
 #    taken to be any amount of whitespace
-'hellow world!'.split(' ')
+'hello world!'.split('w')
 # 'join' is the inverse of 'split'
 ' '.join(['hello', 'world!'])
 # 'isalpha' returns True if all characters in the string are alphabetic and

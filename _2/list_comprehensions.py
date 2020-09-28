@@ -30,7 +30,13 @@ the same list with a block of code within a for loop (Hill, 2015).
 # --+ we need an iterable object ― e.g., a list of company names
 companies = ['Apple', 'Microsoft', 'Lenovo', 'Intel']
 # --+ task to repeat: let's print out each company name separately
-[company.upper() for company in companies]
+upper = [company.upper() for company in companies]
+
+upper = []
+for company in companies:
+    upper.append(company.upper())
+
+upper
 
 # %% examples
 
@@ -43,6 +49,7 @@ d
 mu, std = np.mean(d), np.std(d)
 # --+ the list comprehension initializes a new object
 z = [(i - mu)/std for i in d]
+
 z
 
 # example 2: create all possible permutations involving two sets and store

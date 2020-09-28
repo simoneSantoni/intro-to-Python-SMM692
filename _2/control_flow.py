@@ -51,7 +51,7 @@ profitability = [['a', 2018, 5.2],
                  ['a', 2019, 5.8],
                  ['b', 2019, 4.6]]
 
-# example 1: merge company data and profitability for the most recent year
+# example 1: merge company data and profitability
 merge = []
 for i in company_data:
     for j in profitability:

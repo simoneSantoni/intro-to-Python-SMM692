@@ -28,7 +28,7 @@ F = 0.5
 
 # example of Boolean
 '''
-!! Don't forget !!: Capitalize the first letter of a Boolean value expression, True or False. Don't incluse the text between parentheses – that makes the object a string
+!! Don't forget !!: Capitalize the first letter of a Boolean value expression, True or False. Don't include the text between parentheses – that makes the object a string
 '''
 B = True
 

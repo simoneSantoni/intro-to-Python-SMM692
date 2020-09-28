@@ -47,6 +47,8 @@ d = np.random.poisson(lam=6, size=100)
 d
 # --+ get mean and standard deviation
 mu, std = np.mean(d), np.std(d)
+mu
+std
 # --+ empty container
 z = []
 for i in d:
@@ -69,7 +71,7 @@ for city in cities:
     Counts of blanks removed : {}
     '''.format(clean_str, len(city) - len(clean_str)))
 
-# example 3: create all possible permutations involving two sets and store
+# example 3: create all possible permutations involving two lists and store
 #            them in a new list
 # --+ data
 l_0 = [1, 2, 3]
