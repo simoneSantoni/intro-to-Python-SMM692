@@ -42,9 +42,7 @@ Below is the schema for the set of dirs & sub-dirs:
 ├── sample_dict.json
 ├── sample_list.txt
 ├── short_sentence.txt
-├── tags
-└── term
 
-8 directories, 30 files
+8 directories, 28 files
 
 ```
