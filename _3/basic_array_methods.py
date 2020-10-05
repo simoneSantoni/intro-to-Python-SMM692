@@ -53,7 +53,7 @@ b
 np.empty, takes a tuple of the array’s shape and creates the array without
 initializing its elements; initial elements are undefined (Hill, 2015)
 """
-np.empty((2,2))
+np.empty((2, 2))
 
 """
 np.zeros creates arrays whose elements are prefilled with 0s
@@ -107,5 +107,5 @@ x = np.linspace(1,5,5)
 y = np.exp(-np.linspace(0., 2., 5))
 
 # the math module provides plenty of functions
-np.sqrt(x - 1)
+out = np.sqrt(x - 1)
 np.sin(x - y)
