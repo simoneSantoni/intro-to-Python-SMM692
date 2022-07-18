@@ -1,0 +1,3 @@
+\contentsline {section}{\numberline {1}Here we start the first topic}{3}{section.1}%
+\contentsline {section}{\numberline {2}Second topic}{4}{section.2}%
+\contentsline {section}{\numberline {3}Another topic, several questions}{4}{section.3}%
