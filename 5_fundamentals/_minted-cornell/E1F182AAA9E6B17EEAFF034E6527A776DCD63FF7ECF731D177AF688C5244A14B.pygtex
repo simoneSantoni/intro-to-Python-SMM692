@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} indent your Python code to put into an email}
+\PYG{k+kn}{import} \PYG{n+nn}{glob}
+\PYG{c+c1}{\PYGZsh{} glob supports Unix style pathname extensions}
+\PYG{n}{python\PYGZus{}files} \PYG{o}{=} \PYG{n}{glob}\PYG{o}{.}\PYG{n}{glob}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}*.py\PYGZsq{}}\PYG{p}{)}
+\PYG{k}{for} \PYG{n}{file\PYGZus{}name} \PYG{o+ow}{in} \PYG{n+nb}{sorted}\PYG{p}{(}\PYG{n}{python\PYGZus{}files}\PYG{p}{):}
+    \PYG{n+nb}{print} \PYG{l+s+s1}{\PYGZsq{}    \PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZsq{}} \PYG{o}{+} \PYG{n}{file\PYGZus{}name}
+
+    \PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{file\PYGZus{}name}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+        \PYG{k}{for} \PYG{n}{line} \PYG{o+ow}{in} \PYG{n}{f}\PYG{p}{:}
+            \PYG{n+nb}{print} \PYG{l+s+s1}{\PYGZsq{}    \PYGZsq{}} \PYG{o}{+} \PYG{n}{line}\PYG{o}{.}\PYG{n}{rstrip}\PYG{p}{()}
+
+    \PYG{n+nb}{print}
+\end{Verbatim}
