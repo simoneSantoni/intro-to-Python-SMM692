@@ -10,10 +10,44 @@
 %\usepackage{color}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tcolorbox}
-\usepackage{paracol} % added <<<<<<<<<<<<<<<<<<<<<
 \usepackage{lineno}
 \usepackage{amsmath}
 \tcbuselibrary{minted,skins,breakable}
+\usepackage{endnotes}
+\let\footnote=\endnote
+
+
+%% ============================== Tabular =================================
+\usepackage{booktabs}
+\usepackage{tabularx,ragged2e} 
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{siunitx}
+  \sisetup{detect-all}
+\usepackage{adjustbox}
+\usepackage{threeparttable}
+\usepackage[justification=centering]{caption}
+\captionsetup[table]{labelfont=sc, labelsep=newline}
+\renewcommand{\figurename}{\itshape Fig.}
+\renewcommand{\thetable}{\Roman{table}}
+
+%% ====================== To implement the Cornell ========================
+\usepackage{paracol} % added <<<<<<<<<<<<<<<<<<<<<
+\makeatletter
+\newbox\mybox
+\def\pcol@makenormalcol{%
+  \ifvoid\footins 
+  \else
+\global\setbox\mybox\box\footins
+   \fi
+\setbox\@outputbox\box\@holdpg
+  \let\@elt\relax
+  \xdef\@freelist{\@freelist\@midlist}%
+  \global\let\@midlist\@empty
+  \@combinefloats}
+
+\makeatother
+
 
 %% =========================== Color options ==============================
 % custom colors
@@ -78,14 +112,14 @@ allcolors=base_c,
 #1}
 
 % proportions
-\setcolumnwidth{0.30\textwidth/20pt,0.70\textwidth}% column separation =20pt
+\setcolumnwidth{0.4\textwidth/20pt,0.60\textwidth}% column separation =20pt
 \setlength{\columnseprule}{2pt} % column width
 \colseprulecolor{gray}
 
 % title
 \title{%
         \begin{tcolorbox}[before skip = \baselineskip, after skip =-\baselineskip]
-            \centering\Huge\sffamily Cornell Notes on Something   
+            \centering\Huge\sffamily Python Fundamentals \\ A Gentle Introduction to Built-In Objects 
         \end{tcolorbox}
 }
 
@@ -106,82 +140,166 @@ allcolors=base_c,
 
 \clearpage
 
-\section{Here we start the first topic}
+\section{Python Objects}
 
 \begin{paracol}{2}
-    \question{This is a question.} 
-    \note{The first piece of evidence is mandatory.}
-    \note{Now add up to five\ldots}%
-    \note{Here is some Python code: 
+    \question{What is a Python object?} 
+    \note{In essence, Python objects are pieces of data. Mark Lutz, the author of the popular book \href{https://www.google.co.uk/books/edition/Learning_Python/4pgQfXQvekcC?hl=en&gbpv=0}{Learning Python}\footnote{Lutz, Mark. \textit{Learning Python: Powerful object-oriented programming.} O'Reilly Media, Inc., 2013.}, points out \quote{\textit{in Python we do things with stuff. ``Things'' take the form of operations like addition and concatenation, and ``stuff'' refers to the objects on which we perform those operations}}. 
     }
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=My nice heading}
-# indent your Python code to put into an email
-import glob
-# glob supports Unix style pathname extensions
-python_files = glob.glob('*.py')
-for file_name in sorted(python_files):
-    print '    ------' + file_name
+\begin{paracol}{2}
+    \question{Built-in and ad-hoc objects}
+    \note{In Python, there are two families of objects: built-in objects provided by the Python language itself and ad-hoc objects --- called \href{https://docs.python.org/3/tutorial/classes.html}{classes} --- we can create to accomplish specific goals.}
+\end{paracol}
 
-    with open(file_name) as f:
-        for line in f:
-            print '    ' + line.rstrip()
+\begin{paracol}{2}
+    \question{Why do built-in Python objects matter?} 
+    \note{
+    Typically, we do not need to create ad-hoc objects. Python provides us with diverse built-in objects that make our job easier:
+    \begin{itemize}
+    	\item built-in objects make coding efficient and easy. Using the \href{https://docs.python.org/3/tutorial/introduction.html#strings}{string} object, we can represent and manipulate a piece of text --- e.g., a newspaper article --- without loading any \href{https://docs.python.org/3/tutorial/modules.html}{module}
+    	\item built-in objects are flexible. For example, we can deploy built-in objects to create a \href{https://docs.python.org/3/tutorial/classes.html}{class}
+    	\item built-in objects have been created and refined over time by a large community of expert developers. Hence, they are  often  more  efficient  than  ad-hoc objects (unless the creator of the ad-hoc object really knows her business!)
+    \end{itemize}
+    }
+\end{paracol}
 
-    print
+\begin{paracol}{2}
+    \question{The core built-in Python objects} 
+	\note{Table \ref{tab:built_in_objects} illustrates the types of built-in Python objects. For example, \href{https://docs.python.org/3/tutorial/introduction.html#numbers}{Numbers} and \href{https://docs.python.org/3/tutorial/introduction.html#strings}{strings} objects are used to represent numeric and textual data respectively. \href{https://docs.python.org/3/tutorial/introduction.html#lists}{Lists} and \href{https://docs.python.org/3/tutorial/datastructures.html#dictionaries}{dictionaries} are --- likely as not --- the two most popular \href{https://docs.python.org/3/tutorial/datastructures.html}{data structures} in Python. Lists are ordered collections of other objects such (any type!!). Dictionaries are pairs of keys (e.g., a product identifier) and objects (e.g., the price of the product). No worries: we will go through each built-in type in the following sections of this document. Caveat: in the interest of logical coherence, the various built-in types will not be presented in the order adopted Table \ref{tab:built_in_objects}.}
+\end{paracol}
+
+\begin{table}[!htbp]
+\centering
+\caption{Buil-In Objects in Python}
+\label{tab:built_in_objects}
+\begin{tabular}{@{}ll@{}}
+\toprule \toprule
+Object type          & Example literals/creation                                            \\ \midrule
+Numbers              & 1234, 3.1415, 3+4j, 0b111, Decimal(), Fraction()                     \\
+Strings              & `spam', ``Bob's'', b`a\textbackslash{}x01c', u`sp\textbackslash{}xc4m' \\
+Lists                & {[}1, {[}2, `three'{]}, 4.5{]}, list(range(10))                      \\
+Dictionaries         & \{`food': `spam', `taste': `yum'\}, dict(hours=10)                   \\
+Tuples               & (1, `spam', 4, `U'), tuple(`spam'), namedtuple                       \\
+Files                & open(`eggs.txt'), open(r`C:\textbackslash{}ham.bin', `wb')           \\
+Sets                 & set(`abc'), \{`a', `b', `c'\}                                        \\
+Other core types     & Booleans, types, None                                                \\
+Program unit types   & Functions, modules, classes                                          \\
+Implementation types & Compiled code, stack tracebacks                                      \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\section{Number Type Fundamentals}
+
+\label{code:numbers}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Doing `stuff' with numbers}
+# integer addition
+In [1]: 1 + 1
+Out[1}: 2
+
+# floating-point multiplication
+In [2]: 10 * 0.5
+Out[2]: 5.0
+
+# 3 to the power 1000
+In [3]: 3 ** 1000
+Out[3]: 515377520732011331036461129765621272702107522001
 \end{pythoncode}
 
-\vspace*{3ex} % breaks the red line
-
-\begin{paracol}{2}  
-    \question{Here's another question.}
-    \note{\lipsum[4]}
-    \note{\lipsum[2]}   
-\end{paracol}
-
-\summary[\clearpage]{This is a longer box that will will close the question and {\Large \bfseries start a new page.} \lipsum[2]}
-
-\section{Second topic}
-
 \begin{paracol}{2}
-    \question{Here's another question to begin the new page.}   
-    \note{\lipsum[3]}
-    \note{\lipsum[4]}
-\end{paracol}
-        
-\summary{And another summary that will close the question and {\Large 
-\bfseries stay in the same page.}}
-
-\section{Another topic, several questions}
-
-\begin{paracol}{2}
-    \question{This is  question I.}     
-    \note{I The first piece of evidence is mandatory.}
-    \note{Now add up to five \ldots}%
-    \note{\ldots\ additional pieces of evidence.}
-\end{paracol}
-\vspace*{3ex} % breaks the red line
-    
-\begin{paracol}{2}
-    \question{Here's  question II.} 
-    \note{II The first piece of evidence is mandatory.}
-    \note{Now add up to five \ldots}%
-    \note{\ldots\ additional pieces of evidence.}
+    \question{Types of `number' objects} 
+	\note{The above-displayed Python snippet ``Doing stuff with numbers'' highlights two }
 \end{paracol}
 
-\clearpage% breaks the red line
-\begin{paracol}{2}
-    \question{And question III.}
-    
-    \note{III The first piece of evidence is mandatory.}
-    \note{Now add up to five\ldots}%
-    \note{\ldots\ additional pieces of evidence.}
-    \note{\ldots\ and more \ldots}
-    \note{\ldots\ and more.}
-\end{paracol}
+\section{String Type Fundamentals}
 
-\summary{And another summary that will close the question and {\Large \bfseries stay in the same page.}}        
+...
 
-\lipsum[1]
+
+\section{List and Dictionaries}
+
+...
+
+
+\section{Tuples, Files, and Everything Else}
+
+...
+
+
+\section{Python Statements}
+
+...
+
+\section{If Test}
+
+...
+
+\section{While and For Loops}
+
+...
+
+\section{Iterations and Comprehensions}
+
+...
+
+\clearpage
+
+\theendnotes
+
+% ================================= Snippets ==============================
+%
+%\vspace*{3ex} % breaks the red line
+%
+%\begin{paracol}{2}  
+%    \question{Here's another question.}
+%    \note{\lipsum[4]}
+%    \note{\lipsum[2]}   
+%\end{paracol}
+%
+%\summary[\clearpage]{This is a longer box that will will close the question and {\Large \bfseries start a new page.} \lipsum[2]}
+%
+%\section{Second topic}
+%
+%\begin{paracol}{2}
+%    \question{Here's another question to begin the new page.}   
+%    \note{\lipsum[3]}
+%    \note{\lipsum[4]}
+%\end{paracol}
+%        
+%\summary{And another summary that will close the question and {\Large 
+%\bfseries stay in the same page.}}
+%
+%\section{Another topic, several questions}
+%
+%\begin{paracol}{2}
+%    \question{This is  question I.}     
+%    \note{I The first piece of evidence is mandatory.}
+%    \note{Now add up to five \ldots}%
+%    \note{\ldots\ additional pieces of evidence.}
+%\end{paracol}
+%\vspace*{3ex} % breaks the red line
+%    
+%\begin{paracol}{2}
+%    \question{Here's  question II.} 
+%    \note{II The first piece of evidence is mandatory.}
+%    \note{Now add up to five \ldots}%
+%    \note{\ldots\ additional pieces of evidence.}
+%\end{paracol}
+%
+%\clearpage% breaks the red line
+%\begin{paracol}{2}
+%    \question{And question III.}
+%    
+%    \note{III The first piece of evidence is mandatory.}
+%    \note{Now add up to five\ldots}%
+%    \note{\ldots\ additional pieces of evidence.}
+%    \note{\ldots\ and more \ldots}
+%    \note{\ldots\ and more.}
+%\end{paracol}
+%
+%\summary{And another summary that will close the question and {\Large \bfseries stay in the same page.}}        
+%
+%\lipsum[1]
     
 \end{document}
