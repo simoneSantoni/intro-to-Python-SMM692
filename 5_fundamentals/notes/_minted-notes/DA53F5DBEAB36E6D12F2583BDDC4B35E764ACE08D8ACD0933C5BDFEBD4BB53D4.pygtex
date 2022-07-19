@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} let us assign the string "Python 3.X" to the variable S}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]:} \PYG{n}{S} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Python 3.X\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} check the length of S}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]:} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{S}\PYG{p}{)}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]:} \PYG{l+m+mi}{6}
+
+\PYG{c+c1}{\PYGZsh{} access the first string object in the sequence behind S 	}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]:} \PYG{n}{S}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]:} \PYG{l+s+s2}{\PYGZdq{}P\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} access the last string object in the sequence behind S}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{4}\PYG{p}{]:} \PYG{n}{S}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{4}\PYG{p}{]:} \PYG{l+s+s2}{\PYGZdq{}X\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} or, equivalently}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{]:} \PYG{n}{S}\PYG{p}{[}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{S}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{]:} \PYG{l+s+s2}{\PYGZdq{}X\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} access the i-th, e.g., 3rd, string object in the sequence behind S}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{6}\PYG{p}{]:} \PYG{n}{S}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{6}\PYG{p}{]:} \PYG{l+s+s2}{\PYGZdq{}X\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} access string objects between the i-th and j-th positions in the sequence}
+\PYG{c+c1}{\PYGZsh{} behind S}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{7}\PYG{p}{]:} \PYG{n}{S}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+m+mi}{5}\PYG{p}{]}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{7}\PYG{p}{]:} \PYG{l+s+s2}{\PYGZdq{}tho\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} access string objects following the i-th position in the sequence behind S}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{8}\PYG{p}{]:} \PYG{n}{S}\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{p}{:]}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{8}\PYG{p}{]:} \PYG{l+s+s2}{\PYGZdq{}3.X\PYGZdq{}}
+\end{Verbatim}

@@ -1,11 +1,32 @@
-# integer addition
-In [1]: 1 + 1
-Out[1}: 2
+# let us assign the string "Python 3.X" to the variable S
+In [1]: S = "Python 3.X"
 
-# floating-point multiplication
-In [2]: 10 * 0.5
-Out[2]: 5.0
+# check the length of S
+In [2]: len(S)
+Out[2]: 6
 
-# 3 to the power 1000
-In [3]: 3 ** 1000
-Out[3]: 515377520732011331036461129765621272702107522001
+# access the first string object in the sequence behind S 	
+In [3]: S[0]
+Out[3]: "P"
+
+# access the last string object in the sequence behind S
+In [4]: S[-1]
+Out[4]: "X"
+
+# or, equivalently
+In [5]: S[len(S)-1]
+Out[5]: "X"
+
+# access the i-th, e.g., 3rd, string object in the sequence behind S
+In [6]: S[3]
+Out[6]: "X"
+
+# access string objects between the i-th and j-th positions in the sequence
+# behind S
+In [7]: S[2:5]
+Out[7]: "tho"
+
+# access string objects following the i-th position in the sequence behind S
+In [8]: S[-3:]
+Out[8]: "3.X"
+
