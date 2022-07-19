@@ -1,12 +1,11 @@
-# indent your Python code to put into an email
-import glob
-# glob supports Unix style pathname extensions
-python_files = glob.glob('*.py')
-for file_name in sorted(python_files):
-    print '    ------' + file_name
+# integer addition
+In [1]: 1 + 1
+Out[1}: 2
 
-    with open(file_name) as f:
-        for line in f:
-            print '    ' + line.rstrip()
+# floating-point multiplication
+In [2]: 10 * 0.5
+Out[2]: 5.0
 
-    print
+# 3 to the power 1000
+In [3]: 3 ** 1000
+Out[3]: 515377520732011331036461129765621272702107522001
