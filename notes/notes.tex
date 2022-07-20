@@ -1,0 +1,663 @@
+% !TeX document-id = {623e3a94-4cb1-4158-99bf-bcee8b7d3f42}
+%% =========================== Document class =============================
+\documentclass[a4paper,11pt]{book}
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+
+%% ========================= Essential packages ===========================
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=2cm]{geometry}   
+%\usepackage{color}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{lineno}
+\usepackage{amsmath}
+\tcbuselibrary{minted,skins,breakable}
+\usepackage{endnotes}
+\let\footnote=\endnote
+
+
+%% ============================== Tabular =================================
+\usepackage{booktabs}
+\usepackage{tabularx,ragged2e} 
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{siunitx}
+  \sisetup{detect-all}
+\usepackage{adjustbox}
+\usepackage{rotating}
+\usepackage{threeparttable}
+\usepackage[justification=centering]{caption}
+\captionsetup[table]{labelfont=sc, labelsep=newline}
+\renewcommand{\figurename}{\itshape Fig.}
+\renewcommand{\thetable}{\Roman{table}}
+
+%% ====================== To implement the Cornell ========================
+\usepackage{paracol} % added <<<<<<<<<<<<<<<<<<<<<
+\makeatletter
+\newbox\mybox
+\def\pcol@makenormalcol{%
+  \ifvoid\footins 
+  \else
+\global\setbox\mybox\box\footins
+   \fi
+\setbox\@outputbox\box\@holdpg
+  \let\@elt\relax
+  \xdef\@freelist{\@freelist\@midlist}%
+  \global\let\@midlist\@empty
+  \@combinefloats}
+
+\makeatother
+
+
+%% =========================== Color options ==============================
+% custom colors
+\definecolor{base_c}{rgb}{0.6,0,0}
+\definecolor{comp_c}{rgb}{0.09803921568627451, 0.6901960784313725, 0.7529411764705882}
+\definecolor{tri_1}{rgb}{0.09803921568627451, 0.7686274509803922, 0.19215686274509805}
+\definecolor{tri_2}{rgb}{0.19215686274509805, 0.09803921568627451, 0.7686274509803922}
+
+%% =============================== Links ==================================
+\usepackage[
+colorlinks=true,
+allcolors=base_c,
+%citecolor=CadetBlue,
+%urlcolor=CadetBlue
+]{hyperref}%
+
+% =========================== Utilities ===================================
+\usepackage{lipsum}% generate filler text
+
+%% ========================== Code input ==================================
+\newtcblisting{pythoncode}[2][]{
+  listing engine=minted,
+  breakable,
+  colback=green,
+  colframe=black!70,
+  listing only,
+  minted style=tango,
+  minted language=python,
+  minted options={numbersep=3mm,texcl=true,#1},
+  left=5mm,enhanced,
+  overlay={\begin{tcbclipinterior}\fill[black!25] (frame.south west)
+            rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}},
+            #2,
+}
+
+% ========================= Cornell Notes stuff ============================
+% question
+\newcommand{\question}[1]{% Ask the question
+    \begin{tcolorbox}[colback=comp_c!10,colframe=comp_c,sidebyside align=top,width=\linewidth,before skip=1ex]
+        #1
+    \end{tcolorbox}%    
+    \switchcolumn% now write in the right column   
+}
+
+% note
+\newcommand{\note}[1]{% Add as many notes as you like
+    \begin{tcolorbox}[colback=white!0,colframe=white!10,width=\linewidth,before skip=1ex]
+        #1
+    \end{tcolorbox}         
+}   
+
+% summary
+\newcommand{\summary}[2][]{%
+\begin{minipage}[b]{\textwidth}
+    \vspace*{\baselineskip}
+    \begin{tcolorbox}[colframe=tri_2!75,fonttitle=\large\bfseries\sffamily,
+        after skip = \baselineskip,
+        title=Summary]
+        #2
+    \end{tcolorbox}
+\end{minipage}
+#1}
+
+% proportions
+\setcolumnwidth{0.4\textwidth/20pt,0.60\textwidth}% column separation =20pt
+\setlength{\columnseprule}{2pt} % column width
+\colseprulecolor{gray}
+
+% title
+\title{%
+        \begin{tcolorbox}[before skip = \baselineskip, after skip =-\baselineskip]
+            \centering\Huge\sffamily SMM692\\ Introduction to Programming in Python 
+        \end{tcolorbox}
+}
+
+% ============================ Document attrs ==============================
+\date{}
+\parindent=0pt
+
+
+% ========================== Document contents ============================= 
+
+\begin{document}
+    
+\maketitle  
+
+\clearpage
+
+\tableofcontents
+
+\clearpage
+
+\chapter{Organization of the Module}
+
+$\ldots$
+
+\chapter{Getting Started with Python}
+
+$\ldots$
+
+\chapter{Managing Python Environments}
+
+$\ldots$
+
+\chapter{Collaborative and Versioning Tools}
+
+$\ldots$
+
+\chapter{Python Objects}
+
+In this chapter, we pursue the following learning objectives:
+
+\begin{itemize}
+	\item ....
+\end{itemize}
+
+\begin{paracol}{2}
+    \question{\raggedright What is a Python object?} 
+    \note{In essence, Python objects are pieces of data. Mark Lutz, the author of the popular book \href{https://www.google.co.uk/books/edition/Learning_Python/4pgQfXQvekcC?hl=en&gbpv=0}{Learning Python}\footnote{Lutz, Mark. \textit{Learning Python: Powerful object-oriented programming.} O'Reilly Media, Inc., 2013.}, points out \quote{\textit{in Python we do things with stuff. ``Things'' take the form of operations like addition and concatenation, and ``stuff'' refers to the objects on which we perform those operations}}. 
+    }
+\end{paracol}
+
+\begin{paracol}{2}
+    \question{\raggedright Built-in and ad-hoc objects}
+    \note{In Python, there are two families of objects: built-in objects provided by the Python language itself and ad-hoc objects --- called \href{https://docs.python.org/3/tutorial/classes.html}{classes} --- we can create to accomplish specific goals.}
+\end{paracol}
+
+\begin{paracol}{2}
+    \question{\raggedright Why do built-in Python objects matter?} 
+    \note{
+    Typically, we do not need to create ad-hoc objects. Python provides us with diverse built-in objects that make our job easier:
+    \begin{itemize}
+    	\item built-in objects make coding efficient and easy. For example, using the \href{https://docs.python.org/3/tutorial/introduction.html#strings}{string} object, we can represent and manipulate a piece of text --- e.g., a newspaper article --- without loading any \href{https://docs.python.org/3/tutorial/modules.html}{module}
+    	\item built-in objects are flexible. For example, we can deploy built-in objects to create a \href{https://docs.python.org/3/tutorial/classes.html}{class}
+    	\item built-in objects have been created and refined over time by a large community of expert developers. Hence, they are  often  more  efficient  than  ad-hoc objects (unless the creator of the ad-hoc object really knows her business!)
+    \end{itemize}}
+\end{paracol}
+\clearpage
+
+\begin{paracol}{2}
+    \question{\raggedright The core built-in Python objects} 
+	\note{Table \ref{tab:built_in_objects} illustrates the types of built-in Python objects. For example, \href{https://docs.python.org/3/tutorial/introduction.html#numbers}{Numbers} and \href{https://docs.python.org/3/tutorial/introduction.html#strings}{strings} objects are used to represent numeric and textual data respectively. \href{https://docs.python.org/3/tutorial/introduction.html#lists}{Lists} and \href{https://docs.python.org/3/tutorial/datastructures.html#dictionaries}{dictionaries} are --- likely as not --- the two most popular \href{https://docs.python.org/3/tutorial/datastructures.html}{data structures} in Python. Lists are ordered collections of other objects such (any type!!). Dictionaries are pairs of keys (e.g., a product identifier) and objects (e.g., the price of the product). No worries: we will go through each built-in type in the following sections of this document. Caveat: in the interest of logical coherence, the various built-in types will not be presented in the order adopted Table \ref{tab:built_in_objects}.} 
+\end{paracol}
+
+\begin{table}[!htbp]
+\centering
+\caption{Built-In Objects in Python}
+\label{tab:built_in_objects}
+\begin{tabular}{@{}ll@{}}
+\toprule \toprule
+Object type          & Example literals/creation                                            \\ \midrule
+Numbers              & 1234, 3.1415, 3+4j, 0b111, Decimal(), Fraction()                     \\
+Strings              & `spam', ``Bob's'', b`a\textbackslash{}x01c', u`sp\textbackslash{}xc4m' \\
+Lists                & {[}1, {[}2, `three'{]}, 4.5{]}, list(range(10))                      \\
+Dictionaries         & \{`food': `spam', `taste': `yum'\}, dict(hours=10)                   \\
+Tuples               & (1, `spam', 4, `U'), tuple(`spam'), namedtuple                       \\
+Files                & open(`eggs.txt'), open(r`C:\textbackslash{}ham.bin', `wb')           \\
+Sets                 & set(`abc'), \{`a', `b', `c'\}                                        \\
+Other core types     & Booleans, types, None                                                \\
+Program unit types   & Functions, modules, classes                                          \\
+Implementation types & Compiled code, stack tracebacks                                      \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\section{Number Type Fundamentals}
+
+\begin{paracol}{2}
+    \question{\raggedright Types of `number' objects} 
+	\note{Example 5.1, ``Doing stuff with numbers,'' highlights the two most popular \href{https://docs.python.org/3/tutorial/introduction.html#numbers}{`number'} instances in Python: integers and floating-point numbers. Integers are whole numbers such as 0, 4, or -12. Floating-point numbers are the representation of real numbers such as 0.5, 3.1415, or -1.6e-19. However, floating points in Python do not have --- in general --- the same value as the real number they represent.\footnote{Floating numbers are stored in binaries with an assigned level of precision that is typically equivalent to 15 or 16 decimals.} It is worth noticing that any single number with a period `.' is considered a floating point in Python. Also, Example 5.1 shows that the multiplication of an integer by a floating point yields a floating point. That happens because Python first converts operands up to the type of the most complicated operand.} %
+\end{paracol}
+\clearpage
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.1 --- doing `stuff' with numbers}
+# integer addition
+In [1]: 1 + 1
+Out[1]: 2
+	
+# floating-point multiplication
+In [2]: 10 * 0.5
+Out[2]: 5.0
+	
+# 3 to the power 100
+In [3]: 3 ** 100
+Out[3]: 515377520732011331036461129765621272702107522001
+	
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright Besides integers and floating points}
+    \note{Besides integers and floating points numbers, Python includes fixed-precision, rational numbers, Booleans, and sets instances --- see Table \ref{tab:number_types_in_python}.}
+\end{paracol}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Number Type Objects in Python}
+	\label{tab:number_types_in_python}
+	\begin{tabular}{ll}
+		\toprule \toprule
+		Literal & Interpretation\\
+		\midrule
+		 1234, -24, 0, 99999999999999 & Integers (unlimited size)\\
+		 1.23, 1., 3.14e-10, 4E210, 4.0e+210 & Floating-point numbers \\
+		 0o177, 0x9ff, 0b101010 & Octal, hex, and binary literals in 3.X \\
+		 0177, 0o177, 0x9ff, 0b101010 & Octal, octal, hex, and binary literals in 2.X \\
+		 3+4j, 3.0+4.0j, 3J & Complex number literals \\
+		 set(`spam'), \{1, 2, 3, 4\} & Sets: 2.X and 3.X construction forms\\ Decimal(`1.0'), Fraction(1, 3) & Decimal and fraction extension types\\ 
+		 bool(X), True, False & Boolean type and constants\\
+		 \bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{paracol}{2}
+	\question{\raggedright Basic arithmetic operations in Python}
+	\note{Numbers in Python support the usual mathematical operations:
+		
+		\begin{itemize}
+			\item `+' $\rigtharrow$ addition 
+			\item `-' $\rightarrow$ subtraction 
+			\item `*' $\rightarrow$ multiplication 
+			\item `/' $\rightarrow$ floating point division 
+			\item `//' $\rightarrow$ integer division
+			\item `\%' $\rightarrow$ modulus (remainder)
+			\item `**' $\rightarrow$ exponentiation
+		\end{itemize}
+		 
+		 To use these operations, it is sufficient to launch a  Python or IPython session without any modules loaded (see Example 5.1).}
+\end{paracol}
+
+\begin{paracol}{2}
+    \question{\raggedright Advanced mathematical operations}
+    \note{Besides the mathematical operations shown above, there are many \href{https://docs.python.org/3/library/numeric.html}{modules shipped with Python} that carry out advanced/specific numerical analysis. For example, the \href{https://docs.python.org/3/library/math.html}{\texttt{math}} module provides access to the mathematical functions defined by the \href{https://en.wikipedia.org/wiki/C_standard_library}{C standard}.\footnote{As per the documentation of the Python programming language, \href{https://docs.python.org/3/library/math.html}{\texttt{math}} cannot be used with complex numbers.} Table \ref{tab:math_module_functions} reports a sample of these functions. To use them \href{https://docs.python.org/3/library/math.html}{\texttt{math}}, we have to import the module as shown in Example 5.2. Another popular module shipped with Python is \href{https://docs.python.org/3/library/random.html}{\texttt{random}}, implementing pseudo-random number generators for various distributions (see the lower section of Example 2).}
+\end{paracol}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{A Sample of Functions Provided by the \href{https://docs.python.org/3/library/math.html}{\texttt{math}} Module}
+	\label{tab:math_module_functions}
+	\begin{tabular}{ll}
+		\toprule \toprule
+		Function name &  Expression \\
+		\midrule
+		\texttt{math.sqrt(x)} & $\sqrt{x}$ \\
+		\texttt{math.exp(x)} & $e^{x}$ \\
+		\texttt{math.log(x)} & $ln{x}$ \\
+		\texttt{math.log(x, b)} & $log_{b}(x)$ \\
+		\texttt{math.log10(x)} & $log_{10}(x)$ \\
+		\texttt{math.sin(x)} & $sin(x)$ \\
+		\texttt{math.cos(x)} & $cos(x)$ \\
+		\texttt{math.tan(x)} & $tan(x)$ \\
+		\texttt{math.asin(x)} & $arcsin(x)$ \\
+		\texttt{math.acos(x)} & $arccos(x)$ \\
+		\texttt{math.atan(x)} & $arctan(x)$ \\
+		\texttt{math.sinh(x)} & $sinh(x)$ \\
+		\texttt{math.cosh(x)} & $cosh(x)$ \\
+		\texttt{math.tanh(x)} & $tanh(x)$ \\
+		\texttt{math.asinh(x)} & $arsinh(x)$ \\
+		\texttt{math.acosh(x)} & $arcosh(x)$ \\
+		\texttt{math.atanh(x)} & $artanh(x)$ \\
+		\texttt{math.hypot(x, y)} & The Euclidean norm, $\sqrt{x^{2} + y^{2}}$ \\
+		\texttt{math.factorial(x)} & $x!$ \\
+		\texttt{math.erf(x)} & The error function at $x$ \\
+		\texttt{math.gamma(x)} & The gamma function at $x$, $\omega(x)$ \\
+		\texttt{math.degrees(x)} & Converts $x$ from radians to degrees \\
+		\texttt{math.radians(x)} & Converts $x$ from degrees to radians\\
+		\bottomrule 
+	\end{tabular}
+\end{table}
+\clearpage
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.2 --- advanced mathematical operations with the modules shipped with Python}
+# import the math module
+In [1]: import math
+	
+# base-y log of x
+In [2]: math.log(12, 8)
+Out[2]: 1.1949875002403856
+	
+# base-10 log of x
+In [3]: math.log10(12)
+Out[3]: 1.0791812460476249
+	
+# import the random module
+In [4]: import random
+	
+# a draw from a normal distribution with mean = 0 and standard deviation = 1
+In [5]: random.normalvariate(0, 1)
+Out[5]: -0.136017752991189
+
+# trigonometric functions
+In [6]: math.cos(0)
+Out[6]: 1.0
+
+In [7]: math.sin(0)
+Out[7]: 0.0
+
+In [8]: math.tan(0) 
+Out[8]: 0.0
+
+# an expression containing a factorial product
+In [9]: math.factorial(4) - 4 * 3 * 2 * 1
+Out[9]: 0
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{Operator precedence}
+    \note{As shown in Example 5.2, line 30, Python expressions can string together multiple operators. So, how does Python know which operation to perform first? The answer to this question lies in operator precedence. When you write an expression with more than one operator, Python groups its parts according to what are called precedence rules,\footnote{The official Python documentation has an extensive section on operator precedence rules in the section dedicated to \href{https://docs.python.org/3/reference/expressions.html}{syntax of expressions}} and this grouping determines the order in which the expression’s parts are computed. Table \ref{tab:operator_precedence} reports the precedence hierarchy concerning the most common operators. Note that operators lower in the table have higher precedence. Parentheses can be used to create sub-expressions that override operator precedence rules.}
+\end{paracol}
+\clearpage
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Operator Precedence Hierarchy \\(Ascending Order)}
+	\label{tab:operator_precedence}
+	\begin{tabular}{ll}
+		\toprule \toprule
+        Operator & Description\\ 
+        \midrule
+        \texttt{x + y}    & Addition, concatenation \\
+        \texttt{x - y}    & Subtraction, set difference \\
+        \texttt{x * y}    & Multiplication, repetition \\ 
+        \texttt{x \% y}   & Remainder, format; \\
+        \texttt{x / y}, \texttt{x // y} & Division: true and floor \\
+        \texttt{-x}, \texttt{+x} & Negation, identity \\
+        \texttt{$^{\sim}$x}       & Bitwise NOT (inversion) \\
+        \texttt{x ** y}  & Power (exponentiation) \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{paracol}{2}
+	\question{\raggedright Technical and scientific computation with Python}
+	\note{Python is at the center of a rich ecosystem of modules for technical and scientific computation. In the following chapter, the attention will revolve around two of the most prominent modules: \href{https://numpy.org/}{NumPy} and \href{https://scipy.org/}{SciPy}. In a nutshell, \href{https://numpy.org/}{NumPy} offers the infrastructure for the efficient manipulation of (potentially massive) data structures, while \href{https://scipy.org/}{SciPy} implements many algorithms across the fields of statistics, linear algebra, optimization, calculus, signal processing,  image processing, and others. Another core module in the technical and scientific domain is \href{https://www.sympy.org/en/index.html}{SimPy}, a library for symbolic mathematics. Note that none of these three modules are shipped with Python and should be installed with the package manager of your choice (e.g., \texttt{conda}).}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Variables and Basic Expressions}
+	\note{Variables are simply names—created by you or Python—that are used to keep track of information in your program. In Python:
+	\begin{itemize}
+		\item Variables are created when they are first assigned values
+		\item Variables are replaced with their values when used in expressions
+		\item Variables must be assigned before they can be used in expressions
+		\item Variables refer to objects and are never declared ahead of time
+	\end{itemize}
+    As example 5.3 shows, the assignment of \texttt{x = 2} causes the variable \texttt{x} to come into existence `automatically.' From that point, we can use the variables in the context of expressions such as the ones displayed in lines 8, 12, 16, and 20, or to create new variables like in line 24.
+    }
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.3 --- expressions involving arithmetic operations}
+	
+# let us assign the variables 'x' and 'y' to two number objects
+In [1]: x = 2
+
+In [2]: y = 4.0	
+
+# subtracting an integer from variable 'x'
+In [3]: x - 1
+Out[3]: 1
+
+# dividing the variable 'y' by an integer
+In [4]: y / 73
+Out[4]: 0.0547945205479452
+
+# integer-dividing the variable 'y' by an integer
+In [5]: y // 73
+Out[5]: 0.0
+
+# getting a linear combination of 'x' and 'y'
+In [6]: 3 * x - 5 * y
+Out[6]: -14.0
+
+# assigning the variable 'z' to the linear combination of 'x' and 'y'
+In [7]: z = 3 * x - 5 * y
+
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright Displaying number objects}
+	\note{Example 5.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the outcome of the expression `as is' (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we have to prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. Example 5.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html#str.format}{\texttt{format}}.}
+\end{paracol}
+\clearpage
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Number Formatting Options in Python}
+	\label{tab:number_formatting}
+	\begin{tabular}{cccll}
+		\toprule \toprule
+		\multicolumn{1}{c}{Number} &
+		\multicolumn{1}{c}{Format} & 
+		\multicolumn{1}{c}{Output} & 
+		\multicolumn{1}{c}{Description} \\
+		\midrule
+		3.1415926                           & \texttt{\{:.2f\}}                            & 3.14                                & Format float 2 decimal places                 &  \\
+		3.1415926                           & \texttt{\{:+.2f\}}                           & +3.14                               & Format float 2 decimal places with sign       &  \\
+		-1                                  & \texttt{\{:+.2f\}}}                           & -1.00                               & Format float 2 decimal places with sign       &  \\
+		2.71828                             & \texttt{\{:.0f\}}                            & 3                                   & Format float with no decimal places           &  \\
+		5                                   & \texttt{\{:0\textgreater{}2d\}}              & 05                                  & Pad number with zeros (left padding, width 2) &  \\
+		5                                   & \texttt{\{:x\textless{}4d\}}                 & 5xxx                                & Pad number with x’s (right padding, width 4)  &  \\
+		10                                  & \texttt{\{:x\textless{}4d\}}                 & 10xx                                & Pad number with x’s (right padding, width 4)  &  \\
+		1000000                             & \texttt{\{:,\}}                              & 1,000,000                           & Number format with comma separator            &  \\
+		0.25                                & \texttt{\{:.2\%\}}                           & 25.00\%                             & Format percentage                             &  \\
+		1000000000                          & \texttt{\{:.2e\}}                            & 1.00e+09                            & Exponent notation                             &  \\
+		13                                  & \texttt{\{:10d\}}                            & \multicolumn{1}{r}{13}                                  & Right aligned (default, width 10)             &  \\
+		13                                  & \texttt{\{:\textless{}10d\}}                 & \multicolumn{1}{l}{13}                                  & Left aligned (width 10)                       &  \\
+		13                                  & \texttt{\{:\textasciicircum{}10d\}}          & 13                                  & Center aligned (width 10)           \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.4 --- number formatting in Python}
+# assign the variable 'a' to a floating-point number
+In [1]: a = 0.67544908755
+
+# displaying 'a' with the first two decimals only
+In [2]: "{:.2f}".format(a)
+Out[2]: "0.68"
+
+# displaying 'a' with the first three decimals only
+In [3]: "{:.3f}".format(a)
+Out[3]: "0.675"
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright{How do I compare number objects?}}
+	\note{Comparisons are used frequently to create control \href{https://docs.python.org/3/tutorial/controlflow.html}{flows}, a topic we will discuss later in this chapter. Normal comparisons in Python regard two number objects and return a Boolean result. Chained comparisons concern three or more objects, and, like normal comparisons, yield a Boolean result. Example 5.5 provides a sample of normal comparisons (between lines 1 and 15) and chained comparisons (between lines 21 and 30). As evident in the example, comparisons can regard both numbers and variables assigned to numbers. Chained comparisons can take the form of a range test (see line 21), a joined, `AND' test of the truth of multiple expressions (see line 25) or a disjoined, `OR' test of the truth of multiple expressions (see line 29).}
+\end{paracol}
+\clearpage
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.4 --- comparing numeric objects}
+# less than
+In [1]: 3 < 2
+Out[1]: False
+
+# greater than or equal
+In [2]: 1 <= 2
+Out[2]: True
+
+# equal
+In [3]: 2 == 2
+Out[3]: True 
+
+# not equal
+In [4]: 4 != 4
+Out[4]: False
+
+# range test
+In [5]: x = 3
+In [6]: y = 5
+In [7]: z = 4
+In [8]: x < y < z
+Out[8]: False
+
+# joined test
+In [9]: x < y and y > z
+Out[9]: True
+
+# disjoined test
+In [10]: x < y or y < z
+Out[10]: True 
+
+\end{pythoncode}
+
+\section{String Type Fundamentals}
+
+\begin{paracol}{2}
+	\question{What is a string?}
+	\note{A Python string is a positionally ordered collection of other objects. Sequences maintain a left-to-right order among the items they contain: their items are stored and fetched by their relative positions. Strictly speaking, strings are sequences of one-character strings; other, more general sequence types include lists and tuples, covered later.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{Is \textit{abc} a Python string?}
+	\note{Nope. Python strings are enclosed in single quotes (`...') \textit{or} double quotes (``...'') with the same result. Hence, \textit{``abc''} can be Python string, while \textit{abc} cannot. Example 5.3 (line 2) shows how to assign the string ``Python 3.X'' to the variable $S$.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 3 --- Python strings as sequences}
+# let us assign the string "Python 3.X" to the variable S
+In [1]: S = "Python 3.X"
+
+# check the length of S
+In [2]: len(S)
+Out[2]: 6
+
+# access the first string object in the sequence behind S 	
+In [3]: S[0]
+Out[3]: "P"
+
+# access the last string object in the sequence behind S
+In [4]: S[-1]
+Out[4]: "X"
+
+# or, equivalently
+In [5]: S[len(S)-1]
+Out[5]: "X"
+
+# access the i-th, e.g., 3rd, string object in the sequence behind S
+In [6]: S[3]
+Out[6]: "X"
+
+# access string objects between the i-th and j-th positions in the sequence 
+# behind S
+In [7]: S[2:5]
+Out[7]: "tho"
+
+# access string objects following the i-th position in the sequence behind S
+In [8]: S[-3:]
+Out[8]: "3.X"
+
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{How do we use strings?}
+	\note{Strings are used to record both textual information (your name, for instance) as well as arbitrary collections of bytes (such as an image file’s contents).}
+\end{paracol}
+
+\section{List and Dictionaries}
+
+...
+
+
+\section{Tuples, Files, and Everything Else}
+
+...
+
+
+\section{Python Statements}
+
+...
+
+\section{If Test}
+
+...
+
+\section{While and For Loops}
+
+...
+
+\section{Iterations and Comprehensions}
+
+...
+
+
+\theendnotes
+
+\chapter{Technical and Scientific Computation with NumPy and SciPy}
+
+\ldots
+
+\chapter{Data Management with Pandas and Dask}
+
+\ldots
+
+\chapter{Coda}
+\ldots
+
+
+% ================================= Snippets ==============================
+%
+%\vspace*{3ex} % breaks the red line
+%
+%\begin{paracol}{2}  
+%    \question{Here's another question.}
+%    \note{\lipsum[4]}
+%    \note{\lipsum[2]}   
+%\end{paracol}
+%
+%\summary[\clearpage]{This is a longer box that will will close the question and {\Large \bfseries start a new page.} \lipsum[2]}
+%
+%\section{Second topic}
+%
+%\begin{paracol}{2}
+%    \question{Here's another question to begin the new page.}   
+%    \note{\lipsum[3]}
+%    \note{\lipsum[4]}
+%\end{paracol}
+%        
+%\summary{And another summary that will close the question and {\Large 
+%\bfseries stay in the same page.}}
+%
+%\section{Another topic, several questions}
+%
+%\begin{paracol}{2}
+%    \question{This is  question I.}     
+%    \note{I The first piece of evidence is mandatory.}
+%    \note{Now add up to five \ldots}%
+%    \note{\ldots\ additional pieces of evidence.}
+%\end{paracol}
+%\vspace*{3ex} % breaks the red line
+%    
+%\begin{paracol}{2}
+%    \question{Here's  question II.} 
+%    \note{II The first piece of evidence is mandatory.}
+%    \note{Now add up to five \ldots}%
+%    \note{\ldots\ additional pieces of evidence.}
+%\end{paracol}
+%
+%\clearpage% breaks the red line
+%\begin{paracol}{2}
+%    \question{And question III.}
+%    
+%    \note{III The first piece of evidence is mandatory.}
+%    \note{Now add up to five\ldots}%
+%    \note{\ldots\ additional pieces of evidence.}
+%    \note{\ldots\ and more \ldots}
+%    \note{\ldots\ and more.}
+%\end{paracol}
+%
+%\summary{And another summary that will close the question and {\Large \bfseries stay in the same page.}}        
+%
+%\lipsum[1]
+    
+\end{document}

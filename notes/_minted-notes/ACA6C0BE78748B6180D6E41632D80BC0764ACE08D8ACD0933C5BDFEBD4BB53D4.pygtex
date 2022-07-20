@@ -1,0 +1,32 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} less than}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]:} \PYG{l+m+mi}{3} \PYG{o}{\PYGZlt{}} \PYG{l+m+mi}{2}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]:} \PYG{k+kc}{False}
+
+\PYG{c+c1}{\PYGZsh{} greater than or equal}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]:} \PYG{l+m+mi}{1} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{2}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{]:} \PYG{k+kc}{True}
+
+\PYG{c+c1}{\PYGZsh{} equal}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]:} \PYG{l+m+mi}{2} \PYG{o}{==} \PYG{l+m+mi}{2}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{]:} \PYG{k+kc}{True}
+
+\PYG{c+c1}{\PYGZsh{} not equal}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{4}\PYG{p}{]:} \PYG{l+m+mi}{4} \PYG{o}{!=} \PYG{l+m+mi}{4}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{4}\PYG{p}{]:} \PYG{k+kc}{False}
+
+\PYG{c+c1}{\PYGZsh{} range test}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{5}\PYG{p}{]:} \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{3}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{6}\PYG{p}{]:} \PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{5}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{7}\PYG{p}{]:} \PYG{n}{z} \PYG{o}{=} \PYG{l+m+mi}{4}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{8}\PYG{p}{]:} \PYG{n}{x} \PYG{o}{\PYGZlt{}} \PYG{n}{y} \PYG{o}{\PYGZlt{}} \PYG{n}{z}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{8}\PYG{p}{]:} \PYG{k+kc}{False}
+
+\PYG{c+c1}{\PYGZsh{} joined test}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{9}\PYG{p}{]:} \PYG{n}{x} \PYG{o}{\PYGZlt{}} \PYG{n}{y} \PYG{o+ow}{and} \PYG{n}{y} \PYG{o}{\PYGZgt{}} \PYG{n}{z}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{9}\PYG{p}{]:} \PYG{k+kc}{True}
+
+\PYG{c+c1}{\PYGZsh{} disjoined test}
+\PYG{n}{In} \PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{]:} \PYG{n}{x} \PYG{o}{\PYGZlt{}} \PYG{n}{y} \PYG{o+ow}{or} \PYG{n}{y} \PYG{o}{\PYGZlt{}} \PYG{n}{z}
+\PYG{n}{Out}\PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{]:} \PYG{k+kc}{True}
+\end{Verbatim}

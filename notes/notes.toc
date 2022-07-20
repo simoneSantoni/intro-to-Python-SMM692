@@ -1,0 +1,16 @@
+\contentsline {chapter}{\numberline {1}Organization of the Module}{5}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Getting Started with Python}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Managing Python Environments}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Collaborative and Versioning Tools}{11}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Python Objects}{13}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Number Type Fundamentals}{14}{section.5.1}%
+\contentsline {section}{\numberline {5.2}String Type Fundamentals}{21}{section.5.2}%
+\contentsline {section}{\numberline {5.3}List and Dictionaries}{22}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tuples, Files, and Everything Else}{22}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Python Statements}{22}{section.5.5}%
+\contentsline {section}{\numberline {5.6}If Test}{23}{section.5.6}%
+\contentsline {section}{\numberline {5.7}While and For Loops}{23}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Iterations and Comprehensions}{23}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Technical and Scientific Computation with NumPy and SciPy}{25}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Data Management with Pandas and Dask}{27}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Coda}{29}{chapter.8}%

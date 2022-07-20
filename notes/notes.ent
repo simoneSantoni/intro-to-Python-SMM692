@@ -55,3 +55,26 @@ with
 complex
 numbers.
 \@endanenote 
+\@doanenote {4}
+macro:->The
+official
+Python
+documentation
+has
+an
+extensive
+section
+on
+operator
+precedence
+rules
+in
+the
+section
+dedicated
+to
+\href
+{https://docs.python.org/3/reference/expressions.html}{syntax
+of
+expressions}
+\@endanenote 
