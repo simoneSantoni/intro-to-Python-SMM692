@@ -516,15 +516,25 @@ Out[10]: True
 
 \begin{paracol}{2}
 	\question{What is a string?}
-	\note{A Python string is a positionally ordered collection of other objects. Sequences maintain a left-to-right order among the items they contain: their items are stored and fetched by their relative positions. Strictly speaking, strings are sequences of one-character strings; other, more general sequence types include lists and tuples, covered later.}
+	\note{A Python string is a positionally ordered collection of other objects. Sequences maintain a left-to-right order among the items they contain: their items are stored and fetched by their relative positions. Strictly speaking, strings are \textit{immutable sequences} of one-character strings; other, more general sequence types include lists and tuples, covered later.}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{Is \textit{abc} a Python string?}
-	\note{Nope. Python strings are enclosed in single quotes (`...') \textit{or} double quotes (``...'') with the same result. Hence, \textit{``abc''} can be Python string, while \textit{abc} cannot. Example 5.3 (line 2) shows how to assign the string ``Python 3.X'' to the variable $S$.}
+	\question{How do we use strings?}
+	\note{Strings are used to record words, contents of text files loaded into memory, Internet addresses, Python source code, and so on. Strings can also be used to hold the raw bytes used for media files and network transfers, and both the encoded and decoded forms of non-ASCII Unicode text used in internationalized programs.}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 3 --- Python strings as sequences}
+\begin{paracol}{2}
+	\question{Is \texttt{abc} a Python string?}
+	\note{Nope. Python strings are enclosed in single quotes (`...') \textit{or} double quotes (``...'') with the same result. Hence, ``\texttt{abc}'' can be Python string, while \texttt{abc} cannot. \texttt{abc} can be a variable name, though.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{String indexing and slicing}
+	\note{The fact that strings are immutable sequences has tangible effects on how we manipulate textual data in Python. Example 5.5 shows how to fetch the individual elements of \texttt{S}, a variable assigned to ``\texttt{Python 3.X}.'' As per the built-in function \href{https://docs.python.org/3/tutorial/introduction.html#strings}{\texttt{len}}, \texttt{S} contains six unitary strings. That means that each element in \texttt{S} is associated with a position in the numerical progression $\{0, 1, 2, 3, 4, 5\}$. Now, you may be surprised to see the first element of the list is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has index $0$, while the last element has index \texttt{len(obj)} - 1.  Fetching the individual elements of a string, such as \texttt{S}, requires passing the desired index between brackets, as shown in line 9 (where we get the first unitary string, namely, ``\texttt{P}''.), line 13 (where we get the last unitary string, namely, ``\texttt{X}''), and line 21 (where we get the unitary string with index $3$, i.e., the fourth unitary string appearing in \texttt{S}, ``\texttt{h}''). Note that line 17 is an alternative indexing strategy to the one presented in line 13: it is possible to retrieve the last unitary string by counting `backward'; that is, getting the first element starting from the right-hand side of the string, which equates to index \texttt{-1}. In lines 26 and 30, we exploit the indices of \texttt{S} to retrieve multiple unitary strings in a row. What we pass among brackets is not a single index. Instead, we specify a range of indices \texttt{i:j}. It is wort noticing that, in Python, the the element occupying the lower bound index \texttt{i} is returned, whereas the the element occupying the upper bound index is not \texttt{j} s not.} 
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.5 --- Python strings as sequences}
 # let us assign the string "Python 3.X" to the variable S
 In [1]: S = "Python 3.X"
 
@@ -532,37 +542,32 @@ In [1]: S = "Python 3.X"
 In [2]: len(S)
 Out[2]: 6
 
-# access the first string object in the sequence behind S 	
+# access the first unitary string in the sequence behind S 	
 In [3]: S[0]
 Out[3]: "P"
 
-# access the last string object in the sequence behind S
-In [4]: S[-1]
+# access the last unitary string in the sequence behind S
+In [4]: S[len(S)-1]
 Out[4]: "X"
 
 # or, equivalently
-In [5]: S[len(S)-1]
+In [5]: S[-1]
 Out[5]: "X"
 
-# access the i-th, e.g., 3rd, string object in the sequence behind S
+# access the i-th, e.g., 3rd, unitary string in the sequence behind S
 In [6]: S[3]
-Out[6]: "X"
+Out[6]: "h"
 
-# access string objects between the i-th and j-th positions in the sequence 
+# access unitary strings between the i-th and j-th positions in the sequence 
 # behind S
 In [7]: S[2:5]
 Out[7]: "tho"
 
-# access string objects following the i-th position in the sequence behind S
+# access unitary strings following the i-th position in the sequence behind S
 In [8]: S[-3:]
 Out[8]: "3.X"
 
 \end{pythoncode}
-
-\begin{paracol}{2}
-	\question{How do we use strings?}
-	\note{Strings are used to record both textual information (your name, for instance) as well as arbitrary collections of bytes (such as an image file’s contents).}
-\end{paracol}
 
 \section{List and Dictionaries}
 

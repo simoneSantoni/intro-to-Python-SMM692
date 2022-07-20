@@ -5,9 +5,9 @@
 \contentsline {chapter}{\numberline {5}Python Objects}{13}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Number Type Fundamentals}{14}{section.5.1}%
 \contentsline {section}{\numberline {5.2}String Type Fundamentals}{21}{section.5.2}%
-\contentsline {section}{\numberline {5.3}List and Dictionaries}{22}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Tuples, Files, and Everything Else}{22}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Python Statements}{22}{section.5.5}%
+\contentsline {section}{\numberline {5.3}List and Dictionaries}{23}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Tuples, Files, and Everything Else}{23}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Python Statements}{23}{section.5.5}%
 \contentsline {section}{\numberline {5.6}If Test}{23}{section.5.6}%
 \contentsline {section}{\numberline {5.7}While and For Loops}{23}{section.5.7}%
 \contentsline {section}{\numberline {5.8}Iterations and Comprehensions}{23}{section.5.8}%

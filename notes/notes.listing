@@ -5,28 +5,28 @@ In [1]: S = "Python 3.X"
 In [2]: len(S)
 Out[2]: 6
 
-# access the first string object in the sequence behind S 	
+# access the first unitary string in the sequence behind S 	
 In [3]: S[0]
 Out[3]: "P"
 
-# access the last string object in the sequence behind S
-In [4]: S[-1]
+# access the last unitary string in the sequence behind S
+In [4]: S[len(S)-1]
 Out[4]: "X"
 
 # or, equivalently
-In [5]: S[len(S)-1]
+In [5]: S[-1]
 Out[5]: "X"
 
-# access the i-th, e.g., 3rd, string object in the sequence behind S
+# access the i-th, e.g., 3rd, unitary string in the sequence behind S
 In [6]: S[3]
-Out[6]: "X"
+Out[6]: "h"
 
-# access string objects between the i-th and j-th positions in the sequence
+# access unitary strings between the i-th and j-th positions in the sequence
 # behind S
 In [7]: S[2:5]
 Out[7]: "tho"
 
-# access string objects following the i-th position in the sequence behind S
+# access unitary strings following the i-th position in the sequence behind S
 In [8]: S[-3:]
 Out[8]: "3.X"
 
