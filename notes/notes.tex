@@ -427,7 +427,7 @@ In [7]: z = 3 * x - 5 * y
 
 \begin{paracol}{2}
 	\question{\raggedright Displaying number objects}
-	\note{Example 5.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the outcome of the expression `as is' (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we have to prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. Example 5.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html#str.format}{\texttt{format}}.}
+	\note{Example 5.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the outcome of the expression `as is' (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we have to prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. Example 5.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html#str.format}{\texttt{format}}.}
 \end{paracol}
 \clearpage
 
@@ -531,8 +531,9 @@ Out[10]: True
 
 \begin{paracol}{2}
 	\question{String indexing and slicing}
-	\note{The fact that strings are immutable sequences has tangible effects on how we manipulate textual data in Python. Example 5.5 shows how to fetch the individual elements of \texttt{S}, a variable assigned to ``\texttt{Python 3.X}.'' As per the built-in function \href{https://docs.python.org/3/tutorial/introduction.html#strings}{\texttt{len}}, \texttt{S} contains six unitary strings. That means that each element in \texttt{S} is associated with a position in the numerical progression $\{0, 1, 2, 3, 4, 5\}$. Now, you may be surprised to see the first element of the list is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has index $0$, while the last element has index \texttt{len(obj)} - 1.  Fetching the individual elements of a string, such as \texttt{S}, requires passing the desired index between brackets, as shown in line 9 (where we get the first unitary string, namely, ``\texttt{P}''.), line 13 (where we get the last unitary string, namely, ``\texttt{X}''), and line 21 (where we get the unitary string with index $3$, i.e., the fourth unitary string appearing in \texttt{S}, ``\texttt{h}''). Note that line 17 is an alternative indexing strategy to the one presented in line 13: it is possible to retrieve the last unitary string by counting `backward'; that is, getting the first element starting from the right-hand side of the string, which equates to index \texttt{-1}. In lines 26 and 30, we exploit the indices of \texttt{S} to retrieve multiple unitary strings in a row. What we pass among brackets is not a single index. Instead, we specify a range of indices \texttt{i:j}. It is wort noticing that, in Python, the the element occupying the lower bound index \texttt{i} is returned, whereas the the element occupying the upper bound index is not \texttt{j} s not.} 
+	\note{The fact that strings are immutable sequences affects how we manipulate textual data in Python. In example 5.5, we fetch the individual elements of \texttt{S}, a variable assigned to ``\texttt{Python 3.X}.'' As per the built-in function \href{https://docs.python.org/3/tutorial/introduction.html#strings}{\texttt{len}}, \texttt{S} contains six unitary strings. That means that each element in \texttt{S} is associated with a position in the numerical progression $\{0, 1, 2, 3, 4, 5\}$. Now, you may be surprised to see the first element of the list is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has index $0$, while the last element has index \texttt{len(obj)} - 1.  Fetching the individual elements of a string, such as \texttt{S}, requires passing the desired index between brackets, as shown in line 9 (where we get the first unitary string, namely, ``\texttt{P}''.), line 13 (where we get the last unitary string, namely, ``\texttt{X}''), and line 21 (where we get the unitary string with index $3$, i.e., the fourth unitary string appearing in \texttt{S}, ``\texttt{h}''). Note that line 17 is an alternative indexing strategy to the one presented in line 13: it is possible to retrieve the last unitary string by counting `backward'; that is, getting the first element starting from the right-hand side of the string, which equates to index \texttt{-1}. In lines 26 and 30, we exploit the indices of \texttt{S} to retrieve multiple unitary strings in a row. What we pass among brackets is not a single index. Instead, we specify a range of indices \texttt{i:j}. It is wort noticing that, in Python, the element associated with the lower bound index \texttt{i} is returned, whereas the element associated with the upper bound index \texttt{j} is not. In line 26, we fetch the unitary strings between index \texttt{2} --- equating to third unitary string of \texttt{S} --- and index \texttt{5} excluded --- namely, the fifth unitary string of \texttt{S}. In line 30, we adopt the `backward' approach to retrieve the unitary string with index \texttt{-3} --- the third string counting from the right-hand side of \texttt{S} --- as well as any other unitary strings following index \texttt{-3}. To do that, we leave the upper bound index blank.} 
 \end{paracol}
+\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.5 --- Python strings as sequences}
 # let us assign the string "Python 3.X" to the variable S
@@ -558,16 +559,53 @@ Out[5]: "X"
 In [6]: S[3]
 Out[6]: "h"
 
-# access unitary strings between the i-th and j-th positions in the sequence 
-# behind S
+# access the unitary strings between the i-th and j-th positions in the 
+# sequence behind S
 In [7]: S[2:5]
 Out[7]: "tho"
 
-# access unitary strings following the i-th position in the sequence behind S
+# access the unitary strings following the i-th position in the sequence 
+# behind S
 In [8]: S[-3:]
 Out[8]: "3.X"
 
 \end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright Common string literals and operators}
+	\note{Example 5.5 deals with string indexing and slicing, two of the many operations we can carry out on strings. Table \ref{tab:string_literals_and_operators} reports a sample of common string literals and operators. The first two lines of Table \ref{tab:string_literals_and_operators} remind us that single and double quotes are equivalent when it comes to assign a variable to a string object. However, we must refrain from mixing and matching single and double quotes. In other words, a string object requires the leading and trailing quotes are of the same type (i.e., double-double, or single-single). In the interest of consistency, it is a good idea to make a policy choice, such as, ``in my Python code, I use double quotes only'', and to stick with that all throughout the various lines of the script. I prefer using double quotes for the reason that is evident the third line of the }
+\end{paracol}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Sample of String Literals and Operators}
+	\label{tab:string_literals_and_operators}
+	\begin{tabular}{ll}
+		\toprule \toprule
+		Literal/operation & Interpretation \\
+		\midrule
+		\texttt{S = ""}} &  Empty string \\
+		\texttt{S = `'} &   Single quotes, same as double quotes \\
+		\texttt{S = "spam's"} & Single quote as a string \\
+		\texttt{S = """...multiline..."""} & Triple-quoted block strings \\
+		\texttt{S1 + S2} & Concatenate \\
+		\texttt{S * 3} & Repeat S $n$ times (e.g., three times)\\
+		\texttt{S[i]} & Index \\
+		\texttt{S[i:j]} & Slice \\
+		\texttt{length(S)} & Length \\
+		\texttt{"\{\}".format()} & String formatting expression \\ 
+		\texttt{S.find("pa")} & Search \\
+		\texttt{S.strip()} & Remove white spaces \\
+		\texttt{S.replace("pa", "xx")} & Replacement \\
+		\texttt{S.split(",")} & Split on a character (e.g., ``,'') \\
+		\texttt{S.isdigit()} & Test if the string is a digit \\
+		\texttt{S.lower()} & Case conversion --- to lower case \\
+		\texttt{S.upper()} & Case conversion --- to upper case \\
+		\texttt{S.endswith("spam")} & End test \\
+		\texttt{"-".join(strlist)} & Join multiple strings on a character (e.g., ``-'')\\
+		\bottomrule
+	\end{tabular}
+\end{table}
 
 \section{List and Dictionaries}
 

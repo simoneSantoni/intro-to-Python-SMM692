@@ -21,12 +21,13 @@ Out[5]: "X"
 In [6]: S[3]
 Out[6]: "h"
 
-# access unitary strings between the i-th and j-th positions in the sequence
-# behind S
+# access the unitary strings between the i-th and j-th positions in the
+# sequence behind S
 In [7]: S[2:5]
 Out[7]: "tho"
 
-# access unitary strings following the i-th position in the sequence behind S
+# access the unitary strings following the i-th position in the sequence
+# behind S
 In [8]: S[-3:]
 Out[8]: "3.X"
 
