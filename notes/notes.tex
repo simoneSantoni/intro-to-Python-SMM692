@@ -13,9 +13,32 @@
 \usepackage{tcolorbox}
 \usepackage{lineno}
 \usepackage{amsmath}
-\tcbuselibrary{minted,skins,breakable}
 \usepackage{endnotes}
 \let\footnote=\endnote
+\usepackage[titletoc]{appendix}
+\numberwithin{figure}{chapter}
+\numberwithin{table}{chapter}
+
+%% ========================== Coding snippets =============================
+\usepackage[newfloat]{minted}
+\usepackage[many]{tcolorbox}
+\definecolor{Gray}{gray}{0.9}
+\newcommand{\txtmint}[1]{\mintinline[fontsize=\scriptsize, bgcolor=Gray]{text}{#1}}
+\tcbuselibrary{minted,skins,breakable}
+\newtcblisting{pythoncode}[2][]{
+  listing engine=minted,
+  breakable,
+  colback=green,
+  colframe=black!70,
+  listing only,
+  minted style=perldoc,
+  minted language=python,
+  minted options={numbersep=3mm,texcl=true,#1},
+  left=5mm,enhanced,
+  overlay={\begin{tcbclipinterior}\fill[black!25] (frame.south west)
+            rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}},
+            #2,
+}
 
 
 %% ============================== Tabular =================================
@@ -30,8 +53,8 @@
 \usepackage{threeparttable}
 \usepackage[justification=centering]{caption}
 \captionsetup[table]{labelfont=sc, labelsep=newline}
-\renewcommand{\figurename}{\itshape Fig.}
-\renewcommand{\thetable}{\Roman{table}}
+%\renewcommand{\figurename}{\itshape Fig.}
+%\renewcommand{\thetable}{\Roman{table}}
 
 %% ====================== To implement the Cornell ========================
 \usepackage{paracol} % added <<<<<<<<<<<<<<<<<<<<<
@@ -68,22 +91,6 @@ allcolors=base_c,
 
 % =========================== Utilities ===================================
 \usepackage{lipsum}% generate filler text
-
-%% ========================== Code input ==================================
-\newtcblisting{pythoncode}[2][]{
-  listing engine=minted,
-  breakable,
-  colback=green,
-  colframe=black!70,
-  listing only,
-  minted style=tango,
-  minted language=python,
-  minted options={numbersep=3mm,texcl=true,#1},
-  left=5mm,enhanced,
-  overlay={\begin{tcbclipinterior}\fill[black!25] (frame.south west)
-            rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}},
-            #2,
-}
 
 % ========================= Cornell Notes stuff ============================
 % question
@@ -140,6 +147,10 @@ allcolors=base_c,
 
 \tableofcontents
 
+\listoffigures
+
+\listoftables
+
 \clearpage
 
 \chapter{Organization of the Module}
@@ -148,15 +159,40 @@ $\ldots$
 
 \chapter{Getting Started with Python}
 
-$\ldots$
-
-\chapter{Managing Python Environments}
+\section{Installing Python}
 
 $\ldots$
 
-\chapter{Collaborative and Versioning Tools}
+\section{How Python Runs Programs}
 
 $\ldots$
+
+\section{How We Run Python Programs}
+
+$\ldots$
+
+\section{Managing Python Environments}
+
+$\ldots$
+
+\section{Collaborative and Versioning Tools}
+
+$\ldots$
+
+\chapter{Python Language Fundamentals}
+
+\section{Variables}
+
+$\ldots$
+
+\section{Objects}
+
+$\ldots$
+
+\section{References}
+
+$\ldots$
+
 
 \chapter{Python Objects}
 
@@ -218,22 +254,22 @@ Implementation types & Compiled code, stack tracebacks                          
 
 \begin{paracol}{2}
     \question{\raggedright Types of `number' objects} 
-	\note{Example 5.1, ``Doing stuff with numbers,'' highlights the two most popular \href{https://docs.python.org/3/tutorial/introduction.html#numbers}{`number'} instances in Python: integers and floating-point numbers. Integers are whole numbers such as 0, 4, or -12. Floating-point numbers are the representation of real numbers such as 0.5, 3.1415, or -1.6e-19. However, floating points in Python do not have --- in general --- the same value as the real number they represent.\footnote{Floating numbers are stored in binaries with an assigned level of precision that is typically equivalent to 15 or 16 decimals.} It is worth noticing that any single number with a period `.' is considered a floating point in Python. Also, Example 5.1 shows that the multiplication of an integer by a floating point yields a floating point. That happens because Python first converts operands up to the type of the most complicated operand.} %
+	\note{Example 4.1, ``Doing stuff with numbers,'' highlights the two most popular \href{https://docs.python.org/3/tutorial/introduction.html#numbers}{`number'} instances in Python: integers and floating-point numbers. Integers are whole numbers such as 0, 4, or -12. Floating-point numbers are the representation of real numbers such as 0.5, 3.1415, or -1.6e-19. However, floating points in Python do not have --- in general --- the same value as the real number they represent.\footnote{Floating numbers are stored in binaries with an assigned level of precision that is typically equivalent to 15 or 16 decimals.} It is worth noticing that any single number with a period `.' is considered a floating point in Python. Also, Example 4.1 shows that the multiplication of an integer by a floating point yields a floating point. That happens because Python first converts operands up to the type of the most complicated operand.} %
 \end{paracol}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.1 --- doing `stuff' with numbers}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.1 --- doing `stuff' with numbers}
 # integer addition
-In [1]: 1 + 1
-Out[1]: 2
+>>> 1 + 1
+2
 	
 # floating-point multiplication
-In [2]: 10 * 0.5
-Out[2]: 5.0
+>>> 10 * 0.5
+5.0
 	
 # 3 to the power 100
-In [3]: 3 ** 100
-Out[3]: 515377520732011331036461129765621272702107522001
+>>> 3 ** 100
+515377520732011331036461129765621272702107522001
 	
 \end{pythoncode}
 
@@ -275,12 +311,12 @@ Out[3]: 515377520732011331036461129765621272702107522001
 			\item `**' $\rightarrow$ exponentiation
 		\end{itemize}
 		 
-		 To use these operations, it is sufficient to launch a  Python or IPython session without any modules loaded (see Example 5.1).}
+		 To use these operations, it is sufficient to launch a  Python or IPython session without any modules loaded (see Example 4.1).}
 \end{paracol}
 
 \begin{paracol}{2}
     \question{\raggedright Advanced mathematical operations}
-    \note{Besides the mathematical operations shown above, there are many \href{https://docs.python.org/3/library/numeric.html}{modules shipped with Python} that carry out advanced/specific numerical analysis. For example, the \href{https://docs.python.org/3/library/math.html}{\texttt{math}} module provides access to the mathematical functions defined by the \href{https://en.wikipedia.org/wiki/C_standard_library}{C standard}.\footnote{As per the documentation of the Python programming language, \href{https://docs.python.org/3/library/math.html}{\texttt{math}} cannot be used with complex numbers.} Table \ref{tab:math_module_functions} reports a sample of these functions. To use them \href{https://docs.python.org/3/library/math.html}{\texttt{math}}, we have to import the module as shown in Example 5.2. Another popular module shipped with Python is \href{https://docs.python.org/3/library/random.html}{\texttt{random}}, implementing pseudo-random number generators for various distributions (see the lower section of Example 2).}
+    \note{Besides the mathematical operations shown above, there are many \href{https://docs.python.org/3/library/numeric.html}{modules shipped with Python} that carry out advanced/specific numerical analysis. For example, the \href{https://docs.python.org/3/library/math.html}{\texttt{math}} module provides access to the mathematical functions defined by the \href{https://en.wikipedia.org/wiki/C_standard_library}{C standard}.\footnote{As per the documentation of the Python programming language, \href{https://docs.python.org/3/library/math.html}{\texttt{math}} cannot be used with complex numbers.} Table \ref{tab:math_module_functions} reports a sample of these functions. To use them \href{https://docs.python.org/3/library/math.html}{\texttt{math}}, we have to import the module as shown in Example 4.2. Another popular module shipped with Python is \href{https://docs.python.org/3/library/random.html}{\texttt{random}}, implementing pseudo-random number generators for various distributions (see the lower section of Example 2).}
 \end{paracol}
 
 \begin{table}[!htbp]
@@ -319,43 +355,43 @@ Out[3]: 515377520732011331036461129765621272702107522001
 \end{table}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.2 --- advanced mathematical operations with the modules shipped with Python}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.2 --- advanced mathematical operations with the modules shipped with Python}
 # import the math module
-In [1]: import math
+>>> import math
 	
 # base-y log of x
-In [2]: math.log(12, 8)
-Out[2]: 1.1949875002403856
+>>> math.log(12, 8)
+1.1949875002403856
 	
 # base-10 log of x
-In [3]: math.log10(12)
-Out[3]: 1.0791812460476249
+>>> math.log10(12)
+1.0791812460476249
 	
 # import the random module
-In [4]: import random
+>>> import random
 	
 # a draw from a normal distribution with mean = 0 and standard deviation = 1
-In [5]: random.normalvariate(0, 1)
-Out[5]: -0.136017752991189
+>>> random.normalvariate(0, 1)
+-0.136017752991189
 
 # trigonometric functions
-In [6]: math.cos(0)
-Out[6]: 1.0
+>>> math.cos(0)
+1.0
 
-In [7]: math.sin(0)
-Out[7]: 0.0
+>>> math.sin(0)
+0.0
 
-In [8]: math.tan(0) 
-Out[8]: 0.0
+>>> math.tan(0) 
+0.0
 
 # an expression containing a factorial product
-In [9]: math.factorial(4) - 4 * 3 * 2 * 1
-Out[9]: 0
+>>> math.factorial(4) - 4 * 3 * 2 * 1
+0
 \end{pythoncode}
 
 \begin{paracol}{2}
 	\question{Operator precedence}
-    \note{As shown in Example 5.2, line 30, Python expressions can string together multiple operators. So, how does Python know which operation to perform first? The answer to this question lies in operator precedence. When you write an expression with more than one operator, Python groups its parts according to what are called precedence rules,\footnote{The official Python documentation has an extensive section on operator precedence rules in the section dedicated to \href{https://docs.python.org/3/reference/expressions.html}{syntax of expressions}} and this grouping determines the order in which the expression’s parts are computed. Table \ref{tab:operator_precedence} reports the precedence hierarchy concerning the most common operators. Note that operators lower in the table have higher precedence. Parentheses can be used to create sub-expressions that override operator precedence rules.}
+    \note{As shown in Example 4.2, line 30, Python expressions can string together multiple operators. So, how does Python know which operation to perform first? The answer to this question lies in operator precedence. When you write an expression with more than one operator, Python groups its parts according to what are called precedence rules,\footnote{The official Python documentation has an extensive section on operator precedence rules in the section dedicated to \href{https://docs.python.org/3/reference/expressions.html}{syntax of expressions}} and this grouping determines the order in which the expression’s parts are computed. Table \ref{tab:operator_precedence} reports the precedence hierarchy concerning the most common operators. Note that operators lower in the table have higher precedence. Parentheses can be used to create sub-expressions that override operator precedence rules.}
 \end{paracol}
 \clearpage
 
@@ -393,41 +429,41 @@ Out[9]: 0
 		\item Variables must be assigned before they can be used in expressions
 		\item Variables refer to objects and are never declared ahead of time
 	\end{itemize}
-    As example 5.3 shows, the assignment of \texttt{x = 2} causes the variable \texttt{x} to come into existence `automatically.' From that point, we can use the variables in the context of expressions such as the ones displayed in lines 8, 12, 16, and 20, or to create new variables like in line 24.
+    As Example 4.3 shows, the assignment of \texttt{x = 2} causes the variable \texttt{x} to come into existence `automatically.' From that point, we can use the variables in the context of expressions such as the ones displayed in lines 8, 12, 16, and 20, or to create new variables like in line 24.
     }
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.3 --- expressions involving arithmetic operations}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.3 --- expressions involving arithmetic operations}
 	
 # let us assign the variables 'x' and 'y' to two number objects
-In [1]: x = 2
+>>> x = 2
 
-In [2]: y = 4.0	
+>>> y = 4.0	
 
 # subtracting an integer from variable 'x'
-In [3]: x - 1
-Out[3]: 1
+>>> x - 1
+1
 
 # dividing the variable 'y' by an integer
-In [4]: y / 73
-Out[4]: 0.0547945205479452
+>>> y / 73
+0.0547945205479452
 
 # integer-dividing the variable 'y' by an integer
-In [5]: y // 73
-Out[5]: 0.0
+>>> y // 73
+0.0
 
 # getting a linear combination of 'x' and 'y'
-In [6]: 3 * x - 5 * y
-Out[6]: -14.0
+>>> 3 * x - 5 * y
+-14.0
 
 # assigning the variable 'z' to the linear combination of 'x' and 'y'
-In [7]: z = 3 * x - 5 * y
+>>> z = 3 * x - 5 * y
 
 \end{pythoncode}
 
 \begin{paracol}{2}
 	\question{\raggedright Displaying number objects}
-	\note{Example 5.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the outcome of the expression `as is' (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we have to prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. Example 5.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html#str.format}{\texttt{format}}.}
+	\note{Example 4.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the outcome of the expression `as is' (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we have to prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. Example 4.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html#str.format}{\texttt{format}}.}
 \end{paracol}
 \clearpage
 
@@ -459,56 +495,56 @@ In [7]: z = 3 * x - 5 * y
 	\end{tabular}
 \end{table}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.4 --- number formatting in Python}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.4 --- number formatting in Python}
 # assign the variable 'a' to a floating-point number
-In [1]: a = 0.67544908755
+>>> a = 0.67544908755
 
 # displaying 'a' with the first two decimals only
-In [2]: "{:.2f}".format(a)
-Out[2]: "0.68"
+>>> "{:.2f}".format(a)
+"0.68"
 
 # displaying 'a' with the first three decimals only
-In [3]: "{:.3f}".format(a)
-Out[3]: "0.675"
+>>> "{:.3f}".format(a)
+"0.675"
 \end{pythoncode}
 
 \begin{paracol}{2}
 	\question{\raggedright{How do I compare number objects?}}
-	\note{Comparisons are used frequently to create control \href{https://docs.python.org/3/tutorial/controlflow.html}{flows}, a topic we will discuss later in this chapter. Normal comparisons in Python regard two number objects and return a Boolean result. Chained comparisons concern three or more objects, and, like normal comparisons, yield a Boolean result. Example 5.5 provides a sample of normal comparisons (between lines 1 and 15) and chained comparisons (between lines 21 and 30). As evident in the example, comparisons can regard both numbers and variables assigned to numbers. Chained comparisons can take the form of a range test (see line 21), a joined, `AND' test of the truth of multiple expressions (see line 25) or a disjoined, `OR' test of the truth of multiple expressions (see line 29).}
+	\note{Comparisons are used frequently to create control \href{https://docs.python.org/3/tutorial/controlflow.html}{flows}, a topic we will discuss later in this chapter. Normal comparisons in Python regard two number objects and return a Boolean result. Chained comparisons concern three or more objects, and, like normal comparisons, yield a Boolean result. Example 4.5 provides a sample of normal comparisons (between lines 1 and 15) and chained comparisons (between lines 21 and 30). As evident in the example, comparisons can regard both numbers and variables assigned to numbers. Chained comparisons can take the form of a range test (see line 21), a joined, `AND' test of the truth of multiple expressions (see line 25) or a disjoined, `OR' test of the truth of multiple expressions (see line 29).}
 \end{paracol}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.4 --- comparing numeric objects}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.5 --- comparing numeric objects}
 # less than
-In [1]: 3 < 2
-Out[1]: False
+>>> 3 < 2
+False
 
 # greater than or equal
-In [2]: 1 <= 2
-Out[2]: True
+>>> 1 <= 2
+True
 
 # equal
-In [3]: 2 == 2
-Out[3]: True 
+>>> 2 == 2
+True 
 
 # not equal
-In [4]: 4 != 4
-Out[4]: False
+>>> 4 != 4
+False
 
 # range test
-In [5]: x = 3
-In [6]: y = 5
-In [7]: z = 4
-In [8]: x < y < z
-Out[8]: False
+>>> x = 3
+>>> y = 5
+>>> z = 4
+>>> x < y < z
+False
 
 # joined test
-In [9]: x < y and y > z
-Out[9]: True
+>>> x < y and y > z
+True
 
 # disjoined test
-In [10]: x < y or y < z
-Out[10]: True 
+>>> x < y or y < z
+True 
 
 \end{pythoncode}
 
@@ -531,50 +567,52 @@ Out[10]: True
 
 \begin{paracol}{2}
 	\question{String indexing and slicing}
-	\note{The fact that strings are immutable sequences affects how we manipulate textual data in Python. In example 5.5, we fetch the individual elements of \texttt{S}, a variable assigned to ``\texttt{Python 3.X}.'' As per the built-in function \href{https://docs.python.org/3/tutorial/introduction.html#strings}{\texttt{len}}, \texttt{S} contains six unitary strings. That means that each element in \texttt{S} is associated with a position in the numerical progression $\{0, 1, 2, 3, 4, 5\}$. Now, you may be surprised to see the first element of the list is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has index $0$, while the last element has index \texttt{len(obj)} - 1.  Fetching the individual elements of a string, such as \texttt{S}, requires passing the desired index between brackets, as shown in line 9 (where we get the first unitary string, namely, ``\texttt{P}''.), line 13 (where we get the last unitary string, namely, ``\texttt{X}''), and line 21 (where we get the unitary string with index $3$, i.e., the fourth unitary string appearing in \texttt{S}, ``\texttt{h}''). Note that line 17 is an alternative indexing strategy to the one presented in line 13: it is possible to retrieve the last unitary string by counting `backward'; that is, getting the first element starting from the right-hand side of the string, which equates to index \texttt{-1}. In lines 26 and 30, we exploit the indices of \texttt{S} to retrieve multiple unitary strings in a row. What we pass among brackets is not a single index. Instead, we specify a range of indices \texttt{i:j}. It is wort noticing that, in Python, the element associated with the lower bound index \texttt{i} is returned, whereas the element associated with the upper bound index \texttt{j} is not. In line 26, we fetch the unitary strings between index \texttt{2} --- equating to third unitary string of \texttt{S} --- and index \texttt{5} excluded --- namely, the fifth unitary string of \texttt{S}. In line 30, we adopt the `backward' approach to retrieve the unitary string with index \texttt{-3} --- the third string counting from the right-hand side of \texttt{S} --- as well as any other unitary strings following index \texttt{-3}. To do that, we leave the upper bound index blank.} 
+	\note{The fact that strings are immutable sequences affects how we manipulate textual data in Python. In Example 4.6, we fetch the individual elements of \texttt{S}, a variable assigned to ``\texttt{Python 3.X}.'' As per the built-in function \href{https://docs.python.org/3/tutorial/introduction.html#strings}{\texttt{len}}, \texttt{S} contains six unitary strings. That means that each element in \texttt{S} is associated with a position in the numerical progression $\{0, 1, 2, 3, 4, 5\}$. Now, you may be surprised to see the first element of the list is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has index $0$, while the last element has index \texttt{len(obj)} - 1.  Fetching the individual elements of a string, such as \texttt{S}, requires passing the desired index between brackets, as shown in line 9 (where we get the first unitary string, namely, ``\texttt{P}''.), line 13 (where we get the last unitary string, namely, ``\texttt{X}''), and line 21 (where we get the unitary string with index $3$, i.e., the fourth unitary string appearing in \texttt{S}, ``\texttt{h}''). Note that line 17 is an alternative indexing strategy to the one presented in line 13: it is possible to retrieve the last unitary string by counting `backward'; that is, getting the first element starting from the right-hand side of the string, which equates to index \texttt{-1}. In lines 26 and 30, we exploit the indices of \texttt{S} to retrieve multiple unitary strings in a row. What we pass among brackets is not a single index. Instead, we specify a range of indices \texttt{i:j}. It is wort noticing that, in Python, the element associated with the lower bound index \texttt{i} is returned, whereas the element associated with the upper bound index \texttt{j} is not. In line 26, we fetch the unitary strings between index \texttt{2} --- equating to third unitary string of \texttt{S} --- and index \texttt{5} excluded --- namely, the fifth unitary string of \texttt{S}. In line 30, we adopt the `backward' approach to retrieve the unitary string with index \texttt{-3} --- the third string counting from the right-hand side of \texttt{S} --- as well as any other unitary strings following index \texttt{-3}. To do that, we leave the upper bound index blank.} 
 \end{paracol}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 5.5 --- Python strings as sequences}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.6 --- Python strings as sequences}
 # let us assign the string "Python 3.X" to the variable S
-In [1]: S = "Python 3.X"
+>>> S = "Python 3.X"
 
 # check the length of S
-In [2]: len(S)
-Out[2]: 6
+>>> len(S)
+6
 
 # access the first unitary string in the sequence behind S 	
-In [3]: S[0]
-Out[3]: "P"
+>>> S[0]
+"P"
 
 # access the last unitary string in the sequence behind S
-In [4]: S[len(S)-1]
-Out[4]: "X"
+>>> S[len(S)-1]
+"X"
 
 # or, equivalently
-In [5]: S[-1]
-Out[5]: "X"
+>>> S[-1]
+"X"
 
 # access the i-th, e.g., 3rd, unitary string in the sequence behind S
-In [6]: S[3]
-Out[6]: "h"
+>>> S[3]
+"h"
 
 # access the unitary strings between the i-th and j-th positions in the 
 # sequence behind S
-In [7]: S[2:5]
-Out[7]: "tho"
+>>> S[2:5]
+"tho"
 
 # access the unitary strings following the i-th position in the sequence 
 # behind S
-In [8]: S[-3:]
-Out[8]: "3.X"
+>>> S[-3:]
+"3.X"
 
 \end{pythoncode}
+\clearpage
 
 \begin{paracol}{2}
 	\question{\raggedright Common string literals and operators}
-	\note{Example 5.5 deals with string indexing and slicing, two of the many operations we can carry out on strings. Table \ref{tab:string_literals_and_operators} reports a sample of common string literals and operators. The first two lines of Table \ref{tab:string_literals_and_operators} remind us that single and double quotes are equivalent when it comes to assign a variable to a string object. However, we must refrain from mixing and matching single and double quotes. In other words, a string object requires the leading and trailing quotes are of the same type (i.e., double-double, or single-single). In the interest of consistency, it is a good idea to make a policy choice, such as, ``in my Python code, I use double quotes only'', and to stick with that all throughout the various lines of the script. I prefer using double quotes for the reason that is evident the third line of the }
+	\note{Example 4.6 deals with string indexing and slicing, two of the many operations we can carry out on strings. Table \ref{tab:string_literals_and_operators} reports a sample of common string literals and operators. The first two lines of Table \ref{tab:string_literals_and_operators} remind us that single and double quotes are equivalent when it comes to assigning a variable to a string object. However, we must refrain from mixing and matching single and double quotes. In other words, a string object requires the leading and trailing quotes are of the same type (i.e., double-double or single-single). In the interest of consistency, it is a good idea to make a policy choice, such as ``in my Python code, I use double quotes only'', and to stick with that throughout the various lines of the script. I prefer using double quotes because the single quote symbol is relatively popular in natural language (consider for example the Saxon genitive). As shown in the third line of Table \ref{tab:string_literals_and_operators} the single quote is treated as a unitary string insofar as double quotes are used to delimit the string object. Should the string object be delimited by single quotes, we should tell Python not to treat the single quote symbol after \texttt{m} as a Python special character but as a unitary string. To do that, we use the escape symbol $\setminus$  as shown in the fourth line of Table \ref{tab:string_literals_and_operators}. Table \ref{tab:helpful_escapes} provides several escaping examples.}
 \end{paracol}
+\clearpage
 
 \begin{table}[!htbp]
 	\centering
@@ -587,29 +625,230 @@ Out[8]: "3.X"
 		\texttt{S = ""}} &  Empty string \\
 		\texttt{S = `'} &   Single quotes, same as double quotes \\
 		\texttt{S = "spam's"} & Single quote as a string \\
-		\texttt{S = """...multiline..."""} & Triple-quoted block strings \\
-		\texttt{S1 + S2} & Concatenate \\
-		\texttt{S * 3} & Repeat S $n$ times (e.g., three times)\\
+		\texttt{S = `spam$\setminus$'s'} & Escape symbol \\
+		\texttt{length(S)} & Length \\
 		\texttt{S[i]} & Index \\
 		\texttt{S[i:j]} & Slice \\
-		\texttt{length(S)} & Length \\
+		\texttt{S1 + S2} & Concatenate \\
+		\texttt{S * 3} & Repeat S $n$ times (e.g., three times)\\
+		\texttt{"text".join(strlist)} & Join multiple strings on a character (e.g., ``text'')\\
 		\texttt{"\{\}".format()} & String formatting expression \\ 
-		\texttt{S.find("pa")} & Search \\
 		\texttt{S.strip()} & Remove white spaces \\
 		\texttt{S.replace("pa", "xx")} & Replacement \\
 		\texttt{S.split(",")} & Split on a character (e.g., ``,'') \\
-		\texttt{S.isdigit()} & Test if the string is a digit \\
 		\texttt{S.lower()} & Case conversion --- to lower case \\
 		\texttt{S.upper()} & Case conversion --- to upper case \\
+        \texttt{S.find("text")} & Search substring (e.g., "text") \\
+		\texttt{S.isdigit()} & Test if the string is a digit \\
 		\texttt{S.endswith("spam")} & End test \\
-		\texttt{"-".join(strlist)} & Join multiple strings on a character (e.g., ``-'')\\
+        \texttt{S.startswith("spam")} & Start test \\
+		\texttt{S = """...multiline..."""} & Triple-quoted block strings \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
+\begin{paracol}{2}
+	\question{\raggedright String manipulation tasks}
+		\note{Example 4.7 presents a sample of miscellaneous string manipulation tasks. In lines 6 and 9, we check the length of the variables \texttt{S1} and \texttt{S2}. In line 13, we display five repetitions of \texttt{S1}. In line 17, we use the algebraic operator ``$+$'' to concatenate \texttt{S1} and \texttt{S2}. In line 21, we expand on the previous input by separating \texttt{S1} and \texttt{S2} by a white-space. In line 25, we carry out the same task as line 17 --- however, we rely on the built-in \href{https://docs.python.org/3/library/stdtypes.html#str.join}{\texttt{join}} function to join \texttt{S1} and \texttt{S2} with whitespace. The argument taken by \href{https://docs.python.org/3/library/stdtypes.html#str.join}{\texttt{join}} is a Python \texttt{list}, the subject of paragraph 5.3. In line 29, \texttt{S1} and \texttt{S2} are joined with a custom string object, namely, \texttt{" Vs. "}. Finally, in line 33, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html#str.format}{\texttt{format}} function (see also Example 4.4) to display a string object including \texttt{S1} and \texttt{S2}. For a comprehensive list of string methods, see Table \ref{tab:string_methods}.}
+\end{paracol}
+\clearpage
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.7 --- miscellaneous string manipulation tasks}
+# let us assign S1 and S2 to two strings
+>>> S1 = "Python 3.X"
+>>> S2 = "Julia"
+
+# check the length of S1 and S2
+>>> len(S1)
+10
+
+>>> len(S2)
+5
+
+# display the S1 repeated five times
+>>> S1 * 5
+"Python 3.XPython 3.XPython 3.XPython 3.XPython 3.X"
+
+# display the concatenation of S1 and S2
+>>> S1 + S2
+"Python 3.XJulia"
+
+# display the concatenation of S1, whitespace, and S2
+>>> S1 + " " + S2
+"Python 3.X Julia"
+
+# display the outcome of joining S1 and S2 with a whitespace
+>>> " ".join([S1, S2])
+"Python 3.X Julia"
+
+# display the outcome of joining S1 and S2 with an arbitrary string object
+>>> " Vs. ".join([S1, S2])
+"Python 3.X Vs. Julia"
+
+# string formatting
+>>> "Both {} and {} have outstanding ML modules".format(S1, S2) 
+"Both Python 3.X and Julia have outstanding ML modules"
+\end{pythoncode}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright String editing}
+	\note{Example 4.8 illustrates some string editing tasks. In line 5, we use \href{https://docs.python.org/3/library/stdtypes.html#str.format}{lstrip} --- a variation of the built-in function \href{https://docs.python.org/3/library/stdtypes.html#str.format}{strip} --- that returns a copy of the string with leading characters removed. In line 9, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html}{replace} to return a copy of the string with all occurrences of substring \texttt{old} (first argument taken by the function) replaced by \texttt{new} (second argument taken by the function). Finally, in line 17, we use the built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{lower}} to return a copy of the string with all the cased characters converted to lowercase.} 
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.8 --- miscellaneous string editing tasks}
+# let us assign S to a string object
+>>> S = "Both Python 3.X and Julia have outstanding ML modules"
+
+# strip target leading characters
+>>> S.lstrip("Both ")
+"Python 3.X and Julia have outstanding ML modules"
+
+# replace target characters
+>>> S.replace("Python 3.X", "R")
+"Both R and Julia have outstanding ML modules"
+
+# split string on target characters
+>>> S.split(" and ")
+["Both Python 3.X", "Julia have outstanding ML modules"]
+
+# make the string lower case
+>>> S.lower() 
+"both python 3.x and julia have outstanding ml modules"
+\end{pythoncode}
+\clearpage
+
+\begin{paracol}{2}
+\question{Testing and searching strings}
+\note{Example 4.9 presents a series of string test and search tasks. The built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{find}} (see lines 5 and 9) returns the lowest index in the string where substring sub is found within the slice \texttt{S[start:end]} or -1 if substring is not found.	The built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{isdigit}} return \texttt{True} if all characters in the string are digits and there is at least one character, \texttt{False} otherwise. Finally, the built-in function \href{https://docs.python.org/3/library/stdtypes.html}{endswith} returns \texttt{True} if the string ends with the specified suffix, otherwise returns \texttt{False}.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.9 --- miscellaneous string test and search tasks}
+# let us assign S to a string object
+>>> S = "The first version of Python was released in 1991"
+
+# search for "Python" in S
+>>> S.find("Python")
+21
+
+# search for "Julia" in S
+>>> S.find("Julia")
+-1
+
+# slice the string the get Python's release year information
+>>> SS = S[-4:]
+
+# display SS
+>>> SS
+"1991"
+
+# test if all characters in SS are digits
+>>> SS.isdigit()
+True
+
+# test if all characters in SS are digits
+>>> SS.isdigit()
+True
+
+# test if all characters in SS are digits
+>>> SS.isdigit()
+True
+
+# test if S ends with "1991" / SS
+>>> S.endswith(SS)
+True
+\end{pythoncode}
+\clearpage
+
+\begin{paracol}{2}
+\question{\raggedright Multiline string printing}
+\note{In the previous examples, we came across the built-in function \href{https://docs.python.org/3/library/functions.html#print}{\texttt{print}}. Such a function can be used to print both number- and string-type objects. Sometimes, what we want to print fits into a single line. In other circumstances, we are interested in visualizing rich data, which can span multiple lines. Example 4.9 how to print objects across multiple lines with the triple-quoted block string (see line ). As evident from the Python code included in lines 8-13, any line between triple-quotes is considered part of the same string object.}	
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.9 --- multiline string printing}
+# single-line print
+>>> print("Hello world!")
+Hello world!
+
+# multi-line print
+>>> print(
+... """
+... =======================================================
+... COL A       | COL B      | ...        | COL K
+... -------------------------------------------------------
+... Sheldon     | Cooper     | ...        | bazinga.com
+... -------------------------------------------------------
+... NOTES: this table has fake data
+... """
+... )
+
+=======================================================
+COL A       | COL B      | ...        | COL K
+-------------------------------------------------------
+Sheldon     | Cooper     | ...        | bazinga.com
+-------------------------------------------------------
+NOTES: this table has fake data
+
+\end{pythoncode}
+
 \section{List and Dictionaries}
 
-...
+\begin{paracol}{2}
+	\question{\raggedright What is a list?}
+		\note{A Python \href{https://docs.python.org/3/tutorial/datastructures.html}{\texttt{list}} is an \emph{ordered}, \emph{mutable} array of objects. A list is constructed by specifying the objects, separated by commas, between square brackets, \texttt{[]}.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Why do we use lists?}
+	\note{Lists are just places to collect other objects so you can treat them as groups.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright What type of objects can we include in a list?}
+	\note{Lists can contain any sort of object: numbers, strings, and even other lists. See Example 4.10.}
+\end{paracol}
+\clearpage
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.10 --- sample lists with different items}
+# an empty list
+>>> L = [] 
+
+# a list with an integer, a float, and a string
+>>> L = [2, -3.56, "XyZ"]
+
+# a list with an integer and a list
+>>> L = [4, ["abc", 8.98]]
+
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright List indexing}
+	\note{We can retrieve one or more list component objects via indexing. That is possible because list items are ordered by their position  (similarly to strings). Since Python is a zero-based indexed programming language, to fetch the first item of a list we have to call the index \texttt{0} (see Example 4.11, line 5). A list nested in another list can be fetched by using multiple indices (line 13). The first index refers to the outer list, while any subsequent index refers to an inner list. In our case, we have two indices, one for each list; that is, \texttt{L} and its sub-list \texttt{["abc", 8.98]}.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.11 --- list indexing and slicing}
+# the list
+>>> L = [4, ["abc", 8.98]]
+
+# get the first item of L
+>>> L[0]
+4
+
+ # get the second element of L
+>>> L[1]
+["abc", 8.98]
+
+# get the first item of L's second item
+>>> L[1][0]
+"abc"
+
+
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright List mutability}
+	\note{Lists may be changed in place by assignment to offsets and slices, list method calls, deletion statements, and more --- they are mutable objects..}
+\end{paracol}
 
 
 \section{Tuples, Files, and Everything Else}
@@ -618,7 +857,6 @@ Out[8]: "3.X"
 
 
 \section{Python Statements}
-
 ...
 
 \section{If Test}
@@ -646,6 +884,123 @@ Out[8]: "3.X"
 
 \chapter{Coda}
 \ldots
+
+\clearpage
+
+\begin{appendices}
+\appendixpage
+\noappendicestocpagenum
+\addappheadtotoc
+
+\chapter{Cheat Sheets}
+
+\begin{table}[!htbp]
+\centering
+\caption{Helpful Escapes}
+\label{tab:helpful_escapes}
+	\begin{tabular}{cl}
+		\toprule \toprule
+		Escape & Meaning \\
+		\midrule
+		\texttt{$\setminus\setminus$} & Backslash (stores one $\setminus$) \\
+		\texttt{$\setminus$'} & Single quotes escape (stores \texttt{'})\\
+		\texttt{$\setminus$"} & Double quotes escape (stores \texttt{"})\\
+		\texttt{$\setminus$a} & Bell \\
+		\texttt{$\setminus$b} & Backspace \\
+		\texttt{$\setminus$f} & Formfeed \\
+		\texttt{$\setminus$n} & Newline \\
+		\texttt{$\setminus$r} & Carriage return \\
+		\texttt{$\setminus$t} & Horizontal tab \\
+		\texttt{$\setminus$v} & Vertical tab \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption{Comprehensive List of String Methods}
+\label{tab:string_methods}
+\begin{tabular}{lp{12cm}}
+\toprule \toprule
+\textbf{Cases I}          &                                                                                                                                               \\ \midrule
+s.capitalize()           & Capitalize s \# 'hello' =\textgreater 'Hello'                                                                                                   \\
+s.lower()                & Lowercase s \# 'HELLO' =\textgreater 'hello'                                                                                                    \\
+s.swapcase()             & Swap cases of all characters in s \# 'Hello' =\textgreater "hELLO"                                                                              \\
+s.title()                & Titlecase s \# 'hello world' =\textgreater 'Hello World'                                                                                        \\
+s.upper()                & Uppercase s \# 'hello' =\textgreater 'HELLO'                                                                                                    \\ \midrule
+\textbf{Sequence Operations I}    &                                                                                                                                                 \\ \midrule
+s2 in s                  & Return true if s contains s2                                                                                                                    \\
+s + s2                   & Concat s and s2                                                                                                                                 \\
+len(s)                   & Length of s                                                                                                                                     \\
+min(s)                   & Smallest character of s                                                                                                                         \\
+max(s)                   & Largest character of s                                                                                                                          \\ \midrule 
+\textbf{Sequence Operations II}   &                                                                                                                                                 \\ \midrule
+s2 not in s              & Return true if s does not contain s2                                                                                                            \\
+s * integer              & Return integer copies of s concatenated \# 'hello' =\textgreater 'hellohellohello'                                                              \\
+s{[}index{]}             & Character at index of s                                                                                                                         \\
+s{[}i:j:k{]}             & Slice of s from i to j with step k                                                                                                              \\
+s.count(s2)              & Count of s2 in s                                                                                                                                \\ \midrule
+\textbf{Whitespace I}             &                                                                                                                                                 \\ \midrule
+s.center(width)          & Center s with blank padding of width \# 'hi' =\textgreater ' hi '                                                                               \\
+s.isspace()              & Return true if s only contains whitespace characters                                                                                            \\
+s.ljust(width)           & Left justifiy s with total size of width \# 'hello' =\textgreater 'hello '                                                                      \\
+s.rjust(width)           & Right justify s with total size of width \# 'hello' =\textgreater ' hello'                                                                      \\
+s.strip()                & Remove leading and trailing whitespace from s \# ' hello ' =\textgreater 'hello'                                                                \\ \midrule
+\textbf{Find / Replace I}         &                                                                                                                                                 \\ \midrule
+s.index(s2, i, j)        & Index of first occurrence of s2 in s after index i and before index j                                                                           \\
+s.find(s2)               & Find and return lowest index of s2 in s                                                                                                         \\
+s.index(s2)              & Return lowest index of s2 in s (but raise ValueError if not found)                                                                              \\
+s.replace(s2, s3)        & Replace s2 with s3 in s                                                                                                                         \\
+s.replace(s2, s3, count) & Replace s2 with s3 in s at most count times                                                                                                     \\
+s.rfind(s2)              & Return highest index of s2 in s                                                                                                                 \\
+s.rindex(s2)             & Return highest index of s2 in s (raise ValueError if not found)                                                                                 \\ \midrule
+\textbf{Cases II}                 &                                                                                                                                                 \\ \midrule
+s.casefold()             & Casefold s (aggressive lowercasing for caseless matching) \# 'ßorat' =\textgreater 'ssorat'                                                     \\
+s.islower()              & Return true if s is lowercase                                                                                                                   \\
+s.istitle()              & Return true if s is titlecased \# 'Hello World' =\textgreater true                                                                              \\
+s.isupper()              & Return true if s is uppercase                                                                                                                   \\ \midrule
+\textbf{Inspection I}             &                                                                                                                                                 \\ \midrule
+s.endswith(s2)           & Return true if s ends with s2                                                                                                                   \\
+s.isalnum()              & Return true if s is alphanumeric                                                                                                                \\
+s.isalpha()              & Return true if s is alphabetic                                                                                                                  \\
+s.isdecimal()            & Return true if s is decimal                                                                                                                     \\
+s.isnumeric()            & Return true if s is numeric                                                                                                                     \\
+s.startswith(s2)         & Return true is s starts with s2                                                                                                                 \\                                                   
+\end{tabular}
+\end{table}
+
+\begin{table}[!htbp]
+\centering
+\caption*{\textsc{Table A.2} \\ (Cont'ed)}
+\label{tab:string_methods_cted}
+\begin{tabular}{lp{12cm}}
+\\ \midrule
+\textbf{Splitting I}              &                                                                                                                                                 \\ \midrule
+s.join('123')            & Return s joined by iterable '123' \# 'hello' =\textgreater '1hello2hello3'                                                                      \\
+s.partition(sep)         & Partition string at sep and return 3-tuple with part before, the sep itself, and part after \# 'hello' =\textgreater ('he', 'l', 'lo')          \\
+s.rpartition(sep)        & Partition string at last occurrence of sep, return 3-tuple with part before, the sep, and part after \# 'hello' =\textgreater ('hel', 'l', 'o') \\
+s.rsplit(sep, maxsplit)  & Return list of s split by sep with rightmost maxsplits performed                                                                                \\
+s.split(sep, maxsplit)   & Return list of s split by sep with leftmost maxsplits performed                                                                                 \\
+s.splitlines()           & Return a list of lines in s \# 'hello\textbackslash{}nworld' =\textgreater {[}'hello', 'world'{]}                                               \\ \midrule
+\textbf{Inspection II}            &                                                                                                                                                 \\ \midrule
+s{[}i:j{]}               & Slice of s from i to j                                                                                                                          \\
+s.endswith((s1, s2, s3)) & Return true if s ends with any of string tuple s1, s2, and s3                                                                                   \\
+s.isdigit()              & Return true if s is digit                                                                                                                       \\
+s.isidentifier()         & Return true if s is a valid identifier                                                                                                          \\
+s.isprintable()          & Return true is s is printable                                                                                                                   \\ \midrule
+\textbf{Whitespace II}            &                                                                                                                                                 \\ \midrule
+s.center(width, pad)     & Center s with padding pad of width \# 'hi' =\textgreater 'padpadhipadpad'                                                                       \\
+s.expandtabs(integer)    & Replace all tabs with spaces of tabsize integer \# 'hello\textbackslash{}tworld' =\textgreater 'hello world'                                    \\
+s.lstrip()               & Remove leading whitespace from s \# ' hello ' =\textgreater 'hello '                                                                            \\
+s.rstrip()               & Remove trailing whitespace from s \# ' hello ' =\textgreater ' hello'                                                                           \\
+s.zfill(width)           & Left fill s with ASCII '0' digits with total length width \# '42' =\textgreater '00042'  
+   \\                                                      
+\bottomrule
+\end{tabular}
+\end{table}
+\clearpage
+
+\end{appendices}
 
 
 % ================================= Snippets ==============================

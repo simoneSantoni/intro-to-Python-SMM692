@@ -1,33 +1,16 @@
-# let us assign the string "Python 3.X" to the variable S
-In [1]: S = "Python 3.X"
+# the list
+>>> L = [4, ["abc", 8.98]]
 
-# check the length of S
-In [2]: len(S)
-Out[2]: 6
+# get the first item of L
+>>> L[0]
+4
 
-# access the first unitary string in the sequence behind S 	
-In [3]: S[0]
-Out[3]: "P"
+ # get the second element of L
+>>> L[1]
+["abc", 8.98]
 
-# access the last unitary string in the sequence behind S
-In [4]: S[len(S)-1]
-Out[4]: "X"
+# get the first item of L's second item
+>>> L[1][0]
+"abc"
 
-# or, equivalently
-In [5]: S[-1]
-Out[5]: "X"
-
-# access the i-th, e.g., 3rd, unitary string in the sequence behind S
-In [6]: S[3]
-Out[6]: "h"
-
-# access the unitary strings between the i-th and j-th positions in the
-# sequence behind S
-In [7]: S[2:5]
-Out[7]: "tho"
-
-# access the unitary strings following the i-th position in the sequence
-# behind S
-In [8]: S[-3:]
-Out[8]: "3.X"
 
