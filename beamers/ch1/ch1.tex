@@ -1,0 +1,125 @@
+% =========================================================================
+%
+%
+% =========================================================================
+\documentclass[aspectratio=1610]{beamer}
+
+% ========================= Theme =========================================
+\usetheme{CambridgeUS}
+\usecolortheme{default}
+
+% ========================= Packages ======================================
+\usepackage{tikz}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm,compat=1.17}
+
+% ========================= Infor on authors ==============================
+\title{Intro to Python --- SMM692}
+\subtitle{Organization of the Module}
+\author{Simone Santoni}
+\institute{Bayes Business School}
+\date{2022}
+
+% ========================= Infor on authors ==============================
+\definecolor{base_c}{rgb}{0.6,0,0}
+\definecolor{comp_c}{rgb}{0.09803921568627451, 0.6901960784313725, 0.7529411764705882}
+\definecolor{tri_1}{rgb}{0.09803921568627451, 0.7686274509803922, 0.19215686274509805}
+\definecolor{tri_2}{rgb}{0.19215686274509805, 0.09803921568627451, 0.7686274509803922}
+
+% ========================= Document  ====================================
+\begin{document}
+
+\frame{\titlepage}
+
+% ------------------------- Background -----------------------------------
+
+\section{Background}
+
+\subsection{Justification for SMM692}
+
+\begin{frame}{Why Python?}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{itemize}
+				\item Python is a general-purpose, high-level programming language
+				\begin{itemize}
+					\item Traditionally, Python was used for developing desktop and web applications
+				\end{itemize}
+				\item So, why should business analytics (BA)professionals learn it?
+				\begin{itemize}
+				\item Python is also the platform one of the richest --- if not the richest --- data-science  ecosystem
+				\item Python's popularity surge is related with the emergence and development of the data science field 
+			        \end{itemize}
+		        \end{itemize}
+               \end{column}
+	       \begin{column}{0.5\textwidth}
+		\begin{figure}
+			\centering
+			\begin{tikzpicture}[scale=1]
+				\begin{axis}[
+					title = Interest Over Time,
+					xtick={0, 47, 95, 143},
+					xticklabels={2010, 2014, 2018, 2022},
+					xlabel = Time,
+					ylabel = Google Trends Index,
+					legend pos=north west
+					]
+				    \addplot[
+					scatter,only marks,scatter src=explicit symbolic,
+					scatter/classes={
+					    python={mark=*,draw=base_c, fill=base_c!20},
+					    r={mark=*,draw=tri_1, fill=tri_1!20},
+					    julia={mark=*,draw=tri_2,fill=tri_2!20}
+					}
+				    ]
+				    table[x=,y=y,meta=label]{data/google_trends.dat};
+				    \legend{Python, R, Julia}
+				\end{axis}
+				\end{tikzpicture}
+		\end{figure}
+	       \end{column}
+        \end{columns}
+\end{frame}
+
+\begin{frame}{Why an Introductory Module on Python in a BA Post-Grad Course?}
+	\ldots
+\end{frame}
+
+% ------------------------- Scope ----------------------------------------
+\subsection{Scope of SMM692}
+
+\begin{frame}{Python for What?}
+\ldots	
+\end{frame}
+
+\begin{frame}{Python in the Business Analytics Sphere}
+\ldots
+\end{frame}
+
+\begin{frame}{SMM692 Foci}
+	\ldots
+\end{frame}
+
+% ------------------------- Teaching and learning activities --------------
+\section{Learning/Teaching Actitivies}
+
+\subsection{Phylosophy Behind SMM692}
+
+\begin{frame}{}
+\ldots
+\end{frame}
+
+% ------------------------- Assessment  -----------------------------------
+\section{Assessment}
+
+\begin{frame}{}
+\ldots
+\end{frame}
+
+\begin{frame}{Hello there}
+	...
+\end{frame}
+
+\end{document}
