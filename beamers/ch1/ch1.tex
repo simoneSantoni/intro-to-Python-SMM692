@@ -9,7 +9,13 @@
 \usecolortheme{default}
 
 % ========================= Packages ======================================
+\usepackage{calc}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta,
+                calc, chains,
+                quotes,
+                positioning,
+                shapes.geometric}
 \usepackage{graphicx}
 \usepackage{graphics}
 \usepackage{pgfplots}
@@ -22,16 +28,31 @@
 \institute{Bayes Business School}
 \date{2022}
 
-% ========================= Infor on authors ==============================
+% ============================ Colors =====================================
 \definecolor{base_c}{rgb}{0.6,0,0}
 \definecolor{comp_c}{rgb}{0.09803921568627451, 0.6901960784313725, 0.7529411764705882}
 \definecolor{tri_1}{rgb}{0.09803921568627451, 0.7686274509803922, 0.19215686274509805}
 \definecolor{tri_2}{rgb}{0.19215686274509805, 0.09803921568627451, 0.7686274509803922}
 
+% ========================= TOC  ==========================================
+\AtBeginSubsection[]
+{
+    \begin{frame}
+        \frametitle{Outline}
+        \tableofcontents[currentsection,currentsubsection]
+    \end{frame}
+}
+
 % ========================= Document  ====================================
 \begin{document}
 
-\frame{\titlepage}
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+	\tableofcontents
+\end{frame}
 
 % ------------------------- Background -----------------------------------
 
@@ -50,7 +71,7 @@
 				\item So, why should business analytics (BA)professionals learn it?
 				\begin{itemize}
 				\item Python is the center of one of the richest --- if not the richest --- data-science  ecosystem
-				\item Python's popularity surge is related with the emergence and development of the data science field 
+				\item Python's popularity surge is strictly related with the emergence and development of the data science field (YR 2014 $\rightarrow$)
 			        \end{itemize}
 		        \end{itemize}
                \end{column}
@@ -59,7 +80,7 @@
 			\centering
 			\begin{tikzpicture}[scale=1]
 				\begin{axis}[
-					title = Interest Over Time,
+					title = Interest Over Time (Worldwide),
 					xtick={0, 47, 95, 143},
 					xticklabels={2010, 2014, 2018, 2022},
 					xlabel = Time,
@@ -83,23 +104,84 @@
         \end{columns}
 \end{frame}
 
-\begin{frame}{Why an Introductory Module on Python in a BA Post-Grad Course?}
-	\ldots
+\begin{frame}{Why a Pre-Course Module on Python in a BA Post-Grad Course?}
+	There are at least three arguments:
+	\begin{itemize}
+		\item Modern BA curricula increasingly depart from a spreadsheet-based approach to teaching and learning
+		\item The Bayes BA program builds heavily on the Python programming language
+		\begin{itemize}
+			\item There are \emph{four core modules} based on Python: Data Visualization, Deep Learning, Network Analytics, Value Creation in Digital Settings
+			\item Plus \emph{two elective modules}: Applied Machine Learning and Applied Natural Language Processing
+		\end{itemize}
+		\item You may want to get up and running with Python in advance, that is, before the start of Term I
+	\end{itemize}
 \end{frame}
 
 % ------------------------- Scope ----------------------------------------
 \subsection{Scope of SMM692}
 
-\begin{frame}{Python for What?}
-\ldots	
+\begin{frame}[t]{Python for What?}
+\begin{columns}[t]
+	\begin{column}{0.5\textwidth}
+		\textcolor{tri_1}{Will SMM692 cover the entire spectrum of the Python language?}
+
+		\vspace{1em}
+
+		\textcolor{tri_1}{Short answer: NO}
+
+		\vspace{1em}
+
+		\begin{itemize}
+			\item That would take substantial time --- Python has an extensive language reference!
+			\item Some aspects of the Python language reference have limited added value for BA professionals, who are closer to Python users than developers
+		\end{itemize}
+	\end{column}
+	\begin{column}{0.5\textwidth}
+		\textcolor{tri_2}{So, which parts of the Python language will I learn?}
+
+		\vspace{1em}
+
+		\textcolor{tri_2}{Short answer: the basics of the language}
+
+		\vspace{1em}
+
+		\begin{itemize}
+			\item Variables
+			\item Object
+			\item Some built-in functions, string-, list-, dictionary-, and set-methods
+		\end{itemize}
+	\end{column}
+\end{columns}
 \end{frame}
 
-\begin{frame}{Python in the Business Analytics Sphere}
-\ldots
+\begin{frame}[c]{Python in the Business Analytics Sphere}
+
+	\begin{columns}[c]
+		\begin{column}{0.5\textwidth}
+
+			\begin{itemize}
+				\item Learning the basics of the Python language will put you in the position to carry out technical and scentific computation tasks --- namely, the essence of data science X BA
+				\item Talking about the technical and scientific compuation: there are three foundational modules that support stastitical analysis, Viz, ML, and DL: NumPy, SciPy. These three modules are the focus of SMM692's second part
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=0.25\textwidth]{images/numpy.png}
+			\includegraphics[width=0.3\textwidth]{images/scipy.png}
+
+			\includegraphics[width=0.4\textwidth]{images/pandas.png}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}{SMM692 Foci}
-	\ldots
+	\begin{enumerate}
+		\item Getting started with Python
+		\item Python language fundamentals
+		\item Python objects and methods
+		\item Technical and scientific computation with NumPy and SciPy
+		\item Data management with Pandas
+	\end{enumerate}
 \end{frame}
 
 % ------------------------- Teaching and learning activities --------------
@@ -107,15 +189,72 @@
 
 \subsection{Phylosophy Behind SMM692}
 
-\begin{frame}{}
-\ldots
+\begin{frame}{The Two Pillars of the Module}
+\centering
+	\LARGE LESS IS MORE
+
+	\Large Focus on few core Python notions at a time and practice them
+
+\vspace{1.5em}
+
+	\LARGE LEARN BY DOING
+
+	\Large The best way to learn Python is by addressing concrete problems
+
 \end{frame}
 
-% ------------------------- Assessment  -----------------------------------
-\section{Assessment}
+\begin{frame}{I'm a Programming Newbie: How Do I Learn Python?}
+
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			Here is an approach the proved to be effcective according to the pedagogical literature on learnning programming languages:
+			\begin{itemize}
+				\item Step 1: Focus on \emph{few core notions} at a time (e.g., `string methods')
+				\item Step 2: Learn the selected core notions `pen \& paper'  (stay away from the computer!)
+				\item Step 3: Open a Python session and practice the few core notions 
+				\item Step 4: Critically self-assess your learning (if your code is not working, Python will force you to understand what's wrong!)
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=0.75\textwidth]{images/python_newbies.png}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{Assessment}
 
 \begin{frame}{}
-\ldots
+	\begin{tikzpicture}[
+		scale=0.6, every node/.style={scale=0.6},
+		node distance = 6mm and 12mm,
+		  start chain = A going below,
+		  base/.style = {draw, minimum width=32mm, minimum height=8mm,
+				 align=center, on chain=A},
+	     startstop/.style = {base, rectangle, rounded corners, fill=red!30},
+	       process/.style = {base, rectangle, fill=orange!30},
+		    io/.style = {base, trapezium, 
+				 trapezium left angle=70, trapezium right angle=110,
+				 fill=blue!30},
+	      decision/.style = {base, diamond, fill=green!30},
+	      every edge quotes/.style = {auto=right}]
+				]
+	    \node [startstop]       {Start};            % <-- A-1
+	    \node [process]         {k $\leftarrow$ 0};
+	    \node [io]              {Test your learning with quizzes};
+	    \node [decision]        {Is your learning \\ satisfying?};
+	    \node [process]         {Print k};
+	    \node [process]         {Stop};             % <-- A-6
+	    %%
+	    \draw [arrows=-Stealth] 
+		(A-1) edge[] (A-2)
+		(A-2) edge[] (A-3)
+		(A-3) edge[] (A-4)
+		(A-4) edge["Yes"] (A-5)
+		(A-5) edge["exit"] (A-6)
+		(A-4.east) |- edge["No"] (A-2.east)
+		;
+	      \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Hello there}
