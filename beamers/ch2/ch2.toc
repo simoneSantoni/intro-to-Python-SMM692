@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{Installing Python}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Options}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Installation Procedure for Anaconda}{6}{0}{1}
+\beamer@sectionintoc {2}{How Python Runs Programs}{8}{0}{2}
+\beamer@sectionintoc {3}{How We Run Python Programs}{8}{0}{3}
+\beamer@subsectionintoc {3}{1}{Terminal Way}{8}{0}{3}
+\beamer@subsectionintoc {3}{2}{From a Python Integrated Development Environment}{10}{0}{3}

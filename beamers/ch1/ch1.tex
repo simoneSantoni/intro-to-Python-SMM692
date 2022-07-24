@@ -11,10 +11,13 @@
 % ========================= Packages ======================================
 \usepackage{calc}
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta,
-                calc, chains,
+\usetikzlibrary{arrows,
+                arrows.meta,
+                calc,
+		chains,
                 quotes,
                 positioning,
+		shapes,
                 shapes.geometric}
 \usepackage{graphicx}
 \usepackage{graphics}
@@ -26,7 +29,7 @@
 \subtitle{Organization of the Module}
 \author{Simone Santoni}
 \institute{Bayes Business School}
-\date{2022}
+\date{MSc Pre-Course Series}
 
 % ============================ Colors =====================================
 \definecolor{base_c}{rgb}{0.6,0,0}
@@ -224,41 +227,77 @@
 
 \subsection{Assessment}
 
-\begin{frame}{}
-	\begin{tikzpicture}[
-		scale=0.6, every node/.style={scale=0.6},
-		node distance = 6mm and 12mm,
-		  start chain = A going below,
-		  base/.style = {draw, minimum width=32mm, minimum height=8mm,
-				 align=center, on chain=A},
-	     startstop/.style = {base, rectangle, rounded corners, fill=red!30},
-	       process/.style = {base, rectangle, fill=orange!30},
-		    io/.style = {base, trapezium, 
-				 trapezium left angle=70, trapezium right angle=110,
-				 fill=blue!30},
-	      decision/.style = {base, diamond, fill=green!30},
-	      every edge quotes/.style = {auto=right}]
-				]
-	    \node [startstop]       {Start};            % <-- A-1
-	    \node [process]         {k $\leftarrow$ 0};
-	    \node [io]              {Test your learning with quizzes};
-	    \node [decision]        {Is your learning \\ satisfying?};
-	    \node [process]         {Print k};
-	    \node [process]         {Stop};             % <-- A-6
-	    %%
-	    \draw [arrows=-Stealth] 
-		(A-1) edge[] (A-2)
-		(A-2) edge[] (A-3)
-		(A-3) edge[] (A-4)
-		(A-4) edge["Yes"] (A-5)
-		(A-5) edge["exit"] (A-6)
-		(A-4.east) |- edge["No"] (A-2.east)
-		;
-	      \end{tikzpicture}
-\end{frame}
+\begin{frame}{Self-Assess your Learning, Python Topic by Topic}
+	\tikzstyle{decision} = [
+		diamond,
+		draw,  
+		text width=8em,
+		text centered, 
+		node distance=2cm, 
+		inner sep=0pt
+		]
+	\tikzstyle{block} = [
+		rectangle, 
+		draw,
+		text width=8em,
+		text centered,
+		rounded corners,
+		minimum height=2em
+		]
+	\tikzstyle{arrow} = [
+		draw,
+		-latex',
+		rounded corners
+		]
+	\tikzstyle{line} = [
+		draw
+		]
+	\tikzstyle{invisible4} = [
+		rectangle
+		]
+	\tikzstyle{invisible5} = [
+		rectangle
+		]
+	\tikzstyle{circular} = [
+		draw,
+		circle,
+		radius=1.0cm,
+		]
 
-\begin{frame}{Hello there}
-	...
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}[
+	scale=.55, every node/.style={scale=0.55},
+	node distance = 2cm,
+	auto,
+	->,
+	]
+        %% nodes
+	\node [block] (start) {\small Start / open the learning circle};
+        \node [block, right = 4.75cm of start] (stop) {\small Stop / close the learning circle};
+        \node [block, below of = start] (hv) {\small Watch the hook videos};
+        \node [block, below of = hv] (notes) {\small Study the notes, including programming notions and examples};
+        \node [block, below of = notes] (quiz) {\small Take the quiz};
+	\node [decision, below=0.5cm of quiz] (decision_1) {Is your learning satisfying?};
+        \node [block, right=1.25cm of decision_1] (ps) {\small Analyze the problem set};
+        \node [decision, right=1.25cm of ps] (decision_2) {\small Can you address the problem set?};
+        \node [decision, right=1.25cm of decision_2] (decision_3) {\small Why not?};
+	% \node [block, above = 1 cm of decision_2] (tr) {\small Analyze the traceback of the error};
+	%% arrows
+	\path[]
+	  (start) edge node [] {} (hv)
+	  (hv) edge node [] {} (notes)
+	  (notes) edge node [] {} (quiz)
+	  (quiz) edge node [] {} (decision_1)
+	  (decision_1) edge node [] {Yes} (ps)
+	  (decision_1.west) edge[bend left=90] node [] {No} (notes.west)
+	  (ps) edge node[] {} (decision_2)
+	  (decision_2.north) edge[] node [] {Yes} (stop.south)
+	  (decision_2) edge node [] {No} (decision_3)
+	  (decision_3.south) edge[bend left=45] node [] {Problem set is unclear} (ps.south)
+	  (decision_3.north) edge[bend right=14] node [] {Errors in my code} (notes.east);
+	\end{tikzpicture}
+\end{figure}
 \end{frame}
 
 \end{document}
