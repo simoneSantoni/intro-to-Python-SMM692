@@ -103,29 +103,46 @@
 
 \section{How We Run Python Programs}
 
-\subsection{Terminal Way}
+\subsection{Non-Interactive Approach --- Terminal Way}
 
-\begin{frame}[fragile]
-	\frametitle{Python Code listing in Beamer}
-	The following Python code adds two numbers and display the result using \verb|print()| function:
-	\rule{\textwidth}{1pt}
-	\scriptsize
-	\begin{minted}{python}
-	    # This program adds two numbers
-	    num1 = 1.5
-	    num2 = 6.3
-	    # Add two numbers
-	    sum = num1 + num2
-	    # Display the sum
-	    print('The sum of {0} and {1} is {2}'.format(num1, num2, sum))
-	\end{minted}
-	\rule{\textwidth}{1pt}
-	\end{frame}
+\begin{frame}[t]{Script Preparation $\rightarrow$ Script Run}
+	\begin{columns}[t]
+		\begin{column}{0.5\textwidth}		
+		\textbf{Step 1: script preparation}	
+		
+		\vspace{1em}
+		
+		The below displayed Python code achieves two things:i) it prints the string object ``Bazinga!'', and ii) it prints the resul of the algebraic operation $4 + 2$. Note that all lines starting with \texttt{\#} are not considered Python code --- instead, they are comments that illustrate/explain the logic of the script.
+		
+		\rule{\textwidth}{1pt}
+		\scriptsize
+\begin{minted}{python}
+# print a string object
+print(1)
+# print the result of an algebraic operation
+print(4 + 2)
+\end{minted}
+		\rule{\textwidth}{1pt}
 
-\subsection{From a Python Integrated Development Environment}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+		\textbf{Step 2: script run}	
+		
+		\vspace{1em}
+		
+	\begin{figure}
+		\includegraphics[width=0.9\textwidth]{images/simple_script}
+	\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{Interactive Approach --- Using Integrated Development Environment}
 
 \section{Managing Python Environments}
 
+\begin{frame}{How Do Python Environments Matter?}
+\end{frame}
 
 \section{Collaborative and Versioning Tools}
 
