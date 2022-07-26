@@ -13,19 +13,20 @@
 \usepackage{calc}
 \usepackage{tikz}
 \usetikzlibrary{arrows,
-                arrows.meta,
-                calc,
-		chains,
-                quotes,
-                positioning,
-		shapes,
-                shapes.geometric}
+arrows.meta,
+calc,
+chains,
+quotes,
+positioning,
+shapes,
+shapes.geometric}
 \usepackage{graphicx}
 \usepackage{graphics}
 \usepackage{pgfplots}
 \pgfplotsset{width=7cm,compat=1.17}
 
 %% ========================== Coding snippets =============================
+% Default fixed font does not support bold face
 \usepackage{minted}
 
 % ========================= Infor on authors ==============================
@@ -103,9 +104,9 @@
 
 \section{How We Run Python Programs}
 
-\subsection{Non-Interactive Approach --- Terminal Way}
+\subsection{Non-Interactive Approach}
 
-\begin{frame}[t]{Script Preparation $\rightarrow$ Script Run}
+\begin{frame}[fragile]{Script Preparation $\rightarrow$ Script Run}
 	\begin{columns}[t]
 		\begin{column}{0.5\textwidth}		
 		\textbf{Step 1: script preparation}	
@@ -116,14 +117,14 @@
 		
 		\rule{\textwidth}{1pt}
 		\scriptsize
-\begin{minted}{python}
-# print a string object
-print(1)
-# print the result of an algebraic operation
-print(4 + 2)
-\end{minted}
+		\begin{minted}{python}
+# This prints a string object
+print("Bazinga")
+# This prints the result of an algebraic operation
+print(2 + 4)
+	    \end{minted}
 		\rule{\textwidth}{1pt}
-
+		
 		\end{column}
 		\begin{column}{0.5\textwidth}
 		\textbf{Step 2: script run}	
@@ -131,18 +132,82 @@ print(4 + 2)
 		\vspace{1em}
 		
 	\begin{figure}
-		\includegraphics[width=0.9\textwidth]{images/simple_script}
+		\includegraphics[width=0.92\textwidth]{images/simple_script}
 	\end{figure}
 		\end{column}
 	\end{columns}
 \end{frame}
 
-\subsection{Interactive Approach --- Using Integrated Development Environment}
+\subsection{Interactive Approach}
+
+\begin{frame}{Running a Python Shell in the Terminal}
+		\begin{figure}
+			\includegraphics[width=0.9\textwidth]{images/python_session}
+		\end{figure}
+\end{frame}
+
+\begin{frame}{Running an IPython Shell in the Terminal}
+		\begin{figure}
+			\includegraphics[width=0.9\textwidth]{images/ipython_session}
+		\end{figure}
+\end{frame}
+
+\begin{frame}[t]{Running a Python IDE}
+
+	\begin{columns}[t]
+	
+	\begin{column}{0.45\textwidth}
+
+	There are plenty of Python IDEs in the market, including:
+	
+	\begin{itemize}
+		\item Colab (online)
+		\item IDLE
+		\item Datalore (online)
+		\item Jupyter/Jupyterlab
+		\item PyCharm
+		\item Spyder
+		\item Thonny
+		\item Wing
+	\end{itemize}
+	
+	\end{column}
+	
+	\begin{column}{0.45\textwidth}
+	
+	By installing a couple of plugins, the following (advanced) text editors can turn into Python IDEs:
+	
+	\begin{itemize}
+		\item Emacs
+		\item Vim/Neovim
+		\item VSCode
+	\end{itemize}
+	
+	\end{column}
+	
+	\end{columns}
+\end{frame}
+
+\begin{frame}{Interactive Python Coding with Jupyter}
+		\begin{figure}
+			\includegraphics[width=0.9\textwidth]{images/jupyter}
+		\end{figure}
+\end{frame}
+
+\begin{frame}{Interactive Python Coding with VSCode}
+		\begin{figure}
+			\includegraphics[width=0.9\textwidth]{images/vscode}
+		\end{figure}
+\end{frame}
+
+\begin{frame}{Interactive Python Coding in Jupyter with VSCode}
+		\begin{figure}
+			\includegraphics[width=0.9\textwidth]{images/jupyter_in_vscode}
+		\end{figure}
+\end{frame}
 
 \section{Managing Python Environments}
 
-\begin{frame}{How Do Python Environments Matter?}
-\end{frame}
 
 \section{Collaborative and Versioning Tools}
 
