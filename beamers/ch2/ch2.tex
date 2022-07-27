@@ -156,7 +156,7 @@ shapes.geometric}
 
 \begin{frame}[c]{Python Execution Model}
 	\begin{columns}
-		\begin{column}{0.6\textwidth}
+		\begin{column}{0.65\textwidth}
 			\begin{itemize}
 				\item When you instruct Python to run your script (e.g., `script.py'), there are a few steps the interpreter carries out before your code actually starts crunching away
 				\item First, the code is compiled to something called `byte code'
@@ -171,13 +171,13 @@ shapes.geometric}
 			\end{itemize}
 				\end{itemize}
 		\end{column}
-		\begin{column}{0.4\textwidth}
+		\begin{column}{0.35\textwidth}
 			\centering
 			\begin{tikzpicture}[
 				->
 			]
 				\node [] (step) {\textbf{Step}};
-			        \node [right=of step] (file) {\textbf{Associated entity}}; 
+			        \node [right=of step] (file) {\textbf{Entity}}; 
 			        \node [below=of step] (source) {Source};
 				\node [below=of file, align=right] (sourcef) {script.py};
 				\node [below=of source] (byte) {Byte code};
@@ -301,27 +301,35 @@ print(2 + 4)
 
 \subsection{The What and Why of PyEnvs}
 
-\begin{frame}[t]{What is a Python Environment?}
-	\begin{columns}[t]
-		\begin{column}{0.45\textwidth}
-			Step 1: What is a Python Environment?
-		\end{column}
-		\begin{column}{0.45\textwidth}
-			Step 2: Why would I use a Python Environment?
-		\end{column}
-	\end{columns}
+\begin{frame}[c]{What is a Python Environment?}
+	\begin{itemize}
+		\item The large majoity of OS come with Python installed by default
+		\begin{itemize}
+			\item That installation is called `system Python'
+			\item `System Python' runs or manages a large number of vital OS processes
+		\end{itemize}
+		\item  Every time we install a new Python module $A$, the package manager (e.g, conda) checks the libraries on which $A$ depends
+		\begin{itemize}
+		\item If a dependency $D(A)$ is not installed, the package manager will install it for us
+	        \end{itemize}
+		\item A single module can depend on many libraries
+		\begin{itemize}
+		\item The web of dependencies linking Python modules can get complicated
+		\item If inconsistencies arise within the web of dependencies, we may not be able to install the modules we need
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Environments Make Python Developers and Users' Life Easier!}
+...
 \end{frame}
 
 \subsection{The How of PyEnvs}
 
-\subsection{Creating PyEnvs from the Command Line}
-
-\begin{frame}[c]{}	
+\begin{frame}[c]{Creating PyEnvs from the Command Line}	
 \end{frame}
 
-\subsection{Creating PyEnvs using Anaconda Navigator}
-
-\begin{frame}[c]{}	
+\begin{frame}[c]{Creating PyEnvs using Anaconda Navigator}	
 \end{frame}
 
 

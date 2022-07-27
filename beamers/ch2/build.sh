@@ -1,0 +1,1 @@
+pdflatex --shell-escape -synctext=1 -interaction=nonstopmode "ch2.tex"
