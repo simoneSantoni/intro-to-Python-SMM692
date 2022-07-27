@@ -1,7 +1,15 @@
 \beamer@sectionintoc {1}{Installing Python}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Options}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{Installation Procedure for Anaconda}{6}{0}{1}
-\beamer@sectionintoc {2}{How Python Runs Programs}{8}{0}{2}
-\beamer@sectionintoc {3}{How We Run Python Programs}{8}{0}{3}
-\beamer@subsectionintoc {3}{1}{Non-Interactive Approach --- Terminal Way}{8}{0}{3}
-\beamer@subsectionintoc {3}{2}{Interactive Approach --- Using Integrated Development Environment}{10}{0}{3}
+\beamer@sectionintoc {2}{The Anaconda Distribution}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Distinctive Features}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{The Bundle of Applications}{10}{0}{2}
+\beamer@sectionintoc {3}{How Python Runs Programs}{12}{0}{3}
+\beamer@sectionintoc {4}{How We Run Python Programs}{14}{0}{4}
+\beamer@subsectionintoc {4}{1}{Non-Interactive Approach}{14}{0}{4}
+\beamer@subsectionintoc {4}{2}{Interactive Approach}{16}{0}{4}
+\beamer@sectionintoc {5}{Managing Python Environments}{23}{0}{5}
+\beamer@subsectionintoc {5}{1}{The What and Why of PyEnvs}{23}{0}{5}
+\beamer@subsectionintoc {5}{2}{The How of PyEnvs}{25}{0}{5}
+\beamer@subsectionintoc {5}{3}{Creating PyEnvs from the Command Line}{26}{0}{5}
+\beamer@subsectionintoc {5}{4}{Creating PyEnvs using Anaconda Navigator}{28}{0}{5}

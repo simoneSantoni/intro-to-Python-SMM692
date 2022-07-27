@@ -1,6 +1,6 @@
 \frametitle{Script Preparation $\rightarrow $ Script Run}
 \begin{columns}[t]
-		\begin{column}{0.5\textwidth}		
+		\begin{column}{0.45\textwidth}		
 		\textbf{Step 1: script preparation}	
 		
 		\vspace{1em}
@@ -10,22 +10,21 @@
 		\rule{\textwidth}{1pt}
 		\scriptsize
 		\begin{minted}{python}
-# This program adds two numbers
-num1 = 1.5
-num2 = 6.3
-# Add two numbers
-sum = num1 + num2
+# Print a string object
+print("Bazinga")
+# Print the result of an algebraic operation
+print(2 + 4)
 	    \end{minted}
 		\rule{\textwidth}{1pt}
 		
 		\end{column}
-		\begin{column}{0.5\textwidth}
+		\begin{column}{0.45\textwidth}
 		\textbf{Step 2: script run}	
 		
 		\vspace{1em}
 		
 	\begin{figure}
-		\includegraphics[width=0.9\textwidth]{images/simple_script}
+		\includegraphics[width=0.92\textwidth]{images/simple_script}
 	\end{figure}
 		\end{column}
 	\end{columns}

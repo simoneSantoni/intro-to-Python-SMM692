@@ -1,5 +1,4 @@
-# This program adds two numbers
-num1 = 1.5
-num2 = 6.3
-# Add two numbers
-sum = num1 + num2
+# Print a string object
+print("Bazinga")
+# Print the result of an algebraic operation
+print(2 + 4)
