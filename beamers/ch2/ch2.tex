@@ -301,22 +301,26 @@ print(2 + 4)
 
 \subsection{The What and Why of PyEnvs}
 
-\begin{frame}[c]{What is a Python Environment?}
+\begin{frame}[c]{Why Do We Need a Python Environment?}
 	\begin{itemize}
-		\item The large majoity of OS come with Python installed by default
+		\item The large majoity of operating systems come with Python installed by default
 		\begin{itemize}
 			\item That installation is called `system Python'
-			\item `System Python' runs or manages a large number of vital OS processes
+			\item `System Python' runs or manages a large number of essential operating systems processes
 		\end{itemize}
 		\item  Every time we install a new Python module $A$, the package manager (e.g, conda) checks the libraries on which $A$ depends
 		\begin{itemize}
-		\item If a dependency $D(A)$ is not installed, the package manager will install it for us
+			\item If a dependency $D(A)$ is not installed, the package manager will install it for us
 	        \end{itemize}
 		\item A single module can depend on many libraries
 		\begin{itemize}
-		\item The web of dependencies linking Python modules can get complicated
-		\item If inconsistencies arise within the web of dependencies, we may not be able to install the modules we need
+			\item The web of dependencies linking Python modules can get complicated
+			\item If inconsistencies arise within the web of dependencies, we may not be able to install the modules we need
+			\item ... even worst, some modules previosuly installed may stop to work!
 		\end{itemize}
+		\item Now, you do not want to break the essential featues of you operating system
+		\item The implication is that we should be bette off not using `syteme Python' for ou data science work
+		\item 
 	\end{itemize}
 \end{frame}
 
