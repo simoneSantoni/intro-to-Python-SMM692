@@ -1,3 +1,4 @@
+% !TeX document-id = {91124dfd-b11a-4cfa-8e46-7efa01057d4d}
 % =========================================================================
 %
 %
@@ -99,8 +100,97 @@ shapes.geometric}
 	\end{enumerate}
 \end{frame}
 
+\section{The Anaconda Distribution}
+
+\subsection{Distinctive Features}
+
+\begin{frame}[c]{How is the Anaconda Distro Different?}
+	\begin{itemize}
+		\item Anaconda is `battery-included' --- it comes with a humongous number of modules for data science
+		\begin{itemize}
+			\item If you use the official Python installation, then you have to install the modules you need on your own!
+		\end{itemize}
+		\item  Anaconda is a bundle of various pieces of software:
+		\begin{itemize}
+			\item \texttt{conda} is the Swiss army knife to manage Python modules and environments
+			\item \texttt{anaconda-navigator} is the graphical interface from within to access Python IDEs and related desktop/web applications
+		\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\subsection{The Bundle of Applications}
+
+\begin{frame}[c]{What Software Can I Access from Anaconda Navigator?}
+%	\begin{itemize}
+%		\item DataSpell
+%		\item Datalore
+%		\item IBM Watson Studio Cloud
+%		\item JupyterLab
+%		\item Jupyter
+%		\item Qt Console
+%		\item Spyder
+%		\item VS Code
+%		\item GlueViz (for data viz)
+%		\item Orange (a point-and-click user interface for Python)
+%		\item PyCharm 
+%		\item RStudio (the popular IDE for R)
+%	\end{itemize}
+	\begin{figure}  
+		\includegraphics[width=1\textwidth]{images/anaconda_navigator}
+	\end{figure}
+\end{frame}
+
 \section{How Python Runs Programs}
 
+\begin{frame}[c]{Python as a Language and Interpreter}
+	\begin{itemize}
+	\item Typically, we refer to Python as a programming language
+	\item However, Python is also a software package called an interpreter
+	\begin{itemize}
+		\item An interpreter is a kind of program that executes other programs
+		\item When you write a Python program, the Python interpreter reads your program and carries out the instructions it contains
+		\item In effect, the interpreter is a layer of software logic between your code and the computer hardware on your machine
+	\end{itemize}
+	\end{itemize}
+\end{frame}
+
+\begin{frame}[c]{Python Execution Model}
+	\begin{columns}
+		\begin{column}{0.6\textwidth}
+			\begin{itemize}
+				\item When you instruct Python to run your script (e.g., `script.py'), there are a few steps the interpreter carries out before your code actually starts crunching away
+				\item First, the code is compiled to something called `byte code'
+				\begin{itemize}
+					\item This step happens behind the scenes (there is nothing to do for the programmer!)
+      					\item A file called `script.pyc', automatically generated, contains the translation of your code into lower-level code instructions
+				\end{itemize}
+				\item Then, the compiled code is routed to something called a `Python Virtual Machine' (PVM)
+				\begin{itemize}
+					\item This step is hidden to the programmer like the previous one
+					\item Mainly, it iterates through your byte code instructions, one by one, to carry out their operations
+			\end{itemize}
+				\end{itemize}
+		\end{column}
+		\begin{column}{0.4\textwidth}
+			\centering
+			\begin{tikzpicture}[
+				->
+			]
+				\node [] (step) {\textbf{Step}};
+			        \node [right=of step] (file) {\textbf{Associated entity}}; 
+			        \node [below=of step] (source) {Source};
+				\node [below=of file, align=right] (sourcef) {script.py};
+				\node [below=of source] (byte) {Byte code};
+				\node [below=of sourcef, align=right] (bytef) {script.pyc};
+				\node [below=of byte] (pvm) {Runtime};
+				\node [below=of bytef, align=right] (pvmf) {PVM};
+				\path[]
+					(source) edge node [] {} (byte)
+					(byte) edge node [] {} (pvm);
+			\end{tikzpicture}
+		\end{column}
+	\end{columns}
+\end{frame}
 
 \section{How We Run Python Programs}
 
@@ -108,7 +198,7 @@ shapes.geometric}
 
 \begin{frame}[fragile]{Script Preparation $\rightarrow$ Script Run}
 	\begin{columns}[t]
-		\begin{column}{0.5\textwidth}		
+		\begin{column}{0.45\textwidth}		
 		\textbf{Step 1: script preparation}	
 		
 		\vspace{1em}
@@ -118,15 +208,15 @@ shapes.geometric}
 		\rule{\textwidth}{1pt}
 		\scriptsize
 		\begin{minted}{python}
-# This prints a string object
+# Print a string object
 print("Bazinga")
-# This prints the result of an algebraic operation
+# Print the result of an algebraic operation
 print(2 + 4)
 	    \end{minted}
 		\rule{\textwidth}{1pt}
 		
 		\end{column}
-		\begin{column}{0.5\textwidth}
+		\begin{column}{0.45\textwidth}
 		\textbf{Step 2: script run}	
 		
 		\vspace{1em}
@@ -166,6 +256,7 @@ print(2 + 4)
 		\item Datalore (online)
 		\item Jupyter/Jupyterlab
 		\item PyCharm
+		\item Qt Console
 		\item Spyder
 		\item Thonny
 		\item Wing
@@ -207,6 +298,31 @@ print(2 + 4)
 \end{frame}
 
 \section{Managing Python Environments}
+
+\subsection{The What and Why of PyEnvs}
+
+\begin{frame}[t]{What is a Python Environment?}
+	\begin{columns}[t]
+		\begin{column}{0.45\textwidth}
+			Step 1: What is a Python Environment?
+		\end{column}
+		\begin{column}{0.45\textwidth}
+			Step 2: Why would I use a Python Environment?
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{The How of PyEnvs}
+
+\subsection{Creating PyEnvs from the Command Line}
+
+\begin{frame}[c]{}	
+\end{frame}
+
+\subsection{Creating PyEnvs using Anaconda Navigator}
+
+\begin{frame}[c]{}	
+\end{frame}
 
 
 \section{Collaborative and Versioning Tools}
