@@ -1,0 +1,70 @@
+
+\makeatletter
+\def\PYGvs@reset{\let\PYGvs@it=\relax \let\PYGvs@bf=\relax%
+    \let\PYGvs@ul=\relax \let\PYGvs@tc=\relax%
+    \let\PYGvs@bc=\relax \let\PYGvs@ff=\relax}
+\def\PYGvs@tok#1{\csname PYGvs@tok@#1\endcsname}
+\def\PYGvs@toks#1+{\ifx\relax#1\empty\else%
+    \PYGvs@tok{#1}\expandafter\PYGvs@toks\fi}
+\def\PYGvs@do#1{\PYGvs@bc{\PYGvs@tc{\PYGvs@ul{%
+    \PYGvs@it{\PYGvs@bf{\PYGvs@ff{#1}}}}}}}
+\def\PYGvs#1#2{\PYGvs@reset\PYGvs@toks#1+\relax+\PYGvs@do{#2}}
+
+\@namedef{PYGvs@tok@c}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PYGvs@tok@cp}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PYGvs@tok@k}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PYGvs@tok@ow}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PYGvs@tok@kt}{\def\PYGvs@tc##1{\textcolor[rgb]{0.17,0.57,0.69}{##1}}}
+\@namedef{PYGvs@tok@nc}{\def\PYGvs@tc##1{\textcolor[rgb]{0.17,0.57,0.69}{##1}}}
+\@namedef{PYGvs@tok@s}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@gh}{\let\PYGvs@bf=\textbf}
+\@namedef{PYGvs@tok@gu}{\let\PYGvs@bf=\textbf}
+\@namedef{PYGvs@tok@ge}{\let\PYGvs@it=\textit}
+\@namedef{PYGvs@tok@gs}{\let\PYGvs@bf=\textbf}
+\@namedef{PYGvs@tok@gp}{\let\PYGvs@bf=\textbf}
+\@namedef{PYGvs@tok@err}{\def\PYGvs@bc##1{{\setlength{\fboxsep}{\string -\fboxrule}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}}
+\@namedef{PYGvs@tok@kc}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PYGvs@tok@kd}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PYGvs@tok@kn}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PYGvs@tok@kp}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PYGvs@tok@kr}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PYGvs@tok@sa}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@sb}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@sc}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@dl}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@sd}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@s2}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@se}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@sh}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@si}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@sx}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@sr}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@s1}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@ss}{\def\PYGvs@tc##1{\textcolor[rgb]{0.64,0.08,0.08}{##1}}}
+\@namedef{PYGvs@tok@ch}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PYGvs@tok@cm}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PYGvs@tok@cpf}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PYGvs@tok@c1}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PYGvs@tok@cs}{\def\PYGvs@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+
+\def\PYGvsZbs{\char`\\}
+\def\PYGvsZus{\char`\_}
+\def\PYGvsZob{\char`\{}
+\def\PYGvsZcb{\char`\}}
+\def\PYGvsZca{\char`\^}
+\def\PYGvsZam{\char`\&}
+\def\PYGvsZlt{\char`\<}
+\def\PYGvsZgt{\char`\>}
+\def\PYGvsZsh{\char`\#}
+\def\PYGvsZpc{\char`\%}
+\def\PYGvsZdl{\char`\$}
+\def\PYGvsZhy{\char`\-}
+\def\PYGvsZsq{\char`\'}
+\def\PYGvsZdq{\char`\"}
+\def\PYGvsZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYGvsZat{@}
+\def\PYGvsZlb{[}
+\def\PYGvsZrb{]}
+\makeatother
+

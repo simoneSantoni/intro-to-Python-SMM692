@@ -1,16 +1,9 @@
-# the list
->>> L = [4, ["abc", 8.98]]
-
-# get the first item of L
->>> L[0]
-4
-
- # get the second element of L
->>> L[1]
-["abc", 8.98]
-
-# get the first item of L's second item
->>> L[1][0]
-"abc"
-
-
+# the strings (data) to save permanently to a file
+FIRSTLAW = "A robot may not injure a human being or, through inaction, "\
+	   "allow a human being to come to harm."
+SECONDLAW = "A robot must obey the orders given it by human beings except "\
+	    "where such orders would conflict with the First Law."
+THIRDLAW = "A robot must protect its own existence as long as such "\
+           "protection does not conflict with the First or Second Law."
+# create a pipe to a file
+>>> file = open(file="my_file.txt", mode="r")

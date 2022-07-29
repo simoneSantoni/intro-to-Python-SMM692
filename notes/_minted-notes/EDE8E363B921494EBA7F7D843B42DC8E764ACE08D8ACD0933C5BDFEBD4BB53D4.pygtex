@@ -1,0 +1,26 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+	
+\PYG{c+c1}{\PYGZsh{} let us assign the variables 'x' and 'y' to two number objects}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{2}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{y} \PYG{o}{=} \PYG{l+m+mf}{4.0}	
+
+\PYG{c+c1}{\PYGZsh{} subtracting an integer from variable 'x'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}
+\PYG{l+m+mi}{1}
+
+\PYG{c+c1}{\PYGZsh{} dividing the variable 'y' by an integer}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{y} \PYG{o}{/} \PYG{l+m+mi}{73}
+\PYG{l+m+mf}{0.0547945205479452}
+
+\PYG{c+c1}{\PYGZsh{} integer-dividing the variable 'y' by an integer}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{y} \PYG{o}{//} \PYG{l+m+mi}{73}
+\PYG{l+m+mf}{0.0}
+
+\PYG{c+c1}{\PYGZsh{} getting a linear combination of 'x' and 'y'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+m+mi}{3} \PYG{o}{*} \PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{5} \PYG{o}{*} \PYG{n}{y}
+\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{14.0}
+
+\PYG{c+c1}{\PYGZsh{} assigning the variable 'z' to the linear combination of 'x' and 'y'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{z} \PYG{o}{=} \PYG{l+m+mi}{3} \PYG{o}{*} \PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{5} \PYG{o}{*} \PYG{n}{y}
+\end{Verbatim}

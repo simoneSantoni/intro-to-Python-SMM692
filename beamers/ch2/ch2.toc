@@ -10,4 +10,4 @@
 \beamer@subsectionintoc {4}{2}{Interactive Approach}{16}{0}{4}
 \beamer@sectionintoc {5}{Managing Python Environments}{23}{0}{5}
 \beamer@subsectionintoc {5}{1}{The What and Why of PyEnvs}{23}{0}{5}
-\beamer@subsectionintoc {5}{2}{The How of PyEnvs}{26}{0}{5}
+\beamer@subsectionintoc {5}{2}{The How of PyEnvs}{27}{0}{5}

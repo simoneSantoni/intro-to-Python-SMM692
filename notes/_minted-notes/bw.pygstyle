@@ -1,0 +1,71 @@
+
+\makeatletter
+\def\PYGbw@reset{\let\PYGbw@it=\relax \let\PYGbw@bf=\relax%
+    \let\PYGbw@ul=\relax \let\PYGbw@tc=\relax%
+    \let\PYGbw@bc=\relax \let\PYGbw@ff=\relax}
+\def\PYGbw@tok#1{\csname PYGbw@tok@#1\endcsname}
+\def\PYGbw@toks#1+{\ifx\relax#1\empty\else%
+    \PYGbw@tok{#1}\expandafter\PYGbw@toks\fi}
+\def\PYGbw@do#1{\PYGbw@bc{\PYGbw@tc{\PYGbw@ul{%
+    \PYGbw@it{\PYGbw@bf{\PYGbw@ff{#1}}}}}}}
+\def\PYGbw#1#2{\PYGbw@reset\PYGbw@toks#1+\relax+\PYGbw@do{#2}}
+
+\@namedef{PYGbw@tok@c}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@k}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@ow}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@nc}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@nn}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@ne}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@ni}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@nt}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@s}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@si}{\let\PYGbw@bf=\textbf\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@se}{\let\PYGbw@bf=\textbf\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@gh}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@gu}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@ge}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@gs}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@gp}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@err}{\def\PYGbw@bc##1{{\setlength{\fboxsep}{\string -\fboxrule}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}}
+\@namedef{PYGbw@tok@kc}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@kd}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@kn}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@kr}{\let\PYGbw@bf=\textbf}
+\@namedef{PYGbw@tok@sa}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@sb}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@sc}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@dl}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@sd}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@s2}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@sh}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@sx}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@sr}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@s1}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@ss}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@ch}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@cm}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@cpf}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@c1}{\let\PYGbw@it=\textit}
+\@namedef{PYGbw@tok@cs}{\let\PYGbw@it=\textit}
+
+\def\PYGbwZbs{\char`\\}
+\def\PYGbwZus{\char`\_}
+\def\PYGbwZob{\char`\{}
+\def\PYGbwZcb{\char`\}}
+\def\PYGbwZca{\char`\^}
+\def\PYGbwZam{\char`\&}
+\def\PYGbwZlt{\char`\<}
+\def\PYGbwZgt{\char`\>}
+\def\PYGbwZsh{\char`\#}
+\def\PYGbwZpc{\char`\%}
+\def\PYGbwZdl{\char`\$}
+\def\PYGbwZhy{\char`\-}
+\def\PYGbwZsq{\char`\'}
+\def\PYGbwZdq{\char`\"}
+\def\PYGbwZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYGbwZat{@}
+\def\PYGbwZlb{[}
+\def\PYGbwZrb{]}
+\makeatother
+

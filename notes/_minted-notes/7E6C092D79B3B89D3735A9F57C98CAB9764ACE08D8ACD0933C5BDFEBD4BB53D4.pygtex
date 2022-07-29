@@ -1,0 +1,36 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} let us assign S1 and S2 to two strings}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S1} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Python 3.X\PYGZdq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S2} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Julia\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} check the length of S1 and S2}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{S1}\PYG{p}{)}
+\PYG{l+m+mi}{10}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{S2}\PYG{p}{)}
+\PYG{l+m+mi}{5}
+
+\PYG{c+c1}{\PYGZsh{} display the S1 repeated five times}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S1} \PYG{o}{*} \PYG{l+m+mi}{5}
+\PYG{l+s+s2}{\PYGZdq{}Python 3.XPython 3.XPython 3.XPython 3.XPython 3.X\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} display the concatenation of S1 and S2}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S1} \PYG{o}{+} \PYG{n}{S2}
+\PYG{l+s+s2}{\PYGZdq{}Python 3.XJulia\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} display the concatenation of S1, whitespace, and S2}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S1} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}} \PYG{o}{+} \PYG{n}{S2}
+\PYG{l+s+s2}{\PYGZdq{}Python 3.X Julia\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} display the outcome of joining S1 and S2 with a whitespace}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{([}\PYG{n}{S1}\PYG{p}{,} \PYG{n}{S2}\PYG{p}{])}
+\PYG{l+s+s2}{\PYGZdq{}Python 3.X Julia\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} display the outcome of joining S1 and S2 with an arbitrary string object}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s2}{\PYGZdq{} Vs. \PYGZdq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{([}\PYG{n}{S1}\PYG{p}{,} \PYG{n}{S2}\PYG{p}{])}
+\PYG{l+s+s2}{\PYGZdq{}Python 3.X Vs. Julia\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} string formatting}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s2}{\PYGZdq{}Both }\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s2}{ and }\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s2}{ have outstanding ML modules\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{S1}\PYG{p}{,} \PYG{n}{S2}\PYG{p}{)}
+\PYG{l+s+s2}{\PYGZdq{}Both Python 3.X and Julia have outstanding ML modules\PYGZdq{}}
+\end{Verbatim}

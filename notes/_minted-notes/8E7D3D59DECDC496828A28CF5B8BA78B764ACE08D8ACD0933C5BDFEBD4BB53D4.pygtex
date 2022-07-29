@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} the dictionary}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Living Tribunal\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}One\PYGZhy{}Above\PYGZhy{}All\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} let's fetch Captain Marvel's position in the Marvel characters' power rank}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{]}
+\PYG{l+m+mi}{3}
+
+\PYG{c+c1}{\PYGZsh{} a dictionary of dictionaries}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+	\PYG{l+s+s2}{\PYGZdq{}Dr. Strange\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+		\PYG{l+s+s2}{\PYGZdq{}first\PYGZus{}appearance\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1963}\PYG{p}{,}
+		\PYG{l+s+s2}{\PYGZdq{}created\PYGZus{}by\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Lee \PYGZam{} Ditko\PYGZdq{}}
+		\PYG{p}{\PYGZcb{},}
+	\PYG{l+s+s2}{\PYGZdq{}Iron Man\PYGZdq{}}\PYG{p}{:} \PYG{p}{\PYGZob{}}
+		\PYG{l+s+s2}{\PYGZdq{}first\PYGZus{}appearance\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1963}\PYG{p}{,}
+		\PYG{l+s+s2}{\PYGZdq{}created\PYGZus{}by\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Lee, Lieber, Heck \PYGZam{} Kirby\PYGZdq{}}
+		\PYG{p}{\PYGZcb{},}
+    \PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} let us fetch the creator of Dr. Strange}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Dr. Strange\PYGZdq{}}\PYG{p}{][}\PYG{l+s+s2}{\PYGZdq{}created\PYGZus{}by\PYGZdq{}}\PYG{p}{]}
+\PYG{l+s+s2}{\PYGZdq{}Lee \PYGZam{} Ditko\PYGZdq{}}
+\end{Verbatim}

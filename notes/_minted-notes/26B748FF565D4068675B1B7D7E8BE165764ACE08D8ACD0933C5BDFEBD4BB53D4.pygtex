@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{T} \PYG{o}{=} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} from a tuple to a list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n}{T}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} amend L's items}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{4}
+
+\PYG{c+c1}{\PYGZsh{} get back to a tuple}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{T} \PYG{o}{=} \PYG{n+nb}{tuple}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{T}\PYG{p}{)}
+\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{)}
+\end{Verbatim}

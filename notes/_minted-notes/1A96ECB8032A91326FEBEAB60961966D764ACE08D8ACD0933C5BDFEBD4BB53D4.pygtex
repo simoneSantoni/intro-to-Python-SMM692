@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} let us assign S to a string object}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Both Python 3.X and Julia have outstanding ML modules\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} strip target leading characters}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S}\PYG{o}{.}\PYG{n}{lstrip}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Both \PYGZdq{}}\PYG{p}{)}
+\PYG{l+s+s2}{\PYGZdq{}Python 3.X and Julia have outstanding ML modules\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} replace target characters}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Python 3.X\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}R\PYGZdq{}}\PYG{p}{)}
+\PYG{l+s+s2}{\PYGZdq{}Both R and Julia have outstanding ML modules\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} split string on target characters}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{} and \PYGZdq{}}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Both Python 3.X\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Julia have outstanding ML modules\PYGZdq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} make the string lower case}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S}\PYG{o}{.}\PYG{n}{lower}\PYG{p}{()}
+\PYG{l+s+s2}{\PYGZdq{}both python 3.x and julia have outstanding ml modules\PYGZdq{}}
+\end{Verbatim}

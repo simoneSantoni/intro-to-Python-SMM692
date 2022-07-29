@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} the list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Leonard\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Penny\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Sheldon\PYGZdq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} change the second item of L via indexing}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Raj\PYGZdq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Leonard\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Raj\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Sheldon\PYGZdq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} change multiple items of L via slicing}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{:}\PYG{l+m+mi}{2}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Amy\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Howard\PYGZdq{}}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Amy\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Howard\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Sheldon\PYGZdq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} delete the first item of L via indexing and using the 'del' statement}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{del} \PYG{n}{L}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Howard\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Sheldon\PYGZdq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} delete multiple items of L via slicing and using the 'del' statement}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{del} \PYG{n}{L}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{:}\PYG{l+m+mi}{2}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+\PYG{p}{[]}
+\end{Verbatim}
