@@ -302,6 +302,13 @@ print(2 + 4)
 \subsection{The What and Why of PyEnvs}
 
 \begin{frame}[c]{Why Do We Need a Python Environment?}
+	\begin{enumerate}
+		\item We do not want to break the system-wise installation of Python!
+		\item We want to create collections of Python modules to deploy in specific projects/types of projects 
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}[c]{Do Not Touch the System-Wise Installation of Python!}
 	\begin{itemize}
 		\item The large majoity of operating systems come with Python installed by default
 		\begin{itemize}
@@ -318,25 +325,50 @@ print(2 + 4)
 			\item If inconsistencies arise within the web of dependencies, we may not be able to install the modules we need
 			\item ... even worst, some modules previosuly installed may stop to work!
 		\end{itemize}
-		\item Now, you do not want to break the essential featues of you operating system
+		\item Now, you do not want to break some essential features of you operating system
 		\item The implication is that we should be bette off not using `syteme Python' for ou data science work
-		\item 
 	\end{itemize}
 \end{frame}
 
-\begin{frame}[c]{Environments Make Python Developers and Users' Life Easier!}
-...
+\begin{frame}[c]{Create PyEnvs, Ad Hoc Collections of Python Modules!}
+\begin{itemize}
+	\item Mainly, a Python environment is a Python installation --- along with a set of modules --- that has nothing to do with `system Python'
+	\begin{itemize}
+		\item In other words, Python environments are not used by default for any processes regardin the operating systems
+	\end{itemize}
+	\item Typically, we create a Python environment to carry out a specific project or a class of projects (e.g., Machine Learning)
+	\item The advantage is twofold:
+	\begin{itemize}
+		\item Reliability --- the web of dependencies is relatively simple insofar as we install only the few modules that are required by the project or project class. Likely as not, we will not come across installation issues!
+		\item Reproducibility --- the environment explicates the modules are necessary to carry out a certain project. Hence, a user who wants to reproduce our project's results knows which modules to install
+	\end{itemize}
+	\end{itemize}
 \end{frame}
 
 \subsection{The How of PyEnvs}
 
-\begin{frame}[c]{Creating PyEnvs from the Command Line}	
+\begin{frame}[c]{Creating PyEnvs from the Command Line (1 out of 2)}	
+	\begin{figure}
+		\includegraphics[width=0.65\textwidth]{images/conda_env_0}
+	\end{figure}
 \end{frame}
 
-\begin{frame}[c]{Creating PyEnvs using Anaconda Navigator}	
+\begin{frame}[c]{Creating PyEnvs from the Command Line (2 out of 2)}	
+	\begin{figure}
+		\includegraphics[width=0.65\textwidth]{images/conda_env_1}
+	\end{figure}
 \end{frame}
 
+\begin{frame}[c]{Creating PyEnvs from within Anaconda Navigator (1 out of 2)}	
+	\begin{figure}
+		\includegraphics[width=0.85\textwidth]{images/anaconda_nav_env_0.png}
+	\end{figure}
+\end{frame}
 
-\section{Collaborative and Versioning Tools}
+\begin{frame}[c]{Creating PyEnvs from within Anaconda Navigator (2 out of 2)}	
+	\begin{figure}
+		\includegraphics[width=0.85\textwidth]{images/anaconda_nav_env_1.png}
+	\end{figure}
+\end{frame}
 
 \end{document}
