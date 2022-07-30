@@ -1278,6 +1278,12 @@ THIRDLAW = "A robot must protect its own existence as long as such "\
            "protection does not conflict with the First or Second Law."
 # create a pipe to a file
 >>> file = open(file="my_file.txt", mode="r")
+
+# concatenate the strings
+>>> TO_WRITE = "/n".join([FIRTSTLAW, SECONDLAW, THIRDLAW])
+
+# write the concatenated strings 
+>>> file.write(TO_WRITE)
 \end{pythoncode}
 	
 
