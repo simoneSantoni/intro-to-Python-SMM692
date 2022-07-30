@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import the math module}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{math}
+	
+\PYG{c+c1}{\PYGZsh{} base-y log of x}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{math}\PYG{o}{.}\PYG{n}{log}\PYG{p}{(}\PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{)}
+\PYG{l+m+mf}{1.1949875002403856}
+	
+\PYG{c+c1}{\PYGZsh{} base-10 log of x}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{math}\PYG{o}{.}\PYG{n}{log10}\PYG{p}{(}\PYG{l+m+mi}{12}\PYG{p}{)}
+\PYG{l+m+mf}{1.0791812460476249}
+	
+\PYG{c+c1}{\PYGZsh{} import the random module}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{random}
+	
+\PYG{c+c1}{\PYGZsh{} a draw from a normal distribution with mean = 0 and standard deviation = 1}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{random}\PYG{o}{.}\PYG{n}{normalvariate}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.136017752991189}
+
+\PYG{c+c1}{\PYGZsh{} trigonometric functions}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{math}\PYG{o}{.}\PYG{n}{cos}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{l+m+mf}{1.0}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{math}\PYG{o}{.}\PYG{n}{sin}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{l+m+mf}{0.0}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{math}\PYG{o}{.}\PYG{n}{tan}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{l+m+mf}{0.0}
+
+\PYG{c+c1}{\PYGZsh{} an expression containing a factorial product}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{math}\PYG{o}{.}\PYG{n}{factorial}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{4} \PYG{o}{*} \PYG{l+m+mi}{3} \PYG{o}{*} \PYG{l+m+mi}{2} \PYG{o}{*} \PYG{l+m+mi}{1}
+\PYG{l+m+mi}{0}
+\end{Verbatim}

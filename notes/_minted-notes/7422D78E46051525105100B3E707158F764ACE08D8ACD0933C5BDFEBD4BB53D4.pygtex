@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} assign the variable 'a' to a floating-point number}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{a} \PYG{o}{=} \PYG{l+m+mf}{0.67544908755}
+
+\PYG{c+c1}{\PYGZsh{} displaying 'a' with the first two decimals only}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}:.2f\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{a}\PYG{p}{)}
+\PYG{l+s+s2}{\PYGZdq{}0.68\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} displaying 'a' with the first three decimals only}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}:.3f\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{a}\PYG{p}{)}
+\PYG{l+s+s2}{\PYGZdq{}0.675\PYGZdq{}}
+\end{Verbatim}

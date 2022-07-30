@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} the dictionary}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Living Tribunal\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}One\PYGZhy{}Above\PYGZhy{}All\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} get the keys}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{()}
+\PYG{n}{dict\PYGZus{}keys}\PYG{p}{([}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Living Tribunal\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}One\PYGZhy{}Above\PYGZhy{}All\PYGZdq{}}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} get the values}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D}\PYG{o}{.}\PYG{n}{values}\PYG{p}{()}
+\PYG{n}{dict\PYGZus{}values}\PYG{p}{([}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} get the items}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D}\PYG{o}{.}\PYG{n}{items}\PYG{p}{()}
+\PYG{n}{dict\PYGZus{}items}\PYG{p}{([(}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{),} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Living Tribunal\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{),} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}One\PYGZhy{}Above\PYGZhy{}All\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)])}
+
+\PYG{c+c1}{\PYGZsh{} get the keys as a list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n}{D}\PYG{o}{.}\PYG{n}{keys}\PYG{p}{())}
+\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Living Tribunal\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}One\PYGZhy{}Above\PYGZhy{}All\PYGZdq{}}\PYG{p}{]}
+\end{Verbatim}

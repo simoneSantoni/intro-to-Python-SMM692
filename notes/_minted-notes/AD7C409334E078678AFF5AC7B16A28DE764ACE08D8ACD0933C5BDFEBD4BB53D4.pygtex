@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} the dictionary}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Living Tribunal\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}One\PYGZhy{}Above\PYGZhy{}All\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} let us change the power rank for Captain Marvel}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{12}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{D}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Living Tribunal\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}One\PYGZhy{}Above\PYGZhy{}All\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} let us eliminate the character Living Tribunal}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{del} \PYG{n}{D}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Living Tribunal\PYGZdq{}}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{D}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}One\PYGZhy{}Above\PYGZhy{}All\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} let us add a further character}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Wanda Maximoff\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{l+m+mi}{4}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{D}\PYG{p}{)}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}One\PYGZhy{}Above\PYGZhy{}All\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Wanda Maximoff\PYGZdq{}}\PYG{p}{:} \PYG{l+m+mi}{4}\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

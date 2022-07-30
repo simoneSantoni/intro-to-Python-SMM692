@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import the namedtuple function from the module collection}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{collections} \PYG{k+kn}{import} \PYG{n}{namedtuple}
+
+\PYG{c+c1}{\PYGZsh{} create an ad hoc class object 'Rec' that fits our data structure}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Rec} \PYG{o}{=} \PYG{n}{namedtuple}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Rec\PYGZdq{}}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}character\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}first\PYGZus{}appearance\PYGZdq{}}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} use the generated class "Rec"}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{IRONMAN} \PYG{o}{=} \PYG{n}{Rec}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Iron Man\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{1963}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} A named-tuple record}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{IRONMAN}
+\PYG{n}{Rec}\PYG{p}{(}\PYG{n}{character}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}Iron Man\PYGZdq{}}\PYG{p}{,} \PYG{n}{first\PYGZus{}appearance}\PYG{o}{=}\PYG{l+m+mi}{1963}\PYG{p}{)}
+\end{Verbatim}

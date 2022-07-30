@@ -1,0 +1,101 @@
+
+\makeatletter
+\def\PYGfriendly@reset{\let\PYGfriendly@it=\relax \let\PYGfriendly@bf=\relax%
+    \let\PYGfriendly@ul=\relax \let\PYGfriendly@tc=\relax%
+    \let\PYGfriendly@bc=\relax \let\PYGfriendly@ff=\relax}
+\def\PYGfriendly@tok#1{\csname PYGfriendly@tok@#1\endcsname}
+\def\PYGfriendly@toks#1+{\ifx\relax#1\empty\else%
+    \PYGfriendly@tok{#1}\expandafter\PYGfriendly@toks\fi}
+\def\PYGfriendly@do#1{\PYGfriendly@bc{\PYGfriendly@tc{\PYGfriendly@ul{%
+    \PYGfriendly@it{\PYGfriendly@bf{\PYGfriendly@ff{#1}}}}}}}
+\def\PYGfriendly#1#2{\PYGfriendly@reset\PYGfriendly@toks#1+\relax+\PYGfriendly@do{#2}}
+
+\@namedef{PYGfriendly@tok@w}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\@namedef{PYGfriendly@tok@c}{\let\PYGfriendly@it=\textit\def\PYGfriendly@tc##1{\textcolor[rgb]{0.38,0.63,0.69}{##1}}}
+\@namedef{PYGfriendly@tok@cp}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\@namedef{PYGfriendly@tok@cs}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.38,0.63,0.69}{##1}}\def\PYGfriendly@bc##1{{\setlength{\fboxsep}{0pt}\colorbox[rgb]{1.00,0.94,0.94}{\strut ##1}}}}
+\@namedef{PYGfriendly@tok@k}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\@namedef{PYGfriendly@tok@kp}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\@namedef{PYGfriendly@tok@kt}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.56,0.13,0.00}{##1}}}
+\@namedef{PYGfriendly@tok@o}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PYGfriendly@tok@ow}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\@namedef{PYGfriendly@tok@nb}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\@namedef{PYGfriendly@tok@nf}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.02,0.16,0.49}{##1}}}
+\@namedef{PYGfriendly@tok@nc}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\@namedef{PYGfriendly@tok@nn}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.05,0.52,0.71}{##1}}}
+\@namedef{PYGfriendly@tok@ne}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\@namedef{PYGfriendly@tok@nv}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.73,0.38,0.84}{##1}}}
+\@namedef{PYGfriendly@tok@no}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.38,0.68,0.84}{##1}}}
+\@namedef{PYGfriendly@tok@nl}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.13,0.44}{##1}}}
+\@namedef{PYGfriendly@tok@ni}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.84,0.33,0.22}{##1}}}
+\@namedef{PYGfriendly@tok@na}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.44,0.63}{##1}}}
+\@namedef{PYGfriendly@tok@nt}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.02,0.16,0.45}{##1}}}
+\@namedef{PYGfriendly@tok@nd}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.33,0.33,0.33}{##1}}}
+\@namedef{PYGfriendly@tok@s}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.44,0.63}{##1}}}
+\@namedef{PYGfriendly@tok@sd}{\let\PYGfriendly@it=\textit\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.44,0.63}{##1}}}
+\@namedef{PYGfriendly@tok@si}{\let\PYGfriendly@it=\textit\def\PYGfriendly@tc##1{\textcolor[rgb]{0.44,0.63,0.82}{##1}}}
+\@namedef{PYGfriendly@tok@se}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.44,0.63}{##1}}}
+\@namedef{PYGfriendly@tok@sr}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.14,0.33,0.53}{##1}}}
+\@namedef{PYGfriendly@tok@ss}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.32,0.47,0.09}{##1}}}
+\@namedef{PYGfriendly@tok@sx}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\@namedef{PYGfriendly@tok@m}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.63,0.44}{##1}}}
+\@namedef{PYGfriendly@tok@gh}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\@namedef{PYGfriendly@tok@gu}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\@namedef{PYGfriendly@tok@gd}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\@namedef{PYGfriendly@tok@gi}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\@namedef{PYGfriendly@tok@gr}{\def\PYGfriendly@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\@namedef{PYGfriendly@tok@ge}{\let\PYGfriendly@it=\textit}
+\@namedef{PYGfriendly@tok@gs}{\let\PYGfriendly@bf=\textbf}
+\@namedef{PYGfriendly@tok@gp}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.78,0.36,0.04}{##1}}}
+\@namedef{PYGfriendly@tok@go}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\@namedef{PYGfriendly@tok@gt}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\@namedef{PYGfriendly@tok@err}{\def\PYGfriendly@bc##1{{\setlength{\fboxsep}{\string -\fboxrule}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}}
+\@namedef{PYGfriendly@tok@kc}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\@namedef{PYGfriendly@tok@kd}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\@namedef{PYGfriendly@tok@kn}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\@namedef{PYGfriendly@tok@kr}{\let\PYGfriendly@bf=\textbf\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\@namedef{PYGfriendly@tok@bp}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.00,0.44,0.13}{##1}}}
+\@namedef{PYGfriendly@tok@fm}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.02,0.16,0.49}{##1}}}
+\@namedef{PYGfriendly@tok@vc}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.73,0.38,0.84}{##1}}}
+\@namedef{PYGfriendly@tok@vg}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.73,0.38,0.84}{##1}}}
+\@namedef{PYGfriendly@tok@vi}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.73,0.38,0.84}{##1}}}
+\@namedef{PYGfriendly@tok@vm}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.73,0.38,0.84}{##1}}}
+\@namedef{PYGfriendly@tok@sa}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.44,0.63}{##1}}}
+\@namedef{PYGfriendly@tok@sb}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.44,0.63}{##1}}}
+\@namedef{PYGfriendly@tok@sc}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.44,0.63}{##1}}}
+\@namedef{PYGfriendly@tok@dl}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.44,0.63}{##1}}}
+\@namedef{PYGfriendly@tok@s2}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.44,0.63}{##1}}}
+\@namedef{PYGfriendly@tok@sh}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.44,0.63}{##1}}}
+\@namedef{PYGfriendly@tok@s1}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.44,0.63}{##1}}}
+\@namedef{PYGfriendly@tok@mb}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.63,0.44}{##1}}}
+\@namedef{PYGfriendly@tok@mf}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.63,0.44}{##1}}}
+\@namedef{PYGfriendly@tok@mh}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.63,0.44}{##1}}}
+\@namedef{PYGfriendly@tok@mi}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.63,0.44}{##1}}}
+\@namedef{PYGfriendly@tok@il}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.63,0.44}{##1}}}
+\@namedef{PYGfriendly@tok@mo}{\def\PYGfriendly@tc##1{\textcolor[rgb]{0.25,0.63,0.44}{##1}}}
+\@namedef{PYGfriendly@tok@ch}{\let\PYGfriendly@it=\textit\def\PYGfriendly@tc##1{\textcolor[rgb]{0.38,0.63,0.69}{##1}}}
+\@namedef{PYGfriendly@tok@cm}{\let\PYGfriendly@it=\textit\def\PYGfriendly@tc##1{\textcolor[rgb]{0.38,0.63,0.69}{##1}}}
+\@namedef{PYGfriendly@tok@cpf}{\let\PYGfriendly@it=\textit\def\PYGfriendly@tc##1{\textcolor[rgb]{0.38,0.63,0.69}{##1}}}
+\@namedef{PYGfriendly@tok@c1}{\let\PYGfriendly@it=\textit\def\PYGfriendly@tc##1{\textcolor[rgb]{0.38,0.63,0.69}{##1}}}
+
+\def\PYGfriendlyZbs{\char`\\}
+\def\PYGfriendlyZus{\char`\_}
+\def\PYGfriendlyZob{\char`\{}
+\def\PYGfriendlyZcb{\char`\}}
+\def\PYGfriendlyZca{\char`\^}
+\def\PYGfriendlyZam{\char`\&}
+\def\PYGfriendlyZlt{\char`\<}
+\def\PYGfriendlyZgt{\char`\>}
+\def\PYGfriendlyZsh{\char`\#}
+\def\PYGfriendlyZpc{\char`\%}
+\def\PYGfriendlyZdl{\char`\$}
+\def\PYGfriendlyZhy{\char`\-}
+\def\PYGfriendlyZsq{\char`\'}
+\def\PYGfriendlyZdq{\char`\"}
+\def\PYGfriendlyZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYGfriendlyZat{@}
+\def\PYGfriendlyZlb{[}
+\def\PYGfriendlyZrb{]}
+\makeatother
+

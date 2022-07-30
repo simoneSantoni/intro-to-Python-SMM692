@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} an empty list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L} \PYG{o}{=} \PYG{p}{[]}
+
+\PYG{c+c1}{\PYGZsh{} a list with an integer, a float, and a string}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{3.56}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}XyZ\PYGZdq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} a list with an integer and a list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}abc\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mf}{8.98}\PYG{p}{]]}
+\end{Verbatim}

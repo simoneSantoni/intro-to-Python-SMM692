@@ -31,7 +31,7 @@
   colback=green,
   colframe=black!70,
   listing only,
-  minted style=perldoc,
+  minted style=vs,
   minted language=python,
   minted options={numbersep=3mm,texcl=true,#1},
   left=5mm,enhanced,
@@ -83,7 +83,7 @@
 %% =============================== Links ==================================
 \usepackage[
 colorlinks=true,
-allcolors=base_c,
+allcolors=tri_2,
 %citecolor=CadetBlue,
 %urlcolor=CadetBlue
 ]{hyperref}%
@@ -152,6 +152,11 @@ allcolors=base_c,
 
 \clearpage
 
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+
+$\ldots$
+
 \chapter{Organization of the Module}
 
 $\ldots$
@@ -174,10 +179,6 @@ $\ldots$
 
 $\ldots$
 
-\section{Collaborative and Versioning Tools}
-
-$\ldots$
-
 \chapter{Python Language Fundamentals}
 
 \section{Variables}
@@ -191,7 +192,6 @@ $\ldots$
 \section{References}
 
 $\ldots$
-
 
 \chapter{Python Objects}
 
@@ -841,21 +841,474 @@ NOTES: this table has fake data
 >>> L[1][0]
 "abc"
 
-
 \end{pythoncode}
 
 \begin{paracol}{2}
 	\question{\raggedright List mutability}
-	\note{Lists may be changed in place by assignment to offsets and slices, list method calls, deletion statements, and more --- they are mutable objects..}
+	\note{Lists are mutable objects, which may be changed in place by assignment to offsets and slices, list method calls, deletion statements, and more. Example 4.12 illustrates some snippets to change a list's items. In the first part of the example, we change the items using indexing (line 5) and slicing (line 10). In the second half, we use Python's \href{https://docs.python.org/3/reference/simple_stmts.html}{\texttt{del}} statement to delete the items using indexing (line 15) and slicing (line 20).}
 \end{paracol}
 
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.12 --- changing and deleting list items in place}
+# the list
+>>> L = ["Leonard", "Penny", "Sheldon"]
 
-\section{Tuples, Files, and Everything Else}
+# change the second item of L via indexing
+>>> L[1] = "Raj"
+>>> print(L)
+["Leonard", "Raj", "Sheldon"]
 
-...
+# change multiple items of L via slicing
+>>> L[0:2] = ["Amy", "Howard"]
+>>> print(L)
+["Amy", "Howard", "Sheldon"]
 
+# delete the first item of L via indexing and using the 'del' statement
+>>> del L[0]
+>>> print(L)
+["Howard", "Sheldon"]
 
-\section{Python Statements}
+# delete multiple items of L via slicing and using the 'del' statement
+>>> del L[0:2]
+>>> print(L)
+[]
+
+\end{pythoncode}
+
+\begin{paracol}{2}
+\question{\raggedright List manipulation with built-in methods}
+\note{Python offers many \href{https://docs.python.org/3/tutorial/datastructures.html}{methods to manipulate and test list objects}. Table \ref{tab:list_methods} reports some of the most popular methods along with synopses. The first three methods --- \texttt{.append()}, \texttt{.insert()}, and \texttt{.extend()} --- expand an existing list. The fourth method, \texttt{.index} test for the presence of an item in an existing list. Note this method raises a \href{https://docs.python.org/3/library/exceptions.html#ValueError}{\texttt{ValueError}} if there is no such item.The remaining methods produce in-place changes in an existing list's items.}
+\end{paracol}
+
+\begin{table}[!htbp]
+	\caption{Popular list methods}
+	\label{tab:list_methods}
+	\centering
+	\begin{tabular}{ll}
+		\toprule \toprule
+		Method & Synopsis \\
+		\midrule 
+		\texttt{L.append(X)} & Append an item to an existing list\\
+		\texttt{L.insert(i, X)} & Append an item to an exisintg list in position $i$ \\
+		\texttt{L.extend([X0, X1, X2])} & Extend an existing list with the items from another list\\
+		\texttt{L.index(X)} & Get the index of the first instance of the argument in an existing list\\
+		\texttt{L.count(X)} & Get the cardinality of an item in an existing list\\
+		\texttt{L.sort()} & Sort the items in an existing list\\
+		\texttt{L.reverse()} & Reverse the order of the items in an existing list\\
+		\texttt{L.copy()} & Get a copy of an existing list\\
+		\texttt{L.pop(i)} & Remove the item at the given position in the list, and return it\\
+		\texttt{L.remove(X)} & Remove the first instance of an item in an existing list\\
+		\texttt{L.clear()} & Remove all items in an existing list\\
+		\bottomrule 
+	\end{tabular}
+\end{table}
+
+\begin{paracol}{2}
+	\question{\raggedright Expanding an existing list}
+	\note{Both the \texttt{.append()} and \texttt{.extend()} methods can be used to expand an existing list as per Example 4.13. However, they accomplish different goals and should not be confused: \texttt{.append()} adds a new item (of any type) to the end of the list (see line 6); \texttt{.extend()} extend the list by appending all the items from another iterable (e.g., another list, see line 11).}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.13 --- methods for expanding an existing list}
+# create two lists 
+>>> L1 = ["Leonard", "Penny", "Sheldon"]
+>>> L2 = ["Howard", "Raj", "Amy", "Bernadette"]
+
+# expand an existing list with .append()
+>>> L2.append("Priya") 
+>>> print(L2)
+["Howard", "Raj", "Amy", "Bernadette", "Priya"]
+
+# concatenate L1 and L2 with .extend()
+>>> L1.extend(L2)
+>>> print(L1)
+["Leonard", "Penny", "Sheldon", "Howard", "Raj", "Amy", "Bernadette", "Priya"]
+
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright In-place change of an existing list's items}
+	\note{One of the most common list manipulation task consists of changing the order of an item's list. As shown in Example 4.14, it is possible to use the \texttt{.reverse()} method to reverse the elements of the list in place (see line 5), while sorting an item's list can be carried out with the \texttt{.sort()} method.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.14 --- methods for changing list items in place}
+# create a list 
+>>> L = ["Howard", "Raj", "Amy", "Bernadette", "Priya"]
+
+# reverse the list's item positions
+>>> L.reverse()
+>>> print(L)
+["Priya", "Bernadette", "Amy", "Raj", "Howard"]
+
+# sort the list's items
+>>> L.sort()
+>>> print(L)
+["Amy", "Bernadette", "Howard", "Priya", "Raj"]
+
+\end{pythoncode}
+\clearpage
+
+\section{Dictionaries}
+
+\begin{paracol}{2}
+	\question{\raggedright What is a dictionary?}
+	\note{Along with lists, dictionaries are one of the most flexible built-in data types in Python. If you think of lists as ordered collections of objects, you can think of dictionaries as unordered collections; the chief distinction is that in dictionaries, items are stored and fetched by \emph{key}, instead of by \emph{positional offset}.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Why do we use dictionaries?}
+	\note{Dictionaries take the place of records, search tables, and any other sort of aggregation where item names are more meaningful than item positions.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright What type of objects can we include in a dictionary?}
+	\note{Like lists, dictionaries can contain objects of any type, and they support nesting to any depth(they can contain lists, other dictionaries, and so on). Each key can have just one associated value, but that value can be a collection of multiple objects if needed, and a given value can be stored under any number of keys.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do we create a dictionary?}
+	\note{Example 4.15 shows two different ways to create a dictionary. A dictionary can be created by including key-value pairs among braces (see line 2). In the example, there are three keys, associated with Marvel characters, and as many values, which can be thought as the characters' position in an ideal power rank. A column separates a key and its associated value. The second way to create a dictionary is based on Python's builtin \href{https://docs.python.org/3/library/stdtypes.html#dict}{\texttt{dict}}, mapping key onto values, and \href{https://docs.python.org/3/library/functions.html#zip}{\texttt{zip}}, which iterates over two elements in parallel. Specifically, \href{https://docs.python.org/3/library/functions.html#zip}{\texttt{zip}} creates the one-to-one correspondence between keys (characters) and values (characaters' power) that is passed as the argument of \href{https://docs.python.org/3/library/stdtypes.html#dict}{\texttt{dict}}. We will analyze the topic of iterations extensively in sections \ref{sec:while_and_for_loops} and \ref{sec:iterations_and_comprhensions}.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.15 --- initializing a new dictionary object}
+# method 1 
+>>> D = {"Captain Marvel": 3, "Living Tribunal": 2, "One-Above-All": 1}
+
+# method 2
+>>> CHARACTERS = ["Captain Marvel", "Living Tribunal", "One-Above-All"]
+>>> RANK = [3, 2, 1]
+>>> D = dict(zip(CHARACTERS, RANK)) 
+>>> print(D)
+{"Captain Marvel": 3, "Living Tribunal": 2, "One-Above-All": 1}
+\end{pythoncode}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright Accessing a dictionary's values}
+	\note{Dictionaries' items cannot be accessed via positional offsets --- like lists. Instead, we fetch the individual items by using the dictionary keys as shown in Example 4.16 (see line 5). The reference key is passed among brackets. When the dictionary at hand contains nested dictionaries (see line 9), it is possible to concatenate multiple queries, namely, sequences of keys between brackets (see line 21).}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.16 --- fetching dictionary items}
+# the dictionary 
+>>> D = {"Captain Marvel": 3, "Living Tribunal": 2, "One-Above-All": 1}
+
+# let's fetch Captain Marvel's position in the Marvel characters' power rank
+>>> D["Captain Marvel"]
+3
+
+# a dictionary of dictionaries
+>>> D = {
+	"Dr. Strange": {
+		"first_appearance": 1963,
+		"created_by": "Lee & Ditko"
+		},
+	"Iron Man": {
+		"first_appearance": 1963,
+		"created_by": "Lee, Lieber, Heck & Kirby"
+		},
+    } 
+
+# let us fetch the creator of Dr. Strange 
+>>> D["Dr. Strange"]["created_by"]
+"Lee & Ditko"
+\end{pythoncode}
+
+\begin{paracol}{2}
+\question{\raggedright Are dictionaries mutable?}
+\note{Dictionsries, like lists, are mutable. Thus, we can change, expand, and shrink them in place without making new dictionaries: simply assign a value to a key to change or create an entry. The del statement works here, too; it deletes the entry associated with the key specified as an index (see Example 4.17).}
+\end{paracol}
+\clearpage
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.17 --- dictionary mutability examples}
+# the dictionary 
+>>> D = {"Captain Marvel": 3, "Living Tribunal": 2, "One-Above-All": 1}
+
+# let us change the power rank for Captain Marvel
+>>> D["Captain Marvel"] = 12
+>>> print(D)
+{"Captain Marvel": 12, "Living Tribunal": 2, "One-Above-All": 1}
+
+# let us eliminate the character Living Tribunal 
+>>> del D["Living Tribunal"]
+>>> print(D)
+{"Captain Marvel": 12, "One-Above-All": 1}
+
+# let us add a further character 
+>>> D["Wanda Maximoff"] = 4
+>>> print(D)
+{"Captain Marvel": 12, "One-Above-All": 1, "Wanda Maximoff": 4}
+
+\end{pythoncode}
+
+\begin{paracol}{2}
+\question{\raggedright Dictionary manipulation with built-in methods}
+\note{Like for lists, Python offers many \href{https://docs.python.org/3/tutorial/datastructures.html#dictionaries}{\texttt{methods to manipulate dictionary objects}}. Table \ref{tab:dictionary_methods} reports some of the most common methods along with synopses. The first three methods, \texttt{.keys()} \texttt{.values()} \texttt{.items()}, get the constitutive elements of dictionaries: keys, values, and key-value pairs respectively. The fourth method, \texttt{.get(key, default?)} gets the value for a specific key. The fifth method, \texttt{.update()}, updates the value for a specific key. Like \texttt{.update()}, \texttt{.popitem()}, \texttt{.pop()}, and \texttt{d.clear()} alter the information of a dictionary in place. The first removes the value of a certain key; the second removes the item (a key-value pair) for a certain key; the latter delete all dictionary items. Finally, \texttt{.copy()} creates a \href{https://docs.python.org/3/library/copy.html}{shallow copy} of an existing dictionary.}
+\end{paracol}
+
+\begin{table}[!htbp]
+	\caption{Popular dictionary methods}
+	\label{tab:dictionary_methods}
+	\centering
+	\begin{tabular}{ll}
+		\toprule \toprule
+		Method & Synopsis \\
+		\midrule 
+		\texttt{D.keys()} & Get all dictionary keys\\
+		\texttt{D.values()} & Get all dictionary values \\ 
+		\texttt{D.items() } & Get all dictionary key-value pairs as tuples \\
+		\texttt{D.get(key, default?)} & Query a dictionary element by key\\ 
+		\texttt{D.update(D2) } & Update a dictionary key's value\\
+		\texttt{D.popitem()} & Remove the value corresponding to a certain key \\ 
+		\texttt{D.pop(key, default?) } & Remove the item at the given position in the list,\\
+		\texttt{D.clear() } & Delete all dictionary items\\
+		\texttt{D.copy() } & Copy the target dictionary \\
+		\bottomrule 
+	\end{tabular}
+\end{table}
+
+\begin{paracol}{2}
+\question{\raggedright How do we access the information in a dictionary?}
+\note{Example 4.18 shows how to use builtin methods to carry out three fundamental tasks: accessing dictionary keys (see line 5), values (see line 9), and items (i.e., key-value pairs, see line 13). It is worth noticing that the three methods illustrated in the example yield specific \href{https://docs.python.org/3/c-api/dict.html}{dictionary objects} such as \texttt{dict\_keys}, \texttt{dict\_values}, and \texttt{dict\_items}. Translating one of these dictionary objects into a list --- if needed --- is straightforward (see line 17).}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.18 --- accessing the information included in a dictionary}
+# the dictionary 
+>>> D = {"Captain Marvel": 3, "Living Tribunal": 2, "One-Above-All": 1}
+
+# get the keys
+>>> D.keys()
+dict_keys(["Captain Marvel", "Living Tribunal", "One-Above-All"])
+
+# get the values 
+>>> D.values()
+dict_values([3, 2, 1])
+
+# get the items
+>>> D.items()
+dict_items([("Captain Marvel", 3), ("Living Tribunal", 2), ("One-Above-All", 1)])
+
+# get the keys as a list 
+>>> list(D.keys())
+["Captain Marvel", "Living Tribunal", "One-Above-All"]
+\end{pythoncode}
+
+\section{Tuples}
+
+\begin{paracol}{2}
+	\question{\raggedright What is a tuple?}
+	\note{Tuples are sequences of immutable Python objects. They are similar to lists, but they are immutable. Tuples are created by enclosing a comma-separated list of values in parentheses.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Tuples are immutable!}
+	\note{Tuples are immutable, which means that once they are created, they cannot be changed!! }
+\end{paracol}
+
+\begin{paracol}{2}
+\question{\raggedright Why do we use tuples?}
+\note{Tuples are useful for storing data that is not to be changed, such as the coordinates of a point in a two-dimensional space. In general, we use tuples any time information integrity is a concern --- in other words when we want to make sure the information included in an object will not change because of another reference somewhere in our program.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do we create a tuple?}
+	\note{Python objects, separated by a comma, must be included between parentheses (see Example 4.19, line 2).}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do we access the information in a tuple?}
+	\note{By positional offsets, like lists (see Example 4.19, lines 5 and 9).}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.19 --- creating and accessing a tuple}
+# the tuple
+>>> T = ("Captain Marvel", 3)
+
+# access a tuple element
+>>> T[0]
+"Captain Marvel"
+
+# access a tuple element
+>>> T[1]
+3
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright Can we convert a tuple into a list?}
+	\note{Yes, we can. To do that, we pass the tuple as the argument of \texttt{list} (see Example 4.20).}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.20 --- tuple conversion}
+>>> T = ("Captain Marvel", 3)
+
+# from a tuple to a list
+>>> L = list(T)
+>>> print(L)
+["Captain Marvel", 3]
+
+# amend L's items
+>>> L[1] = 4
+
+# get back to a tuple
+>>> T = tuple(L)
+>>> print(T)
+("Captain Marvel", 4)
+\end{pythoncode}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright Tuples with the \href{https://docs.python.org/3/library/collections.html}{\texttt{collections}} module}
+	\note{\href{https://docs.python.org/3/library/collections.html}{\texttt{collections}} is a module that is shipped with Python and provides data containers that are alternative to Python's general purpose built-in containers, i.e., \texttt{dict}, \texttt{list}, \texttt{set}, and \texttt{tuple}. One of these containers can be created with the function \href{https://docs.python.org/3/library/collections.html#collections.namedtuple}{\texttt{namedtuple}} (see Example 4.21), which allows annotating the tuple items with names. In line 2, we import the function \href{https://docs.python.org/3/library/collections.html#collections.namedtuple}{\texttt{namedtuple}} from the \href{https://docs.python.org/3/library/collections.html#collections}{\texttt{collections}} module. In line 5, we create an ad hoc class that best represents the structure of our sample data, concerning Marvel characters' names and the year in which they first appeared in the comic series. The first argument taken by the function is customary and regards the name of the class we are about to create. The second argument is a list with the names of the attributes included in our data structure. In line 8, we use the newly created class \texttt{Rec} to create a tuple, which is eventually printed as per line 11.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.21 --- creating an annotated tuple with the collection module}
+# import the namedtuple function from the module collection
+>>> from collections import namedtuple
+
+# create an ad hoc class object 'Rec' that fits our data structure
+>>> Rec = namedtuple("Rec", ["character", "first_appearance"])
+
+# use the generated class "Rec"
+>>> IRONMAN = Rec("Iron Man", 1963)
+
+# A named-tuple record
+>>> IRONMAN
+Rec(character="Iron Man", first_appearance=1963)
+\end{pythoncode}
+
+\section{Sets}
+
+\begin{paracol}{2}
+	\question{\raggedright What is a set?}
+	\note{A \href{https://docs.python.org/3/tutorial/datastructures.html#sets}{\texttt{set}} is an \emph{unordered} collection of \emph{unique} and \emph{immutable} objects.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright What does it mean that sets are unordered collections?}
+	\note{By design, \href{https://docs.python.org/3/tutorial/datastructures.html#sets}{\texttt{set}} is a data structure with \emph{undefined element ordering} (see Example 4.22 --- the outcome included in line 6 does not follow any particular order).}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright What does it mean that sets have unique items?}
+	\note{By definition, an item appears only once in a set, no matter how many times it is added (see Example 4.22, line 2 Vs. line 7).}
+\end{paracol}
+
+\clearpage
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.22 --- creating a set}
+# create a list
+>>> L = ["a", "a", "b", "c", "c"]
+
+# get a set from L
+>>> S = set(L)
+>>> print(S)
+{"b", "a", "c"}
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright Why do we use sets?}
+	\note{Sets made this way support common mathematical set operations (see Example 4.23). Hence, they have a variety of applications, especially in numeric and database-focused work. }
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.23 --- set operations}
+# create two sets 
+>>> X = set(["a", "b", "c"])
+>>> Y = set(["c", "d", "e"])
+
+# set difference 
+>>> X - X
+set()
+>>> X - Y
+{"a", "b"}
+
+# union
+>>> X | Y
+{"a", "b", "c", "d", "e"}
+
+# intersection
+>>> X & Y
+{"c"}
+
+# superset
+>>> X > Y
+False
+
+# subset
+>>> X < Y
+False
+\end{pythoncode}
+\clearpage
+
+\section{Files}
+
+\begin{paracol}{2}
+	\question{\raggedright How do the files in our OS relate with Python?}
+	\notion{Our Python program may involve input and/or output operations. In other words, we may want to read data from a file stored in our machine and/or write the outcome of our analysis to a file. The built-in function \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}} creates a Python file object, which serves as a link to a file residing on your machine. As Lutz notes:
+	\begin{quote}
+		\textit{
+		``Compared to the types you've seen so far, file objects are somewhat unusual. They are considered a core type because they are created by a built-in function, but they're not numbers, sequences, or mappings, and they don't respond to expression operators; they export only methods for common file-processing tasks'' (page 282)
+		}
+	\end{quote}}
+\end{paracol}
+
+\begin{paracol}{2}
+\question{\raggedright How do we open a file?}
+\note{We open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}. The output of the function is a \texttt{file} object. Example 4.24 illustrates the functioning of \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}. In the first part of the snippet, we create a \texttt{file} object to read the data included in the existing file \texttt{my\_file.txt}.\footnote{For the sake of simplicity, we assume the target file is located in the same directory as the Python script.} At least, we have to pass one argument to \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}: the path pointing to the file. A second optional argument is \texttt{mode}, which specifies the mode in which the file is opened to source. It defaults to \texttt{r}, which means open for reading in text mode. Other common values are \texttt{w} for writing (truncating the file if it already exists), \texttt{x} for exclusive creation, and \texttt{a} for appending (which on some Unix systems, means that all writes append to the end of the file regardless of the current seek position). If encoding is not specified the encoding used is platform-dependent. Specifically, \texttt{locale.getpreferredencoding(False)} is called to get the current locale encoding.\footnote{Character encoding is the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.} }
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.24 --- data input with \texttt{open}}
+# create a pipe to a file
+>>> file = open(file="my_file.txt", mode="r")
+
+# calling "file" yields the attributes of the file object
+>>> file
+<_io.TextIOWrapper name="my_file.txt" mode="r" encoding="UTF-8">
+
+# let us source the data
+>>> data = file.read()
+>>> print(data)
+Hi there
+\end{pythoncode}
+	
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.25 --- data output with \texttt{open}}
+# the strings (data) to save permanently to a file
+FIRSTLAW = "A robot may not injure a human being or, through inaction, "\
+	   "allow a human being to come to harm."
+SECONDLAW = "A robot must obey the orders given it by human beings except "\
+	    "where such orders would conflict with the First Law."
+THIRDLAW = "A robot must protect its own existence as long as such "\ 
+           "protection does not conflict with the First or Second Law."
+# create a pipe to a file
+>>> file = open(file="my_file.txt", mode="r")
+\end{pythoncode}
+	
+
+\begin{table}[!htbp]
+	\caption{Popular file methods}
+	\label{tab:file-methods}
+	\begin{tabular}{ll}
+		\toprule \toprule
+		Method       & Description                                                                          \\
+		\midrule
+		\texttt{close()     } & Closes the file                                                                      \\
+		\texttt{detach()    } & Returns the separated raw stream from the buffer                                     \\
+		\texttt{fileno()    } & Returns a number that represents the stream as per the OS' perspective \\
+		\texttt{flush()     } & Flushes the internal buffer                                                          \\
+		\texttt{isatty()    } & Returns whether the file stream is interactive or not                                \\
+		\texttt{read()      } & Returns the file content                                                             \\
+		\texttt{readable()  } & Returns whether the file stream can be read or not                                   \\
+		\texttt{readline()  } & Returns one line from the file                                                       \\
+		\texttt{readlines() } & Returns a list of lines from the file                                                \\
+		\texttt{seek()      } & Change the file position                                                             \\
+		\texttt{seekable()  } & Returns whether the file allows us to change the file position                       \\
+		\texttt{tell()      } & Returns the current file position                                                    \\
+		\texttt{truncate()  } & Resizes the file to a specified size                                                 \\
+		\texttt{writable()  } & Returns whether the file can be written to or not                                    \\
+		\texttt{write()     } & Writes the specified string to the file                                              \\
+		\texttt{writelines()} & Writes a list of strings to the file                                                 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\section{Python Statements and Syntax}
 ...
 
 \section{If Test}
@@ -863,10 +1316,12 @@ NOTES: this table has fake data
 ...
 
 \section{While and For Loops}
+\label{sec:while_and_for_loops}
 
 ...
 
 \section{Iterations and Comprehensions}
+\label{sec:iterations_and_comprhensions}
 
 ...
 
@@ -998,6 +1453,10 @@ s.zfill(width)           & Left fill s with ASCII '0' digits with total length w
 \end{tabular}
 \end{table}
 \clearpage
+
+\chapter{Collaborative and Versioning Tools}
+
+...
 
 \end{appendices}
 

@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} create a list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Howard\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Raj\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Amy\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Bernadette\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Priya\PYGZdq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} reverse the list's item positions}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L}\PYG{o}{.}\PYG{n}{reverse}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Priya\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Bernadette\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Amy\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Raj\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Howard\PYGZdq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} sort the list's items}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L}\PYG{o}{.}\PYG{n}{sort}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Amy\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Bernadette\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Howard\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Priya\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Raj\PYGZdq{}}\PYG{p}{]}
+\end{Verbatim}

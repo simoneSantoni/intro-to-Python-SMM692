@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} create two sets}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{([}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}b\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}c\PYGZdq{}}\PYG{p}{])}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Y} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{([}\PYG{l+s+s2}{\PYGZdq{}c\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}d\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}e\PYGZdq{}}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} set difference}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X} \PYG{o}{\PYGZhy{}} \PYG{n}{X}
+\PYG{n+nb}{set}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X} \PYG{o}{\PYGZhy{}} \PYG{n}{Y}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}b\PYGZdq{}}\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} union}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X} \PYG{o}{|} \PYG{n}{Y}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}b\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}c\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}d\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}e\PYGZdq{}}\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} intersection}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X} \PYG{o}{\PYGZam{}} \PYG{n}{Y}
+\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}c\PYGZdq{}}\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} superset}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X} \PYG{o}{\PYGZgt{}} \PYG{n}{Y}
+\PYG{k+kc}{False}
+
+\PYG{c+c1}{\PYGZsh{} subset}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X} \PYG{o}{\PYGZlt{}} \PYG{n}{Y}
+\PYG{k+kc}{False}
+\end{Verbatim}
