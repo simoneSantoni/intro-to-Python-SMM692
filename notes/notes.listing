@@ -1,9 +1,12 @@
-# the strings (data) to save permanently to a file
-FIRSTLAW = "A robot may not injure a human being or, through inaction, "\
-	   "allow a human being to come to harm."
-SECONDLAW = "A robot must obey the orders given it by human beings except "\
-	    "where such orders would conflict with the First Law."
-THIRDLAW = "A robot must protect its own existence as long as such "\
-           "protection does not conflict with the First or Second Law."
-# create a pipe to a file
->>> file = open(file="my_file.txt", mode="r")
+# a list with a customer's past purchases
+>>> S = set(["a", "x", "b"])
+
+# a rule-based product recommender
+>>> if "x" in S:
+...     if "a" in S:
+...         print("Customers who bought x & a also bought Air Force")
+...     elif "u" in S::
+...         print("Customers who bought x & u also bought Air Max 95")
+... else:
+...    print("Falling short of suggestions --- I'm a dull recommender!")
+Customers who bought x & a also bought Air Force

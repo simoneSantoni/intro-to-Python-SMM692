@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} a set with a customer's past purchases}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{([}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}u\PYGZdq{}}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} a rule-based product recommender}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{if} \PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}} \PYG{o+ow}{in} \PYG{n}{S}\PYG{p}{:}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Customers who bought x also bought Air Jordan 7 Retro Miro\PYGZdq{}}\PYG{p}{)}
+\PYG{o}{...} \PYG{k}{else}\PYG{p}{:}
+\PYG{o}{...}     \PYG{k}{pass}
+\PYG{n}{Customers} \PYG{n}{who} \PYG{n}{bought} \PYG{n}{x} \PYG{n}{also} \PYG{n}{bought} \PYG{n}{Air} \PYG{n}{Jordan} \PYG{l+m+mi}{7} \PYG{n}{Retro} \PYG{n}{Miro}
+\end{Verbatim}

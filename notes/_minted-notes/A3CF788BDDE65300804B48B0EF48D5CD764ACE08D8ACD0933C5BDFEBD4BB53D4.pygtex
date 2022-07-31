@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} a list with a customer's past purchases}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S} \PYG{o}{=} \PYG{n+nb}{set}\PYG{p}{([}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}u\PYGZdq{}}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} a rule-based product recommender}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{if} \PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}} \PYG{o+ow}{in} \PYG{n}{S}\PYG{p}{:}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Customers who bought x also bought Air Jordan 7 Retro Miro\PYGZdq{}}\PYG{p}{)}
+\PYG{o}{...} \PYG{k}{elif} \PYG{l+s+s2}{\PYGZdq{}w\PYGZdq{}} \PYG{o+ow}{in} \PYG{n}{S}\PYG{p}{:}
+	\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}How about Converse Chuck Taylor All Star?\PYGZdq{}}\PYG{p}{)}
+\PYG{o}{...} \PYG{k}{else}\PYG{p}{:}
+	\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Falling short of suggestions \PYGZhy{}\PYGZhy{}\PYGZhy{} I\PYGZsq{}m a dull recommender!\PYGZdq{}}\PYG{p}{)}
+\PYG{n}{How} \PYG{n}{about} \PYG{n}{Converse} \PYG{n}{Chuck} \PYG{n}{Taylor} \PYG{n}{All} \PYG{n}{Star}\PYG{err}{?}
+\end{Verbatim}

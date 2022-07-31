@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} the strings (data) to save permanently to a file}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{FIRSTLAW} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}A robot may not injure a human being or, through inaction, \PYGZdq{}}\PYGZbs{}
+	       \PYG{l+s+s2}{\PYGZdq{}allow a human being to come to harm.\PYGZdq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{SECONDLAW} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}A robot must obey the orders given it by human beings except \PYGZdq{}}\PYGZbs{}
+	       \PYG{l+s+s2}{\PYGZdq{}where such orders would conflict with the First Law.\PYGZdq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{THIRDLAW} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}A robot must protect its own existence as long as such \PYGZdq{}}\PYGZbs{}
+               \PYG{l+s+s2}{\PYGZdq{}protection does not conflict with the First or Second Law.\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} create a pipe to a file}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{file} \PYG{o}{=} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{file}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}my\PYGZus{}file.txt\PYGZdq{}}\PYG{p}{,} \PYG{n}{mode}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} concatenate the strings}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{TO\PYGZus{}WRITE} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{join}\PYG{p}{([}\PYG{n}{FIRSTLAW}\PYG{p}{,} \PYG{n}{SECONDLAW}\PYG{p}{,} \PYG{n}{THIRDLAW}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} write the concatenated strings}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{file}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{TO\PYGZus{}WRITE}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} close the pipe}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{file}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\end{Verbatim}

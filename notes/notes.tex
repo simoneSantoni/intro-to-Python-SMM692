@@ -965,7 +965,7 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright How do we create a dictionary?}
-	\note{Example 4.15 shows two different ways to create a dictionary. A dictionary can be created by including key-value pairs among braces (see line 2). In the example, there are three keys, associated with Marvel characters, and as many values, which can be thought as the characters' position in an ideal power rank. A column separates a key and its associated value. The second way to create a dictionary is based on Python's builtin \href{https://docs.python.org/3/library/stdtypes.html#dict}{\texttt{dict}}, mapping key onto values, and \href{https://docs.python.org/3/library/functions.html#zip}{\texttt{zip}}, which iterates over two elements in parallel. Specifically, \href{https://docs.python.org/3/library/functions.html#zip}{\texttt{zip}} creates the one-to-one correspondence between keys (characters) and values (characaters' power) that is passed as the argument of \href{https://docs.python.org/3/library/stdtypes.html#dict}{\texttt{dict}}. We will analyze the topic of iterations extensively in sections \ref{sec:while_and_for_loops} and \ref{sec:iterations_and_comprhensions}.}
+	\note{Example 4.15 shows two different ways to create a dictionary. A dictionary can be created by including key-value pairs among braces (see line 2). In the example, there are three keys, associated with Marvel characters, and as many values, which can be thought as the characters' position in an ideal power rank. A colon separates a key and its associated value. The second way to create a dictionary is based on Python's builtin \href{https://docs.python.org/3/library/stdtypes.html#dict}{\texttt{dict}}, mapping key onto values, and \href{https://docs.python.org/3/library/functions.html#zip}{\texttt{zip}}, which iterates over two elements in parallel. Specifically, \href{https://docs.python.org/3/library/functions.html#zip}{\texttt{zip}} creates the one-to-one correspondence between keys (characters) and values (characaters' power) that is passed as the argument of \href{https://docs.python.org/3/library/stdtypes.html#dict}{\texttt{dict}}. We will analyze the topic of iterations extensively in sections \ref{sec:while_and_for_loops} and \ref{sec:iterations_and_comprhensions}.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.15 --- initializing a new dictionary object}
@@ -1250,7 +1250,12 @@ False
 
 \begin{paracol}{2}
 \question{\raggedright How do we open a file?}
-\note{We open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}. The output of the function is a \texttt{file} object. Example 4.24 illustrates the functioning of \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}. In the first part of the snippet, we create a \texttt{file} object to read the data included in the existing file \texttt{my\_file.txt}.\footnote{For the sake of simplicity, we assume the target file is located in the same directory as the Python script.} At least, we have to pass one argument to \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}: the path pointing to the file. A second optional argument is \texttt{mode}, which specifies the mode in which the file is opened to source. It defaults to \texttt{r}, which means open for reading in text mode. Other common values are \texttt{w} for writing (truncating the file if it already exists), \texttt{x} for exclusive creation, and \texttt{a} for appending (which on some Unix systems, means that all writes append to the end of the file regardless of the current seek position). If encoding is not specified the encoding used is platform-dependent. Specifically, \texttt{locale.getpreferredencoding(False)} is called to get the current locale encoding.\footnote{Character encoding is the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.} }
+\note{We open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}. The output of the function is a \texttt{file} object. }
+\end{paracol}
+
+\begin{paracol}{2}
+\question{\raggedright How do we source the data stored in a file?}
+\note{We open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}. The output of the function is a \texttt{file} object. Example 4.24 illustrates how to use \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}} for data sourcing. In the first part of the snippet, we create a \texttt{file} object to read the data included in the existing file \texttt{my\_file.txt}.\footnote{For the sake of simplicity, we assume the target file is located in the same directory as the Python script.} At least, we have to pass one argument to \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}: the path pointing to the file. A second optional argument is \texttt{mode}, which specifies the mode in which the file is opened to source. It defaults to \texttt{r}, which means open for reading in text mode. Other common values are \texttt{w} for writing,\footnote{By deafult, \texttt{w} truncates the file if it already exists} \texttt{x} for exclusive creation, and \texttt{a} for appending. \footnote{If encoding is not specified the encoding used is platform-dependent. Specifically, \texttt{locale.getpreferredencoding(False)} is called to get the current locale encoding. Character encoding is the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.} To read a file's contents, we use the \href{https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects}{\texttt{.read()}} method (see line 9), returning a string object (see line 10). }
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.24 --- data input with \texttt{open}}
@@ -1265,61 +1270,248 @@ False
 >>> data = file.read()
 >>> print(data)
 Hi there
+
+# close the pipe
+>>> file.close()
 \end{pythoncode}
-	
+\clearpage 
+
+\begin{paracol}{2}
+\question{\raggedright How do we write the data in the current Python session to a file?}
+\note{Example 4.25 illustrates how to use \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}} for data writing. In the first part of the snippet, we create three strings --- i.e., the information we are manipulating in the active Python session (see lines 2, 4, and 6). Then, we create a file object in `writing' mode (see the value passed to \texttt{mode}, line 9). Finally, we manipulate the three strings (as a sample task, in line 12, we concatenate \texttt{FIRSTLAW}, \texttt{SECONDLAW}, \texttt{THIRDLAW}) and write the result to a file (line 16).}
+\end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.25 --- data output with \texttt{open}}
 # the strings (data) to save permanently to a file
-FIRSTLAW = "A robot may not injure a human being or, through inaction, "\
-	   "allow a human being to come to harm."
-SECONDLAW = "A robot must obey the orders given it by human beings except "\
-	    "where such orders would conflict with the First Law."
-THIRDLAW = "A robot must protect its own existence as long as such "\ 
-           "protection does not conflict with the First or Second Law."
+>>> FIRSTLAW = "A robot may not injure a human being or, through inaction, "\
+	       "allow a human being to come to harm."
+>>> SECONDLAW = "A robot must obey the orders given it by human beings except "\
+	       "where such orders would conflict with the First Law."
+>>> THIRDLAW = "A robot must protect its own existence as long as such "\
+               "protection does not conflict with the First or Second Law."
+
 # create a pipe to a file
->>> file = open(file="my_file.txt", mode="r")
+>>> file = open(file="my_file.txt", mode="w")
 
 # concatenate the strings
->>> TO_WRITE = "/n".join([FIRTSTLAW, SECONDLAW, THIRDLAW])
+>>> TO_WRITE = "\n".join([FIRSTLAW, SECONDLAW, THIRDLAW])
 
 # write the concatenated strings 
 >>> file.write(TO_WRITE)
+
+# close the pipe
+>>> file.close()
 \end{pythoncode}
 	
+\begin{paracol}{2}
+	\question{\raggedright How about reading a single line from a file?}
+	\note{Hold on: what is a line? A string whose last character is \texttt{$\backslash$n}. We can read a single line from a file using the \href{https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects}{\texttt{.readline()}} method (see Example 4.26). Such a method starts by reading the first line included in the file (see line 11); then, it reads any subsequent lines included in the file (see line 15); when it reaches the end of the file (EOF), it returns the empty string \texttt{""} (see line 19).}
+\end{paracol}
+\clearpage 
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.26 --- reading one line at a time with \texttt{.readline()}}
+# the strings (data) to save permanently to a file
+>>> DATA = "The first line\nThe second line" 
+
+# create a pipe to a file and write DATA
+>>> file = open(file="my_file.txt", mode="w")
+>>> file.write(DATA)
+>>> file.close()
+
+# read one line from the file
+>>> file = open(file="my_file.txt", mode="r")
+>>> file.readline()
+"The first line\n"
+
+# calling file.readline() again reds the subsequent line 
+>>> file.readline()
+"The second line"
+
+# ... and so on until the end of the file is reached
+>>> file.readline()
+""
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright How about reading multiple lines at a time?}
+	\note{The \texttt{.readlines()} method reads the lines from a file and returns them as a list (see Example 4.27).}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.27 --- reading multiple lines at a time with \texttt{.readlines())}}
+# the strings (data) to save permanently to a file
+>>> DATA = "A\nB\nC\nD" 
+
+# create a pipe to a file and write DATA
+>>> file = open(file="my_file.txt", mode="w")
+>>> file.write(DATA)
+>>> file.close()
+
+# read multiple lines 
+>>> file = open(file="my_file.txt", mode="r")
+>>> file.readlines()
+['A\n', 'B\n', 'C\n', 'D']
+
+# equivalently to the previous line, we can use 'list'
+['A\n', 'B\n', 'C\n', 'D']
+\end{pythoncode}	
+
+\begin{paracol}{2}
+	\question{\raggedright What are the most common file methods?}
+	\note{Table \ref{tab:file-methods} illustrates some key file methods' names and their corresponding synopsis.}
+\end{paracol}
 
 \begin{table}[!htbp]
 	\caption{Popular file methods}
 	\label{tab:file-methods}
+	\centering
 	\begin{tabular}{ll}
 		\toprule \toprule
 		Method       & Description                                                                          \\
 		\midrule
-		\texttt{close()     } & Closes the file                                                                      \\
-		\texttt{detach()    } & Returns the separated raw stream from the buffer                                     \\
-		\texttt{fileno()    } & Returns a number that represents the stream as per the OS' perspective \\
-		\texttt{flush()     } & Flushes the internal buffer                                                          \\
-		\texttt{isatty()    } & Returns whether the file stream is interactive or not                                \\
-		\texttt{read()      } & Returns the file content                                                             \\
-		\texttt{readable()  } & Returns whether the file stream can be read or not                                   \\
-		\texttt{readline()  } & Returns one line from the file                                                       \\
-		\texttt{readlines() } & Returns a list of lines from the file                                                \\
-		\texttt{seek()      } & Change the file position                                                             \\
-		\texttt{seekable()  } & Returns whether the file allows us to change the file position                       \\
-		\texttt{tell()      } & Returns the current file position                                                    \\
-		\texttt{truncate()  } & Resizes the file to a specified size                                                 \\
-		\texttt{writable()  } & Returns whether the file can be written to or not                                    \\
-		\texttt{write()     } & Writes the specified string to the file                                              \\
-		\texttt{writelines()} & Writes a list of strings to the file                                                 \\
-		\bottomrule
+		\texttt{file.close()     } & Closes the file                                                                      \\
+		\texttt{file.detach()    } & Returns the separated raw stream from the buffer                                     \\
+		\texttt{file.fileno()    } & Returns a number that represents the stream as per the OS' perspective \\
+		\texttt{file.flush()     } & Flushes the internal buffer                                                          \\
+		\texttt{file.isatty()    } & Returns whether the file stream is interactive or not                                \\
+		\texttt{file.read()      } & Returns the file content                                                             \\
+		\texttt{file.readable()  } & Returns whether the file stream can be read or not                                   \\
+		\texttt{file.readline()  } & Returns one line from the file                                                       \\
+		\texttt{file.readlines() } & Returns a list of lines from the file                                                \\
+		\texttt{file.seek()      } & Change the file position                                                             \\
+		\texttt{file.seekable()  } & Returns whether the file allows us to change the file position                       \\
+		\texttt{file.tell()      } & Returns the current file position                                                    \\
+		\texttt{file.truncate()  } & Resizes the file to a specified size                                                 \\
+		\texttt{file.writable()  } & Returns whether the file can be written to or not                                    \\
+		\texttt{file.write()     } & Writes the specified string to the file                                              \\
+		\texttt{file.writelines()} & Writes a list of strings to the file                                                 \\
+		\bottomrule \\[-1.8ex]
+		\multicolumn{2}{l}{Notes: \texttt{file} is a fictionary object used to illustrate the usage of the file methods.} \\
 	\end{tabular}
 \end{table}
 
 \section{Python Statements and Syntax}
-...
 
-\section{If Test}
+\begin{paracol}{2}
+	\question{\raggedright What is a Python statement?}
+	\note{In his popular book `Learning Python,' Lutz provides a concise and effective description of what a Python statement is:
+		\begin{quote}
+			\textit{In simple terms, statements are the things you write to tell Python what your programs should do. If, as suggested [omitted], programs ``do things with stuff,'' then statements are the way you specify what sort of things a program does. Less informally, Python is a procedural, statement-based language; by combining statements, you specify a procedure that Python performs to satisfy a program's goals.} 
+		\end{quote}
+	}
+\end{paracol}
 
-...
+\begin{paracol}{2}
+	\question{\raggedright What are Python's statements?}
+	\note{Table \ref{tab:python_statements} illustrates common Python statements, their role, and application examples. Some of these statements were used in the examples considered so far. Other statements --- the majority --- will be faced in the next sections of the current chapter and/or in the subsequent chapters.}
+\end{paracol}
+\clearpage
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{Python Statements}
+	\label{tab:python_statements}
+	\begin{tabular}{lll}
+		\toprule \toprule
+		Statement & Role & Example \\
+		\midrule
+		\texttt{import} & Module access & \texttt{import math} \\
+		\texttt{from} & Attribute access & \texttt{from math import sqrt} \\
+		\texttt{class} & Building ad hoc objects & \texttt{class Subclass(Superclass): def method(self): pass} \\
+		\texttt{del} & Deleting references & \texttt{del a} \\
+		Assignment & Creating references & \texttt{a = "before b"} \\ 
+		Calls and other expressions & Running functions & \texttt{file.write("Hello")}\\
+		\texttt{print} & Printing objects & \texttt{print("Hello")} \\ 
+		\texttt{if/elif/else} & Selecting actions & \texttt{if "abc" in text: print(text)} \\ 
+		\texttt{for/else} & Iteration & \texttt{for x in mylist: print(x)} \\
+		\texttt{while/else} & General loops & \texttt{while X > Y: print("Hello")} \\ 
+		\texttt{pass} & Empty placeholder & \texttt{while True: pass} \\  
+		\texttt{break} &  Loop exit & \texttt{while True: if exit test(): break} \\ 
+		\texttt{continue} & Loop continue & \texttt{while True: if skiptest(): continue} \\ 
+		\texttt{def} & Functions and methods & \texttt{def f(a, b, c=1, *d): print(a+b+c+d[0])} \\ 
+		\texttt{return} & Functions results & \texttt{def f(a, b, c=1, *d): return a+b+c+d[0]} \\ 
+		\texttt{yield} & Generator functions & \texttt{def gen(n): for i in n: yield i*2} \\ 
+		\bottomrule
+	\end{tabular}
+\end{sidewaystable}
+\clearpage
+
+\section{Control Flow (or If-Then Statements)}
+
+\begin{paracol}{2}
+\question{\raggedright What is control flow in Python?}
+\note{Many Python statements we write are compound statements: there is one statement nested inside another. The outer statement is called the `if' statement and the inner statement is called the `then' statement. The `if' statement is used to determine whether to execute the `then' statement. Specifically, the `then' statement is executed insofar as the `if' statement evaluates to `True.' Example 4.28 illustrates a control flow case, a simple rule-based product recommender that suggests products based on users' purchasing patterns. If product \texttt{x} belongs to a user's set of past purchases, then a certain item is recommended; otherwise, no recommendation is offered (see lines 7 and 8, containing the \texttt{else} statement).} }
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.28 --- an example of control flow in Python}
+# a set with a customer's past purchases
+>>> S = set(["a", "x", "u"])
+
+# a rule-based product recommender 
+>>> if "x" in S:
+...     print("Customers who bought x also bought Air Jordan 7 Retro Miro")
+... else:
+...     pass
+Customers who bought x also bought Air Jordan 7 Retro Miro
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright End of line $\rightarrow$ end of the statement}
+	\note{Any Python statements are contained in the same line --- the end of the line equates to the statement end. In the interest of redundancy, Python statements do not traverse multiple lines. In Example 4.28, the if statement is in line 5; the then statement is in line 6.} 
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright The `:' character is required for nested statements!}
+	\note{The colon character is required to separate the if statement from the `then' statement (see Example 4.28 line 5).}
+\end{paracol}	
+
+\begin{paracol}{2}
+	\question{\raggedright Indentation has substantive meaning in Python!}
+	\note{`Then' statements are indented (with a tab or four consecutive spaces). Do not creatively use indents to embellish your code --- that is not consistent with Python's rules and design principles (see Example 4.28 line 6).}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright End of indentation $\rightarrow$ end of nested statements}
+	\note{`Then' statements are indented (with a tab or four consecutive spaces). In Example 4.28, the indentation in line 6 makes lines 5 and 6 to be evaluated together.}
+\end{paracol}
+
+\begin{paracol}{2}
+\question{\raggedright Multiple `then' statements}
+\note{Exmple 4.29 shows how to use \texttt{elif} to concatenate multiple `if-then' statements in the same control flow. Like in Example 4.28, the `else' statement defines the residual behavior of the control flow; that is, what Python does when both the `if' and `elif' statements evaluate to `False.'}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.29 --- an example of control flow with multiple `if-then' statements in Python}
+# a list with a customer's past purchases
+>>> S = set(["a", "w", "u"])
+
+# a rule-based product recommender 
+>>> if "x" in S:
+...     print("Customers who bought x also bought Air Jordan 7 Retro Miro")
+... elif "w" in S:
+	print("How about Converse Chuck Taylor All Star?")
+... else:
+	print("Falling short of suggestions --- I'm a dull recommender!")
+How about Converse Chuck Taylor All Star?
+\end{pythoncode}
+
+\begin{paracol}{2}
+\question{\raggedright Nested if-then statements}
+\note{In Python, it is possible to nest an if-then statement into another. In Example 4.30, the `if' statements in lines 6 and 8 are nested inside the `if' statement in line 5. It is worth noticing that lines 7 and 9 are indented twice because they terminate distinct if-then statements nested in the broader if-then statement commencing on line 5.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.30 --- an example of nested control flow in Python}
+# a list with a customer's past purchases
+>>> S = set(["a", "x", "b"])
+
+# a rule-based product recommender 
+>>> if "x" in S:
+...     if "a" in S:
+...         print("Customers who bought x & a also bought Air Force")
+...     elif "u" in S::
+...         print("Customers who bought x & u also bought Air Max 95")
+... else:
+...    print("Falling short of suggestions --- I'm a dull recommender!") 
+Customers who bought x & a also bought Air Force
+\end{pythoncode}
 
 \section{While and For Loops}
 \label{sec:while_and_for_loops}

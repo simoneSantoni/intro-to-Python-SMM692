@@ -10,4 +10,7 @@
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{data} \PYG{o}{=} \PYG{n}{file}\PYG{o}{.}\PYG{n}{read}\PYG{p}{()}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{data}\PYG{p}{)}
 \PYG{n}{Hi} \PYG{n}{there}
+
+\PYG{c+c1}{\PYGZsh{} close the pipe}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{file}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
 \end{Verbatim}

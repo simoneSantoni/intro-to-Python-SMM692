@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  29 JUL 2022 16:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  31 JUL 2022 23:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2159,7 +2159,7 @@ and I'll forget about whatever was undefined.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1253 ... transformed using digital computers.} }
+l.1253 ...he function is a \texttt{file} object. }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2168,7 +2168,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1253 ... transformed using digital computers.} }
+l.1253 ...he function is a \texttt{file} object. }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2177,7 +2177,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1253 ... transformed using digital computers.} }
+l.1253 ...he function is a \texttt{file} object. }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2186,7 +2186,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1253 ... transformed using digital computers.} }
+l.1258 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2195,7 +2195,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1253 ... transformed using digital computers.} }
+l.1258 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2204,7 +2204,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1253 ... transformed using digital computers.} }
+l.1258 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2213,7 +2213,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1253 ... transformed using digital computers.} }
+l.1258 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2222,7 +2222,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1253 ... transformed using digital computers.} }
+l.1258 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2231,7 +2231,61 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1253 ... transformed using digital computers.} }
+l.1258 ...turning a string object (see line 10). }
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   o
+l.1258 ...turning a string object (see line 10). }
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   o
+l.1258 ...turning a string object (see line 10). }
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   o
+l.1258 ...turning a string object (see line 10). }
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   m
+l.1258 ...turning a string object (see line 10). }
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   m
+l.1258 ...turning a string object (see line 10). }
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   m
+l.1258 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2240,63 +2294,189 @@ are all screwed up? I'm going to assume that you meant ##.
 \openout4 = `notes.listing'.
 
 
-(./_minted-notes/956F5AE39D1E65ECD6340919B524D46C764ACE08D8ACD0933C5BDFEBD4BB53
+(./_minted-notes/693CD82CBEF067F12E39878ED8471163764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex) [44
+
+]
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   o
+l.1281 ...d write the result to a file (line 16).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   o
+l.1281 ...d write the result to a file (line 16).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   o
+l.1281 ...d write the result to a file (line 16).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/C10F51FD5313FD897394FF2504599BFB764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex)
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   m
+l.1308 ...empty string \texttt{""} (see line 19).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   m
+l.1308 ...empty string \texttt{""} (see line 19).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   m
+l.1308 ...empty string \texttt{""} (see line 19).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+[45
+
+]
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/A4AE5492CB42844DAD7B13205B950062764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex)
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/72A8B9B30A88BB616C3BA38739B52C97764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex)
+
+LaTeX Warning: Characters dropped after `\end{pythoncode}' on input line 1356.
+
+
+Underfull \vbox (badness 1838) has occurred while \output is active []
+
+ [46
+
+]
+Underfull \hbox (badness 1715) in paragraph at lines 1400--1400
+[]\OT1/cmr/m/it/10.95 In sim-ple terms, state-ments are the
+ []
+
+
+Underfull \hbox (badness 1014) in paragraph at lines 1400--1400
+\OT1/cmr/m/it/10.95 gested [omit-ted], pro-grams ``do things
+ []
+
+[47] [48]
+! Extra }, or forgotten \endgroup.
+l.1442 ...taining the \texttt{else} statement).} }
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/D96A2987C6EB9036EF242D8F811649AD764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49
+
+
+]
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/A3CF788BDDE65300804B48B0EF48D5CD764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex)
 \openout4 = `notes.listing'.
 
 runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P t
-excomments=True -o _minted-notes/38EC74F54BD2C2AEE8D9320F25A89454764ACE08D8ACD0
+excomments=True -o _minted-notes/7D51FA948905FF71A500303167888AC0764ACE08D8ACD0
 933C5BDFEBD4BB53D4.pygtex notes.listing)...executed.
 
 
-(./_minted-notes/38EC74F54BD2C2AEE8D9320F25A89454764ACE08D8ACD0933C5BDFEBD4BB53
+(./_minted-notes/7D51FA948905FF71A500303167888AC0764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44
+ [50]
+(./notes.ent
+Overfull \hbox (15.67305pt too wide) in paragraph at lines 117--167
+[][]\OT1/cmr/m/n/9 If en-cod-ing is not spec-i-fied the en-cod-ing used is plat
+form-dependent. Specif-i-cally, \OT1/cmtt/m/n/9 locale.getpreferredencoding(Fal
+se)
+ []
+
+) [51] [52
 
 ]
-(./notes.ent [45]) [46]
 Chapter 5.
-[47
-
-] [48
+[53] [54
 
 ]
 Chapter 6.
-[49] [50
+[55] [56
 
 ]
 Chapter 7.
-[51] [52
+[57] [58
 
 
-] [53] [54]
+] [59] [60]
 Appendix A.
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
-380.
+578.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1380.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1578.
 
 
-Overfull \hbox (11.11417pt too wide) in paragraph at lines 1377--1424
+Overfull \hbox (11.11417pt too wide) in paragraph at lines 1575--1622
  [][] 
  []
 
-[55
+[61
 
-] [56] [57] [58
+] [62] [63] [64
 
 
 ]
 Appendix B.
-runsystem(rm _minted-notes/A352DC1E63F98E835E80C1BC831D918A764ACE08D8ACD0933C5B
+runsystem(rm _minted-notes/E97637FBEB62F4CA0F3FCF9AC116A81A764ACE08D8ACD0933C5B
 DFEBD4BB53D4.pygtex)...executed.
 
-[59] (./notes.aux)
+[65] (./notes.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -2304,16 +2484,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 0002137805D7BF22ABEF97BE177C4B03;4401.
+(rerunfilecheck)             Checksum: 29FB301F59DC671E84306DE7429F9DB2;4561.
  ) 
 Here is how much of TeX's memory you used:
- 32459 strings out of 478994
- 661940 string characters out of 5858184
+ 32513 strings out of 478994
+ 664379 string characters out of 5858184
  1171360 words of memory out of 5000000
- 49176 multiletter control sequences out of 15000+600000
+ 49208 multiletter control sequences out of 15000+600000
  416586 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,11n,117p,2384b,1082s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 86i,11n,117p,2384b,1074s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 </usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -2335,10 +2515,10 @@ e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on notes.pdf (59 pages, 355698 bytes).
+Output written on notes.pdf (65 pages, 377153 bytes).
 PDF statistics:
- 619 PDF objects out of 1000 (max. 8388607)
- 531 compressed objects within 6 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 654 PDF objects out of 1000 (max. 8388607)
+ 560 compressed objects within 6 object streams
+ 112 named destinations out of 1000 (max. 500000)
  237 words of extra memory for PDF output out of 10000 (max. 10000000)
 

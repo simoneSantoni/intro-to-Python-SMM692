@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} the strings (data) to save permanently to a file}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{DATA} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}A}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{B}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{C}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s2}{D\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} create a pipe to a file and write DATA}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{file} \PYG{o}{=} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{file}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}my\PYGZus{}file.txt\PYGZdq{}}\PYG{p}{,} \PYG{n}{mode}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{file}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{DATA}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{file}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+
+\PYG{c+c1}{\PYGZsh{} read multiple lines}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{file} \PYG{o}{=} \PYG{n+nb}{open}\PYG{p}{(}\PYG{n}{file}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}my\PYGZus{}file.txt\PYGZdq{}}\PYG{p}{,} \PYG{n}{mode}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{file}\PYG{o}{.}\PYG{n}{readlines}\PYG{p}{()}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}A}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}B}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}C}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}D\PYGZsq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} equivalently to the previous line, we can use 'list'}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}A}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}B}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}C}\PYG{l+s+se}{\PYGZbs{}n}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}D\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}
