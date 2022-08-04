@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} loop until a numeri threshold}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{while} \PYG{n}{i} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{3}\PYG{p}{:}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)}
+\PYG{o}{...}     \PYG{n}{i} \PYG{o}{=} \PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}
+\PYG{l+m+mi}{0}
+\PYG{l+m+mi}{1}
+\PYG{l+m+mi}{2}
+\PYG{l+m+mi}{3}
+
+\PYG{c+c1}{\PYGZsh{} loop until an empty string is returned}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{x} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}Indiana Jones\PYGZdq{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{while} \PYG{n}{x} \PYG{o}{!=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{:}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}
+\PYG{o}{...}     \PYG{n}{x} \PYG{o}{=} \PYG{n}{x}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{:]}
+\PYG{o}{...}
+\PYG{n}{Indiana} \PYG{n}{Jones}
+\PYG{n}{ndiana} \PYG{n}{Jones}
+\PYG{n}{diana} \PYG{n}{Jones}
+\PYG{n}{iana} \PYG{n}{Jones}
+\PYG{n}{ana} \PYG{n}{Jones}
+\PYG{n}{na} \PYG{n}{Jones}
+\PYG{n}{a} \PYG{n}{Jones}
+ \PYG{n}{Jones}
+\PYG{n}{Jones}
+\PYG{n}{ones}
+\PYG{n}{nes}
+\PYG{n}{es}
+\PYG{n}{s}
+\end{Verbatim}

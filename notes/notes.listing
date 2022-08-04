@@ -1,12 +1,2 @@
-# a list with a customer's past purchases
->>> S = set(["a", "x", "b"])
+#
 
-# a rule-based product recommender
->>> if "x" in S:
-...     if "a" in S:
-...         print("Customers who bought x & a also bought Air Force")
-...     elif "u" in S::
-...         print("Customers who bought x & u also bought Air Max 95")
-... else:
-...    print("Falling short of suggestions --- I'm a dull recommender!")
-Customers who bought x & a also bought Air Force

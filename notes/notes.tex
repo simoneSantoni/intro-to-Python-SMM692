@@ -1516,13 +1516,101 @@ Customers who bought x & a also bought Air Force
 \section{While and For Loops}
 \label{sec:while_and_for_loops}
 
-...
+\begin{paracol}{2}
+	\question{\raggedright Looping!}
+	\note{Oftentimes, we write Python statements that repeat a same task --- i,e., they loop a certain number of times or over multiple items.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do we write loops in Python?}
+	\note{Using \href{https://docs.python.org/3/reference/compound_stmts.html#for}{\texttt{for}} and \href{https://docs.python.org/3/reference/compound_stmts.html#while}{\texttt{while}} statements.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright What is the difference between \texttt{for} and \texttt{while} statements?}
+	\note{The \href{https://docs.python.org/3/reference/compound_stmts.html#while}{\texttt{while}} statement provides a way to code general loops. The \href{https://docs.python.org/3/reference/compound_stmts.html#for}{\texttt{for}} statement is designed for stepping through the items in a sequence or other iterable object and running a block of code for each.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.31 --- \texttt{while} loop examples}
+# loop until a numeri threshold
+>>> i = 0
+>>> while i <= 3:
+...     print(i)
+...     i = i + 1
+0
+1
+2
+3
+
+# loop until an empty string is returned
+>>> x = "Indiana Jones"
+>>> while x != "":
+...     print(x)
+...     x = x[1:]
+... 
+Indiana Jones
+ndiana Jones
+diana Jones
+iana Jones
+ana Jones
+na Jones
+a Jones
+ Jones
+Jones
+ones
+nes
+es
+s
+\end{pythoncode}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright \texttt{while} loops in action}
+	\note{\href{https://docs.python.org/3/reference/compound_stmts.html#while}{\texttt{while}} statements run a code block insforar as a test evaluates to True. In the upper section of Exmple 4.31, we assing a \texttt{i} to a number. Then we create a for loop with the following elements: the first one is a statementing testing wether \texttt{i} is smaller or equal 3 (see line 3); the second element is the loop body (indented), which is repeated as long as the test evaluates to \texttt{True}. It is worth noticing that every iteration of the loop body produces a unitary increase in \texttt{i} --- therefore, the program leaves the loop after four iterations. In the lower section of Example 4.31, we assigng the variable \texttt{x} to a string (line 13), which we eventually print (line 14) and  slice (line 15) until we get an empty string (line 13x).}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright \texttt{for} loops in action}
+	\note{\href{https://docs.python.org/3/reference/compound_stmts.html#for}{\texttt{for}} steps through a sequence of items and carries out a task. In the upper section of Example 4.32, we print the result of a mathematical operation that is deployed over the items of a \texttt{list} (an example of Python iterable object). The code included in line 2 assigngs temporarily the variable \texttt{item} to an element of iterable. Then, the code block (indented) is executed over the temporary object. In the lower section of Example 4.32, the execution of the loop operates a mathematical expression over the items of a first list and appends the outcome to a second list (line 8).}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.32 --- a \texttt{for} loop example}
+# prin the result of square root for a list of items
+>>> for item in [0, -99, 13, 6.54]:
+...     print(item ** 0.5)  
+
+>>> input = [2, 8, 1]
+>>> output = []
+>>> for item in input:
+...    output.append(item + 1)
+>>> print(output)
+[3, 9, 2]
+\end{pythoncode}
+	
+\begin{paracol}{2}
+	\question{\raggedright \texttt{for} loops with dictionaries}
+	\note{}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.33 --- a \texttt{for} loop example}
+# 
+
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright Counter \texttt{for} loops}
+	\note{}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.34 --- a \texttt{for} loop example}
+# 
+
+\end{pythoncode}
 
 \section{Iterations and Comprehensions}
 \label{sec:iterations_and_comprhensions}
 
 ...
-
 
 \theendnotes
 
@@ -1530,7 +1618,7 @@ Customers who bought x & a also bought Air Force
 
 \ldots
 
-\chapter{Data Management with Pandas and Dask}
+\chapter{Data Management with Pandas}
 
 \ldots
 

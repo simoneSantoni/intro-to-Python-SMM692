@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  31 JUL 2022 23:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  4 AUG 2022 01:04
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2425,62 +2425,258 @@ D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [50]
-(./notes.ent
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1526 ...html#while}{\texttt{while}} statements.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1526 ...html#while}{\texttt{while}} statements.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1526 ...html#while}{\texttt{while}} statements.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   w
+l.1526 ...html#while}{\texttt{while}} statements.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   w
+l.1526 ...html#while}{\texttt{while}} statements.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   w
+l.1526 ...html#while}{\texttt{while}} statements.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   w
+l.1531 ...t and running a block of code for each.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   w
+l.1531 ...t and running a block of code for each.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   w
+l.1531 ...t and running a block of code for each.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1531 ...t and running a block of code for each.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1531 ...t and running a block of code for each.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1531 ...t and running a block of code for each.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/87267E60A1DB261D87A9F5FF1938A278764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex) [51]
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   w
+l.1569 ...ntil we get an empty string (line 13x).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   w
+l.1569 ...ntil we get an empty string (line 13x).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   w
+l.1569 ...ntil we get an empty string (line 13x).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1574 ... the outcome to a second list (line 8).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1574 ... the outcome to a second list (line 8).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1574 ... the outcome to a second list (line 8).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/1608457E13BC7D01837CE32A415CB371764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex)
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/AE6E30B696443071C2B12199A13FA2AF764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex)
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/AE6E30B696443071C2B12199A13FA2AF764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex)
+Overfull \vbox (1.15614pt too high) has occurred while \output is active []
+
+
+[52
+
+] (./notes.ent
 Overfull \hbox (15.67305pt too wide) in paragraph at lines 117--167
 [][]\OT1/cmr/m/n/9 If en-cod-ing is not spec-i-fied the en-cod-ing used is plat
 form-dependent. Specif-i-cally, \OT1/cmtt/m/n/9 locale.getpreferredencoding(Fal
 se)
  []
 
-) [51] [52
+) [53] [54
 
 ]
 Chapter 5.
-[53] [54
-
-]
-Chapter 6.
 [55] [56
 
 ]
-Chapter 7.
+Chapter 6.
 [57] [58
 
+]
+Chapter 7.
+[59] [60
 
-] [59] [60]
+
+] [61] [62]
 Appendix A.
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
-578.
+666.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1578.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1666.
 
 
-Overfull \hbox (11.11417pt too wide) in paragraph at lines 1575--1622
+Overfull \hbox (11.11417pt too wide) in paragraph at lines 1663--1710
  [][] 
  []
 
-[61
+[63
 
-] [62] [63] [64
+] [64] [65] [66
 
 
 ]
 Appendix B.
-[65] (./notes.aux)
+[67] (./notes.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 29FB301F59DC671E84306DE7429F9DB2;4561.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `notes.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `notes.out':
+(rerunfilecheck)             Before: 29FB301F59DC671E84306DE7429F9DB2;4561
+(rerunfilecheck)             After:  077E38B20C839AAF3B89CB55A08FD0FF;4510.
  ) 
 Here is how much of TeX's memory you used:
- 32511 strings out of 478994
- 664230 string characters out of 5858184
- 1171360 words of memory out of 5000000
- 49207 multiletter control sequences out of 15000+600000
+ 32542 strings out of 478994
+ 665838 string characters out of 5858184
+ 1171359 words of memory out of 5000000
+ 49225 multiletter control sequences out of 15000+600000
  416586 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,11n,117p,2384b,1074s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2505,10 +2701,10 @@ e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive
 texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on notes.pdf (65 pages, 377177 bytes).
+Output written on notes.pdf (67 pages, 383473 bytes).
 PDF statistics:
- 654 PDF objects out of 1000 (max. 8388607)
- 560 compressed objects within 6 object streams
- 112 named destinations out of 1000 (max. 500000)
+ 669 PDF objects out of 1000 (max. 8388607)
+ 573 compressed objects within 6 object streams
+ 114 named destinations out of 1000 (max. 500000)
  237 words of extra memory for PDF output out of 10000 (max. 10000000)
 
