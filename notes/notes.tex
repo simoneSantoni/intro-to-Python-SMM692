@@ -7,7 +7,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
-\usepackage[margin=2cm]{geometry}   
+\usepackage[margin=2cm]{geometry}
 %\usepackage{color}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{tcolorbox}
@@ -42,7 +42,7 @@
 
 %% ============================== Tabular =================================
 \usepackage{booktabs}
-\usepackage{tabularx,ragged2e} 
+\usepackage{tabularx,ragged2e}
 \usepackage{array}
 \usepackage{multirow}
 \usepackage{siunitx}
@@ -96,16 +96,16 @@ allcolors=tri_2,
 \newcommand{\question}[1]{% Ask the question
     \begin{tcolorbox}[colback=comp_c!10,colframe=comp_c,sidebyside align=top,width=\linewidth,before skip=1ex]
         #1
-    \end{tcolorbox}%    
-    \switchcolumn% now write in the right column   
+    \end{tcolorbox}
+    \switchcolumn% now write in the right column
 }
 
 % note
 \newcommand{\note}[1]{% Add as many notes as you like
     \begin{tcolorbox}[colback=white!0,colframe=white!10,width=\linewidth,before skip=1ex]
         #1
-    \end{tcolorbox}         
-}   
+    \end{tcolorbox}
+}
 
 % summary
 \newcommand{\summary}[2][]{%
@@ -252,7 +252,7 @@ Implementation types & Compiled code, stack tracebacks                          
 \section{Number Type Fundamentals}
 
 \begin{paracol}{2}
-    \question{\raggedright Types of `number' objects} 
+    \question{\raggedright Types of `number' objects}
 	\note{Snippet 4.1, ``Doing stuff with numbers,'' highlights the two most popular \href{https://docs.python.org/3/tutorial/introduction.html#numbers}{`number'} instances in Python: integers and floating-point numbers. Integers are whole numbers such as 0, 4, or -12. Floating-point numbers are the representation of real numbers such as 0.5, 3.1415, or -1.6e-19. However, floating points in Python do not have --- in general --- the same value as the real number they represent.\footnote{Floating numbers are stored in binaries with an assigned level of precision that is typically equivalent to 15 or 16 decimals.} It is worth noticing that any single number with a period `.' is considered a floating point in Python. Also, Snippet 4.1 shows that the multiplication of an integer by a floating point yields a floating point. That happens because Python first converts operands up to the type of the most complicated operand.} %
 \end{paracol}
 \clearpage
@@ -261,15 +261,15 @@ Implementation types & Compiled code, stack tracebacks                          
 # integer addition
 >>> 1 + 1
 2
-	
+
 # floating-point multiplication
 >>> 10 * 0.5
 5.0
-	
+
 # 3 to the power 100
 >>> 3 ** 100
 515377520732011331036461129765621272702107522001
-	
+
 \end{pythoncode}
 
 \begin{paracol}{2}
@@ -290,7 +290,7 @@ Implementation types & Compiled code, stack tracebacks                          
 		 0o177, 0x9ff, 0b101010 & Octal, hex, and binary literals in 3.X \\
 		 0177, 0o177, 0x9ff, 0b101010 & Octal, octal, hex, and binary literals in 2.X \\
 		 3+4j, 3.0+4.0j, 3J & Complex number literals \\
-		 set(`spam'), \{1, 2, 3, 4\} & Sets: 2.X and 3.X construction forms\\ Decimal(`1.0'), Fraction(1, 3) & Decimal and fraction extension types\\ 
+		 set(`spam'), \{1, 2, 3, 4\} & Sets: 2.X and 3.X construction forms\\ Decimal(`1.0'), Fraction(1, 3) & Decimal and fraction extension types\\
 		 bool(X), True, False & Boolean type and constants\\
 		 \bottomrule
 	\end{tabular}
@@ -299,17 +299,15 @@ Implementation types & Compiled code, stack tracebacks                          
 \begin{paracol}{2}
 	\question{\raggedright Basic arithmetic operations in Python}
 	\note{Numbers in Python support the usual mathematical operations:
-		
 		\begin{itemize}
-			\item `+' $\rigtharrow$ addition 
-			\item `-' $\rightarrow$ subtraction 
-			\item `*' $\rightarrow$ multiplication 
-			\item `/' $\rightarrow$ floating point division 
+			\item `+' $\rigtharrow$ addition
+			\item `-' $\rightarrow$ subtraction
+			\item `*' $\rightarrow$ multiplication
+			\item `/' $\rightarrow$ floating point division
 			\item `//' $\rightarrow$ integer division
 			\item `\%' $\rightarrow$ modulus (remainder)
 			\item `**' $\rightarrow$ exponentiation
 		\end{itemize}
-		 
 		 To use these operations, it is sufficient to launch a  Python or IPython session without any modules loaded (see Snippet 4.1).}
 \end{paracol}
 
@@ -1647,18 +1645,58 @@ Wanda Maximoff IS human
 1 :-)
 2 :-)
 \end{pythoncode}
-\
+
 \begin{paracol}{2}
-	\question{\raggedright Counter \texttt{for} loops}
-	\note{}
+	\question{\raggedright Nested \texttt{for} loops}
+    \note{A Python statement that contains multiple \textt{for} loops is a nested \texttt{for} loop. Mainly, a
+    \texttt{for} loop allows to carry out a task over the elements of two iterables jointly. The outer loop considers the individual items of the first iterable (see Snippet 4.26, line 6); the inner loop (indented) considers the individual items of the second list (see line 7). Once we have created a pair of temporary objects, we can do something with it (see line 8).}
 \end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.36 --- a nested loop example}
+# the lists
+>>> LETTERS = ["x", "y", "z"]
+>>> COLORS = ["blue", "green", "red"]
+
+# create all permutations of letters and colors and print them
+>>> for i in LETTERS:
+...     for j in COLORS:
+...         print(i, " - ", j)
+x  -  blue
+x  -  green
+x  -  red
+y  -  blue
+y  -  green
+y  -  red
+z  -  blue
+z  -  green
+z  -  red
+\end{pythoncode}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright Nested \texttt{for} loops Vs. \texttt{zip} for loops}
+	\note{Contrarily to the nested \texttt{for} loops, which considers all permutations containing multiple iterables' items, the built-in \href{https://docs.python.org/3/library/functions.html#zip}{zip} steps through several iterables \emph{in parallel}, producing tuples with an item from each one. As shown in Snippet 4.37, there is neither an inner nor an outer for loop in this case --- instead, there is a single loop considering two temporary objects, \texttt{i} and \texttt{j}, that occupy the same position in the offset of the iterables at hand (see line 6; the first item from the first iterable goes with the first item from the second iterable, the second item from the first iterable goes with the second item from the second iterable, and so on and so forth).}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.37 --- looping over two iterables in parallel with \textt{zip}.}
+# the lists
+>>> LETTERS = ["x", "y", "z"]
+>>> COLORS = ["blue", "green", "red"]
+
+# create one-to-one matches of items and do something with them
+>>> for i, j in zip(LETTERS, COLORS):
+...     print(i, " - ", j)
+x  -  blue
+y  -  green
+z  -  red
+\end{pythoncode}
+\clearpage
 
 
 
 \section{Iterations and Comprehensions}
 \label{sec:iterations_and_comprhensions}
-
-...
+}
 
 \theendnotes
 

@@ -1,10 +1,10 @@
-# show the functioning of range
->>> list(range(3))
-[0, 1, 2]
+# the lists
+>>> LETTERS = ["x", "y", "z"]
+>>> COLORS = ["blue", "green", "red"]
 
-# use range in a for loop
->>> for i in range(3):
-...     print(i, ":-)")
-0 :-)
-1 :-)
-2 :-)
+# create one-to-one matches of items and do something with them
+>>> for i, j in zip(LETTERS, COLORS):
+...     print(i, " - ", j)
+x  -  blue
+y  -  green
+z  -  red

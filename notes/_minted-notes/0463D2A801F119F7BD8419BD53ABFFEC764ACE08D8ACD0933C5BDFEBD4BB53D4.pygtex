@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} the lists}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{LETTERS} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}y\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}z\PYGZdq{}}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{COLORS} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} create one-to-one matches of items and do something with them}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{i}\PYG{p}{,} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n+nb}{zip}\PYG{p}{(}\PYG{n}{LETTERS}\PYG{p}{,} \PYG{n}{COLORS}\PYG{p}{):}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{i}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{} \PYGZhy{} \PYGZdq{}}\PYG{p}{,} \PYG{n}{j}\PYG{p}{)}
+\PYG{n}{x}  \PYG{o}{\PYGZhy{}}  \PYG{n}{blue}
+\PYG{n}{y}  \PYG{o}{\PYGZhy{}}  \PYG{n}{green}
+\PYG{n}{z}  \PYG{o}{\PYGZhy{}}  \PYG{n}{red}
+\end{Verbatim}
