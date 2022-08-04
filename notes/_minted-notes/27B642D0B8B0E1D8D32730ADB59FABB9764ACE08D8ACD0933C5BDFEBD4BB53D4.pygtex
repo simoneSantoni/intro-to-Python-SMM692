@@ -1,5 +1,5 @@
 \begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
-\PYG{c+c1}{\PYGZsh{} loop until a numeri threshold}
+\PYG{c+c1}{\PYGZsh{} loop until reaching a numeric threshold}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{while} \PYG{n}{i} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{3}\PYG{p}{:}
 \PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)}

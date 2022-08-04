@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} the dictionary}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D} \PYG{o}{=} \PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}Thor\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}Asgardian\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Vision\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}android\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Wanda Maximoff\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}human\PYGZdq{}}\PYG{p}{\PYGZcb{}}
+
+\PYG{c+c1}{\PYGZsh{} get the items of D}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{items} \PYG{o}{=} \PYG{n}{D}\PYG{o}{.}\PYG{n}{items}\PYG{p}{()}
+
+\PYG{c+c1}{\PYGZsh{} iterate over key-value pairs and do something with them}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{k}\PYG{p}{,} \PYG{n}{v} \PYG{o+ow}{in} \PYG{n}{items}\PYG{p}{:}
+\PYG{o}{...}    \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{k} \PYG{o}{+} \PYG{l+s+s2}{\PYGZdq{} IS \PYGZdq{}} \PYG{o}{+} \PYG{n}{v}\PYG{p}{)}
+\PYG{n}{Thor} \PYG{n}{IS} \PYG{n}{Asgardian}
+\PYG{n}{Vision} \PYG{n}{IS} \PYG{n}{android}
+\PYG{n}{Wanda} \PYG{n}{Maximoff} \PYG{n}{IS} \PYG{n}{human}
+\end{Verbatim}

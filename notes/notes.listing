@@ -1,2 +1,12 @@
-#
+# the dictionary
+>>> D = {"Thor": "Asgardian", "Vision": "android", "Wanda Maximoff": "human"}
 
+# get the items of D
+>>> items = D.items()
+
+# iterate over key-value pairs and do something with them
+>>> for k, v in items:
+...    print(k + " IS " + v)
+Thor IS Asgardian
+Vision IS android
+Wanda Maximoff IS human

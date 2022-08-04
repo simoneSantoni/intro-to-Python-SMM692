@@ -2,7 +2,8 @@
 	"grammarly.selectors": [
 		{
 			"language": "latex",
-			"scheme": "file"
+			"scheme": "file",
+			"pattern": "notes/notes.tex"
 		}
 	]
 }

@@ -20,7 +20,7 @@
 \contentsline {section}{\numberline {4.8}Python Statements and Syntax}{46}{section.4.8}%
 \contentsline {section}{\numberline {4.9}Control Flow (or If-Then Statements)}{49}{section.4.9}%
 \contentsline {section}{\numberline {4.10}While and For Loops}{51}{section.4.10}%
-\contentsline {section}{\numberline {4.11}Iterations and Comprehensions}{53}{section.4.11}%
+\contentsline {section}{\numberline {4.11}Iterations and Comprehensions}{54}{section.4.11}%
 \contentsline {chapter}{\numberline {5}Technical and Scientific Computation with NumPy and SciPy}{55}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Data Management with Pandas}{57}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Coda}{59}{chapter.7}%

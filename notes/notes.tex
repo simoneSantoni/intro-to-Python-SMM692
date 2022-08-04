@@ -253,11 +253,11 @@ Implementation types & Compiled code, stack tracebacks                          
 
 \begin{paracol}{2}
     \question{\raggedright Types of `number' objects} 
-	\note{Example 4.1, ``Doing stuff with numbers,'' highlights the two most popular \href{https://docs.python.org/3/tutorial/introduction.html#numbers}{`number'} instances in Python: integers and floating-point numbers. Integers are whole numbers such as 0, 4, or -12. Floating-point numbers are the representation of real numbers such as 0.5, 3.1415, or -1.6e-19. However, floating points in Python do not have --- in general --- the same value as the real number they represent.\footnote{Floating numbers are stored in binaries with an assigned level of precision that is typically equivalent to 15 or 16 decimals.} It is worth noticing that any single number with a period `.' is considered a floating point in Python. Also, Example 4.1 shows that the multiplication of an integer by a floating point yields a floating point. That happens because Python first converts operands up to the type of the most complicated operand.} %
+	\note{Snippet 4.1, ``Doing stuff with numbers,'' highlights the two most popular \href{https://docs.python.org/3/tutorial/introduction.html#numbers}{`number'} instances in Python: integers and floating-point numbers. Integers are whole numbers such as 0, 4, or -12. Floating-point numbers are the representation of real numbers such as 0.5, 3.1415, or -1.6e-19. However, floating points in Python do not have --- in general --- the same value as the real number they represent.\footnote{Floating numbers are stored in binaries with an assigned level of precision that is typically equivalent to 15 or 16 decimals.} It is worth noticing that any single number with a period `.' is considered a floating point in Python. Also, Snippet 4.1 shows that the multiplication of an integer by a floating point yields a floating point. That happens because Python first converts operands up to the type of the most complicated operand.} %
 \end{paracol}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.1 --- doing `stuff' with numbers}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.1 --- doing `stuff' with numbers}
 # integer addition
 >>> 1 + 1
 2
@@ -310,12 +310,12 @@ Implementation types & Compiled code, stack tracebacks                          
 			\item `**' $\rightarrow$ exponentiation
 		\end{itemize}
 		 
-		 To use these operations, it is sufficient to launch a  Python or IPython session without any modules loaded (see Example 4.1).}
+		 To use these operations, it is sufficient to launch a  Python or IPython session without any modules loaded (see Snippet 4.1).}
 \end{paracol}
 
 \begin{paracol}{2}
     \question{\raggedright Advanced mathematical operations}
-    \note{Besides the mathematical operations shown above, there are many \href{https://docs.python.org/3/library/numeric.html}{modules shipped with Python} that carry out advanced/specific numerical analysis. For example, the \href{https://docs.python.org/3/library/math.html}{\texttt{math}} module provides access to the mathematical functions defined by the \href{https://en.wikipedia.org/wiki/C_standard_library}{C standard}.\footnote{As per the documentation of the Python programming language, \href{https://docs.python.org/3/library/math.html}{\texttt{math}} cannot be used with complex numbers.} Table \ref{tab:math_module_functions} reports a sample of these functions. To use them \href{https://docs.python.org/3/library/math.html}{\texttt{math}}, we have to import the module as shown in Example 4.2. Another popular module shipped with Python is \href{https://docs.python.org/3/library/random.html}{\texttt{random}}, implementing pseudo-random number generators for various distributions (see the lower section of Example 2).}
+    \note{Besides the mathematical operations shown above, there are many \href{https://docs.python.org/3/library/numeric.html}{modules shipped with Python} that carry out advanced/specific numerical analysis. For example, the \href{https://docs.python.org/3/library/math.html}{\texttt{math}} module provides access to the mathematical functions defined by the \href{https://en.wikipedia.org/wiki/C_standard_library}{C standard}.\footnote{As per the documentation of the Python programming language, \href{https://docs.python.org/3/library/math.html}{\texttt{math}} cannot be used with complex numbers.} Table \ref{tab:math_module_functions} reports a sample of these functions. To use them \href{https://docs.python.org/3/library/math.html}{\texttt{math}}, we have to import the module as shown in Snippet 4.2. Another popular module shipped with Python is \href{https://docs.python.org/3/library/random.html}{\texttt{random}}, implementing pseudo-random number generators for various distributions (see the lower section of Example 2).}
 \end{paracol}
 
 \begin{table}[!htbp]
@@ -354,7 +354,7 @@ Implementation types & Compiled code, stack tracebacks                          
 \end{table}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.2 --- advanced mathematical operations with the modules shipped with Python}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.2 --- advanced mathematical operations with the modules shipped with Python}
 # import the math module
 >>> import math
 	
@@ -390,7 +390,7 @@ Implementation types & Compiled code, stack tracebacks                          
 
 \begin{paracol}{2}
 	\question{Operator precedence}
-    \note{As shown in Example 4.2, line 30, Python expressions can string together multiple operators. So, how does Python know which operation to perform first? The answer to this question lies in operator precedence. When you write an expression with more than one operator, Python groups its parts according to what are called precedence rules,\footnote{The official Python documentation has an extensive section on operator precedence rules in the section dedicated to \href{https://docs.python.org/3/reference/expressions.html}{syntax of expressions}} and this grouping determines the order in which the expression’s parts are computed. Table \ref{tab:operator_precedence} reports the precedence hierarchy concerning the most common operators. Note that operators lower in the table have higher precedence. Parentheses can be used to create sub-expressions that override operator precedence rules.}
+    \note{As shown in Snippet 4.2, line 30, Python expressions can string together multiple operators. So, how does Python know which operation to perform first? The answer to this question lies in operator precedence. When you write an expression with more than one operator, Python groups its parts according to what are called precedence rules,\footnote{The official Python documentation has an extensive section on operator precedence rules in the section dedicated to \href{https://docs.python.org/3/reference/expressions.html}{syntax of expressions}} and this grouping determines the order in which the expression’s parts are computed. Table \ref{tab:operator_precedence} reports the precedence hierarchy concerning the most common operators. Note that operators lower in the table have higher precedence. Parentheses can be used to create sub-expressions that override operator precedence rules.}
 \end{paracol}
 \clearpage
 
@@ -428,11 +428,11 @@ Implementation types & Compiled code, stack tracebacks                          
 		\item Variables must be assigned before they can be used in expressions
 		\item Variables refer to objects and are never declared ahead of time
 	\end{itemize}
-    As Example 4.3 shows, the assignment of \texttt{x = 2} causes the variable \texttt{x} to come into existence `automatically.' From that point, we can use the variables in the context of expressions such as the ones displayed in lines 8, 12, 16, and 20, or to create new variables like in line 24.
+    As Snippet 4.3 shows, the assignment of \texttt{x = 2} causes the variable \texttt{x} to come into existence `automatically.' From that point, we can use the variables in the context of expressions such as the ones displayed in lines 8, 12, 16, and 20, or to create new variables like in line 24.
     }
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.3 --- expressions involving arithmetic operations}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.3 --- expressions involving arithmetic operations}
 	
 # let us assign the variables 'x' and 'y' to two number objects
 >>> x = 2
@@ -462,7 +462,7 @@ Implementation types & Compiled code, stack tracebacks                          
 
 \begin{paracol}{2}
 	\question{\raggedright Displaying number objects}
-	\note{Example 4.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the outcome of the expression `as is' (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we have to prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. Example 4.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html#str.format}{\texttt{format}}.}
+	\note{Snippet 4.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the outcome of the expression `as is' (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we have to prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. Snippet 4.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html#str.format}{\texttt{format}}.}
 \end{paracol}
 \clearpage
 
@@ -494,7 +494,7 @@ Implementation types & Compiled code, stack tracebacks                          
 	\end{tabular}
 \end{table}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.4 --- number formatting in Python}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.4 --- number formatting in Python}
 # assign the variable 'a' to a floating-point number
 >>> a = 0.67544908755
 
@@ -509,11 +509,11 @@ Implementation types & Compiled code, stack tracebacks                          
 
 \begin{paracol}{2}
 	\question{\raggedright{How do I compare number objects?}}
-	\note{Comparisons are used frequently to create control \href{https://docs.python.org/3/tutorial/controlflow.html}{flows}, a topic we will discuss later in this chapter. Normal comparisons in Python regard two number objects and return a Boolean result. Chained comparisons concern three or more objects, and, like normal comparisons, yield a Boolean result. Example 4.5 provides a sample of normal comparisons (between lines 1 and 15) and chained comparisons (between lines 21 and 30). As evident in the example, comparisons can regard both numbers and variables assigned to numbers. Chained comparisons can take the form of a range test (see line 21), a joined, `AND' test of the truth of multiple expressions (see line 25) or a disjoined, `OR' test of the truth of multiple expressions (see line 29).}
+	\note{Comparisons are used frequently to create control \href{https://docs.python.org/3/tutorial/controlflow.html}{flows}, a topic we will discuss later in this chapter. Normal comparisons in Python regard two number objects and return a Boolean result. Chained comparisons concern three or more objects, and, like normal comparisons, yield a Boolean result. Snippet 4.5 provides a sample of normal comparisons (between lines 1 and 15) and chained comparisons (between lines 21 and 30). As evident in the example, comparisons can regard both numbers and variables assigned to numbers. Chained comparisons can take the form of a range test (see line 21), a joined, `AND' test of the truth of multiple expressions (see line 25) or a disjoined, `OR' test of the truth of multiple expressions (see line 29).}
 \end{paracol}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.5 --- comparing numeric objects}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.5 --- comparing numeric objects}
 # less than
 >>> 3 < 2
 False
@@ -566,11 +566,11 @@ True
 
 \begin{paracol}{2}
 	\question{String indexing and slicing}
-	\note{The fact that strings are immutable sequences affects how we manipulate textual data in Python. In Example 4.6, we fetch the individual elements of \texttt{S}, a variable assigned to ``\texttt{Python 3.X}.'' As per the built-in function \href{https://docs.python.org/3/tutorial/introduction.html#strings}{\texttt{len}}, \texttt{S} contains six unitary strings. That means that each element in \texttt{S} is associated with a position in the numerical progression $\{0, 1, 2, 3, 4, 5\}$. Now, you may be surprised to see the first element of the list is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has index $0$, while the last element has index \texttt{len(obj)} - 1.  Fetching the individual elements of a string, such as \texttt{S}, requires passing the desired index between brackets, as shown in line 9 (where we get the first unitary string, namely, ``\texttt{P}''.), line 13 (where we get the last unitary string, namely, ``\texttt{X}''), and line 21 (where we get the unitary string with index $3$, i.e., the fourth unitary string appearing in \texttt{S}, ``\texttt{h}''). Note that line 17 is an alternative indexing strategy to the one presented in line 13: it is possible to retrieve the last unitary string by counting `backward'; that is, getting the first element starting from the right-hand side of the string, which equates to index \texttt{-1}. In lines 26 and 30, we exploit the indices of \texttt{S} to retrieve multiple unitary strings in a row. What we pass among brackets is not a single index. Instead, we specify a range of indices \texttt{i:j}. It is wort noticing that, in Python, the element associated with the lower bound index \texttt{i} is returned, whereas the element associated with the upper bound index \texttt{j} is not. In line 26, we fetch the unitary strings between index \texttt{2} --- equating to third unitary string of \texttt{S} --- and index \texttt{5} excluded --- namely, the fifth unitary string of \texttt{S}. In line 30, we adopt the `backward' approach to retrieve the unitary string with index \texttt{-3} --- the third string counting from the right-hand side of \texttt{S} --- as well as any other unitary strings following index \texttt{-3}. To do that, we leave the upper bound index blank.} 
+	\note{The fact that strings are immutable sequences affects how we manipulate textual data in Python. In Snippet 4.6, we fetch the individual elements of \texttt{S}, a variable assigned to ``\texttt{Python 3.X}.'' As per the built-in function \href{https://docs.python.org/3/tutorial/introduction.html#strings}{\texttt{len}}, \texttt{S} contains six unitary strings. That means that each element in \texttt{S} is associated with a position in the numerical progression $\{0, 1, 2, 3, 4, 5\}$. Now, you may be surprised to see the first element of the list is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has index $0$, while the last element has index \texttt{len(obj)} - 1.  Fetching the individual elements of a string, such as \texttt{S}, requires passing the desired index between brackets, as shown in line 9 (where we get the first unitary string, namely, ``\texttt{P}''.), line 13 (where we get the last unitary string, namely, ``\texttt{X}''), and line 21 (where we get the unitary string with index $3$, i.e., the fourth unitary string appearing in \texttt{S}, ``\texttt{h}''). Note that line 17 is an alternative indexing strategy to the one presented in line 13: it is possible to retrieve the last unitary string by counting `backward'; that is, getting the first element starting from the right-hand side of the string, which equates to index \texttt{-1}. In lines 26 and 30, we exploit the indices of \texttt{S} to retrieve multiple unitary strings in a row. What we pass among brackets is not a single index. Instead, we specify a range of indices \texttt{i:j}. It is wort noticing that, in Python, the element associated with the lower bound index \texttt{i} is returned, whereas the element associated with the upper bound index \texttt{j} is not. In line 26, we fetch the unitary strings between index \texttt{2} --- equating to third unitary string of \texttt{S} --- and index \texttt{5} excluded --- namely, the fifth unitary string of \texttt{S}. In line 30, we adopt the `backward' approach to retrieve the unitary string with index \texttt{-3} --- the third string counting from the right-hand side of \texttt{S} --- as well as any other unitary strings following index \texttt{-3}. To do that, we leave the upper bound index blank.} 
 \end{paracol}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.6 --- Python strings as sequences}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.6 --- Python strings as sequences}
 # let us assign the string "Python 3.X" to the variable S
 >>> S = "Python 3.X"
 
@@ -609,7 +609,7 @@ True
 
 \begin{paracol}{2}
 	\question{\raggedright Common string literals and operators}
-	\note{Example 4.6 deals with string indexing and slicing, two of the many operations we can carry out on strings. Table \ref{tab:string_literals_and_operators} reports a sample of common string literals and operators. The first two lines of Table \ref{tab:string_literals_and_operators} remind us that single and double quotes are equivalent when it comes to assigning a variable to a string object. However, we must refrain from mixing and matching single and double quotes. In other words, a string object requires the leading and trailing quotes are of the same type (i.e., double-double or single-single). In the interest of consistency, it is a good idea to make a policy choice, such as ``in my Python code, I use double quotes only'', and to stick with that throughout the various lines of the script. I prefer using double quotes because the single quote symbol is relatively popular in natural language (consider for example the Saxon genitive). As shown in the third line of Table \ref{tab:string_literals_and_operators} the single quote is treated as a unitary string insofar as double quotes are used to delimit the string object. Should the string object be delimited by single quotes, we should tell Python not to treat the single quote symbol after \texttt{m} as a Python special character but as a unitary string. To do that, we use the escape symbol $\setminus$  as shown in the fourth line of Table \ref{tab:string_literals_and_operators}. Table \ref{tab:helpful_escapes} provides several escaping examples.}
+	\note{Snippet 4.6 deals with string indexing and slicing, two of the many operations we can carry out on strings. Table \ref{tab:string_literals_and_operators} reports a sample of common string literals and operators. The first two lines of Table \ref{tab:string_literals_and_operators} remind us that single and double quotes are equivalent when it comes to assigning a variable to a string object. However, we must refrain from mixing and matching single and double quotes. In other words, a string object requires the leading and trailing quotes are of the same type (i.e., double-double or single-single). In the interest of consistency, it is a good idea to make a policy choice, such as ``in my Python code, I use double quotes only'', and to stick with that throughout the various lines of the script. I prefer using double quotes because the single quote symbol is relatively popular in natural language (consider for example the Saxon genitive). As shown in the third line of Table \ref{tab:string_literals_and_operators} the single quote is treated as a unitary string insofar as double quotes are used to delimit the string object. Should the string object be delimited by single quotes, we should tell Python not to treat the single quote symbol after \texttt{m} as a Python special character but as a unitary string. To do that, we use the escape symbol $\setminus$  as shown in the fourth line of Table \ref{tab:string_literals_and_operators}. Table \ref{tab:helpful_escapes} provides several escaping examples.}
 \end{paracol}
 \clearpage
 
@@ -648,11 +648,11 @@ True
 
 \begin{paracol}{2}
 	\question{\raggedright String manipulation tasks}
-		\note{Example 4.7 presents a sample of miscellaneous string manipulation tasks. In lines 6 and 9, we check the length of the variables \texttt{S1} and \texttt{S2}. In line 13, we display five repetitions of \texttt{S1}. In line 17, we use the algebraic operator ``$+$'' to concatenate \texttt{S1} and \texttt{S2}. In line 21, we expand on the previous input by separating \texttt{S1} and \texttt{S2} by a white-space. In line 25, we carry out the same task as line 17 --- however, we rely on the built-in \href{https://docs.python.org/3/library/stdtypes.html#str.join}{\texttt{join}} function to join \texttt{S1} and \texttt{S2} with whitespace. The argument taken by \href{https://docs.python.org/3/library/stdtypes.html#str.join}{\texttt{join}} is a Python \texttt{list}, the subject of paragraph 5.3. In line 29, \texttt{S1} and \texttt{S2} are joined with a custom string object, namely, \texttt{" Vs. "}. Finally, in line 33, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html#str.format}{\texttt{format}} function (see also Example 4.4) to display a string object including \texttt{S1} and \texttt{S2}. For a comprehensive list of string methods, see Table \ref{tab:string_methods}.}
+		\note{Snippet 4.7 presents a sample of miscellaneous string manipulation tasks. In lines 6 and 9, we check the length of the variables \texttt{S1} and \texttt{S2}. In line 13, we display five repetitions of \texttt{S1}. In line 17, we use the algebraic operator ``$+$'' to concatenate \texttt{S1} and \texttt{S2}. In line 21, we expand on the previous input by separating \texttt{S1} and \texttt{S2} by a white-space. In line 25, we carry out the same task as line 17 --- however, we rely on the built-in \href{https://docs.python.org/3/library/stdtypes.html#str.join}{\texttt{join}} function to join \texttt{S1} and \texttt{S2} with whitespace. The argument taken by \href{https://docs.python.org/3/library/stdtypes.html#str.join}{\texttt{join}} is a Python \texttt{list}, the subject of paragraph 5.3. In line 29, \texttt{S1} and \texttt{S2} are joined with a custom string object, namely, \texttt{" Vs. "}. Finally, in line 33, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html#str.format}{\texttt{format}} function (see also Snippet 4.4) to display a string object including \texttt{S1} and \texttt{S2}. For a comprehensive list of string methods, see Table \ref{tab:string_methods}.}
 \end{paracol}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.7 --- miscellaneous string manipulation tasks}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.7 --- miscellaneous string manipulation tasks}
 # let us assign S1 and S2 to two strings
 >>> S1 = "Python 3.X"
 >>> S2 = "Julia"
@@ -692,10 +692,10 @@ True
 
 \begin{paracol}{2}
 	\question{\raggedright String editing}
-	\note{Example 4.8 illustrates some string editing tasks. In line 5, we use \href{https://docs.python.org/3/library/stdtypes.html#str.format}{lstrip} --- a variation of the built-in function \href{https://docs.python.org/3/library/stdtypes.html#str.format}{strip} --- that returns a copy of the string with leading characters removed. In line 9, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html}{replace} to return a copy of the string with all occurrences of substring \texttt{old} (first argument taken by the function) replaced by \texttt{new} (second argument taken by the function). Finally, in line 17, we use the built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{lower}} to return a copy of the string with all the cased characters converted to lowercase.} 
+	\note{Snippet 4.8 illustrates some string editing tasks. In line 5, we use \href{https://docs.python.org/3/library/stdtypes.html#str.format}{lstrip} --- a variation of the built-in function \href{https://docs.python.org/3/library/stdtypes.html#str.format}{strip} --- that returns a copy of the string with leading characters removed. In line 9, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html}{replace} to return a copy of the string with all occurrences of substring \texttt{old} (first argument taken by the function) replaced by \texttt{new} (second argument taken by the function). Finally, in line 17, we use the built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{lower}} to return a copy of the string with all the cased characters converted to lowercase.} 
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.8 --- miscellaneous string editing tasks}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.8 --- miscellaneous string editing tasks}
 # let us assign S to a string object
 >>> S = "Both Python 3.X and Julia have outstanding ML modules"
 
@@ -719,10 +719,10 @@ True
 
 \begin{paracol}{2}
 \question{Testing and searching strings}
-\note{Example 4.9 presents a series of string test and search tasks. The built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{find}} (see lines 5 and 9) returns the lowest index in the string where substring sub is found within the slice \texttt{S[start:end]} or -1 if substring is not found.	The built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{isdigit}} return \texttt{True} if all characters in the string are digits and there is at least one character, \texttt{False} otherwise. Finally, the built-in function \href{https://docs.python.org/3/library/stdtypes.html}{endswith} returns \texttt{True} if the string ends with the specified suffix, otherwise returns \texttt{False}.}
+\note{Snippet 4.9 presents a series of string test and search tasks. The built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{find}} (see lines 5 and 9) returns the lowest index in the string where substring sub is found within the slice \texttt{S[start:end]} or -1 if substring is not found.	The built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{isdigit}} return \texttt{True} if all characters in the string are digits and there is at least one character, \texttt{False} otherwise. Finally, the built-in function \href{https://docs.python.org/3/library/stdtypes.html}{endswith} returns \texttt{True} if the string ends with the specified suffix, otherwise returns \texttt{False}.}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.9 --- miscellaneous string test and search tasks}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.9 --- miscellaneous string test and search tasks}
 # let us assign S to a string object
 >>> S = "The first version of Python was released in 1991"
 
@@ -761,10 +761,10 @@ True
 
 \begin{paracol}{2}
 \question{\raggedright Multiline string printing}
-\note{In the previous examples, we came across the built-in function \href{https://docs.python.org/3/library/functions.html#print}{\texttt{print}}. Such a function can be used to print both number- and string-type objects. Sometimes, what we want to print fits into a single line. In other circumstances, we are interested in visualizing rich data, which can span multiple lines. Example 4.9 how to print objects across multiple lines with the triple-quoted block string (see line ). As evident from the Python code included in lines 8-13, any line between triple-quotes is considered part of the same string object.}	
+\note{In the previous examples, we came across the built-in function \href{https://docs.python.org/3/library/functions.html#print}{\texttt{print}}. Such a function can be used to print both number- and string-type objects. Sometimes, what we want to print fits into a single line. In other circumstances, we are interested in visualizing rich data, which can span multiple lines. Snippet 4.9 how to print objects across multiple lines with the triple-quoted block string (see line ). As evident from the Python code included in lines 8-13, any line between triple-quotes is considered part of the same string object.}	
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.9 --- multiline string printing}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.9 --- multiline string printing}
 # single-line print
 >>> print("Hello world!")
 Hello world!
@@ -804,11 +804,11 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright What type of objects can we include in a list?}
-	\note{Lists can contain any sort of object: numbers, strings, and even other lists. See Example 4.10.}
+	\note{Lists can contain any sort of object: numbers, strings, and even other lists. See Snippet 4.10.}
 \end{paracol}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.10 --- sample lists with different items}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.10 --- sample lists with different items}
 # an empty list
 >>> L = [] 
 
@@ -822,10 +822,10 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright List indexing}
-	\note{We can retrieve one or more list component objects via indexing. That is possible because list items are ordered by their position  (similarly to strings). Since Python is a zero-based indexed programming language, to fetch the first item of a list we have to call the index \texttt{0} (see Example 4.11, line 5). A list nested in another list can be fetched by using multiple indices (line 13). The first index refers to the outer list, while any subsequent index refers to an inner list. In our case, we have two indices, one for each list; that is, \texttt{L} and its sub-list \texttt{["abc", 8.98]}.}
+	\note{We can retrieve one or more list component objects via indexing. That is possible because list items are ordered by their position  (similarly to strings). Since Python is a zero-based indexed programming language, to fetch the first item of a list we have to call the index \texttt{0} (see Snippet 4.11, line 5). A list nested in another list can be fetched by using multiple indices (line 13). The first index refers to the outer list, while any subsequent index refers to an inner list. In our case, we have two indices, one for each list; that is, \texttt{L} and its sub-list \texttt{["abc", 8.98]}.}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.11 --- list indexing and slicing}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.11 --- list indexing and slicing}
 # the list
 >>> L = [4, ["abc", 8.98]]
 
@@ -845,10 +845,10 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright List mutability}
-	\note{Lists are mutable objects, which may be changed in place by assignment to offsets and slices, list method calls, deletion statements, and more. Example 4.12 illustrates some snippets to change a list's items. In the first part of the example, we change the items using indexing (line 5) and slicing (line 10). In the second half, we use Python's \href{https://docs.python.org/3/reference/simple_stmts.html}{\texttt{del}} statement to delete the items using indexing (line 15) and slicing (line 20).}
+	\note{Lists are mutable objects, which may be changed in place by assignment to offsets and slices, list method calls, deletion statements, and more. Snippet 4.12 illustrates some snippets to change a list's items. In the first part of the example, we change the items using indexing (line 5) and slicing (line 10). In the second half, we use Python's \href{https://docs.python.org/3/reference/simple_stmts.html}{\texttt{del}} statement to delete the items using indexing (line 15) and slicing (line 20).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.12 --- changing and deleting list items in place}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.12 --- changing and deleting list items in place}
 # the list
 >>> L = ["Leonard", "Penny", "Sheldon"]
 
@@ -904,10 +904,10 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright Expanding an existing list}
-	\note{Both the \texttt{.append()} and \texttt{.extend()} methods can be used to expand an existing list as per Example 4.13. However, they accomplish different goals and should not be confused: \texttt{.append()} adds a new item (of any type) to the end of the list (see line 6); \texttt{.extend()} extend the list by appending all the items from another iterable (e.g., another list, see line 11).}
+	\note{Both the \texttt{.append()} and \texttt{.extend()} methods can be used to expand an existing list as per Snippet 4.13. However, they accomplish different goals and should not be confused: \texttt{.append()} adds a new item (of any type) to the end of the list (see line 6); \texttt{.extend()} extend the list by appending all the items from another iterable (e.g., another list, see line 11).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.13 --- methods for expanding an existing list}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.13 --- methods for expanding an existing list}
 # create two lists 
 >>> L1 = ["Leonard", "Penny", "Sheldon"]
 >>> L2 = ["Howard", "Raj", "Amy", "Bernadette"]
@@ -926,10 +926,10 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright In-place change of an existing list's items}
-	\note{One of the most common list manipulation task consists of changing the order of an item's list. As shown in Example 4.14, it is possible to use the \texttt{.reverse()} method to reverse the elements of the list in place (see line 5), while sorting an item's list can be carried out with the \texttt{.sort()} method.}
+	\note{One of the most common list manipulation task consists of changing the order of an item's list. As shown in Snippet 4.14, it is possible to use the \texttt{.reverse()} method to reverse the elements of the list in place (see line 5), while sorting an item's list can be carried out with the \texttt{.sort()} method.}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.14 --- methods for changing list items in place}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.14 --- methods for changing list items in place}
 # create a list 
 >>> L = ["Howard", "Raj", "Amy", "Bernadette", "Priya"]
 
@@ -947,6 +947,7 @@ NOTES: this table has fake data
 \clearpage
 
 \section{Dictionaries}
+\label{sec:dictionaries}
 
 \begin{paracol}{2}
 	\question{\raggedright What is a dictionary?}
@@ -965,10 +966,10 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright How do we create a dictionary?}
-	\note{Example 4.15 shows two different ways to create a dictionary. A dictionary can be created by including key-value pairs among braces (see line 2). In the example, there are three keys, associated with Marvel characters, and as many values, which can be thought as the characters' position in an ideal power rank. A colon separates a key and its associated value. The second way to create a dictionary is based on Python's builtin \href{https://docs.python.org/3/library/stdtypes.html#dict}{\texttt{dict}}, mapping key onto values, and \href{https://docs.python.org/3/library/functions.html#zip}{\texttt{zip}}, which iterates over two elements in parallel. Specifically, \href{https://docs.python.org/3/library/functions.html#zip}{\texttt{zip}} creates the one-to-one correspondence between keys (characters) and values (characaters' power) that is passed as the argument of \href{https://docs.python.org/3/library/stdtypes.html#dict}{\texttt{dict}}. We will analyze the topic of iterations extensively in sections \ref{sec:while_and_for_loops} and \ref{sec:iterations_and_comprhensions}.}
+	\note{Snippet 4.15 shows two different ways to create a dictionary. A dictionary can be created by including key-value pairs among braces (see line 2). In the example, there are three keys, associated with Marvel characters, and as many values, which can be thought as the characters' position in an ideal power rank. A colon separates a key and its associated value. The second way to create a dictionary is based on Python's builtin \href{https://docs.python.org/3/library/stdtypes.html#dict}{\texttt{dict}}, mapping key onto values, and \href{https://docs.python.org/3/library/functions.html#zip}{\texttt{zip}}, which iterates over two elements in parallel. Specifically, \href{https://docs.python.org/3/library/functions.html#zip}{\texttt{zip}} creates the one-to-one correspondence between keys (characters) and values (characaters' power) that is passed as the argument of \href{https://docs.python.org/3/library/stdtypes.html#dict}{\texttt{dict}}. We will analyze the topic of iterations extensively in sections \ref{sec:while_and_for_loops} and \ref{sec:iterations_and_comprhensions}.}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.15 --- initializing a new dictionary object}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.15 --- initializing a new dictionary object}
 # method 1 
 >>> D = {"Captain Marvel": 3, "Living Tribunal": 2, "One-Above-All": 1}
 
@@ -983,10 +984,10 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright Accessing a dictionary's values}
-	\note{Dictionaries' items cannot be accessed via positional offsets --- like lists. Instead, we fetch the individual items by using the dictionary keys as shown in Example 4.16 (see line 5). The reference key is passed among brackets. When the dictionary at hand contains nested dictionaries (see line 9), it is possible to concatenate multiple queries, namely, sequences of keys between brackets (see line 21).}
+	\note{Dictionaries' items cannot be accessed via positional offsets --- like lists. Instead, we fetch the individual items by using the dictionary keys as shown in Snippet 4.16 (see line 5). The reference key is passed among brackets. When the dictionary at hand contains nested dictionaries (see line 9), it is possible to concatenate multiple queries, namely, sequences of keys between brackets (see line 21).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.16 --- fetching dictionary items}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.16 --- fetching dictionary items}
 # the dictionary 
 >>> D = {"Captain Marvel": 3, "Living Tribunal": 2, "One-Above-All": 1}
 
@@ -1013,11 +1014,11 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 \question{\raggedright Are dictionaries mutable?}
-\note{Dictionsries, like lists, are mutable. Thus, we can change, expand, and shrink them in place without making new dictionaries: simply assign a value to a key to change or create an entry. The del statement works here, too; it deletes the entry associated with the key specified as an index (see Example 4.17).}
+\note{Dictionsries, like lists, are mutable. Thus, we can change, expand, and shrink them in place without making new dictionaries: simply assign a value to a key to change or create an entry. The del statement works here, too; it deletes the entry associated with the key specified as an index (see Snippet 4.17).}
 \end{paracol}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.17 --- dictionary mutability examples}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.17 --- dictionary mutability examples}
 # the dictionary 
 >>> D = {"Captain Marvel": 3, "Living Tribunal": 2, "One-Above-All": 1}
 
@@ -1066,10 +1067,10 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 \question{\raggedright How do we access the information in a dictionary?}
-\note{Example 4.18 shows how to use builtin methods to carry out three fundamental tasks: accessing dictionary keys (see line 5), values (see line 9), and items (i.e., key-value pairs, see line 13). It is worth noticing that the three methods illustrated in the example yield specific \href{https://docs.python.org/3/c-api/dict.html}{dictionary objects} such as \texttt{dict\_keys}, \texttt{dict\_values}, and \texttt{dict\_items}. Translating one of these dictionary objects into a list --- if needed --- is straightforward (see line 17).}
+\note{Snippet 4.18 shows how to use builtin methods to carry out three fundamental tasks: accessing dictionary keys (see line 5), values (see line 9), and items (i.e., key-value pairs, see line 13). It is worth noticing that the three methods illustrated in the example yield specific \href{https://docs.python.org/3/c-api/dict.html}{dictionary objects} such as \texttt{dict\_keys}, \texttt{dict\_values}, and \texttt{dict\_items}. Translating one of these dictionary objects into a list --- if needed --- is straightforward (see line 17).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.18 --- accessing the information included in a dictionary}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.18 --- accessing the information included in a dictionary}
 # the dictionary 
 >>> D = {"Captain Marvel": 3, "Living Tribunal": 2, "One-Above-All": 1}
 
@@ -1109,15 +1110,15 @@ dict_items([("Captain Marvel", 3), ("Living Tribunal", 2), ("One-Above-All", 1)]
 
 \begin{paracol}{2}
 	\question{\raggedright How do we create a tuple?}
-	\note{Python objects, separated by a comma, must be included between parentheses (see Example 4.19, line 2).}
+	\note{Python objects, separated by a comma, must be included between parentheses (see Snippet 4.19, line 2).}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright How do we access the information in a tuple?}
-	\note{By positional offsets, like lists (see Example 4.19, lines 5 and 9).}
+	\note{By positional offsets, like lists (see Snippet 4.19, lines 5 and 9).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.19 --- creating and accessing a tuple}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.19 --- creating and accessing a tuple}
 # the tuple
 >>> T = ("Captain Marvel", 3)
 
@@ -1132,10 +1133,10 @@ dict_items([("Captain Marvel", 3), ("Living Tribunal", 2), ("One-Above-All", 1)]
 
 \begin{paracol}{2}
 	\question{\raggedright Can we convert a tuple into a list?}
-	\note{Yes, we can. To do that, we pass the tuple as the argument of \texttt{list} (see Example 4.20).}
+	\note{Yes, we can. To do that, we pass the tuple as the argument of \texttt{list} (see Snippet 4.20).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.20 --- tuple conversion}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.20 --- tuple conversion}
 >>> T = ("Captain Marvel", 3)
 
 # from a tuple to a list
@@ -1155,10 +1156,10 @@ dict_items([("Captain Marvel", 3), ("Living Tribunal", 2), ("One-Above-All", 1)]
 
 \begin{paracol}{2}
 	\question{\raggedright Tuples with the \href{https://docs.python.org/3/library/collections.html}{\texttt{collections}} module}
-	\note{\href{https://docs.python.org/3/library/collections.html}{\texttt{collections}} is a module that is shipped with Python and provides data containers that are alternative to Python's general purpose built-in containers, i.e., \texttt{dict}, \texttt{list}, \texttt{set}, and \texttt{tuple}. One of these containers can be created with the function \href{https://docs.python.org/3/library/collections.html#collections.namedtuple}{\texttt{namedtuple}} (see Example 4.21), which allows annotating the tuple items with names. In line 2, we import the function \href{https://docs.python.org/3/library/collections.html#collections.namedtuple}{\texttt{namedtuple}} from the \href{https://docs.python.org/3/library/collections.html#collections}{\texttt{collections}} module. In line 5, we create an ad hoc class that best represents the structure of our sample data, concerning Marvel characters' names and the year in which they first appeared in the comic series. The first argument taken by the function is customary and regards the name of the class we are about to create. The second argument is a list with the names of the attributes included in our data structure. In line 8, we use the newly created class \texttt{Rec} to create a tuple, which is eventually printed as per line 11.}
+	\note{\href{https://docs.python.org/3/library/collections.html}{\texttt{collections}} is a module that is shipped with Python and provides data containers that are alternative to Python's general purpose built-in containers, i.e., \texttt{dict}, \texttt{list}, \texttt{set}, and \texttt{tuple}. One of these containers can be created with the function \href{https://docs.python.org/3/library/collections.html#collections.namedtuple}{\texttt{namedtuple}} (see Snippet 4.21), which allows annotating the tuple items with names. In line 2, we import the function \href{https://docs.python.org/3/library/collections.html#collections.namedtuple}{\texttt{namedtuple}} from the \href{https://docs.python.org/3/library/collections.html#collections}{\texttt{collections}} module. In line 5, we create an ad hoc class that best represents the structure of our sample data, concerning Marvel characters' names and the year in which they first appeared in the comic series. The first argument taken by the function is customary and regards the name of the class we are about to create. The second argument is a list with the names of the attributes included in our data structure. In line 8, we use the newly created class \texttt{Rec} to create a tuple, which is eventually printed as per line 11.}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.21 --- creating an annotated tuple with the collection module}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.21 --- creating an annotated tuple with the collection module}
 # import the namedtuple function from the module collection
 >>> from collections import namedtuple
 
@@ -1182,17 +1183,17 @@ Rec(character="Iron Man", first_appearance=1963)
 
 \begin{paracol}{2}
 	\question{\raggedright What does it mean that sets are unordered collections?}
-	\note{By design, \href{https://docs.python.org/3/tutorial/datastructures.html#sets}{\texttt{set}} is a data structure with \emph{undefined element ordering} (see Example 4.22 --- the outcome included in line 6 does not follow any particular order).}
+	\note{By design, \href{https://docs.python.org/3/tutorial/datastructures.html#sets}{\texttt{set}} is a data structure with \emph{undefined element ordering} (see Snippet 4.22 --- the outcome included in line 6 does not follow any particular order).}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright What does it mean that sets have unique items?}
-	\note{By definition, an item appears only once in a set, no matter how many times it is added (see Example 4.22, line 2 Vs. line 7).}
+	\note{By definition, an item appears only once in a set, no matter how many times it is added (see Snippet 4.22, line 2 Vs. line 7).}
 \end{paracol}
 
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.22 --- creating a set}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.22 --- creating a set}
 # create a list
 >>> L = ["a", "a", "b", "c", "c"]
 
@@ -1204,10 +1205,10 @@ Rec(character="Iron Man", first_appearance=1963)
 
 \begin{paracol}{2}
 	\question{\raggedright Why do we use sets?}
-	\note{Sets made this way support common mathematical set operations (see Example 4.23). Hence, they have a variety of applications, especially in numeric and database-focused work. }
+	\note{Sets made this way support common mathematical set operations (see Snippet 4.23). Hence, they have a variety of applications, especially in numeric and database-focused work. }
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.23 --- set operations}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.23 --- set operations}
 # create two sets 
 >>> X = set(["a", "b", "c"])
 >>> Y = set(["c", "d", "e"])
@@ -1255,10 +1256,10 @@ False
 
 \begin{paracol}{2}
 \question{\raggedright How do we source the data stored in a file?}
-\note{We open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}. The output of the function is a \texttt{file} object. Example 4.24 illustrates how to use \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}} for data sourcing. In the first part of the snippet, we create a \texttt{file} object to read the data included in the existing file \texttt{my\_file.txt}.\footnote{For the sake of simplicity, we assume the target file is located in the same directory as the Python script.} At least, we have to pass one argument to \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}: the path pointing to the file. A second optional argument is \texttt{mode}, which specifies the mode in which the file is opened to source. It defaults to \texttt{r}, which means open for reading in text mode. Other common values are \texttt{w} for writing,\footnote{By deafult, \texttt{w} truncates the file if it already exists} \texttt{x} for exclusive creation, and \texttt{a} for appending. \footnote{If encoding is not specified the encoding used is platform-dependent. Specifically, \texttt{locale.getpreferredencoding(False)} is called to get the current locale encoding. Character encoding is the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.} To read a file's contents, we use the \href{https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects}{\texttt{.read()}} method (see line 9), returning a string object (see line 10). }
+\note{We open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}. The output of the function is a \texttt{file} object. Snippet 4.24 illustrates how to use \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}} for data sourcing. In the first part of the snippet, we create a \texttt{file} object to read the data included in the existing file \texttt{my\_file.txt}.\footnote{For the sake of simplicity, we assume the target file is located in the same directory as the Python script.} At least, we have to pass one argument to \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}: the path pointing to the file. A second optional argument is \texttt{mode}, which specifies the mode in which the file is opened to source. It defaults to \texttt{r}, which means open for reading in text mode. Other common values are \texttt{w} for writing,\footnote{By deafult, \texttt{w} truncates the file if it already exists} \texttt{x} for exclusive creation, and \texttt{a} for appending. \footnote{If encoding is not specified the encoding used is platform-dependent. Specifically, \texttt{locale.getpreferredencoding(False)} is called to get the current locale encoding. Character encoding is the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.} To read a file's contents, we use the \href{https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects}{\texttt{.read()}} method (see line 9), returning a string object (see line 10). }
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.24 --- data input with \texttt{open}}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.24 --- data input with \texttt{open}}
 # create a pipe to a file
 >>> file = open(file="my_file.txt", mode="r")
 
@@ -1278,10 +1279,10 @@ Hi there
 
 \begin{paracol}{2}
 \question{\raggedright How do we write the data in the current Python session to a file?}
-\note{Example 4.25 illustrates how to use \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}} for data writing. In the first part of the snippet, we create three strings --- i.e., the information we are manipulating in the active Python session (see lines 2, 4, and 6). Then, we create a file object in `writing' mode (see the value passed to \texttt{mode}, line 9). Finally, we manipulate the three strings (as a sample task, in line 12, we concatenate \texttt{FIRSTLAW}, \texttt{SECONDLAW}, \texttt{THIRDLAW}) and write the result to a file (line 16).}
+\note{Snippet 4.25 illustrates how to use \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}} for data writing. In the first part of the snippet, we create three strings --- i.e., the information we are manipulating in the active Python session (see lines 2, 4, and 6). Then, we create a file object in `writing' mode (see the value passed to \texttt{mode}, line 9). Finally, we manipulate the three strings (as a sample task, in line 12, we concatenate \texttt{FIRSTLAW}, \texttt{SECONDLAW}, \texttt{THIRDLAW}) and write the result to a file (line 16).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.25 --- data output with \texttt{open}}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.25 --- data output with \texttt{open}}
 # the strings (data) to save permanently to a file
 >>> FIRSTLAW = "A robot may not injure a human being or, through inaction, "\
 	       "allow a human being to come to harm."
@@ -1305,11 +1306,11 @@ Hi there
 	
 \begin{paracol}{2}
 	\question{\raggedright How about reading a single line from a file?}
-	\note{Hold on: what is a line? A string whose last character is \texttt{$\backslash$n}. We can read a single line from a file using the \href{https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects}{\texttt{.readline()}} method (see Example 4.26). Such a method starts by reading the first line included in the file (see line 11); then, it reads any subsequent lines included in the file (see line 15); when it reaches the end of the file (EOF), it returns the empty string \texttt{""} (see line 19).}
+	\note{Hold on: what is a line? A string whose last character is \texttt{$\backslash$n}. We can read a single line from a file using the \href{https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects}{\texttt{.readline()}} method (see Snippet 4.26). Such a method starts by reading the first line included in the file (see line 11); then, it reads any subsequent lines included in the file (see line 15); when it reaches the end of the file (EOF), it returns the empty string \texttt{""} (see line 19).}
 \end{paracol}
 \clearpage 
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.26 --- reading one line at a time with \texttt{.readline()}}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.26 --- reading one line at a time with \texttt{.readline()}}
 # the strings (data) to save permanently to a file
 >>> DATA = "The first line\nThe second line" 
 
@@ -1334,10 +1335,10 @@ Hi there
 
 \begin{paracol}{2}
 	\question{\raggedright How about reading multiple lines at a time?}
-	\note{The \texttt{.readlines()} method reads the lines from a file and returns them as a list (see Example 4.27).}
+	\note{The \texttt{.readlines()} method reads the lines from a file and returns them as a list (see Snippet 4.27).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.27 --- reading multiple lines at a time with \texttt{.readlines())}}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.27 --- reading multiple lines at a time with \texttt{.readlines())}}
 # the strings (data) to save permanently to a file
 >>> DATA = "A\nB\nC\nD" 
 
@@ -1439,10 +1440,10 @@ Hi there
 
 \begin{paracol}{2}
 \question{\raggedright What is control flow in Python?}
-\note{Many Python statements we write are compound statements: there is one statement nested inside another. The outer statement is called the `if' statement and the inner statement is called the `then' statement. The `if' statement is used to determine whether to execute the `then' statement. Specifically, the `then' statement is executed insofar as the `if' statement evaluates to `True.' Example 4.28 illustrates a control flow case, a simple rule-based product recommender that suggests products based on users' purchasing patterns. If product \texttt{x} belongs to a user's set of past purchases, then a certain item is recommended; otherwise, no recommendation is offered (see lines 7 and 8, containing the \texttt{else} statement).} }
+\note{Many Python statements we write are compound statements: there is one statement nested inside another. The outer statement is called the `if' statement and the inner statement is called the `then' statement. The `if' statement is used to determine whether to execute the `then' statement. Specifically, the `then' statement is executed insofar as the `if' statement evaluates to `True.' Snippet 4.28 illustrates a control flow case, a simple rule-based product recommender that suggests products based on users' purchasing patterns. If product \texttt{x} belongs to a user's set of past purchases, then a certain item is recommended; otherwise, no recommendation is offered (see lines 7 and 8, containing the \texttt{else} statement).} }
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.28 --- an example of control flow in Python}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.28 --- an example of control flow in Python}
 # a set with a customer's past purchases
 >>> S = set(["a", "x", "u"])
 
@@ -1456,30 +1457,30 @@ Customers who bought x also bought Air Jordan 7 Retro Miro
 
 \begin{paracol}{2}
 	\question{\raggedright End of line $\rightarrow$ end of the statement}
-	\note{Any Python statements are contained in the same line --- the end of the line equates to the statement end. In the interest of redundancy, Python statements do not traverse multiple lines. In Example 4.28, the if statement is in line 5; the then statement is in line 6.} 
+	\note{Any Python statements are contained in the same line --- the end of the line equates to the statement end. In the interest of redundancy, Python statements do not traverse multiple lines. In Snippet 4.28, the if statement is in line 5; the then statement is in line 6.} 
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright The `:' character is required for nested statements!}
-	\note{The colon character is required to separate the if statement from the `then' statement (see Example 4.28 line 5).}
+	\note{The colon character is required to separate the if statement from the `then' statement (see Snippet 4.28 line 5).}
 \end{paracol}	
 
 \begin{paracol}{2}
 	\question{\raggedright Indentation has substantive meaning in Python!}
-	\note{`Then' statements are indented (with a tab or four consecutive spaces). Do not creatively use indents to embellish your code --- that is not consistent with Python's rules and design principles (see Example 4.28 line 6).}
+	\note{`Then' statements are indented (with a tab or four consecutive spaces). Do not creatively use indents to embellish your code --- that is not consistent with Python's rules and design principles (see Snippet 4.28 line 6).}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright End of indentation $\rightarrow$ end of nested statements}
-	\note{`Then' statements are indented (with a tab or four consecutive spaces). In Example 4.28, the indentation in line 6 makes lines 5 and 6 to be evaluated together.}
+	\note{`Then' statements are indented (with a tab or four consecutive spaces). In Snippet 4.28, the indentation in line 6 makes lines 5 and 6 to be evaluated together.}
 \end{paracol}
 
 \begin{paracol}{2}
 \question{\raggedright Multiple `then' statements}
-\note{Exmple 4.29 shows how to use \texttt{elif} to concatenate multiple `if-then' statements in the same control flow. Like in Example 4.28, the `else' statement defines the residual behavior of the control flow; that is, what Python does when both the `if' and `elif' statements evaluate to `False.'}
+\note{Exmple 4.29 shows how to use \texttt{elif} to concatenate multiple `if-then' statements in the same control flow. Like in Snippet 4.28, the `else' statement defines the residual behavior of the control flow; that is, what Python does when both the `if' and `elif' statements evaluate to `False.'}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.29 --- an example of control flow with multiple `if-then' statements in Python}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.29 --- an example of control flow with multiple `if-then' statements in Python}
 # a list with a customer's past purchases
 >>> S = set(["a", "w", "u"])
 
@@ -1495,10 +1496,10 @@ How about Converse Chuck Taylor All Star?
 
 \begin{paracol}{2}
 \question{\raggedright Nested if-then statements}
-\note{In Python, it is possible to nest an if-then statement into another. In Example 4.30, the `if' statements in lines 6 and 8 are nested inside the `if' statement in line 5. It is worth noticing that lines 7 and 9 --- regarding `then' statements --- are indented twice because they terminate distinct if-then statements nested in the broader if-then statement commencing on line 5.}
+\note{In Python, it is possible to nest an if-then statement into another. In Snippet 4.30, the `if' statements in lines 6 and 8 are nested inside the `if' statement in line 5. It is worth noticing that lines 7 and 9 --- regarding `then' statements --- are indented twice because they terminate distinct if-then statements nested in the broader if-then statement commencing on line 5.}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.30 --- an example of nested control flow in Python}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.30 --- an example of nested control flow in Python}
 # a list with a customer's past purchases
 >>> S = set(["a", "x", "b"])
 
@@ -1531,8 +1532,8 @@ Customers who bought x & a also bought Air Force
 	\note{The \href{https://docs.python.org/3/reference/compound_stmts.html#while}{\texttt{while}} statement provides a way to code general loops. The \href{https://docs.python.org/3/reference/compound_stmts.html#for}{\texttt{for}} statement is designed for stepping through the items in a sequence or other iterable object and running a block of code for each.}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.31 --- \texttt{while} loop examples}
-# loop until a numeri threshold
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.31 --- \texttt{while} loop examples}
+# loop until reaching a numeric threshold
 >>> i = 0
 >>> while i <= 3:
 ...     print(i)
@@ -1566,19 +1567,21 @@ s
 
 \begin{paracol}{2}
 	\question{\raggedright \texttt{while} loops in action}
-	\note{\href{https://docs.python.org/3/reference/compound_stmts.html#while}{\texttt{while}} statements run a code block insforar as a test evaluates to True. In the upper section of Exmple 4.31, we assing a \texttt{i} to a number. Then we create a for loop with the following elements: the first one is a statementing testing wether \texttt{i} is smaller or equal 3 (see line 3); the second element is the loop body (indented), which is repeated as long as the test evaluates to \texttt{True}. It is worth noticing that every iteration of the loop body produces a unitary increase in \texttt{i} --- therefore, the program leaves the loop after four iterations. In the lower section of Example 4.31, we assigng the variable \texttt{x} to a string (line 13), which we eventually print (line 14) and  slice (line 15) until we get an empty string (line 13x).}
+	\note{\href{https://docs.python.org/3/reference/compound_stmts.html#while}{\texttt{while}} statements run a code block insforar as a test evaluates to True. In the upper section of Exmple 4.31, we assing a \texttt{i} to a number. Then we create a for loop with the following elements: the first one is a statementing testing wether \texttt{i} is smaller or equal 3 (see line 3); the second element is the loop body (indented), which is repeated as long as the test evaluates to \texttt{True}. It is worth noticing that every iteration of the loop body produces a unitary increase in \texttt{i} --- therefore, the program leaves the loop after four iterations. In the lower section of Snippet 4.31, we assigng the variable \texttt{x} to a string (line 13), which we eventually print (line 14) and  slice (line 15) until we get an empty string (line 13x).}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright \texttt{for} loops in action}
-	\note{\href{https://docs.python.org/3/reference/compound_stmts.html#for}{\texttt{for}} steps through a sequence of items and carries out a task. In the upper section of Example 4.32, we print the result of a mathematical operation that is deployed over the items of a \texttt{list} (an example of Python iterable object). The code included in line 2 assigngs temporarily the variable \texttt{item} to an element of iterable. Then, the code block (indented) is executed over the temporary object. In the lower section of Example 4.32, the execution of the loop operates a mathematical expression over the items of a first list and appends the outcome to a second list (line 8).}
+	\note{\href{https://docs.python.org/3/reference/compound_stmts.html#for}{\texttt{for}} steps through a sequence of items and carries out a task. In the upper section of Snippet 4.32, we print the result of a mathematical operation that is deployed over the items of a \texttt{list} (an example of Python iterable object). The code included in line 2 assigngs temporarily the variable \texttt{item} to an element of iterable. Then, the code block (indented) is executed over the temporary object. In the lower section of Snippet 4.32, the execution of the loop operates a mathematical expression over the items of a first list and appends the outcome to a second list (line 10).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.32 --- a \texttt{for} loop example}
-# prin the result of square root for a list of items
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.32 --- a \texttt{for} loop example}
+# print the result of a mathematical operation carried out over a list of items
 >>> for item in [0, -99, 13, 6.54]:
 ...     print(item ** 0.5)  
 
+# run a mathematical operation on a list of items and append the outcome 
+# to a second list 
 >>> input = [2, 8, 1]
 >>> output = []
 >>> for item in input:
@@ -1586,15 +1589,44 @@ s
 >>> print(output)
 [3, 9, 2]
 \end{pythoncode}
+\clearpage
 	
 \begin{paracol}{2}
 	\question{\raggedright \texttt{for} loops with dictionaries}
-	\note{}
+	\note{Like lists, dictionaries are iterable objects. In the upper section of Snippet 4.33, we create a dictionary and iterate over its items printing a simple predicate. As we know from section \ref{sec:dictionaries}, we access a dictionary's values by keys. Hence, in line 5, we retrieve the keys of \texttt{D}. Then, in line 12, we fetch the value of the temporary object \texttt{k}, namely, \texttt{D[k]}. Particularly, we print the temporary object \texttt{k}, the string object \texttt{IS}, and the value associated with \texttt{k}; that is, \texttt{D[k]}. In Snippet 34, we accomplish the same task of Snippet 33. However, the loop regards a dictionary's items --- i.e., key-value pairs --- instead of keys (that is self-evident from the comparison of Snippet 33's line 55 and Snippet 34's line 5). }
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.33 --- a \texttt{for} loop example}
-# 
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.33 --- looping on dictionary keys}
+# the dictionary
+>>> D = {"Thor": "Asgardian", "Vision": "android", "Wanda Maximoff": "human"}
 
+# get the keys of D
+>>> keys = D.keys()
+>>> print(keys)
+dict_keys(['Thor', 'Vision', 'Wanda Maximoff'])
+
+# iterate over the keys to fetch the dictionary values and do something 
+# with them
+>>> for k in keys:
+...     print(k + " IS " + D[k])
+Thor IS Asgardian
+Vision IS android
+Wanda Maximoff IS human
+\end{pythoncode}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.34 --- looping on dictionary items}
+# the dictionary
+>>> D = {"Thor": "Asgardian", "Vision": "android", "Wanda Maximoff": "human"}
+
+# get the items of D
+>>> items = D.items()
+
+# iterate over key-value pairs and do something with them
+>>> for k, v in items:
+...    print(k + " IS " + v)
+Thor IS Asgardian
+Vision IS android
+Wanda Maximoff IS human
 \end{pythoncode}
 
 \begin{paracol}{2}
@@ -1602,10 +1634,12 @@ s
 	\note{}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Example 4.34 --- a \texttt{for} loop example}
-# 
+\begin{paracol}{2}
+	\question{\raggedright Counter \texttt{for} loops}
+	\note{}
+\end{paracol}
 
-\end{pythoncode}
+
 
 \section{Iterations and Comprehensions}
 \label{sec:iterations_and_comprhensions}
