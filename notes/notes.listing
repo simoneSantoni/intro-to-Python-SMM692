@@ -1,12 +1,10 @@
-# the dictionary
->>> D = {"Thor": "Asgardian", "Vision": "android", "Wanda Maximoff": "human"}
+# show the functioning of range
+>>> list(range(3))
+[0, 1, 2]
 
-# get the items of D
->>> items = D.items()
-
-# iterate over key-value pairs and do something with them
->>> for k, v in items:
-...    print(k + " IS " + v)
-Thor IS Asgardian
-Vision IS android
-Wanda Maximoff IS human
+# use range in a for loop
+>>> for i in range(3):
+...     print(i, ":-)")
+0 :-)
+1 :-)
+2 :-)

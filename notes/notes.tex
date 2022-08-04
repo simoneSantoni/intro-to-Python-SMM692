@@ -1628,12 +1628,26 @@ Thor IS Asgardian
 Vision IS android
 Wanda Maximoff IS human
 \end{pythoncode}
+\clearpage
 
 \begin{paracol}{2}
 	\question{\raggedright Counter \texttt{for} loops}
-	\note{The built-in class \href{https://docs.python.org/3/library/functions.html#func-range}{\texttt{range}} provides an immutable sequence that is particularly helpful for loops that repeat an action a certain number of times. Snippet 35 shows an example of a for loop with https://docs.python.org/3/library/functions.html#func-range}
+	\note{The built-in class \href{https://docs.python.org/3/library/functions.html#func-range}{\texttt{range}} provides an immutable sequence that is particularly helpful for loops that repeat an action a certain number of times. Snippet 35 shows an example of a for loop with \href{https://docs.python.org/3/library/functions.html#func-range}{\texttt{range}}.}
 \end{paracol}
 
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.35 --- a counter loop example}
+# show the outcome of range
+>>> list(range(3))
+[0, 1, 2]
+
+# use range in a for loop
+>>> for i in range(3):
+...     print(i, ":-)")
+0 :-)
+1 :-)
+2 :-)
+\end{pythoncode}
+\
 \begin{paracol}{2}
 	\question{\raggedright Counter \texttt{for} loops}
 	\note{}

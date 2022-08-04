@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  4 AUG 2022 21:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  4 AUG 2022 23:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2579,20 +2579,81 @@ D4.pygtex)
 
 
 (./_minted-notes/872ADDC5215F6893FBD1B486E3A513CC764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex)
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [53
+D4.pygtex) [53
 
 ]
-(./notes.ent
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1635 ...tions.html#func-range}{\texttt{range}}.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1635 ...tions.html#func-range}{\texttt{range}}.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1635 ...tions.html#func-range}{\texttt{range}}.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1635 ...tions.html#func-range}{\texttt{range}}.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1635 ...tions.html#func-range}{\texttt{range}}.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   f
+l.1635 ...tions.html#func-range}{\texttt{range}}.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+\openout4 = `notes.listing'.
+
+runsystem(pygmentize -l python -f latex -P commandprefix=PYG -F tokenmerge -P t
+excomments=True -o _minted-notes/BFB093DACCDAE8A832248B72F586B614764ACE08D8ACD0
+933C5BDFEBD4BB53D4.pygtex notes.listing)...executed.
+
+
+(./_minted-notes/BFB093DACCDAE8A832248B72F586B614764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex) (./notes.ent
 Overfull \hbox (15.67305pt too wide) in paragraph at lines 117--167
 [][]\OT1/cmr/m/n/9 If en-cod-ing is not spec-i-fied the en-cod-ing used is plat
 form-dependent. Specif-i-cally, \OT1/cmtt/m/n/9 locale.getpreferredencoding(Fal
 se)
  []
 
-) [54]
+) [54
+
+]
 Chapter 5.
 [55
 
@@ -2610,15 +2671,15 @@ Chapter 7.
 ] [61] [62]
 Appendix A.
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
-693.
+714.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1693.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 1714.
 
 
-Overfull \hbox (11.11417pt too wide) in paragraph at lines 1690--1737
+Overfull \hbox (11.11417pt too wide) in paragraph at lines 1711--1758
  [][] 
  []
 
@@ -2633,14 +2694,17 @@ Appendix B.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `notes.out' has not changed.
 (rerunfilecheck)             Checksum: 5B2BA1BFE441EE3060165275C4CA6733;1791.
  ) 
 Here is how much of TeX's memory you used:
- 29973 strings out of 479304
- 629735 string characters out of 5869778
+ 29980 strings out of 479304
+ 630175 string characters out of 5869778
  1152119 words of memory out of 5000000
- 46369 multiletter control sequences out of 15000+600000
+ 46373 multiletter control sequences out of 15000+600000
  416586 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,11n,117p,2384b,1069s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2663,10 +2727,10 @@ t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts
 /public/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmtt9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on notes.pdf (67 pages, 385055 bytes).
+Output written on notes.pdf (67 pages, 386568 bytes).
 PDF statistics:
- 670 PDF objects out of 1000 (max. 8388607)
- 574 compressed objects within 6 object streams
+ 672 PDF objects out of 1000 (max. 8388607)
+ 576 compressed objects within 6 object streams
  114 named destinations out of 1000 (max. 500000)
  237 words of extra memory for PDF output out of 10000 (max. 10000000)
 
