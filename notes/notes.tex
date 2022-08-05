@@ -1505,7 +1505,7 @@ How about Converse Chuck Taylor All Star?
 >>> if "x" in S:
 ...     if "a" in S:
 ...         print("Customers who bought x & a also bought Air Force")
-...     elif "u" in S::
+...     elif "u" in S:
 ...         print("Customers who bought x & u also bought Air Max 95")
 ... else:
 ...    print("Falling short of suggestions --- I'm a dull recommender!") 
@@ -1661,15 +1661,15 @@ Wanda Maximoff IS human
 >>> for i in LETTERS:
 ...     for j in COLORS:
 ...         print(i, " - ", j)
-x  -  blue
-x  -  green
-x  -  red
-y  -  blue
-y  -  green
-y  -  red
-z  -  blue
-z  -  green
-z  -  red
+x  <->  blue
+x  <->  green
+x  <->  red
+y  <->  blue
+y  <->  green
+y  <->  red
+z  <->  blue
+z  <->  green
+z  <->  red
 \end{pythoncode}
 \clearpage
 
@@ -1678,31 +1678,256 @@ z  -  red
 	\note{Contrarily to the nested \texttt{for} loops, which considers all permutations containing multiple iterables' items, the built-in \href{https://docs.python.org/3/library/functions.html#zip}{zip} steps through several iterables \emph{in parallel}, producing tuples with an item from each one. As shown in Snippet 4.37, there is neither an inner nor an outer for loop in this case --- instead, there is a single loop considering two temporary objects, \texttt{i} and \texttt{j}, that occupy the same position in the offset of the iterables at hand (see line 6; the first item from the first iterable goes with the first item from the second iterable, the second item from the first iterable goes with the second item from the second iterable, and so on and so forth).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.37 --- looping over two iterables in parallel with \textt{zip}.}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.37 --- looping over two iterables in parallel with \texttt{zip} }
 # the lists
 >>> LETTERS = ["x", "y", "z"]
 >>> COLORS = ["blue", "green", "red"]
 
 # create one-to-one matches of items and do something with them
 >>> for i, j in zip(LETTERS, COLORS):
-...     print(i, " - ", j)
-x  -  blue
-y  -  green
-z  -  red
+...     print(i, " <-> ", j)
+x  <->  blue
+y  <->  green
+z  <->  red
 \end{pythoncode}
-\clearpage
-
-
 
 \section{Iterations and Comprehensions}
 \label{sec:iterations_and_comprhensions}
-}
+
+\begin{paracol}{2}
+	\question{\raggedright Over and beyond \texttt{while} and \texttt{for} loops}
+	\note{As we know from the previous section, \texttt{while} and \texttt{for} loops can handle most repetitive tasks programs need to perform. However, Python provides further tools to make loops \emph{easier to write/read} and \emph{more efficient}. One of the most prominent tools is \href{https://docs.python.org/3/tutorial/datastructures.html}{\texttt{list comprehension}}.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Why do we use \texttt{list comprehensions?}}
+	\note{To create a list containing the outcome of an action repeated over an iterable's items (see Snippet 4.38, line 14).}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do we create \texttt{list comprehensions}?}
+	\note{We include a Python statement containing a \texttt{for} clause among brackets (see Snippet 4.38, line 12).}
+\end{paracol}
+\clearpage
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.38 --- \texttt{for} loop Vs. \textt{list comprehension}}
+# the for loop way
+# --+ create an empty list
+L = []
+# --+ create a for loop appending the square of some items
+>>> for i in range(3):
+...    L.append(i ** 2)
+# --+ print the list
+>>> print(L)
+[0, 1, 4]
+
+# the list comprehension way
+>>> L = [i ** 2 for i in range(3)]
+>>> print(L)
+[0, 1, 4]
+
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright How do we implement a nested \texttt{for} loop in list comprehensions?}
+	\note{As Snippet 4.39 shows, a nested for loop becomes a one-liner in a list comprehension. The first \texttt{for} clause in line 7 would correspond to the outer \texttt{for} loop reported in Snippet 4.36, whereas the second \texttt{for} clause in line 7 would correspond to the inner \texttt{for} loop reported in Snippet 4.36.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.39 --- nested for loop with list comprehensions}
+# the lists 
+>>> LETTERS = ["x", "y", "z"]
+>>> COLORS = ["blue", "green", "red"]
+
+# implementing a nested for loop with a list comprehension
+>>> LETTER2COLOR = ["{} <-> {}".format(i, j) for i in LETTERS for j in COLORS]
+['x <-> blue',
+ 'x <-> green',
+ 'x <-> red',
+ 'y <-> blue',
+ 'y <-> green',
+ 'y <-> red',
+ 'z <-> blue',
+ 'z <-> green',
+ 'z <-> red']
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright Can we use the \texttt{zip} generator within a list comprehension?}
+	\note{Yes, we can. To do that, the \texttt{for} clause must consider two iterables at once (see Snippet 4.40, line 6).}
+\end{paracol}
+\clearpage
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.40 ---  looping over two iterables in parallel with \texttt{zip} and list comprehension}
+# the lists 
+>>> LETTERS = ["x", "y", "z"]
+>>> COLORS = ["blue", "green", "red"]
+
+# implementing a nested for loop with a list comprehension
+>>> LETTER2COLOR = ["{} <-> {}".format(i, j) for i, j in zip(LETTERS, COLORS)]
+['1 <-> blue', '2 <-> green', '3 <-> red']
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright Can we use embed control flow in a list comprehension?}
+	\note{Yes, we can. To do that, the \texttt{for} clause must be preceded by an \texttt{if} statement and, at least, an \texttt{else} statement (see for example Snippet 4.40's line 22). }
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.41 --- control flow in list comprehensions}
+# import the function log from math 
+from math import log
+
+# the object to manipulate
+>>> L1 = [0, 1, 2]
+
+# the for loop way
+# --+ the empty list 
+L2 = []
+# --+ the for loop appending the log of some items
+>>> for i in L1:
+...     if i > 0:
+...         L2.append(log(i))
+...     else:
+...         L2.append(log(i + 0.001))
+# --+ print the list
+>>> print(L2)
+[-6.907755278982137, 0.0, 0.6931471805599453]
+
+# the list comprehension way
+# --+ the list comprehension is a one-liner!
+>>> L2 = [log(i) if i > 0 else log(i + 0.001) for i in L1]
+# --+ print the list
+>>> print(L2)
+[-6.907755278982137, 0.0, 0.6931471805599453]
+\end{pythoncode}
 
 \theendnotes
 
 \chapter{Technical and Scientific Computation with NumPy and SciPy}
 
-\ldots
+\hline
+
+\vspace{1em}
+
+Learning goals:
+
+\begin{itemize}
+	\item 
+	\item 
+\end{itemize}
+
+\hline
+
+\vspace{1em}
+
+\section{Installing NumPy and SciPy}
+
+\begin{paracol}{2}
+	\question{\raggedright Do NumPy and SciPy come with the official Python installation file?}
+	\note{No, they do not. You need to install them separately using the package manager \texttt{pip}.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright I am an Anaconda user: do I need to install NumPy and SciPy separately?}
+	\note{No, you do not. NumPy and SciPy are included in `base', the default environment of Anaconda. However, if you create a new environment, you need to install NumPy and SciPy --- as well as all the other modules you need --- with the package manager \texttt{conda}.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do I install NumPy and SciPy?}
+	\note{The easiest way is using the command line. Anaconda users run \texttt{\$ conda install numpy scipy}, whereas Python official release users run \texttt{\$ pip install numpy scipy}. Having said that, Anaconda users can also install the modules they need from within Anaconda-Navigator.}
+\end{paracol}
+
+\section{NumPy \texttt{ndarray}}
+
+\begin{paracol}{2}
+	\question{\raggedright What is a NumPy \texttt{ndarray}?}
+	\note{Put simply, an \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarray}} is a data container, like dictionaries and lists.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Can \texttt{ndarrays} contain objects of different type?}
+	\note{No, they cannot. An \texttt{ndarray} must contain homogenous items; that is, items of the same type.}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do we create an \texttt{ndarray}?}
+	\note{As shown in Snippet 5.1, we pass an object to \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array}{\texttt{numpy.array}}. If the object we pass is a scalar, a 0-dimensional array containing object is returned (line ).}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.1 --- creating an \texttt{ndarray}}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+	
+# a 0-D array
+>>> 0D = np.array(0)
+
+# a 1-D ndarray
+>>> a1D = np.array([1, 2, 3, 4])
+
+# a 2-D ndarray
+>>> a2D = np.array([[1, 2], [3, 4]])
+
+# a 3-D ndarray
+>>> a3D = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright What are the distinctive features of \texttt{ndarrays}?}
+	\note{\texttt{ndarrays} have been designed --- and tuned over time --- with flexibility and efficiency in mind. For example,\href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}} allow to carry out computations on arrays with a syntax similar to scalar values (see Snippet 5.2). At the same time, \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}} can be deployed proficiently in the context of `big data'}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do we use \texttt{ndarrays}?}
+	\note{}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright}
+	\note{}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright}
+	\note{}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright}
+	\note{}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright}
+	\note{}
+\end{paracol}
+
+\section{Univeresal Functions in NumPy}
+
+
+\section{Mathematical Methods}
+
+
+
+
+\section{Statistical Methods}
+
+
+
+\section{Linear Algebra}
+
+
+
+\section{Pseudorandom Number Generation}
+
+
+
+\section{File Input and Output with \texttt{ndarrays}}
+
+
+
+\section{}
+
+
 
 \chapter{Data Management with Pandas}
 

@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import the function log from math}
+\PYG{k+kn}{from} \PYG{n+nn}{math} \PYG{k+kn}{import} \PYG{n}{log}
+
+\PYG{c+c1}{\PYGZsh{} the object to manipulate}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L1} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} the for loop way}
+\PYG{c+c1}{\PYGZsh{} --+ the empty list}
+\PYG{n}{L2} \PYG{o}{=} \PYG{p}{[]}
+\PYG{c+c1}{\PYGZsh{} --+ the for loop appending the log of some items}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n}{L1}\PYG{p}{:}
+\PYG{o}{...}     \PYG{k}{if} \PYG{n}{i} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{:}
+\PYG{o}{...}         \PYG{n}{L2}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{log}\PYG{p}{(}\PYG{n}{i}\PYG{p}{))}
+\PYG{o}{...}     \PYG{k}{else}\PYG{p}{:}
+\PYG{o}{...}         \PYG{n}{L2}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{log}\PYG{p}{(}\PYG{n}{i} \PYG{o}{+} \PYG{l+m+mf}{0.001}\PYG{p}{))}
+\PYG{c+c1}{\PYGZsh{} --+ print the list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{L2}\PYG{p}{)}
+\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{6.907755278982137}\PYG{p}{,} \PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{l+m+mf}{0.6931471805599453}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} the list comprehension way}
+\PYG{c+c1}{\PYGZsh{} --+ the list comprehension is a one-liner!}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L2} \PYG{o}{=} \PYG{p}{[}\PYG{n}{log}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)} \PYG{k}{if} \PYG{n}{i} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0} \PYG{k}{else} \PYG{n}{log}\PYG{p}{(}\PYG{n}{i} \PYG{o}{+} \PYG{l+m+mf}{0.001}\PYG{p}{)} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n}{L1}\PYG{p}{]}
+\PYG{c+c1}{\PYGZsh{} --+ print the list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{L2}\PYG{p}{)}
+\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{6.907755278982137}\PYG{p}{,} \PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{l+m+mf}{0.6931471805599453}\PYG{p}{]}
+\end{Verbatim}

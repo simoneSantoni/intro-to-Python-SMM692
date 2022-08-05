@@ -6,7 +6,7 @@
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{if} \PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}} \PYG{o+ow}{in} \PYG{n}{S}\PYG{p}{:}
 \PYG{o}{...}     \PYG{k}{if} \PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}} \PYG{o+ow}{in} \PYG{n}{S}\PYG{p}{:}
 \PYG{o}{...}         \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Customers who bought x \PYGZam{} a also bought Air Force\PYGZdq{}}\PYG{p}{)}
-\PYG{o}{...}     \PYG{k}{elif} \PYG{l+s+s2}{\PYGZdq{}u\PYGZdq{}} \PYG{o+ow}{in} \PYG{n}{S}\PYG{p}{::}
+\PYG{o}{...}     \PYG{k}{elif} \PYG{l+s+s2}{\PYGZdq{}u\PYGZdq{}} \PYG{o+ow}{in} \PYG{n}{S}\PYG{p}{:}
 \PYG{o}{...}         \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Customers who bought x \PYGZam{} u also bought Air Max 95\PYGZdq{}}\PYG{p}{)}
 \PYG{o}{...} \PYG{k}{else}\PYG{p}{:}
 \PYG{o}{...}    \PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Falling short of suggestions \PYGZhy{}\PYGZhy{}\PYGZhy{} I\PYGZsq{}m a dull recommender!\PYGZdq{}}\PYG{p}{)}

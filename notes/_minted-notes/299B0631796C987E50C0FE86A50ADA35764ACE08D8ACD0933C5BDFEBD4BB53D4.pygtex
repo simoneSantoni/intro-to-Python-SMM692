@@ -7,13 +7,13 @@
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{n}{LETTERS}\PYG{p}{:}
 \PYG{o}{...}     \PYG{k}{for} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n}{COLORS}\PYG{p}{:}
 \PYG{o}{...}         \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{i}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{} \PYGZhy{} \PYGZdq{}}\PYG{p}{,} \PYG{n}{j}\PYG{p}{)}
-\PYG{n}{x}  \PYG{o}{\PYGZhy{}}  \PYG{n}{blue}
-\PYG{n}{x}  \PYG{o}{\PYGZhy{}}  \PYG{n}{green}
-\PYG{n}{x}  \PYG{o}{\PYGZhy{}}  \PYG{n}{red}
-\PYG{n}{y}  \PYG{o}{\PYGZhy{}}  \PYG{n}{blue}
-\PYG{n}{y}  \PYG{o}{\PYGZhy{}}  \PYG{n}{green}
-\PYG{n}{y}  \PYG{o}{\PYGZhy{}}  \PYG{n}{red}
-\PYG{n}{z}  \PYG{o}{\PYGZhy{}}  \PYG{n}{blue}
-\PYG{n}{z}  \PYG{o}{\PYGZhy{}}  \PYG{n}{green}
-\PYG{n}{z}  \PYG{o}{\PYGZhy{}}  \PYG{n}{red}
+\PYG{n}{x}  \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZgt{}}  \PYG{n}{blue}
+\PYG{n}{x}  \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZgt{}}  \PYG{n}{green}
+\PYG{n}{x}  \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZgt{}}  \PYG{n}{red}
+\PYG{n}{y}  \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZgt{}}  \PYG{n}{blue}
+\PYG{n}{y}  \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZgt{}}  \PYG{n}{green}
+\PYG{n}{y}  \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZgt{}}  \PYG{n}{red}
+\PYG{n}{z}  \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZgt{}}  \PYG{n}{blue}
+\PYG{n}{z}  \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZgt{}}  \PYG{n}{green}
+\PYG{n}{z}  \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZgt{}}  \PYG{n}{red}
 \end{Verbatim}

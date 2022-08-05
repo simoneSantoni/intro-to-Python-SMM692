@@ -1,10 +1,15 @@
-# the lists
->>> LETTERS = ["x", "y", "z"]
->>> COLORS = ["blue", "green", "red"]
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+	
+# a 0-D array
+>>> 0D = np.array(0)
 
-# create one-to-one matches of items and do something with them
->>> for i, j in zip(LETTERS, COLORS):
-...     print(i, " - ", j)
-x  -  blue
-y  -  green
-z  -  red
+# a 1-D ndarray
+>>> a1D = np.array([1, 2, 3, 4])
+
+# a 2-D ndarray
+>>> a2D = np.array([[1, 2], [3, 4]])
+
+# a 3-D ndarray
+>>> a3D = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+

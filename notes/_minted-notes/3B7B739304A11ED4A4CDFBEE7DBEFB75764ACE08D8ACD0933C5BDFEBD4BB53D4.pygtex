@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} the lists}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{LETTERS} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}y\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}z\PYGZdq{}}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{COLORS} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}red\PYGZdq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} implementing a nested for loop with a list comprehension}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{LETTER2COLOR} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s2}{ \PYGZlt{}\PYGZhy{}\PYGZgt{} }\PYG{l+s+si}{\PYGZob{}\PYGZcb{}}\PYG{l+s+s2}{\PYGZdq{}}\PYG{o}{.}\PYG{n}{format}\PYG{p}{(}\PYG{n}{i}\PYG{p}{,} \PYG{n}{j}\PYG{p}{)} \PYG{k}{for} \PYG{n}{i}\PYG{p}{,} \PYG{n}{j} \PYG{o+ow}{in} \PYG{n+nb}{zip}\PYG{p}{(}\PYG{n}{LETTERS}\PYG{p}{,} \PYG{n}{COLORS}\PYG{p}{)]}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}1 \PYGZlt{}\PYGZhy{}\PYGZgt{} blue\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}2 \PYGZlt{}\PYGZhy{}\PYGZgt{} green\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}3 \PYGZlt{}\PYGZhy{}\PYGZgt{} red\PYGZsq{}}\PYG{p}{]}
+\end{Verbatim}
