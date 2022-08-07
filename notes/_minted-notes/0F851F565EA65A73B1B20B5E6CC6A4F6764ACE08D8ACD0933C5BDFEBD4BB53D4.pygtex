@@ -1,0 +1,36 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import numpy with the socially accepted alias 'np'}
+\PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{c+c1}{\PYGZsh{} generate some random}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{DATA} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{randn}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{DATA}\PYG{p}{)}
+\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.44144029} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.44451097}  \PYG{l+m+mf}{0.31997294}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} can we multiply a list by a scalar with NumPy? Of course!}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{DATA} \PYG{o}{*} \PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.4144029} \PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4.44510974}\PYG{p}{,}  \PYG{l+m+mf}{3.19972941}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} can we sum two arrays with NumPy? Of course!}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{DATA} \PYG{o}{+} \PYG{n}{DATA}\PYG{p}{)}
+\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.88288058}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.88902195}\PYG{p}{,}  \PYG{l+m+mf}{0.63994588}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} let us try to replicate the previous tasks in pure Python?}
+\PYG{c+c1}{\PYGZsh{} --+ get the DATA as a list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{DATA} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n}{DATA}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{DATA}\PYG{p}{)}
+\PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.4414402896845323}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.4445109735283278}\PYG{p}{,} \PYG{l+m+mf}{0.31997294069261617}\PYG{p}{]}
+\PYG{c+c1}{\PYGZsh{} --+ is the NumPy syntax of line 10 still valid if we use a list? Nope}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{DATA} \PYG{o}{*} \PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{p}{[}
+\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.4414402896845323}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.4445109735283278}\PYG{p}{,} \PYG{l+m+mf}{0.31997294069261617}\PYG{p}{,}
+\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.4414402896845323}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.4445109735283278}\PYG{p}{,} \PYG{l+m+mf}{0.31997294069261617}\PYG{p}{,}
+\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.4414402896845323}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.4445109735283278}\PYG{p}{,} \PYG{l+m+mf}{0.31997294069261617}
+\PYG{p}{]}
+\PYG{c+c1}{\PYGZsh{} --+ is the NumPy syntax of line 14 still valid if we use a list? Nope}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{DATA} \PYG{o}{+} \PYG{n}{DATA}\PYG{p}{)}
+\PYG{p}{[}
+\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.4414402896845323}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.4445109735283278}\PYG{p}{,} \PYG{l+m+mf}{0.31997294069261617}\PYG{p}{,}
+\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.4414402896845323}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.4445109735283278}\PYG{p}{,} \PYG{l+m+mf}{0.31997294069261617}
+\PYG{p}{]}
+\end{Verbatim}

@@ -1,15 +1,23 @@
 # import numpy with the socially accepted alias 'np'
 >>> import numpy as np
-	
-# a 0-D array
->>> 0D = np.array(0)
 
-# a 1-D ndarray
->>> a1D = np.array([1, 2, 3, 4])
+# accept the default type
+>>> A = np.array([1, 2, 3, 4, 5])
 
-# a 2-D ndarray
->>> a2D = np.array([[1, 2], [3, 4]])
+# check the type
+>>> A.dtype
+dtype('int64')
 
-# a 3-D ndarray
->>> a3D = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+# specify the type
+>>> A = np.array([1, 2, 3, 4, 5], dtype=np.int32)
+
+# check the type
+>>> A.dtype
+type('int32')
+
+# type change
+>>> S = np.array(['1.25', '-9.6', '42'], dtype=np.string_)
+>>> S = S.astype(float)
+>>> S.dtype
+dtype('float64')
 

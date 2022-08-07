@@ -159,9 +159,25 @@ $\ldots$
 
 \chapter{Organization of the Module}
 
+\hline
+
+\vspace{1em}
+
+\hline
+
+\vspace{1em}
+
 $\ldots$
 
 \chapter{Getting Started with Python}
+
+\hline
+
+\vspace{1em}
+
+\hline
+
+\vspace{1em}
 
 \section{Installing Python}
 
@@ -181,6 +197,14 @@ $\ldots$
 
 \chapter{Python Language Fundamentals}
 
+\hline
+
+\vspace{1em}
+
+\hline
+
+\vspace{1em}
+
 \section{Variables}
 
 $\ldots$
@@ -194,6 +218,14 @@ $\ldots$
 $\ldots$
 
 \chapter{Python Objects}
+
+\hline
+
+\vspace{1em}
+
+\hline
+
+\vspace{1em}
 
 In this chapter, we pursue the following learning objectives:
 
@@ -1802,7 +1834,7 @@ L2 = []
 
 \theendnotes
 
-\chapter{Technical and Scientific Computation with NumPy and SciPy}
+\chapter{Technical \& Scientific Computation with NumPy and SciPy}
 
 \hline
 
@@ -1850,7 +1882,7 @@ Learning goals:
 
 \begin{paracol}{2}
 	\question{\raggedright How do we create an \texttt{ndarray}?}
-	\note{As shown in Snippet 5.1, we pass an object to \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array}{\texttt{numpy.array}}. If the object we pass is a scalar, a 0-dimensional array containing object is returned (line ).}
+	\note{As shown in Snippet 5.1, we pass an object to \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array}{\texttt{numpy.array}}. If the object we pass is a scalar, a 0-dimensional array containing object is returned (line 5). Passing a list to \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array}{\texttt{numpy.array}} produces a one-dimensional array (line 9); passing a list of lists produces a two-dimensional array (line 13); finally, passing a list of lists of lists produces a three-dimensional array (line 18).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.1 --- creating an \texttt{ndarray}}
@@ -1858,51 +1890,222 @@ Learning goals:
 >>> import numpy as np
 	
 # a 0-D array
->>> 0D = np.array(0)
+>>> np.array(0)
+array(0)
 
-# a 1-D ndarray
->>> a1D = np.array([1, 2, 3, 4])
+# a 1-D array
+>>> np.array([1, 2, 3, 4])
+array([1, 2, 3, 4])
 
-# a 2-D ndarray
->>> a2D = np.array([[1, 2], [3, 4]])
+# a 2-D array
+>>> np.array([[1, 2], [3, 4]])
+array([[1, 2],
+       [3, 4]])
 
-# a 3-D ndarray
->>> a3D = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+# a 3-D array
+>>> np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+array([[[1, 2],
+        [3, 4]],
+
+       [[5, 6],
+        [7, 8]]])
 
 \end{pythoncode}
 
 \begin{paracol}{2}
 	\question{\raggedright What are the distinctive features of \texttt{ndarrays}?}
-	\note{\texttt{ndarrays} have been designed --- and tuned over time --- with flexibility and efficiency in mind. For example,\href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}} allow to carry out computations on arrays with a syntax similar to scalar values (see Snippet 5.2). At the same time, \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}} can be deployed proficiently in the context of `big data'}
+	\note{\texttt{ndarrays} have been designed --- and tuned over time --- with flexibility and efficiency in mind. For example, \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}} allow to carry out computations on arrays with a syntax similar to scalar values. As shown in Snippet 5.2, we can multiply an array by a scalar (line 10) as well as add two vectors (14). That is not possible if we use pure Python code. Multiplying a list by a scalar $N$ replicates the ordered collection of items $N$ times (see line 23). Adding two lists yields concatenation (see line 30). At the same time, \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}} support the analysis of large volumes of data\footnote{The Internet has many blog posts showing the performance of NumPy in linear algebra tasks is comparable to compiled languages, such as C.}.}
+\end{paracol}
+\clearpage 
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.2 --- vector multiplication}
+# import numpy with the socially accepted alias 'np'
+import numpy as np
+
+# generate some random
+>>> DATA = np.random.randn(3)
+>>> print(DATA)
+[-0.44144029 -0.44451097  0.31997294]
+
+# can we multiply a list by a scalar with NumPy? Of course!
+>>> print(DATA * 3)
+[-4.4144029 , -4.44510974,  3.19972941]
+
+# can we sum two arrays with NumPy? Of course!
+>>> print(DATA + DATA) 
+[-0.88288058, -0.88902195,  0.63994588]
+
+# let us try to replicate the previous tasks in pure Python?
+# --+ get the DATA as a list
+>>> DATA = list(DATA)
+>>> print(DATA)
+[-0.4414402896845323, -0.4445109735283278, 0.31997294069261617]
+# --+ is the NumPy syntax of line 10 still valid if we use a list? Nope
+>>> print(DATA * 3) 
+[
+-0.4414402896845323, -0.4445109735283278, 0.31997294069261617,
+-0.4414402896845323, -0.4445109735283278, 0.31997294069261617,
+-0.4414402896845323, -0.4445109735283278, 0.31997294069261617
+]
+# --+ is the NumPy syntax of line 14 still valid if we use a list? Nope
+>>> print(DATA + DATA) 
+[
+-0.4414402896845323, -0.4445109735283278, 0.31997294069261617,
+-0.4414402896845323, -0.4445109735283278, 0.31997294069261617
+]
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright How do I check an \texttt{array}'s number of dimensions?}
+	\note{In Snippet 5.3, we saw NumPy infers an \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}}'s number of dimensions from the data. Snippet 5.3 shows how to access \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.ndim.html#numpy.ndarray.ndim}{\texttt{.ndim}}, the \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}}'s attribute concerning the number of dimensions. In the example, \texttt{DATA} has two dimensions (e.g., coordinates).}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright How do we use \texttt{ndarrays}?}
-	\note{}
+	\question{\raggedright How do I check an \texttt{array}'s shape?}
+	\note{The lower section of Snippet 5.3 shows how to access \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.shape.html#numpy.ndarray.shape}{\texttt{.shape}}, the \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}}'s attribute concerning the shape. In the example, each dimension of the \texttt{DATA} has size 2.}
+\end{paracol}
+\clearpage
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.3 --- an array's number of dimensions and shape}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+# the data
+>>> DATA = np.array([[1, 2], [3, 4]])
+>>> print(DATA)
+[[1 2]
+ [3 4]]
+
+# get the number of dimensions
+>>> DATA.ndim 
+2
+
+# get the shape
+>>> DATA.shape
+(2, 2)
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright What are the attributes of an \texttt{array}?}
+	\note{Table \ref{tab:array_attributes} illustrates the common use attributes of \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}}.}
+\end{paracol}
+
+\begin{table}[!htbp]
+	\centering
+	\caption{Common Use Attributes of NumPy \texttt{array}}
+	\label{tab:array_attributes}
+	\begin{tabular}{ll}
+		\toprule \toprule
+			Attribute} & Synopsis \\
+			\midrule 
+                        \texttt{DATA.flags} &
+                        Information about the memory layout of the array \\
+                        \texttt{DATA.shape} &
+                        Tuple of array dimensions\\
+                        \texttt{DATA.strides}&
+                        Tuple of bytes to step in each dimension when traversing an array\\
+                        \texttt{DATA.ndim}&
+                        Number of array dimensions\\
+                        \texttt{DATA.data}&
+                        Python buffer object pointing to the start of the array's data\\
+                        \texttt{DATA.size}&
+                        Number of elements in the array\\
+                        \texttt{DATA.itemsize}&
+                        Length of one array element in bytes\\
+                        \texttt{DATA.nbytes}&
+                        Total bytes consumed by the elements of the array\\
+			\texttt{DATA.dtype}&
+			Data-type of the array's elements\\
+     			\bottomrule \\[-1.8ex]
+			\multicolumn{2}{l}{Notes: \texttt{DATA} is a fictionary object used to illustrate the usage of the \texttt{array} attributes.} \\
+	\end{tabular}
+\end{table}
+\clearpage 
+
+\begin{paracol}{2}
+	\question{\raggedright I know that a NumPy array must contain homogenous data --- but which object types are allowed?}
+	\note{Table \ref{tab:array_data_types} reports the NumPy data types. Python beginners are not supposed to appreciate the distinctive attributes of each type. Instead, they may want to get a clear understanding of the high-level types, namely, floating points, complex, integer, boolean, string, or general Python objects. When it comes to working on sophisticated projects, requiring more control over the storage types, then it is highly suggested to get a thorough knowledge of the types in Table \ref{tab:array_data_types}. It is worth noticing that \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\texxttt{dtypes}} are a source of NumPy's flexibility for interacting with data coming from other systems. In most cases, they provide a mapping directly onto an underlying disk or memory representation, which makes it easy to read and write binary streams of data to disk and also to connect to code written in a low-level language like C or Fortran. The numerical \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\textttt{dtypes}} are named the same way: a type name, like \texttt{float} or \texttt{int}, followed by a number indicating the number of bits per element. A standard double-precision floating-point value takes up 8 bytes or 64 bits. Thus, this type is known in NumPy as \texttt{float64}.}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright}
-	\note{}
+	\question{\raggedright How do I specify the data type of an \texttt{array}?}
+	\note{As Snippet 5.4 shows, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\textttt{dtype}} is an optional argument of \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html}{\texttt{ndarray}}. It is also possible to change \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\textttt{dtype}} using the method \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.astype.html}{\texttt{.astype()}}.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.4 --- specifying a nd changing \texttt{dtype}}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+# accept the default type
+>>> A = np.array([1, 2, 3, 4, 5])
+
+# check the type
+>>> A.dtype
+dtype('int64')
+
+# specify the type
+>>> A = np.array([1, 2, 3, 4, 5], dtype=np.int32)
+
+# check the type
+>>> A.dtype
+type('int32')
+
+# type change 
+>>> S = np.array(['1.25', '-9.6', '42'], dtype=np.string_)
+>>> S = S.astype(float)
+>>> S.dtype
+dtype('float64')
+
+\end{pythoncode}
+
+\clearpage
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{NumPy Data Types}
+	\label{tab:array_data_types}
+	\begin{tabular}{p{7cm}p{4cm}p{10cm}}
+		\toprule \toprule
+			Type & Type Code & Synopsis \\
+			\midrule 
+			int8, uint8\dotfill & i1, u1 & Signed and unsigned 8-bit (1 byte) integer types \\ 
+			int16, uint16\dotfill & i2, u2 & Signed and unsigned 16-bit integer types \\
+			int32, uint32\dotfill & i4, u4 & Signed and unsigned 32-bit integer types \\ 
+			int64, uint64\dotfill & i8, u8 & Signed and unsigned 64-bit integer types \\
+			float16\dotfill & f2 & Half-precision floating point float32 f4 or f Standard single-precision floating point; compatible with C float\\ 
+			float64\dotfill & f8 or d & Standard double-precision floating point; compatible with C double and Python\\ 
+			float object\dotfill & float128 f16 or g & Extended-precision floating point \\  
+			complex64, complex128, complex256\dotfill & c8, c16, c32 & Complex numbers represented by two 32, 64, or 128 floats, respectively  \\ 
+			bool\dotfill & ? & Boolean type storing True and False values \\ 
+			object\dotfill & O & Python object type; a value can be any Python object \\ 
+			string\_\dotfill & S & Fixed-length ASCII string type (1 byte per character); for example, to create a string dtype with length 10, use 'S10' \\ 
+			unicode\_\dotfill & U & Fixed-length Unicode type (number of bytes platform specific); same specification semantics as string\_ (e.g., 'U10')	\\
+     			\bottomrule \\
+	\end{tabular}
+\end{sidewaystable}
+\clearpage
+
+
+\section{Array Creation and Manipulation Methods}
+
+...
+
+\section{Universal Functions in NumPy}
+
+\begin{paracol}{2}
+	\question{\rggedright What is a universal function?}
+	\note{A universal function, or \href{https://numpy.org/doc/stable/reference/ufuncs.html}{\texttt{ufunc}}, is a function that performs element-wise operations on data in \texttt{ndarrays}. You can think of them as fast vectorized wrappers for simple functions that take one or more scalar values and produce one or more scalar results\footnote{Here is an interesting passage from the official \href{https://numpy.org/doc/stable/glossary.html#term-vectorization}{NumPy} documentation: \textit{NumPy hands off array processing to C, where looping and computation are much faster than in Python. To exploit this, programmers using NumPy eliminate Python loops in favor of array-to-array operations. vectorization can refer both to the C offloading and to structuring NumPy code to leverage it.}}.}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright}
-	\note{}
+	\question{\raggedright What is the rationale for using \texttt{ufuncts}?}
+	\note{Per the previous point, \texttt{ufuncts} offer substantial performance advantages \textit{vis a' vis} non-vectorized code --- i.e., code using built-in Python iterators.}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright}
-	\note{}
+	\question{\raggedright What are the \texttt{unfuncts} available in NumPy?}
+	\note{There are circa sixty \texttt{ufuncts} implemented in NUmPy. For the sake of convenience, the full list of \texttt{ufuncts} is reported in Tables \ref{tab:numpy_math_ufuncs} - \ref{tab:numpy_comparison_ufuncs}. The following sections of the current chapter will illustrate how to use some of the most centrale \texttt{ufuncts} in NumPy.}
 \end{paracol}
-
-\begin{paracol}{2}
-	\question{\raggedright}
-	\note{}
-\end{paracol}
-
-\section{Univeresal Functions in NumPy}
-
 
 \section{Mathematical Methods}
 
@@ -1927,7 +2130,7 @@ Learning goals:
 
 \section{}
 
-
+\theendnotes
 
 \chapter{Data Management with Pandas}
 
@@ -2046,6 +2249,226 @@ s.lstrip()               & Remove leading whitespace from s \# ' hello ' =\textg
 s.rstrip()               & Remove trailing whitespace from s \# ' hello ' =\textgreater ' hello'                                                                           \\
 s.zfill(width)           & Left fill s with ASCII '0' digits with total length width \# '42' =\textgreater '00042'  
    \\                                                      
+\bottomrule
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}
+\caption{NumPy Universal Functions: Mathematical Operations}
+\label{tab:numpy_math_ufuncs}
+\centering
+\begin{tabular}{lp{8.5cm}}
+\toprule \toprule 
+Universal Function & Synopsis \\
+\midrule
+add(x1, x2, /[, out, where, casting, order, ...])
+& Add arguments element-wise\\
+subtract(x1, x2, /[, out, where, casting, ...])
+& Subtract arguments, element-wise\\
+multiply(x1, x2, /[, out, where, casting, ...])
+& Multiply arguments element-wise\\
+matmul(x1, x2, /[, out, casting, order, ...])
+& Matrix product of two arrays\\
+divide(x1, x2, /[, out, where, casting, ...])
+& Divide arguments element-wise\\
+logaddexp(x1, x2, /[, out, where, casting, ...])
+& Logarithm of the sum of exponentiations of the inputs\\
+logaddexp2(x1, x2, /[, out, where, casting, ...])
+& Logarithm of the sum of exponentiations of the inputs in base-2\\
+true_divide(x1, x2, /[, out, where, ...])
+& Divide arguments element-wise\\
+floor_divide(x1, x2, /[, out, where, ...])
+& Return the largest integer smaller or equal to the division of the inputs\\
+negative(x, /[, out, where, casting, order, ...])
+& Numerical negative, element-wise\\
+positive(x, /[, out, where, casting, order, ...])
+& Numerical positive, element-wise\\
+power(x1, x2, /[, out, where, casting, ...])
+& First array elements raised to powers from second array, element-wise\\
+float_power(x1, x2, /[, out, where, ...])
+& First array elements raised to powers from second array, element-wise\\
+remainder(x1, x2, /[, out, where, casting, ...])
+& Returns the element-wise remainder of division\\
+mod(x1, x2, /[, out, where, casting, order, ...])
+& Returns the element-wise remainder of division\\
+fmod(x1, x2, /[, out, where, casting, ...])
+& Returns the element-wise remainder of division\\
+divmod(x1, x2[, out1, out2], / [[, out, ...])
+& Return element-wise quotient and remainder simultaneously\\
+absolute(x, /[, out, where, casting, order, ...])
+& Calculate the absolute value element-wise\\
+fabs(x, /[, out, where, casting, order, ...])
+& Compute the absolute values element-wise\\
+rint(x, /[, out, where, casting, order, ...])
+& Round elements of the array to the nearest integer\\
+sign(x, /[, out, where, casting, order, ...])
+& Returns an element-wise indication of the sign of a number\\
+heaviside(x1, x2, /[, out, where, casting, ...])
+& Compute the Heaviside step function\\
+conj(x, /[, out, where, casting, order, ...])
+& Return the complex conjugate, element-wise\\
+conjugate(x, /[, out, where, casting, ...])
+& Return the complex conjugate, element-wise\\
+exp(x, /[, out, where, casting, order, ...])
+& Calculate the exponential of all elements in the input array\\
+exp2(x, /[, out, where, casting, order, ...])
+& Calculate 2**p for all p in the input array\\
+log(x, /[, out, where, casting, order, ...])
+& Natural logarithm, element-wise\\
+log2(x, /[, out, where, casting, order, ...])
+& Base-2 logarithm of x\\
+log10(x, /[, out, where, casting, order, ...])
+& Return the base 10 logarithm of the input array, element-wise\\
+expm1(x, /[, out, where, casting, order, ...])
+& Calculate exp(x) - 1 for all elements in the array\\
+log1p(x, /[, out, where, casting, order, ...])
+& Return the natural logarithm of one plus the input array, element-wise\\
+sqrt(x, /[, out, where, casting, order, ...])
+& Return the non-negative square-root of an array, element-wise\\
+square(x, /[, out, where, casting, order, ...])
+& Return the element-wise square of the input\\
+cbrt(x, /[, out, where, casting, order, ...])
+& Return the cube-root of an array, element-wise\\
+reciprocal(x, /[, out, where, casting, ...])
+& Return the reciprocal of the argument, element-wise\\
+gcd(x1, x2, /[, out, where, casting, order, ...])
+& Returns the greatest common divisor of \|x1\| and \|x2\| \\ 
+lcm(x1, x2, /[, out, where, casting, order, ...])
+& Returns the lowest common multiple of \|x1\| and \|x2\| \\
+\bottomrule
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}
+\caption{NumPy Universal Functions: Trigonometric Operations}
+\centering
+\begin{tabular}{lp{8.5cm}}
+\toprule \toprule 
+Universal Function & Synopsis \\
+\midrule
+sin(x, /[, out, where, casting, order, ...])
+& Trigonometric sine, element-wise\\
+cos(x, /[, out, where, casting, order, ...])
+& Cosine element-wise\\
+tan(x, /[, out, where, casting, order, ...])
+& Compute tangent element-wise\\
+arcsin(x, /[, out, where, casting, order, ...])
+& Inverse sine, element-wise\\
+arccos(x, /[, out, where, casting, order, ...])
+& Trigonometric inverse cosine, element-wise\\
+arctan(x, /[, out, where, casting, order, ...])
+& Trigonometric inverse tangent, element-wise\\
+arctan2(x1, x2, /[, out, where, casting, ...])
+& Element-wise arc tangent of x1/x2 choosing the quadrant correctly\\
+hypot(x1, x2, /[, out, where, casting, ...])
+& Given the "legs" of a right triangle, return its hypotenuse\\
+sinh(x, /[, out, where, casting, order, ...])
+& Hyperbolic sine, element-wise\\
+cosh(x, /[, out, where, casting, order, ...])
+& Hyperbolic cosine, element-wise\\
+tanh(x, /[, out, where, casting, order, ...])
+& Compute hyperbolic tangent element-wise\\
+arcsinh(x, /[, out, where, casting, order, ...])
+& Inverse hyperbolic sine element-wise\\
+arccosh(x, /[, out, where, casting, order, ...])
+& Inverse hyperbolic cosine, element-wise\\
+arctanh(x, /[, out, where, casting, order, ...])
+& Inverse hyperbolic tangent element-wise\\
+degrees(x, /[, out, where, casting, order, ...])
+& Convert angles from radians to degrees\\
+radians(x, /[, out, where, casting, order, ...])
+& Convert angles from degrees to radians\\
+deg2rad(x, /[, out, where, casting, order, ...])
+& Convert angles from degrees to radians\\
+rad2deg(x, /[, out, where, casting, order, ...])
+& Convert angles from radians to degrees\\
+\bottomrule
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}
+\caption{NumPy Universal Functions: Floating Operations}
+\centering
+\begin{tabular}{lp{8.5cm}}
+\toprule \toprule 
+Universal Function & Synopsis \\
+\midrule
+isfinite(x, /[, out, where, casting, order, ...])
+& Test element-wise for finiteness (not infinity and not Not a Number)\\
+isinf(x, /[, out, where, casting, order, ...])
+&  Test element-wise for positive or negative infinity\\
+isnan(x, /[, out, where, casting, order, ...])
+& Test element-wise for NaN and return result as a boolean array\\
+isnat(x, /[, out, where, casting, order, ...])
+& Test element-wise for NaT (not a time) and return result as a boolean array\\
+fabs(x, /[, out, where, casting, order, ...])
+& Compute the absolute values element-wise\\
+signbit(x, /[, out, where, casting, order, ...])
+& Returns element-wise True where signbit is set (less than zero)\\
+copysign(x1, x2, /[, out, where, casting, ...])
+& Change the sign of x1 to that of x2, element-wise\\
+nextafter(x1, x2, /[, out, where, casting, ...])
+& Return the next floating-point value after x1 towards x2, element-wise\\
+spacing(x, /[, out, where, casting, order, ...])
+& Return the distance between x and the nearest adjacent number\\
+modf(x[, out1, out2], / [[, out, where, ...])
+& Return the fractional and integral parts of an array, element-wise\\
+ldexp(x1, x2, /[, out, where, casting, ...])
+& Returns x1 * 2**x2, element-wise\\
+frexp(x[, out1, out2], / [[, out, where, ...])
+& Decompose the elements of x into mantissa and twos exponent\\
+fmod(x1, x2, /[, out, where, casting, ...])
+& Returns the element-wise remainder of division\\
+floor(x, /[, out, where, casting, order, ...])
+& Return the floor of the input, element-wise\\
+ceil(x, /[, out, where, casting, order, ...])
+& Return the ceiling of the input, element-wise\\
+trunc(x, /[, out, where, casting, order, ...])
+& Return the truncated value of the input, element-wise\\
+\bottomrule
+\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}
+\caption{NumPy Universal Functions: Comparison Operations}
+\label{tab:numpy_comparison_ufuncs}
+\centering
+\begin{tabular}{lp{8.5cm}}
+\toprule \toprule 
+Universal Function & Synopsis \\ \midrule
+greater(x1, x2, /[, out, where, casting, ...])
+& Return the truth value of (x1 > x2) element-wise\\
+greater_equal(x1, x2, /[, out, where, ...])
+& Return the truth value of (x1 >= x2) element-wise\\
+less(x1, x2, /[, out, where, casting, ...])
+& Return the truth value of (x1 < x2) element-wise\\
+less_equal(x1, x2, /[, out, where, casting, ...])
+& Return the truth value of (x1 <= x2) element-wise\\
+not_equal(x1, x2, /[, out, where, casting, ...])
+& Return (x1 != x2) element-wise\\
+equal(x1, x2, /[, out, where, casting, ...])
+& Return (x1 == x2) element-wise\\
+logical_and(x1, x2, /[, out, where, ...])
+& Compute the truth value of x1 AND x2 element-wise\\
+logical_or(x1, x2, /[, out, where, casting, ...])
+& Compute the truth value of x1 OR x2 element-wise\\
+logical_xor(x1, x2, /[, out, where, ...])
+& Compute the truth value of x1 XOR x2, element-wise\\
+logical_not(x, /[, out, where, casting, ...])
+& Compute the truth value of NOT x element-wise\\
+maximum(x1, x2, /[, out, where, casting, ...])
+& Element-wise maximum of array elements\\
+minimum(x1, x2, /[, out, where, casting, ...])
+& Element-wise minimum of array elements\\
+fmax(x1, x2, /[, out, where, casting, ...])
+& Element-wise maximum of array elements\\
+fmin(x1, x2, /[, out, where, casting, ...])
+& Element-wise minimum of array elements\\
+\midrule
 \bottomrule
 \end{tabular}
 \end{table}

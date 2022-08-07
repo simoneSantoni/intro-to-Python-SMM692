@@ -13,9 +13,15 @@
 \contentsline {table}{\numberline {4.9}{\ignorespaces Popular file methods\relax }}{47}{table.caption.13}%
 \contentsline {table}{\numberline {4.10}{\ignorespaces Python Statements\relax }}{48}{table.caption.14}%
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Common Use Attributes of NumPy \texttt {array}\relax }}{62}{table.caption.16}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces NumPy Data Types\relax }}{64}{table.caption.17}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{69}{table.caption.17}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{70}{table.caption.18}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{73}{table.caption.20}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{74}{table.caption.21}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{76}{table.caption.23}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{77}{table.caption.24}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{78}{table.caption.25}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{79}{table.caption.26}%
 \addvspace {10\p@ }
