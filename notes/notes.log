@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  7 AUG 2022 00:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  7 AUG 2022 11:49
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3058,10 +3058,18 @@ and I'll forget about whatever was undefined.
 D4.pygtex) [63
 
 ] [64]
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/110AC5DB8237DD890B9C771E85CFF14A764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex) [65
+
+
+] [66] [67] [68] [69] [70] [71] [72]
 ! Undefined control sequence.
 <argument> \rggedright 
                        What is a universal function?
-l.2096 ...ggedright What is a universal function?}
+l.2270 ...ggedright What is a universal function?}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3072,60 +3080,47 @@ and I'll forget about whatever was undefined.
 ! Illegal parameter number in definition of \next.
 <to be read again> 
                    t
-l.2097 ...ructuring NumPy code to leverage it.}}.}
+l.2271 ...ructuring NumPy code to leverage it.}}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
+(./notes.ent) [73
 
-Underfull \hbox (badness 1675) in paragraph at lines 2097--2097
-[]\OT1/cmr/m/n/10.95 A uni-ver-sal func-tion, or [][]\OT1/cmtt/m/n/10.95 ufunc[
-][]\OT1/cmr/m/n/10.95 , is a func-tion
- []
-
-
-Underfull \hbox (badness 1460) in paragraph at lines 2107--2107
-[]\OT1/cmr/m/n/10.95 There are circa sixty \OT1/cmtt/m/n/10.95 ufuncts \OT1/cmr
-/m/n/10.95 im-ple-mented in
- []
-
-(./notes.ent) [65
-
-
-] [66
+] [74
 
 ]
 Chapter 6.
-[67] [68
+[75] [76
 
 ]
 Chapter 7.
-[69] [70
+[77] [78
 
 
-] [71] [72]
+] [79] [80]
 Appendix A.
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 2
-180.
+354.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2180.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2354.
 
 
-Overfull \hbox (11.11417pt too wide) in paragraph at lines 2177--2224
+Overfull \hbox (11.11417pt too wide) in paragraph at lines 2351--2398
  [][] 
  []
 
-[73
+[81
 
-] [74] [75]
+] [82] [83]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2279 true_
+l.2453 true_
             divide(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3133,7 +3128,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2280 &
+l.2454 &
          Divide arguments element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3144,7 +3139,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2281 floor_
+l.2455 floor_
              divide(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3152,7 +3147,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2282 &
+l.2456 &
          Return the largest integer smaller or equal to the division of the ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3163,7 +3158,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2289 float_
+l.2463 float_
              power(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3171,7 +3166,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2290 &
+l.2464 &
          First array elements raised to powers from second array, element-wi...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3182,7 +3177,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2336 & Returns the greatest common divisor of \|
+l.2510 & Returns the greatest common divisor of \|
                                                   x1\| and \|x2\| \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3190,20 +3185,20 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2337 l
+l.2511 l
         cm(x1, x2, /[, out, where, casting, order, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2336--2337
+Underfull \hbox (badness 10000) in paragraph at lines 2510--2511
 []|\OT1/cmr/m/n/10.95 Returns the great-est com-mon di-vi-sor of
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2338 & Returns the lowest common multiple of \|
+l.2512 & Returns the lowest common multiple of \|
                                                  x1\| and \|x2\| \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3211,29 +3206,29 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2339 \bottomrule
+l.2513 \bottomrule
                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2338--2339
+Underfull \hbox (badness 10000) in paragraph at lines 2512--2513
 []|\OT1/cmr/m/n/10.95 Returns the low-est com-mon mul-ti-ple of
  []
 
 
-Overfull \hbox (5.19728pt too wide) in paragraph at lines 2261--2341
+Overfull \hbox (5.19728pt too wide) in paragraph at lines 2435--2515
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 26.20242pt on input line 2341.
+LaTeX Warning: Float too large for page by 26.20242pt on input line 2515.
 
-[76] [77] [78]
+[84] [85] [86]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2445 greater_
+l.2619 greater_
                equal(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3241,7 +3236,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2446 &
+l.2620 &
          Return the truth value of (x1 >= x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3252,7 +3247,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2449 less_
+l.2623 less_
             equal(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3260,7 +3255,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2450 &
+l.2624 &
          Return the truth value of (x1 <= x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3271,7 +3266,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2451 not_
+l.2625 not_
            equal(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3279,7 +3274,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2452 &
+l.2626 &
          Return (x1 != x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3290,7 +3285,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2455 logical_
+l.2629 logical_
                and(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3298,7 +3293,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2456 &
+l.2630 &
          Compute the truth value of x1 AND x2 element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3309,7 +3304,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2457 logical_
+l.2631 logical_
                or(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3317,7 +3312,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2458 &
+l.2632 &
          Compute the truth value of x1 OR x2 element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3328,7 +3323,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2459 logical_
+l.2633 logical_
                xor(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3336,7 +3331,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2460 &
+l.2634 &
          Compute the truth value of x1 XOR x2, element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3347,7 +3342,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2461 logical_
+l.2635 logical_
                not(x, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3355,7 +3350,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2462 &
+l.2636 &
          Compute the truth value of NOT x element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3363,7 +3358,7 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[79] [80
+[87] [88
 
 
 
@@ -3372,7 +3367,7 @@ my insertion and my current dilemma will both disappear.
 
 ]
 Appendix B.
-[81] (./notes.aux)
+[89] (./notes.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -3380,10 +3375,10 @@ Package rerunfilecheck Info: File `notes.out' has not changed.
 (rerunfilecheck)             Checksum: 563320B7E95C187FA05DDCD325E45CEA;6229.
  ) 
 Here is how much of TeX's memory you used:
- 32705 strings out of 478994
- 672272 string characters out of 5858184
- 1171358 words of memory out of 5000000
- 49316 multiletter control sequences out of 15000+600000
+ 32739 strings out of 478994
+ 672914 string characters out of 5858184
+ 1173360 words of memory out of 5000000
+ 49333 multiletter control sequences out of 15000+600000
  417222 words of font info for 77 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,13n,117p,2384b,1074s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3411,10 +3406,10 @@ texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2021/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2021/tex
 mf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2021/texmf
 -dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on notes.pdf (81 pages, 448155 bytes).
+Output written on notes.pdf (89 pages, 456038 bytes).
 PDF statistics:
- 842 PDF objects out of 1000 (max. 8388607)
- 727 compressed objects within 8 object streams
- 145 named destinations out of 1000 (max. 500000)
+ 893 PDF objects out of 1000 (max. 8388607)
+ 770 compressed objects within 8 object streams
+ 160 named destinations out of 1000 (max. 500000)
  317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1918,7 +1918,7 @@ array([[[1, 2],
 \end{paracol}
 \clearpage 
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.2 --- vector multiplication}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.2 --- NumPy allows to manipulate vectors with an expressive syntax}
 # import numpy with the socially accepted alias 'np'
 import numpy as np
 
@@ -2085,26 +2085,180 @@ dtype('float64')
 \end{sidewaystable}
 \clearpage
 
-
 \section{Array Creation and Manipulation Methods}
 
-...
+\begin{paracol}{2}
+	\question{\raggedright Does NumPy offer recipes for creating arrays?}
+	\note{Yes, it does. NumPy has seven families of array-creating routines:
+	\begin{itemize}
+		\item From shape or value
+		\item From existing data
+		\item Creating record arrays (\texttt{np.rec})
+		\item Creating character arrays (\texttt{np.char})
+		\item Numerical ranges
+		\item Building matrices
+		\item The Matrix class
+	\end{itemize}}
+\end{paracol}
 
+\begin{paracol}{2}
+	\question{\raggedright Creating arrays from shape or value}
+	\note{This family of routines creates arrays with certain attributes. For example, }
+\end{paracol}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{Routines for Creating Arrays from Shape or Value}
+	\label{tab:array_from_shape_or_value}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+		\midrule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{np.empty(shape[, dtype, order, like])} & Return a new array of given shape and type, without initializing entries \\
+			\texttt{np.empty\_like(prototype[, dtype, order, subok, \ldots])} & Return a new array with the same shape and type as a given array \\
+			\texttt{np.eye(N[, M, k, dtype, order, like])} & Return a 2-D array with ones on the diagonal and zeros elsewhere\\
+			\texttt{np.identity(n[, dtype, like])} & Return the identity array \\
+			\texttt{np.ones(shape[, dtype, order, like])} & Return a new array of given shape and type, filled with ones \\
+			\texttt{np.ones\_like(a[, dtype, order, subok, ...])} & Return an array of ones with the same shape and type as a given array \\
+			\texttt{np.zeros(shape[, dtype, order, like])} & Return a new array of given shape and type, filled with zeros \\
+			\texttt{np.full(shape, fill\_value[, dtype, order, like])} & Return a new array of given shape and type, filled with fill value \\
+			\texttt{full\_like(a, fill\_value[, dtype, order, ...])} & Return a full array with the same shape and type as a given array \\
+		\bottomrule 
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.5 --- creating arrays from shape or value}
+# import numpy with the socially accepted alias 'np'
+
+
+\end{pythoncode}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{Routines for Creating Arrays from Existing Data}
+	\label{tab:array_from_existing_data}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+		\midrule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{np.array(object[,dtype, copy, subok, \ldots])}
+			& Create an array \\
+			\texttt{np.asarray(a[, dtype, order, like])} 
+			& Convert the input to an array \\ 
+			\texttt{np.asanyarray(a[, dtype, order, like])} 
+			&  Convert the input to an ndarray, but pass ndarray subclasses through \\
+                        \texttt{np.ascontiguousarray(a[, dtype, like])}
+			& Return a contiguous array (ndim >= 1) in memory (C order)\\
+                        \texttt{np.asmatrix(data[, dtype])}
+                        & Interpret the input as a matrix\\
+                        \texttt{np.copy(a[, order, subok])}
+                        & Return an array copy of the given object\\
+                        \texttt{np.frombuffer(buffer[, dtype, count, offset, like])}
+                        & Interpret a buffer as a 1-dimensional array\\
+                        %\texttt{from_dlpack(x, \/)}
+                        %& Create a NumPy array from an object implementing the \_\_dlpack\_\_ protocol\\
+                        \texttt{np.fromfile(file[, dtype, count, sep, offset, like])}
+                        & Construct an array from data in a text or binary file\\
+                        \texttt{np.fromfunction(function, shape, *[, dtype, like])}
+                        & Construct an array by executing a function over each coordinate\\
+                        \texttt{np.fromiter(iter, dtype[, count, like])}
+                        & Create a new 1-dimensional array from an iterable object\\
+                        \texttt{np.fromstring(string[, dtype, count, like])}
+                        & A new 1-D array initialized from text data in a string\\
+                        \texttt{np.loadtxt(fname[, dtype, comments, delimiter, ...])}
+                        & Load data from a text file\\
+		\bottomrule 
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{Routines for Creating Record Arrays}
+	\label{tab:array_for_record_arrays}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+		\midrule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{} & \\
+		\bottomrule 
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{Routines for Creating Character Arrays}
+	\label{tab:array_for_character_arrays}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+		\midrule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{} & \\
+		\bottomrule 
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{Routines for Numerical Ranges}
+	\label{tab:array_from_numerical_ranges}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+		\midrule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{} & \\
+		\bottomrule 
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{Routines for Building Matrices}
+	\label{tab:array_for_building_matrices}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+		\midrule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{} & \\
+		\bottomrule 
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{Routines for the Matrix Class}
+	\label{tab:array_for_matrix_class}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+		\midrule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{} & \\
+		\bottomrule 
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
 \section{Universal Functions in NumPy}
 
 \begin{paracol}{2}
 	\question{\rggedright What is a universal function?}
-	\note{A universal function, or \href{https://numpy.org/doc/stable/reference/ufuncs.html}{\texttt{ufunc}}, is a function that performs element-wise operations on data in \texttt{ndarrays}. You can think of them as fast vectorized wrappers for simple functions that take one or more scalar values and produce one or more scalar results\footnote{Here is an interesting passage from the official \href{https://numpy.org/doc/stable/glossary.html#term-vectorization}{NumPy} documentation: \textit{NumPy hands off array processing to C, where looping and computation are much faster than in Python. To exploit this, programmers using NumPy eliminate Python loops in favor of array-to-array operations. vectorization can refer both to the C offloading and to structuring NumPy code to leverage it.}}.}
+	\note{A universal function, or \href{https://numpy.org/doc/stable/reference/ufuncs.html}{\texttt{ufunc}}, is a function that performs element-wise operations on \texttt{ndarrays}. You can think of them as fast vectorized wrappers for simple functions that take one or more scalar values and produce one or more scalar results\footnote{Here is an interesting passage from the official \href{https://numpy.org/doc/stable/glossary.html#term-vectorization}{NumPy} documentation: \textit{NumPy hands off array processing to C, where looping and computation are much faster than in Python. To exploit this, programmers using NumPy eliminate Python loops in favor of array-to-array operations. vectorization can refer both to the C offloading and to structuring NumPy code to leverage it.}}.}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright What is the rationale for using \texttt{ufuncts}?}
-	\note{Per the previous point, \texttt{ufuncts} offer substantial performance advantages \textit{vis a' vis} non-vectorized code --- i.e., code using built-in Python iterators.}
+	\note{Per the previous point, using a \href{https://numpy.org/doc/stable/reference/ufuncs.html}{\texttt{ufunc}} offer substantial performance advantages \textit{vis a' vis} non-vectorized code --- i.e., code using built-in Python iterators.}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright What are the \texttt{unfuncts} available in NumPy?}
-	\note{There are circa sixty \texttt{ufuncts} implemented in NUmPy. For the sake of convenience, the full list of \texttt{ufuncts} is reported in Tables \ref{tab:numpy_math_ufuncs} - \ref{tab:numpy_comparison_ufuncs}. The following sections of the current chapter will illustrate how to use some of the most centrale \texttt{ufuncts} in NumPy.}
+	\question{\raggedright What are the \texttt{unfunct} options available in NumPy?}
+	\note{There are circa sixty universal functions implemented in NumPy. For the sake of convenience, the full list of \href{https://numpy.org/doc/stable/reference/ufuncs.html}{\texttt{ufunc}} options is reported in Tables \ref{tab:numpy_math_ufuncs} - \ref{tab:numpy_comparison_ufuncs}. The following sections of the current chapter will illustrate how to use some of the popular central \texttt{ufuncts} in NumPy.}
 \end{paracol}
 
 \section{Mathematical Methods}
