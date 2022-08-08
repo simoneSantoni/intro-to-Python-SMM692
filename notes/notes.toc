@@ -25,15 +25,15 @@
 \contentsline {section}{\numberline {5.1}Installing NumPy and SciPy}{59}{section.5.1}%
 \contentsline {section}{\numberline {5.2}NumPy \texttt {ndarray}}{59}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Array Creation and Manipulation Methods}{65}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Universal Functions in NumPy}{73}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Mathematical Methods}{73}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Statistical Methods}{73}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Linear Algebra}{73}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Pseudorandom Number Generation}{73}{section.5.8}%
-\contentsline {section}{\numberline {5.9}File Input and Output with \texttt {ndarrays}}{73}{section.5.9}%
-\contentsline {section}{\numberline {5.10}}{73}{section.5.10}%
-\contentsline {chapter}{\numberline {6}Data Management with Pandas}{75}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Coda}{77}{chapter.7}%
+\contentsline {section}{\numberline {5.4}Universal Functions in NumPy}{80}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Mathematical Methods}{80}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Statistical Methods}{80}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Linear Algebra}{80}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Pseudorandom Number Generation}{80}{section.5.8}%
+\contentsline {section}{\numberline {5.9}File Input and Output with \texttt {ndarrays}}{80}{section.5.9}%
+\contentsline {section}{\numberline {5.10}}{80}{section.5.10}%
+\contentsline {chapter}{\numberline {6}Data Management with Pandas}{81}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Coda}{83}{chapter.7}%
 \contentsline {chapter}{Appendices}{}{section*.26}
-\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{81}{appendix.a.A}%
-\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{89}{appendix.a.B}%
+\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{87}{appendix.a.A}%
+\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{95}{appendix.a.B}%
