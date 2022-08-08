@@ -2103,8 +2103,13 @@ dtype('float64')
 
 \begin{paracol}{2}
 	\question{\raggedright Creating arrays from shape or value}
-	\note{This family of routines creates arrays with certain attributes. For example, }
+	\note{This family of routines creates arrays with a certain number of dimensions, shape, values, and attributes. Snippet 5.5. shows how to create:
+	\begin{itemize}
+		\item an array with a certain shape and a constant scalar (see lines 5 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.zeros.html#numpy.zeros}{\texttt{.zeros}}, 12 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.ones.html#numpy.ones}{\texttt{.ones}}, 19 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.full.html#numpy.full}{\texttt{full}}), and
+		\item an array containing an identity matrix (see lines 26 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.eye.html#numpy.eye}{\texttt{.eye}} --- and 33 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.identity.html#numpy.identity}{\texttt{.identity}})
+	\end{itemize}} 
 \end{paracol}
+\clearpage
 
 \begin{sidewaystable}[!htbp]
 	\centering
@@ -2130,7 +2135,59 @@ dtype('float64')
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.5 --- creating arrays from shape or value}
 # import numpy with the socially accepted alias 'np'
+>>> import numpy as np
 
+# create an array with zeros only
+>>> np.zeros([4,4])
+array([[0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.],
+       [0., 0., 0., 0.]])
+
+# create an array with ones only
+>>> np.ones((4,4))
+array([[1., 1., 1., 1.],
+       [1., 1., 1., 1.],
+       [1., 1., 1., 1.],
+       [1., 1., 1., 1.]])
+
+# create a full matrix with a given scalar
+>>> np.full((4,4), -99)
+array([[-99, -99, -99, -99],
+       [-99, -99, -99, -99],
+       [-99, -99, -99, -99],
+       [-99, -99, -99, -99]])
+
+# create an identity array of a given shape with .eye 
+>>> np.eye(4, 3)
+array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.],
+       [0., 0., 0.]])
+
+# create an identity array with .identity
+>>> np.identity(4)
+array([[1., 0., 0., 0.],
+       [0., 1., 0., 0.],
+       [0., 0., 1., 0.],
+       [0., 0., 0., 1.]])
+\end{pythoncode}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright Creating arrays from existing data}
+	\note{In Snippets 5.1 -- 5.4, we saw how to use \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array}{\texttt{array}} for passing data to a NumPy array. Further routines to create NumPy arrays from existing data include for example:
+	\begin{itemize}
+		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.fromfunction.html#numpy.fromfunction}{\texttt{.fromfunction}}, creating an array by executing a function over each coordinate
+		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.fromfile.html#numpy.fromfile}{\texttt{.fromfile}}, creating an array from data in a text or binary file
+		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html#numpy.loadtxt}{\texttt{.loadtxt}}, loading data from a text file
+	\end{itemize}
+	}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.6 --- creating arrays from existing data}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
 
 \end{pythoncode}
 
@@ -2172,6 +2229,54 @@ dtype('float64')
 		\bottomrule 
 	\end{tabular}
 \end{sidewaystable}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright Creating arrays from existing data}
+	\note{}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.6 --- creating arrays from existing data}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+# get data from a function
+# --+ create a function
+>>> my_function = lambda x, y: x - 0.5 * y ** 2
+# --+ create an array from my_fuction for given coordinates
+>>> np.fromfunction(my_function, (3, 3), dtype=float)
+array([[ 0. , -0.5, -2. ],
+       [ 1. ,  0.5, -1. ],
+       [ 2. ,  1.5,  0. ]])
+
+# get data from a binary file
+# --+ create an array from a list of numbers
+>>> D = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])))
+# --+ save the raw data to a binary file
+>>> D.tofile("data.bin")
+# --+ read the data back 
+>>> np.fromfile("data.bin", dtype=int)
+
+# get data from a text file
+# --+ create a string with the data and some qualitative comments on them
+>>> S = """
+# Below are some demographic data about Michael J. Jordan (basketball player)
+# from Wikipedia.
+# 
+# Data labels are:
+# 
+# NAME, BORN, NBA CHAMPIONSHIPS, AVERAGE POINT PER GAME
+"Jordan, Michael Jeffrey","February 17, 1963",6,30.1
+"""
+# --+ write the data to a file 
+>>> with open("my_data", "w") as pipe:
+...     pipe.write(S)
+>>> pipe.close()
+# --+ read the data back
+>>> D = np.loadtxt(open("my_data", "r"), comments="#", delimiter="\"")
+
+
+\end{pythoncode}
 
 \begin{sidewaystable}[!htbp]
 	\centering
@@ -2186,6 +2291,18 @@ dtype('float64')
 		\bottomrule 
 	\end{tabular}
 \end{sidewaystable}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright Creating arrays from existing data}
+	\note{}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.6 --- creating arrays from existing data}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+\end{pythoncode}
 
 \begin{sidewaystable}[!htbp]
 	\centering
@@ -2200,6 +2317,18 @@ dtype('float64')
 		\bottomrule 
 	\end{tabular}
 \end{sidewaystable}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright Creating arrays from existing data}
+	\note{}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.6 --- creating arrays from existing data}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+\end{pythoncode}
 
 \begin{sidewaystable}[!htbp]
 	\centering
@@ -2214,6 +2343,18 @@ dtype('float64')
 		\bottomrule 
 	\end{tabular}
 \end{sidewaystable}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright Creating arrays from existing data}
+	\note{}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.6 --- creating arrays from existing data}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+\end{pythoncode}
 
 \begin{sidewaystable}[!htbp]
 	\centering
@@ -2228,6 +2369,18 @@ dtype('float64')
 		\bottomrule 
 	\end{tabular}
 \end{sidewaystable}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright Creating arrays from existing data}
+	\note{}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.6 --- creating arrays from existing data}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+\end{pythoncode}
 
 \begin{sidewaystable}[!htbp]
 	\centering
