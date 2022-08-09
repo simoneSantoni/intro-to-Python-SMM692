@@ -1,70 +1,70 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  7 AUG 2022 16:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  9 AUG 2022 10:46
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
 **notes.tex
 (./notes.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18>
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/book.cls
+L3 programming layer <2021-01-09> xparse <2020-03-03>
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/bk11.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
 File: bk11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-\c@part=\count179
-\c@chapter=\count180
-\c@section=\count181
-\c@subsection=\count182
-\c@subsubsection=\count183
-\c@paragraph=\count184
-\c@subparagraph=\count185
-\c@figure=\count186
-\c@table=\count187
+\c@part=\count177
+\c@chapter=\count178
+\c@section=\count179
+\c@subsection=\count180
+\c@subsubsection=\count181
+\c@paragraph=\count182
+\c@subparagraph=\count183
+\c@figure=\count184
+\c@table=\count185
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen139
 \Gin@req@width=\dimen140
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count188
-\Gm@cntv=\count189
-\c@Gm@tempcnt=\count190
+\Gm@cnth=\count186
+\Gm@cntv=\count187
+\c@Gm@tempcnt=\count188
 \Gm@bindingoffset=\dimen141
 \Gm@wd@mp=\dimen142
 \Gm@odd@mp=\dimen143
@@ -75,10 +75,10 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@layoutvoffset=\dimen148
 \Gm@dimlist=\toks18
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -92,40 +92,39 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/dvipsnam.def
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2020/10/09 version 4.42 text color boxes
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
-x
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks19
 \pgfutil@tempdima=\dimen149
 \pgfutil@tempdimb=\dimen150
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
-sts.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box47
-) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
 ))
 Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks20
 \pgfkeys@temptoks=\toks21
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
-ode.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
 \pgfkeys@tmptoks=\toks22
 ))
 \pgf@x=\dimen151
@@ -140,74 +139,73 @@ ode.tex
 \pgf@yd=\dimen160
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count191
-\c@pgf@countb=\count192
-\c@pgf@countc=\count193
-\c@pgf@countd=\count194
+\c@pgf@counta=\count189
+\c@pgf@countb=\count190
+\c@pgf@countc=\count191
+\c@pgf@countd=\count192
 \t@pgf@toka=\toks23
 \t@pgf@tokb=\toks24
 \t@pgf@tokc=\toks25
-\pgf@sys@id@count=\count195
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+\pgf@sys@id@count=\count193
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
-ef
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
-df.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
 File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
 )))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
-code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
 File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfsyssoftpath@smallbuffer@items=\count196
-\pgfsyssoftpath@bigbuffer@items=\count197
+\pgfsyssoftpath@smallbuffer@items=\count194
+\pgfsyssoftpath@bigbuffer@items=\count195
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
-code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
 File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen161
-\pgfmath@count=\count198
+\pgfmath@count=\count196
 \pgfmath@box=\box48
 \pgfmath@toks=\toks26
 \pgfmath@stack@operand=\toks27
 \pgfmath@stack@operation=\toks28
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
-tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
 .code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
-nometric.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
-m.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
-rison.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
-code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
-.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
-code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
-erarithmetics.code.tex)))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count199
-)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
-de.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count197
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
 File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@picminx=\dimen162
 \pgf@picmaxx=\dimen163
@@ -224,130 +222,123 @@ File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@zx=\dimen174
 \pgf@zy=\dimen175
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
-ruct.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
 File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@path@lastx=\dimen176
 \pgf@path@lasty=\dimen177
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
-.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
 File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@shorten@end@additional=\dimen178
 \pgf@shorten@start@additional=\dimen179
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
-de.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
 File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfpic=\box49
 \pgf@hbox=\box50
 \pgf@layerbox@main=\box51
-\pgf@picture@serial@count=\count266
+\pgf@picture@serial@count=\count198
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
-ate.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
 File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgflinewidth=\dimen180
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
-ations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
 File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@pt@x=\dimen181
 \pgf@pt@y=\dimen182
 \pgf@pt@temp=\dimen183
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
-e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
-ode.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
 File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
-ssing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
 File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
-de.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
 File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfarrowsep=\dimen184
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
-e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@max=\dimen185
-\pgf@sys@shading@range@num=\count267
-\pgf@shadingcount=\count268
+\pgf@sys@shading@range@num=\count199
+\pgf@shadingcount=\count266
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
-e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
-code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
 File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfexternal@startupbox=\box52
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
-de.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
 File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
-ncy.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
 File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
-code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
 File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
-tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
-e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfnodeparttextbox=\box53
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
-tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--0-65.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
 Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@nodesepstart=\dimen186
 \pgf@nodesepend=\dimen187
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--1-18.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
 Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
-)) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks29
 \verbatim@line=\toks30
 \verbatim@in@stream=\read3
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/environ/environ.sty
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 \@envbody=\toks31
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count269
+\etb@tempcnta=\count267
 )
 \tcb@titlebox=\box54
 \tcb@upperbox=\box55
 \tcb@lowerbox=\box56
 \tcb@phantombox=\box57
-\c@tcbbreakpart=\count270
-\c@tcblayer=\count271
-\c@tcolorbox@number=\count272
+\c@tcbbreakpart=\count268
+\c@tcblayer=\count269
+\c@tcolorbox@number=\count270
 \tcb@temp=\box58
 \tcb@temp=\box59
 \tcb@temp=\box60
@@ -355,51 +346,51 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \tcb@out=\write4
 \tcb@record@out=\write5
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lineno/lineno.sty
+(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count273
+\linenopenalty=\count271
 \output=\toks32
-\linenoprevgraf=\count274
+\linenoprevgraf=\count272
 \linenumbersep=\dimen188
 \linenumberwidth=\dimen189
-\c@linenumber=\count275
-\c@pagewiselinenumber=\count276
-\c@LN@truepage=\count277
-\c@internallinenumber=\count278
-\c@internallinenumbers=\count279
+\c@linenumber=\count273
+\c@pagewiselinenumber=\count274
+\c@LN@truepage=\count275
+\c@internallinenumber=\count276
+\c@internallinenumbers=\count277
 \quotelinenumbersep=\dimen190
 \bframerule=\dimen191
 \bframesep=\dimen192
 \bframebox=\box62
 LaTeX Info: Redefining \\ on input line 3056.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip49
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks33
 \ex@=\dimen193
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen194
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count280
+\inf@bad=\count278
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count281
-\leftroot@=\count282
+\uproot@=\count279
+\leftroot@=\count280
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count283
-\DOTSCASE@=\count284
+\classnum@=\count281
+\DOTSCASE@=\count282
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -408,15 +399,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen195
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count285
-\c@MaxMatrixCols=\count286
+\macc@depth=\count283
+\c@MaxMatrixCols=\count284
 \dotsspace@=\muskip16
-\c@parentequation=\count287
-\dspbrk@lvl=\count288
+\c@parentequation=\count285
+\dspbrk@lvl=\count286
 \tag@help=\toks34
-\row@=\count289
-\column@=\count290
-\maxfields@=\count291
+\row@=\count287
+\column@=\count288
+\maxfields@=\count289
 \andhelp@=\toks35
 \eqnshift@=\dimen196
 \alignsep@=\dimen197
@@ -431,127 +422,126 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/endnotes/endnotes.sty
+(/usr/share/texlive/texmf-dist/tex/latex/endnotes/endnotes.sty
 Package: endnotes 2020-01-02 endnotes package
-\c@endnote=\count292
+\c@endnote=\count290
 \endnotesep=\dimen258
 \@enotes=\write6
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/appendix/appendix.sty
+(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count293
-\c@@ppsavesec=\count294
-\c@@ppsaveapp=\count295
+\c@@pps=\count291
+\c@@ppsavesec=\count292
+\c@@ppsaveapp=\count293
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/minted/minted.sty
+(/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/fvextra/fvextra.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
 Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count296
+\FV@CodeLineNo=\count294
 \FV@InFile=\read4
 \FV@TabBox=\box65
-\c@FancyVerbLine=\count297
-\FV@StepNumber=\count298
+\c@FancyVerbLine=\count295
+\FV@StepNumber=\count296
 \FV@OutFile=\write7
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/upquote/upquote.sty
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-\c@FV@TrueTabGroupLevel=\count299
-\c@FV@TrueTabCounter=\count300
+\c@FV@TrueTabGroupLevel=\count297
+\c@FV@TrueTabCounter=\count298
 \FV@TabBox@Group=\box66
 \FV@TmpLength=\skip52
-\c@FV@HighlightLinesStart=\count301
-\c@FV@HighlightLinesStop=\count302
-\FV@LoopCount=\count303
+\c@FV@HighlightLinesStart=\count299
+\c@FV@HighlightLinesStop=\count300
+\FV@LoopCount=\count301
 \FV@NCharsBox=\box67
 \FV@BreakIndent=\dimen259
-\FV@BreakIndentNChars=\count304
+\FV@BreakIndentNChars=\count302
 \FV@BreakSymbolSepLeft=\dimen260
-\FV@BreakSymbolSepLeftNChars=\count305
+\FV@BreakSymbolSepLeftNChars=\count303
 \FV@BreakSymbolSepRight=\dimen261
-\FV@BreakSymbolSepRightNChars=\count306
+\FV@BreakSymbolSepRightNChars=\count304
 \FV@BreakSymbolIndentLeft=\dimen262
-\FV@BreakSymbolIndentLeftNChars=\count307
+\FV@BreakSymbolIndentLeftNChars=\count305
 \FV@BreakSymbolIndentRight=\dimen263
-\FV@BreakSymbolIndentRightNChars=\count308
-\c@FancyVerbLineBreakLast=\count309
+\FV@BreakSymbolIndentRightNChars=\count306
+\c@FancyVerbLineBreakLast=\count307
 \FV@LineBox=\box68
 \FV@LineIndentBox=\box69
 \FV@LineWidth=\dimen264
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count310
-\calc@Bcount=\count311
+\calc@Acount=\count308
+\calc@Bcount=\count309
 \calc@Adimen=\dimen265
 \calc@Bdimen=\dimen266
 \calc@Askip=\skip53
 \calc@Bskip=\skip54
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count312
+\calc@Ccount=\count310
 \calc@Cskip=\skip55
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/shellesc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/catchfile/catchfile.sty
+(/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifluatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
 runsystem(uname -s > "notes.w18")...executed.
 
-
-(./notes.w18)
+ (./notes.w18)
 runsystem(rm -- "notes.w18")...executed.
 
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count313
-\decimalpart=\count314
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count311
+\decimalpart=\count312
 )
 Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/framed/framed.sty
+(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip56
 \fb@frw=\dimen267
@@ -559,19 +549,19 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen269
 \FrameSep=\dimen270
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/newfloat/newfloat.sty
+(/usr/share/texlive/texmf-dist/tex/latex/newfloat/newfloat.sty
 Package: newfloat 2019/09/02 v1.1l Defining new floating environments (AR)
 Package newfloat Info: Document class `book' detected.
 )
 \minted@appexistsfile=\read5
 \minted@bgbox=\box70
 \minted@code=\write8
-\c@minted@FancyVerbLineTemp=\count315
-\c@minted@pygmentizecounter=\count316
+\c@minted@FancyVerbLineTemp=\count313
+\c@minted@pygmentizecounter=\count314
 Package newfloat Info: New float `listing' with options `fileext=lol,placement=
 tbp' on input line 1151.
-\c@listing=\count317
-\newfloat@ftype=\count318
+\c@listing=\count315
+\newfloat@ftype=\count316
 Package newfloat Info: float type `listing'=8 on input line 1151.
 )
 runsystem(mkdir -p _minted-notes)...executed.
@@ -595,41 +585,38 @@ Adding the global options:
 to your \documentclass declaration may fix this.
 Try typing  <return>  to proceed.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbminted.code.tex
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbminted.code.tex
 Library (tcolorbox): 'tcbminted.code.tex' version '4.42'
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.te
-x
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
 Library (tcolorbox): 'tcblistingscore.code.tex' version '4.42'
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '4.42'
 )
-\c@tcblisting=\count319
-)) (/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+\c@tcblisting=\count317
+)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '4.42'
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen271
 \pgffor@skip=\dimen272
 \pgffor@stack=\toks38
 \pgffor@toks=\toks39
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
-e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
-dlers.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
 File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@plot@mark@count=\count320
+\pgf@plot@mark@count=\count318
 \pgfplotmarksize=\dimen273
 )
 \tikz@lastx=\dimen274
@@ -644,32 +631,30 @@ File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \tikz@figbox@bg=\box72
 \tikz@tempbox=\box73
 \tikz@tempbox@bg=\box74
-\tikztreelevel=\count321
-\tikznumberofchildren=\count322
-\tikznumberofcurrentchild=\count323
-\tikz@fig@count=\count324
+\tikztreelevel=\count319
+\tikznumberofchildren=\count320
+\tikznumberofcurrentchild=\count321
+\tikz@fig@count=\count322
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
-e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfmatrixcurrentrow=\count325
-\pgfmatrixcurrentcolumn=\count326
-\pgf@matrix@numberofcolumns=\count327
+\pgfmatrixcurrentrow=\count323
+\pgfmatrixcurrentcolumn=\count324
+\pgf@matrix@numberofcolumns=\count325
 )
-\tikz@expandcount=\count328
+\tikz@expandcount=\count326
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarytopaths.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )))
 \tcb@waterbox=\box75
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.42'
-))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
 Library (tcolorbox): 'tcbbreakable.code.tex' version '4.42'
-(/usr/local/texlive/2021/texmf-dist/tex/generic/oberdiek/pdfcol.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdfcol.sty
 Package: pdfcol 2019/12/29 v1.6 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
@@ -677,7 +662,7 @@ Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
 \tcb@totalupperbox=\box77
 \tcb@totallowerbox=\box78
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen282
 \lightrulewidth=\dimen283
@@ -689,18 +674,18 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen289
 \cmidrulekern=\dimen290
 \defaultaddspace=\dimen291
-\@cmidla=\count329
-\@cmidlb=\count330
+\@cmidla=\count327
+\@cmidlb=\count328
 \@aboverulesep=\dimen292
 \@belowrulesep=\dimen293
-\@thisruleclass=\count331
-\@lastruleclass=\count332
+\@thisruleclass=\count329
+\@lastruleclass=\count330
 \@thisrulewidth=\dimen294
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \col@sep=\dimen295
 \ar@mcellbox=\box79
@@ -715,17 +700,16 @@ Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \TX@old@col=\dimen299
 \TX@target=\dimen300
 \TX@delta=\dimen301
-\TX@cols=\count333
+\TX@cols=\count331
 \TX@ftn=\toks41
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/ragged2e/ragged2e.sty
-Package: ragged2e 2021/02/05 v3.0 ragged2e Package
+(/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2019/07/28 v2.2 ragged2e Package (MS)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/everysel/everysel.sty
+(/usr/share/texlive/texmf-dist/tex/latex/everysel/everysel.sty
 Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/everysel/everysel-2011-10-28.sty)
-)
+(/usr/share/texlive/texmf-dist/tex/latex/everysel/everysel-2011-10-28.sty))
 \CenteringLeftskip=\skip59
 \RaggedLeftLeftskip=\skip60
 \RaggedRightLeftskip=\skip61
@@ -740,55 +724,54 @@ Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
 \RaggedLeftParindent=\skip70
 \RaggedRightParindent=\skip71
 \JustifyingParindent=\skip72
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/01/29 v2.7 Span multiple rows of a table
 \multirow@colwidth=\skip73
-\multirow@cntb=\count334
+\multirow@cntb=\count332
 \multirow@dima=\skip74
 \bigstrutjot=\dimen302
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/siunitx/siunitx.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-02-18 L3 programming layer (loader) 
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-01-09 L3 programming layer (loader) 
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count335
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count333
 \l__pdf_internal_box=\box81
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-
-01.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.
-tex)))
-Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-10-27 L3 Experimental document command parser
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex))
+Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-10-27 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box82
 \l__siunitx_tmp_dim=\dimen303
-\l__siunitx_tmp_int=\count336
-\l__siunitx_number_mantissa_length_int=\count337
-\l__siunitx_number_uncert_length_int=\count338
-\l__siunitx_round_int=\count339
-\l__siunitx_process_decimal_int=\count340
-\l__siunitx_process_uncertainty_int=\count341
-\l__siunitx_process_fixed_int=\count342
-\l__siunitx_process_integer_min_int=\count343
-\l__siunitx_process_precision_int=\count344
-\l__siunitx_group_min_int=\count345
+\l__siunitx_tmp_int=\count334
+\l__siunitx_number_mantissa_length_int=\count335
+\l__siunitx_number_uncert_length_int=\count336
+\l__siunitx_round_int=\count337
+\l__siunitx_process_decimal_int=\count338
+\l__siunitx_process_uncertainty_int=\count339
+\l__siunitx_process_fixed_int=\count340
+\l__siunitx_process_integer_min_int=\count341
+\l__siunitx_process_precision_int=\count342
+\l__siunitx_group_min_int=\count343
 \l__siunitx_angle_marker_box=\box83
 \l__siunitx_angle_unit_box=\box84
 \l__siunitx_angle_marker_dim=\dimen304
 \l__siunitx_angle_unit_dim=\dimen305
-\l__siunitx_unit_int=\count346
-\l__siunitx_unit_denominator_int=\count347
-\l__siunitx_unit_numerator_int=\count348
-\l__siunitx_unit_prefix_int=\count349
-\l__siunitx_unit_prefix_base_int=\count350
-\l__siunitx_unit_prefix_gram_int=\count351
-\l__siunitx_number_product_int=\count352
+\l__siunitx_unit_int=\count344
+\l__siunitx_unit_denominator_int=\count345
+\l__siunitx_unit_numerator_int=\count346
+\l__siunitx_unit_prefix_int=\count347
+\l__siunitx_unit_prefix_base_int=\count348
+\l__siunitx_unit_prefix_gram_int=\count349
+\l__siunitx_number_product_int=\count350
 \c__siunitx_one_fill_skip=\skip75
 \l__siunitx_table_unit_align_skip=\skip76
 \l__siunitx_table_exponent_dim=\dimen306
@@ -806,31 +789,32 @@ Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_table_result_box=\box88
 \l__siunitx_table_number_align_skip=\skip77
 \l__siunitx_table_text_align_skip=\skip78
-(/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks42
 \XKV@tempa@toks=\toks43
 )
-\XKV@depth=\count353
+\XKV@depth=\count351
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/trimclip.sty
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/collectbox/collectbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box89
 )
@@ -840,7 +824,7 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@ury=\dimen318
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen319
@@ -852,32 +836,33 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@pdepth=\dimen325
 \adjbox@ptotalheight=\dimen326
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count354
+\c@checkoddpage=\count352
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/varwidth/varwidth.sty
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box90
-\sift@deathcycles=\count355
+\sift@deathcycles=\count353
 \@vwid@loff=\dimen327
 \@vwid@roff=\dimen328
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/rotating.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count356
+\c@r@tfl@t=\count354
 \rotFPtop=\skip79
 \rotFPbot=\skip80
 \rot@float@box=\box91
 \rot@mess@toks=\toks44
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+(/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box92
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen329
 \captionmargin@=\dimen330
@@ -888,23 +873,23 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen335
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count357
-\c@continuedfloat=\count358
+\c@caption@flags=\count355
+\c@continuedfloat=\count356
 Package caption Info: rotating package is loaded.
 Package caption Info: threeparttable package is loaded.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/paracol/paracol.sty
+(/usr/share/texlive/texmf-dist/tex/latex/paracol/paracol.sty
 Package: paracol 2018/12/31 v1.35 
-\pcol@currcol=\count359
-\pcol@nextcol=\count360
-\pcol@ncol=\count361
-\pcol@ncolleft=\count362
-\pcol@page=\count363
-\pcol@basepage=\count364
-\pcol@toppage=\count365
-\pcol@footnotebase=\count366
-\pcol@nfootnotes=\count367
-\pcol@mcid=\count368
+\pcol@currcol=\count357
+\pcol@nextcol=\count358
+\pcol@ncol=\count359
+\pcol@ncolleft=\count360
+\pcol@page=\count361
+\pcol@basepage=\count362
+\pcol@toppage=\count363
+\pcol@footnotebase=\count364
+\pcol@nfootnotes=\count365
+\pcol@mcid=\count366
 \pcol@prevdepth=\dimen336
 \pcol@colht=\dimen337
 \pcol@textfloatsep=\dimen338
@@ -923,167 +908,156 @@ Package: paracol 2018/12/31 v1.35
 )
 \mybox=\box99
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen341
-\Hy@linkcounter=\count369
-\Hy@pagecounter=\count370
+\Hy@linkcounter=\count367
+\Hy@pagecounter=\count368
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
-File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
-nguages
-) (/usr/local/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count371
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 4073.
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing OFF on input line 4212.
+\Hy@SavedSpaceFactor=\count369
+Package hyperref Info: Option `colorlinks' set `true' on input line 4338.
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count372
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count370
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4804.
+LaTeX Info: Redefining \url on input line 5076.
 \XeTeXLinkMargin=\dimen342
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count373
+\Fld@menulength=\count371
 \Field@Width=\dimen343
 \Fld@charsize=\dimen344
-Package hyperref Info: Hyper figures OFF on input line 6075.
-Package hyperref Info: Link nesting OFF on input line 6080.
-Package hyperref Info: Hyper index ON on input line 6083.
-Package hyperref Info: backreferencing OFF on input line 6090.
-Package hyperref Info: Link coloring ON on input line 6093.
-Package hyperref Info: Link coloring with OCG OFF on input line 6100.
-Package hyperref Info: PDF/A mode OFF on input line 6105.
-LaTeX Info: Redefining \ref on input line 6145.
-LaTeX Info: Redefining \pageref on input line 6149.
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring ON on input line 6365.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count374
-\c@Item=\count375
-\c@Hfootnote=\count376
+\Hy@abspage=\count372
+\c@Item=\count373
+\c@Hfootnote=\count374
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count377
-\c@bookmark@seq@number=\count378
+\Fld@listcount=\count375
+\c@bookmark@seq@number=\count376
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip83
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/lipsum/lipsum.sty
-Package: lipsum 2021-03-03 v2.3 150 paragraphs of Lorem Ipsum dummy text
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
-File: lipsum.ltd.tex 2021-03-03 v2.3 The Lorem ipsum dummy text
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 ))
 runsystem(which pygmentize && touch notes.aex)...executed.
 
 runsystem(rm notes.aex)...executed.
 
-
-(./notes.aux)
+ (./notes.aux)
 \openout1 = `notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 144.
+LaTeX Font Info:    ... okay on input line 144.
 
-(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count379
+\scratchcounter=\count377
 \scratchdimen=\dimen345
 \scratchbox=\box100
-\nofMPsegments=\count380
-\nofMParguments=\count381
+\nofMPsegments=\count378
+\nofMParguments=\count379
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count382
+\MPscratchCnt=\count380
 \MPscratchDim=\dimen346
-\MPnumerator=\count383
-\makeMPintoPDFobject=\count384
+\MPnumerator=\count381
+\makeMPintoPDFobject=\count382
 \everyMPtoPDFconversion=\toks47
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -1123,36 +1097,35 @@ e
 
 Package newfloat Info: `rotating' package detected.
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 141.
+LaTeX Info: Redefining \selectfont on input line 144.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dicti
-onary-English.dict
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
+-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring ON on input line 141.
+Package hyperref Info: Link coloring ON on input line 144.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
-ty
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count385
+\c@section@level=\count383
 )
-LaTeX Info: Redefining \ref on input line 141.
-LaTeX Info: Redefining \pageref on input line 141.
-LaTeX Info: Redefining \nameref on input line 141.
- (./notes.out) (./notes.out)
+LaTeX Info: Redefining \ref on input line 144.
+LaTeX Info: Redefining \pageref on input line 144.
+LaTeX Info: Redefining \nameref on input line 144.
+
+(./notes.out) (./notes.out)
 \@outlinefile=\write9
 \openout9 = `notes.out'.
 
@@ -1163,11 +1136,11 @@ LaTeX Warning: No \author given.
 [1
 
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 
-] (./notes.toc [3])
+] (./notes.toc
+[3])
 \tf@toc=\write10
 \openout10 = `notes.toc'.
 
@@ -1186,15 +1159,14 @@ LaTeX Warning: No \author given.
  [7] [8
 
 
-] [9]
-[10
+] [9] [10
 
 ]
 Chapter 1.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.162 \hline
+l.165 \hline
             
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1202,7 +1174,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.166 \hline
+l.169 \hline
             
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1214,7 +1186,7 @@ Chapter 2.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.174 \hline
+l.177 \hline
             
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1222,7 +1194,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.178 \hline
+l.181 \hline
             
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1234,7 +1206,7 @@ Chapter 3.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.200 \hline
+l.203 \hline
             
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1242,7 +1214,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.204 \hline
+l.207 \hline
             
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1254,7 +1226,7 @@ Chapter 4.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.222 \hline
+l.225 \hline
             
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1262,7 +1234,7 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.226 \hline
+l.229 \hline
             
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -1270,14 +1242,14 @@ an alignment. Proceed, and I'll ignore this case.
 \openout6 = `notes.ent'.
 
 
-Underfull \hbox (badness 2680) in paragraph at lines 239--239
+Underfull \hbox (badness 2680) in paragraph at lines 242--242
 []\OT1/cmr/m/it/10.95 in Python we do things with stuff.
  []
 
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.255     \end{itemize}}
+l.258     \end{itemize}}
                         
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1286,7 +1258,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.255     \end{itemize}}
+l.258     \end{itemize}}
                         
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1295,7 +1267,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.255     \end{itemize}}
+l.258     \end{itemize}}
                         
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1308,7 +1280,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.261 ...dopted Table \ref{tab:built_in_objects}.}
+l.264 ...dopted Table \ref{tab:built_in_objects}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1317,7 +1289,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.261 ...dopted Table \ref{tab:built_in_objects}.}
+l.264 ...dopted Table \ref{tab:built_in_objects}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1326,7 +1298,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.261 ...dopted Table \ref{tab:built_in_objects}.}
+l.264 ...dopted Table \ref{tab:built_in_objects}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1335,7 +1307,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.261 ...dopted Table \ref{tab:built_in_objects}.}
+l.264 ...dopted Table \ref{tab:built_in_objects}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1344,7 +1316,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.261 ...dopted Table \ref{tab:built_in_objects}.}
+l.264 ...dopted Table \ref{tab:built_in_objects}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1353,7 +1325,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.261 ...dopted Table \ref{tab:built_in_objects}.}
+l.264 ...dopted Table \ref{tab:built_in_objects}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1362,7 +1334,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    l
-l.261 ...dopted Table \ref{tab:built_in_objects}.}
+l.264 ...dopted Table \ref{tab:built_in_objects}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1371,7 +1343,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    l
-l.261 ...dopted Table \ref{tab:built_in_objects}.}
+l.264 ...dopted Table \ref{tab:built_in_objects}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1380,7 +1352,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    l
-l.261 ...dopted Table \ref{tab:built_in_objects}.}
+l.264 ...dopted Table \ref{tab:built_in_objects}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1389,7 +1361,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    d
-l.261 ...dopted Table \ref{tab:built_in_objects}.}
+l.264 ...dopted Table \ref{tab:built_in_objects}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1398,7 +1370,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    d
-l.261 ...dopted Table \ref{tab:built_in_objects}.}
+l.264 ...dopted Table \ref{tab:built_in_objects}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1407,24 +1379,24 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    d
-l.261 ...dopted Table \ref{tab:built_in_objects}.}
+l.264 ...dopted Table \ref{tab:built_in_objects}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
-72.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+75.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 272.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 275.
 
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.288 ...he type of the most complicated operand.}
+l.291 ...he type of the most complicated operand.}
                                                    %
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1433,7 +1405,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.288 ...he type of the most complicated operand.}
+l.291 ...he type of the most complicated operand.}
                                                    %
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1442,7 +1414,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.288 ...he type of the most complicated operand.}
+l.291 ...he type of the most complicated operand.}
                                                    %
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1456,14 +1428,14 @@ are all screwed up? I'm going to assume that you meant ##.
  (./_minted-notes/default-pyg-prefix.pygstyle) (./_minted-notes/vs.pygstyle)
 (./_minted-notes/50DA700E56856207B8578FFAE39EF61F764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex)
-Underfull \hbox (badness 3769) in paragraph at lines 309--309
+Underfull \hbox (badness 3769) in paragraph at lines 312--312
 []\OT1/cmr/m/n/10.95 Besides in-te-gers and float-ing points num-bers,
  []
 
 ! Undefined control sequence.
 <recently read> \rigtharrow 
                             
-l.343 ...ut any modules loaded (see Snippet 4.1).}
+l.346 ...ut any modules loaded (see Snippet 4.1).}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1496,18 +1468,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 (./_minted-notes/EDE8E363B921494EBA7F7D843B42DC8E764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex)
 LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-495.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 495.
-
-
-LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 495.
+498.
+ (/usr/share/texmf/tex/latex/R/tex/latex/omscmtt.fd
+File: omscmtt.fd 
+)
+LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 498.
 
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.495 ...types.html#str.format}{\texttt{format}}.}
+l.498 ...types.html#str.format}{\texttt{format}}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1516,7 +1487,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.495 ...types.html#str.format}{\texttt{format}}.}
+l.498 ...types.html#str.format}{\texttt{format}}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1525,7 +1496,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.495 ...types.html#str.format}{\texttt{format}}.}
+l.498 ...types.html#str.format}{\texttt{format}}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1535,7 +1506,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.512 ...                    & \texttt{\{:+.2f\}}}
+l.515 ...                    & \texttt{\{:+.2f\}}}
                                                                             ...
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1544,12 +1515,12 @@ the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
 LaTeX Font Info:    Trying to load font information for OML+cmtt on input line 
-514.
-LaTeX Font Info:    No file OMLcmtt.fd. on input line 514.
+517.
+LaTeX Font Info:    No file OMLcmtt.fd. on input line 517.
 
 LaTeX Font Warning: Font shape `OML/cmtt/m/n' undefined
 (Font)              using `OML/cmm/m/it' instead
-(Font)              for symbol `textgreater' on input line 514.
+(Font)              for symbol `textgreater' on input line 517.
 
 \openout4 = `notes.listing'.
 
@@ -1571,7 +1542,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.599 ...t, we leave the upper bound index blank.}
+l.602 ...t, we leave the upper bound index blank.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1580,7 +1551,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.599 ...t, we leave the upper bound index blank.}
+l.602 ...t, we leave the upper bound index blank.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1589,7 +1560,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.599 ...t, we leave the upper bound index blank.}
+l.602 ...t, we leave the upper bound index blank.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1608,7 +1579,7 @@ D4.pygtex) [27
 ! Extra }, or forgotten \endgroup.
 <recently read> }
                  
-l.654 		\texttt{S = ""}}
+l.657 		\texttt{S = ""}}
                          &  Empty string \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -1619,7 +1590,7 @@ deleted material, e.g., by typing `I$}'.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.681 ...ods, see Table \ref{tab:string_methods}.}
+l.684 ...ods, see Table \ref{tab:string_methods}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1628,7 +1599,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.681 ...ods, see Table \ref{tab:string_methods}.}
+l.684 ...ods, see Table \ref{tab:string_methods}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1637,7 +1608,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.681 ...ods, see Table \ref{tab:string_methods}.}
+l.684 ...ods, see Table \ref{tab:string_methods}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1646,7 +1617,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.681 ...ods, see Table \ref{tab:string_methods}.}
+l.684 ...ods, see Table \ref{tab:string_methods}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1655,7 +1626,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.681 ...ods, see Table \ref{tab:string_methods}.}
+l.684 ...ods, see Table \ref{tab:string_methods}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1664,7 +1635,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.681 ...ods, see Table \ref{tab:string_methods}.}
+l.684 ...ods, see Table \ref{tab:string_methods}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1673,7 +1644,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.681 ...ods, see Table \ref{tab:string_methods}.}
+l.684 ...ods, see Table \ref{tab:string_methods}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1682,7 +1653,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.681 ...ods, see Table \ref{tab:string_methods}.}
+l.684 ...ods, see Table \ref{tab:string_methods}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1691,7 +1662,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.681 ...ods, see Table \ref{tab:string_methods}.}
+l.684 ...ods, see Table \ref{tab:string_methods}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1710,7 +1681,7 @@ D4.pygtex) [30
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.725 ...cased characters converted to lowercase.}
+l.728 ...cased characters converted to lowercase.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1719,7 +1690,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.725 ...cased characters converted to lowercase.}
+l.728 ...cased characters converted to lowercase.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1728,7 +1699,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.725 ...cased characters converted to lowercase.}
+l.728 ...cased characters converted to lowercase.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1737,7 +1708,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.725 ...cased characters converted to lowercase.}
+l.728 ...cased characters converted to lowercase.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1746,7 +1717,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.725 ...cased characters converted to lowercase.}
+l.728 ...cased characters converted to lowercase.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1755,7 +1726,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.725 ...cased characters converted to lowercase.}
+l.728 ...cased characters converted to lowercase.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1778,7 +1749,7 @@ D4.pygtex) [32
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.794 ...nsidered part of the same string object.}
+l.797 ...nsidered part of the same string object.}
                                                   	
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1787,7 +1758,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.794 ...nsidered part of the same string object.}
+l.797 ...nsidered part of the same string object.}
                                                   	
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1796,7 +1767,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.794 ...nsidered part of the same string object.}
+l.797 ...nsidered part of the same string object.}
                                                   	
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1832,7 +1803,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    V
-l.909 ...ace changes in an existing list's items.}
+l.912 ...ace changes in an existing list's items.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1841,7 +1812,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    V
-l.909 ...ace changes in an existing list's items.}
+l.912 ...ace changes in an existing list's items.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1850,7 +1821,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    V
-l.909 ...ace changes in an existing list's items.}
+l.912 ...ace changes in an existing list's items.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1873,7 +1844,7 @@ D4.pygtex) [36]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    d
-l.999 ... \ref{sec:iterations_and_comprhensions}.}
+l.1002 ...\ref{sec:iterations_and_comprhensions}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1882,7 +1853,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    d
-l.999 ... \ref{sec:iterations_and_comprhensions}.}
+l.1002 ...\ref{sec:iterations_and_comprhensions}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1891,7 +1862,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    d
-l.999 ... \ref{sec:iterations_and_comprhensions}.}
+l.1002 ...\ref{sec:iterations_and_comprhensions}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1900,7 +1871,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    z
-l.999 ... \ref{sec:iterations_and_comprhensions}.}
+l.1002 ...\ref{sec:iterations_and_comprhensions}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1909,7 +1880,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    z
-l.999 ... \ref{sec:iterations_and_comprhensions}.}
+l.1002 ...\ref{sec:iterations_and_comprhensions}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1918,7 +1889,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    z
-l.999 ... \ref{sec:iterations_and_comprhensions}.}
+l.1002 ...\ref{sec:iterations_and_comprhensions}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1927,7 +1898,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    z
-l.999 ... \ref{sec:iterations_and_comprhensions}.}
+l.1002 ...\ref{sec:iterations_and_comprhensions}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1936,7 +1907,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    z
-l.999 ... \ref{sec:iterations_and_comprhensions}.}
+l.1002 ...\ref{sec:iterations_and_comprhensions}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1945,7 +1916,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    z
-l.999 ... \ref{sec:iterations_and_comprhensions}.}
+l.1002 ...\ref{sec:iterations_and_comprhensions}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1954,7 +1925,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    d
-l.999 ... \ref{sec:iterations_and_comprhensions}.}
+l.1002 ...\ref{sec:iterations_and_comprhensions}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1963,7 +1934,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    d
-l.999 ... \ref{sec:iterations_and_comprhensions}.}
+l.1002 ...\ref{sec:iterations_and_comprhensions}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -1972,7 +1943,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    d
-l.999 ... \ref{sec:iterations_and_comprhensions}.}
+l.1002 ...\ref{sec:iterations_and_comprhensions}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2000,7 +1971,7 @@ D4.pygtex)
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    d
-l.1074 ...hallow copy} of an existing dictionary.}
+l.1077 ...hallow copy} of an existing dictionary.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2009,7 +1980,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    d
-l.1074 ...hallow copy} of an existing dictionary.}
+l.1077 ...hallow copy} of an existing dictionary.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2018,20 +1989,20 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    d
-l.1074 ...hallow copy} of an existing dictionary.}
+l.1077 ...hallow copy} of an existing dictionary.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
 
-Underfull \hbox (badness 1184) in paragraph at lines 1074--1074
+Underfull \hbox (badness 1184) in paragraph at lines 1077--1077
 []\OT1/cmr/m/n/10.95 Like for lists, Python of-fers many [][]\OT1/cmtt/m/n/10.9
 5 methods to
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 1074--1074
+Underfull \hbox (badness 2020) in paragraph at lines 1077--1077
 \OT1/cmtt/m/n/10.95 .values() .items()\OT1/cmr/m/n/10.95 , get the con-sti-tu-t
 ive el-e-
  []
@@ -2060,7 +2031,7 @@ D4.pygtex) [41]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.1189 ...h is eventually printed as per line 11.}
+l.1192 ...h is eventually printed as per line 11.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2069,7 +2040,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.1189 ...h is eventually printed as per line 11.}
+l.1192 ...h is eventually printed as per line 11.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2078,7 +2049,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.1189 ...h is eventually printed as per line 11.}
+l.1192 ...h is eventually printed as per line 11.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2087,7 +2058,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.1189 ...h is eventually printed as per line 11.}
+l.1192 ...h is eventually printed as per line 11.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2096,7 +2067,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.1189 ...h is eventually printed as per line 11.}
+l.1192 ...h is eventually printed as per line 11.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2105,7 +2076,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.1189 ...h is eventually printed as per line 11.}
+l.1192 ...h is eventually printed as per line 11.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2114,7 +2085,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.1189 ...h is eventually printed as per line 11.}
+l.1192 ...h is eventually printed as per line 11.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2123,7 +2094,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.1189 ...h is eventually printed as per line 11.}
+l.1192 ...h is eventually printed as per line 11.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2132,7 +2103,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    c
-l.1189 ...h is eventually printed as per line 11.}
+l.1192 ...h is eventually printed as per line 11.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2146,7 +2117,7 @@ D4.pygtex)
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.1211 ...h{unique} and \emph{immutable} objects.}
+l.1214 ...h{unique} and \emph{immutable} objects.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2155,7 +2126,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.1211 ...h{unique} and \emph{immutable} objects.}
+l.1214 ...h{unique} and \emph{immutable} objects.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2164,7 +2135,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.1211 ...h{unique} and \emph{immutable} objects.}
+l.1214 ...h{unique} and \emph{immutable} objects.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2173,7 +2144,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.1216 ... does not follow any particular order).}
+l.1219 ... does not follow any particular order).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2182,7 +2153,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.1216 ... does not follow any particular order).}
+l.1219 ... does not follow any particular order).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2191,7 +2162,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.1216 ... does not follow any particular order).}
+l.1219 ... does not follow any particular order).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2215,7 +2186,7 @@ D4.pygtex) [43
 ! Undefined control sequence.
 <recently read> \notion 
                         
-l.1274 	\notion
+l.1277 	\notion
                {Our Python program may involve input and/or output operation...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2226,7 +2197,7 @@ and I'll forget about whatever was undefined.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1284 ...he function is a \texttt{file} object. }
+l.1287 ...he function is a \texttt{file} object. }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2235,7 +2206,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1284 ...he function is a \texttt{file} object. }
+l.1287 ...he function is a \texttt{file} object. }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2244,7 +2215,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1284 ...he function is a \texttt{file} object. }
+l.1287 ...he function is a \texttt{file} object. }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2253,7 +2224,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1289 ...turning a string object (see line 10). }
+l.1292 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2262,7 +2233,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1289 ...turning a string object (see line 10). }
+l.1292 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2271,7 +2242,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1289 ...turning a string object (see line 10). }
+l.1292 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2280,7 +2251,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1289 ...turning a string object (see line 10). }
+l.1292 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2289,7 +2260,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1289 ...turning a string object (see line 10). }
+l.1292 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2298,7 +2269,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1289 ...turning a string object (see line 10). }
+l.1292 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2307,7 +2278,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1289 ...turning a string object (see line 10). }
+l.1292 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2316,7 +2287,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1289 ...turning a string object (see line 10). }
+l.1292 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2325,7 +2296,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1289 ...turning a string object (see line 10). }
+l.1292 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2334,7 +2305,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    m
-l.1289 ...turning a string object (see line 10). }
+l.1292 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2343,7 +2314,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    m
-l.1289 ...turning a string object (see line 10). }
+l.1292 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2352,7 +2323,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    m
-l.1289 ...turning a string object (see line 10). }
+l.1292 ...turning a string object (see line 10). }
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2368,7 +2339,7 @@ D4.pygtex) [44
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1312 ...d write the result to a file (line 16).}
+l.1315 ...d write the result to a file (line 16).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2377,7 +2348,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1312 ...d write the result to a file (line 16).}
+l.1315 ...d write the result to a file (line 16).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2386,7 +2357,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    o
-l.1312 ...d write the result to a file (line 16).}
+l.1315 ...d write the result to a file (line 16).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2400,7 +2371,7 @@ D4.pygtex)
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    m
-l.1339 ...empty string \texttt{""} (see line 19).}
+l.1342 ...empty string \texttt{""} (see line 19).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2409,7 +2380,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    m
-l.1339 ...empty string \texttt{""} (see line 19).}
+l.1342 ...empty string \texttt{""} (see line 19).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2418,7 +2389,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    m
-l.1339 ...empty string \texttt{""} (see line 19).}
+l.1342 ...empty string \texttt{""} (see line 19).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2438,7 +2409,7 @@ D4.pygtex)
 (./_minted-notes/72A8B9B30A88BB616C3BA38739B52C97764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex)
 
-LaTeX Warning: Characters dropped after `\end{pythoncode}' on input line 1387.
+LaTeX Warning: Characters dropped after `\end{pythoncode}' on input line 1390.
 
 
 Underfull \vbox (badness 1838) has occurred while \output is active []
@@ -2446,18 +2417,18 @@ Underfull \vbox (badness 1838) has occurred while \output is active []
  [46
 
 ]
-Underfull \hbox (badness 1715) in paragraph at lines 1431--1431
+Underfull \hbox (badness 1715) in paragraph at lines 1434--1434
 []\OT1/cmr/m/it/10.95 In sim-ple terms, state-ments are the
  []
 
 
-Underfull \hbox (badness 1014) in paragraph at lines 1431--1431
+Underfull \hbox (badness 1014) in paragraph at lines 1434--1434
 \OT1/cmr/m/it/10.95 gested [omit-ted], pro-grams ``do things
  []
 
 [47] [48]
 ! Extra }, or forgotten \endgroup.
-l.1473 ...taining the \texttt{else} statement).} }
+l.1476 ...taining the \texttt{else} statement).} }
                                                   
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2495,7 +2466,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1557 ...html#while}{\texttt{while}} statements.}
+l.1560 ...html#while}{\texttt{while}} statements.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2504,7 +2475,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1557 ...html#while}{\texttt{while}} statements.}
+l.1560 ...html#while}{\texttt{while}} statements.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2513,7 +2484,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1557 ...html#while}{\texttt{while}} statements.}
+l.1560 ...html#while}{\texttt{while}} statements.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2522,7 +2493,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    w
-l.1557 ...html#while}{\texttt{while}} statements.}
+l.1560 ...html#while}{\texttt{while}} statements.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2531,7 +2502,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    w
-l.1557 ...html#while}{\texttt{while}} statements.}
+l.1560 ...html#while}{\texttt{while}} statements.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2540,7 +2511,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    w
-l.1557 ...html#while}{\texttt{while}} statements.}
+l.1560 ...html#while}{\texttt{while}} statements.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2549,7 +2520,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    w
-l.1562 ...t and running a block of code for each.}
+l.1565 ...t and running a block of code for each.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2558,7 +2529,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    w
-l.1562 ...t and running a block of code for each.}
+l.1565 ...t and running a block of code for each.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2567,7 +2538,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    w
-l.1562 ...t and running a block of code for each.}
+l.1565 ...t and running a block of code for each.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2576,7 +2547,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1562 ...t and running a block of code for each.}
+l.1565 ...t and running a block of code for each.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2585,7 +2556,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1562 ...t and running a block of code for each.}
+l.1565 ...t and running a block of code for each.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2594,7 +2565,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1562 ...t and running a block of code for each.}
+l.1565 ...t and running a block of code for each.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2608,7 +2579,7 @@ D4.pygtex) [51]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    w
-l.1600 ...ntil we get an empty string (line 13x).}
+l.1603 ...ntil we get an empty string (line 13x).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2617,7 +2588,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    w
-l.1600 ...ntil we get an empty string (line 13x).}
+l.1603 ...ntil we get an empty string (line 13x).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2626,7 +2597,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    w
-l.1600 ...ntil we get an empty string (line 13x).}
+l.1603 ...ntil we get an empty string (line 13x).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2635,7 +2606,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1605 ...the outcome to a second list (line 10).}
+l.1608 ...the outcome to a second list (line 10).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2644,7 +2615,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1605 ...the outcome to a second list (line 10).}
+l.1608 ...the outcome to a second list (line 10).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2653,7 +2624,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1605 ...the outcome to a second list (line 10).}
+l.1608 ...the outcome to a second list (line 10).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2681,7 +2652,7 @@ D4.pygtex) [53
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1665 ...tions.html#func-range}{\texttt{range}}.}
+l.1668 ...tions.html#func-range}{\texttt{range}}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2690,7 +2661,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1665 ...tions.html#func-range}{\texttt{range}}.}
+l.1668 ...tions.html#func-range}{\texttt{range}}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2699,7 +2670,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1665 ...tions.html#func-range}{\texttt{range}}.}
+l.1668 ...tions.html#func-range}{\texttt{range}}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2708,7 +2679,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1665 ...tions.html#func-range}{\texttt{range}}.}
+l.1668 ...tions.html#func-range}{\texttt{range}}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2717,7 +2688,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1665 ...tions.html#func-range}{\texttt{range}}.}
+l.1668 ...tions.html#func-range}{\texttt{range}}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2726,7 +2697,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    f
-l.1665 ...tions.html#func-range}{\texttt{range}}.}
+l.1668 ...tions.html#func-range}{\texttt{range}}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2740,7 +2711,7 @@ D4.pygtex)
 ! Undefined control sequence.
 <argument> ...ement that contains multiple \textt 
                                                   {for} loops is a nested \t...
-l.1684 ... can do something with it (see line 8).}
+l.1687 ... can do something with it (see line 8).}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2758,7 +2729,7 @@ D4.pygtex) [54
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    z
-l.1710 ...cond iterable, and so on and so forth).}
+l.1713 ...cond iterable, and so on and so forth).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2767,7 +2738,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    z
-l.1710 ...cond iterable, and so on and so forth).}
+l.1713 ...cond iterable, and so on and so forth).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2776,7 +2747,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    z
-l.1710 ...cond iterable, and so on and so forth).}
+l.1713 ...cond iterable, and so on and so forth).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2795,7 +2766,7 @@ D4.pygtex) [55
 ! Undefined control sequence.
 \kvtcb@title ...--- \texttt {for} loop Vs. \textt 
                                                   {list comprehension}
-l.1761 \end{pythoncode}
+l.1764 \end{pythoncode}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2836,7 +2807,7 @@ Chapter 5.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.1839 \hline
+l.1842 \hline
              
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
@@ -2844,18 +2815,18 @@ an alignment. Proceed, and I'll ignore this case.
 ! Misplaced \noalign.
 \hline ->\noalign 
                   {\ifnum 0=`}\fi \hrule \@height \arrayrulewidth \futurelet...
-l.1850 \hline
+l.1853 \hline
              
 I expect to see \noalign only after the \cr of
 an alignment. Proceed, and I'll ignore this case.
 
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-1868.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmtt.fd
+1871.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1871.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 1874.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2866,7 +2837,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.1885 ...es a three-dimensional array (line 18).}
+l.1888 ...es a three-dimensional array (line 18).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2875,7 +2846,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.1885 ...es a three-dimensional array (line 18).}
+l.1888 ...es a three-dimensional array (line 18).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2884,7 +2855,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.1885 ...es a three-dimensional array (line 18).}
+l.1888 ...es a three-dimensional array (line 18).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2893,7 +2864,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.1885 ...es a three-dimensional array (line 18).}
+l.1888 ...es a three-dimensional array (line 18).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2902,7 +2873,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.1885 ...es a three-dimensional array (line 18).}
+l.1888 ...es a three-dimensional array (line 18).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2911,7 +2882,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.1885 ...es a three-dimensional array (line 18).}
+l.1888 ...es a three-dimensional array (line 18).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2936,7 +2907,7 @@ D4.pygtex)
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.1960 ...has two dimensions (e.g., coordinates).}
+l.1963 ...has two dimensions (e.g., coordinates).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2945,7 +2916,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.1960 ...has two dimensions (e.g., coordinates).}
+l.1963 ...has two dimensions (e.g., coordinates).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2954,7 +2925,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.1960 ...has two dimensions (e.g., coordinates).}
+l.1963 ...has two dimensions (e.g., coordinates).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2963,7 +2934,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.1965 ...ension of the \texttt{DATA} has size 2.}
+l.1968 ...ension of the \texttt{DATA} has size 2.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2972,7 +2943,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.1965 ...ension of the \texttt{DATA} has size 2.}
+l.1968 ...ension of the \texttt{DATA} has size 2.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2981,7 +2952,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.1965 ...ension of the \texttt{DATA} has size 2.}
+l.1968 ...ension of the \texttt{DATA} has size 2.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2996,7 +2967,7 @@ are all screwed up? I'm going to assume that you meant ##.
 (./_minted-notes/06BD3D91D2D5B97927C7A9262973A042764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex)
 ! Extra }, or forgotten \endgroup.
-l.1999 			Attribute}
+l.2002 			Attribute}
                      & Synopsis \\
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -3010,7 +2981,7 @@ deleted material, e.g., by typing `I$}'.
 ! Undefined control sequence.
 <argument> \texxttt 
                     {dtypes}
-l.2027 ... is known in NumPy as \texttt{float64}.}
+l.2030 ... is known in NumPy as \texttt{float64}.}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3021,7 +2992,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \textttt 
                     {dtypes}
-l.2027 ... is known in NumPy as \texttt{float64}.}
+l.2030 ... is known in NumPy as \texttt{float64}.}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3032,7 +3003,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \textttt 
                     {dtype}
-l.2032 ...array.astype.html}{\texttt{.astype()}}.}
+l.2035 ...array.astype.html}{\texttt{.astype()}}.}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3043,7 +3014,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \textttt 
                     {dtype}
-l.2032 ...array.astype.html}{\texttt{.astype()}}.}
+l.2035 ...array.astype.html}{\texttt{.astype()}}.}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3061,7 +3032,7 @@ D4.pygtex) [63
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3070,7 +3041,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3079,7 +3050,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3088,7 +3059,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3097,7 +3068,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3106,7 +3077,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3115,7 +3086,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3124,7 +3095,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3133,7 +3104,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3142,7 +3113,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3151,7 +3122,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3160,7 +3131,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3169,7 +3140,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3178,7 +3149,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3187,7 +3158,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2110 	\end{itemize}}
+l.2112 	\end{itemize}}
                       
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3207,7 +3178,7 @@ D4.pygtex) [66
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2185 	}
+l.2187 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3216,7 +3187,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2185 	}
+l.2187 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3225,7 +3196,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2185 	}
+l.2187 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3234,7 +3205,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2185 	}
+l.2187 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3243,7 +3214,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2185 	}
+l.2187 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3252,7 +3223,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2185 	}
+l.2187 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3261,7 +3232,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2185 	}
+l.2187 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3270,7 +3241,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2185 	}
+l.2187 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3279,7 +3250,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2185 	}
+l.2187 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3288,7 +3259,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2185 	}
+l.2187 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3297,7 +3268,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2185 	}
+l.2187 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3306,7 +3277,61 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2185 	}
+l.2187 	}
+         
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2187 	}
+         
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2187 	}
+         
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2187 	}
+         
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2187 	}
+         
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2187 	}
+         
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2187 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3315,38 +3340,267 @@ are all screwed up? I'm going to assume that you meant ##.
 \openout4 = `notes.listing'.
 
 
-(./_minted-notes/638C672FA6E72BEACC855D5B0C2915E6764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [68
+(./_minted-notes/B44B1D061DCE542B117A2BEA5ED4893C764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex
+! Undefined control sequence.
+<argument> ...--+ create an array from my\fuction 
+                                                   for given coordinates\Fan...
+l.8 ...rray from my\fuction for given coordinates}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-] [69]
+) [68
+
+] [69] [70]
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2291 ... field name (see Snippet 5.7, line 11).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2291 ... field name (see Snippet 5.7, line 11).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2291 ... field name (see Snippet 5.7, line 11).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
 \openout4 = `notes.listing'.
 
 
-(./_minted-notes/638C672FA6E72BEACC855D5B0C2915E6764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [70
+(./_minted-notes/2412612A10D149EBD64F4851B8398DBC764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex) [71
 
-] [71]
+] [72]
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2336 ...inate matrices from coordinate vectors.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2336 ...inate matrices from coordinate vectors.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2336 ...inate matrices from coordinate vectors.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2336 ...inate matrices from coordinate vectors.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2336 ...inate matrices from coordinate vectors.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2336 ...inate matrices from coordinate vectors.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2336 ...inate matrices from coordinate vectors.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2336 ...inate matrices from coordinate vectors.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2336 ...inate matrices from coordinate vectors.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
 \openout4 = `notes.listing'.
 
 
-(./_minted-notes/638C672FA6E72BEACC855D5B0C2915E6764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [72
+(./_minted-notes/219B793E758A81220EF9F461F9684F95764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex)
+Underfull \vbox (badness 2608) has occurred while \output is active []
 
-] [73]
+ [73
+
+]
+(./contour.pgf) [74] [75]
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2433 ...ates a triangular matrix (see line 17).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2433 ...ates a triangular matrix (see line 17).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2433 ...ates a triangular matrix (see line 17).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2433 ...ates a triangular matrix (see line 17).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2433 ...ates a triangular matrix (see line 17).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2433 ...ates a triangular matrix (see line 17).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
 \openout4 = `notes.listing'.
 
 
-(./_minted-notes/638C672FA6E72BEACC855D5B0C2915E6764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [74
-
-] [75]
-\openout4 = `notes.listing'.
-
-
-(./_minted-notes/638C672FA6E72BEACC855D5B0C2915E6764ACE08D8ACD0933C5BDFEBD4BB53
+(./_minted-notes/1EC865C36D8626E5EE031DBAA16B308E764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex) [76
 
 ] [77]
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2494 ... two matrix-creating routines of NumPy.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2494 ... two matrix-creating routines of NumPy.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2494 ... two matrix-creating routines of NumPy.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2494 ... two matrix-creating routines of NumPy.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2494 ... two matrix-creating routines of NumPy.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2494 ... two matrix-creating routines of NumPy.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+
+LaTeX Warning: Reference `tab:matrix_class' on page 78 undefined on input line 
+2494.
+
 \openout4 = `notes.listing'.
 
 
@@ -3357,7 +3611,7 @@ D4.pygtex) [78
 ! Undefined control sequence.
 <argument> \rggedright 
                        What is a universal function?
-l.2367 ...ggedright What is a universal function?}
+l.2526 ...ggedright What is a universal function?}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3368,7 +3622,7 @@ and I'll forget about whatever was undefined.
 ! Illegal parameter number in definition of \next.
 <to be read again> 
                    t
-l.2368 ...ructuring NumPy code to leverage it.}}.}
+l.2527 ...ructuring NumPy code to leverage it.}}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3390,15 +3644,15 @@ Chapter 7.
 ] [85] [86]
 Appendix A.
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 2
-451.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/omlcmr.fd
+610.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2451.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2610.
 
 
-Overfull \hbox (11.11417pt too wide) in paragraph at lines 2448--2495
+Overfull \hbox (11.11417pt too wide) in paragraph at lines 2607--2654
  [][] 
  []
 
@@ -3408,7 +3662,7 @@ Overfull \hbox (11.11417pt too wide) in paragraph at lines 2448--2495
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2550 true_
+l.2709 true_
             divide(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3416,7 +3670,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2551 &
+l.2710 &
          Divide arguments element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3427,7 +3681,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2552 floor_
+l.2711 floor_
              divide(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3435,7 +3689,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2553 &
+l.2712 &
          Return the largest integer smaller or equal to the division of the ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3446,7 +3700,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2560 float_
+l.2719 float_
              power(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3454,7 +3708,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2561 &
+l.2720 &
          First array elements raised to powers from second array, element-wi...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3465,7 +3719,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2607 & Returns the greatest common divisor of \|
+l.2766 & Returns the greatest common divisor of \|
                                                   x1\| and \|x2\| \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3473,20 +3727,20 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2608 l
+l.2767 l
         cm(x1, x2, /[, out, where, casting, order, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2607--2608
+Underfull \hbox (badness 10000) in paragraph at lines 2766--2767
 []|\OT1/cmr/m/n/10.95 Returns the great-est com-mon di-vi-sor of
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2609 & Returns the lowest common multiple of \|
+l.2768 & Returns the lowest common multiple of \|
                                                  x1\| and \|x2\| \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3494,29 +3748,29 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2610 \bottomrule
+l.2769 \bottomrule
                   
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2609--2610
+Underfull \hbox (badness 10000) in paragraph at lines 2768--2769
 []|\OT1/cmr/m/n/10.95 Returns the low-est com-mon mul-ti-ple of
  []
 
 
-Overfull \hbox (5.19728pt too wide) in paragraph at lines 2532--2612
+Overfull \hbox (5.19728pt too wide) in paragraph at lines 2691--2771
  [][] 
  []
 
 
-LaTeX Warning: Float too large for page by 26.20242pt on input line 2612.
+LaTeX Warning: Float too large for page by 26.20242pt on input line 2771.
 
 [90] [91] [92]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2716 greater_
+l.2875 greater_
                equal(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3524,7 +3778,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2717 &
+l.2876 &
          Return the truth value of (x1 >= x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3535,7 +3789,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2720 less_
+l.2879 less_
             equal(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3543,7 +3797,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2721 &
+l.2880 &
          Return the truth value of (x1 <= x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3554,7 +3808,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2722 not_
+l.2881 not_
            equal(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3562,7 +3816,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2723 &
+l.2882 &
          Return (x1 != x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3573,7 +3827,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2726 logical_
+l.2885 logical_
                and(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3581,7 +3835,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2727 &
+l.2886 &
          Compute the truth value of x1 AND x2 element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3592,7 +3846,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2728 logical_
+l.2887 logical_
                or(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3600,7 +3854,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2729 &
+l.2888 &
          Compute the truth value of x1 OR x2 element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3611,7 +3865,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2730 logical_
+l.2889 logical_
                xor(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3619,7 +3873,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2731 &
+l.2890 &
          Compute the truth value of x1 XOR x2, element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3630,7 +3884,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2732 logical_
+l.2891 logical_
                not(x, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3638,7 +3892,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2733 &
+l.2892 &
          Compute the truth value of NOT x element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3659,45 +3913,49 @@ Appendix B.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 563320B7E95C187FA05DDCD325E45CEA;6229.
+(rerunfilecheck)             Checksum: 8432EC1981D819B6AFCFAD82781D9540;2487.
  ) 
 Here is how much of TeX's memory you used:
- 32776 strings out of 478994
- 674679 string characters out of 5858184
- 1171360 words of memory out of 5000000
- 49350 multiletter control sequences out of 15000+600000
- 417222 words of font info for 77 fonts, out of 8000000 for 9000
+ 30237 strings out of 479304
+ 639531 string characters out of 5869778
+ 1152136 words of memory out of 5000000
+ 46519 multiletter control sequences out of 15000+600000
+ 417527 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 86i,13n,117p,2384b,1074s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
-/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texl
-ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/local/texl
-ive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texliv
-e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/20
-21/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2021
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2021/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2021/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2021/tex
-mf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2021/texmf
--dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on notes.pdf (95 pages, 465955 bytes).
+ 86i,13n,117p,2384b,1192s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+t9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on notes.pdf (95 pages, 477664 bytes).
 PDF statistics:
- 928 PDF objects out of 1000 (max. 8388607)
- 799 compressed objects within 8 object streams
+ 944 PDF objects out of 1000 (max. 8388607)
+ 814 compressed objects within 9 object streams
  166 named destinations out of 1000 (max. 500000)
  317 words of extra memory for PDF output out of 10000 (max. 10000000)
 

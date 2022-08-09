@@ -72,6 +72,9 @@
 
 \makeatother
 
+%% ============================ Plots ====================================
+\usepackage{pgf}
+
 
 %% =========================== Color options ==============================
 % custom colors
@@ -2094,7 +2097,6 @@ dtype('float64')
 		\item From shape or value
 		\item From existing data
 		\item Creating record arrays (\texttt{np.rec})
-		\item Creating character arrays (\texttt{np.char})
 		\item Numerical ranges
 		\item Building matrices
 		\item The Matrix class
@@ -2117,7 +2119,6 @@ dtype('float64')
 	\label{tab:array_from_shape_or_value}
 	\begin{tabular}{lp{12cm}}
 		\toprule \toprule
-		\midrule
 			Routine & Synopsis \\
 			\midrule
 			\texttt{np.empty(shape[, dtype, order, like])} & Return a new array of given shape and type, without initializing entries \\
@@ -2129,7 +2130,8 @@ dtype('float64')
 			\texttt{np.zeros(shape[, dtype, order, like])} & Return a new array of given shape and type, filled with zeros \\
 			\texttt{np.full(shape, fill\_value[, dtype, order, like])} & Return a new array of given shape and type, filled with fill value \\
 			\texttt{full\_like(a, fill\_value[, dtype, order, ...])} & Return a full array with the same shape and type as a given array \\
-		\bottomrule 
+	     	\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
 	\end{tabular}
 \end{sidewaystable}
 
@@ -2176,11 +2178,11 @@ array([[1., 0., 0., 0.],
 
 \begin{paracol}{2}
 	\question{\raggedright Creating arrays from existing data}
-	\note{In Snippets 5.1 -- 5.4, we saw how to use \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array}{\texttt{array}} for passing data to a NumPy array. Further routines to create NumPy arrays from existing data include for example:
+	\note{In Snippets 5.1 -- 5.4, we saw how to use \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array}{\texttt{array}} for passing data to a NumPy array. Snippet 5.6 shows further routines to create NumPy arrays from existing data include for example:
 	\begin{itemize}
-		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.fromfunction.html#numpy.fromfunction}{\texttt{.fromfunction}}, creating an array by executing a function over each coordinate
-		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.fromfile.html#numpy.fromfile}{\texttt{.fromfile}}, creating an array from data in a text or binary file
-		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html#numpy.loadtxt}{\texttt{.loadtxt}}, loading data from a text file
+		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.fromfunction.html#numpy.fromfunction}{\texttt{.fromfunction}}, creating an array by executing a function over each coordinate (line 8)
+		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.fromfile.html#numpy.fromfile}{\texttt{.fromfile}}, creating an array from data in a text or binary file (line 19)
+		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html#numpy.loadtxt}{\texttt{.loadtxt}}, loading data from a text file (line 37). The example represents a real-world data set containing both numeric and text information. The first argument we pass \href{https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html#numpy.loadtxt}{\texttt{.loadtxt}} is a file object. To correctly parse the data, we also pass the following discretionary arguments to \href{https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html#numpy.loadtxt}{\texttt{.loadtxt}}: i) \texttt{comments="\#"} indicates that any lines in the file commencing with \texttt{\#} must be considered a comment, not a piece of data; ii) \texttt{delimiter=","} indicates that two items separated by the character \texttt{,} belong to different fields (i.e., `columns' to use a spreadsheet-alike vocabulary); iii) texttt{quotechar='"'} indicates that strings are enclosed between double quotes\footnote{This feature was introduced with NumPy 1.23.}.  
 	\end{itemize}
 	}
 \end{paracol}
@@ -2189,6 +2191,59 @@ array([[1., 0., 0., 0.],
 # import numpy with the socially accepted alias 'np'
 >>> import numpy as np
 
+# get data from a function
+# --+ create a function
+>>> my_function = lambda x, y: x - 0.5 * y ** 2
+# --+ create an array from my\fuction for given coordinates
+>>> np.fromfunction(my_function, (3, 3), dtype=float)
+array([[ 0. , -0.5, -2. ],
+       [ 1. ,  0.5, -1. ],
+       [ 2. ,  1.5,  0. ]])
+
+# get data from a binary file
+# --+ create an array from a list of numbers
+>>> D = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])))
+# --+ save the raw data to a binary file
+>>> D.tofile("data.bin")
+# --+ read the data back 
+>>> np.fromfile("data.bin", dtype=int)
+
+# get data from a text file
+# --+ create a string with the data and some qualitative comments on them
+>>> S = """
+# Below are some demographic data about Michael J. Jordan (basketball player)
+# from Wikipedia.
+# 
+# Data labels are:
+# 
+# NAME, BORN, NBA CHAMPIONSHIPS, AVERAGE POINT PER GAME
+"Jordan, Michael Jeffrey","17-02-1963",6,30.1
+"""
+# --+ write the data to a file 
+>>> with open("my_data", "w") as pipe:
+...     pipe.write(S)
+>>> pipe.close()
+# --+ read the data and assign them to a NumPy array
+>>> np.loadtxt(
+...   open("my_data", "r"),
+...       dtype={
+...             "names": (
+...                      "NAME",
+...                      "BORN",
+...                      "NBA CHAMPIONSHIPS",
+...                      "AVERAGE POINT PER GAME"
+...	                   ),
+...             "formats": ("S30", "S10", "i1", "f2"),
+...             },
+...       comments="#",
+...       delimiter=",",
+...       quotechar='"'
+...   )
+array((b'Jordan, Michael Jeffrey', b'17-02-1963', 6, 30.1),
+       dtype=[('NAME', 'S30'),('BORN', 'S10'),
+             ('NBA CHAMPIONSHIPS', 'i1'),
+             ('AVERAGE POINT PER GAME', '<f2')]
+)
 \end{pythoncode}
 
 \begin{sidewaystable}[!htbp]
@@ -2197,7 +2252,6 @@ array([[1., 0., 0., 0.],
 	\label{tab:array_from_existing_data}
 	\begin{tabular}{lp{12cm}}
 		\toprule \toprule
-		\midrule
 			Routine & Synopsis \\
 			\midrule
 			\texttt{np.array(object[,dtype, copy, subok, \ldots])}
@@ -2226,56 +2280,31 @@ array([[1., 0., 0., 0.],
                         & A new 1-D array initialized from text data in a string\\
                         \texttt{np.loadtxt(fname[, dtype, comments, delimiter, ...])}
                         & Load data from a text file\\
-		\bottomrule 
+	     				\bottomrule \\[-1.8ex]
+						\multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
 	\end{tabular}
 \end{sidewaystable}
 \clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Creating arrays from existing data}
-	\note{}
+	\question{\raggedright Record arrays}
+	\note{NumPy arrays do no contain any information about the attributes of the data. For example, a NumPy array cannot accommodate any meta-data, such as the names of the fields included in the data. Here is where \href{https://numpy.org/doc/stable/reference/routines.array-creation.html}{\texttt{.rec}} kick in (see Table \ref{tab:array_for_record_arrays}). For example, \href{https://numpy.org/doc/stable/reference/generated/numpy.core.records.array.html#numpy.core.records.array}{.core.records.array} allows to flexibly specify a field's type and name (see Snippet 5.7, line 8). Once a `recarray' is created, it is possible to fetch its data by field name (see Snippet 5.7, line 11).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.6 --- creating arrays from existing data}
-# import numpy with the socially accepted alias 'np'
->>> import numpy as np
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.7 --- creating record arrays}
+# import records array with an alias that does not conflict with
+# `standard' NumPy arrays
+>>> from numpy.core.records import array as recarray
 
-# get data from a function
-# --+ create a function
->>> my_function = lambda x, y: x - 0.5 * y ** 2
-# --+ create an array from my_fuction for given coordinates
->>> np.fromfunction(my_function, (3, 3), dtype=float)
-array([[ 0. , -0.5, -2. ],
-       [ 1. ,  0.5, -1. ],
-       [ 2. ,  1.5,  0. ]])
+# the data
+>>> LOCS = [("51.5072° N", "0.1276° W"), ("35.6762° N", "139.6503° E")]
 
-# get data from a binary file
-# --+ create an array from a list of numbers
->>> D = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9])))
-# --+ save the raw data to a binary file
->>> D.tofile("data.bin")
-# --+ read the data back 
->>> np.fromfile("data.bin", dtype=int)
+# create a recarray
+>>> D = recarray(LOCS, formats=["U12", "U12"], names=["Latitude", "Longitude"])
 
-# get data from a text file
-# --+ create a string with the data and some qualitative comments on them
->>> S = """
-# Below are some demographic data about Michael J. Jordan (basketball player)
-# from Wikipedia.
-# 
-# Data labels are:
-# 
-# NAME, BORN, NBA CHAMPIONSHIPS, AVERAGE POINT PER GAME
-"Jordan, Michael Jeffrey","February 17, 1963",6,30.1
-"""
-# --+ write the data to a file 
->>> with open("my_data", "w") as pipe:
-...     pipe.write(S)
->>> pipe.close()
-# --+ read the data back
->>> D = np.loadtxt(open("my_data", "r"), comments="#", delimiter="\"")
-
-
+# fetch the data by field name
+>>> D.Latitude
+array(['51.5072° N', '35.6762° N'], dtype='<U12')
 \end{pythoncode}
 
 \begin{sidewaystable}[!htbp]
@@ -2284,51 +2313,92 @@ array([[ 0. , -0.5, -2. ],
 	\label{tab:array_for_record_arrays}
 	\begin{tabular}{lp{12cm}}
 		\toprule \toprule
-		\midrule
 			Routine & Synopsis \\
 			\midrule
-			\texttt{} & \\
-		\bottomrule 
+			\texttt{np.core.records.array(obj[, dtype, shape, ...])} &
+			Construct a record array from a wide-variety of objects\\
+			\texttt{np.core.records.fromarrays(arrayList[, dtype, ...])} &
+			Create a record array from a (flat) list of arrays\\
+			\texttt{np.core.records.fromrecords(recList[, dtype, ...])} &
+			Create a recarray from a list of records in text form\\
+			\texttt{np.core.records.fromstring(datastring[, dtype, ...])} &
+			Create a record array from binary data\\
+			\texttt{np.core.records.fromfile(fd[, dtype, shape, ...])} &
+			Create an array from binary file data\\
+			\bottomrule \\[-1.8ex]
+		    \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
 	\end{tabular}
 \end{sidewaystable}
 \clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Creating arrays from existing data}
-	\note{}
+	\question{\raggedright Creating numerical ranges}
+	\note{One may want to create a numerical range for different reasons, including running functional analysis or computer simulation. NumPy has a bunch of array-creating routines for numerical ranges (see Table \ref{tab:array_from_numerical_ranges}), some of which that are quite popular in the fields of technical and scientific computation as well as data science. For example, \href{https://numpy.org/doc/stable/reference/generated/numpy.arange.html#numpy.arange}{\texttt{np.arange}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.linspace.html#numpy.linspace}{\texttt{np.linspace}} frequently appear in Python programs when it comes to create evenly spaced values in a certain interval and evely spaced samples respectively (see Snippet 5.8, lines XX and XX). Another popular routine is \href{https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid}{\texttt{.meshgrid}}, returning coordinate matrices from coordinate vectors.}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.6 --- creating arrays from existing data}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.8 --- creating numerical ranges}
 # import numpy with the socially accepted alias 'np'
 >>> import numpy as np
 
+# two ranges of evenly spaced values
+# --+ evenly spaced values between 0 and 10
+>>> np.arange(0, 10, 1)
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+# --+ ... equivalent to
+>>> np.arange(10)
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+# --+ evenly spaced values between 0 and 10 divided by a 2-unit step
+>>> np.arange(0, 10, 2)
+array([0, 2, 4, 6, 8])
+
+# 50 evenly spaced values between 0 and 1
+>>> np.linspace(0, 1, 10)
+array([0.        , 0.11111111, 0.22222222, 0.33333333, 0.44444444,
+       0.55555556, 0.66666667, 0.77777778, 0.88888889, 1.        ])
+
+# get coordinate matrices from coordinate vectors 
+# --+ the 'x-' and 'y-axis' vectors
+>>> X = np.linspace(0, 1, 10)
+>>> Y = np.linspace(0, 1, 5)
+# --+ get 'x-axis' ('y-axis') coordinates for any value of vector Y (X)
+>>> XX, YY = np.meshgrid(X, Y)
+>>> XX 
+array([[0.        , 0.11111111, 0.22222222, 0.33333333, 0.44444444,
+        0.55555556, 0.66666667, 0.77777778, 0.88888889, 1.        ],
+       [0.        , 0.11111111, 0.22222222, 0.33333333, 0.44444444,
+        0.55555556, 0.66666667, 0.77777778, 0.88888889, 1.        ],
+       [0.        , 0.11111111, 0.22222222, 0.33333333, 0.44444444,
+        0.55555556, 0.66666667, 0.77777778, 0.88888889, 1.        ],
+       [0.        , 0.11111111, 0.22222222, 0.33333333, 0.44444444,
+        0.55555556, 0.66666667, 0.77777778, 0.88888889, 1.        ],
+       [0.        , 0.11111111, 0.22222222, 0.33333333, 0.44444444,
+        0.55555556, 0.66666667, 0.77777778, 0.88888889, 1.        ]])
+>>> YY 
+array([[0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  ],
+       [0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25],
+       [0.5 , 0.5 , 0.5 , 0.5 , 0.5 , 0.5 , 0.5 , 0.5 , 0.5 , 0.5 ],
+       [0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75, 0.75],
+       [1.  , 1.  , 1.  , 1.  , 1.  , 1.  , 1.  , 1.  , 1.  , 1.  ]])
+# --+ create a matrix from X and Y 
+>>> ZZ = np.sqrt(XX**2 + YY**2)
+# --+ check the dimensions of the newly created objects 
+>>> print(XX.shape, YY.shape, ZZ.shape)
+>>> ((101, 101), (101, 101), (101, 101))
+# --+ make a contour plot showing the associations among X, Y, and Z 
+# (see Figure 5.1)
+>>> fig = plt.figure()
+>>> ax = fig.add_subplot(111)
+>>> ax = plt.contourf(X, Y, ZZ)
+>>> plt.axis('scaled')
+>>> plt.colorbar()
+>>> plt.show()
 \end{pythoncode}
 
-\begin{sidewaystable}[!htbp]
-	\centering
-	\caption{Routines for Creating Character Arrays}
-	\label{tab:array_for_character_arrays}
-	\begin{tabular}{lp{12cm}}
-		\toprule \toprule
-		\midrule
-			Routine & Synopsis \\
-			\midrule
-			\texttt{} & \\
-		\bottomrule 
-	\end{tabular}
-\end{sidewaystable}
-\clearpage
-
-\begin{paracol}{2}
-	\question{\raggedright Creating arrays from existing data}
-	\note{}
-\end{paracol}
-
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.6 --- creating arrays from existing data}
-# import numpy with the socially accepted alias 'np'
->>> import numpy as np
-
-\end{pythoncode}
+\begin{figure}[!htbp]
+\input{contour.pgf}
+\caption{A contour plot showing the associations among X, Y, and Z. Notes: the data behind this plot come from Snippet 5.8, lines 22 - 44.}
+\label{fig:contour_plot}
+\end{figure}
 
 \begin{sidewaystable}[!htbp]
 	\centering
@@ -2336,24 +2406,61 @@ array([[ 0. , -0.5, -2. ],
 	\label{tab:array_from_numerical_ranges}
 	\begin{tabular}{lp{12cm}}
 		\toprule \toprule
-		\midrule
 			Routine & Synopsis \\
 			\midrule
-			\texttt{} & \\
-		\bottomrule 
+			\texttt{np.arange([start,] stop[, step,][, dtype, like])}&
+			Return evenly spaced values within a given interval\\
+			\texttt{np.linspace(start, stop[, num, endpoint, ...])}&
+			Return evenly spaced numbers over a specified interval\\
+			\texttt{np.logspace(start, stop[, num, endpoint, base, ...])}&
+			Return numbers spaced evenly on a log scale\\
+			\texttt{np.geomspace(start, stop[, num, endpoint, ...])}&
+			Return numbers spaced evenly on a log scale (a geometric progression)\\
+			\texttt{np.meshgrid(*xi[, copy, sparse, indexing])}&
+			Return coordinate matrices from coordinate vectors\\
+			\texttt{np.mgrid}&
+			\texttt{nd\_grid} instance which returns a dense multi-dimensional ``meshgrid''\\
+			\texttt{np.ogrid}&
+			\texttt{nd\_grid} instance which returns an open multi-dimensional ``meshgrid''\\
+			\bottomrule \\[-1.8ex]
+			\multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
 	\end{tabular}
 \end{sidewaystable}
 \clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Creating arrays from existing data}
-	\note{}
+	\question{\raggedright Building matrices}
+	\note{NumPy has routines to create arrays from an existing matrix as well as build matrices with certain properties (see Table \ref{tab:array_for_building_matrices}) As Snippet 5.9 shows, \href{https://numpy.org/doc/stable/reference/generated/numpy.diag.html#numpy.diag}{\texttt{.diag}} creates an array by fetching a matrix's diagonal (see line 10), while \href{https://numpy.org/doc/stable/reference/generated/numpy.tri.html#numpy.tri}{\texttt{.tri}} creates a triangular matrix (see line 17).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.6 --- creating arrays from existing data}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.9 --- creating arrays from existing data}
 # import numpy with the socially accepted alias 'np'
 >>> import numpy as np
 
+# create an array by fetching a matrix diagonal 
+# --+ the matrix 
+>>> M = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+>>> M.shape
+(3, 3)
+# --+ the new array 
+>>> A = np.diag(M)
+>>> print(A)
+[1 5 9]
+>>> A.shape
+(3,)
+
+# create a triangular matrix
+>>> np.tri(10, 10)
+array([[1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
+       [1., 1., 0., 0., 0., 0., 0., 0., 0., 0.],
+       [1., 1., 1., 0., 0., 0., 0., 0., 0., 0.],
+       [1., 1., 1., 1., 0., 0., 0., 0., 0., 0.],
+       [1., 1., 1., 1., 1., 0., 0., 0., 0., 0.],
+       [1., 1., 1., 1., 1., 1., 0., 0., 0., 0.],
+       [1., 1., 1., 1., 1., 1., 1., 0., 0., 0.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 0., 0.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 0.],
+       [1., 1., 1., 1., 1., 1., 1., 1., 1., 1.]])
 \end{pythoncode}
 
 \begin{sidewaystable}[!htbp]
@@ -2362,19 +2469,36 @@ array([[ 0. , -0.5, -2. ],
 	\label{tab:array_for_building_matrices}
 	\begin{tabular}{lp{12cm}}
 		\toprule \toprule
-		\midrule
 			Routine & Synopsis \\
 			\midrule
-			\texttt{} & \\
-		\bottomrule 
+			\texttt{np.diag(v[, k])}
+			&Extract a diagonal or construct a diagonal array \\
+			\texttt{np.diagflat(v[, k])}
+			&Create a two-dimensional array with the flattened input as a diagonal\\
+		        \texttt{np.tri(N[, M, k, dtype, like])}
+			&An array with ones at and below the given diagonal and zeros elsewhere\\
+			\texttt{np.tril(m[, k])}
+			&Lower triangle of an array\\
+			\texttt{np.triu(m[, k])}
+			&Upper triangle of an array\\
+			\texttt{np.vander(x[, N, increasing])}
+			&Generate a Vandermonde matrix\\
+			\bottomrule \\[-1.8ex]
+			\multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
 	\end{tabular}
 \end{sidewaystable}
 \clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Creating arrays from existing data}
-	\note{}
+	\question{\raggedright The Matrix Class}
+	\note{In Snippet 5.9, line 17, I claim to create a matrix. Actually, the outcome displayed in line 18 is consistent with the concept of `matrix' we have been taught in a typical linear algebra class: what a human being sees is a set of numbers arranged in rows and columns. However, in NumPy terms, the object displayed in line 18 is an array with two dimensions. If we want to create a NumPy Matrix Class object, we have to call \href{https://numpy.org/doc/stable/reference/generated/numpy.matrix.html#numpy.matrix}{\texttt{np.matrix}}, a subclass of \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray}{\texttt{np.ndarray}}. Table \ref{tab:matrix_class} illustrates the two matrix-creating routines of NumPy.}
 \end{paracol}
+
+\begin{paracol}{2}
+	\question{What is the advantage of using a matrix class object?}
+	\note{As we will see later on in this chapter, the advantage of using a matrix class object is that we can use the matrix class object to perform matrix operations with a simple and intuitive syntax. For example, we can use the matrix class object to perform matrix multiplication, matrix addition, and matrix subtraction.}
+\end{paracol}
+
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.6 --- creating arrays from existing data}
 # import numpy with the socially accepted alias 'np'
@@ -2388,7 +2512,6 @@ array([[ 0. , -0.5, -2. ],
 	\label{tab:array_for_matrix_class}
 	\begin{tabular}{lp{12cm}}
 		\toprule \toprule
-		\midrule
 			Routine & Synopsis \\
 			\midrule
 			\texttt{} & \\

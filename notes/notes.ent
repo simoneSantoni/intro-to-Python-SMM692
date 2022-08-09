@@ -24,6 +24,15 @@ as
 C.
 \@endanenote 
 \@doanenote {9}
+macro:->This
+feature
+was
+introduced
+with
+NumPy
+1.23.
+\@endanenote 
+\@doanenote {10}
 macro:->Here
 is
 an

@@ -1,0 +1,57 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import numpy with the socially accepted alias 'np'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{c+c1}{\PYGZsh{} two ranges of evenly spaced values}
+\PYG{c+c1}{\PYGZsh{} --+ evenly spaced values between 0 and 10}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{])}
+\PYG{c+c1}{\PYGZsh{} --+ ... equivalent to}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{])}
+\PYG{c+c1}{\PYGZsh{} --+ evenly spaced values between 0 and 10 divided by a 2-unit step}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} 50 evenly spaced values between 0 and 1}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mf}{0.}        \PYG{p}{,} \PYG{l+m+mf}{0.11111111}\PYG{p}{,} \PYG{l+m+mf}{0.22222222}\PYG{p}{,} \PYG{l+m+mf}{0.33333333}\PYG{p}{,} \PYG{l+m+mf}{0.44444444}\PYG{p}{,}
+       \PYG{l+m+mf}{0.55555556}\PYG{p}{,} \PYG{l+m+mf}{0.66666667}\PYG{p}{,} \PYG{l+m+mf}{0.77777778}\PYG{p}{,} \PYG{l+m+mf}{0.88888889}\PYG{p}{,} \PYG{l+m+mf}{1.}        \PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} get coordinate matrices from coordinate vectors}
+\PYG{c+c1}{\PYGZsh{} --+ the 'x-' and 'y-axis' vectors}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Y} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ get 'x-axis' ('y-axis') coordinates for any value of vector Y (X)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{XX}\PYG{p}{,} \PYG{n}{YY} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{meshgrid}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{Y}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{XX}
+\PYG{n}{array}\PYG{p}{([[}\PYG{l+m+mf}{0.}        \PYG{p}{,} \PYG{l+m+mf}{0.11111111}\PYG{p}{,} \PYG{l+m+mf}{0.22222222}\PYG{p}{,} \PYG{l+m+mf}{0.33333333}\PYG{p}{,} \PYG{l+m+mf}{0.44444444}\PYG{p}{,}
+        \PYG{l+m+mf}{0.55555556}\PYG{p}{,} \PYG{l+m+mf}{0.66666667}\PYG{p}{,} \PYG{l+m+mf}{0.77777778}\PYG{p}{,} \PYG{l+m+mf}{0.88888889}\PYG{p}{,} \PYG{l+m+mf}{1.}        \PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{0.}        \PYG{p}{,} \PYG{l+m+mf}{0.11111111}\PYG{p}{,} \PYG{l+m+mf}{0.22222222}\PYG{p}{,} \PYG{l+m+mf}{0.33333333}\PYG{p}{,} \PYG{l+m+mf}{0.44444444}\PYG{p}{,}
+        \PYG{l+m+mf}{0.55555556}\PYG{p}{,} \PYG{l+m+mf}{0.66666667}\PYG{p}{,} \PYG{l+m+mf}{0.77777778}\PYG{p}{,} \PYG{l+m+mf}{0.88888889}\PYG{p}{,} \PYG{l+m+mf}{1.}        \PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{0.}        \PYG{p}{,} \PYG{l+m+mf}{0.11111111}\PYG{p}{,} \PYG{l+m+mf}{0.22222222}\PYG{p}{,} \PYG{l+m+mf}{0.33333333}\PYG{p}{,} \PYG{l+m+mf}{0.44444444}\PYG{p}{,}
+        \PYG{l+m+mf}{0.55555556}\PYG{p}{,} \PYG{l+m+mf}{0.66666667}\PYG{p}{,} \PYG{l+m+mf}{0.77777778}\PYG{p}{,} \PYG{l+m+mf}{0.88888889}\PYG{p}{,} \PYG{l+m+mf}{1.}        \PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{0.}        \PYG{p}{,} \PYG{l+m+mf}{0.11111111}\PYG{p}{,} \PYG{l+m+mf}{0.22222222}\PYG{p}{,} \PYG{l+m+mf}{0.33333333}\PYG{p}{,} \PYG{l+m+mf}{0.44444444}\PYG{p}{,}
+        \PYG{l+m+mf}{0.55555556}\PYG{p}{,} \PYG{l+m+mf}{0.66666667}\PYG{p}{,} \PYG{l+m+mf}{0.77777778}\PYG{p}{,} \PYG{l+m+mf}{0.88888889}\PYG{p}{,} \PYG{l+m+mf}{1.}        \PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{0.}        \PYG{p}{,} \PYG{l+m+mf}{0.11111111}\PYG{p}{,} \PYG{l+m+mf}{0.22222222}\PYG{p}{,} \PYG{l+m+mf}{0.33333333}\PYG{p}{,} \PYG{l+m+mf}{0.44444444}\PYG{p}{,}
+        \PYG{l+m+mf}{0.55555556}\PYG{p}{,} \PYG{l+m+mf}{0.66666667}\PYG{p}{,} \PYG{l+m+mf}{0.77777778}\PYG{p}{,} \PYG{l+m+mf}{0.88888889}\PYG{p}{,} \PYG{l+m+mf}{1.}        \PYG{p}{]])}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{YY}
+\PYG{n}{array}\PYG{p}{([[}\PYG{l+m+mf}{0.}  \PYG{p}{,} \PYG{l+m+mf}{0.}  \PYG{p}{,} \PYG{l+m+mf}{0.}  \PYG{p}{,} \PYG{l+m+mf}{0.}  \PYG{p}{,} \PYG{l+m+mf}{0.}  \PYG{p}{,} \PYG{l+m+mf}{0.}  \PYG{p}{,} \PYG{l+m+mf}{0.}  \PYG{p}{,} \PYG{l+m+mf}{0.}  \PYG{p}{,} \PYG{l+m+mf}{0.}  \PYG{p}{,} \PYG{l+m+mf}{0.}  \PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{0.25}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{p}{,} \PYG{l+m+mf}{0.25}\PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{0.5} \PYG{p}{,} \PYG{l+m+mf}{0.5} \PYG{p}{,} \PYG{l+m+mf}{0.5} \PYG{p}{,} \PYG{l+m+mf}{0.5} \PYG{p}{,} \PYG{l+m+mf}{0.5} \PYG{p}{,} \PYG{l+m+mf}{0.5} \PYG{p}{,} \PYG{l+m+mf}{0.5} \PYG{p}{,} \PYG{l+m+mf}{0.5} \PYG{p}{,} \PYG{l+m+mf}{0.5} \PYG{p}{,} \PYG{l+m+mf}{0.5} \PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{0.75}\PYG{p}{,} \PYG{l+m+mf}{0.75}\PYG{p}{,} \PYG{l+m+mf}{0.75}\PYG{p}{,} \PYG{l+m+mf}{0.75}\PYG{p}{,} \PYG{l+m+mf}{0.75}\PYG{p}{,} \PYG{l+m+mf}{0.75}\PYG{p}{,} \PYG{l+m+mf}{0.75}\PYG{p}{,} \PYG{l+m+mf}{0.75}\PYG{p}{,} \PYG{l+m+mf}{0.75}\PYG{p}{,} \PYG{l+m+mf}{0.75}\PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{1.}  \PYG{p}{,} \PYG{l+m+mf}{1.}  \PYG{p}{,} \PYG{l+m+mf}{1.}  \PYG{p}{,} \PYG{l+m+mf}{1.}  \PYG{p}{,} \PYG{l+m+mf}{1.}  \PYG{p}{,} \PYG{l+m+mf}{1.}  \PYG{p}{,} \PYG{l+m+mf}{1.}  \PYG{p}{,} \PYG{l+m+mf}{1.}  \PYG{p}{,} \PYG{l+m+mf}{1.}  \PYG{p}{,} \PYG{l+m+mf}{1.}  \PYG{p}{]])}
+\PYG{c+c1}{\PYGZsh{} --+ create a matrix from X and Y}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{ZZ} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{sqrt}\PYG{p}{(}\PYG{n}{XX}\PYG{o}{**}\PYG{l+m+mi}{2} \PYG{o}{+} \PYG{n}{YY}\PYG{o}{**}\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ check the dimensions of the newly created objects}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{XX}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{,} \PYG{n}{YY}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{,} \PYG{n}{ZZ}\PYG{o}{.}\PYG{n}{shape}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{p}{((}\PYG{l+m+mi}{101}\PYG{p}{,} \PYG{l+m+mi}{101}\PYG{p}{),} \PYG{p}{(}\PYG{l+m+mi}{101}\PYG{p}{,} \PYG{l+m+mi}{101}\PYG{p}{),} \PYG{p}{(}\PYG{l+m+mi}{101}\PYG{p}{,} \PYG{l+m+mi}{101}\PYG{p}{))}
+\PYG{c+c1}{\PYGZsh{} --+ make a contour plot showing the associations among X, Y, and Z}
+\PYG{c+c1}{\PYGZsh{} (see Figure 5.1)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{fig} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{fig}\PYG{o}{.}\PYG{n}{add\PYGZus{}subplot}\PYG{p}{(}\PYG{l+m+mi}{111}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{ax} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{contourf}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{Y}\PYG{p}{,} \PYG{n}{ZZ}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{axis}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}scaled\PYGZsq{}}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{colorbar}\PYG{p}{()}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{show}\PYG{p}{()}
+\end{Verbatim}

@@ -1,0 +1,58 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import numpy with the socially accepted alias 'np'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{c+c1}{\PYGZsh{} get data from a function}
+\PYG{c+c1}{\PYGZsh{} --+ create a function}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{my\PYGZus{}function} \PYG{o}{=} \PYG{k}{lambda} \PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{:} \PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{l+m+mf}{0.5} \PYG{o}{*} \PYG{n}{y} \PYG{o}{**} \PYG{l+m+mi}{2}
+\PYG{c+c1}{\PYGZsh{} --+ create an array from my\fuction for given coordinates}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{fromfunction}\PYG{p}{(}\PYG{n}{my\PYGZus{}function}\PYG{p}{,} \PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{),} \PYG{n}{dtype}\PYG{o}{=}\PYG{n+nb}{float}\PYG{p}{)}
+\PYG{n}{array}\PYG{p}{([[} \PYG{l+m+mf}{0.} \PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.5}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{2.} \PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mf}{1.} \PYG{p}{,}  \PYG{l+m+mf}{0.5}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.} \PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mf}{2.} \PYG{p}{,}  \PYG{l+m+mf}{1.5}\PYG{p}{,}  \PYG{l+m+mf}{0.} \PYG{p}{]])}
+
+\PYG{c+c1}{\PYGZsh{} get data from a binary file}
+\PYG{c+c1}{\PYGZsh{} --+ create an array from a list of numbers}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{])))}
+\PYG{c+c1}{\PYGZsh{} --+ save the raw data to a binary file}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D}\PYG{o}{.}\PYG{n}{tofile}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}data.bin\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ read the data back}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{fromfile}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}data.bin\PYGZdq{}}\PYG{p}{,} \PYG{n}{dtype}\PYG{o}{=}\PYG{n+nb}{int}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} get data from a text file}
+\PYG{c+c1}{\PYGZsh{} --+ create a string with the data and some qualitative comments on them}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{l+s+s2}{\PYGZsh{} Below are some demographic data about Michael J. Jordan (basketball player)}
+\PYG{l+s+s2}{\PYGZsh{} from Wikipedia.}
+\PYG{l+s+s2}{\PYGZsh{}}
+\PYG{l+s+s2}{\PYGZsh{} Data labels are:}
+\PYG{l+s+s2}{\PYGZsh{}}
+\PYG{l+s+s2}{\PYGZsh{} NAME, BORN, NBA CHAMPIONSHIPS, AVERAGE POINT PER GAME}
+\PYG{l+s+s2}{\PYGZdq{}Jordan, Michael Jeffrey\PYGZdq{},\PYGZdq{}17\PYGZhy{}02\PYGZhy{}1963\PYGZdq{},6,30.1}
+\PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}\PYGZdq{}}
+\PYG{c+c1}{\PYGZsh{} --+ write the data to a file}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}my\PYGZus{}data\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{pipe}\PYG{p}{:}
+\PYG{o}{...}     \PYG{n}{pipe}\PYG{o}{.}\PYG{n}{write}\PYG{p}{(}\PYG{n}{S}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{pipe}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\PYG{c+c1}{\PYGZsh{} --+ read the data and assign them to a NumPy array}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{loadtxt}\PYG{p}{(}
+\PYG{o}{...}   \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}my\PYGZus{}data\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{),}
+\PYG{o}{...}       \PYG{n}{dtype}\PYG{o}{=}\PYG{p}{\PYGZob{}}
+\PYG{o}{...}             \PYG{l+s+s2}{\PYGZdq{}names\PYGZdq{}}\PYG{p}{:} \PYG{p}{(}
+\PYG{o}{...}                      \PYG{l+s+s2}{\PYGZdq{}NAME\PYGZdq{}}\PYG{p}{,}
+\PYG{o}{...}                      \PYG{l+s+s2}{\PYGZdq{}BORN\PYGZdq{}}\PYG{p}{,}
+\PYG{o}{...}                      \PYG{l+s+s2}{\PYGZdq{}NBA CHAMPIONSHIPS\PYGZdq{}}\PYG{p}{,}
+\PYG{o}{...}                      \PYG{l+s+s2}{\PYGZdq{}AVERAGE POINT PER GAME\PYGZdq{}}
+\PYG{o}{...}	                   \PYG{p}{),}
+\PYG{o}{...}             \PYG{l+s+s2}{\PYGZdq{}formats\PYGZdq{}}\PYG{p}{:} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}S30\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}S10\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}i1\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}f2\PYGZdq{}}\PYG{p}{),}
+\PYG{o}{...}             \PYG{p}{\PYGZcb{},}
+\PYG{o}{...}       \PYG{n}{comments}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}\PYGZsh{}\PYGZdq{}}\PYG{p}{,}
+\PYG{o}{...}       \PYG{n}{delimiter}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{},\PYGZdq{}}\PYG{p}{,}
+\PYG{o}{...}       \PYG{n}{quotechar}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}\PYGZdq{}\PYGZsq{}}
+\PYG{o}{...}   \PYG{p}{)}
+\PYG{n}{array}\PYG{p}{((}\PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}Jordan, Michael Jeffrey\PYGZsq{}}\PYG{p}{,} \PYG{l+s+sa}{b}\PYG{l+s+s1}{\PYGZsq{}17\PYGZhy{}02\PYGZhy{}1963\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mf}{30.1}\PYG{p}{),}
+       \PYG{n}{dtype}\PYG{o}{=}\PYG{p}{[(}\PYG{l+s+s1}{\PYGZsq{}NAME\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}S30\PYGZsq{}}\PYG{p}{),(}\PYG{l+s+s1}{\PYGZsq{}BORN\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}S10\PYGZsq{}}\PYG{p}{),}
+             \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}NBA CHAMPIONSHIPS\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}i1\PYGZsq{}}\PYG{p}{),}
+             \PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}AVERAGE POINT PER GAME\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}f2\PYGZsq{}}\PYG{p}{)]}
+\PYG{p}{)}
+\end{Verbatim}

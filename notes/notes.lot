@@ -16,12 +16,11 @@
 \contentsline {table}{\numberline {5.1}{\ignorespaces Common Use Attributes of NumPy \texttt {array}\relax }}{62}{table.caption.16}%
 \contentsline {table}{\numberline {5.2}{\ignorespaces NumPy Data Types\relax }}{64}{table.caption.17}%
 \contentsline {table}{\numberline {5.3}{\ignorespaces Routines for Creating Arrays from Shape or Value\relax }}{67}{table.caption.18}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Routines for Creating Arrays from Existing Data\relax }}{69}{table.caption.19}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Routines for Creating Record Arrays\relax }}{71}{table.caption.20}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Routines for Creating Character Arrays\relax }}{73}{table.caption.21}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Routines for Numerical Ranges\relax }}{75}{table.caption.22}%
-\contentsline {table}{\numberline {5.8}{\ignorespaces Routines for Building Matrices\relax }}{77}{table.caption.23}%
-\contentsline {table}{\numberline {5.9}{\ignorespaces Routines for the Matrix Class\relax }}{79}{table.caption.24}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Routines for Creating Arrays from Existing Data\relax }}{70}{table.caption.19}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Routines for Creating Record Arrays\relax }}{72}{table.caption.20}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Routines for Numerical Ranges\relax }}{75}{table.caption.22}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Routines for Building Matrices\relax }}{77}{table.caption.23}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Routines for the Matrix Class\relax }}{79}{table.caption.24}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

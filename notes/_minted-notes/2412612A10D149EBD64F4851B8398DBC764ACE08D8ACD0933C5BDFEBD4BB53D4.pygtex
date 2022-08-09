@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import records array with an alias that does not conflict with}
+\PYG{c+c1}{\PYGZsh{} `standard' NumPy arrays}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{numpy.core.records} \PYG{k+kn}{import} \PYG{n}{array} \PYG{k}{as} \PYG{n}{recarray}
+
+\PYG{c+c1}{\PYGZsh{} the data}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{LOCS} \PYG{o}{=} \PYG{p}{[(}\PYG{l+s+s2}{\PYGZdq{}51.5072° N\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}0.1276° W\PYGZdq{}}\PYG{p}{),} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}35.6762° N\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}139.6503° E\PYGZdq{}}\PYG{p}{)]}
+
+\PYG{c+c1}{\PYGZsh{} create a recarray}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D} \PYG{o}{=} \PYG{n}{recarray}\PYG{p}{(}\PYG{n}{LOCS}\PYG{p}{,} \PYG{n}{formats}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}U12\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}U12\PYGZdq{}}\PYG{p}{],} \PYG{n}{names}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Latitude\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Longitude\PYGZdq{}}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} fetch the data by field name}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{D}\PYG{o}{.}\PYG{n}{Latitude}
+\PYG{n}{array}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}51.5072° N\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}35.6762° N\PYGZsq{}}\PYG{p}{],} \PYG{n}{dtype}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}\PYGZlt{}U12\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}
