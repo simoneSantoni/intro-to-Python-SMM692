@@ -2088,7 +2088,7 @@ dtype('float64')
 \end{sidewaystable}
 \clearpage
 
-\section{Array Creation and Manipulation Methods}
+\section{Array Creation Routines}
 
 \begin{paracol}{2}
 	\question{\raggedright Does NumPy offer recipes for creating arrays?}
@@ -2396,7 +2396,8 @@ array([[0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  ],
 
 \begin{figure}[!htbp]
 \input{contour.pgf}
-\caption{A contour plot showing the associations among X, Y, and Z. Notes: the data behind this plot come from Snippet 5.8, lines 22 - 44.}
+\caption{A contour plot showing the associations among X, Y, and Z}
+\caption*{Notes: the data behind this plot come from Snippet 5.8, lines 22 - 44.}
 \label{fig:contour_plot}
 \end{figure}
 
@@ -2490,20 +2491,35 @@ array([[1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
 \clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright The Matrix Class}
-	\note{In Snippet 5.9, line 17, I claim to create a matrix. Actually, the outcome displayed in line 18 is consistent with the concept of `matrix' we have been taught in a typical linear algebra class: what a human being sees is a set of numbers arranged in rows and columns. However, in NumPy terms, the object displayed in line 18 is an array with two dimensions. If we want to create a NumPy Matrix Class object, we have to call \href{https://numpy.org/doc/stable/reference/generated/numpy.matrix.html#numpy.matrix}{\texttt{np.matrix}}, a subclass of \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray}{\texttt{np.ndarray}}. Table \ref{tab:matrix_class} illustrates the two matrix-creating routines of NumPy.}
+	\question{\raggedright The Matrix Class} 
+	\note{In Snippet 5.9, line 17, I claim to create a matrix. Actually, the outcome displayed in line 18 is consistent with the concept of `matrix' we have been taught in a typical linear algebra class: what a human being sees is a set of numbers arranged in rows and columns. However, in NumPy terms, the object displayed in line 18 is an array with two dimensions. If we want to create a NumPy Matrix Class object\footnote{The documentation of numPy 1.23 states that \textit{It is no longer recommended to use this class, even for linear algebra. Instead use regular arrays. The class may be removed in the future}.}, we have to call \href{https://numpy.org/doc/stable/reference/generated/numpy.matrix.html#numpy.matrix}{\texttt{np.matrix}}, a subclass of \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray}{\texttt{np.ndarray}}. Table \ref{tab:array_for_matrix_class} illustrates the two matrix-creating routines of NumPy.}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{What is the advantage of using a matrix class object?}
-	\note{As we will see later on in this chapter, the advantage of using a matrix class object is that we can use the matrix class object to perform matrix operations with a simple and intuitive syntax. For example, we can use the matrix class object to perform matrix multiplication, matrix addition, and matrix subtraction.}
+	\note{As we will see later on in this chapter, the advantage of using a matrix class object is that we can use the matrix class object to perform matrix operations with a simple and intuitive syntax. For example, we can use the matrix class object to perform matrix manipulation multiplication, addition, and subtraction. In the lower section of Snippet 5.10, we use \href{https://numpy.org/doc/stable/reference/generated/numpy.linalg.inv.html}{\texttt{.linalg.inv}} to compute the inverse of a matrix.}
 \end{paracol}
 
-
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.6 --- creating arrays from existing data}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.10 --- creating a NumPy Matrix Class object}
 # import numpy with the socially accepted alias 'np'
 >>> import numpy as np
 
+# create a matrix class object
+# --+ the arrays to populate a matrix class object
+>>> A = np.array([0, 1, 2])
+>>> B = np.array([-99, 203, 1009])
+>>> C = np.array([-1000, -1001, -1002])
+# --+ the matrix class object
+>>> M = np.matrix([A, B, C])
+matrix([[    0,     1,     2],
+        [  -99,   203,  1009],
+        [-1000, -1001, -1002]])
+
+# get the inverse of M
+>>> np.linalg.inv(M)
+matrix([[-1.60040278e+00,  1.98412698e-03, -1.19642857e-03],
+        [ 2.19880556e+00, -3.96825397e-03,  3.92857143e-04],
+        [-5.99402778e-01,  1.98412698e-03, -1.96428571e-04]])
 \end{pythoncode}
 
 \begin{sidewaystable}[!htbp]
@@ -2514,13 +2530,93 @@ array([[1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
-			\texttt{} & \\
-		\bottomrule 
+			\texttt{np.mat(data[, dtype])}
+			& Interpret the input as a matrix\\
+			\texttt{bmat(obj[, ldict, gdict])}
+			& Build a matrix object from a string, nested sequence, or array\\
+			\bottomrule \\[-1.8ex]
+			\multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
 	\end{tabular}
 \end{sidewaystable}
-
 \clearpage
+
+\section{Array Manipulation Routines}
+
+\begin{paracol}{2}
+	\question{\raggedright I have an array. What can I do with it?}
+	\note{NumPy offers many array manipulation routines (see Table \ref{tab:numpy_array_manipulation}), which can be grouped around the following families:
+	
+	\begin{itemize}
+		\item basic operations
+		\item changing array shape 
+		\item transpose-like operations
+		\item changing number of dimensions 
+		\item changing kind of array
+		\item joining arrays 
+		\item splitting arrays 
+		\item tiling arrays 
+		\item adding and removing elements 
+		\item rearranging elements
+	\end{itemize}
+	
+        Presenting every NumPy array manipulation routine would require writing a dedicated book (and certainly falls beyond the remit of an introductory module on Python). That said, let me whet the reader's appetite by illustrating a sample of miscellaneous routines (see Snippet 5.11). Here is the sequence of tasks we accomplish: first, we create an array of shape \texttt{(6,)} (see line 5); then, we change the shape of the array (line 10) and transpose its rows and columns (line 16); in the lower section of the snippet we join two arrays using several routines: \href{https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html#numpy.concatenate}{\texttt{.concatenate}} joins two arrays along the desired axis (the default axis is the first one, meaning the second arrays are concatenated row-wise); \href{https://numpy.org/doc/stable/reference/generated/numpy.vstack.html#numpy.vstack}{\texttt{.vstack}} requires to pass a tuple of arrays to stack row-wise; \href{https://numpy.org/doc/stable/reference/generated/numpy.hstack.html#numpy.hstack}{\texttt{.hstack}} requires to pass a tuple of arrays to stack column-wise. It is worth noticing that the rules for vector/matrix manipulation we learned at school apply to the routines that join arrays. In other words, two NumPy arrays can be joined if and only have the same length on the joining axis. For example, it is possible to stack vertically two arrays with shape \texttt{(3, 3)} and \texttt{(2, 3)} because they have the same number of columns.}  
+	}
+\end{paracol}
+\clearpage
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.11 --- miscellaneous array-manipulating routines}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+# the array
+>>> A = np.arange(6)
+>>> A
+array([0, 1, 2, 3, 4, 5])
+
+# reshape the array into a 2x3 array
+>>> A = A.reshape(2, 3)
+>>> A
+array([[0, 1, 2],
+       [3, 4, 5]])
+
+# transpose the array
+>>> A.T
+array([[0, 3],
+       [1, 4],
+       [2, 5]])
+
+# get back to a 'flat' array with shape (6,)       
+>>> A.ravel()
+array([0, 1, 2, 3, 4, 5])
+
+# reshape the array into a 3x2 array
+>>> A.reshape(3, 2)
+array([[0, 1],
+       [2, 3],
+       [4, 5]])
+
+# join two arrays --- note the dimensions for the concatenation must match
+>>> np.concatenate((A.reshape(3, 2), A.T))
+array([[0, 1],
+       [2, 3],
+       [4, 5],
+       [0, 3],
+       [1, 4],
+       [2, 5]])
+
+# stack two arrays vertically (ROW-WISE)
+>>> np.vstack((A, np.array([6, 7, 8])))
+
+# stack two arrays horizontally (COLUMN-WISE)
+>>> np.hstack((A, np.array([6, 7]).reshape(2, 1)))
+array([[0, 1, 2, 6],
+       [3, 4, 5, 7]])
+
+\end{pythoncode}
+\clearpage
+
 \section{Universal Functions in NumPy}
+\label{sec:universal_functions}
 
 \begin{paracol}{2}
 	\question{\rggedright What is a universal function?}
@@ -2537,28 +2633,314 @@ array([[1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
 	\note{There are circa sixty universal functions implemented in NumPy. For the sake of convenience, the full list of \href{https://numpy.org/doc/stable/reference/ufuncs.html}{\texttt{ufunc}} options is reported in Tables \ref{tab:numpy_math_ufuncs} - \ref{tab:numpy_comparison_ufuncs}. The following sections of the current chapter will illustrate how to use some of the popular central \texttt{ufuncts} in NumPy.}
 \end{paracol}
 
-\section{Mathematical Methods}
+\section{Mathematical Functions}
 
+\begin{paracol}{2}
+\question{\raggedright What are the mathematical functions available in NumPy?}
+\note{There are many \href{https://numpy.org/doc/stable/reference/routines.math.html}{mathematical functions available in NumPy}, some of which are implemented as universal functions (for a complete list of universal functions, see Tables \ref{tab:numpy_math_ufuncs}). The available routines can be grouped into:
+\begin{itemize}
+\item trigonometric functions 
+\item hyperbolic functions 
+\item rounding functions 
+\item sums, products, and differences 
+\item exponential and logarithmic functions
+\item extrema finding  
+\end{itemize}}
+\end{paracol}
+\clearpage
 
+\begin{paracol}{2}
+\question{\raggedright What are the mathematical functions available in NumPy?}
+\note{
+Similar to the case of array-manipulating routines, a detailed discussion of every NumPy mathematical function exceeds the scope of these notes. However, every function can be accessed using the same procedure; mainly, we need a set of values to pass to the argument of the function --- that is it! Snippet 5.12 shows the procedure to use a NumPy mathematical functions by means of two trignometric functions, namely, \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html#numpy.cos}{\texttt{.cos}}. In line 9, we create a range of values to assign to the variable \texttt{X}; then, in line 11, we create two further arrays assigned to the outcome of \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html#numpy.cos}{\texttt{.cos}} respectively; finally, we use the Matplotlib module to visualize the two functions (if you do not get the Matplotlib code logic, do not worry at all --- you will familiarize with it in the Fall Term module `SMM635, Data Visualization.')}
+\end{paracol}
 
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.12 --- NumPy trigonometric functions in action}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
 
-\section{Statistical Methods}
+# import a data viz module
+>>> import matplotlib.pyplot as plt
 
+# trigonometric functions
+# --+ x-values
+>>> X = np.arange(0, 2 * np.pi, 0.# --+ plot SI 
+# --+ y-values
+>>> SI, CS = np.sin(X), np.cos(X)
+
+# plot the functions
+# --+ plot SI 
+>>> fig = plt.figure(figsize=(2.5, 2.5))
+>>> ax = fig.add_subplot(111)
+>>> ax.axhline(y=0, color="k", linewidth=0.5)
+>>> ax.set_xticks([0, 0.5 * np.pi, np.pi, 1.5 * np.pi, 2 * np.pi])
+>>> ax.set_xticklabels(
+...     ["0", r"$\frac{1}{2} \pi$", r"$\pi$", r"$\frac{3}{2} \pi$", r"$2 \pi$"]
+... )
+>>> plt.xlabel("$X$")
+>>> plt.ylabel("$sine(X)$")
+>>> ax.grid(True)
+>>> ax.plot(X, SI, color="Blue")
+>>> plt.title("A")
+>>> plt.show() 
+# --+ plot CS 
+>>> fig = plt.figure(figsize=(2.5, 2.5))
+>>> ax = fig.add_subplot(111)
+>>> ax.axhline(y=0, color="k", linewidth=0.5)
+>>> ax.set_xticks([0, 0.5 * np.pi, np.pi, 1.5 * np.pi, 2 * np.pi])
+>>> ax.set_xticklabels(
+...     ["0", r"$\frac{1}{2} \pi$", r"$\pi$", r"$\frac{3}{2} \pi$", r"$2 \pi$"]
+... )
+>>> plt.xlabel("$X$")
+>>> plt.ylabel("$cosine(X)$")
+>>> ax.grid(True)
+>>> ax.plot(X, CS, color="Blue")
+>>> plt.title("B")
+>>> plt.show()
+\end{pythoncode}
+
+\begin{figure}[!htbp]
+	\centering
+	\input{sine.pgf}
+	\input{cosine.pgf}
+	\caption{Visual representation of NumPy \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html#numpy.cos}{\texttt{.cos}} functions as per Snippet 5.12.}
+\end{figure}
+
+\section{Statistics}
+
+\begin{paracol}{2}
+	\question{\raggedright What are the statistical functions available in NumPy?}
+	\note{NumPy offers essential statistical functions, sufficient to implement an Exploratory Data Analysis/descritive stastistics. Specifically, there are four familieis of statistical routines (see Tables \ref{tab:order_stats}, \ref{tab:average_and_variances}, \ref{tab:correlating}, and \ref{tab:histograms}):
+	
+	\begin{itemize}
+		\item order statistics (e.g., quantiles)
+		\item average and variances
+		\item correlations 
+		\item histograms
+	\end{itemize}
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Can I run multivariate statistical analysis with NumPy}
+	\note{Short answer: no. There are dedicated Python modules to run multivariate analyses, though. For example \href{https://bashtage.github.io/linearmodels/index.html}{linearmodels} and \href{https://www.statsmodels.org/stable/generated/statsmodels.sandbox.regression.gmm.IV2SLS.html?highlight=2sls#statsmodels.sandbox.regression.gmm.IV2SLS}{statsmodels} are two popular modules to carry out econometric models in Python, while \href{https://scikit-learn.org/stable/}{scikit-learn} is the acclaimed module for machine learning in Python.}
+\end{paracol}
+\clearpage
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{NumPy Stastistical Routines: Order Statistics}
+	\label{tab:order_stats}
+	\begin{tabular}{ll}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+                        \texttt{np.ptp(a[, axis, out, keepdims])}&
+                        Range of values (maximum - minimum) along an axis\\
+                        \texttt{np.percentile(a, q[, axis, out, \ldots])}&
+                        Compute the q-th percentile of the data along the specified axis\\
+                        \texttt{np.nanpercentile(a, q[, axis, out, \ldots])}&
+                        Compute the qth percentile of the data along the specified axis, while ignoring nan values\\
+                        \texttt{np.quantile(a, q[, axis, out, overwrite\_input, \ldots])}&
+                        Compute the q-th quantile of the data along the specified axis\\
+                        \texttt{np.nanquantile(a, q[, axis, out, \ldots])}&
+                        Compute the qth quantile of the data along the specified axis, while ignoring nan values\\
+	     	\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{numPy Statistical Routines: Average and Variances}
+	\label{tab:average_and_variances}
+	\begin{tabular}{ll}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+                        \texttt{np.median(a[, axis, out, overwrite\_input, keepdims])}&
+                        Compute the median along the specified axis\\
+                        \texttt{np.average(a[, axis, weights, returned, keepdims])}&
+                        Compute the weighted average along the specified axis\\
+                        \texttt{np.mean(a[, axis, dtype, out, keepdims, where])}&
+                        Compute the arithmetic mean along the specified axis\\
+                        \texttt{np.std(a[, axis, dtype, out, ddof, keepdims, where])}&
+                        Compute the standard deviation along the specified axis\\
+                        \texttt{np.var(a[, axis, dtype, out, ddof, keepdims, where])}&
+                        Compute the variance along the specified axis\\
+                        \texttt{np.nanmedian(a[, axis, out, overwrite\_input, \ldots])}&
+                        Compute the median along the specified axis, while ignoring NaNs\\
+                        \texttt{np.nanmean(a[, axis, dtype, out, keepdims, where])}&
+                        Compute the arithmetic mean along the specified axis, ignoring NaNs\\
+                        \texttt{np.nanstd(a[, axis, dtype, out, ddof, \ldots])}&
+                        Compute the standard deviation along the specified axis, while ignoring NaNs\\
+                        \texttt{np.nanvar(a[, axis, dtype, out, ddof, \ldots])}&
+                        Compute the variance along the specified axis, while ignoring NaNs\\
+	     	\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{NumPy Stastistical Routines: Correlating}
+	\label{tab:correlating}
+	\begin{tabular}{ll}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+                        \texttt{np.corrcoef(x[, y, rowvar, bias, ddof, dtype])}&
+                        Return Pearson product-moment correlation coefficients\\
+                        \texttt{np.correlate(a, v[, mode])}&
+                        Cross-correlation of two 1-dimensional sequences\\
+                        \texttt{np.cov(m[, y, rowvar, bias, ddof, fweights, \ldots])}&
+                        Estimate a covariance matrix, given data and weights\\
+                        \bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{NumPy Statistical Routines: Histograms}
+	\label{tab:histograms}
+	\begin{tabular}{ll}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+                        \texttt{np.histogram(a[, bins, range, normed, weights, \ldots])}&
+                        Compute the histogram of a dataset\\
+                        \texttt{np.histogram2d(x, y[, bins, range, normed, \ldots])}&
+                        Compute the bi-dimensional histogram of two data samples\\
+                        \texttt{np.histogramdd(sample[, bins, range, normed, \ldots])}&
+                        Compute the multidimensional histogram of some data\\
+                        \texttt{np.bincount(x, /[, weights, minlength])}&
+                        Count number of occurrences of each value in array of non-negative ints\\
+                        \texttt{np.histogram\_bin\_edges(a[, bins, range, weights])}&
+                        Function to calculate only the edges of the bins used by the histogram function\\
+                        \texttt{np.digitize(x, bins[, right])}&
+                        Return the indices of the bins to which each value in input array belongs\\
+	     	\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\clearpage
+\begin{paracol}{2}
+	\question{\raggedright So, how do I product a set of summary stats in NumPy?}
+	\note{Snippet 5.13 shows how to create a typical set of summary stats including an array's mean, standard deviation, minimum, maximum, and some percentiles of interest. Mainly, the snippet has three steps. First, we create an array (line 8). Second, we assign a couple of variables to NumPy statistical functions such as \href{https://numpy.org/doc/stable/reference/generated/numpy.mean.html#numpy.mean}{\texttt{.mean}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.std.html#numpy.std}{\texttt{.std}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.min.html}{\texttt{.min}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.max.html}{\texttt{np.max}}, and \href{https://numpy.org/doc/stable/reference/generated/numpy.percentile. html#numpy.percentile}{\texttt{.percentile}} (see lines 11-17). It is worth noticng that \texttt{min} and \texttt{max} are keywords reserved for Python builtin functions. To avoid any name conflict and poterntial sources of confusion, in lines 13 and 14, we use the names \texttt{min\_} and \texttt{max\_}. Finally, we create a table displaying the variables created in the previous step (see lnes 21, 23, and 27).} 
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.12 --- NumPy trigonometric functions in action. Mainly, the snippet has three steps. First, we create an array (line)}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+# import a module for arranging numbers in a tabular format
+>>> import tabulate
+
+# the array 
+>>> X = np.array([0, 0, -3, 12, 7, 2, -4, 6, 9, -1, 5, 3, -1, 3, 10, 9])
+
+# get the descriptive stats
+>>> mean = np.mean(X)
+>>> std = np.std(X)
+>>> min_ = np.min(X)
+>>> max_ = np.max(X)
+>>> pp25 = np.percentile(X, 25)
+>>> pp50 = np.percentile(X, 50)
+>>> pp75 = np.percentile(X, 75)
+
+# arrange the stats in a tabular format
+# --+ create the table header
+>>> headers = [
+	"Mean", "St. Dev.", "Min", "Max", "25th pp", "50th pp", "75th pp"
+	]
+# --+ format the floating point numbers to two decimal places and get a string 
+>>> stats = [
+	str(np.round(i, 3)) for i in [mean, std, min_, max_, pp25, pp50, pp75]
+	]
+# --+ print the table
+>>> print(tabulate([stats], headers=headers, tablefmt="grid"))
++--------+------------+-------+-------+-----------+-----------+-----------+
+|   Mean |   St. Dev. |   Min |   Max |   25th pp |   50th pp |   75th pp |
++========+============+=======+=======+===========+===========+===========+
+|  3.562 |      4.756 |    -4 |    12 |     -0.25 |         3 |       7.5 |
++--------+------------+-------+-------+-----------+-----------+-----------+
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\rggedright Can I calaculate Pearson's correlaton coefficients in NumPy?}
+	\note{Yes, you can. Snippet 5.13 shows how to do so by using \href{https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html}{\texttt{.corrcoef}}, one of the functions included in Table \ref{tab:correlating}.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.13 --- a matrix with Pearson's correlation coefficients}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+# the arrays
+X = np.array([0, 0, -3, 12, 7, 2, -4, 6, 9, -1, 5, 3, -1, 3, 10, 9])
+Y = np.array([12, 12, 4, 3, 9, 2, -6, 15, 0, -12, 15, -3, -1, 0, 0, 1])
+
+# get Pearson's correlation coefficients
+>>> np.corrcoef(X, Y)
+array([[1.        , 0.19763628],
+       [0.19763628, 1.        ]])
+\end{pythoncode}
 
 
 \section{Linear Algebra}
 
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.14 --- a matrix with the eigenvalues and eigenvectors}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
 
+# the arrays
+>>> X = np.arange(1, 11, 1)
+>>> X
+array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])
+
+>>> Y = np.arange(10, 0, -1)
+>>> Y
+array([10,  9,  8,  7,  6,  5,  4,  3,  2,  1])
+
+# dot product 
+>>> np.dot(X, Y)
+220
+
+# inner product
+# --+ let's reshape the arrays
+>>> X = X.reshape(5, 2)
+>>> X
+array([[ 1,  2],
+       [ 3,  4],
+       [ 5,  6],
+       [ 7,  8],
+       [ 9, 10]])
+>>> Y = Y.reshape(5, 2)
+>>> Y
+array([[10,  9],
+       [ 8,  7],
+       [ 6,  5],
+       [ 4,  3],
+       [ 2,  1]])
+>>> np.inner(X, Y)
+array([[ 28,  22,  16,  10,   4],
+       [ 66,  52,  38,  24,  10],
+       [104,  82,  60,  38,  16],
+       [142, 112,  82,  52,  22],
+       [180, 142, 104,  66,  28]])
+
+\end{pythoncode}
+...
 
 \section{Pseudorandom Number Generation}
 
-
+...
 
 \section{File Input and Output with \texttt{ndarrays}}
 
+...
 
-
-\section{}
 
 \theendnotes
 
@@ -2577,6 +2959,8 @@ array([[1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
 \addappheadtotoc
 
 \chapter{Cheat Sheets}
+
+\section{Escapes}
 
 \begin{table}[!htbp]
 \centering
@@ -2599,6 +2983,9 @@ array([[1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
 		\bottomrule
 	\end{tabular}
 \end{table}
+\clearpage
+
+\section{String Methods}
 
 \begin{table}[!htbp]
 \centering
@@ -2606,31 +2993,31 @@ array([[1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
 \label{tab:string_methods}
 \begin{tabular}{lp{12cm}}
 \toprule \toprule
-\textbf{Cases I}          &                                                                                                                                               \\ \midrule
+\textit{Cases I}          &                                                                                                                                               \\ \midrule
 s.capitalize()           & Capitalize s \# 'hello' =\textgreater 'Hello'                                                                                                   \\
 s.lower()                & Lowercase s \# 'HELLO' =\textgreater 'hello'                                                                                                    \\
 s.swapcase()             & Swap cases of all characters in s \# 'Hello' =\textgreater "hELLO"                                                                              \\
 s.title()                & Titlecase s \# 'hello world' =\textgreater 'Hello World'                                                                                        \\
 s.upper()                & Uppercase s \# 'hello' =\textgreater 'HELLO'                                                                                                    \\ \midrule
-\textbf{Sequence Operations I}    &                                                                                                                                                 \\ \midrule
+\textit{Sequence Operations I}    &                                                                                                                                                 \\ \midrule
 s2 in s                  & Return true if s contains s2                                                                                                                    \\
 s + s2                   & Concat s and s2                                                                                                                                 \\
 len(s)                   & Length of s                                                                                                                                     \\
 min(s)                   & Smallest character of s                                                                                                                         \\
 max(s)                   & Largest character of s                                                                                                                          \\ \midrule 
-\textbf{Sequence Operations II}   &                                                                                                                                                 \\ \midrule
+\textit{Sequence Operations II}   &                                                                                                                                                 \\ \midrule
 s2 not in s              & Return true if s does not contain s2                                                                                                            \\
 s * integer              & Return integer copies of s concatenated \# 'hello' =\textgreater 'hellohellohello'                                                              \\
 s{[}index{]}             & Character at index of s                                                                                                                         \\
 s{[}i:j:k{]}             & Slice of s from i to j with step k                                                                                                              \\
 s.count(s2)              & Count of s2 in s                                                                                                                                \\ \midrule
-\textbf{Whitespace I}             &                                                                                                                                                 \\ \midrule
+\textit{Whitespace I}             &                                                                                                                                                 \\ \midrule
 s.center(width)          & Center s with blank padding of width \# 'hi' =\textgreater ' hi '                                                                               \\
 s.isspace()              & Return true if s only contains whitespace characters                                                                                            \\
 s.ljust(width)           & Left justifiy s with total size of width \# 'hello' =\textgreater 'hello '                                                                      \\
 s.rjust(width)           & Right justify s with total size of width \# 'hello' =\textgreater ' hello'                                                                      \\
 s.strip()                & Remove leading and trailing whitespace from s \# ' hello ' =\textgreater 'hello'                                                                \\ \midrule
-\textbf{Find / Replace I}         &                                                                                                                                                 \\ \midrule
+\textit{Find / Replace I}         &                                                                                                                                                 \\ \midrule
 s.index(s2, i, j)        & Index of first occurrence of s2 in s after index i and before index j                                                                           \\
 s.find(s2)               & Find and return lowest index of s2 in s                                                                                                         \\
 s.index(s2)              & Return lowest index of s2 in s (but raise ValueError if not found)                                                                              \\
@@ -2638,18 +3025,11 @@ s.replace(s2, s3)        & Replace s2 with s3 in s                              
 s.replace(s2, s3, count) & Replace s2 with s3 in s at most count times                                                                                                     \\
 s.rfind(s2)              & Return highest index of s2 in s                                                                                                                 \\
 s.rindex(s2)             & Return highest index of s2 in s (raise ValueError if not found)                                                                                 \\ \midrule
-\textbf{Cases II}                 &                                                                                                                                                 \\ \midrule
+\textit{Cases II}                 &                                                                                                                                                 \\ \midrule
 s.casefold()             & Casefold s (aggressive lowercasing for caseless matching) \# 'ßorat' =\textgreater 'ssorat'                                                     \\
 s.islower()              & Return true if s is lowercase                                                                                                                   \\
 s.istitle()              & Return true if s is titlecased \# 'Hello World' =\textgreater true                                                                              \\
-s.isupper()              & Return true if s is uppercase                                                                                                                   \\ \midrule
-\textbf{Inspection I}             &                                                                                                                                                 \\ \midrule
-s.endswith(s2)           & Return true if s ends with s2                                                                                                                   \\
-s.isalnum()              & Return true if s is alphanumeric                                                                                                                \\
-s.isalpha()              & Return true if s is alphabetic                                                                                                                  \\
-s.isdecimal()            & Return true if s is decimal                                                                                                                     \\
-s.isnumeric()            & Return true if s is numeric                                                                                                                     \\
-s.startswith(s2)         & Return true is s starts with s2                                                                                                                 \\                                                   
+s.isupper()              & Return true if s is uppercase                                                                                                                   \\ \midrule                                         
 \end{tabular}
 \end{table}
 
@@ -2659,20 +3039,28 @@ s.startswith(s2)         & Return true is s starts with s2                      
 \label{tab:string_methods_cted}
 \begin{tabular}{lp{12cm}}
 \\ \midrule
-\textbf{Splitting I}              &                                                                                                                                                 \\ \midrule
+\textit{Inspection I}             &                                                                                                                                                 \\ \midrule
+s.endswith(s2)           & Return true if s ends with s2                                                                                                                   \\
+s.isalnum()              & Return true if s is alphanumeric                                                                                                                \\
+s.isalpha()              & Return true if s is alphabetic                                                                                                                  \\
+s.isdecimal()            & Return true if s is decimal                                                                                                                     \\
+s.isnumeric()            & Return true if s is numeric                                                                                                                     \\
+s.startswith(s2)         & Return true is s starts with s2                                                                                                                 \\          
+\midrule
+\textit{Splitting I}              &                                                                                                                                                 \\ \midrule
 s.join('123')            & Return s joined by iterable '123' \# 'hello' =\textgreater '1hello2hello3'                                                                      \\
 s.partition(sep)         & Partition string at sep and return 3-tuple with part before, the sep itself, and part after \# 'hello' =\textgreater ('he', 'l', 'lo')          \\
 s.rpartition(sep)        & Partition string at last occurrence of sep, return 3-tuple with part before, the sep, and part after \# 'hello' =\textgreater ('hel', 'l', 'o') \\
 s.rsplit(sep, maxsplit)  & Return list of s split by sep with rightmost maxsplits performed                                                                                \\
 s.split(sep, maxsplit)   & Return list of s split by sep with leftmost maxsplits performed                                                                                 \\
 s.splitlines()           & Return a list of lines in s \# 'hello\textbackslash{}nworld' =\textgreater {[}'hello', 'world'{]}                                               \\ \midrule
-\textbf{Inspection II}            &                                                                                                                                                 \\ \midrule
+\textit{Inspection II}            &                                                                                                                                                 \\ \midrule
 s{[}i:j{]}               & Slice of s from i to j                                                                                                                          \\
 s.endswith((s1, s2, s3)) & Return true if s ends with any of string tuple s1, s2, and s3                                                                                   \\
 s.isdigit()              & Return true if s is digit                                                                                                                       \\
 s.isidentifier()         & Return true if s is a valid identifier                                                                                                          \\
 s.isprintable()          & Return true is s is printable                                                                                                                   \\ \midrule
-\textbf{Whitespace II}            &                                                                                                                                                 \\ \midrule
+\textit{Whitespace II}            &                                                                                                                                                 \\ \midrule
 s.center(width, pad)     & Center s with padding pad of width \# 'hi' =\textgreater 'padpadhipadpad'                                                                       \\
 s.expandtabs(integer)    & Replace all tabs with spaces of tabsize integer \# 'hello\textbackslash{}tworld' =\textgreater 'hello world'                                    \\
 s.lstrip()               & Remove leading whitespace from s \# ' hello ' =\textgreater 'hello '                                                                            \\
@@ -2684,7 +3072,9 @@ s.zfill(width)           & Left fill s with ASCII '0' digits with total length w
 \end{table}
 \clearpage
 
-\begin{table}
+\section{NumPy Array Manipulation Routines}
+
+\begin{table}[!htbp]
 \caption{NumPy Universal Functions: Mathematical Operations}
 \label{tab:numpy_math_ufuncs}
 \centering
@@ -2752,20 +3142,8 @@ log10(x, /[, out, where, casting, order, ...])
 & Return the base 10 logarithm of the input array, element-wise\\
 expm1(x, /[, out, where, casting, order, ...])
 & Calculate exp(x) - 1 for all elements in the array\\
-log1p(x, /[, out, where, casting, order, ...])
-& Return the natural logarithm of one plus the input array, element-wise\\
 sqrt(x, /[, out, where, casting, order, ...])
 & Return the non-negative square-root of an array, element-wise\\
-square(x, /[, out, where, casting, order, ...])
-& Return the element-wise square of the input\\
-cbrt(x, /[, out, where, casting, order, ...])
-& Return the cube-root of an array, element-wise\\
-reciprocal(x, /[, out, where, casting, ...])
-& Return the reciprocal of the argument, element-wise\\
-gcd(x1, x2, /[, out, where, casting, order, ...])
-& Returns the greatest common divisor of \|x1\| and \|x2\| \\ 
-lcm(x1, x2, /[, out, where, casting, order, ...])
-& Returns the lowest common multiple of \|x1\| and \|x2\| \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -2898,11 +3276,172 @@ fmax(x1, x2, /[, out, where, casting, ...])
 & Element-wise maximum of array elements\\
 fmin(x1, x2, /[, out, where, casting, ...])
 & Element-wise minimum of array elements\\
-\midrule
 \bottomrule
 \end{tabular}
 \end{table}
 \clearpage
+
+\begin{table}
+	\caption{NumPy Array Manipulation Routines}
+	\label{tab:numpy_array_manipulation}
+	\begin{tabular}{lp{8.5cm}}
+		\toprule \toprule
+		Routine & Synopsis \\ \midrule
+		\multicolumn{1}{l}{\textit{Basic operations}} \\ 
+		\midrule
+		\texttt{np.copyto(dst, src[, casting, where])} &
+                Copies values from one array to another, broadcasting as necessary\\
+                \texttt{np.shape(a)} &
+                Return the shape of an array\\
+		\midrule
+		\multicolumn{1}{l}{\textit{Changing array shape}} \\ 
+		\midrule
+  		\texttt{np.reshape(a, newshape[, order])}&
+                Gives a new shape to an array without changing its data\\
+   	        \texttt{np.ravel(a[, order])} &
+                Return a contiguous flattened array\\
+                \texttt{np.ndarray.flat}&
+                A 1-D iterator over the array\\
+                \texttt{np.ndarray.flatten([order])}&
+		Return a copy of the array collapsed into one dimension\\
+		\midrule
+		\multicolumn{1}{l}{\textit{Changing array shape}} \\ 
+	        \texttt{np.moveaxis(a, source, destination)}&
+                Move axes of an array to new position\\
+                \texttt{np.rollaxis(a, axis[, start])}&
+                Roll the specified axis backwards, until it lies in a given position\\
+                \texttt{np.swapaxes(a, axis1, axis2)}&
+                Interchange two axes of an array\\
+                \texttt{np.ndarray.T}&
+                The transposed array\\
+                \texttt{np.transpose(a[, axes]}&
+                Reverse or permute the axes of an array; returns the modified array\\
+		\midrule
+		\multicolumn{1}{l}{\textit{Changing number of dimensions}} \\ 
+		\midrule
+                \texttt{np.atleast\_1d(*arys)}&
+                Convert inputs to arrays with at least one dimension\\
+                \texttt{np.atleast\_2d(*arys)}&
+                View inputs as arrays with at least two dimensions\\
+                \texttt{np.atleast\_3d(*arys)}&
+                View inputs as arrays with at least three dimensions\\
+                \texttt{np.broadcast}&
+                Produce an object that mimics broadcasting\\
+                \texttt{np.broadcast\_to(array, shape[, subok])}&
+                Broadcast an array to a new shape\\
+                \texttt{np.broadcast\_arrays(*args[, subok])}&
+                Broadcast any number of arrays against each other\\
+                \texttt{np.expand\_dims(a, axis)}&
+                Expand the shape of an array\\
+                \texttt{np.squeeze(a[, axis])}&
+                Remove axes of length one from a\\
+		\midrule
+	\end{tabular}
+\end{table}
+
+\begin{table}
+	\caption*{\textsc{Table A.7} (cont'd)}
+	\begin{tabular}{p{7.5cm}p{8.5cm}}
+		\midrule
+		\multicolumn{1}{l}{\textit{Changing kind of array}} \\ 
+		\midrule
+                \texttt{np.asarray(a[, dtype, order, like])}&       
+		Convert the input to an array\\
+                \texttt{np.asanyarray(a[, dtype, order, like])}&
+                Convert the input to an ndarray, but pass ndarray subclasses through\\
+                \texttt{np.asmatrix(data[, dtype])}&
+                Interpret the input as a matrix\\
+                \texttt{np.asfarray(a[, dtype])}&
+                Return an array converted to a float type\\
+                \texttt{np.asfortranarray(a[, dtype, like])}&
+                Return an array (ndim $>= 1$) laid out in Fortran order in memory\\
+                \texttt{np.ascontiguousarray(a[, dtype, like])}&
+                Return a contiguous array (ndim $>= 1$) in memory (C order)\\
+                \texttt{np.asarray\_chkfinite(a[, dtype, order])}&
+                Convert the input to an array, checking for NaNs or Infs\\
+                \texttt{np.require(a[, dtype, requirements, like])}&
+                Return an ndarray of the provided type that satisfies requirements\\
+		\midrule
+		\multicolumn{1}{l}{\textit{Joining arrays}} \\
+		\midrule
+                \texttt{np.concatenate([axis, out, dtype, casting])} &
+                Join a sequence of arrays along an existing axis\\
+                \texttt{np.stack(arrays[, axis, out])} &
+                Join a sequence of arrays along a new axis\\
+                \texttt{np.block(arrays)} &
+                Assemble an nd-array from nested lists of blocks\\
+                \texttt{np.vstack(tup)} &
+                Stack arrays in sequence vertically (row wise)\\
+                \texttt{np.hstack(tup)} &
+                Stack arrays in sequence horizontally (column wise)\\
+                \texttt{np.dstack(tup)} &
+                Stack arrays in sequence depth wise (along third axis)\\
+                \texttt{np.column\_stack(tup)} &
+                Stack 1-D arrays as columns into a 2-D array\\
+                \texttt{np.row\_stack(tup)} &
+                Stack arrays in sequence vertically (row wise)\\
+		\midrule
+		\multicolumn{1}{l}{\textit{Splitting arrays}} \\
+		\midrule
+                \texttt{np.split(ary, indices\_or\_sections[, axis])}&
+		Split an array into multiple sub-arrays as views into array\\
+                \texttt{np.array\_split(ary, indices\_or\_sections[, axis])}&
+                Split an array into multiple sub-arrays\\
+                \texttt{np.dsplit(ary, indices\_or\_sections)}&
+                Split array into multiple sub-arrays along the 3rd axis (depth)\\
+                \texttt{np.hsplit(ary, indices\_or\_sections)}&
+                Split an array into multiple sub-arrays horizontally (column-wise)\\
+                \texttt{np.vsplit(ary, indices\_or\_sections)}&
+                Split an array into multiple sub-arrays vertically (row-wise)\\
+		\midrule
+	\end{tabular}
+\end{table}
+\clearpage
+
+\begin{table}
+	\caption*{\textsc{Table A.7} (cont'd)}
+	\begin{tabular}{p{7.5cm}p{8.5cm}}
+		\midrule
+		\multicolumn{1}{l}{\textit{Tiling elements}} \\ 
+		\midrule
+		\texttt{np.tile(A, reps)} & 
+                Construct an array by repeating A the number of times given by reps\\
+                \texttt{np.repeat(a, repeats[, axis])} & 
+                Repeat elements of an array\\
+		\midrule
+		\multicolumn{1}{l}{\textit{Adding and removing elements}} \\
+		\midrule
+		\texttt{np.delete(arr, obj[, axis])} &
+                Return a new array with sub-arrays along an axis deleted\\
+                \texttt{np.insert(arr, obj, values[, axis])} &
+                Insert values along the given axis before the given indices\\
+               \texttt{np.append(arr, values[, axis])} &
+                Append values to the end of an array\\
+                \texttt{np.resize(a, new\_shape)} &
+                Return a new array with the specified shape\\
+                \texttt{np.trim\_zeros(filt[, trim])} &
+                Trim the leading and/or trailing zeros from a 1-D array or sequence\\
+                \texttt{np.unique(ar[, return\_index, return\_inverse, ...])} &
+                Find the unique elements of an array\\
+		\midrule
+		\multicolumn{1}{l}{\textit{Rerraning elements}} \\
+         	\midrule
+		\texttt{np.flip(m[, axis])} &
+                Reverse the order of elements in an array along the given axis\\
+                \texttt{np.fliplr(m)} &
+                Reverse the order of elements along axis 1 (left/right)\\
+                \texttt{np.flipud(m)} &
+                Reverse the order of elements along axis 0 (up/down)\\
+                \texttt{np.reshape(a, newshape[, order])} &
+                Gives a new shape to an array without changing its data\\
+                \texttt{np.roll(a, shift[, axis])} &
+                Roll array elements along a given axis\\
+                \texttt{np.rot90(m[, k, axes])} &
+                Rotate an array by 90 degrees in the plane specified by axes\\
+		\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{table}
 
 \chapter{Collaborative and Versioning Tools}
 

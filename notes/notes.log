@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  9 AUG 2022 10:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  12 AUG 2022 22:53
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3485,7 +3485,7 @@ Underfull \vbox (badness 2608) has occurred while \output is active []
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2433 ...ates a triangular matrix (see line 17).}
+l.2434 ...ates a triangular matrix (see line 17).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3494,7 +3494,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2433 ...ates a triangular matrix (see line 17).}
+l.2434 ...ates a triangular matrix (see line 17).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3503,7 +3503,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2433 ...ates a triangular matrix (see line 17).}
+l.2434 ...ates a triangular matrix (see line 17).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3512,7 +3512,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2433 ...ates a triangular matrix (see line 17).}
+l.2434 ...ates a triangular matrix (see line 17).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3521,7 +3521,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2433 ...ates a triangular matrix (see line 17).}
+l.2434 ...ates a triangular matrix (see line 17).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3530,7 +3530,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2433 ...ates a triangular matrix (see line 17).}
+l.2434 ...ates a triangular matrix (see line 17).}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3546,7 +3546,7 @@ D4.pygtex) [76
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2494 ... two matrix-creating routines of NumPy.}
+l.2495 ... two matrix-creating routines of NumPy.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3555,7 +3555,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2494 ... two matrix-creating routines of NumPy.}
+l.2495 ... two matrix-creating routines of NumPy.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3564,7 +3564,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2494 ... two matrix-creating routines of NumPy.}
+l.2495 ... two matrix-creating routines of NumPy.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3573,7 +3573,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2494 ... two matrix-creating routines of NumPy.}
+l.2495 ... two matrix-creating routines of NumPy.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3582,7 +3582,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2494 ... two matrix-creating routines of NumPy.}
+l.2495 ... two matrix-creating routines of NumPy.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3591,27 +3591,123 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.2494 ... two matrix-creating routines of NumPy.}
+l.2495 ... two matrix-creating routines of NumPy.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
-
-
-LaTeX Warning: Reference `tab:matrix_class' on page 78 undefined on input line 
-2494.
 
 \openout4 = `notes.listing'.
 
 
-(./_minted-notes/638C672FA6E72BEACC855D5B0C2915E6764ACE08D8ACD0933C5BDFEBD4BB53
+(./_minted-notes/76F0F624F0D8067D116EF7D0100388C4764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex) [78
 
 ] [79]
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2562 ...e they have the same number of columns.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2562 ...e they have the same number of columns.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2562 ...e they have the same number of columns.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2562 ...e they have the same number of columns.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2562 ...e they have the same number of columns.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2562 ...e they have the same number of columns.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2562 ...e they have the same number of columns.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2562 ...e they have the same number of columns.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2562 ...e they have the same number of columns.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Extra }, or forgotten \endgroup.
+l.2563 	}
+         
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[80
+
+]
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/CC6E1DAEC54D7DDEE16A9EC7F7110811764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex) [81
+
+]
 ! Undefined control sequence.
 <argument> \rggedright 
                        What is a universal function?
-l.2526 ...ggedright What is a universal function?}
+l.2622 ...ggedright What is a universal function?}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3622,47 +3718,538 @@ and I'll forget about whatever was undefined.
 ! Illegal parameter number in definition of \next.
 <to be read again> 
                    t
-l.2527 ...ructuring NumPy code to leverage it.}}.}
+l.2623 ...ructuring NumPy code to leverage it.}}.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-(./notes.ent) [80
+[82
 
 ]
-Chapter 6.
-[81
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2655 ...m module `SMM635, Data Visualization.')}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
 
-] [82
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2655 ...m module `SMM635, Data Visualization.')}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
 
-]
-Chapter 7.
-[83] [84
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2655 ...m module `SMM635, Data Visualization.')}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2655 ...m module `SMM635, Data Visualization.')}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2655 ...m module `SMM635, Data Visualization.')}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2655 ...m module `SMM635, Data Visualization.')}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2655 ...m module `SMM635, Data Visualization.')}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2655 ...m module `SMM635, Data Visualization.')}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2655 ...m module `SMM635, Data Visualization.')}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2655 ...m module `SMM635, Data Visualization.')}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2655 ...m module `SMM635, Data Visualization.')}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2655 ...m module `SMM635, Data Visualization.')}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+\openout4 = `notes.listing'.
 
 
-] [85] [86]
-Appendix A.
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 2
-610.
-(/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2610.
+(./_minted-notes/A27584FFF67BD7F358661A72C78662ED764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex) [83
 
+] (./sine.pgf) (./cosine.pgf)
+! Illegal parameter number in definition of \GetTitleStringResult.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
 
-Overfull \hbox (11.11417pt too wide) in paragraph at lines 2607--2654
+! Illegal parameter number in definition of \GetTitleStringResult.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \GTS@GlobalString.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \GTS@GlobalString.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \reserved@a.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \reserved@a.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \caption@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \caption@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2706 ...t{.cos}} functions as per Snippet 5.12.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   s
+l.2726 ... module for machine learning in Python.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   s
+l.2726 ... module for machine learning in Python.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   s
+l.2726 ... module for machine learning in Python.}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+[84]
+Overfull \hbox (21.33426pt too wide) in paragraph at lines 2734--2751
  [][] 
  []
 
-[87
+[85] [86] [87] [88]
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2831 ...revious step (see lnes 21, 23, and 27).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
 
-] [88] [89]
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2831 ...revious step (see lnes 21, 23, and 27).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2831 ...revious step (see lnes 21, 23, and 27).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2831 ...revious step (see lnes 21, 23, and 27).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2831 ...revious step (see lnes 21, 23, and 27).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2831 ...revious step (see lnes 21, 23, and 27).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2831 ...revious step (see lnes 21, 23, and 27).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2831 ...revious step (see lnes 21, 23, and 27).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.2831 ...revious step (see lnes 21, 23, and 27).}
+                                                  
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+
+! Package pgfkeys Error: I do not know the key '/tcb/the snippet has three step
+s. First' and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2834 ...steps. First, we create an array (line)}
+                                                  
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+
+! Package pgfkeys Error: I do not know the key '/tcb/we create an array (line)'
+ and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2834 ...steps. First, we create an array (line)}
+                                                  
+(That was another \errmessage.)
+
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/8733F42282CDC9554568D50C4D4C579D764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex)
+Underfull \vbox (badness 5652) has occurred while \output is active []
+
+ [89
+
+
+]
+! Undefined control sequence.
+<argument> \rggedright 
+                       Can I calaculate Pearson's correlaton coefficients in...
+l.2872 ...son's correlaton coefficients in NumPy?}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! Package pgfkeys Error: I do not know the key '/tcb/the snippet has three step
+s.' and I am going to ignore it. Perhaps you misspelled it.
+
+See the pgfkeys package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2876 ...n. Mainly, the snippet has three steps.}
+                                                  
+(That was another \errmessage.)
+
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/D7DD98E7D58D8E8D52A332980A8943FA764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex) (./notes.ent) [90]
+Chapter 6.
+[91
+
+] [92
+
+]
+Chapter 7.
+[93] [94
+
+
+] [95] [96]
+Appendix A.
+[97
+
+]
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 2
+956.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 2956.
+
+ [98
+
+] [99]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2709 true_
+l.3058 true_
             divide(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3670,7 +4257,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2710 &
+l.3059 &
          Divide arguments element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3681,7 +4268,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2711 floor_
+l.3060 floor_
              divide(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3689,7 +4276,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2712 &
+l.3061 &
          Return the largest integer smaller or equal to the division of the ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3700,7 +4287,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2719 float_
+l.3068 float_
              power(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3708,7 +4295,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2720 &
+l.3069 &
          First array elements raised to powers from second array, element-wi...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3716,61 +4303,18 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2766 & Returns the greatest common divisor of \|
-                                                  x1\| and \|x2\| \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2767 l
-        cm(x1, x2, /[, out, where, casting, order, ...])
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2766--2767
-[]|\OT1/cmr/m/n/10.95 Returns the great-est com-mon di-vi-sor of
- []
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2768 & Returns the lowest common multiple of \|
-                                                 x1\| and \|x2\| \\
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.2769 \bottomrule
-                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 2768--2769
-[]|\OT1/cmr/m/n/10.95 Returns the low-est com-mon mul-ti-ple of
- []
-
-
-Overfull \hbox (5.19728pt too wide) in paragraph at lines 2691--2771
+Overfull \hbox (5.19728pt too wide) in paragraph at lines 3040--3108
  [][] 
  []
 
+[100
 
-LaTeX Warning: Float too large for page by 26.20242pt on input line 2771.
-
-[90] [91] [92]
+] [101] [102]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2875 greater_
+l.3212 greater_
                equal(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3778,7 +4322,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2876 &
+l.3213 &
          Return the truth value of (x1 >= x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3789,7 +4333,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2879 less_
+l.3216 less_
             equal(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3797,7 +4341,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2880 &
+l.3217 &
          Return the truth value of (x1 <= x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3808,7 +4352,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2881 not_
+l.3218 not_
            equal(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3816,7 +4360,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2882 &
+l.3219 &
          Return (x1 != x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3827,7 +4371,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2885 logical_
+l.3222 logical_
                and(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3835,7 +4379,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2886 &
+l.3223 &
          Compute the truth value of x1 AND x2 element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3846,7 +4390,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2887 logical_
+l.3224 logical_
                or(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3854,7 +4398,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2888 &
+l.3225 &
          Compute the truth value of x1 OR x2 element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3865,7 +4409,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2889 logical_
+l.3226 logical_
                xor(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3873,7 +4417,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2890 &
+l.3227 &
          Compute the truth value of x1 XOR x2, element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3884,7 +4428,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2891 logical_
+l.3228 logical_
                not(x, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3892,7 +4436,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.2892 &
+l.3229 &
          Compute the truth value of NOT x element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3900,34 +4444,83 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[93] [94
+[103]
+Underfull \hbox (badness 10000) in paragraph at lines 3309--3309
+[]|\OT1/cmtt/m/n/10.95 np.asanyarray(a[, dtype, order,
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 3317--3317
+[]|\OT1/cmtt/m/n/10.95 np.ascontiguousarray(a[, dtype,
+ []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 3319--3319
+[]|\OT1/cmtt/m/n/10.95 np.asarray[]chkfinite(a[, dtype,
+ []
 
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 3321--3321
+[]|\OT1/cmtt/m/n/10.95 np.require(a[, dtype, requirements,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3326--3326
+[]|\OT1/cmtt/m/n/10.95 np.concatenate([axis, out, dtype,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3345--3345
+[]|\OT1/cmtt/m/n/10.95 np.split(ary, indices[]or[]sections[,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3347--3347
+[]|\OT1/cmtt/m/n/10.95 np.array[]split(ary,
+ []
+
+[104] [105]
+Underfull \hbox (badness 10000) in paragraph at lines 3383--3383
+[]|\OT1/cmtt/m/n/10.95 np.unique(ar[, return[]index,
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 3391--3392
+[]|\OT1/cmr/m/n/10.95 Reverse the or-der of el-e-ments along axis 1
+ []
+
+
+Underfull \hbox (badness 3009) in paragraph at lines 3393--3394
+[]|\OT1/cmr/m/n/10.95 Reverse the or-der of el-e-ments along axis 0
+ []
+
+
+Overfull \hbox (5.90599pt too wide) in paragraph at lines 3362--3403
+[][] 
+ []
+
+[106]
 Appendix B.
-[95] (./notes.aux)
+[107
+
+
+
+
+
+
+] (./notes.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: 8432EC1981D819B6AFCFAD82781D9540;2487.
+(rerunfilecheck)             Checksum: 0EF7202A6BB457393164042FF0B0076E;2701.
  ) 
 Here is how much of TeX's memory you used:
- 30237 strings out of 479304
- 639531 string characters out of 5869778
- 1152136 words of memory out of 5000000
- 46519 multiletter control sequences out of 15000+600000
- 417527 words of font info for 78 fonts, out of 8000000 for 9000
+ 30317 strings out of 479304
+ 641943 string characters out of 5869778
+ 1153136 words of memory out of 5000000
+ 46558 multiletter control sequences out of 15000+600000
+ 418390 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  86i,13n,117p,2384b,1192s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
@@ -3943,19 +4536,20 @@ fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
-t9.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/t
-exmf/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on notes.pdf (95 pages, 477664 bytes).
+exmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmti9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+t12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb
+></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/f
+onts/type1/public/cm-super/sftt1095.pfb>
+Output written on notes.pdf (107 pages, 517625 bytes).
 PDF statistics:
- 944 PDF objects out of 1000 (max. 8388607)
- 814 compressed objects within 9 object streams
- 166 named destinations out of 1000 (max. 500000)
- 317 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1065 PDF objects out of 1200 (max. 8388607)
+ 919 compressed objects within 10 object streams
+ 189 named destinations out of 1000 (max. 500000)
+ 341 words of extra memory for PDF output out of 10000 (max. 10000000)
 

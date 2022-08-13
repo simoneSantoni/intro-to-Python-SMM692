@@ -24,16 +24,19 @@
 \contentsline {chapter}{\numberline {5}Technical \& Scientific Computation with NumPy and SciPy}{59}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Installing NumPy and SciPy}{59}{section.5.1}%
 \contentsline {section}{\numberline {5.2}NumPy \texttt {ndarray}}{59}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Array Creation and Manipulation Methods}{65}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Universal Functions in NumPy}{80}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Mathematical Methods}{80}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Statistical Methods}{80}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Linear Algebra}{80}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Pseudorandom Number Generation}{80}{section.5.8}%
-\contentsline {section}{\numberline {5.9}File Input and Output with \texttt {ndarrays}}{80}{section.5.9}%
-\contentsline {section}{\numberline {5.10}}{80}{section.5.10}%
-\contentsline {chapter}{\numberline {6}Data Management with Pandas}{81}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Coda}{83}{chapter.7}%
-\contentsline {chapter}{Appendices}{}{section*.26}
-\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{87}{appendix.a.A}%
-\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{95}{appendix.a.B}%
+\contentsline {section}{\numberline {5.3}Array Creation Routines}{65}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Array Manipulation Routines}{80}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Universal Functions in NumPy}{82}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Mathematical Functions}{82}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Statistics}{84}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Linear Algebra}{90}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Pseudorandom Number Generation}{90}{section.5.9}%
+\contentsline {section}{\numberline {5.10}File Input and Output with \texttt {ndarrays}}{90}{section.5.10}%
+\contentsline {chapter}{\numberline {6}Data Management with Pandas}{91}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Coda}{93}{chapter.7}%
+\contentsline {chapter}{Appendices}{}{section*.31}
+\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{97}{appendix.a.A}%
+\contentsline {section}{\numberline {A.1}Escapes}{97}{section.a.A.1}%
+\contentsline {section}{\numberline {A.2}String Methods}{98}{section.a.A.2}%
+\contentsline {section}{\numberline {A.3}NumPy Array Manipulation Routines}{100}{section.a.A.3}%
+\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{107}{appendix.a.B}%

@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import numpy with the socially accepted alias 'np'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{c+c1}{\PYGZsh{} create a matrix class object}
+\PYG{c+c1}{\PYGZsh{} --+ the arrays to populate a matrix class object}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{A} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{])}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{B} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{99}\PYG{p}{,} \PYG{l+m+mi}{203}\PYG{p}{,} \PYG{l+m+mi}{1009}\PYG{p}{])}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{C} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1000}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1001}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1002}\PYG{p}{])}
+\PYG{c+c1}{\PYGZsh{} --+ the matrix class object}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{M} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{matrix}\PYG{p}{([}\PYG{n}{A}\PYG{p}{,} \PYG{n}{B}\PYG{p}{,} \PYG{n}{C}\PYG{p}{])}
+\PYG{n}{matrix}\PYG{p}{([[}    \PYG{l+m+mi}{0}\PYG{p}{,}     \PYG{l+m+mi}{1}\PYG{p}{,}     \PYG{l+m+mi}{2}\PYG{p}{],}
+        \PYG{p}{[}  \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{99}\PYG{p}{,}   \PYG{l+m+mi}{203}\PYG{p}{,}  \PYG{l+m+mi}{1009}\PYG{p}{],}
+        \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1000}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1001}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1002}\PYG{p}{]])}
+
+\PYG{c+c1}{\PYGZsh{} get the inverse of M}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linalg}\PYG{o}{.}\PYG{n}{inv}\PYG{p}{(}\PYG{n}{M}\PYG{p}{)}
+\PYG{n}{matrix}\PYG{p}{([[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.60040278e+00}\PYG{p}{,}  \PYG{l+m+mf}{1.98412698e\PYGZhy{}03}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.19642857e\PYGZhy{}03}\PYG{p}{],}
+        \PYG{p}{[} \PYG{l+m+mf}{2.19880556e+00}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{3.96825397e\PYGZhy{}03}\PYG{p}{,}  \PYG{l+m+mf}{3.92857143e\PYGZhy{}04}\PYG{p}{],}
+        \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{5.99402778e\PYGZhy{}01}\PYG{p}{,}  \PYG{l+m+mf}{1.98412698e\PYGZhy{}03}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.96428571e\PYGZhy{}04}\PYG{p}{]])}
+\end{Verbatim}

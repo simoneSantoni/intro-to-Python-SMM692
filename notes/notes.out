@@ -24,15 +24,18 @@
 \BOOKMARK [0][-]{chapter.5}{Technical \046 Scientific Computation with NumPy and SciPy}{}% 24
 \BOOKMARK [1][-]{section.5.1}{Installing NumPy and SciPy}{chapter.5}% 25
 \BOOKMARK [1][-]{section.5.2}{NumPy ndarray}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.3}{Array Creation and Manipulation Methods}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.4}{Universal Functions in NumPy}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.5}{Mathematical Methods}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.6}{Statistical Methods}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.7}{Linear Algebra}{chapter.5}% 31
-\BOOKMARK [1][-]{section.5.8}{Pseudorandom Number Generation}{chapter.5}% 32
-\BOOKMARK [1][-]{section.5.9}{File Input and Output with ndarrays}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.10}{}{chapter.5}% 34
+\BOOKMARK [1][-]{section.5.3}{Array Creation Routines}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.4}{Array Manipulation Routines}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.5}{Universal Functions in NumPy}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.6}{Mathematical Functions}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.7}{Statistics}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.8}{Linear Algebra}{chapter.5}% 32
+\BOOKMARK [1][-]{section.5.9}{Pseudorandom Number Generation}{chapter.5}% 33
+\BOOKMARK [1][-]{section.5.10}{File Input and Output with ndarrays}{chapter.5}% 34
 \BOOKMARK [0][-]{chapter.6}{Data Management with Pandas}{}% 35
 \BOOKMARK [0][-]{chapter.7}{Coda}{}% 36
 \BOOKMARK [0][-]{appendix.a.A}{Appendix Cheat Sheets}{}% 37
-\BOOKMARK [0][-]{appendix.a.B}{Appendix Collaborative and Versioning Tools}{}% 38
+\BOOKMARK [1][-]{section.a.A.1}{Escapes}{appendix.a.A}% 38
+\BOOKMARK [1][-]{section.a.A.2}{String Methods}{appendix.a.A}% 39
+\BOOKMARK [1][-]{section.a.A.3}{NumPy Array Manipulation Routines}{appendix.a.A}% 40
+\BOOKMARK [0][-]{appendix.a.B}{Appendix Collaborative and Versioning Tools}{}% 41

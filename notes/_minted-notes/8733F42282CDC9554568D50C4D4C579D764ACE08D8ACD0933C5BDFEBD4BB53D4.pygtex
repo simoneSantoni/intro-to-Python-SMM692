@@ -1,0 +1,36 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import numpy with the socially accepted alias 'np'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{c+c1}{\PYGZsh{} import a module for arranging numbers in a tabular format}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{tabulate}
+
+\PYG{c+c1}{\PYGZsh{} the array}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} get the descriptive stats}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{mean} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{mean}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{std} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{std}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{min\PYGZus{}} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{min}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{max\PYGZus{}} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{max}\PYG{p}{(}\PYG{n}{X}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{pp25} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{percentile}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{l+m+mi}{25}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{pp50} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{percentile}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{l+m+mi}{50}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{pp75} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{percentile}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{l+m+mi}{75}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} arrange the stats in a tabular format}
+\PYG{c+c1}{\PYGZsh{} --+ create the table header}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{headers} \PYG{o}{=} \PYG{p}{[}
+	\PYG{l+s+s2}{\PYGZdq{}Mean\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}St. Dev.\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Min\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Max\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}25th pp\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}50th pp\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}75th pp\PYGZdq{}}
+	\PYG{p}{]}
+\PYG{c+c1}{\PYGZsh{} --+ format the floating point numbers to two decimal places and get a string}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{stats} \PYG{o}{=} \PYG{p}{[}
+	\PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{round}\PYG{p}{(}\PYG{n}{i}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{))} \PYG{k}{for} \PYG{n}{i} \PYG{o+ow}{in} \PYG{p}{[}\PYG{n}{mean}\PYG{p}{,} \PYG{n}{std}\PYG{p}{,} \PYG{n}{min\PYGZus{}}\PYG{p}{,} \PYG{n}{max\PYGZus{}}\PYG{p}{,} \PYG{n}{pp25}\PYG{p}{,} \PYG{n}{pp50}\PYG{p}{,} \PYG{n}{pp75}\PYG{p}{]}
+	\PYG{p}{]}
+\PYG{c+c1}{\PYGZsh{} --+ print the table}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{tabulate}\PYG{p}{([}\PYG{n}{stats}\PYG{p}{],} \PYG{n}{headers}\PYG{o}{=}\PYG{n}{headers}\PYG{p}{,} \PYG{n}{tablefmt}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}grid\PYGZdq{}}\PYG{p}{))}
+\PYG{o}{+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+}
+\PYG{o}{|}   \PYG{n}{Mean} \PYG{o}{|}   \PYG{n}{St}\PYG{o}{.} \PYG{n}{Dev}\PYG{o}{.} \PYG{o}{|}   \PYG{n}{Min} \PYG{o}{|}   \PYG{n}{Max} \PYG{o}{|}   \PYG{l+m+mi}{25}\PYG{n}{th} \PYG{n}{pp} \PYG{o}{|}   \PYG{l+m+mi}{50}\PYG{n}{th} \PYG{n}{pp} \PYG{o}{|}   \PYG{l+m+mi}{75}\PYG{n}{th} \PYG{n}{pp} \PYG{o}{|}
+\PYG{o}{+========+============+=======+=======+===========+===========+===========+}
+\PYG{o}{|}  \PYG{l+m+mf}{3.562} \PYG{o}{|}      \PYG{l+m+mf}{4.756} \PYG{o}{|}    \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{4} \PYG{o}{|}    \PYG{l+m+mi}{12} \PYG{o}{|}     \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{0.25} \PYG{o}{|}         \PYG{l+m+mi}{3} \PYG{o}{|}       \PYG{l+m+mf}{7.5} \PYG{o}{|}
+\PYG{o}{+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}+}
+\end{Verbatim}
