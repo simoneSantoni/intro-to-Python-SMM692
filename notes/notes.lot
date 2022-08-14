@@ -25,14 +25,19 @@
 \contentsline {table}{\numberline {5.10}{\ignorespaces numPy Statistical Routines: Average and Variances\relax }}{86}{table.caption.27}%
 \contentsline {table}{\numberline {5.11}{\ignorespaces NumPy Stastistical Routines: Correlating\relax }}{87}{table.caption.28}%
 \contentsline {table}{\numberline {5.12}{\ignorespaces NumPy Statistical Routines: Histograms\relax }}{88}{table.caption.29}%
+\contentsline {table}{\numberline {5.13}{\ignorespaces NumPy Linear Algebra Routines: Matrix and Vector Products\relax }}{91}{table.caption.30}%
+\contentsline {table}{\numberline {5.14}{\ignorespaces NumPy Linear Algebra Routines: Decompositions\relax }}{92}{table.caption.31}%
+\contentsline {table}{\numberline {5.15}{\ignorespaces NumPy Linear Algebra Routines: Matrix Eigenvalues\relax }}{93}{table.caption.32}%
+\contentsline {table}{\numberline {5.16}{\ignorespaces NumPy Linear Algebra Routines: Norms and Other Number\relax }}{94}{table.caption.33}%
+\contentsline {table}{\numberline {5.17}{\ignorespaces NumPy Linear Algebra Routines: Solving Equations and Inverting Matrices\relax }}{95}{table.caption.34}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{97}{table.caption.32}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{98}{table.caption.33}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{100}{table.caption.35}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{101}{table.caption.36}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{102}{table.caption.37}%
-\contentsline {table}{\numberline {A.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{103}{table.caption.38}%
-\contentsline {table}{\numberline {A.7}{\ignorespaces NumPy Array Manipulation Routines\relax }}{104}{table.caption.39}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{105}{table.caption.38}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{106}{table.caption.39}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{108}{table.caption.41}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{109}{table.caption.42}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{110}{table.caption.43}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{111}{table.caption.44}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces NumPy Array Manipulation Routines\relax }}{112}{table.caption.45}%
 \addvspace {10\p@ }

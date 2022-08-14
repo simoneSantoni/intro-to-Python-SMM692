@@ -1,0 +1,46 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import numpy with the socially accepted alias 'np'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{c+c1}{\PYGZsh{} the arrays}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{11}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X}
+\PYG{n}{array}\PYG{p}{([} \PYG{l+m+mi}{1}\PYG{p}{,}  \PYG{l+m+mi}{2}\PYG{p}{,}  \PYG{l+m+mi}{3}\PYG{p}{,}  \PYG{l+m+mi}{4}\PYG{p}{,}  \PYG{l+m+mi}{5}\PYG{p}{,}  \PYG{l+m+mi}{6}\PYG{p}{,}  \PYG{l+m+mi}{7}\PYG{p}{,}  \PYG{l+m+mi}{8}\PYG{p}{,}  \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{])}
+
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Y} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Y}
+\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{10}\PYG{p}{,}  \PYG{l+m+mi}{9}\PYG{p}{,}  \PYG{l+m+mi}{8}\PYG{p}{,}  \PYG{l+m+mi}{7}\PYG{p}{,}  \PYG{l+m+mi}{6}\PYG{p}{,}  \PYG{l+m+mi}{5}\PYG{p}{,}  \PYG{l+m+mi}{4}\PYG{p}{,}  \PYG{l+m+mi}{3}\PYG{p}{,}  \PYG{l+m+mi}{2}\PYG{p}{,}  \PYG{l+m+mi}{1}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} dot product}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{dot}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{Y}\PYG{p}{)}
+\PYG{l+m+mi}{220}
+
+\PYG{c+c1}{\PYGZsh{} inner product}
+\PYG{c+c1}{\PYGZsh{} --+ let's reshape the arrays}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X} \PYG{o}{=} \PYG{n}{X}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{X}
+\PYG{n}{array}\PYG{p}{([[} \PYG{l+m+mi}{1}\PYG{p}{,}  \PYG{l+m+mi}{2}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mi}{3}\PYG{p}{,}  \PYG{l+m+mi}{4}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mi}{5}\PYG{p}{,}  \PYG{l+m+mi}{6}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mi}{7}\PYG{p}{,}  \PYG{l+m+mi}{8}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{]])}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Y} \PYG{o}{=} \PYG{n}{Y}\PYG{o}{.}\PYG{n}{reshape}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{Y}
+\PYG{n}{array}\PYG{p}{([[}\PYG{l+m+mi}{10}\PYG{p}{,}  \PYG{l+m+mi}{9}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mi}{8}\PYG{p}{,}  \PYG{l+m+mi}{7}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mi}{6}\PYG{p}{,}  \PYG{l+m+mi}{5}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mi}{4}\PYG{p}{,}  \PYG{l+m+mi}{3}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mi}{2}\PYG{p}{,}  \PYG{l+m+mi}{1}\PYG{p}{]])}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{inner}\PYG{p}{(}\PYG{n}{X}\PYG{p}{,} \PYG{n}{Y}\PYG{p}{)}
+\PYG{n}{array}\PYG{p}{([[} \PYG{l+m+mi}{28}\PYG{p}{,}  \PYG{l+m+mi}{22}\PYG{p}{,}  \PYG{l+m+mi}{16}\PYG{p}{,}  \PYG{l+m+mi}{10}\PYG{p}{,}   \PYG{l+m+mi}{4}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mi}{66}\PYG{p}{,}  \PYG{l+m+mi}{52}\PYG{p}{,}  \PYG{l+m+mi}{38}\PYG{p}{,}  \PYG{l+m+mi}{24}\PYG{p}{,}  \PYG{l+m+mi}{10}\PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mi}{104}\PYG{p}{,}  \PYG{l+m+mi}{82}\PYG{p}{,}  \PYG{l+m+mi}{60}\PYG{p}{,}  \PYG{l+m+mi}{38}\PYG{p}{,}  \PYG{l+m+mi}{16}\PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mi}{142}\PYG{p}{,} \PYG{l+m+mi}{112}\PYG{p}{,}  \PYG{l+m+mi}{82}\PYG{p}{,}  \PYG{l+m+mi}{52}\PYG{p}{,}  \PYG{l+m+mi}{22}\PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mi}{180}\PYG{p}{,} \PYG{l+m+mi}{142}\PYG{p}{,} \PYG{l+m+mi}{104}\PYG{p}{,}  \PYG{l+m+mi}{66}\PYG{p}{,}  \PYG{l+m+mi}{28}\PYG{p}{]])}
+
+\PYG{c+c1}{\PYGZsh{} outer product}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{outer}\PYG{p}{([}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{],} \PYG{p}{[}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{])}
+\PYG{n}{array}\PYG{p}{([[} \PYG{l+m+mi}{0}\PYG{p}{,}  \PYG{l+m+mi}{0}\PYG{p}{,}  \PYG{l+m+mi}{0}\PYG{p}{,}  \PYG{l+m+mi}{0}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mi}{4}\PYG{p}{,}  \PYG{l+m+mi}{5}\PYG{p}{,}  \PYG{l+m+mi}{6}\PYG{p}{,}  \PYG{l+m+mi}{7}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{12}\PYG{p}{,} \PYG{l+m+mi}{14}\PYG{p}{]])}
+\end{Verbatim}

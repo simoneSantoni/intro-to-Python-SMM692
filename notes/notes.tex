@@ -2890,6 +2890,141 @@ array([[1.        , 0.19763628],
 
 \section{Linear Algebra}
 
+\begin{paracol}{2}
+\question{\raggedright Is NumPy a good choice when it comes doing linear algebra?}
+\note{Yes, it is. NumPy offers a rich set of routines, comparable to Matalab's one.\footnote{Matlab is a numeric computing environment that is particularly popular in academia and insdustry.} For an overview of numPy's linear algebra routines, see Tables \ref{tab:matrix_and_vector_products}, \ref{tab:decompositions}, \ref{tab:eigenvalues}, \ref{tab:norms}, and \ref{tab:solving_equations}.}
+\end{paracol}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{NumPy Linear Algebra Routines: Matrix and Vector Products}
+	\label{tab:matrix_and_vector_products}
+	\begin{tabular}{lp[12cm]}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+                        \texttt{np.dot(a, b[, out])}&
+                        Dot product of two arrays\\
+                        \texttt{np.linalg.multi\_dot(arrays, *[, out])}&
+                        Compute the dot product of two or more arrays in a single function call, while automatically selecting the fastest evaluation order\\
+                        \texttt{np.vdot(a, b, /)}&
+                        Return the dot product of two vectors\\
+                        \texttt{np.inner(a, b, /)}&
+                        Inner product of two arrays\\
+                        \texttt{np.outer(a, b[, out])}&
+                        Compute the outer product of two vectors\\
+                        \texttt{np.matmul(x1, x2, /[, out, casting, order, ...])}&
+                        Matrix product of two arrays\\
+                        \texttt{np.tensordot(a, b[, axes])}&
+                        Compute tensor dot product along specified axes\\
+                        \texttt{np.einsum(subscripts, *operands[, out, dtype, ...])}&
+                        Evaluates the Einstein summation convention on the operands\\
+                        \texttt{np.einsum\_path(subscripts, *operands[, optimize])}&
+                        Evaluates the lowest cost contraction order for an einsum expression by considering the creation of intermediate arrays\\
+                        \texttt{np.linalg.matrix\_power(a, n)}&
+                        Raise a square matrix to the (integer) to the power n\\
+                        \texttt{np.kron(a, b)}&
+                        Kronecker product of two arrays\\
+	     	\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{NumPy Linear Algebra Routines: Decompositions}
+	\label{tab:decompositions}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+                        \texttt{np.linalg.cholesky(a)} &
+                        Cholesky decomposition\\
+                        \texttt{np.linalg.qr(a[, mode])} & 
+                        Compute the qr factorization of a matrix\\`
+                        \texttt{np.linalg.svd(a[, full\_matrices, compute\_uv, ...])} & 
+                        Singular Value Decomposition\\
+	     	\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{NumPy Linear Algebra Routines: Matrix Eigenvalues}
+	\label{tab:eigenvalues}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+                        \texttt{np.linalg.eig(a)} &
+                        Compute the eigenvalues and right eigenvectors of a square array\\
+                        \texttt{np.linalg.eigh(a[, UPLO])} & 
+                        Return the eigenvalues and eigenvectors of a complex Hermitian (conjugate symmetric) or a real symmetric matrix\\
+                        \texttt{np.linalg.eigvals(a)} & 
+                        Compute the eigenvalues of a general matrix\\
+                        \texttt{np.linalg.eigvalsh(a[, UPLO])} &
+                        Compute the eigenvalues of a complex Hermitian or real symmetric matrix\\
+	     	\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{NumPy Linear Algebra Routines: Norms and Other Number}
+	\label{tab:norms}
+	\begin{tabular}{lp[12cm]}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+                        \texttt{np.linalg.norm(x[, ord, axis, keepdims])}
+                        Matrix or vector norm\\
+                        \texttt{np.linalg.cond(x[, p])}
+                        Compute the condition number of a matrix\\
+                        \texttt{np.linalg.det(a)}
+                        Compute the determinant of an array\\
+                        \texttt{np.linalg.matrix\_rank(A[, tol, hermitian])}
+                        Return matrix rank of array using SVD method\\
+                        \texttt{np.linalg.slogdet(a)}
+                        Compute the sign and (natural) logarithm of the determinant of an array\\
+                        \texttt{np.trace(a[, offset, axis1, axis2, dtype, out])}
+                        Return the sum along diagonals of the array\\            
+	     	\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{sidewaystable} 
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{NumPy Linear Algebra Routines: Solving Equations and Inverting Matrices} 
+	\label{tab:solving_equations}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+                        \texttt{np.linalg.solve(a, b)} &
+                        Solve a linear matrix equation, or system of linear scalar equations\\
+                        \texttt{np.linalg.tensorsolve(a, b[, axes])} &
+                        Solve the tensor equation a x = b for x\\
+                        \texttt{np.linalg.lstsq(a, b[, rcond])} &
+                        Return the least-squares solution to a linear matrix equation\\
+                        \texttt{np.linalg.inv(a)} &
+                        Compute the (multiplicative) inverse of a matrix\\
+                        \texttt{np.linalg.pinv(a[, rcond, hermitian])} &
+                        Compute the (Moore-Penrose) pseudo-inverse of a matrix\\
+                        \texttt{np.linalg.tensorinv(a[, ind])} &
+                        Compute the 'inverse' of an N-dimensional array\\
+	     	\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{paracol}{2}
+    \question{}
+    \note{}
+\end{paracol}
+
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.14 --- a matrix with the eigenvalues and eigenvectors}
 # import numpy with the socially accepted alias 'np'
 >>> import numpy as np
@@ -2930,10 +3065,71 @@ array([[ 28,  22,  16,  10,   4],
        [142, 112,  82,  52,  22],
        [180, 142, 104,  66,  28]])
 
+# outer product
+>>> np.outer([0, 1, 2], [4, 5, 6, 7])
+array([[ 0,  0,  0,  0],
+       [ 4,  5,  6,  7],
+       [ 8, 10, 12, 14]])
 \end{pythoncode}
 ...
 
+\begin{paracol}{2}
+\question{}
+\note{}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.15 --- solving a system of equations}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+# the system of equations
+# --+ left-hand side
+>>> a = np.array([[4, 2], [7, 13]])
+# --+ right-hand side
+>>> b = np.array([2000, 3000])
+
+# solve the system of equations
+>>> np.linalg.solve(a, b)
+array([526.31578947, -52.63157895])
+
+\end{pythoncode}
+
+\begin{paracol}{2}
+\question{}
+\note{}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.16 --- computing the least-square solutions to a linear matrix equation}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+# the arrays
+>>> x = np.arange(0, 15, 1)
+>>> y = [3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29]
+
+# data preparation / adding a constant to the module 
+>>> A = np.vstack([x, np.ones(len(X))]).T
+>>> A
+
+# estimate the weights (a.k.a., the regression slopes) of the linear model
+>>> b = np.linalg.lstsq(A, y)[0]
+>>> b
+\end{pythoncode}
+
+\begin{figure}[!htbp]
+	\centering
+	\input{ols.pgf}
+\end{figure}
 \section{Pseudorandom Number Generation}
+
+\begin{paracol}{2}
+\question{}
+\note{}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.15 --- a matrix with the eigenvalues and eigenvectors}
+\end{pythoncode}
+
 
 ...
 
