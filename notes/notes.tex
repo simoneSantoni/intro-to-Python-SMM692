@@ -2892,14 +2892,24 @@ array([[1.        , 0.19763628],
 
 \begin{paracol}{2}
 \question{\raggedright Is NumPy a good choice when it comes doing linear algebra?}
-\note{Yes, it is. NumPy offers a rich set of routines, comparable to Matalab's one.\footnote{Matlab is a numeric computing environment that is particularly popular in academia and insdustry.} For an overview of numPy's linear algebra routines, see Tables \ref{tab:matrix_and_vector_products}, \ref{tab:decompositions}, \ref{tab:eigenvalues}, \ref{tab:norms}, and \ref{tab:solving_equations}.}
+\note{Yes, it is. NumPy offers a rich set of routines, comparable to Matalab's one.\footnote{Matlab is a numeric computing environment that is particularly popular in academia and industry.} Currently, there are five families of routines concerning the broader field linear algebra:
+
+\begin{itemize}
+	\item products
+	\item decomposition
+	\item eigenvalues
+	\item norms 
+	\item equations and inversions
+\end{itemize}
+
+For an overview of numPy's linear algebra routines, see Tables \ref{tab:matrix_and_vector_products}, \ref{tab:decompositions}, \ref{tab:eigenvalues}, \ref{tab:norms}, and \ref{tab:solving_equations}.}
 \end{paracol}
 
 \begin{sidewaystable}[!htbp]
 	\centering
 	\caption{NumPy Linear Algebra Routines: Matrix and Vector Products}
 	\label{tab:matrix_and_vector_products}
-	\begin{tabular}{lp[12cm]}
+	\begin{tabular}{lp{12cm}}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
@@ -2934,7 +2944,7 @@ array([[1.        , 0.19763628],
 	\centering
 	\caption{NumPy Linear Algebra Routines: Decompositions}
 	\label{tab:decompositions}
-	\begin{tabular}{lp{12cm}}
+	\begin{tabular}{ll}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
@@ -2974,21 +2984,21 @@ array([[1.        , 0.19763628],
 	\centering
 	\caption{NumPy Linear Algebra Routines: Norms and Other Number}
 	\label{tab:norms}
-	\begin{tabular}{lp[12cm]}
+	\begin{tabular}{ll}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
-                        \texttt{np.linalg.norm(x[, ord, axis, keepdims])}
+                        \texttt{np.linalg.norm(x[, ord, axis, keepdims])} &
                         Matrix or vector norm\\
-                        \texttt{np.linalg.cond(x[, p])}
+                        \texttt{np.linalg.cond(x[, p])}&
                         Compute the condition number of a matrix\\
-                        \texttt{np.linalg.det(a)}
+                        \texttt{np.linalg.det(a)}&
                         Compute the determinant of an array\\
-                        \texttt{np.linalg.matrix\_rank(A[, tol, hermitian])}
+                        \texttt{np.linalg.matrix\_rank(A[, tol, hermitian])}&
                         Return matrix rank of array using SVD method\\
-                        \texttt{np.linalg.slogdet(a)}
+                        \texttt{np.linalg.slogdet(a)}&
                         Compute the sign and (natural) logarithm of the determinant of an array\\
-                        \texttt{np.trace(a[, offset, axis1, axis2, dtype, out])}
+                        \texttt{np.trace(a[, offset, axis1, axis2, dtype, out])}&
                         Return the sum along diagonals of the array\\            
 	     	\bottomrule \\[-1.8ex]
 	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
@@ -2999,7 +3009,7 @@ array([[1.        , 0.19763628],
 	\centering
 	\caption{NumPy Linear Algebra Routines: Solving Equations and Inverting Matrices} 
 	\label{tab:solving_equations}
-	\begin{tabular}{lp{12cm}}
+	\begin{tabular}{ll}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
@@ -3019,13 +3029,36 @@ array([[1.        , 0.19763628],
 	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
 	\end{tabular}
 \end{sidewaystable}
+\clearpage
 
 \begin{paracol}{2}
-    \question{}
-    \note{}
+    \question{\raggedright Matrix and vector products}
+    \note{Snippet 5.14 shows how to use NumPy to get dot, inner, and outer products --- whose definitions are reported in equations \ref{eq:dot}, \ref{eq:inner}, and \ref{eq:outer} respectively:
+    
+    \begin{equation}
+	\label{eq:dot}
+    	x \cdot y = \sum_{i=1}^n x_{i} y_{i} 
+    \end{equation}
+
+    where $x$ and $y$ are vectors of length $n$. 
+
+    \begin{equation}
+	\label{eq:inner}
+	\langle x, y\rangle = x^{T} y
+    \end{equation}
+    
+    where $x^{T}$ is the transpose of $x$. 
+    
+    \begin{equation}
+	\label{eq:outer}
+	x \otimes y = x y^{T}
+    \end{equation}
+
+    where $y^{T}$ is the transpose of $y$.
+    }
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.14 --- a matrix with the eigenvalues and eigenvectors}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.14 --- matrix and vector products}
 # import numpy with the socially accepted alias 'np'
 >>> import numpy as np
 
@@ -3074,8 +3107,15 @@ array([[ 0,  0,  0,  0],
 ...
 
 \begin{paracol}{2}
-\question{}
-\note{}
+\question{Solving a system of equations}
+\note{Snippet 5.15 shows how to solve the following system of equations:
+$$ \left\{
+\begin{array}{lr}
+4x + 2y = 2000\\
+7x + 13y = 3000
+\end{array}
+\right. $$ 
+}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.15 --- solving a system of equations}
