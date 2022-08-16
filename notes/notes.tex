@@ -1830,7 +1830,7 @@ L2 = []
 
 \theendnotes
 
-\chapter{Technical \& Scientific Computation with NumPy and SciPy}
+\chapter{Technical \& Scientific Computation with NumPy}
 
 \vspace{1em}
 
@@ -1844,20 +1844,20 @@ Learning goals:
 
 \vspace{1em}
 
-\section{Installing NumPy and SciPy}
+\section{Installing NumPy}
 
 \begin{paracol}{2}
-	\question{\raggedright Do NumPy and SciPy come with the official Python installation file?}
-	\note{No, they do not. You need to install them separately using the package manager \texttt{pip}.}
+	\question{\raggedright Does NumPy come with the official Python installation file?}
+	\note{No, it does not. You need to install it separately using the package manager \texttt{pip}.}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright I am an Anaconda user: do I need to install NumPy and SciPy separately?}
-	\note{No, you do not. NumPy and SciPy are included in `base', the default environment of Anaconda. However, if you create a new environment, you need to install NumPy and SciPy --- as well as all the other modules you need --- with the package manager \texttt{conda}.}
+	\question{\raggedright I am an Anaconda user: do I need to install NumPy `separately'?}
+	\note{No, you do not. NumPy is included in `base', the default environment of Anaconda. However, if you create a new environment, you need to install NumPy --- as well as all the other modules you need --- with the package manager \texttt{conda}.}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright How do I install NumPy and SciPy?}
+	\question{\raggedright How do I install NumPy?}
 	\note{The easiest way is using the command line. Anaconda users run \texttt{\$ conda install numpy scipy}, whereas Python official release users run \texttt{\$ pip install numpy scipy}. Having said that, Anaconda users can also install the modules they need from within Anaconda-Navigator.}
 \end{paracol}
 
@@ -2821,7 +2821,7 @@ Similar to the case of array-manipulating routines, a detailed discussion of eve
 	\note{Snippet 5.13 shows how to create a typical set of summary stats including an array's mean, standard deviation, minimum, maximum, and some percentiles of interest. Mainly, the snippet has three steps. First, we create an array (line 8). Second, we assign a couple of variables to NumPy statistical functions such as \href{https://numpy.org/doc/stable/reference/generated/numpy.mean.html\#numpy.mean}{\texttt{.mean}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.std.html\#numpy.std}{\texttt{.std}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.min.html}{\texttt{.min}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.max.html}{\texttt{np.max}}, and \href{https://numpy.org/doc/stable/reference/generated/numpy.percentile. html\#numpy.percentile}{\texttt{.percentile}} (see lines 11-17). It is worth noticng that \texttt{min} and \texttt{max} are keywords reserved for Python builtin functions. To avoid any name conflict and poterntial sources of confusion, in lines 13 and 14, we use the names \texttt{min\_} and \texttt{max\_}. Finally, we create a table displaying the variables created in the previous step (see lnes 21, 23, and 27).} 
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.12 --- NumPy trigonometric functions in action. Mainly, the snippet has three steps. First, we create an array (line)}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.12 --- NumPy trigonometric functions in action}
 # import numpy with the socially accepted alias 'np'
 >>> import numpy as np
 
@@ -3125,40 +3125,39 @@ array([526.31578947, -52.63157895])
 \end{pythoncode}
 \clearpage
 
-\begin{paracol}{2}
-\question{\raggedrigt Least-square estimation}
-\note{The least-square estimator is a popular choice for estimating the relationship between two variables, one of the most common tasks in statistics and econometrics.\footnote{Students who want to familiarize with the field of econometrics are warmly encouraged to read Angrist, Joshua D., and Jörn-Steffen Pischke. \href{https://www.mostlyharmlesseconometrics.com/}{Mostly harmless econometrics: An empiricist's companion}. Princeton university press, 2009.} Specifcally, the least-square estimator is defined as follows:
-
-\begin{equation}
-	\hat{\beta} = (X^T X)^{-1} X^T y
-\end{equation}
-
-where $\hat{\beta}$ is the estimate of the regression coefficients, $X$ is the matrix of regressors, $y$ is the outcome vector, and $X^T X$.
-
-In Snippet 5.16, we create two arrays, \texttt{x} --- playing the role of the regressor --- and \texttt{y} --- which we pretend to be the outcome variable. Then, we arrange the data in an array containing \texttt{x}  and a vector of ones. In this way, we add an intercept to the model, namely a scalar that does not change across the observations in the data (see line 11). Finally, we estimate the two regression coefficients of interest:
-
-\begin{itemize}
-	\item the regression coefficient for \texttt{x}, capturing the expected change in \texttt{y} for a unitary increase in \texttt{x}
-	\item the regression coefficient for the intercept, namely, the exepected value of \texttt{y} when the association between \texttt{x} and \texttt{y} is partialled-out
-\end{itemize}
-
-\quad Let me stress that \href{https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html#numpy.linalg.lstsq}{\texttt{.linalg.lstsq}} returns four pieces of information:
-
-\begin{itemize}
-	\item an array with the estimated regression coefficients
-	\item the sums of squared residuals (i.e., the differences between the observed \texttt{y} and the values predicted by the model)
-	\item the rank of the matrix containing the regressors
-	\item the singular values of the matrix containing the regressors
-
-\end{itemize}
-
-\quad Thus, in line 28, we fetch the first element of the returned array, i.e., the regression coefficients.
-
-\quad Figure \ref{fig:ols} provides a visual representation of the least-square estimator.
-
-}
-\end{paracol}
-\clearpage
+%\begin{paracol}{2}
+%\question{\raggedrigt Least-square estimation}
+%\note{The least-square estimator is a popular choice for estimating the relationship between two variables, one of the most common tasks in statistics and econometrics.\footnote{Students who want to familiarize with the field of econometrics are warmly encouraged to read Angrist, Joshua D., and Jörn-Steffen Pischke. \href{https://www.mostlyharmlesseconometrics.com/}{Mostly harmless econometrics: An empiricist's companion}. Princeton university press, 2009.} Specifcally, the least-square estimator is defined as follows:
+%
+%\begin{equation}
+%	\hat{\beta} = (X^T X)^{-1} X^T y
+%\end{equation}
+%
+%where $\hat{\beta}$ is the estimate of the regression coefficients, $X$ is the matrix of regressors, $y$ is the outcome vector, and $X^T X$.
+%
+%In Snippet 5.16, we create two arrays, \texttt{x} --- playing the role of the regressor --- and \texttt{y} --- which we pretend to be the outcome variable. Then, we arrange the data in an array containing \texttt{x}  and a vector of ones. In this way, we add an intercept to the model, namely a scalar that does not change across the observations in the data (see line 11). Finally, we estimate the two regression coefficients of interest:
+%
+%\begin{itemize}
+%	\item the regression coefficient for \texttt{x}, capturing the expected change in \texttt{y} for a unitary increase in \texttt{x}
+%	\item the regression coefficient for the intercept, namely, the exepected value of \texttt{y} when the association between \texttt{x} and \texttt{y} is partialled-out
+%\end{itemize}
+%
+%\quad Let me stress that \href{https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html#numpy.linalg.lstsq}{\texttt{.linalg.lstsq}} returns four pieces of information:
+%
+%\begin{itemize}
+%	\item an array with the estimated regression coefficients
+%	\item the sums of squared residuals (i.e., the differences between the observed \texttt{y} and the values predicted by the model)
+%	\item the rank of the matrix containing the regressors
+%	\item the singular values of the matrix containing the regressors
+%\end{itemize}
+%
+%\quad Thus, in line 28, we fetch the first element of the returned array, i.e., the regression coefficients.
+%
+%\quad Figure \ref{fig:ols} provides a visual representation of the least-square estimator.
+%
+%}
+%\end{paracol}
+%\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.16 --- computing the least-square solutions to a linear matrix equation}
 # import numpy with the socially accepted alias 'np'
@@ -3209,97 +3208,97 @@ array([2.15714286, 2.23333333])
 
 \begin{paracol}{2}
 	\question{\raggedright What is the gamut of pseudorandom numbers available in NumPy?}
-	\note{NumPy has three families of pseudorandom number generators:
+	\note{NumPy has three families of \href{https://numpy.org/doc/stable/reference/random/generator.html}{pseudorandom number generators}:
 	\begin{itemize}
 		\item simple random data 
 		\item permutations
 		\item distributions
 	\end{itemize}
-	Tables \ref{}, \ref{}, and \ref{} provide a summary of the available generators.
+	Tables \ref{tab:random_simple_data}, \ref{tab:random_permutations}, and \ref{tab:random_distros} provide a summary of the available generators.
 	}
 \end{paracol}
 
 \begin{sidewaystable}[!htbp]
 	\centering
 	\caption{NumPy Pseudorandom Generators: Simple Random Data} 
-	\label{tab:solving_equations}
+	\label{tab:random_simple_data}
 	\begin{tabular}{lp{12cm}}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
-			\texttt{np.integers(low[, high, size, dtype, endpoint])} & 
+			\texttt{integers(low[, high, size, dtype, endpoint])} & 
                         Return random integers from low (inclusive) to high (exclusive), or if endpoint=True, low (inclusive) to high (inclusive)\\
-                        \texttt{np.random([size, dtype, out])} &
+                        \texttt{random([size, dtype, out])} &
                         Return random floats in the half-open interval [0.0, 1.0)\\
-                        \texttt{np.choice(a[, size, replace, p, axis, shuffle])} &
+                        \texttt{choice(a[, size, replace, p, axis, shuffle])} &
                         Generates a random sample from a given array\\
-                        \texttt{np.bytes(length)} &
+                        \texttt{bytes(length)} &
                         Return random bytes\\
 	     	\bottomrule \\[-1.8ex]
-	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume \texttt{numpy.random.Generator} has been imported.} \\
 	\end{tabular}
 \end{sidewaystable}
 
 \begin{sidewaystable}[!htbp]
 	\centering
 	\caption{NumPy Pseudorandom Generators: Permutations} 
-	\label{tab:solving_equations}
+	\label{tab:random_permutations}
 	\begin{tabular}{ll}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
-			\texttt{np.shuffle(x[, axis])} &
+			\texttt{shuffle(x[, axis])} &
                         Modify an array or sequence in-place by shuffling its contents\\
-                        \texttt{np.permutation(x[, axis])} &
+                        \texttt{permutation(x[, axis])} &
                         Randomly permute a sequence, or return a permuted range\\
-                        \texttt{np.permuted(x[, axis, out])} &
+                        \texttt{permuted(x[, axis, out])} &
                         Randomly permute x along axis axis\\
 	     	\bottomrule \\[-1.8ex]
-	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume \texttt{numpy.random.Generator} has been imported.} \\
 	\end{tabular}
 \end{sidewaystable}
 
 \begin{sidewaystable}[!htbp]
 	\centering
 	\caption{NumPy Pseudorandom Generators: Distributions} 
-	\label{tab:solving_equations}
+	\label{tab:random_distros}
 	\begin{tabular}{lp{12cm}}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
-\texttt{np.beta(a, b[, size])} &
+\texttt{beta(a, b[, size])} &
                         Draw samples from a Beta distribution\\
-\texttt{np.binomial(n, p[, size])} &
+\texttt{binomial(n, p[, size])} &
                         Draw samples from a binomial distribution\\
-\texttt{np.chisquare(df[, size])} &
+\texttt{chisquare(df[, size])} &
                         Draw samples from a chi-square distribution\\
-\texttt{np.dirichlet(alpha[, size])} &
+\texttt{dirichlet(alpha[, size])} &
                         Draw samples from the Dirichlet distribution\\
-\texttt{np.exponential([scale, size])} &
+\texttt{exponential([scale, size])} &
                         Draw samples from an exponential distribution\\
-\texttt{np.f(dfnum, dfden[, size])} &
+\texttt{f(dfnum, dfden[, size])} &
                         Draw samples from an F distribution\\
-\texttt{np.gamma(shape[, scale, size])} &
+\texttt{gamma(shape[, scale, size])} &
                         Draw samples from a Gamma distribution\\
-\texttt{np.geometric(p[, size])} &
+\texttt{geometric(p[, size])} &
                         Draw samples from the geometric distribution\\
-\texttt{np.gumbel([loc, scale, size])} &
+\texttt{gumbel([loc, scale, size])} &
                         Draw samples from a Gumbel distribution\\
-\texttt{np.hypergeometric(ngood, nbad, nsample[, size])} &
+\texttt{hypergeometric(ngood, nbad, nsample[, size])} &
                         Draw samples from a Hypergeometric distribution\\
-\texttt{np.laplace([loc, scale, size])} &
-                        Draw samples from the Laplace or double exponential distribution with specified location (or mean)} & and scale (decay)\\
-\texttt{np.logistic([loc, scale, size])} &
+\texttt{laplace([loc, scale, size])} &
+                        Draw samples from the Laplace or double exponential distribution with specified location (or mean) and scale (decay)\\
+\texttt{logistic([loc, scale, size])} &
                         Draw samples from a logistic distribution\\
-\texttt{np.lognormal([mean, sigma, size])} &
+\texttt{lognormal([mean, sigma, size])} &
                         Draw samples from a log-normal distribution\\
-\texttt{np.logseries(p[, size])} &
+\texttt{logseries(p[, size])} &
                         Draw samples from a logarithmic series distribution\\
-\texttt{np.multinomial(n, pvals[, size])} &
+\texttt{multinomial(n, pvals[, size])} &
                         Draw samples from a multinomial distribution\\
-\texttt{np.multivariate\_hypergeometric(colors, nsample)} &
+\texttt{multivariate\_hypergeometric(colors, nsample)} &
                         Generate variates from a multivariate hypergeometric distribution\\
-\texttt{np.multivariate\_normal(mean, cov[, size, np...])} &
+\texttt{multivariate\_normal(mean, cov[, size, ..])} &
                         Draw random samples from a multivariate normal distribution\\
 \midrule
 		\end{tabular}
@@ -3308,61 +3307,63 @@ array([2.15714286, 2.23333333])
 \begin{sidewaystable}[!htbp]
 	\centering
 	\caption*{\textsc{Table 5.20} (cont'd)} 
-	\label{tab:solving_equations}
 	\begin{tabular}{lp{12cm}}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
-\texttt{np.negative\_binomial(n, p[, size])} &
+\texttt{negative\_binomial(n, p[, size])} &
                         Draw samples from a negative binomial distribution\\
-\texttt{np.noncentral\_chisquare(df, nonc[, size])} &
+\texttt{noncentral\_chisquare(df, nonc[, size])} &
                         Draw samples from a noncentral chi-square distribution\\
-\texttt{np.noncentral\_f(dfnum, dfden, nonc[, size])} &
+\texttt{noncentral\_f(dfnum, dfden, nonc[, size])} &
                         Draw samples from the noncentral F distribution\\
-\texttt{np.normal([loc, scale, size])} &
-                        Draw random samples from a normal (Gaussian)} & distribution\\
-\texttt{np.pareto(a[, size])} &
+\texttt{normal([loc, scale, size])} &
+                        Draw random samples from a normal (Gaussian) distribution\\
+\texttt{pareto(a[, size])} &
                         Draw samples from a Pareto II or Lomax distribution with specified shape\\
-\texttt{np.poisson([lam, size])} &
+\texttt{poisson([lam, size])} &
                         Draw samples from a Poisson distribution\\
-\texttt{np.power(a[, size])} &
+\texttt{power(a[, size])} &
                         Draws samples in [0, 1] from a power distribution with positive exponent a - 1\\
-\texttt{np.rayleigh([scale, size])} &
+\texttt{rayleigh([scale, size])} &
                         Draw samples from a Rayleigh distribution\\
-\texttt{np.standard\_cauchy([size])} &
+\texttt{standard\_cauchy([size])} &
                         Draw samples from a standard Cauchy distribution with mode = 0\\
-\texttt{np.standard\_exponential([size, dtype, method, out])} &
+\texttt{standard\_exponential([size, dtype, method, out])} &
                         Draw samples from the standard exponential distribution\\
-\texttt{np.standard\_gamma(shape[, size, dtype, out])} &
+\texttt{standard\_gamma(shape[, size, dtype, out])} &
                         Draw samples from a standard Gamma distribution\\
-\texttt{np.standard\_normal([size, dtype, out])} &
-                        Draw samples from a standard Normal distribution (mean=0, stdev=1)} &\\
-\texttt{np.standard\_t(df[, size])} &
+\texttt{standard\_normal([size, dtype, out])} &
+                        Draw samples from a standard Normal distribution (mean=0, stdev=1)\\
+\texttt{standard\_t(df[, size])} &
                         Draw samples from a standard Student's t distribution with df degrees of freedom\\
-\texttt{np.triangular(left, mode, right[, size])} &
+\texttt{triangular(left, mode, right[, size])} &
                         Draw samples from the triangular distribution over the interval [left, right]\\
-\texttt{np.uniform([low, high, size])} &
+\texttt{uniform([low, high, size])} &
                         Draw samples from a uniform distribution\\
-\texttt{np.vonmises(mu, kappa[, size])} &
+\texttt{vonmises(mu, kappa[, size])} &
                         Draw samples from a von Mises distribution\\
-\texttt{np.wald(mean, scale[, size])} &
+\texttt{wald(mean, scale[, size])} &
                         Draw samples from a Wald, or inverse Gaussian, distribution\\
-\texttt{np.weibull(a[, size])} &
+\texttt{weibull(a[, size])} &
                         Draw samples from a Weibull distribution\\
-\texttt{np.zipf(a[, size])} &
+\texttt{zipf(a[, size])} &
                         Draw samples from a Zipf distribution\\
 	     	\bottomrule \\[-1.8ex]
-	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume \texttt{numpy.random.Generator} has been imported.} \\
 	\end{tabular}
 \end{sidewaystable}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.17 --- permutations}
+\begin{paracol}{2}
+	\question{\raggedright Permutation in NumPy}
+	\note{Permuting means changing the order of the elements in an array. Array permutation can be done `in-place' (see Snippet 5.17, line 13), so the original array is modified, or creating a copy (see line 17). Note the outcome of the \texttt{np.random} functions is not reproducible. Put simply, running the same NumPy generator $n$ times might return $n$ different outcomes. To ensure the reproducibility of NumPy code, we must initialize a random generator instance as shown in the lower section of Snippet 5.17. Specifically, in line 23, we assign the object \texttt{rgn} to the outcome of \href{https://numpy.org/doc/stable/reference/random/generator.html#numpy.random.Generator}{\texttt{.default\_rng}}. The parameter passed to the generator, known as `seed,' is an arbitrary number object. If you reproduce the lines 23-25, you will get the outcome I got, displayed in line 26.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.17 --- \texttt{.shuffle} Vs. \texttt{.permutation}}
 # import numpy with the socially accepted alias 'np'
 >>> import numpy as np
 
-# set a random seed for reproducibility purposes 
->>> np.random.seed(12345)
 # shuffling/permuting an existing array
 # --+ the array
 >>> A = np.arange(10)
@@ -3378,10 +3379,68 @@ array([7, 6, 5, 2, 1, 8, 0, 4, 9, 3])
 >>> A
 array([6, 9, 3, 8, 7, 2, 4, 1, 0, 5])
 
+# shuffling an existing array and ensure reproduciblity
+# --+ the array
+>>> B = [0, 1, 2, 3]
+# --+ initialize a random generator instance
+>>> rng = np.random.default_rng(12345)
+>>> rng.shuffle(B)
+>>> B
+[2, 0, 3, 1]
 \end{pythoncode}
 \clearpage
 
+\begin{paracol}{2}
+	\question{\raggedright Sampling what?}
+	\note{Random sampling is the process of selecting a random subset of elements from an array. NumPy allows us:
+	\begin{itemize}
+		\item to sample the elements belonging to an existing array
+		\item to sample the elements included in a certain interval
+		\item to sample from a theoretical distribution
+	\end{itemize}
+	
+	\quad Lines 9 and 12 included in Snippet 5.18 show how to sample a given number of elements (see parameter \texttt{size}) from an existing array. The code in line 12 differes from the code in line 9 because of the optional parameter \texttt{replace} that is set to \texttt{False} (default is \texttt{True}). In so doing, an element can be sampled once and once only.
+	
+	\quad In lines 22 and 27, we create two arrays of shape \texttt{(10000,)} from the random normal (see \href{https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.normal.html}{\texttt{.random.normal}}) and Poisson (see \href{https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.poisson.html}{\texttt{.random.poisson}}) distribution respectively. In the interesting of redundancy, \href{https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.normal.html}{\texttt{.random.normal}} takes three mandatory arguments: the mean of the distribution (\texttt{loc}), the standard deviation of the distribution (\texttt{scale}), and the size of the array (\texttt{size}); (see \href{https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.poisson.html}{\texttt{.random.poisson}}) takes two mandatory arguments: the expected value/variance of the distribution (\texttt{lam}) and the size of the distribution (\texttt{size}). In lines xx - xx, we use Matplotlib to visualize the distribution of the two arrays 
+	}
+\end{paracol}
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.18 --- \texttt{.integers} Vs. \texttt{.random} Vs. \texttt{.choice}}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+# the array
+>>> A = np.arange(10)
+
+# random sampling from an existing array
+# --+ sampling with replacement (items can be drawn multiple times)
+>>> np.random.choice(A, size=7)
+array([3, 5, 7, 3, 1, 5, 2])
+# --+ sampling without replacement (items can be drawn only once)
+>>> np.random.choice(A, size=7, replace=False)
+array([4, 2, 6, 3, 1, 0, 5])
+
+# sampling from a range
+>>> np.random.integer(0, 10, size=4)
+array([4, 3, 2, 3])
+
+# sampling from a theoretical distribution
+# --+ 10,000 items from a the normal distribution with mean 10 and 
+# standard deviation 10
+>>> N = np.random.norm(loc=0, scale=1, size=1000)
+>>> N
+array([-1.80532765,  1.43318889,  1.14774224, ...,  0.38328412,
+        1.37732456,  0.76801253])
+# --+ 10,000 items from the Poisson distribution with lambda=10
+>>> P = np.random.poisson(lam=10, size=1000)
+>>> P
+array([11,  7,  7, ...,  9,  6,  7])
+# --+ viualize the two arrays
+
+\end{pythoncode}
+
 \section{File Input and Output with \texttt{ndarrays}}
+
 
 
 ...
