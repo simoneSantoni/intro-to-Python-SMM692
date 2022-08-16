@@ -3427,17 +3427,25 @@ array([4, 3, 2, 3])
 # sampling from a theoretical distribution
 # --+ 10,000 items from a the normal distribution with mean 10 and 
 # standard deviation 10
->>> N = np.random.norm(loc=0, scale=1, size=1000)
+>>> N = np.random.norm(loc=10, scale=10, size=10000)
 >>> N
 array([-1.80532765,  1.43318889,  1.14774224, ...,  0.38328412,
         1.37732456,  0.76801253])
 # --+ 10,000 items from the Poisson distribution with lambda=10
->>> P = np.random.poisson(lam=10, size=1000)
+>>> P = np.random.poisson(lam=10, size=10000)
 >>> P
 array([11,  7,  7, ...,  9,  6,  7])
 # --+ viualize the two arrays
 
 \end{pythoncode}
+
+\begin{figure}
+	\input{norm.pgf}
+	\input{poisson.pgf}
+	% \caption{}
+	% \label{fig:}
+\end{figure}
+
 
 \section{File Input and Output with \texttt{ndarrays}}
 
