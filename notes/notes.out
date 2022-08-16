@@ -21,8 +21,8 @@
 \BOOKMARK [1][-]{section.4.9}{Control Flow \(or If-Then Statements\)}{chapter.4}% 21
 \BOOKMARK [1][-]{section.4.10}{While and For Loops}{chapter.4}% 22
 \BOOKMARK [1][-]{section.4.11}{Iterations and Comprehensions}{chapter.4}% 23
-\BOOKMARK [0][-]{chapter.5}{Technical \046 Scientific Computation with NumPy and SciPy}{}% 24
-\BOOKMARK [1][-]{section.5.1}{Installing NumPy and SciPy}{chapter.5}% 25
+\BOOKMARK [0][-]{chapter.5}{Technical \046 Scientific Computation with NumPy}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Installing NumPy}{chapter.5}% 25
 \BOOKMARK [1][-]{section.5.2}{NumPy ndarray}{chapter.5}% 26
 \BOOKMARK [1][-]{section.5.3}{Array Creation Routines}{chapter.5}% 27
 \BOOKMARK [1][-]{section.5.4}{Array Manipulation Routines}{chapter.5}% 28

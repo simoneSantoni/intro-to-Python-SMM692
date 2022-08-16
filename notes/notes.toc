@@ -21,8 +21,8 @@
 \contentsline {section}{\numberline {4.9}Control Flow (or If-Then Statements)}{50}{section.4.9}%
 \contentsline {section}{\numberline {4.10}While and For Loops}{52}{section.4.10}%
 \contentsline {section}{\numberline {4.11}Iterations and Comprehensions}{56}{section.4.11}%
-\contentsline {chapter}{\numberline {5}Technical \& Scientific Computation with NumPy and SciPy}{61}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Installing NumPy and SciPy}{61}{section.5.1}%
+\contentsline {chapter}{\numberline {5}Technical \& Scientific Computation with NumPy}{61}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Installing NumPy}{61}{section.5.1}%
 \contentsline {section}{\numberline {5.2}NumPy \texttt {ndarray}}{61}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Array Creation Routines}{67}{section.5.3}%
 \contentsline {section}{\numberline {5.4}Array Manipulation Routines}{82}{section.5.4}%
@@ -30,8 +30,8 @@
 \contentsline {section}{\numberline {5.6}Mathematical Functions}{84}{section.5.6}%
 \contentsline {section}{\numberline {5.7}Statistics}{86}{section.5.7}%
 \contentsline {section}{\numberline {5.8}Linear Algebra}{92}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Pseudorandom Number Generation}{102}{section.5.9}%
-\contentsline {section}{\numberline {5.10}File Input and Output with \texttt {ndarrays}}{107}{section.5.10}%
+\contentsline {section}{\numberline {5.9}Pseudorandom Number Generation}{101}{section.5.9}%
+\contentsline {section}{\numberline {5.10}File Input and Output with \texttt {ndarrays}}{108}{section.5.10}%
 \contentsline {chapter}{\numberline {6}Data Management with Pandas}{109}{chapter.6}%
 \contentsline {chapter}{\numberline {7}Coda}{111}{chapter.7}%
 \contentsline {chapter}{Appendices}{}{section*.41}

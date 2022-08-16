@@ -1,0 +1,32 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import numpy with the socially accepted alias 'np'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{c+c1}{\PYGZsh{} the array}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{A} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} random sampling from an existing array}
+\PYG{c+c1}{\PYGZsh{} --+ sampling with replacement (items can be drawn multiple times)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{choice}\PYG{p}{(}\PYG{n}{A}\PYG{p}{,} \PYG{n}{size}\PYG{o}{=}\PYG{l+m+mi}{7}\PYG{p}{)}
+\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{])}
+\PYG{c+c1}{\PYGZsh{} --+ sampling without replacement (items can be drawn only once)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{choice}\PYG{p}{(}\PYG{n}{A}\PYG{p}{,} \PYG{n}{size}\PYG{o}{=}\PYG{l+m+mi}{7}\PYG{p}{,} \PYG{n}{replace}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} sampling from a range}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{integer}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{n}{size}\PYG{o}{=}\PYG{l+m+mi}{4}\PYG{p}{)}
+\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} sampling from a theoretical distribution}
+\PYG{c+c1}{\PYGZsh{} --+ 10,000 items from a the normal distribution with mean 10 and}
+\PYG{c+c1}{\PYGZsh{} standard deviation 10}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{N} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{norm}\PYG{p}{(}\PYG{n}{loc}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{n}{scale}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{size}\PYG{o}{=}\PYG{l+m+mi}{1000}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{N}
+\PYG{n}{array}\PYG{p}{([}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{1.80532765}\PYG{p}{,}  \PYG{l+m+mf}{1.43318889}\PYG{p}{,}  \PYG{l+m+mf}{1.14774224}\PYG{p}{,} \PYG{o}{...}\PYG{p}{,}  \PYG{l+m+mf}{0.38328412}\PYG{p}{,}
+        \PYG{l+m+mf}{1.37732456}\PYG{p}{,}  \PYG{l+m+mf}{0.76801253}\PYG{p}{])}
+\PYG{c+c1}{\PYGZsh{} --+ 10,000 items from the Poisson distribution with lambda=10}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{P} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{poisson}\PYG{p}{(}\PYG{n}{lam}\PYG{o}{=}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{n}{size}\PYG{o}{=}\PYG{l+m+mi}{1000}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{P}
+\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mi}{11}\PYG{p}{,}  \PYG{l+m+mi}{7}\PYG{p}{,}  \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{o}{...}\PYG{p}{,}  \PYG{l+m+mi}{9}\PYG{p}{,}  \PYG{l+m+mi}{6}\PYG{p}{,}  \PYG{l+m+mi}{7}\PYG{p}{])}
+\PYG{c+c1}{\PYGZsh{} --+ viualize the two arrays}
+\end{Verbatim}

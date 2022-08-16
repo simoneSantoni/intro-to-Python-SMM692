@@ -1,20 +1,31 @@
 # import numpy with the socially accepted alias 'np'
 >>> import numpy as np
 
-# set a random seed for reproducibility purposes
->>> np.random.seed(12345)
-# shuffling/permuting an existing array
-# --+ the array
+# the array
 >>> A = np.arange(10)
->>> A
-array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-# --+ .shuffle produces in-place changes
->>> np.random.shuffle(A)
->>> A
-array([6, 9, 3, 8, 7, 2, 4, 1, 0, 5])
-# --+ .permutation creates a copy
->>> np.random.permutation(A)
-array([7, 6, 5, 2, 1, 8, 0, 4, 9, 3])
->>> A
-array([6, 9, 3, 8, 7, 2, 4, 1, 0, 5])
+
+# random sampling from an existing array
+# --+ sampling with replacement (items can be drawn multiple times)
+>>> np.random.choice(A, size=7)
+array([3, 5, 7, 3, 1, 5, 2])
+# --+ sampling without replacement (items can be drawn only once)
+>>> np.random.choice(A, size=7, replace=False)
+array([4, 2, 6, 3, 1, 0, 5])
+
+# sampling from a range
+>>> np.random.integer(0, 10, size=4)
+array([4, 3, 2, 3])
+
+# sampling from a theoretical distribution
+# --+ 10,000 items from a the normal distribution with mean 10 and
+# standard deviation 10
+>>> N = np.random.norm(loc=0, scale=1, size=1000)
+>>> N
+array([-1.80532765,  1.43318889,  1.14774224, ...,  0.38328412,
+        1.37732456,  0.76801253])
+# --+ 10,000 items from the Poisson distribution with lambda=10
+>>> P = np.random.poisson(lam=10, size=1000)
+>>> P
+array([11,  7,  7, ...,  9,  6,  7])
+# --+ viualize the two arrays
 

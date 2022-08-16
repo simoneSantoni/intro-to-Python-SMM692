@@ -4,6 +4,7 @@
 
 \PYG{c+c1}{\PYGZsh{} set a random seed for reproducibility purposes}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{random}\PYG{o}{.}\PYG{n}{seed}\PYG{p}{(}\PYG{l+m+mi}{12345}\PYG{p}{)}
+
 \PYG{c+c1}{\PYGZsh{} shuffling/permuting an existing array}
 \PYG{c+c1}{\PYGZsh{} --+ the array}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{A} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{10}\PYG{p}{)}
