@@ -3,13 +3,21 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+np.random.seed(12345)
+
+# %% 
+# pseudo-random number generator
+A = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+np.arange(0, 10, 1)
+np.random.shuffle(A)
+np.random.permutation(A)
 # %%
 
 x = np.arange(0, 15, 1)
 y = [4, 4, 8, 6, 11, 13, 17, 11, 21, 28, 23, 23, 25, 29, 37]
 A = np.vstack([x, np.ones(len(x))]).T
 A
-b = np.linalg.lstsq(A, y,)[0]
+b = np.linalg.lstsq(A, y, rcond=0)
 b
 
 fig = plt.figure(figsize=(3, 3))
@@ -28,4 +36,3 @@ plt.savefig(
     bbox_inches="tight",
     pad_inches=0,
 )
-# %%
