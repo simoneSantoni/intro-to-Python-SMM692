@@ -9,7 +9,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[margin=2cm]{geometry}
 %\usepackage{color}
-\usepackage[dvipsnames]{xcolor}
+%\usepackage[dvipsnames]{xcolor}
 \usepackage{tcolorbox}
 \usepackage{lineno}
 \usepackage{amsmath}
@@ -22,7 +22,7 @@
 %% ========================== Coding snippets =============================
 \usepackage[newfloat]{minted}
 \usepackage[many]{tcolorbox}
-\definecolor{Gray}{gray}{0.9}
+%\definecolor{Gray}{gray}{0.9}
 \newcommand{\txtmint}[1]{\mintinline[fontsize=\scriptsize, bgcolor=Gray]{text}{#1}}
 \tcbuselibrary{minted,skins,breakable}
 \newtcblisting{pythoncode}[2][]{
@@ -162,11 +162,9 @@ $\ldots$
 
 \chapter{Organization of the Module}
 
-\hline
 
 \vspace{1em}
 
-\hline
 
 \vspace{1em}
 
@@ -174,11 +172,9 @@ $\ldots$
 
 \chapter{Getting Started with Python}
 
-\hline
 
 \vspace{1em}
 
-\hline
 
 \vspace{1em}
 
@@ -200,11 +196,9 @@ $\ldots$
 
 \chapter{Python Language Fundamentals}
 
-\hline
 
 \vspace{1em}
 
-\hline
 
 \vspace{1em}
 
@@ -222,11 +216,9 @@ $\ldots$
 
 \chapter{Python Objects}
 
-\hline
 
 \vspace{1em}
 
-\hline
 
 \vspace{1em}
 
@@ -238,7 +230,7 @@ In this chapter, we pursue the following learning objectives:
 
 \begin{paracol}{2}
     \question{\raggedright What is a Python object?} 
-    \note{In essence, Python objects are pieces of data. Mark Lutz, the author of the popular book \href{https://www.google.co.uk/books/edition/Learning_Python/4pgQfXQvekcC?hl=en&gbpv=0}{Learning Python}\footnote{Lutz, Mark. \textit{Learning Python: Powerful object-oriented programming.} O'Reilly Media, Inc., 2013.}, points out \quote{\textit{in Python we do things with stuff. ``Things'' take the form of operations like addition and concatenation, and ``stuff'' refers to the objects on which we perform those operations}}. 
+    \note{In essence, Python objects are pieces of data. Mark Lutz, the author of the popular book \href{https://www.google.co.uk/books/edition/Learning_Python/4pgQfXQvekcC?hl=en&gbpv=0}{Learning Python}\footnote{Lutz, Mark. \textit{Learning Python: Powerful object-oriented programming.} O'Reilly Media, Inc., 2013.}, points out \quote{\textit{in Python, we do things with stuff. ``Things'' take the form of operations like addition and concatenation, and ``stuff'' refers to the objects on which we perform those operations}}. 
     }
 \end{paracol}
 
@@ -252,16 +244,17 @@ In this chapter, we pursue the following learning objectives:
     \note{
     Typically, we do not need to create ad-hoc objects. Python provides us with diverse built-in objects that make our job easier:
     \begin{itemize}
-    	\item built-in objects make coding efficient and easy. For example, using the \href{https://docs.python.org/3/tutorial/introduction.html#strings}{string} object, we can represent and manipulate a piece of text --- e.g., a newspaper article --- without loading any \href{https://docs.python.org/3/tutorial/modules.html}{module}
+    	\item built-in objects make coding efficient and easy. For example, using the \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{string} object, we can represent and manipulate a piece of text --- e.g., a newspaper article --- without loading any \href{https://docs.python.org/3/tutorial/modules.html}{module}
     	\item built-in objects are flexible. For example, we can deploy built-in objects to create a \href{https://docs.python.org/3/tutorial/classes.html}{class}
     	\item built-in objects have been created and refined over time by a large community of expert developers. Hence, they are  often  more  efficient  than  ad-hoc objects (unless the creator of the ad-hoc object really knows her business!)
-    \end{itemize}}
+    \end{itemize}
+    }
 \end{paracol}
 \clearpage
 
 \begin{paracol}{2}
     \question{\raggedright The core built-in Python objects} 
-	\note{Table \ref{tab:built_in_objects} illustrates the types of built-in Python objects. For example, \href{https://docs.python.org/3/tutorial/introduction.html#numbers}{Numbers} and \href{https://docs.python.org/3/tutorial/introduction.html#strings}{strings} objects are used to represent numeric and textual data respectively. \href{https://docs.python.org/3/tutorial/introduction.html#lists}{Lists} and \href{https://docs.python.org/3/tutorial/datastructures.html#dictionaries}{dictionaries} are --- likely as not --- the two most popular \href{https://docs.python.org/3/tutorial/datastructures.html}{data structures} in Python. Lists are ordered collections of other objects such (any type!!). Dictionaries are pairs of keys (e.g., a product identifier) and objects (e.g., the price of the product). No worries: we will go through each built-in type in the following sections of this document. Caveat: in the interest of logical coherence, the various built-in types will not be presented in the order adopted Table \ref{tab:built_in_objects}.} 
+	\note{Table \ref{tab:built_in_objects} illustrates the types of built-in Python objects. For example, \href{https://docs.python.org/3/tutorial/introduction.html\#numbers}{Numbers} and \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{strings} objects are used to represent numeric and textual data respectively. \href{https://docs.python.org/3/tutorial/introduction.html\#lists}{Lists} and \href{https://docs.python.org/3/tutorial/datastructures.html\#dictionaries}{dictionaries} are --- likely as not --- the two most popular \href{https://docs.python.org/3/tutorial/datastructures.html}{data structures} in Python. Lists are ordered collections of other objects such (any type!!). Dictionaries are pairs of keys (e.g., a product identifier) and objects (e.g., the price of the product). No worries: we will go through each built-in type in the following sections of this document. Caveat: in the interest of logical coherence, the various built-in types will not be presented in the order adopted in Table \ref{tab:built_in_objects}.} 
 \end{paracol}
 
 \begin{table}[!htbp]
@@ -288,7 +281,7 @@ Implementation types & Compiled code, stack tracebacks                          
 
 \begin{paracol}{2}
     \question{\raggedright Types of `number' objects}
-	\note{Snippet 4.1, ``Doing stuff with numbers,'' highlights the two most popular \href{https://docs.python.org/3/tutorial/introduction.html#numbers}{`number'} instances in Python: integers and floating-point numbers. Integers are whole numbers such as 0, 4, or -12. Floating-point numbers are the representation of real numbers such as 0.5, 3.1415, or -1.6e-19. However, floating points in Python do not have --- in general --- the same value as the real number they represent.\footnote{Floating numbers are stored in binaries with an assigned level of precision that is typically equivalent to 15 or 16 decimals.} It is worth noticing that any single number with a period `.' is considered a floating point in Python. Also, Snippet 4.1 shows that the multiplication of an integer by a floating point yields a floating point. That happens because Python first converts operands up to the type of the most complicated operand.} %
+	\note{Snippet 4.1, ``Doing stuff with numbers,'' highlights the two most popular \href{https://docs.python.org/3/tutorial/introduction.html\#numbers}{`number'} instances in Python: integers and floating-point numbers. Integers are whole numbers such as 0, 4, or -12. Floating-point numbers are the representation of real numbers such as 0.5, 3.1415, or -1.6e-19. However, floating points in Python do not have --- in general --- the same value as the real number they represent.\footnote{Floating numbers are stored in binaries with an assigned level of precision that is typically equivalent to 15 or 16 decimals.} It is worth noticing that any single number with a period `.' is considered a floating point in Python. Also, Snippet 4.1 shows that the multiplication of an integer by a floating point yields a floating point. That happens because Python first converts operands up to the type of the most complicated operand.} %
 \end{paracol}
 \clearpage
 
@@ -335,13 +328,13 @@ Implementation types & Compiled code, stack tracebacks                          
 	\question{\raggedright Basic arithmetic operations in Python}
 	\note{Numbers in Python support the usual mathematical operations:
 		\begin{itemize}
-			\item `+' $\rigtharrow$ addition
-			\item `-' $\rightarrow$ subtraction
-			\item `*' $\rightarrow$ multiplication
-			\item `/' $\rightarrow$ floating point division
-			\item `//' $\rightarrow$ integer division
-			\item `\%' $\rightarrow$ modulus (remainder)
-			\item `**' $\rightarrow$ exponentiation
+			\item \texttt{+} $\rightarrow$ addition
+			\item \texttt{-} $\rightarrow$ subtraction
+			\item \texttt{*} $\rightarrow$ multiplication
+			\item \texttt{$\setminus$} $\rightarrow$ floating point division
+			\item \texttt{//} $\rightarrow$ integer division
+			\item \texttt{\%} $\rightarrow$ modulus (remainder)
+			\item \texttt{**} $\rightarrow$ exponentiation
 		\end{itemize}
 		 To use these operations, it is sufficient to launch a  Python or IPython session without any modules loaded (see Snippet 4.1).}
 \end{paracol}
@@ -423,7 +416,7 @@ Implementation types & Compiled code, stack tracebacks                          
 
 \begin{paracol}{2}
 	\question{Operator precedence}
-    \note{As shown in Snippet 4.2, line 30, Python expressions can string together multiple operators. So, how does Python know which operation to perform first? The answer to this question lies in operator precedence. When you write an expression with more than one operator, Python groups its parts according to what are called precedence rules,\footnote{The official Python documentation has an extensive section on operator precedence rules in the section dedicated to \href{https://docs.python.org/3/reference/expressions.html}{syntax of expressions}} and this grouping determines the order in which the expression’s parts are computed. Table \ref{tab:operator_precedence} reports the precedence hierarchy concerning the most common operators. Note that operators lower in the table have higher precedence. Parentheses can be used to create sub-expressions that override operator precedence rules.}
+    \note{As shown in Snippet 4.2, line 30, Python expressions can string together multiple operators. So, how does Python know which operation to perform first? The answer to this question lies in operator precedence. When you write an expression with more than one operator, Python groups its parts according to what is called precedence rules,\footnote{The official Python documentation has an extensive section on operator precedence rules in the section dedicated to \href{https://docs.python.org/3/reference/expressions.html}{syntax of expressions}} and this grouping determines the order in which the expression’s parts are computed. Table \ref{tab:operator_precedence} reports the precedence hierarchy concerning the most common operators. Note that operators lower in the table have higher precedence. Parentheses can be used to create sub-expressions that override operator precedence rules.}
 \end{paracol}
 \clearpage
 
@@ -461,7 +454,7 @@ Implementation types & Compiled code, stack tracebacks                          
 		\item Variables must be assigned before they can be used in expressions
 		\item Variables refer to objects and are never declared ahead of time
 	\end{itemize}
-    As Snippet 4.3 shows, the assignment of \texttt{x = 2} causes the variable \texttt{x} to come into existence `automatically.' From that point, we can use the variables in the context of expressions such as the ones displayed in lines 8, 12, 16, and 20, or to create new variables like in line 24.
+    As Snippet 4.3 shows, the assignment of \texttt{x = 2} causes the variable \texttt{x} to come into existence `automatically.' From that point, we can use the variables in the context of expressions such as the ones displayed in lines 8, 12, 16, and 20 or create new variables like in line 24.
     }
 \end{paracol}
 
@@ -472,7 +465,7 @@ Implementation types & Compiled code, stack tracebacks                          
 
 >>> y = 4.0	
 
-# subtracting an integer from variable 'x'
+# subtracting an integer from variable 'x.'
 >>> x - 1
 1
 
@@ -495,7 +488,7 @@ Implementation types & Compiled code, stack tracebacks                          
 
 \begin{paracol}{2}
 	\question{\raggedright Displaying number objects}
-	\note{Snippet 4.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the outcome of the expression `as is' (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we have to prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. Snippet 4.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html#str.format}{\texttt{format}}.}
+	\note{Snippet 4.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the outcome of the expression `as is (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we have to prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. Snippet 4.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html\#str.format}{\texttt{format}}.}
 \end{paracol}
 \clearpage
 
@@ -512,7 +505,7 @@ Implementation types & Compiled code, stack tracebacks                          
 		\midrule
 		3.1415926                           & \texttt{\{:.2f\}}                            & 3.14                                & Format float 2 decimal places                 &  \\
 		3.1415926                           & \texttt{\{:+.2f\}}                           & +3.14                               & Format float 2 decimal places with sign       &  \\
-		-1                                  & \texttt{\{:+.2f\}}}                           & -1.00                               & Format float 2 decimal places with sign       &  \\
+		-1                                  & \texttt{\{:+.2f\}}                           & -1.00                               & Format float 2 decimal places with sign       &  \\
 		2.71828                             & \texttt{\{:.0f\}}                            & 3                                   & Format float with no decimal places           &  \\
 		5                                   & \texttt{\{:0\textgreater{}2d\}}              & 05                                  & Pad number with zeros (left padding, width 2) &  \\
 		5                                   & \texttt{\{:x\textless{}4d\}}                 & 5xxx                                & Pad number with x’s (right padding, width 4)  &  \\
@@ -520,9 +513,9 @@ Implementation types & Compiled code, stack tracebacks                          
 		1000000                             & \texttt{\{:,\}}                              & 1,000,000                           & Number format with comma separator            &  \\
 		0.25                                & \texttt{\{:.2\%\}}                           & 25.00\%                             & Format percentage                             &  \\
 		1000000000                          & \texttt{\{:.2e\}}                            & 1.00e+09                            & Exponent notation                             &  \\
-		13                                  & \texttt{\{:10d\}}                            & \multicolumn{1}{r}{13}                                  & Right aligned (default, width 10)             &  \\
-		13                                  & \texttt{\{:\textless{}10d\}}                 & \multicolumn{1}{l}{13}                                  & Left aligned (width 10)                       &  \\
-		13                                  & \texttt{\{:\textasciicircum{}10d\}}          & 13                                  & Center aligned (width 10)           \\
+		13                                  & \texttt{\{:10d\}}                            & \multicolumn{1}{r}{13}              & Right aligned (default, width 10)             &  \\
+		13                                  & \texttt{\{:\textless{}10d\}}                 & \multicolumn{1}{l}{13}              & Left aligned (width 10)                       &  \\
+		13                                  & \texttt{\{:\textasciicircum{}10d\}}          & 13                                  & Center aligned (width 10)                     \\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -542,7 +535,7 @@ Implementation types & Compiled code, stack tracebacks                          
 
 \begin{paracol}{2}
 	\question{\raggedright{How do I compare number objects?}}
-	\note{Comparisons are used frequently to create control \href{https://docs.python.org/3/tutorial/controlflow.html}{flows}, a topic we will discuss later in this chapter. Normal comparisons in Python regard two number objects and return a Boolean result. Chained comparisons concern three or more objects, and, like normal comparisons, yield a Boolean result. Snippet 4.5 provides a sample of normal comparisons (between lines 1 and 15) and chained comparisons (between lines 21 and 30). As evident in the example, comparisons can regard both numbers and variables assigned to numbers. Chained comparisons can take the form of a range test (see line 21), a joined, `AND' test of the truth of multiple expressions (see line 25) or a disjoined, `OR' test of the truth of multiple expressions (see line 29).}
+	\note{Comparisons are used frequently to create control \href{https://docs.python.org/3/tutorial/controlflow.html}{flows}, a topic we will discuss later in this chapter. Normal comparisons in Python regard two number objects and return a Boolean result. Chained comparisons concern three or more objects and, like normal comparisons, yield a Boolean result. Snippet 4.5 provides a sample of normal comparisons (between lines 1 and 15) and chained comparisons (between lines 21 and 30). As evident in the example, comparisons can regard both numbers and variables assigned to numbers. Chained comparisons can take the form of a range test (see line 21), a joined, `AND' test of the truth of multiple expressions (see line 25), or a disjoined, `OR' test of the truth of multiple expressions (see line 29).}
 \end{paracol}
 \clearpage
 
@@ -589,7 +582,7 @@ True
 
 \begin{paracol}{2}
 	\question{How do we use strings?}
-	\note{Strings are used to record words, contents of text files loaded into memory, Internet addresses, Python source code, and so on. Strings can also be used to hold the raw bytes used for media files and network transfers, and both the encoded and decoded forms of non-ASCII Unicode text used in internationalized programs.}
+	\note{Strings are used to record words, contents of text files loaded into memory, Internet addresses, Python source code, and so on. Strings can also be used to hold the raw bytes used for media files and network transfers and both the encoded and decoded forms of non-ASCII Unicode text used in internationalized programs.}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -599,7 +592,7 @@ True
 
 \begin{paracol}{2}
 	\question{String indexing and slicing}
-	\note{The fact that strings are immutable sequences affects how we manipulate textual data in Python. In Snippet 4.6, we fetch the individual elements of \texttt{S}, a variable assigned to ``\texttt{Python 3.X}.'' As per the built-in function \href{https://docs.python.org/3/tutorial/introduction.html#strings}{\texttt{len}}, \texttt{S} contains six unitary strings. That means that each element in \texttt{S} is associated with a position in the numerical progression $\{0, 1, 2, 3, 4, 5\}$. Now, you may be surprised to see the first element of the list is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has index $0$, while the last element has index \texttt{len(obj)} - 1.  Fetching the individual elements of a string, such as \texttt{S}, requires passing the desired index between brackets, as shown in line 9 (where we get the first unitary string, namely, ``\texttt{P}''.), line 13 (where we get the last unitary string, namely, ``\texttt{X}''), and line 21 (where we get the unitary string with index $3$, i.e., the fourth unitary string appearing in \texttt{S}, ``\texttt{h}''). Note that line 17 is an alternative indexing strategy to the one presented in line 13: it is possible to retrieve the last unitary string by counting `backward'; that is, getting the first element starting from the right-hand side of the string, which equates to index \texttt{-1}. In lines 26 and 30, we exploit the indices of \texttt{S} to retrieve multiple unitary strings in a row. What we pass among brackets is not a single index. Instead, we specify a range of indices \texttt{i:j}. It is wort noticing that, in Python, the element associated with the lower bound index \texttt{i} is returned, whereas the element associated with the upper bound index \texttt{j} is not. In line 26, we fetch the unitary strings between index \texttt{2} --- equating to third unitary string of \texttt{S} --- and index \texttt{5} excluded --- namely, the fifth unitary string of \texttt{S}. In line 30, we adopt the `backward' approach to retrieve the unitary string with index \texttt{-3} --- the third string counting from the right-hand side of \texttt{S} --- as well as any other unitary strings following index \texttt{-3}. To do that, we leave the upper bound index blank.} 
+	\note{The fact that strings are immutable sequences affects how we manipulate textual data in Python. In Snippet 4.6, we fetch the individual elements of \texttt{S}, a variable assigned to ``\texttt{Python 3.X}.'' As per the built-in function \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{\texttt{len}}, \texttt{S} contains six unitary strings. That means that each element in \texttt{S} is associated with a position in the numerical progression $\{0, 1, 2, 3, 4, 5\}$. Now, you may be surprised to see the first element of the list is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has an index of $0$, while the last element has an index \texttt{len(obj)} - 1.  Fetching the individual elements of a string, such as \texttt{S}, requires passing the desired index between brackets, as shown in line 9 (where we get the first unitary string, namely, ``\texttt{P}''.), line 13 (where we get the last unitary string, namely, ``\texttt{X}''), and line 21 (where we get the unitary string with index $3$, i.e., the fourth unitary string appearing in \texttt{S}, ``\texttt{h}''). Note that line 17 is an alternative indexing strategy to the one presented in line 13: it is possible to retrieve the last unitary string by counting `backward'; that is, getting the first element starting from the right-hand side of the string, which equates to index \texttt{-1}. In lines 26 and 30, we exploit the indices of \texttt{S} to retrieve multiple unitary strings in a row. What we pass among brackets is not a single index. Instead, we specify a range of indices \texttt{i:j}. It is worth noticing that, in Python, the element associated with the lower bound index \texttt{} is returned, whereas the element associated with the upper bound index \texttt{j} is not. In line 26, we fetch the unitary strings between index \texttt{2} --- equating to third unitary string of \texttt{S} --- and index \texttt{5} excluded --- namely, the fifth unitary string of \texttt{S}. In line 30, we adopt the `backward' approach to retrieve the unitary string with index \texttt{-3} --- the third string counting from the right-hand side of \texttt{S} --- as well as any other unitary strings following index \texttt{-3}. To do that, we leave the upper bound index blank.} 
 \end{paracol}
 \clearpage
 
@@ -642,7 +635,7 @@ True
 
 \begin{paracol}{2}
 	\question{\raggedright Common string literals and operators}
-	\note{Snippet 4.6 deals with string indexing and slicing, two of the many operations we can carry out on strings. Table \ref{tab:string_literals_and_operators} reports a sample of common string literals and operators. The first two lines of Table \ref{tab:string_literals_and_operators} remind us that single and double quotes are equivalent when it comes to assigning a variable to a string object. However, we must refrain from mixing and matching single and double quotes. In other words, a string object requires the leading and trailing quotes are of the same type (i.e., double-double or single-single). In the interest of consistency, it is a good idea to make a policy choice, such as ``in my Python code, I use double quotes only'', and to stick with that throughout the various lines of the script. I prefer using double quotes because the single quote symbol is relatively popular in natural language (consider for example the Saxon genitive). As shown in the third line of Table \ref{tab:string_literals_and_operators} the single quote is treated as a unitary string insofar as double quotes are used to delimit the string object. Should the string object be delimited by single quotes, we should tell Python not to treat the single quote symbol after \texttt{m} as a Python special character but as a unitary string. To do that, we use the escape symbol $\setminus$  as shown in the fourth line of Table \ref{tab:string_literals_and_operators}. Table \ref{tab:helpful_escapes} provides several escaping examples.}
+	\note{Snippet 4.6 deals with string indexing and slicing, two of the many operations we can carry out on strings. Table \ref{tab:string_literals_and_operators} reports a sample of common string literals and operators. The first two lines of Table \ref{tab:string_literals_and_operators} remind us that single and double quotes are equivalent when it comes to assigning a variable to a string object. However, we must refrain from mixing and matching single and double quotes. In other words, a string object requires the leading and trailing quotes are of the same type (i.e., double-double or single-single). In the interest of consistency, it is a good idea to make a policy choice, such as ``in my Python code, I use double quotes only'', and to stick with that throughout the various lines of the script. I prefer using double quotes because the single quote symbol is relatively popular in natural language (consider, for example, the Saxon genitive). As shown in the third line of Table \ref{tab:string_literals_and_operators}, the single quote is treated as a unitary string insofar as double quotes are used to delimit the string object. Should the string object be delimited by single quotes, we should tell Python not to treat the single quote symbol after \texttt{m} as a Python special character but as a unitary string. To do that, we use the escape symbol $\setminus$  as shown in the fourth line of Table \ref{tab:string_literals_and_operators}. Table \ref{tab:helpful_escapes} provides several escaping examples.}
 \end{paracol}
 \clearpage
 
@@ -654,7 +647,7 @@ True
 		\toprule \toprule
 		Literal/operation & Interpretation \\
 		\midrule
-		\texttt{S = ""}} &  Empty string \\
+		\texttt{S = ""} &  Empty string \\
 		\texttt{S = `'} &   Single quotes, same as double quotes \\
 		\texttt{S = "spam's"} & Single quote as a string \\
 		\texttt{S = `spam$\setminus$'s'} & Escape symbol \\
@@ -681,7 +674,7 @@ True
 
 \begin{paracol}{2}
 	\question{\raggedright String manipulation tasks}
-		\note{Snippet 4.7 presents a sample of miscellaneous string manipulation tasks. In lines 6 and 9, we check the length of the variables \texttt{S1} and \texttt{S2}. In line 13, we display five repetitions of \texttt{S1}. In line 17, we use the algebraic operator ``$+$'' to concatenate \texttt{S1} and \texttt{S2}. In line 21, we expand on the previous input by separating \texttt{S1} and \texttt{S2} by a white-space. In line 25, we carry out the same task as line 17 --- however, we rely on the built-in \href{https://docs.python.org/3/library/stdtypes.html#str.join}{\texttt{join}} function to join \texttt{S1} and \texttt{S2} with whitespace. The argument taken by \href{https://docs.python.org/3/library/stdtypes.html#str.join}{\texttt{join}} is a Python \texttt{list}, the subject of paragraph 5.3. In line 29, \texttt{S1} and \texttt{S2} are joined with a custom string object, namely, \texttt{" Vs. "}. Finally, in line 33, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html#str.format}{\texttt{format}} function (see also Snippet 4.4) to display a string object including \texttt{S1} and \texttt{S2}. For a comprehensive list of string methods, see Table \ref{tab:string_methods}.}
+		\note{Snippet 4.7 presents a sample of miscellaneous string manipulation tasks. In lines 6 and 9, we check the length of the variables \texttt{S1} and \texttt{S2}. In line 13, we display five repetitions of \texttt{S1}. In line 17, we use the algebraic operator ``$+$'' to concatenate \texttt{S1} and \texttt{S2}. In line 21, we expand on the previous input by separating \texttt{S1} and \texttt{S2} by a white-space. In line 25, we carry out the same task as line 17 --- however, we rely on the built-in \href{https://docs.python.org/3/library/stdtypes.html\#str.join}{\texttt{join}} function to join \texttt{S1} and \texttt{S2} with whitespace. The argument taken by \href{https://docs.python.org/3/library/stdtypes.html\#str.join}{\texttt{join}} is a Python \texttt{list}, the subject of paragraph 5.3. In line 29, \texttt{S1} and \texttt{S2} are joined with a custom string object, namely, \texttt{" Vs. "}. Finally, in line 33, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html\#str.format}{\texttt{format}} function (see also Snippet 4.4) to display a string object including \texttt{S1} and \texttt{S2}. For a comprehensive list of string methods, see Table \ref{tab:string_methods}.}
 \end{paracol}
 \clearpage
 
@@ -725,7 +718,7 @@ True
 
 \begin{paracol}{2}
 	\question{\raggedright String editing}
-	\note{Snippet 4.8 illustrates some string editing tasks. In line 5, we use \href{https://docs.python.org/3/library/stdtypes.html#str.format}{lstrip} --- a variation of the built-in function \href{https://docs.python.org/3/library/stdtypes.html#str.format}{strip} --- that returns a copy of the string with leading characters removed. In line 9, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html}{replace} to return a copy of the string with all occurrences of substring \texttt{old} (first argument taken by the function) replaced by \texttt{new} (second argument taken by the function). Finally, in line 17, we use the built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{lower}} to return a copy of the string with all the cased characters converted to lowercase.} 
+	\note{Snippet 4.8 illustrates some string editing tasks. In line 5, we use \href{https://docs.python.org/3/library/stdtypes.html\#str.format}{lstrip} --- a variation of the built-in function \href{https://docs.python.org/3/library/stdtypes.html\#str.format}{strip} --- that returns a copy of the string with leading characters removed. In line 9, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html}{replace} to return a copy of the string with all occurrences of substring \texttt{old} (first argument taken by the function) replaced by \texttt{new} (second argument taken by the function). Finally, in line 17, we use the built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{lower}} to return a copy of the string with all the cased characters converted to lowercase.} 
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.8 --- miscellaneous string editing tasks}
@@ -794,7 +787,7 @@ True
 
 \begin{paracol}{2}
 \question{\raggedright Multiline string printing}
-\note{In the previous examples, we came across the built-in function \href{https://docs.python.org/3/library/functions.html#print}{\texttt{print}}. Such a function can be used to print both number- and string-type objects. Sometimes, what we want to print fits into a single line. In other circumstances, we are interested in visualizing rich data, which can span multiple lines. Snippet 4.9 how to print objects across multiple lines with the triple-quoted block string (see line ). As evident from the Python code included in lines 8-13, any line between triple-quotes is considered part of the same string object.}	
+\note{In the previous examples, we came across the built-in function \href{https://docs.python.org/3/library/functions.html\#print}{\texttt{print}}. Such a function can be used to print both number- and string-type objects. Sometimes, what we want to print fits into a single line. In other circumstances, we are interested in visualizing rich data, which can span multiple lines. Snippet 4.9 how to print objects across multiple lines with the triple-quoted block string (see line ). As evident from the Python code included in lines 8-13, any line between triple-quotes is considered part of the same string object.}	
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.9 --- multiline string printing}
@@ -909,7 +902,7 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 \question{\raggedright List manipulation with built-in methods}
-\note{Python offers many \href{https://docs.python.org/3/tutorial/datastructures.html}{methods to manipulate and test list objects}. Table \ref{tab:list_methods} reports some of the most popular methods along with synopses. The first three methods --- \texttt{.append()}, \texttt{.insert()}, and \texttt{.extend()} --- expand an existing list. The fourth method, \texttt{.index} test for the presence of an item in an existing list. Note this method raises a \href{https://docs.python.org/3/library/exceptions.html#ValueError}{\texttt{ValueError}} if there is no such item.The remaining methods produce in-place changes in an existing list's items.}
+\note{Python offers many \href{https://docs.python.org/3/tutorial/datastructures.html}{methods to manipulate and test list objects}. Table \ref{tab:list_methods} reports some of the most popular methods along with synopses. The first three methods --- \texttt{.append()}, \texttt{.insert()}, and \texttt{.extend()} --- expand an existing list. The fourth method, \texttt{.index} test for the presence of an item in an existing list. Note this method raises a \href{https://docs.python.org/3/library/exceptions.html\#ValueError}{\texttt{ValueError}} if there is no such item.The remaining methods produce in-place changes in an existing list's items.}
 \end{paracol}
 
 \begin{table}[!htbp]
@@ -999,7 +992,7 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright How do we create a dictionary?}
-	\note{Snippet 4.15 shows two different ways to create a dictionary. A dictionary can be created by including key-value pairs among braces (see line 2). In the example, there are three keys, associated with Marvel characters, and as many values, which can be thought as the characters' position in an ideal power rank. A colon separates a key and its associated value. The second way to create a dictionary is based on Python's builtin \href{https://docs.python.org/3/library/stdtypes.html#dict}{\texttt{dict}}, mapping key onto values, and \href{https://docs.python.org/3/library/functions.html#zip}{\texttt{zip}}, which iterates over two elements in parallel. Specifically, \href{https://docs.python.org/3/library/functions.html#zip}{\texttt{zip}} creates the one-to-one correspondence between keys (characters) and values (characaters' power) that is passed as the argument of \href{https://docs.python.org/3/library/stdtypes.html#dict}{\texttt{dict}}. We will analyze the topic of iterations extensively in sections \ref{sec:while_and_for_loops} and \ref{sec:iterations_and_comprhensions}.}
+	\note{Snippet 4.15 shows two different ways to create a dictionary. A dictionary can be created by including key-value pairs among braces (see line 2). In the example, there are three keys, associated with Marvel characters, and as many values, which can be thought as the characters' position in an ideal power rank. A colon separates a key and its associated value. The second way to create a dictionary is based on Python's builtin \href{https://docs.python.org/3/library/stdtypes.html\#dict}{\texttt{dict}}, mapping key onto values, and \href{https://docs.python.org/3/library/functions.html\#zip}{\texttt{zip}}, which iterates over two elements in parallel. Specifically, \href{https://docs.python.org/3/library/functions.html\#zip}{\texttt{zip}} creates the one-to-one correspondence between keys (characters) and values (characaters' power) that is passed as the argument of \href{https://docs.python.org/3/library/stdtypes.html\#dict}{\texttt{dict}}. We will analyze the topic of iterations extensively in sections \ref{sec:while_and_for_loops} and \ref{sec:iterations_and_comprhensions}.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.15 --- initializing a new dictionary object}
@@ -1074,7 +1067,7 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 \question{\raggedright Dictionary manipulation with built-in methods}
-\note{Like for lists, Python offers many \href{https://docs.python.org/3/tutorial/datastructures.html#dictionaries}{\texttt{methods to manipulate dictionary objects}}. Table \ref{tab:dictionary_methods} reports some of the most common methods along with synopses. The first three methods, \texttt{.keys()} \texttt{.values()} \texttt{.items()}, get the constitutive elements of dictionaries: keys, values, and key-value pairs respectively. The fourth method, \texttt{.get(key, default?)} gets the value for a specific key. The fifth method, \texttt{.update()}, updates the value for a specific key. Like \texttt{.update()}, \texttt{.popitem()}, \texttt{.pop()}, and \texttt{d.clear()} alter the information of a dictionary in place. The first removes the value of a certain key; the second removes the item (a key-value pair) for a certain key; the latter delete all dictionary items. Finally, \texttt{.copy()} creates a \href{https://docs.python.org/3/library/copy.html}{shallow copy} of an existing dictionary.}
+\note{Like for lists, Python offers many \href{https://docs.python.org/3/tutorial/datastructures.html\#dictionaries}{\texttt{methods to manipulate dictionary objects}}. Table \ref{tab:dictionary_methods} reports some of the most common methods along with synopses. The first three methods, \texttt{.keys()} \texttt{.values()} \texttt{.items()}, get the constitutive elements of dictionaries: keys, values, and key-value pairs respectively. The fourth method, \texttt{.get(key, default?)} gets the value for a specific key. The fifth method, \texttt{.update()}, updates the value for a specific key. Like \texttt{.update()}, \texttt{.popitem()}, \texttt{.pop()}, and \texttt{d.clear()} alter the information of a dictionary in place. The first removes the value of a certain key; the second removes the item (a key-value pair) for a certain key; the latter delete all dictionary items. Finally, \texttt{.copy()} creates a \href{https://docs.python.org/3/library/copy.html}{shallow copy} of an existing dictionary.}
 \end{paracol}
 
 \begin{table}[!htbp]
@@ -1189,7 +1182,7 @@ dict_items([("Captain Marvel", 3), ("Living Tribunal", 2), ("One-Above-All", 1)]
 
 \begin{paracol}{2}
 	\question{\raggedright Tuples with the \href{https://docs.python.org/3/library/collections.html}{\texttt{collections}} module}
-	\note{\href{https://docs.python.org/3/library/collections.html}{\texttt{collections}} is a module that is shipped with Python and provides data containers that are alternative to Python's general purpose built-in containers, i.e., \texttt{dict}, \texttt{list}, \texttt{set}, and \texttt{tuple}. One of these containers can be created with the function \href{https://docs.python.org/3/library/collections.html#collections.namedtuple}{\texttt{namedtuple}} (see Snippet 4.21), which allows annotating the tuple items with names. In line 2, we import the function \href{https://docs.python.org/3/library/collections.html#collections.namedtuple}{\texttt{namedtuple}} from the \href{https://docs.python.org/3/library/collections.html#collections}{\texttt{collections}} module. In line 5, we create an ad hoc class that best represents the structure of our sample data, concerning Marvel characters' names and the year in which they first appeared in the comic series. The first argument taken by the function is customary and regards the name of the class we are about to create. The second argument is a list with the names of the attributes included in our data structure. In line 8, we use the newly created class \texttt{Rec} to create a tuple, which is eventually printed as per line 11.}
+	\note{\href{https://docs.python.org/3/library/collections.html}{\texttt{collections}} is a module that is shipped with Python and provides data containers that are alternative to Python's general purpose built-in containers, i.e., \texttt{dict}, \texttt{list}, \texttt{set}, and \texttt{tuple}. One of these containers can be created with the function \href{https://docs.python.org/3/library/collections.html\#collections.namedtuple}{\texttt{namedtuple}} (see Snippet 4.21), which allows annotating the tuple items with names. In line 2, we import the function \href{https://docs.python.org/3/library/collections.html\#collections.namedtuple}{\texttt{namedtuple}} from the \href{https://docs.python.org/3/library/collections.html\#collections}{\texttt{collections}} module. In line 5, we create an ad hoc class that best represents the structure of our sample data, concerning Marvel characters' names and the year in which they first appeared in the comic series. The first argument taken by the function is customary and regards the name of the class we are about to create. The second argument is a list with the names of the attributes included in our data structure. In line 8, we use the newly created class \texttt{Rec} to create a tuple, which is eventually printed as per line 11.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.21 --- creating an annotated tuple with the collection module}
@@ -1211,12 +1204,12 @@ Rec(character="Iron Man", first_appearance=1963)
 
 \begin{paracol}{2}
 	\question{\raggedright What is a set?}
-	\note{A \href{https://docs.python.org/3/tutorial/datastructures.html#sets}{\texttt{set}} is an \emph{unordered} collection of \emph{unique} and \emph{immutable} objects.}
+	\note{A \href{https://docs.python.org/3/tutorial/datastructures.html\#sets}{\texttt{set}} is an \emph{unordered} collection of \emph{unique} and \emph{immutable} objects.}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright What does it mean that sets are unordered collections?}
-	\note{By design, \href{https://docs.python.org/3/tutorial/datastructures.html#sets}{\texttt{set}} is a data structure with \emph{undefined element ordering} (see Snippet 4.22 --- the outcome included in line 6 does not follow any particular order).}
+	\note{By design, \href{https://docs.python.org/3/tutorial/datastructures.html\#sets}{\texttt{set}} is a data structure with \emph{undefined element ordering} (see Snippet 4.22 --- the outcome included in line 6 does not follow any particular order).}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -1274,7 +1267,7 @@ False
 
 \begin{paracol}{2}
 	\question{\raggedright How do the files in our OS relate with Python?}
-	\notion{Our Python program may involve input and/or output operations. In other words, we may want to read data from a file stored in our machine and/or write the outcome of our analysis to a file. The built-in function \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}} creates a Python file object, which serves as a link to a file residing on your machine. As Lutz notes:
+	\note{Our Python program may involve input and/or output operations. In other words, we may want to read data from a file stored in our machine and/or write the outcome of our analysis to a file. The built-in function \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}} creates a Python file object, which serves as a link to a file residing on your machine. As Lutz notes:
 	\begin{quote}
 		\textit{
 		``Compared to the types you've seen so far, file objects are somewhat unusual. They are considered a core type because they are created by a built-in function, but they're not numbers, sequences, or mappings, and they don't respond to expression operators; they export only methods for common file-processing tasks'' (page 282)
@@ -1284,12 +1277,12 @@ False
 
 \begin{paracol}{2}
 \question{\raggedright How do we open a file?}
-\note{We open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}. The output of the function is a \texttt{file} object. }
+\note{We open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}. The output of the function is a \texttt{file} object. }
 \end{paracol}
 
 \begin{paracol}{2}
 \question{\raggedright How do we source the data stored in a file?}
-\note{We open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}. The output of the function is a \texttt{file} object. Snippet 4.24 illustrates how to use \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}} for data sourcing. In the first part of the snippet, we create a \texttt{file} object to read the data included in the existing file \texttt{my\_file.txt}.\footnote{For the sake of simplicity, we assume the target file is located in the same directory as the Python script.} At least, we have to pass one argument to \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}}: the path pointing to the file. A second optional argument is \texttt{mode}, which specifies the mode in which the file is opened to source. It defaults to \texttt{r}, which means open for reading in text mode. Other common values are \texttt{w} for writing,\footnote{By deafult, \texttt{w} truncates the file if it already exists} \texttt{x} for exclusive creation, and \texttt{a} for appending. \footnote{If encoding is not specified the encoding used is platform-dependent. Specifically, \texttt{locale.getpreferredencoding(False)} is called to get the current locale encoding. Character encoding is the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.} To read a file's contents, we use the \href{https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects}{\texttt{.read()}} method (see line 9), returning a string object (see line 10). }
+\note{We open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}. The output of the function is a \texttt{file} object. Snippet 4.24 illustrates how to use \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}} for data sourcing. In the first part of the snippet, we create a \texttt{file} object to read the data included in the existing file \texttt{my\_file.txt}.\footnote{For the sake of simplicity, we assume the target file is located in the same directory as the Python script.} At least, we have to pass one argument to \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}: the path pointing to the file. A second optional argument is \texttt{mode}, which specifies the mode in which the file is opened to source. It defaults to \texttt{r}, which means open for reading in text mode. Other common values are \texttt{w} for writing,\footnote{By deafult, \texttt{w} truncates the file if it already exists} \texttt{x} for exclusive creation, and \texttt{a} for appending. \footnote{If encoding is not specified the encoding used is platform-dependent. Specifically, \texttt{locale.getpreferredencoding(False)} is called to get the current locale encoding. Character encoding is the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.} To read a file's contents, we use the \href{https://docs.python.org/3/tutorial/inputoutput.html\#methods-of-file-objects}{\texttt{.read()}} method (see line 9), returning a string object (see line 10). }
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.24 --- data input with \texttt{open}}
@@ -1312,7 +1305,7 @@ Hi there
 
 \begin{paracol}{2}
 \question{\raggedright How do we write the data in the current Python session to a file?}
-\note{Snippet 4.25 illustrates how to use \href{https://docs.python.org/3/library/functions.html#open}{\texttt{open}} for data writing. In the first part of the snippet, we create three strings --- i.e., the information we are manipulating in the active Python session (see lines 2, 4, and 6). Then, we create a file object in `writing' mode (see the value passed to \texttt{mode}, line 9). Finally, we manipulate the three strings (as a sample task, in line 12, we concatenate \texttt{FIRSTLAW}, \texttt{SECONDLAW}, \texttt{THIRDLAW}) and write the result to a file (line 16).}
+\note{Snippet 4.25 illustrates how to use \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}} for data writing. In the first part of the snippet, we create three strings --- i.e., the information we are manipulating in the active Python session (see lines 2, 4, and 6). Then, we create a file object in `writing' mode (see the value passed to \texttt{mode}, line 9). Finally, we manipulate the three strings (as a sample task, in line 12, we concatenate \texttt{FIRSTLAW}, \texttt{SECONDLAW}, \texttt{THIRDLAW}) and write the result to a file (line 16).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.25 --- data output with \texttt{open}}
@@ -1339,7 +1332,7 @@ Hi there
 	
 \begin{paracol}{2}
 	\question{\raggedright How about reading a single line from a file?}
-	\note{Hold on: what is a line? A string whose last character is \texttt{$\backslash$n}. We can read a single line from a file using the \href{https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects}{\texttt{.readline()}} method (see Snippet 4.26). Such a method starts by reading the first line included in the file (see line 11); then, it reads any subsequent lines included in the file (see line 15); when it reaches the end of the file (EOF), it returns the empty string \texttt{""} (see line 19).}
+	\note{Hold on: what is a line? A string whose last character is \texttt{$\backslash$n}. We can read a single line from a file using the \href{https://docs.python.org/3/tutorial/inputoutput.html\#methods-of-file-objects}{\texttt{.readline()}} method (see Snippet 4.26). Such a method starts by reading the first line included in the file (see line 11); then, it reads any subsequent lines included in the file (see line 15); when it reaches the end of the file (EOF), it returns the empty string \texttt{""} (see line 19).}
 \end{paracol}
 \clearpage 
 
@@ -1473,7 +1466,7 @@ Hi there
 
 \begin{paracol}{2}
 \question{\raggedright What is control flow in Python?}
-\note{Many Python statements we write are compound statements: there is one statement nested inside another. The outer statement is called the `if' statement and the inner statement is called the `then' statement. The `if' statement is used to determine whether to execute the `then' statement. Specifically, the `then' statement is executed insofar as the `if' statement evaluates to `True.' Snippet 4.28 illustrates a control flow case, a simple rule-based product recommender that suggests products based on users' purchasing patterns. If product \texttt{x} belongs to a user's set of past purchases, then a certain item is recommended; otherwise, no recommendation is offered (see lines 7 and 8, containing the \texttt{else} statement).} }
+\note{Many Python statements we write are compound statements: there is one statement nested inside another. The outer statement is called the `if' statement and the inner statement is called the `then' statement. The `if' statement is used to determine whether to execute the `then' statement. Specifically, the `then' statement is executed insofar as the `if' statement evaluates to `True.' Snippet 4.28 illustrates a control flow case, a simple rule-based product recommender that suggests products based on users' purchasing patterns. If product \texttt{x} belongs to a user's set of past purchases, then a certain item is recommended; otherwise, no recommendation is offered (see lines 7 and 8, containing the \texttt{else} statement).} 
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.28 --- an example of control flow in Python}
@@ -1557,12 +1550,12 @@ Customers who bought x & a also bought Air Force
 
 \begin{paracol}{2}
 	\question{\raggedright How do we write loops in Python?}
-	\note{Using \href{https://docs.python.org/3/reference/compound_stmts.html#for}{\texttt{for}} and \href{https://docs.python.org/3/reference/compound_stmts.html#while}{\texttt{while}} statements.}
+	\note{Using \href{https://docs.python.org/3/reference/compound_stmts.html\#for}{\texttt{for}} and \href{https://docs.python.org/3/reference/compound_stmts.html\#while}{\texttt{while}} statements.}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright What is the difference between \texttt{for} and \texttt{while} statements?}
-	\note{The \href{https://docs.python.org/3/reference/compound_stmts.html#while}{\texttt{while}} statement provides a way to code general loops. The \href{https://docs.python.org/3/reference/compound_stmts.html#for}{\texttt{for}} statement is designed for stepping through the items in a sequence or other iterable object and running a block of code for each.}
+	\note{The \href{https://docs.python.org/3/reference/compound_stmts.html\#while}{\texttt{while}} statement provides a way to code general loops. The \href{https://docs.python.org/3/reference/compound_stmts.html\#for}{\texttt{for}} statement is designed for stepping through the items in a sequence or other iterable object and running a block of code for each.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.31 --- \texttt{while} loop examples}
@@ -1600,12 +1593,12 @@ s
 
 \begin{paracol}{2}
 	\question{\raggedright \texttt{while} loops in action}
-	\note{\href{https://docs.python.org/3/reference/compound_stmts.html#while}{\texttt{while}} statements run a code block insforar as a test evaluates to True. In the upper section of Exmple 4.31, we assing a \texttt{i} to a number. Then we create a for loop with the following elements: the first one is a statementing testing wether \texttt{i} is smaller or equal 3 (see line 3); the second element is the loop body (indented), which is repeated as long as the test evaluates to \texttt{True}. It is worth noticing that every iteration of the loop body produces a unitary increase in \texttt{i} --- therefore, the program leaves the loop after four iterations. In the lower section of Snippet 4.31, we assigng the variable \texttt{x} to a string (line 13), which we eventually print (line 14) and  slice (line 15) until we get an empty string (line 13x).}
+	\note{\href{https://docs.python.org/3/reference/compound_stmts.html\#while}{\texttt{while}} statements run a code block insforar as a test evaluates to True. In the upper section of Exmple 4.31, we assing a \texttt{i} to a number. Then we create a for loop with the following elements: the first one is a statementing testing wether \texttt{i} is smaller or equal 3 (see line 3); the second element is the loop body (indented), which is repeated as long as the test evaluates to \texttt{True}. It is worth noticing that every iteration of the loop body produces a unitary increase in \texttt{i} --- therefore, the program leaves the loop after four iterations. In the lower section of Snippet 4.31, we assigng the variable \texttt{x} to a string (line 13), which we eventually print (line 14) and  slice (line 15) until we get an empty string (line 13x).}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright \texttt{for} loops in action}
-	\note{\href{https://docs.python.org/3/reference/compound_stmts.html#for}{\texttt{for}} steps through a sequence of items and carries out a task. In the upper section of Snippet 4.32, we print the result of a mathematical operation that is deployed over the items of a \texttt{list} (an example of Python iterable object). The code included in line 2 assigngs temporarily the variable \texttt{item} to an element of iterable. Then, the code block (indented) is executed over the temporary object. In the lower section of Snippet 4.32, the execution of the loop operates a mathematical expression over the items of a first list and appends the outcome to a second list (line 10).}
+	\note{\href{https://docs.python.org/3/reference/compound_stmts.html\#for}{\texttt{for}} steps through a sequence of items and carries out a task. In the upper section of Snippet 4.32, we print the result of a mathematical operation that is deployed over the items of a \texttt{list} (an example of Python iterable object). The code included in line 2 assigngs temporarily the variable \texttt{item} to an element of iterable. Then, the code block (indented) is executed over the temporary object. In the lower section of Snippet 4.32, the execution of the loop operates a mathematical expression over the items of a first list and appends the outcome to a second list (line 10).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.32 --- a \texttt{for} loop example}
@@ -1665,7 +1658,7 @@ Wanda Maximoff IS human
 
 \begin{paracol}{2}
 	\question{\raggedright Counter \texttt{for} loops}
-	\note{The built-in class \href{https://docs.python.org/3/library/functions.html#func-range}{\texttt{range}} provides an immutable sequence that is particularly helpful for loops that repeat an action a certain number of times. Snippet 35 shows an example of a for loop with \href{https://docs.python.org/3/library/functions.html#func-range}{\texttt{range}}.}
+	\note{The built-in class \href{https://docs.python.org/3/library/functions.html\#func-range}{\texttt{range}} provides an immutable sequence that is particularly helpful for loops that repeat an action a certain number of times. Snippet 35 shows an example of a for loop with \href{https://docs.python.org/3/library/functions.html\#func-range}{\texttt{range}}.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.35 --- a counter loop example}
@@ -1710,7 +1703,7 @@ z  <->  red
 
 \begin{paracol}{2}
 	\question{\raggedright Nested \texttt{for} loops Vs. \texttt{zip} for loops}
-	\note{Contrarily to the nested \texttt{for} loops, which considers all permutations containing multiple iterables' items, the built-in \href{https://docs.python.org/3/library/functions.html#zip}{zip} steps through several iterables \emph{in parallel}, producing tuples with an item from each one. As shown in Snippet 4.37, there is neither an inner nor an outer for loop in this case --- instead, there is a single loop considering two temporary objects, \texttt{i} and \texttt{j}, that occupy the same position in the offset of the iterables at hand (see line 6; the first item from the first iterable goes with the first item from the second iterable, the second item from the first iterable goes with the second item from the second iterable, and so on and so forth).}
+	\note{Contrarily to the nested \texttt{for} loops, which considers all permutations containing multiple iterables' items, the built-in \href{https://docs.python.org/3/library/functions.html\#zip}{zip} steps through several iterables \emph{in parallel}, producing tuples with an item from each one. As shown in Snippet 4.37, there is neither an inner nor an outer for loop in this case --- instead, there is a single loop considering two temporary objects, \texttt{i} and \texttt{j}, that occupy the same position in the offset of the iterables at hand (see line 6; the first item from the first iterable goes with the first item from the second iterable, the second item from the first iterable goes with the second item from the second iterable, and so on and so forth).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.37 --- looping over two iterables in parallel with \texttt{zip} }
@@ -1745,7 +1738,7 @@ z  <->  red
 \end{paracol}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.38 --- \texttt{for} loop Vs. \textt{list comprehension}}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.38 --- for loop Vs. list comprehension}
 # the for loop way
 # --+ create an empty list
 L = []
@@ -1839,8 +1832,6 @@ L2 = []
 
 \chapter{Technical \& Scientific Computation with NumPy and SciPy}
 
-\hline
-
 \vspace{1em}
 
 Learning goals:
@@ -1850,7 +1841,6 @@ Learning goals:
 	\item 
 \end{itemize}
 
-\hline
 
 \vspace{1em}
 
@@ -1885,7 +1875,7 @@ Learning goals:
 
 \begin{paracol}{2}
 	\question{\raggedright How do we create an \texttt{ndarray}?}
-	\note{As shown in Snippet 5.1, we pass an object to \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array}{\texttt{numpy.array}}. If the object we pass is a scalar, a 0-dimensional array containing object is returned (line 5). Passing a list to \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array}{\texttt{numpy.array}} produces a one-dimensional array (line 9); passing a list of lists produces a two-dimensional array (line 13); finally, passing a list of lists of lists produces a three-dimensional array (line 18).}
+	\note{As shown in Snippet 5.1, we pass an object to \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html\#numpy.array}{\texttt{numpy.array}}. If the object we pass is a scalar, a 0-dimensional array containing object is returned (line 5). Passing a list to \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html\#numpy.array}{\texttt{numpy.array}} produces a one-dimensional array (line 9); passing a list of lists produces a two-dimensional array (line 13); finally, passing a list of lists of lists produces a three-dimensional array (line 18).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.1 --- creating an \texttt{ndarray}}
@@ -1960,12 +1950,12 @@ import numpy as np
 
 \begin{paracol}{2}
 	\question{\raggedright How do I check an \texttt{array}'s number of dimensions?}
-	\note{In Snippet 5.3, we saw NumPy infers an \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}}'s number of dimensions from the data. Snippet 5.3 shows how to access \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.ndim.html#numpy.ndarray.ndim}{\texttt{.ndim}}, the \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}}'s attribute concerning the number of dimensions. In the example, \texttt{DATA} has two dimensions (e.g., coordinates).}
+	\note{In Snippet 5.3, we saw NumPy infers an \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}}'s number of dimensions from the data. Snippet 5.3 shows how to access \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.ndim.html\#numpy.ndarray.ndim}{\texttt{.ndim}}, the \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}}'s attribute concerning the number of dimensions. In the example, \texttt{DATA} has two dimensions (e.g., coordinates).}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright How do I check an \texttt{array}'s shape?}
-	\note{The lower section of Snippet 5.3 shows how to access \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.shape.html#numpy.ndarray.shape}{\texttt{.shape}}, the \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}}'s attribute concerning the shape. In the example, each dimension of the \texttt{DATA} has size 2.}
+	\note{The lower section of Snippet 5.3 shows how to access \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.shape.html\#numpy.ndarray.shape}{\texttt{.shape}}, the \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}}'s attribute concerning the shape. In the example, each dimension of the \texttt{DATA} has size 2.}
 \end{paracol}
 \clearpage
 
@@ -1999,7 +1989,7 @@ import numpy as np
 	\label{tab:array_attributes}
 	\begin{tabular}{ll}
 		\toprule \toprule
-			Attribute} & Synopsis \\
+			Attribute & Synopsis \\
 			\midrule 
                         \texttt{DATA.flags} &
                         Information about the memory layout of the array \\
@@ -2027,12 +2017,12 @@ import numpy as np
 
 \begin{paracol}{2}
 	\question{\raggedright I know that a NumPy array must contain homogenous data --- but which object types are allowed?}
-	\note{Table \ref{tab:array_data_types} reports the NumPy data types. Python beginners are not supposed to appreciate the distinctive attributes of each type. Instead, they may want to get a clear understanding of the high-level types, namely, floating points, complex, integer, boolean, string, or general Python objects. When it comes to working on sophisticated projects, requiring more control over the storage types, then it is highly suggested to get a thorough knowledge of the types in Table \ref{tab:array_data_types}. It is worth noticing that \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\texxttt{dtypes}} are a source of NumPy's flexibility for interacting with data coming from other systems. In most cases, they provide a mapping directly onto an underlying disk or memory representation, which makes it easy to read and write binary streams of data to disk and also to connect to code written in a low-level language like C or Fortran. The numerical \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\textttt{dtypes}} are named the same way: a type name, like \texttt{float} or \texttt{int}, followed by a number indicating the number of bits per element. A standard double-precision floating-point value takes up 8 bytes or 64 bits. Thus, this type is known in NumPy as \texttt{float64}.}
+	\note{Table \ref{tab:array_data_types} reports the NumPy data types. Python beginners are not supposed to appreciate the distinctive attributes of each type. Instead, they may want to get a clear understanding of the high-level types, namely, floating points, complex, integer, boolean, string, or general Python objects. When it comes to working on sophisticated projects, requiring more control over the storage types, then it is highly suggested to get a thorough knowledge of the types in Table \ref{tab:array_data_types}. It is worth noticing that \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\texxttt{dtypes}} are a source of NumPy's flexibility for interacting with data coming from other systems. In most cases, they provide a mapping directly onto an underlying disk or memory representation, which makes it easy to read and write binary streams of data to disk and also to connect to code written in a low-level language like C or Fortran. The numerical \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\texttt{dtypes}} are named the same way: a type name, like \texttt{float} or \texttt{int}, followed by a number indicating the number of bits per element. A standard double-precision floating-point value takes up 8 bytes or 64 bits. Thus, this type is known in NumPy as \texttt{float64}.}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright How do I specify the data type of an \texttt{array}?}
-	\note{As Snippet 5.4 shows, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\textttt{dtype}} is an optional argument of \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html}{\texttt{ndarray}}. It is also possible to change \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\textttt{dtype}} using the method \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.astype.html}{\texttt{.astype()}}.}
+	\note{As Snippet 5.4 shows, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\textttt{dtype}} is an optional argument of \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html}{\texttt{ndarray}}. It is also possible to change \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\texttt{dtype}} using the method \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.astype.html}{\texttt{.astype()}}.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.4 --- specifying a nd changing \texttt{dtype}}
@@ -2107,8 +2097,8 @@ dtype('float64')
 	\question{\raggedright Creating arrays from shape or value}
 	\note{This family of routines creates arrays with a certain number of dimensions, shape, values, and attributes. Snippet 5.5. shows how to create:
 	\begin{itemize}
-		\item an array with a certain shape and a constant scalar (see lines 5 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.zeros.html#numpy.zeros}{\texttt{.zeros}}, 12 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.ones.html#numpy.ones}{\texttt{.ones}}, 19 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.full.html#numpy.full}{\texttt{full}}), and
-		\item an array containing an identity matrix (see lines 26 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.eye.html#numpy.eye}{\texttt{.eye}} --- and 33 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.identity.html#numpy.identity}{\texttt{.identity}})
+		\item an array with a certain shape and a constant scalar (see lines 5 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.zeros.html\#numpy.zeros}{\texttt{.zeros}}, 12 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.ones.html\#numpy.ones}{\texttt{.ones}}, 19 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.full.html\#numpy.full}{\texttt{full}}), and
+		\item an array containing an identity matrix (see lines 26 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.eye.html\#numpy.eye}{\texttt{.eye}} --- and 33 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.identity.html\#numpy.identity}{\texttt{.identity}})
 	\end{itemize}} 
 \end{paracol}
 \clearpage
@@ -2178,11 +2168,11 @@ array([[1., 0., 0., 0.],
 
 \begin{paracol}{2}
 	\question{\raggedright Creating arrays from existing data}
-	\note{In Snippets 5.1 -- 5.4, we saw how to use \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html#numpy.array}{\texttt{array}} for passing data to a NumPy array. Snippet 5.6 shows further routines to create NumPy arrays from existing data include for example:
+	\note{In Snippets 5.1 -- 5.4, we saw how to use \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html\#numpy.array}{\texttt{array}} for passing data to a NumPy array. Snippet 5.6 shows further routines to create NumPy arrays from existing data include for example:
 	\begin{itemize}
-		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.fromfunction.html#numpy.fromfunction}{\texttt{.fromfunction}}, creating an array by executing a function over each coordinate (line 8)
-		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.fromfile.html#numpy.fromfile}{\texttt{.fromfile}}, creating an array from data in a text or binary file (line 19)
-		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html#numpy.loadtxt}{\texttt{.loadtxt}}, loading data from a text file (line 37). The example represents a real-world data set containing both numeric and text information. The first argument we pass \href{https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html#numpy.loadtxt}{\texttt{.loadtxt}} is a file object. To correctly parse the data, we also pass the following discretionary arguments to \href{https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html#numpy.loadtxt}{\texttt{.loadtxt}}: i) \texttt{comments="\#"} indicates that any lines in the file commencing with \texttt{\#} must be considered a comment, not a piece of data; ii) \texttt{delimiter=","} indicates that two items separated by the character \texttt{,} belong to different fields (i.e., `columns' to use a spreadsheet-alike vocabulary); iii) texttt{quotechar='"'} indicates that strings are enclosed between double quotes\footnote{This feature was introduced with NumPy 1.23.}.  
+		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.fromfunction.html\#numpy.fromfunction}{\texttt{.fromfunction}}, creating an array by executing a function over each coordinate (line 8)
+		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.fromfile.html\#numpy.fromfile}{\texttt{.fromfile}}, creating an array from data in a text or binary file (line 19)
+		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html\#numpy.loadtxt}{\texttt{.loadtxt}}, loading data from a text file (line 37). The example represents a real-world data set containing both numeric and text information. The first argument we pass \href{https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html\#numpy.loadtxt}{\texttt{.loadtxt}} is a file object. To correctly parse the data, we also pass the following discretionary arguments to \href{https://numpy.org/doc/stable/reference/generated/numpy.loadtxt.html\#numpy.loadtxt}{\texttt{.loadtxt}}: i) \texttt{comments="\#"} indicates that any lines in the file commencing with \texttt{\#} must be considered a comment, not a piece of data; ii) \texttt{delimiter=","} indicates that two items separated by the character \texttt{,} belong to different fields (i.e., `columns' to use a spreadsheet-alike vocabulary); iii) texttt{quotechar='"'} indicates that strings are enclosed between double quotes\footnote{This feature was introduced with NumPy 1.23.}.  
 	\end{itemize}
 	}
 \end{paracol}
@@ -2288,7 +2278,7 @@ array((b'Jordan, Michael Jeffrey', b'17-02-1963', 6, 30.1),
 
 \begin{paracol}{2}
 	\question{\raggedright Record arrays}
-	\note{NumPy arrays do no contain any information about the attributes of the data. For example, a NumPy array cannot accommodate any meta-data, such as the names of the fields included in the data. Here is where \href{https://numpy.org/doc/stable/reference/routines.array-creation.html}{\texttt{.rec}} kick in (see Table \ref{tab:array_for_record_arrays}). For example, \href{https://numpy.org/doc/stable/reference/generated/numpy.core.records.array.html#numpy.core.records.array}{.core.records.array} allows to flexibly specify a field's type and name (see Snippet 5.7, line 8). Once a `recarray' is created, it is possible to fetch its data by field name (see Snippet 5.7, line 11).}
+	\note{NumPy arrays do no contain any information about the attributes of the data. For example, a NumPy array cannot accommodate any meta-data, such as the names of the fields included in the data. Here is where \href{https://numpy.org/doc/stable/reference/routines.array-creation.html}{\texttt{.rec}} kick in (see Table \ref{tab:array_for_record_arrays}). For example, \href{https://numpy.org/doc/stable/reference/generated/numpy.core.records.array.html\#numpy.core.records.array}{.core.records.array} allows to flexibly specify a field's type and name (see Snippet 5.7, line 8). Once a `recarray' is created, it is possible to fetch its data by field name (see Snippet 5.7, line 11).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.7 --- creating record arrays}
@@ -2333,7 +2323,7 @@ array(['51.5072° N', '35.6762° N'], dtype='<U12')
 
 \begin{paracol}{2}
 	\question{\raggedright Creating numerical ranges}
-	\note{One may want to create a numerical range for different reasons, including running functional analysis or computer simulation. NumPy has a bunch of array-creating routines for numerical ranges (see Table \ref{tab:array_from_numerical_ranges}), some of which that are quite popular in the fields of technical and scientific computation as well as data science. For example, \href{https://numpy.org/doc/stable/reference/generated/numpy.arange.html#numpy.arange}{\texttt{np.arange}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.linspace.html#numpy.linspace}{\texttt{np.linspace}} frequently appear in Python programs when it comes to create evenly spaced values in a certain interval and evely spaced samples respectively (see Snippet 5.8, lines XX and XX). Another popular routine is \href{https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html#numpy.meshgrid}{\texttt{.meshgrid}}, returning coordinate matrices from coordinate vectors.}
+	\note{One may want to create a numerical range for different reasons, including running functional analysis or computer simulation. NumPy has a bunch of array-creating routines for numerical ranges (see Table \ref{tab:array_from_numerical_ranges}), some of which that are quite popular in the fields of technical and scientific computation as well as data science. For example, \href{https://numpy.org/doc/stable/reference/generated/numpy.arange.html\#numpy.arange}{\texttt{np.arange}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.linspace.html\#numpy.linspace}{\texttt{np.linspace}} frequently appear in Python programs when it comes to create evenly spaced values in a certain interval and evely spaced samples respectively (see Snippet 5.8, lines XX and XX). Another popular routine is \href{https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html\#numpy.meshgrid}{\texttt{.meshgrid}}, returning coordinate matrices from coordinate vectors.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.8 --- creating numerical ranges}
@@ -2431,7 +2421,7 @@ array([[0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  ],
 
 \begin{paracol}{2}
 	\question{\raggedright Building matrices}
-	\note{NumPy has routines to create arrays from an existing matrix as well as build matrices with certain properties (see Table \ref{tab:array_for_building_matrices}) As Snippet 5.9 shows, \href{https://numpy.org/doc/stable/reference/generated/numpy.diag.html#numpy.diag}{\texttt{.diag}} creates an array by fetching a matrix's diagonal (see line 10), while \href{https://numpy.org/doc/stable/reference/generated/numpy.tri.html#numpy.tri}{\texttt{.tri}} creates a triangular matrix (see line 17).}
+	\note{NumPy has routines to create arrays from an existing matrix as well as build matrices with certain properties (see Table \ref{tab:array_for_building_matrices}) As Snippet 5.9 shows, \href{https://numpy.org/doc/stable/reference/generated/numpy.diag.html\#numpy.diag}{\texttt{.diag}} creates an array by fetching a matrix's diagonal (see line 10), while \href{https://numpy.org/doc/stable/reference/generated/numpy.tri.html\#numpy.tri}{\texttt{.tri}} creates a triangular matrix (see line 17).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.9 --- creating arrays from existing data}
@@ -2492,7 +2482,7 @@ array([[1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
 
 \begin{paracol}{2}
 	\question{\raggedright The Matrix Class} 
-	\note{In Snippet 5.9, line 17, I claim to create a matrix. Actually, the outcome displayed in line 18 is consistent with the concept of `matrix' we have been taught in a typical linear algebra class: what a human being sees is a set of numbers arranged in rows and columns. However, in NumPy terms, the object displayed in line 18 is an array with two dimensions. If we want to create a NumPy Matrix Class object\footnote{The documentation of numPy 1.23 states that \textit{It is no longer recommended to use this class, even for linear algebra. Instead use regular arrays. The class may be removed in the future}.}, we have to call \href{https://numpy.org/doc/stable/reference/generated/numpy.matrix.html#numpy.matrix}{\texttt{np.matrix}}, a subclass of \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray}{\texttt{np.ndarray}}. Table \ref{tab:array_for_matrix_class} illustrates the two matrix-creating routines of NumPy.}
+	\note{In Snippet 5.9, line 17, I claim to create a matrix. Actually, the outcome displayed in line 18 is consistent with the concept of `matrix' we have been taught in a typical linear algebra class: what a human being sees is a set of numbers arranged in rows and columns. However, in NumPy terms, the object displayed in line 18 is an array with two dimensions. If we want to create a NumPy Matrix Class object\footnote{The documentation of numPy 1.23 states that \textit{It is no longer recommended to use this class, even for linear algebra. Instead use regular arrays. The class may be removed in the future}.}, we have to call \href{https://numpy.org/doc/stable/reference/generated/numpy.matrix.html\#numpy.matrix}{\texttt{np.matrix}}, a subclass of \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html\#numpy.ndarray}{\texttt{np.ndarray}}. Table \ref{tab:array_for_matrix_class} illustrates the two matrix-creating routines of NumPy.}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -2559,7 +2549,7 @@ matrix([[-1.60040278e+00,  1.98412698e-03, -1.19642857e-03],
 		\item rearranging elements
 	\end{itemize}
 	
-        Presenting every NumPy array manipulation routine would require writing a dedicated book (and certainly falls beyond the remit of an introductory module on Python). That said, let me whet the reader's appetite by illustrating a sample of miscellaneous routines (see Snippet 5.11). Here is the sequence of tasks we accomplish: first, we create an array of shape \texttt{(6,)} (see line 5); then, we change the shape of the array (line 10) and transpose its rows and columns (line 16); in the lower section of the snippet we join two arrays using several routines: \href{https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html#numpy.concatenate}{\texttt{.concatenate}} joins two arrays along the desired axis (the default axis is the first one, meaning the second arrays are concatenated row-wise); \href{https://numpy.org/doc/stable/reference/generated/numpy.vstack.html#numpy.vstack}{\texttt{.vstack}} requires to pass a tuple of arrays to stack row-wise; \href{https://numpy.org/doc/stable/reference/generated/numpy.hstack.html#numpy.hstack}{\texttt{.hstack}} requires to pass a tuple of arrays to stack column-wise. It is worth noticing that the rules for vector/matrix manipulation we learned at school apply to the routines that join arrays. In other words, two NumPy arrays can be joined if and only have the same length on the joining axis. For example, it is possible to stack vertically two arrays with shape \texttt{(3, 3)} and \texttt{(2, 3)} because they have the same number of columns.}  
+        Presenting every NumPy array manipulation routine would require writing a dedicated book (and certainly falls beyond the remit of an introductory module on Python). That said, let me whet the reader's appetite by illustrating a sample of miscellaneous routines (see Snippet 5.11). Here is the sequence of tasks we accomplish: first, we create an array of shape \texttt{(6,)} (see line 5); then, we change the shape of the array (line 10) and transpose its rows and columns (line 16); in the lower section of the snippet we join two arrays using several routines: \href{https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html\#numpy.concatenate}{\texttt{.concatenate}} joins two arrays along the desired axis (the default axis is the first one, meaning the second arrays are concatenated row-wise); \href{https://numpy.org/doc/stable/reference/generated/numpy.vstack.html\#numpy.vstack}{\texttt{.vstack}} requires to pass a tuple of arrays to stack row-wise; \href{https://numpy.org/doc/stable/reference/generated/numpy.hstack.html\#numpy.hstack}{\texttt{.hstack}} requires to pass a tuple of arrays to stack column-wise. It is worth noticing that the rules for vector/matrix manipulation we learned at school apply to the routines that join arrays. In other words, two NumPy arrays can be joined if and only have the same length on the joining axis. For example, it is possible to stack vertically two arrays with shape \texttt{(3, 3)} and \texttt{(2, 3)} because they have the same number of columns.}  
 	}
 \end{paracol}
 \clearpage
@@ -2620,7 +2610,7 @@ array([[0, 1, 2, 6],
 
 \begin{paracol}{2}
 	\question{\rggedright What is a universal function?}
-	\note{A universal function, or \href{https://numpy.org/doc/stable/reference/ufuncs.html}{\texttt{ufunc}}, is a function that performs element-wise operations on \texttt{ndarrays}. You can think of them as fast vectorized wrappers for simple functions that take one or more scalar values and produce one or more scalar results\footnote{Here is an interesting passage from the official \href{https://numpy.org/doc/stable/glossary.html#term-vectorization}{NumPy} documentation: \textit{NumPy hands off array processing to C, where looping and computation are much faster than in Python. To exploit this, programmers using NumPy eliminate Python loops in favor of array-to-array operations. vectorization can refer both to the C offloading and to structuring NumPy code to leverage it.}}.}
+	\note{A universal function, or \href{https://numpy.org/doc/stable/reference/ufuncs.html}{\texttt{ufunc}}, is a function that performs element-wise operations on \texttt{ndarrays}. You can think of them as fast vectorized wrappers for simple functions that take one or more scalar values and produce one or more scalar results\footnote{Here is an interesting passage from the official \href{https://numpy.org/doc/stable/glossary.html\#term-vectorization}{NumPy} documentation: \textit{NumPy hands off array processing to C, where looping and computation are much faster than in Python. To exploit this, programmers using NumPy eliminate Python loops in favor of array-to-array operations. vectorization can refer both to the C offloading and to structuring NumPy code to leverage it.}}.}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -2652,7 +2642,7 @@ array([[0, 1, 2, 6],
 \begin{paracol}{2}
 \question{\raggedright What are the mathematical functions available in NumPy?}
 \note{
-Similar to the case of array-manipulating routines, a detailed discussion of every NumPy mathematical function exceeds the scope of these notes. However, every function can be accessed using the same procedure; mainly, we need a set of values to pass to the argument of the function --- that is it! Snippet 5.12 shows the procedure to use a NumPy mathematical functions by means of two trignometric functions, namely, \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html#numpy.cos}{\texttt{.cos}}. In line 9, we create a range of values to assign to the variable \texttt{X}; then, in line 11, we create two further arrays assigned to the outcome of \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html#numpy.cos}{\texttt{.cos}} respectively; finally, we use the Matplotlib module to visualize the two functions (if you do not get the Matplotlib code logic, do not worry at all --- you will familiarize with it in the Fall Term module `SMM635, Data Visualization.')}
+Similar to the case of array-manipulating routines, a detailed discussion of every NumPy mathematical function exceeds the scope of these notes. However, every function can be accessed using the same procedure; mainly, we need a set of values to pass to the argument of the function --- that is it! Snippet 5.12 shows the procedure to use a NumPy mathematical functions by means of two trignometric functions, namely, \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt{.cos}}. In line 9, we create a range of values to assign to the variable \texttt{X}; then, in line 11, we create two further arrays assigned to the outcome of \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt{.cos}} respectively; finally, we use the Matplotlib module to visualize the two functions (if you do not get the Matplotlib code logic, do not worry at all --- you will familiarize with it in the Fall Term module `SMM635, Data Visualization.')}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.12 --- NumPy trigonometric functions in action}
@@ -2703,7 +2693,7 @@ Similar to the case of array-manipulating routines, a detailed discussion of eve
 	\centering
 	\input{sine.pgf}
 	\input{cosine.pgf}
-	\caption{Visual representation of NumPy \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html#numpy.cos}{\texttt{.cos}} functions as per Snippet 5.12.}
+	\caption{Visual representation of NumPy \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt{.cos}} functions as per Snippet 5.12.}
 \end{figure}
 
 \section{Statistics}
@@ -2828,7 +2818,7 @@ Similar to the case of array-manipulating routines, a detailed discussion of eve
 \clearpage
 \begin{paracol}{2}
 	\question{\raggedright So, how do I product a set of summary stats in NumPy?}
-	\note{Snippet 5.13 shows how to create a typical set of summary stats including an array's mean, standard deviation, minimum, maximum, and some percentiles of interest. Mainly, the snippet has three steps. First, we create an array (line 8). Second, we assign a couple of variables to NumPy statistical functions such as \href{https://numpy.org/doc/stable/reference/generated/numpy.mean.html#numpy.mean}{\texttt{.mean}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.std.html#numpy.std}{\texttt{.std}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.min.html}{\texttt{.min}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.max.html}{\texttt{np.max}}, and \href{https://numpy.org/doc/stable/reference/generated/numpy.percentile. html#numpy.percentile}{\texttt{.percentile}} (see lines 11-17). It is worth noticng that \texttt{min} and \texttt{max} are keywords reserved for Python builtin functions. To avoid any name conflict and poterntial sources of confusion, in lines 13 and 14, we use the names \texttt{min\_} and \texttt{max\_}. Finally, we create a table displaying the variables created in the previous step (see lnes 21, 23, and 27).} 
+	\note{Snippet 5.13 shows how to create a typical set of summary stats including an array's mean, standard deviation, minimum, maximum, and some percentiles of interest. Mainly, the snippet has three steps. First, we create an array (line 8). Second, we assign a couple of variables to NumPy statistical functions such as \href{https://numpy.org/doc/stable/reference/generated/numpy.mean.html\#numpy.mean}{\texttt{.mean}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.std.html\#numpy.std}{\texttt{.std}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.min.html}{\texttt{.min}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.max.html}{\texttt{np.max}}, and \href{https://numpy.org/doc/stable/reference/generated/numpy.percentile. html\#numpy.percentile}{\texttt{.percentile}} (see lines 11-17). It is worth noticng that \texttt{min} and \texttt{max} are keywords reserved for Python builtin functions. To avoid any name conflict and poterntial sources of confusion, in lines 13 and 14, we use the names \texttt{min\_} and \texttt{max\_}. Finally, we create a table displaying the variables created in the previous step (see lnes 21, 23, and 27).} 
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.12 --- NumPy trigonometric functions in action. Mainly, the snippet has three steps. First, we create an array (line)}
@@ -2892,7 +2882,7 @@ array([[1.        , 0.19763628],
 
 \begin{paracol}{2}
 \question{\raggedright Is NumPy a good choice when it comes doing linear algebra?}
-\note{Yes, it is. NumPy offers a rich set of routines, comparable to Matalab's one.\footnote{Matlab is a numeric computing environment that is particularly popular in academia and industry.} Currently, there are five families of routines concerning the broader field linear algebra:
+\note{Yes, it is. NumPy offers a rich set of routines, comparable to Matalab's one.\footnote{Matlab is a numeric computing environment that is particularly popular in academia and industry.} Currently, there are five families of routines concerning thefield linear algebra at large:
 
 \begin{itemize}
 	\item products
@@ -3118,7 +3108,7 @@ $$ \left\{
 }
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.15 --- solving a system of equations}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.15 --- solving a system of equations such as}
 # import numpy with the socially accepted alias 'np'
 >>> import numpy as np
 
@@ -3133,11 +3123,42 @@ $$ \left\{
 array([526.31578947, -52.63157895])
 
 \end{pythoncode}
+\clearpage
 
 \begin{paracol}{2}
-\question{}
-\note{}
+\question{\raggedrigt Least-square estimation}
+\note{The least-square estimator is a popular choice for estimating the relationship between two variables, one of the most common tasks in statistics and econometrics.\footnote{Students who want to familiarize with the field of econometrics are warmly encouraged to read Angrist, Joshua D., and Jörn-Steffen Pischke. \href{https://www.mostlyharmlesseconometrics.com/}{Mostly harmless econometrics: An empiricist's companion}. Princeton university press, 2009.} Specifcally, the least-square estimator is defined as follows:
+
+\begin{equation}
+	\hat{\beta} = (X^T X)^{-1} X^T y
+\end{equation}
+
+where $\hat{\beta}$ is the estimate of the regression coefficients, $X$ is the matrix of regressors, $y$ is the outcome vector, and $X^T X$.
+
+In Snippet 5.16, we create two arrays, \texttt{x} --- playing the role of the regressor --- and \texttt{y} --- which we pretend to be the outcome variable. Then, we arrange the data in an array containing \texttt{x}  and a vector of ones. In this way, we add an intercept to the model, namely a scalar that does not change across the observations in the data (see line 11). Finally, we estimate the two regression coefficients of interest:
+
+\begin{itemize}
+	\item the regression coefficient for \texttt{x}, capturing the expected change in \texttt{y} for a unitary increase in \texttt{x}
+	\item the regression coefficient for the intercept, namely, the exepected value of \texttt{y} when the association between \texttt{x} and \texttt{y} is partialled-out
+\end{itemize}
+
+\quad Let me stress that \href{https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html#numpy.linalg.lstsq}{\texttt{.linalg.lstsq}} returns four pieces of information:
+
+\begin{itemize}
+	\item an array with the estimated regression coefficients
+	\item the sums of squared residuals (i.e., the differences between the observed \texttt{y} and the values predicted by the model)
+	\item the rank of the matrix containing the regressors
+	\item the singular values of the matrix containing the regressors
+
+\end{itemize}
+
+\quad Thus, in line 28, we fetch the first element of the returned array, i.e., the regression coefficients.
+
+\quad Figure \ref{fig:ols} provides a visual representation of the least-square estimator.
+
+}
 \end{paracol}
+\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.16 --- computing the least-square solutions to a linear matrix equation}
 # import numpy with the socially accepted alias 'np'
@@ -3146,34 +3167,222 @@ array([526.31578947, -52.63157895])
 # the arrays
 >>> x = np.arange(0, 15, 1)
 >>> y = [3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 29]
-
-# data preparation / adding a constant to the module 
+and use the least-square estimator to e
+# data preparation / adding a constant to the model 
 >>> A = np.vstack([x, np.ones(len(X))]).T
 >>> A
+array([[ 0.,  1.],
+       [ 1.,  1.],
+       [ 2.,  1.],
+       [ 3.,  1.],
+       [ 4.,  1.],
+       [ 5.,  1.],
+       [ 6.,  1.],
+       [ 7.,  1.],
+       [ 8.,  1.],
+       [ 9.,  1.],
+       [10.,  1.],
+       [11.,  1.],
+       [12.,  1.],
+       [13.,  1.],
+       [14.,  1.]])
 
-# estimate the weights (a.k.a., the regression slopes) of the linear model
+# estimate the regression coefficients (a.k.a., the regression slopes) of 
+# the linear model
 >>> b = np.linalg.lstsq(A, y)[0]
 >>> b
+array([2.15714286, 2.23333333])
 \end{pythoncode}
 
 \begin{figure}[!htbp]
 	\centering
 	\input{ols.pgf}
+	\caption{A visual illustration of the least-square estimation carried out in Snippet 5.16}
+	\label{fig:ols}
 \end{figure}
 \section{Pseudorandom Number Generation}
 
 \begin{paracol}{2}
-\question{}
-\note{}
+\question{\raggedright Why do I need pseudorandom number generators?}
+\note{Psedudorenadom number generators play a central role in computer simulation, a flexible and powerful tool that can be used in different ways, e.g., to get a better understanding  of real-world data, to appreciate the functioning of complex systems, or for scenario analysis.\footnote{The students who want to familiarize with the role of computer simulation in understanding economc and social formationsmay want to refer to: i) Axelrod, R. The complexity of cooperation, Princeton University Press, 1997; ii) Schelling, T. C. Micromotives and macrobehavior. WW Norton \& Company, 1978; iii) Epstein, J. M. \& Axtell, R. Growing Artificial Societies—Social Science from the Bottom Up. Artif Life 3, 237–242, 1997.}}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.15 --- a matrix with the eigenvalues and eigenvectors}
+\begin{paracol}{2}
+	\question{\raggedright What is the gamut of pseudorandom numbers available in NumPy?}
+	\note{NumPy has three families of pseudorandom number generators:
+	\begin{itemize}
+		\item simple random data 
+		\item permutations
+		\item distributions
+	\end{itemize}
+	Tables \ref{}, \ref{}, and \ref{} provide a summary of the available generators.
+	}
+\end{paracol}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{NumPy Pseudorandom Generators: Simple Random Data} 
+	\label{tab:solving_equations}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{np.integers(low[, high, size, dtype, endpoint])} & 
+                        Return random integers from low (inclusive) to high (exclusive), or if endpoint=True, low (inclusive) to high (inclusive)\\
+                        \texttt{np.random([size, dtype, out])} &
+                        Return random floats in the half-open interval [0.0, 1.0)\\
+                        \texttt{np.choice(a[, size, replace, p, axis, shuffle])} &
+                        Generates a random sample from a given array\\
+                        \texttt{np.bytes(length)} &
+                        Return random bytes\\
+	     	\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{NumPy Pseudorandom Generators: Permutations} 
+	\label{tab:solving_equations}
+	\begin{tabular}{ll}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{np.shuffle(x[, axis])} &
+                        Modify an array or sequence in-place by shuffling its contents\\
+                        \texttt{np.permutation(x[, axis])} &
+                        Randomly permute a sequence, or return a permuted range\\
+                        \texttt{np.permuted(x[, axis, out])} &
+                        Randomly permute x along axis axis\\
+	     	\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{NumPy Pseudorandom Generators: Distributions} 
+	\label{tab:solving_equations}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+\texttt{np.beta(a, b[, size])} &
+                        Draw samples from a Beta distribution\\
+\texttt{np.binomial(n, p[, size])} &
+                        Draw samples from a binomial distribution\\
+\texttt{np.chisquare(df[, size])} &
+                        Draw samples from a chi-square distribution\\
+\texttt{np.dirichlet(alpha[, size])} &
+                        Draw samples from the Dirichlet distribution\\
+\texttt{np.exponential([scale, size])} &
+                        Draw samples from an exponential distribution\\
+\texttt{np.f(dfnum, dfden[, size])} &
+                        Draw samples from an F distribution\\
+\texttt{np.gamma(shape[, scale, size])} &
+                        Draw samples from a Gamma distribution\\
+\texttt{np.geometric(p[, size])} &
+                        Draw samples from the geometric distribution\\
+\texttt{np.gumbel([loc, scale, size])} &
+                        Draw samples from a Gumbel distribution\\
+\texttt{np.hypergeometric(ngood, nbad, nsample[, size])} &
+                        Draw samples from a Hypergeometric distribution\\
+\texttt{np.laplace([loc, scale, size])} &
+                        Draw samples from the Laplace or double exponential distribution with specified location (or mean)} & and scale (decay)\\
+\texttt{np.logistic([loc, scale, size])} &
+                        Draw samples from a logistic distribution\\
+\texttt{np.lognormal([mean, sigma, size])} &
+                        Draw samples from a log-normal distribution\\
+\texttt{np.logseries(p[, size])} &
+                        Draw samples from a logarithmic series distribution\\
+\texttt{np.multinomial(n, pvals[, size])} &
+                        Draw samples from a multinomial distribution\\
+\texttt{np.multivariate\_hypergeometric(colors, nsample)} &
+                        Generate variates from a multivariate hypergeometric distribution\\
+\texttt{np.multivariate\_normal(mean, cov[, size, np...])} &
+                        Draw random samples from a multivariate normal distribution\\
+\midrule
+		\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption*{\textsc{Table 5.20} (cont'd)} 
+	\label{tab:solving_equations}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+\texttt{np.negative\_binomial(n, p[, size])} &
+                        Draw samples from a negative binomial distribution\\
+\texttt{np.noncentral\_chisquare(df, nonc[, size])} &
+                        Draw samples from a noncentral chi-square distribution\\
+\texttt{np.noncentral\_f(dfnum, dfden, nonc[, size])} &
+                        Draw samples from the noncentral F distribution\\
+\texttt{np.normal([loc, scale, size])} &
+                        Draw random samples from a normal (Gaussian)} & distribution\\
+\texttt{np.pareto(a[, size])} &
+                        Draw samples from a Pareto II or Lomax distribution with specified shape\\
+\texttt{np.poisson([lam, size])} &
+                        Draw samples from a Poisson distribution\\
+\texttt{np.power(a[, size])} &
+                        Draws samples in [0, 1] from a power distribution with positive exponent a - 1\\
+\texttt{np.rayleigh([scale, size])} &
+                        Draw samples from a Rayleigh distribution\\
+\texttt{np.standard\_cauchy([size])} &
+                        Draw samples from a standard Cauchy distribution with mode = 0\\
+\texttt{np.standard\_exponential([size, dtype, method, out])} &
+                        Draw samples from the standard exponential distribution\\
+\texttt{np.standard\_gamma(shape[, size, dtype, out])} &
+                        Draw samples from a standard Gamma distribution\\
+\texttt{np.standard\_normal([size, dtype, out])} &
+                        Draw samples from a standard Normal distribution (mean=0, stdev=1)} &\\
+\texttt{np.standard\_t(df[, size])} &
+                        Draw samples from a standard Student's t distribution with df degrees of freedom\\
+\texttt{np.triangular(left, mode, right[, size])} &
+                        Draw samples from the triangular distribution over the interval [left, right]\\
+\texttt{np.uniform([low, high, size])} &
+                        Draw samples from a uniform distribution\\
+\texttt{np.vonmises(mu, kappa[, size])} &
+                        Draw samples from a von Mises distribution\\
+\texttt{np.wald(mean, scale[, size])} &
+                        Draw samples from a Wald, or inverse Gaussian, distribution\\
+\texttt{np.weibull(a[, size])} &
+                        Draw samples from a Weibull distribution\\
+\texttt{np.zipf(a[, size])} &
+                        Draw samples from a Zipf distribution\\
+	     	\bottomrule \\[-1.8ex]
+	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
+	\end{tabular}
+\end{sidewaystable}
+\clearpage
+
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.17 --- permutations}
+# import numpy with the socially accepted alias 'np'
+>>> import numpy as np
+
+# set a random seed for reproducibility purposes 
+>>> np.random.seed(12345)
+# shuffling/permuting an existing array
+# --+ the array
+>>> A = np.arange(10)
+>>> A
+array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+# --+ .shuffle produces in-place changes
+>>> np.random.shuffle(A)
+>>> A
+array([6, 9, 3, 8, 7, 2, 4, 1, 0, 5])
+# --+ .permutation creates a copy
+>>> np.random.permutation(A)
+array([7, 6, 5, 2, 1, 8, 0, 4, 9, 3])
+>>> A
+array([6, 9, 3, 8, 7, 2, 4, 1, 0, 5])
+
 \end{pythoncode}
-
-
-...
+\clearpage
 
 \section{File Input and Output with \texttt{ndarrays}}
+
 
 ...
 

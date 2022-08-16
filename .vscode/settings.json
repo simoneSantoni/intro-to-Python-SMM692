@@ -5,5 +5,6 @@
 			"scheme": "file",
 			"pattern": "notes/notes.tex"
 		}
-	]
+	],
+	"r.lsp.promptToInstall": false
 }

@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import numpy with the socially accepted alias 'np'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+
+\PYG{c+c1}{\PYGZsh{} the arrays}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{x} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{arange}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{15}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{y} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{11}\PYG{p}{,} \PYG{l+m+mi}{13}\PYG{p}{,} \PYG{l+m+mi}{15}\PYG{p}{,} \PYG{l+m+mi}{17}\PYG{p}{,} \PYG{l+m+mi}{19}\PYG{p}{,} \PYG{l+m+mi}{21}\PYG{p}{,} \PYG{l+m+mi}{23}\PYG{p}{,} \PYG{l+m+mi}{25}\PYG{p}{,} \PYG{l+m+mi}{27}\PYG{p}{,} \PYG{l+m+mi}{29}\PYG{p}{]}
+\PYG{o+ow}{and} \PYG{n}{use} \PYG{n}{the} \PYG{n}{least}\PYG{o}{\PYGZhy{}}\PYG{n}{square} \PYG{n}{estimator} \PYG{n}{to} \PYG{n}{e}
+\PYG{c+c1}{\PYGZsh{} data preparation / adding a constant to the model}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{A} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{vstack}\PYG{p}{([}\PYG{n}{x}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{ones}\PYG{p}{(}\PYG{n+nb}{len}\PYG{p}{(}\PYG{n}{X}\PYG{p}{))])}\PYG{o}{.}\PYG{n}{T}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{A}
+\PYG{n}{array}\PYG{p}{([[} \PYG{l+m+mf}{0.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mf}{1.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mf}{2.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mf}{3.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mf}{4.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mf}{5.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mf}{6.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mf}{7.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mf}{8.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[} \PYG{l+m+mf}{9.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{10.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{11.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{12.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{13.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{],}
+       \PYG{p}{[}\PYG{l+m+mf}{14.}\PYG{p}{,}  \PYG{l+m+mf}{1.}\PYG{p}{]])}
+
+\PYG{c+c1}{\PYGZsh{} estimate the regression coefficients (a.k.a., the regression slopes) of}
+\PYG{c+c1}{\PYGZsh{} the linear model}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{b} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linalg}\PYG{o}{.}\PYG{n}{lstsq}\PYG{p}{(}\PYG{n}{A}\PYG{p}{,} \PYG{n}{y}\PYG{p}{)[}\PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{b}
+\PYG{n}{array}\PYG{p}{([}\PYG{l+m+mf}{2.15714286}\PYG{p}{,} \PYG{l+m+mf}{2.23333333}\PYG{p}{])}
+\end{Verbatim}
