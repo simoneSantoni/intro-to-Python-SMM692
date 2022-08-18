@@ -1,0 +1,44 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially accepted alias 'pd'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} create a DataFrame from a dictionary}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{gdp\PYGZus{}data} \PYG{o}{=} \PYG{p}{\PYGZob{}}
+	\PYG{l+s+s2}{\PYGZdq{}country\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Belgium\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}France\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Germany\PYGZdq{}}\PYG{p}{],}
+	\PYG{l+s+s2}{\PYGZdq{}gdp\PYGZus{}pc\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mf}{51767.8}\PYG{p}{,} \PYG{l+m+mf}{43518.5}\PYG{p}{,} \PYG{l+m+mf}{50801.8}\PYG{p}{]}
+    \PYG{p}{\PYGZcb{}}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}\PYG{n}{gdp\PYGZus{}data}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{p}{)}
+   \PYG{n}{country}   \PYG{n}{gdp\PYGZus{}pc}
+\PYG{l+m+mi}{0}  \PYG{n}{Belgium}  \PYG{l+m+mf}{51767.8}
+\PYG{l+m+mi}{1}   \PYG{n}{France}  \PYG{l+m+mf}{43518.5}
+\PYG{l+m+mi}{2}  \PYG{n}{Germany}  \PYG{l+m+mf}{50801.8}
+
+\PYG{c+c1}{\PYGZsh{} get DataFrame 'info'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+\PYG{n}{RangeIndex}\PYG{p}{:} \PYG{l+m+mi}{3} \PYG{n}{entries}\PYG{p}{,} \PYG{l+m+mi}{0} \PYG{n}{to} \PYG{l+m+mi}{2}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{2} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}   \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}   \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{country}  \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{1}   \PYG{n}{gdp\PYGZus{}pc}   \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{float64}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{float64}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{176.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+
+\PYG{c+c1}{\PYGZsh{} let us get df's attributes one-by-one}
+\PYG{c+c1}{\PYGZsh{} --+ shape (cases by columns)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{shape}
+\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ size (cases X columns)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{size}
+\PYG{l+m+mi}{6}
+\PYG{c+c1}{\PYGZsh{} --+ number of dimensions (columns)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{ndim}
+\PYG{l+m+mi}{2}
+\PYG{c+c1}{\PYGZsh{} --+ check memory usage column-by-column}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{memory\PYGZus{}usage}\PYG{p}{()}
+\PYG{n}{Index}      \PYG{l+m+mi}{128}
+\PYG{n}{country}     \PYG{l+m+mi}{24}
+\PYG{n}{gdp\PYGZus{}pc}      \PYG{l+m+mi}{24}
+\PYG{n}{dtype}\PYG{p}{:} \PYG{n}{int64}
+\end{Verbatim}

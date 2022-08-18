@@ -1,31 +1,23 @@
-# import numpy with the socially accepted alias 'np'
+# import numpy and pandas with the socially accepted alias 'np' and 'pd'
 >>> import numpy as np
+>>> import pandas as pd
 
-# the array
->>> A = np.arange(10)
+# a list with a string, a float, and an integer
+>>> L = ["xyz", -17.64, 0]
 
-# random sampling from an existing array
-# --+ sampling with replacement (items can be drawn multiple times)
->>> np.random.choice(A, size=7)
-array([3, 5, 7, 3, 1, 5, 2])
-# --+ sampling without replacement (items can be drawn only once)
->>> np.random.choice(A, size=7, replace=False)
-array([4, 2, 6, 3, 1, 0, 5])
+# create a NumPy array from the list
+>>> A = np.array(L)
+>>> print(A)
+['xyz' '-17.64' '0']
 
-# sampling from a range
->>> np.random.integer(0, 10, size=4)
-array([4, 3, 2, 3])
+# create a Series from the list
+>>> S = pd.Series(L)
+>>> print(S)
+0      xyz
+1   -17.64
+2        0
 
-# sampling from a theoretical distribution
-# --+ 10,000 items from a the normal distribution with mean 10 and
-# standard deviation 10
->>> N = np.random.norm(loc=0, scale=1, size=1000)
->>> N
-array([-1.80532765,  1.43318889,  1.14774224, ...,  0.38328412,
-        1.37732456,  0.76801253])
-# --+ 10,000 items from the Poisson distribution with lambda=10
->>> P = np.random.poisson(lam=10, size=1000)
->>> P
-array([11,  7,  7, ...,  9,  6,  7])
-# --+ viualize the two arrays
-
+# proof that Series preserves the type of the individual object
+# --+ fetch the second item of the list and carry out a mathematical operation
+>>> S[1]/2
+-8.82

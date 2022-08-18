@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import numpy and pandas with the socially accepted alias 'np' and 'pd'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} a list with a string, a float, and an integer}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{L} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}xyz\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{17.64}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} create a NumPy array from the list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{A} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{A}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}xyz\PYGZsq{}} \PYG{l+s+s1}{\PYGZsq{}\PYGZhy{}17.64\PYGZsq{}} \PYG{l+s+s1}{\PYGZsq{}0\PYGZsq{}}\PYG{p}{]}
+
+\PYG{c+c1}{\PYGZsh{} create a Series from the list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{Series}\PYG{p}{(}\PYG{n}{L}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{S}\PYG{p}{)}
+\PYG{l+m+mi}{0}      \PYG{n}{xyz}
+\PYG{l+m+mi}{1}   \PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{17.64}
+\PYG{l+m+mi}{2}        \PYG{l+m+mi}{0}
+
+\PYG{c+c1}{\PYGZsh{} proof that Series preserves the type of the individual object}
+\PYG{c+c1}{\PYGZsh{} --+ fetch the second item of the list and carry out a mathematical operation}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{/}\PYG{l+m+mi}{2}
+\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{8.82}
+\end{Verbatim}

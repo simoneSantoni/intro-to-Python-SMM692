@@ -33,14 +33,16 @@
 \contentsline {table}{\numberline {5.18}{\ignorespaces NumPy Pseudorandom Generators: Simple Random Data\relax }}{102}{table.caption.36}%
 \contentsline {table}{\numberline {5.19}{\ignorespaces NumPy Pseudorandom Generators: Permutations\relax }}{103}{table.caption.37}%
 \contentsline {table}{\numberline {5.20}{\ignorespaces NumPy Pseudorandom Generators: Distributions\relax }}{104}{table.caption.38}%
+\contentsline {table}{\numberline {5.21}{\ignorespaces File Input and Output with NumPy Arrays\relax }}{110}{table.caption.41}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Creating a DataFrame from Data Loaded in the Python Session\relax }}{116}{table.caption.44}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{115}{table.caption.42}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{116}{table.caption.43}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{118}{table.caption.45}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{119}{table.caption.46}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{120}{table.caption.47}%
-\contentsline {table}{\numberline {A.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{121}{table.caption.48}%
-\contentsline {table}{\numberline {A.7}{\ignorespaces NumPy Array Manipulation Routines\relax }}{122}{table.caption.49}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{129}{table.caption.47}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{130}{table.caption.48}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{132}{table.caption.50}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{133}{table.caption.51}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{134}{table.caption.52}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{135}{table.caption.53}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces NumPy Array Manipulation Routines\relax }}{136}{table.caption.54}%
 \addvspace {10\p@ }

@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially accepted alias 'pd'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} create a series}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{Series}\PYG{p}{([}\PYG{l+s+s1}{\PYGZsq{}s1\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}s2\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}s3\PYGZsq{}}\PYG{p}{])}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{S}\PYG{p}{)}
+\PYG{l+m+mi}{0}    \PYG{n}{s1}
+\PYG{l+m+mi}{1}    \PYG{n}{s2}
+\PYG{l+m+mi}{2}    \PYG{n}{s3}
+
+\PYG{c+c1}{\PYGZsh{} accessing a DataFrame column as a Series}
+\PYG{c+c1}{\PYGZsh{} --+ the data}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}S\PYGZdq{}}\PYG{p}{:[}\PYG{l+s+s2}{\PYGZdq{}s1\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}s2\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}s3\PYGZdq{}}\PYG{p}{],} \PYG{l+s+s2}{\PYGZdq{}X\PYGZdq{}}\PYG{p}{:[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{99}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{]\PYGZcb{})}
+\PYG{c+c1}{\PYGZsh{} --+ assign S to the fetched column and print S}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{S}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{S}\PYG{p}{)}
+\PYG{l+m+mi}{0}    \PYG{n}{s1}
+\PYG{l+m+mi}{1}    \PYG{n}{s2}
+\PYG{l+m+mi}{2}    \PYG{n}{s3}
+\PYG{c+c1}{\PYGZsh{} --+ amend the index}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{index} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}case\PYGZus{}1\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}case\PYGZus{}2\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}case\PYGZus{}3\PYGZdq{}}\PYG{p}{]}
+\PYG{c+c1}{\PYGZsh{} --+ assign S to the fetched column and print S}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{S} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{S}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{S}\PYG{p}{)}
+\PYG{n}{case\PYGZus{}1}    \PYG{n}{s1}
+\PYG{n}{case\PYGZus{}2}    \PYG{n}{s2}
+\PYG{n}{case\PYGZus{}2}    \PYG{n}{s3}
+\end{Verbatim}
