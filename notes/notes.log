@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  18 AUG 2022 17:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  19 AUG 2022 09:59
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2356,8 +2356,8 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 (./_minted-notes/019F1608FBF8EB28D01B10AD91BDB35C764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) (./notes.ent [123]
-Overfull \hbox (2.06192pt too wide) in paragraph at lines 57--96
+D4.pygtex) [123] (./notes.ent
+Overfull \hbox (2.06192pt too wide) in paragraph at lines 93--132
 [][]\OT1/cmr/m/n/9 In the field of in-for-ma-tion sys-tems and com-puter sci-en
 ce, columns are of-ten-times called fields; statis-ti-cians, economists,
  []
@@ -2375,12 +2375,12 @@ Appendix A.
 
 ]
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 4
-110.
+119.
  (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 4110.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 4119.
 
  [130
 
@@ -2389,7 +2389,7 @@ LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4212 true_
+l.4221 true_
             divide(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2397,7 +2397,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4213 &
+l.4222 &
          Divide arguments element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2408,7 +2408,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4214 floor_
+l.4223 floor_
              divide(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2416,7 +2416,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4215 &
+l.4224 &
          Return the largest integer smaller or equal to the division of the ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2427,7 +2427,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4222 float_
+l.4231 float_
              power(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2435,7 +2435,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4223 &
+l.4232 &
          First array elements raised to powers from second array, element-wi...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2444,7 +2444,7 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (5.19728pt too wide) in paragraph at lines 4194--4262
+Overfull \hbox (5.19728pt too wide) in paragraph at lines 4203--4271
  [][] 
  []
 
@@ -2454,7 +2454,7 @@ Overfull \hbox (5.19728pt too wide) in paragraph at lines 4194--4262
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4366 greater_
+l.4375 greater_
                equal(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2462,7 +2462,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4367 &
+l.4376 &
          Return the truth value of (x1 >= x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2473,7 +2473,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4370 less_
+l.4379 less_
             equal(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2481,7 +2481,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4371 &
+l.4380 &
          Return the truth value of (x1 <= x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2492,7 +2492,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4372 not_
+l.4381 not_
            equal(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2500,7 +2500,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4373 &
+l.4382 &
          Return (x1 != x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2511,7 +2511,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4376 logical_
+l.4385 logical_
                and(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2519,7 +2519,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4377 &
+l.4386 &
          Compute the truth value of x1 AND x2 element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2530,7 +2530,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4378 logical_
+l.4387 logical_
                or(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2538,7 +2538,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4379 &
+l.4388 &
          Compute the truth value of x1 OR x2 element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2549,7 +2549,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4380 logical_
+l.4389 logical_
                xor(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2557,7 +2557,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4381 &
+l.4390 &
          Compute the truth value of x1 XOR x2, element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2568,7 +2568,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4382 logical_
+l.4391 logical_
                not(x, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2576,7 +2576,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4383 &
+l.4392 &
          Compute the truth value of NOT x element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2585,57 +2585,57 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 [135]
-Underfull \hbox (badness 10000) in paragraph at lines 4463--4463
+Underfull \hbox (badness 10000) in paragraph at lines 4472--4472
 []|\OT1/cmtt/m/n/10.95 np.asanyarray(a[, dtype, order,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4471--4471
+Underfull \hbox (badness 10000) in paragraph at lines 4480--4480
 []|\OT1/cmtt/m/n/10.95 np.ascontiguousarray(a[, dtype,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4473--4473
+Underfull \hbox (badness 10000) in paragraph at lines 4482--4482
 []|\OT1/cmtt/m/n/10.95 np.asarray[]chkfinite(a[, dtype,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4475--4475
+Underfull \hbox (badness 10000) in paragraph at lines 4484--4484
 []|\OT1/cmtt/m/n/10.95 np.require(a[, dtype, requirements,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4480--4480
+Underfull \hbox (badness 10000) in paragraph at lines 4489--4489
 []|\OT1/cmtt/m/n/10.95 np.concatenate([axis, out, dtype,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4499--4499
+Underfull \hbox (badness 10000) in paragraph at lines 4508--4508
 []|\OT1/cmtt/m/n/10.95 np.split(ary, indices[]or[]sections[,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4501--4501
+Underfull \hbox (badness 10000) in paragraph at lines 4510--4510
 []|\OT1/cmtt/m/n/10.95 np.array[]split(ary,
  []
 
 [136] [137]
-Underfull \hbox (badness 10000) in paragraph at lines 4537--4537
+Underfull \hbox (badness 10000) in paragraph at lines 4546--4546
 []|\OT1/cmtt/m/n/10.95 np.unique(ar[, return[]index,
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 4545--4546
+Underfull \hbox (badness 3009) in paragraph at lines 4554--4555
 []|\OT1/cmr/m/n/10.95 Reverse the or-der of el-e-ments along axis 1
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 4547--4548
+Underfull \hbox (badness 3009) in paragraph at lines 4556--4557
 []|\OT1/cmr/m/n/10.95 Reverse the or-der of el-e-ments along axis 0
  []
 
 
-Overfull \hbox (5.90599pt too wide) in paragraph at lines 4516--4557
+Overfull \hbox (5.90599pt too wide) in paragraph at lines 4525--4566
 [][] 
  []
 
@@ -2651,6 +2651,9 @@ Appendix B.
 ] (./notes.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `notes.out' has not changed.
 (rerunfilecheck)             Checksum: 21E1B87258E348C1C6624E34C7D6CCB3;9289.
@@ -2688,7 +2691,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2021/texmf-
 dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on notes.pdf (139 pages, 605147 bytes).
+Output written on notes.pdf (139 pages, 605427 bytes).
 PDF statistics:
  1365 PDF objects out of 1440 (max. 8388607)
  1185 compressed objects within 12 object streams

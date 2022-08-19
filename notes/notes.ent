@@ -23,6 +23,42 @@ D\href
 {https://dataframes.juliadata.org/stable/}{DataFrames}
 \@endanenote 
 \@doanenote {15}
+macro:->A
+time
+series
+is
+a
+set
+of
+dapoints
+arranged
+in
+chronological
+order.
+\@endanenote 
+\@doanenote {16}
+macro:->Panel
+data,
+widely
+adopted
+in
+economics
+and
+finance,
+are
+multidimensional
+datasets
+wherein
+same
+statistical
+units
+are
+observed
+repeatadel
+over
+time.
+\@endanenote 
+\@doanenote {17}
 macro:->Students
 interested
 in
@@ -53,7 +89,7 @@ in
 data
 science.''}
 \@endanenote 
-\@doanenote {16}
+\@doanenote {18}
 macro:->In
 the
 field
@@ -94,7 +130,7 @@ Machine
 Learning
 field.
 \@endanenote 
-\@doanenote {17}
+\@doanenote {19}
 macro:->All
 throughout
 the

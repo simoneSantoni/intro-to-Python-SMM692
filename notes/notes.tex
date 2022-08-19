@@ -3621,7 +3621,7 @@ Learning goals:
 	
         \begin{itemize}
         	\item Compared to competing frameworks for data management,\footnote{The set of competing frameworks include Python's \href{https://www.pytables.org}{PyTables} and \href{https://www.dask.org}{Dask}, as well as R's \href{https://rdatatable.gitlab.io/data.table/}{data.tables} and Julia's D\href{https://dataframes.juliadata.org/stable/}{DataFrames}} Pandas offers a unique combination of features, including ease of use, flexibility, and performance
-        	\item Pandas has an edge in the area of time series and panel data --- which is not surprising since Pandas was created for quantitative financial analysts and it is still very popular in the field of finance at large\footnote{Students interested in the origins of Pandas may want to read the article on/interview with Wes McKinney \href{https://qz.com/1126615/the-story-of-the-most-important-tool-in-data-science/}{``Meet the man behind the most important tool in data science.''}} 
+        	\item Pandas has an edge in the area of time series\footnote{A time series is a set of dapoints arranged in chronological order.} and panel data \footnote{Panel data, widely adopted in economics and finance, are multidimensional datasets wherein same statistical units are observed repeatadel over time.}--- which is not surprising since Pandas was created for quantitative financial analysts and it is still very popular in the field of finance at large\footnote{Students interested in the origins of Pandas may want to read the article on/interview with Wes McKinney \href{https://qz.com/1126615/the-story-of-the-most-important-tool-in-data-science/}{``Meet the man behind the most important tool in data science.''}} 
         	\item Pandas builds on NumPy. That means access to a large variety of vectorized functions; that is, users/developers do not have to write boring and inefficient loops to perform operations on data
         	\item The quality of the documentation covering Pandas is off-the-chart. The \href{https://pandas.pydata.org/docs/reference/index.html\#api}{API} is well-documented and well-tested, while the \href{https://pandas.pydata.org/docs/user_guide/index.html}{user guide} has plenty of examples showing Panda's features in action
         \end{itemize}
@@ -4033,8 +4033,17 @@ case_2    s3
 
 \begin{paracol}{2}
 	\question{\raggedright }
-	\note{}
+	\note{Pandas excels at handling time data, a key component of time series and panels.
+
+	\begin{itemize}
+		\item Timestamp
+		\item Timedelta
+		\item Period  
+	\end{itemize}
+	}
 \end{paracol}
+
+
 
 \section{Quering DataFrames}
 \label{sec:querying_df}

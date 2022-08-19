@@ -39,8 +39,8 @@
 \contentsline {section}{\numberline {6.4}The Anatomy of a DataFrame}{120}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Data Types and Pandas}{123}{section.6.5}%
 \contentsline {section}{\numberline {6.6}Handling `Time' Data in Pandas}{123}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Quering DataFrames}{123}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Manipulating DataFrame Columns}{123}{section.6.8}%
+\contentsline {section}{\numberline {6.7}Quering DataFrames}{124}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Manipulating DataFrame Columns}{124}{section.6.8}%
 \contentsline {section}{\numberline {6.9}Shaping and Reshaping DataFrames}{124}{section.6.9}%
 \contentsline {section}{\numberline {6.10}Group By Part I: Data Aggregation}{124}{section.6.10}%
 \contentsline {section}{\numberline {6.11}Group By Part II: Data Transformation}{124}{section.6.11}%
