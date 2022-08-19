@@ -1,23 +1,41 @@
-# import numpy and pandas with the socially accepted alias 'np' and 'pd'
->>> import numpy as np
+# import pandas with the socially accepted alias 'pd'
 >>> import pandas as pd
 
-# a list with a string, a float, and an integer
->>> L = ["xyz", -17.64, 0]
+# fake product review data
+>>> df = pd.DataFrame.from\_dict(
+        {
+            "timestamp": [
+                "2017-10-08 12:03:05",
+                "2020-09-07 08:09:45",
+                "2021-04-11 10:12:13",
+            ],
+            "product": [
+		"Darth Vader plush",
+		"Obi-Wan Kenobi lightsaber",
+		"Yoda pijamas"
+       ],
+            "reviewer": ["Sheldon", "Sheldon", "Leonard"],
+            "rating": [1, 2, 5],
+        }
+    )
 
-# create a NumPy array from the list
->>> A = np.array(L)
->>> print(A)
-['xyz' '-17.64' '0']
+# data view
+>>> df.head()
+             timestamp                    product reviewer  rating
+0  2017-10-08 12:03:05          Darth Vader plush  Sheldon       1
+1  2020-09-07 08:09:45  Obi-Wan Kenobi lightsaber  Sheldon       2
+2  2021-04-11 10:12:13               Yoda pijamas  Leonard       5
 
-# create a Series from the list
->>> S = pd.Series(L)
->>> print(S)
-0      xyz
-1   -17.64
-2        0
+# get basic info
+>>> df.info()
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 4 columns):
+     Column     Non-Null Count  Dtype
+---  ------     --------------  -----
+ 0   timestamp  3 non-null      object
+ 1   product    3 non-null      object
+ 2   reviewer   3 non-null      object
+ 3   rating     3 non-null      int64
+dtypes: int64(1), object(3)
+memory usage: 224.0+ bytes
 
-# proof that Series preserves the type of the individual object
-# --+ fetch the second item of the list and carry out a mathematical operation
->>> S[1]/2
--8.82

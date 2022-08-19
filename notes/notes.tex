@@ -254,7 +254,7 @@ In this chapter, we pursue the following learning objectives:
 
 \begin{paracol}{2}
     \question{\raggedright The core built-in Python objects} 
-	\note{Table \ref{tab:built_in_objects} illustrates the types of built-in Python objects. For example, \href{https://docs.python.org/3/tutorial/introduction.html\#numbers}{Numbers} and \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{strings} objects are used to represent numeric and textual data respectively. \href{https://docs.python.org/3/tutorial/introduction.html\#lists}{Lists} and \href{https://docs.python.org/3/tutorial/datastructures.html\#dictionaries}{dictionaries} are --- likely as not --- the two most popular \href{https://docs.python.org/3/tutorial/datastructures.html}{data structures} in Python. Lists are ordered collections of other objects such (any type!!). Dictionaries are pairs of keys (e.g., a product identifier) and objects (e.g., the price of the product). No worries: we will go through each built-in type in the following sections of this document. Caveat: in the interest of logical coherence, the various built-in types will not be presented in the order adopted in Table \ref{tab:built_in_objects}.} 
+	\note{Table \ref{tab:built_in_objects} illustrates the types of built-in Python objects. For example, \href{https://docs.python.org/3/tutorial/introduction.html\#numbers}{Numbers} and \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{strings} objects are used to represent numeric and textual data respectively. \href{https://docs.python.org/3/tutorial/introduction.html\#lists}{Lists} and \href{https://docs.python.org/3/tutorial/datastructures.html\#dictionaries}{dictionaries} are --- likely as not --- the two most popular \href{https://docs.python.org/3/tutorial/datastructures.html}{data structures} in Python. Lists are ordered collections of other objects (any type!!). Dictionaries are pairs of keys (e.g., a product identifier) and objects (e.g., the price of the product). No worries: we will go through each built-in type in the following sections of this document. Caveat: in the interest of logical coherence, the various built-in types will not be presented in the order adopted in Table \ref{tab:built_in_objects}.} 
 \end{paracol}
 
 \begin{table}[!htbp]
@@ -3991,6 +3991,30 @@ case_2    s2
 case_2    s3
 \end{pythoncode}
 
+\section{Quering DataFrames}
+\label{sec:querying_df}
+
+\begin{paracol}{2}
+	\question{\raggedright What is data querying?}
+	\note{Data queries can take two non-mututally exclusive forms. One may want to:
+	
+	\begin{itemize}
+		\item select a subset of cases 
+		\item select a subset of columns
+	\end{itemize}
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do you select a subset of cases?}
+	\note{}
+\end{paracol}
+
+
+\section{Manipulating DataFrame Columns}
+\label{sec:manipulating_df_columns}
+
+
 \section{Data Types and Pandas} 
 
 \begin{paracol}{2}
@@ -4028,6 +4052,7 @@ case_2    s3
 >>> S[1]/2
 -8.82
 \end{pythoncode}
+\clearpage
 
 \section{Handling `Time' Data in Pandas}
 
@@ -4036,23 +4061,58 @@ case_2    s3
 	\note{Pandas excels at handling time data, a key component of time series and panels. Specifically, Pandas has three kind of objects that can be used to strore and represent information on time-related quantities:
 
 	\begin{itemize}
-		\item \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\textt{.Timestamp}} is the Pandas replacement for \href{https://docs.python.org/3/library/datetime.html}{Python's \texttt{Datatime}} object
+		\item \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\textt{.Timestamp}}, the Pandas replacement for \href{https://docs.python.org/3/library/datetime.html}{Python's \texttt{Datatime}} object, represent a specific point in time 
 		\item \href{https://pandas.pydata.org/docs/reference/api/pandas.Timedelta.html}{\texttt{.Timedelta}} represents two dates or time
 		\item \href{https://pandas.pydata.org/docs/reference/api/pandas.Period.html}{\texttt{.Period}} represents a period of time
 	\end{itemize}
 
-	Tables \ref{}, \ref{}, and \ref{}, included in Appendix \ref{}, provide a cheatsheet of functions, methods, and attributes regarding time data.
+	Tables \ref{tab:pandas_timestamp}, \ref{tab:pandas_timedelta}, and \ref{tab:pandas_period}, included in Appendix \ref{app:cheatsheets}, provide a cheatsheet of the Pandas functions, methods, and attributes that apply to time data.
 	}
 \end{paracol}
 
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.7 --- Pandas Timestamp}
+# import pandas with the socially accepted alias 'pd'
+>>> import pandas as pd
 
+# fake product review data
+>>> df = pd.DataFrame.from\_dict(
+        {
+            "timestamp": [
+                "2017-10-08 12:03:05",
+                "2020-09-07 08:09:45",
+                "2021-04-11 10:12:13",
+            ],
+            "product": [
+		"Darth Vader plush",
+		"Obi-Wan Kenobi lightsaber",
+		"Yoda pijamas"
+       ],
+            "reviewer": ["Sheldon", "Sheldon", "Leonard"],
+            "rating": [1, 2, 5],
+        }
+    )
 
-\section{Quering DataFrames}
-\label{sec:querying_df}
+# data view
+>>> df.head()
+             timestamp                    product reviewer  rating
+0  2017-10-08 12:03:05          Darth Vader plush  Sheldon       1
+1  2020-09-07 08:09:45  Obi-Wan Kenobi lightsaber  Sheldon       2
+2  2021-04-11 10:12:13               Yoda pijamas  Leonard       5
 
-\section{Manipulating DataFrame Columns}
-\label{sec:manipulating_df_columns}
+# get basic info
+>>> df.info()
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 4 columns):
+     Column     Non-Null Count  Dtype 
+---  ------     --------------  ----- 
+ 0   timestamp  3 non-null      object
+ 1   product    3 non-null      object
+ 2   reviewer   3 non-null      object
+ 3   rating     3 non-null      int64 
+dtypes: int64(1), object(3)
+memory usage: 224.0+ bytes
 
+\end{pythoncode}
 
 \section{Shaping and Reshaping DataFrames}
 
@@ -4083,6 +4143,7 @@ case_2    s3
 \addappheadtotoc
 
 \chapter{Cheat Sheets}
+\label{app:cheatsheets}
 
 \section{Escapes}
 
@@ -4572,6 +4633,7 @@ fmin(x1, x2, /[, out, where, casting, ...])
 
 \begin{table}
 	\caption{Timestamp Objects: Functions, Methods, and Attributes}
+	\label{tab:pandas_timestamp}
 	\begin{tabular}{p{7.5cm}p{8.5cm}}
 		\toprule\toprule
 		Routine & Synopsys \\
@@ -4584,6 +4646,7 @@ fmin(x1, x2, /[, out, where, casting, ...])
 
 \begin{table}
 	\caption{Timedelta Objects: Functions, Methods, and Attributes}
+	\label{tab:pandas_timedelta}
 	\begin{tabular}{p{7.5cm}p{8.5cm}}
 		\toprule\toprule
 		Routine & Synopsys \\
@@ -4596,6 +4659,7 @@ fmin(x1, x2, /[, out, where, casting, ...])
 
 \begin{table}
 	\caption{Period Objects: Functions, Methods, and Attributes}
+	\label{tab:pandas_period}
 	\begin{tabular}{p{7.5cm}p{8.5cm}}
 		\toprule\toprule
 		Routine & Synopsys \\

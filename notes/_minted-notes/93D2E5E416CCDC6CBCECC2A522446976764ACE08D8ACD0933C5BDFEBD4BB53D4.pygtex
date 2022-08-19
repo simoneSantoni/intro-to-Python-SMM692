@@ -1,0 +1,42 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially accepted alias 'pd'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} fake product review data}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from}\PYGZbs{}\PYG{n}{\PYGZus{}dict}\PYG{p}{(}
+        \PYG{p}{\PYGZob{}}
+            \PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+                \PYG{l+s+s2}{\PYGZdq{}2017\PYGZhy{}10\PYGZhy{}08 12:03:05\PYGZdq{}}\PYG{p}{,}
+                \PYG{l+s+s2}{\PYGZdq{}2020\PYGZhy{}09\PYGZhy{}07 08:09:45\PYGZdq{}}\PYG{p}{,}
+                \PYG{l+s+s2}{\PYGZdq{}2021\PYGZhy{}04\PYGZhy{}11 10:12:13\PYGZdq{}}\PYG{p}{,}
+            \PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+		\PYG{l+s+s2}{\PYGZdq{}Darth Vader plush\PYGZdq{}}\PYG{p}{,}
+		\PYG{l+s+s2}{\PYGZdq{}Obi\PYGZhy{}Wan Kenobi lightsaber\PYGZdq{}}\PYG{p}{,}
+		\PYG{l+s+s2}{\PYGZdq{}Yoda pijamas\PYGZdq{}}
+       \PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}reviewer\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Sheldon\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Sheldon\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Leonard\PYGZdq{}}\PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}rating\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{],}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} data view}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{head}\PYG{p}{()}
+             \PYG{n}{timestamp}                    \PYG{n}{product} \PYG{n}{reviewer}  \PYG{n}{rating}
+\PYG{l+m+mi}{0}  \PYG{l+m+mi}{2017}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{08} \PYG{l+m+mi}{12}\PYG{p}{:}\PYG{l+m+mi}{03}\PYG{p}{:}\PYG{l+m+mi}{05}          \PYG{n}{Darth} \PYG{n}{Vader} \PYG{n}{plush}  \PYG{n}{Sheldon}       \PYG{l+m+mi}{1}
+\PYG{l+m+mi}{1}  \PYG{l+m+mi}{2020}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{09}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{07} \PYG{l+m+mi}{08}\PYG{p}{:}\PYG{l+m+mi}{09}\PYG{p}{:}\PYG{l+m+mi}{45}  \PYG{n}{Obi}\PYG{o}{\PYGZhy{}}\PYG{n}{Wan} \PYG{n}{Kenobi} \PYG{n}{lightsaber}  \PYG{n}{Sheldon}       \PYG{l+m+mi}{2}
+\PYG{l+m+mi}{2}  \PYG{l+m+mi}{2021}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{04}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{11} \PYG{l+m+mi}{10}\PYG{p}{:}\PYG{l+m+mi}{12}\PYG{p}{:}\PYG{l+m+mi}{13}               \PYG{n}{Yoda} \PYG{n}{pijamas}  \PYG{n}{Leonard}       \PYG{l+m+mi}{5}
+
+\PYG{c+c1}{\PYGZsh{} get basic info}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+\PYG{n}{RangeIndex}\PYG{p}{:} \PYG{l+m+mi}{3} \PYG{n}{entries}\PYG{p}{,} \PYG{l+m+mi}{0} \PYG{n}{to} \PYG{l+m+mi}{2}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{4} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}     \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}     \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{timestamp}  \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{1}   \PYG{n}{product}    \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{2}   \PYG{n}{reviewer}   \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{3}   \PYG{n}{rating}     \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{int64}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{224.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+\end{Verbatim}
