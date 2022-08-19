@@ -52,4 +52,5 @@
 \contentsline {section}{\numberline {A.1}Escapes}{129}{section.a.A.1}%
 \contentsline {section}{\numberline {A.2}String Methods}{130}{section.a.A.2}%
 \contentsline {section}{\numberline {A.3}NumPy Array Manipulation Routines}{132}{section.a.A.3}%
-\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{139}{appendix.a.B}%
+\contentsline {section}{\numberline {A.4}Pandas Features for Handling Time-Related Data}{138}{section.a.A.4}%
+\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{141}{appendix.a.B}%

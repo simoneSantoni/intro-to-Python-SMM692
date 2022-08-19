@@ -4033,13 +4033,15 @@ case_2    s3
 
 \begin{paracol}{2}
 	\question{\raggedright }
-	\note{Pandas excels at handling time data, a key component of time series and panels.
+	\note{Pandas excels at handling time data, a key component of time series and panels. Specifically, Pandas has three kind of objects that can be used to strore and represent information on time-related quantities:
 
 	\begin{itemize}
-		\item Timestamp
-		\item Timedelta
-		\item Period  
+		\item \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\textt{.Timestamp}} is the Pandas replacement for \href{https://docs.python.org/3/library/datetime.html}{Python's \texttt{Datatime}} object
+		\item \href{https://pandas.pydata.org/docs/reference/api/pandas.Timedelta.html}{\texttt{.Timedelta}} represents two dates or time
+		\item \href{https://pandas.pydata.org/docs/reference/api/pandas.Period.html}{\texttt{.Period}} represents a period of time
 	\end{itemize}
+
+	Tables \ref{}, \ref{}, and \ref{}, included in Appendix \ref{}, provide a cheatsheet of functions, methods, and attributes regarding time data.
 	}
 \end{paracol}
 
@@ -4563,6 +4565,45 @@ fmin(x1, x2, /[, out, where, casting, ...])
 		\bottomrule \\[-1.8ex]
 	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
 	\end{tabular}
+\end{table}
+
+\section{Pandas Features for Handling Time-Related Data}
+\label{sec:pandas_time}
+
+\begin{table}
+	\caption{Timestamp Objects: Functions, Methods, and Attributes}
+	\begin{tabular}{p{7.5cm}p{8.5cm}}
+		\toprule\toprule
+		Routine & Synopsys \\
+		\midrule
+		\texttt{pd.} & 
+                \\
+		\bottomrule
+      	\end{tabular}
+\end{table}
+
+\begin{table}
+	\caption{Timedelta Objects: Functions, Methods, and Attributes}
+	\begin{tabular}{p{7.5cm}p{8.5cm}}
+		\toprule\toprule
+		Routine & Synopsys \\
+		\midrule
+		\texttt{pd.} & 
+                \\
+		\bottomrule
+      	\end{tabular}
+\end{table}
+
+\begin{table}
+	\caption{Period Objects: Functions, Methods, and Attributes}
+	\begin{tabular}{p{7.5cm}p{8.5cm}}
+		\toprule\toprule
+		Routine & Synopsys \\
+		\midrule
+		\texttt{pd.} & 
+                \\
+		\bottomrule
+      	\end{tabular}
 \end{table}
 
 \chapter{Collaborative and Versioning Tools}
