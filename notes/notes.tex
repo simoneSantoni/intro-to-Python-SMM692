@@ -4006,14 +4006,23 @@ case_2    s3
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright How do you select a subset of cases?}
-	\note{}
+	\question{\raggedright How do I query data in Pandas?}
+	\note{Pandas DataFrame objects have a property called \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} that allows to access a group of rows and columns by label(s) or a boolean array. To use \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}}, one has to pass two arguments:
+	
+	\begin{itemize}
+		\item a label (set of), boolean or statement identifying the case(s) to select 
+		\item a label (set of) identifying the column(s) to select
+	\end{itemize}
+
+	Snipper 6.5 shows a couple of use cases for the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} property.
+	}
 \end{paracol}
 
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.5 --- querying data in Pandas with \texttt{.loc}}
 
+\end{pythoncode}
 \section{Manipulating DataFrame Columns}
 \label{sec:manipulating_df_columns}
-
 
 \section{Data Types and Pandas} 
 
@@ -4116,7 +4125,6 @@ memory usage: 224.0+ bytes
 
 \section{Shaping and Reshaping DataFrames}
 
-
 \section{Group By Part I: Data Aggregation}
 
 
@@ -4124,8 +4132,6 @@ memory usage: 224.0+ bytes
 
 
 \section{Playing with Multiple DataFrames}
-
-
 
 \section{File Input and Output (IO) with Pandas}
 \label{sec:pandas_io}
