@@ -37,20 +37,20 @@
 \contentsline {section}{\numberline {6.2}The Pandas DataFrame}{114}{section.6.2}%
 \contentsline {section}{\numberline {6.3}Checking a DataFrame's Attributes}{119}{section.6.3}%
 \contentsline {section}{\numberline {6.4}The Anatomy of a DataFrame}{120}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Quering DataFrames}{123}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Manipulating DataFrame Columns}{123}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Data Types and Pandas}{123}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Handling `Time' Data in Pandas}{125}{section.6.8}%
-\contentsline {section}{\numberline {6.9}Shaping and Reshaping DataFrames}{126}{section.6.9}%
-\contentsline {section}{\numberline {6.10}Group By Part I: Data Aggregation}{126}{section.6.10}%
-\contentsline {section}{\numberline {6.11}Group By Part II: Data Transformation}{126}{section.6.11}%
-\contentsline {section}{\numberline {6.12}Playing with Multiple DataFrames}{126}{section.6.12}%
-\contentsline {section}{\numberline {6.13}File Input and Output (IO) with Pandas}{126}{section.6.13}%
-\contentsline {chapter}{\numberline {7}Coda}{127}{chapter.7}%
+\contentsline {section}{\numberline {6.5}Querying DataFrames}{123}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Manipulating DataFrame Columns}{125}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Data Types and Pandas}{126}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Handling `Time' Data in Pandas}{128}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Shaping and Reshaping DataFrames}{129}{section.6.9}%
+\contentsline {section}{\numberline {6.10}Group By Part I: Data Aggregation}{129}{section.6.10}%
+\contentsline {section}{\numberline {6.11}Group By Part II: Data Transformation}{129}{section.6.11}%
+\contentsline {section}{\numberline {6.12}Playing with Multiple DataFrames}{129}{section.6.12}%
+\contentsline {section}{\numberline {6.13}File Input and Output (IO) with Pandas}{129}{section.6.13}%
+\contentsline {chapter}{\numberline {7}Coda}{131}{chapter.7}%
 \contentsline {chapter}{Appendices}{}{section*.46}
-\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{131}{appendix.a.A}%
-\contentsline {section}{\numberline {A.1}Escapes}{131}{section.a.A.1}%
-\contentsline {section}{\numberline {A.2}String Methods}{132}{section.a.A.2}%
-\contentsline {section}{\numberline {A.3}NumPy Array Manipulation Routines}{134}{section.a.A.3}%
-\contentsline {section}{\numberline {A.4}Pandas Features for Handling Time-Related Data}{140}{section.a.A.4}%
-\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{143}{appendix.a.B}%
+\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{135}{appendix.a.A}%
+\contentsline {section}{\numberline {A.1}Escapes}{135}{section.a.A.1}%
+\contentsline {section}{\numberline {A.2}String Methods}{136}{section.a.A.2}%
+\contentsline {section}{\numberline {A.3}NumPy Array Manipulation Routines}{138}{section.a.A.3}%
+\contentsline {section}{\numberline {A.4}Pandas Features for Handling Time-Related Data}{144}{section.a.A.4}%
+\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{147}{appendix.a.B}%

@@ -1,0 +1,69 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially accepted alias 'pd'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} create a DataFrame from a dictionary}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}
+        \PYG{p}{\PYGZob{}}
+            \PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}b\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}c\PYGZdq{}}\PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}price\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mf}{9.87}\PYG{p}{,} \PYG{l+m+mf}{8.63}\PYG{p}{,} \PYG{l+m+mf}{6.45}\PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}color\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}blue\PYGZdq{}}\PYG{p}{],}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} data preview}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{p}{)}
+  \PYG{n}{product}  \PYG{n}{price} \PYG{n}{colror}
+\PYG{l+m+mi}{0}       \PYG{n}{a}   \PYG{l+m+mf}{9.87}  \PYG{n}{green}
+\PYG{l+m+mi}{1}       \PYG{n}{b}   \PYG{l+m+mf}{8.63}  \PYG{n}{green}
+\PYG{l+m+mi}{2}       \PYG{n}{c}   \PYG{l+m+mf}{6.45}   \PYG{n}{blue}
+
+\PYG{c+c1}{\PYGZsh{} info}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+\PYG{n}{RangeIndex}\PYG{p}{:} \PYG{l+m+mi}{3} \PYG{n}{entries}\PYG{p}{,} \PYG{l+m+mi}{0} \PYG{n}{to} \PYG{l+m+mi}{2}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{3} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}   \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}   \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{product}  \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{1}   \PYG{n}{price}    \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{float64}
+ \PYG{l+m+mi}{2}   \PYG{n}{color}   \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{float64}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{200.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+
+\PYG{c+c1}{\PYGZsh{} select the first the two cases using a range of indices}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{:}\PYG{l+m+mi}{2}\PYG{p}{]}
+      \PYG{n}{product}  \PYG{n}{price}  \PYG{n}{color}
+    \PYG{l+m+mi}{0}       \PYG{n}{a}   \PYG{l+m+mf}{9.87}  \PYG{n}{green}
+    \PYG{l+m+mi}{1}       \PYG{n}{b}   \PYG{l+m+mf}{8.63}  \PYG{n}{green}
+
+\PYG{c+c1}{\PYGZsh{} select the column "price" for the first the two cases using a boolean array}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{:}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}price\PYGZdq{}}\PYG{p}{]}
+\PYG{l+m+mi}{0}    \PYG{l+m+mf}{9.87}
+\PYG{l+m+mi}{1}    \PYG{l+m+mf}{8.63}
+\PYG{l+m+mi}{2}    \PYG{l+m+mf}{6.45}
+\PYG{n}{Name}\PYG{p}{:} \PYG{n}{price}\PYG{p}{,} \PYG{n}{dtype}\PYG{p}{:} \PYG{n}{float64}
+
+\PYG{c+c1}{\PYGZsh{} select the columns "price" and "color" for all cases}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}price\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}color\PYGZdq{}}\PYG{p}{]]}
+   \PYG{n}{price}  \PYG{n}{color}
+\PYG{l+m+mi}{0}   \PYG{l+m+mf}{9.87}  \PYG{n}{green}
+\PYG{l+m+mi}{1}   \PYG{l+m+mf}{8.63}  \PYG{n}{green}
+
+\PYG{c+c1}{\PYGZsh{} select all cases for which the column "price" is greater than or equal to 8.00}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}price\PYGZdq{}}\PYG{p}{]} \PYG{o}{\PYGZgt{}=} \PYG{l+m+mf}{8.00}\PYG{p}{,} \PYG{p}{]}
+  \PYG{n}{product}  \PYG{n}{price}  \PYG{n}{color}
+\PYG{l+m+mi}{0}       \PYG{n}{a}   \PYG{l+m+mf}{9.87}  \PYG{n}{green}
+\PYG{l+m+mi}{1}       \PYG{n}{b}   \PYG{l+m+mf}{8.63}  \PYG{n}{green}
+
+\PYG{c+c1}{\PYGZsh{} select all cases for which the column "price" is less than to 9.00 and}
+\PYG{c+c1}{\PYGZsh{} "color" is equal to "green"}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[(}\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}price\PYGZdq{}}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{9.00}\PYG{p}{)} \PYG{o}{\PYGZam{}} \PYG{p}{(}\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}color\PYGZdq{}}\PYG{p}{]} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}} \PYG{p}{),} \PYG{p}{]}
+  \PYG{n}{product}  \PYG{n}{price}  \PYG{n}{color}
+\PYG{l+m+mi}{1}       \PYG{n}{b}   \PYG{l+m+mf}{8.63}  \PYG{n}{green}
+
+\PYG{c+c1}{\PYGZsh{} select all cases for which the column "price" is less than to 9.00 and}
+\PYG{c+c1}{\PYGZsh{} "color" is equal to "green"; also, keep the column "price" only}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[(}\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}price\PYGZdq{}}\PYG{p}{]} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{9.00}\PYG{p}{)} \PYG{o}{\PYGZam{}} \PYG{p}{(}\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}color\PYGZdq{}}\PYG{p}{]} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}green\PYGZdq{}} \PYG{p}{),} \PYG{l+s+s2}{\PYGZdq{}price\PYGZdq{}}\PYG{p}{]}
+\PYG{l+m+mi}{1}    \PYG{l+m+mf}{8.63}
+\PYG{n}{Name}\PYG{p}{:} \PYG{n}{price}\PYG{p}{,} \PYG{n}{dtype}\PYG{p}{:} \PYG{n}{float64}
+\end{Verbatim}

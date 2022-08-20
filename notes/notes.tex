@@ -1417,6 +1417,7 @@ Hi there
 \end{table}
 
 \section{Python Statements and Syntax}
+\label{sec:statements_syntax}
 
 \begin{paracol}{2}
 	\question{\raggedright What is a Python statement?}
@@ -1463,6 +1464,7 @@ Hi there
 \clearpage
 
 \section{Control Flow (or If-Then Statements)}
+\label{sec§:control_flow}
 
 \begin{paracol}{2}
 \question{\raggedright What is control flow in Python?}
@@ -3991,7 +3993,7 @@ case_2    s2
 case_2    s3
 \end{pythoncode}
 
-\section{Quering DataFrames}
+\section{Querying DataFrames}
 \label{sec:querying_df}
 
 \begin{paracol}{2}
@@ -4007,23 +4009,174 @@ case_2    s3
 
 \begin{paracol}{2}
 	\question{\raggedright How do I query data in Pandas?}
-	\note{Pandas DataFrame objects have a property called \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} that allows to access a group of rows and columns by label(s) or a boolean array. To use \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}}, one has to pass two arguments:
+	\note{Pandas DataFrame objects have a property called \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} that allows to access a group of rows and columns by label(s) or a boolean array. To use \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}}, one has to pass two inputs among brackets:
 	
 	\begin{itemize}
-		\item a label (set of), boolean or statement identifying the case(s) to select 
-		\item a label (set of) identifying the column(s) to select
+		\item the set of cases to select (the left-hand side element among brackets)
+		\item the set of columns to select (the right-hand side element among brackets)
 	\end{itemize}
 
-	Snipper 6.5 shows a couple of use cases for the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} property.
+	\quad Snippet 6.6 shows a couple of use cases for the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} property:
+
+	\begin{itemize}
+		\item line 33 selects the first two cases of the DataFrame
+		\item line 39 selects the column ``price'' first two rows of the DataFrame
+		\item line 46 selects  the columns ``price'' and ``color'' for all cases included in the DataFrame
+		\item line 52 selects the cases for which the column ``price'' is less than or equal to 8.00
+		\item line 59 selects the cases for which the column ``price'' is less than 9.00 \textbf{and} the column ``color'' is equal to ``green''
+		\item line 65 expands on line 59 by selecting the column "price" when "price" is less than 9.00 \textbf{and} ``color'' is equal to ``green''
+	\end{itemize}
+
+	\quad Please refer to sections \ref{sec:statements_syntax} and \ref{sec§:control_flow} to consolidate your knowledge on the Python syntax of statements and control flow.
 	}
 \end{paracol}
+\clearpage
 
-\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.5 --- querying data in Pandas with \texttt{.loc}}
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.6 --- querying data in Pandas with \texttt{.loc}}
+# import pandas with the socially accepted alias 'pd'
+>>> import pandas as pd
 
+# create a DataFrame from a dictionary
+>>> df = pd.DataFrame.from_dict(
+        {
+            "product": ["a", "b", "c"],
+            "price": [9.87, 8.63, 6.45],
+            "color": ["green", "green", "blue"],
+        }
+    )
+
+# data preview
+>>> print(df)
+  product  price colror
+0       a   9.87  green
+1       b   8.63  green
+2       c   6.45   blue
+
+# info 
+>>> df.info()
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 3 columns):
+     Column   Non-Null Count  Dtype  
+---  ------   --------------  -----  
+ 0   product  3 non-null      object 
+ 1   price    3 non-null      float64
+ 2   color   3 non-null      object 
+dtypes: float64(1), object(2)
+memory usage: 200.0+ bytes
+
+# select the first the two cases using a range of indices
+>>> df.loc[0:2]
+      product  price  color
+    0       a   9.87  green
+    1       b   8.63  green
+
+# select the column "price" for the first the two cases using a boolean array
+>>> df.loc[0:2, "price"]
+0    9.87
+1    8.63
+2    6.45
+Name: price, dtype: float64
+
+# select the columns "price" and "color" for all cases
+>>> df.loc[:, ["price", "color"]]
+   price  color
+0   9.87  green
+1   8.63  green
+
+# select all cases for which the column "price" is greater than or equal to 8.00
+>>> df.loc[df["price"] >= 8.00, ]
+  product  price  color
+0       a   9.87  green
+1       b   8.63  green
+
+# select all cases for which the column "price" is less than to 9.00 and 
+# "color" is equal to "green"
+>>> df.loc[(df["price"] < 9.00) & (df["color"] == "green" ), ]
+  product  price  color
+1       b   8.63  green
+
+# select all cases for which the column "price" is less than to 9.00 and 
+# "color" is equal to "green"; also, keep the column "price" only
+>>> df.loc[(df["price"] < 9.00) & (df["color"] == "green" ), "price"]
+1    8.63
+Name: price, dtype: float64
 \end{pythoncode}
 \section{Manipulating DataFrame Columns}
 \label{sec:manipulating_df_columns}
 
+\begin{paracol}{2}
+	\question{\raggedright What are the main operations on a DataFrame's columns?}
+	\note{Mainly, one may want to:
+	\begin{itemize}
+		\item rename a column
+		\item drop a column
+		\item create a new column
+		\item amend an existing column's values
+	\end{itemize}
+	
+	\quad Snippet 6.7 shows how to use the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rename.html?highlight=rename#pandas.DataFrame.rename}{\texttt{.rename()}} and \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html?highlight=drop#pandas.DataFrame.drop}{\texttt{.drop()}} methods to rename and drop columns respectively.
+	}	
+\end{paracol}{2}
+
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.7 --- manipulating columns in Pandas}
+# import pandas with the socially accepted alias 'pd'
+>>> import pandas as pd
+
+# the df 
+>>> df = pd.DataFrame(
+	{
+	    "laptop": ["MacBook Pro 13inch", "Thinkpad T14", "Dell XPS 13"],
+	    "ram": ["16 GB", "48 GB", "8 GB"],
+	    "os": ["macOS Monterey", "Debian 11", "Windows 11"],
+	    "chip": ["M1", "Ryzen", "Intel Core i7"]
+	}
+    )
+
+# preview
+>>> print(df)
+               laptop    ram              os           chip
+0  MacBook Pro 13inch  16 GB  macOS Monterey             M1
+1        Thinkpad T14  48 GB       Debian 11          Ryzen
+2         Dell XPS 13   8 GB      Windows 11  Intel Core i7 
+
+# info
+>>> df.info()
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 4 columns):
+     Column  Non-Null Count  Dtype 
+---  ------  --------------  ----- 
+ 0   laptop  3 non-null      object
+ 1   ram     3 non-null      object
+ 2   os      3 non-null      object
+ 3   chip    3 non-null      object
+dtypes: object(4)
+memory usage: 224.0+ bytes
+
+# rename the column "ram" to "memory"
+>>> df.rename(columns={"ram": "memory"}, inplace=True)
+>>> print(df)
+               laptop memory              os           chip
+0  MacBook Pro 13inch  16 GB  macOS Monterey             M1
+1        Thinkpad T14  48 GB       Debian 11          Ryzen
+2         Dell XPS 13   8 GB      Windows 11  Intel Core i7
+
+# drop the column "chip"
+# --+ when inplace is set to False, the outcom of .drop is sent to the 
+# interactive sessions, but the data in memory are not affected
+>>> df.drop(columns=["chip"], inplace=False)
+               laptop memory              os
+0  MacBook Pro 13inch  16 GB  macOS Monterey
+1        Thinkpad T14  48 GB       Debian 11
+2         Dell XPS 13   8 GB      Windows 11
+# --+ when inplace is set to True, the data in memory are affected
+>>> df.drop(columns=["chip"], inplace=True)
+>>> print(df)
+               laptop memory              os
+0  MacBook Pro 13inch  16 GB  macOS Monterey
+1        Thinkpad T14  48 GB       Debian 11
+2         Dell XPS 13   8 GB      Windows 11
+
+\end{pythoncode}
 \section{Data Types and Pandas} 
 
 \begin{paracol}{2}

@@ -1,0 +1,58 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially accepted alias 'pd'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} the df}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}
+	\PYG{p}{\PYGZob{}}
+	    \PYG{l+s+s2}{\PYGZdq{}laptop\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}MacBook Pro 13inch\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Thinkpad T14\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Dell XPS 13\PYGZdq{}}\PYG{p}{],}
+	    \PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}16 GB\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}48 GB\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}8 GB\PYGZdq{}}\PYG{p}{],}
+	    \PYG{l+s+s2}{\PYGZdq{}os\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}macOS Monterey\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Debian 11\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Windows 11\PYGZdq{}}\PYG{p}{],}
+	    \PYG{l+s+s2}{\PYGZdq{}chip\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}M1\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Ryzen\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Intel Core i7\PYGZdq{}}\PYG{p}{]}
+	\PYG{p}{\PYGZcb{}}
+    \PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} preview}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{p}{)}
+               \PYG{n}{laptop}    \PYG{n}{ram}              \PYG{n}{os}           \PYG{n}{chip}
+\PYG{l+m+mi}{0}  \PYG{n}{MacBook} \PYG{n}{Pro} \PYG{l+m+mi}{13}\PYG{n}{inch}  \PYG{l+m+mi}{16} \PYG{n}{GB}  \PYG{n}{macOS} \PYG{n}{Monterey}             \PYG{n}{M1}
+\PYG{l+m+mi}{1}        \PYG{n}{Thinkpad} \PYG{n}{T14}  \PYG{l+m+mi}{48} \PYG{n}{GB}       \PYG{n}{Debian} \PYG{l+m+mi}{11}          \PYG{n}{Ryzen}
+\PYG{l+m+mi}{2}         \PYG{n}{Dell} \PYG{n}{XPS} \PYG{l+m+mi}{13}   \PYG{l+m+mi}{8} \PYG{n}{GB}      \PYG{n}{Windows} \PYG{l+m+mi}{11}  \PYG{n}{Intel} \PYG{n}{Core} \PYG{n}{i7}
+
+\PYG{c+c1}{\PYGZsh{} info}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+\PYG{n}{RangeIndex}\PYG{p}{:} \PYG{l+m+mi}{3} \PYG{n}{entries}\PYG{p}{,} \PYG{l+m+mi}{0} \PYG{n}{to} \PYG{l+m+mi}{2}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{4} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}  \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{laptop}  \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{1}   \PYG{n}{ram}     \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{2}   \PYG{n}{os}      \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{3}   \PYG{n}{chip}    \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{224.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+
+\PYG{c+c1}{\PYGZsh{} rename the column "ram" to "memory"}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{rename}\PYG{p}{(}\PYG{n}{columns}\PYG{o}{=}\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{:} \PYG{l+s+s2}{\PYGZdq{}memory\PYGZdq{}}\PYG{p}{\PYGZcb{},} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{p}{)}
+               \PYG{n}{laptop} \PYG{n}{memory}              \PYG{n}{os}           \PYG{n}{chip}
+\PYG{l+m+mi}{0}  \PYG{n}{MacBook} \PYG{n}{Pro} \PYG{l+m+mi}{13}\PYG{n}{inch}  \PYG{l+m+mi}{16} \PYG{n}{GB}  \PYG{n}{macOS} \PYG{n}{Monterey}             \PYG{n}{M1}
+\PYG{l+m+mi}{1}        \PYG{n}{Thinkpad} \PYG{n}{T14}  \PYG{l+m+mi}{48} \PYG{n}{GB}       \PYG{n}{Debian} \PYG{l+m+mi}{11}          \PYG{n}{Ryzen}
+\PYG{l+m+mi}{2}         \PYG{n}{Dell} \PYG{n}{XPS} \PYG{l+m+mi}{13}   \PYG{l+m+mi}{8} \PYG{n}{GB}      \PYG{n}{Windows} \PYG{l+m+mi}{11}  \PYG{n}{Intel} \PYG{n}{Core} \PYG{n}{i7}
+
+\PYG{c+c1}{\PYGZsh{} drop the column "chip"}
+\PYG{c+c1}{\PYGZsh{} --+ when inplace is set to False, the outcom of .drop is sent to the}
+\PYG{c+c1}{\PYGZsh{} interactive sessions, but the data in memory are not affected}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{drop}\PYG{p}{(}\PYG{n}{columns}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}chip\PYGZdq{}}\PYG{p}{],} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+               \PYG{n}{laptop} \PYG{n}{memory}              \PYG{n}{os}
+\PYG{l+m+mi}{0}  \PYG{n}{MacBook} \PYG{n}{Pro} \PYG{l+m+mi}{13}\PYG{n}{inch}  \PYG{l+m+mi}{16} \PYG{n}{GB}  \PYG{n}{macOS} \PYG{n}{Monterey}
+\PYG{l+m+mi}{1}        \PYG{n}{Thinkpad} \PYG{n}{T14}  \PYG{l+m+mi}{48} \PYG{n}{GB}       \PYG{n}{Debian} \PYG{l+m+mi}{11}
+\PYG{l+m+mi}{2}         \PYG{n}{Dell} \PYG{n}{XPS} \PYG{l+m+mi}{13}   \PYG{l+m+mi}{8} \PYG{n}{GB}      \PYG{n}{Windows} \PYG{l+m+mi}{11}
+\PYG{c+c1}{\PYGZsh{} --+ when inplace is set to True, the data in memory are affected}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{drop}\PYG{p}{(}\PYG{n}{columns}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}chip\PYGZdq{}}\PYG{p}{],} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{p}{)}
+               \PYG{n}{laptop} \PYG{n}{memory}              \PYG{n}{os}
+\PYG{l+m+mi}{0}  \PYG{n}{MacBook} \PYG{n}{Pro} \PYG{l+m+mi}{13}\PYG{n}{inch}  \PYG{l+m+mi}{16} \PYG{n}{GB}  \PYG{n}{macOS} \PYG{n}{Monterey}
+\PYG{l+m+mi}{1}        \PYG{n}{Thinkpad} \PYG{n}{T14}  \PYG{l+m+mi}{48} \PYG{n}{GB}       \PYG{n}{Debian} \PYG{l+m+mi}{11}
+\PYG{l+m+mi}{2}         \PYG{n}{Dell} \PYG{n}{XPS} \PYG{l+m+mi}{13}   \PYG{l+m+mi}{8} \PYG{n}{GB}      \PYG{n}{Windows} \PYG{l+m+mi}{11}
+\end{Verbatim}
