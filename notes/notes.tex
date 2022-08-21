@@ -4929,7 +4929,7 @@ c         14  4.666667
 	\question{\raggedright Aggregate Vs. transform}
 	\note{Once we have created a grouping structure, we can use it for aggregating the data (i.e., passing from a monthly to yearly data points, see the previous section \ref{sec:groupby_aggr}) as well as for expanding the source data. Such a procedure is called transformation and does not affect the number of rows included the DataFrame.
 	
-	\quad In Snippet 6.15, we get the cumulative sum of a product's sales for each period of time (the output of line 28 shows the structure of the data). Having defined the grouping structure (line 41), we use the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.transform.html?highlight=transform#pandas.DataFrame.transform}{\texttt{.transform()}} method to apply NumPy's \href{https://numpy.org/doc/stable/reference/generated/numpy.cumsum.html}{\texttt{cumsum}} to the values of \texttt{sales} that regard the same product.
+	\quad In Snippet 6.15, we get the cumulative sum of a product's sales for each period of time (the output of line 28 shows the structure of the data). Having defined the grouping structure (line 41), we use the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.transform.html?highlight=transform#pandas.DataFrame.transform}{\texttt{.transform()}} method to apply NumPy's \href{https://numpy.org/doc/stable/reference/generated/numpy.cumsum.html}{\texttt{cumsum}} function to the values of \texttt{sales} that regard the same product. As shown in line 44, the outcome of the transformation is assigned to the new column \texttt{cumulative\_size}.
 	}
 \end{paracol}
 

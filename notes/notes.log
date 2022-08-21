@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  22 AUG 2022 00:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  22 AUG 2022 00:19
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -3681,7 +3681,7 @@ are all screwed up? I'm going to assume that you meant ##.
 
 (./_minted-notes/FD519A7EA8D70351565DC05C5B8D8882764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex)
-Underfull \vbox (badness 2653) has occurred while \output is active []
+Underfull \vbox (badness 6641) has occurred while \output is active []
 
  [147
 
@@ -4035,7 +4035,7 @@ exmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2021/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2021/texm
 f-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2021/texmf-
 dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on notes.pdf (169 pages, 664978 bytes).
+Output written on notes.pdf (169 pages, 665130 bytes).
 PDF statistics:
  1562 PDF objects out of 1728 (max. 8388607)
  1350 compressed objects within 14 object streams
