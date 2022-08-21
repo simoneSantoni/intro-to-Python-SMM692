@@ -12,7 +12,7 @@
     \PYG{p}{)}
 
 \PYG{c+c1}{\PYGZsh{} data preview}
-\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}
   \PYG{n}{product}  \PYG{n}{price} \PYG{n}{colror}
 \PYG{l+m+mi}{0}       \PYG{n}{a}   \PYG{l+m+mf}{9.87}  \PYG{n}{green}
 \PYG{l+m+mi}{1}       \PYG{n}{b}   \PYG{l+m+mf}{8.63}  \PYG{n}{green}

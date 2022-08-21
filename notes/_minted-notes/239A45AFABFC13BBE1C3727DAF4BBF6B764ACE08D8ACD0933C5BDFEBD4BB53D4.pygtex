@@ -9,7 +9,7 @@
     \PYG{p}{\PYGZcb{}}
 \PYG{c+c1}{\PYGZsh{} get a DataFrame from the dictionary and display it}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}\PYG{n}{my\PYGZus{}data}\PYG{p}{)}
-\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}
    \PYG{n}{var\PYGZus{}1}        \PYG{n}{var\PYGZus{}2}
 \PYG{l+m+mi}{0}      \PYG{l+m+mi}{1}          \PYG{n}{ABC}
 \PYG{l+m+mi}{1}      \PYG{l+m+mi}{2}  \PYG{n}{Hello} \PYG{n}{world}
@@ -23,14 +23,14 @@
 
 \PYG{c+c1}{\PYGZsh{} get a DataFrame from the dictionary and display it}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}\PYG{n}{my\PYGZus{}data}\PYG{p}{)}
-\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}
    \PYG{n}{case\PYGZus{}1}   \PYG{n}{case\PYGZus{}2}
 \PYG{l+m+mi}{0}   \PYG{n}{Pluto}    \PYG{n}{Goofy}
 \PYG{l+m+mi}{1}     \PYG{n}{dog}      \PYG{n}{dog}
 
 \PYG{c+c1}{\PYGZsh{} ... something wrong here - let us adjust the optional param 'orient'}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}\PYG{n}{my\PYGZus{}data}\PYG{p}{,} \PYG{n}{orient}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}index\PYGZdq{}}\PYG{p}{)}
-\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}
             \PYG{l+m+mi}{0}       \PYG{l+m+mi}{1}
 \PYG{n}{case\PYGZus{}1}  \PYG{n}{Pluto}     \PYG{n}{dog}
 \PYG{n}{case\PYGZus{}2}  \PYG{n}{Goofy}     \PYG{n}{dog}
@@ -40,7 +40,7 @@
 	\PYG{n}{my\PYGZus{}data}\PYG{p}{,} \PYG{n}{orient}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}index\PYGZdq{}}\PYG{p}{,}
 	\PYG{n}{columns}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}name\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}species\PYGZdq{}}\PYG{p}{]}
 	\PYG{p}{)}
-\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}
          \PYG{n}{name}  \PYG{n}{species}
 \PYG{n}{case\PYGZus{}1}  \PYG{n}{Pluto}      \PYG{n}{dog}
 \PYG{n}{case\PYGZus{}2}  \PYG{n}{Goofy}      \PYG{n}{dog}

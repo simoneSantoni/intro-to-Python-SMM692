@@ -3739,7 +3739,7 @@ Learning goals:
     }
 # get a DataFrame from the dictionary and display it
 >>> df = pd.DataFrame.from_dict(my_data)
->>> print(df)
+>>> df
    var_1        var_2
 0      1          ABC
 1      2  Hello world
@@ -3753,14 +3753,14 @@ Learning goals:
 
 # get a DataFrame from the dictionary and display it
 >>> df = pd.DataFrame.from_dict(my_data)
->>> print(df)
+>>> df
    case_1   case_2
 0   Pluto    Goofy
 1     dog      dog
 
 # ... something wrong here - let us adjust the optional param 'orient'
 >>> df = pd.DataFrame.from_dict(my_data, orient="index")
->>> print(df)
+>>> df
             0       1
 case_1  Pluto     dog
 case_2  Goofy     dog
@@ -3770,7 +3770,7 @@ case_2  Goofy     dog
 	my_data, orient="index",
 	columns=["name", "species"]
 	)
->>> print(df)
+>>> df
          name  species
 case_1  Pluto      dog
 case_2  Goofy      dog
@@ -3804,7 +3804,7 @@ f.close()
 
 # create a DataFrame from the .csv file and display it
 >>> df = pd.read_csv("my_data.csv")
->>> print(df)
+>>> df
    x  y
 0  0  A
 1  1  B
@@ -3841,7 +3841,7 @@ f.close()
 	"gdp_pc": [51767.8, 43518.5, 50801.8]
     }
 >>> df = pd.DataFrame.from_dict(gdp_data)
->>> print(df)
+>>> df
    country   gdp_pc
 0  Belgium  51767.8
 1   France  43518.5
@@ -3921,7 +3921,7 @@ dtype: int64
 
 # create a DataFrame from a dictionary
 >>> df = pd.DataFrame.from_dict({"S":["s1", "s2", "s3"], "X":[-99, 8, 0]})
->>> print(df)
+>>> df
     S   X
 0  s1 -99
 1  s2   8
@@ -3940,7 +3940,7 @@ RangeIndex(start=0, stop=3, step=1)
 
 # change the index
 >>> df.index = ["case_1", "case_2", "case_3"]
->>> print(df)
+>>> df
          S   X
 case_1  s1 -99
 case_2  s2   8
@@ -4046,7 +4046,7 @@ case_2    s3
     )
 
 # data preview
->>> print(df)
+>>> df
   product  price colror
 0       a   9.87  green
 1       b   8.63  green
@@ -4113,12 +4113,21 @@ Name: price, dtype: float64
 		\item create a new column
 		\item amend an existing column's values
 	\end{itemize}
-	
-	\quad Snippet 6.7 shows how to use the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rename.html?highlight=rename#pandas.DataFrame.rename}{\texttt{.rename()}} and \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html?highlight=drop#pandas.DataFrame.drop}{\texttt{.drop()}} methods to rename and drop columns respectively.
-	}	
-\end{paracol}{2}
+	}
+\end{paracol}
 
-\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.7 --- manipulating columns in Pandas}
+\begin{paracol}{2}
+	\question{\raggedright How do I rename or drop a column in Pandas?}
+	\note{As shown in Snippet 6.7, Pandas has two methods, \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rename.html?highlight=rename#pandas.DataFrame.rename}{\texttt{.rename()}} and \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html?highlight=drop#pandas.DataFrame.drop}{\texttt{.drop()}}, to rename and drop columns respectively.
+
+	\quad Line 35 shows how to rename a column. The first argumet is a dictionary mapping the new name onto the old name (the dictionary's key). The second argument is a boolean flag that indicates whether to make the change effective (if ``True'') or not (if ``False'').
+
+	\quad Lines 45 and 51 show how to drop a column. The first argument is an array with the name(s) of the column(s) to delete. The second argument is a boolean flag that indicates whether to make the change effective (if ``True'') or not (if ``False'').
+	}	
+\end{paracol}
+\clearpage
+
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.7 --- renaming and dropping DataFrame columns}
 # import pandas with the socially accepted alias 'pd'
 >>> import pandas as pd
 
@@ -4133,7 +4142,7 @@ Name: price, dtype: float64
     )
 
 # preview
->>> print(df)
+>>> df
                laptop    ram              os           chip
 0  MacBook Pro 13inch  16 GB  macOS Monterey             M1
 1        Thinkpad T14  48 GB       Debian 11          Ryzen
@@ -4154,7 +4163,7 @@ memory usage: 224.0+ bytes
 
 # rename the column "ram" to "memory"
 >>> df.rename(columns={"ram": "memory"}, inplace=True)
->>> print(df)
+>>> df
                laptop memory              os           chip
 0  MacBook Pro 13inch  16 GB  macOS Monterey             M1
 1        Thinkpad T14  48 GB       Debian 11          Ryzen
@@ -4170,12 +4179,232 @@ memory usage: 224.0+ bytes
 2         Dell XPS 13   8 GB      Windows 11
 # --+ when inplace is set to True, the data in memory are affected
 >>> df.drop(columns=["chip"], inplace=True)
->>> print(df)
+>>> df
                laptop memory              os
 0  MacBook Pro 13inch  16 GB  macOS Monterey
 1        Thinkpad T14  48 GB       Debian 11
 2         Dell XPS 13   8 GB      Windows 11
 
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright How do I create a new column or amend an existing Pandas column?}
+	\note{The \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} method is the most appropriate way to create a new column or alter an existing column's values. Snippet 6.8 illustrates a couple of common tasks. In line 15, we assign a list of string objects to a new column called \texttt{manufacturer} for all cases included in \texttt{df}. 
+	
+	\quad In lines 24/26, 41, and 58 we amend the valued of an existing column. First, we manipulate the strings included under RAM so to replace the substring \texttt{"$\backslash$sGB"} with an empty string (lines 24/26). Second, we change the type of the column from \texttt{string} to \texttt{integer} using the Pandas' \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.astype.html?highlight=astype#pandas.DataFrame.astype}{\texttt{.astype()}} method (line 41). Then, we take the log of \texttt{ram} and assign it to the new column \texttt{log\_ram} (line 58). 
+	
+	\quad In line 85, we use \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} to create a new variable for a subset of cases only. Soecifically, we populate the column \texttt{gpu} provided the value of \texttt{laptop} is ``Thinkpad T14.''
+	}
+\end{paracol}
+
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.8 --- creating and amending DataFrame columns}
+# import pandas with the socially accepted alias 'pd'
+>>> import pandas as pd
+
+# the df
+>>> df = pd.DataFrame(
+        {
+            "laptop": ["MacBook Pro 13inch", "Thinkpad T14", "Dell XPS 13"],
+            "ram": ["16 GB", "48 GB", "8 GB"],
+            "os": ["macOS Monterey", "Debian 11", "Windows 11"],
+            "chip": ["M1", "Ryzen", "Intel Core i7"],
+        }
+)
+
+# create a new column, e.g., the name of the manufacturer
+>>> df.loc[:, "manufacturer"] = ["Apple", "Lenovo", "Dell"]
+>>> df
+               laptop ram              os           chip manufacturer
+0  MacBook Pro 13inch  16  macOS Monterey             M1        Apple
+1        Thinkpad T14  48       Debian 11          Ryzen       Lenovo
+2         Dell XPS 13   8      Windows 11  Intel Core i7         Dell
+
+# transform the column "ram" from string to number type 
+# --+ step 1: get rid of non-number characters using a regular expression 
+>>> df.loc[:, "ram"] = df.loc[:, "ram"].str.replace(r"[^0-9]", "")
+# --+ alterntive way to carry out step 1: using Pandas string methods 
+>>> df.loc[:, "ram"] = df["ram"].str.replace(r"\sGB", "")
+# --+ step 2: convert the string to number type
+# ----+ check the type of "ram"
+>>> df.info()
+Data columns (total 5 columns):
+     Column        Non-Null Count  Dtype 
+---  ------        --------------  ----- 
+ 0   laptop        3 non-null      object
+ 1   ram           3 non-null      object
+ 2   os            3 non-null      object
+ 3   chip          3 non-null      object
+ 4   manufacturer  3 non-null      object
+dtypes: object(5)
+# ----+ surprise-surprise: we have not a number type yet
+# let us change dtype with Pandas astype method
+>>> df.loc[:, "ram"] = df.loc[:, "ram"].astype(int)
+# ----+ check the data type again
+>>> df.info()
+Data columns (total 5 columns):
+     Column        Non-Null Count  Dtype 
+---  ------        --------------  ----- 
+ 0   laptop        3 non-null      object
+ 1   ram           3 non-null      int64 
+ 2   os            3 non-null      object
+ 3   chip          3 non-null      object
+ 4   manufacturer  3 non-null      object
+dtypes: int64(1), object(4)
+memory usage: 248.0+ bytes
+memory usage: 248.0+ bytes
+
+# transform an existing column and assign the output to a new column 
+# --+ import numpy to access the log function 
+>>> df["log_ram"] = np.log(df["ram"])
+# --+ preview
+>>> df.info()
+               laptop  ram              os           chip manufacturer  \
+0  MacBook Pro 13inch   16  macOS Monterey             M1        Apple   
+1        Thinkpad T14   48       Debian 11          Ryzen       Lenovo   
+2         Dell XPS 13    8      Windows 11  Intel Core i7         Dell   
+
+    log_ram  
+0  2.772589  
+1  3.871201  
+2  2.079442  
+# --+ info
+>>> df.info()
+Data columns (total 6 columns):
+     Column        Non-Null Count  Dtype  
+---  ------        --------------  -----  
+ 0   laptop        3 non-null      object 
+ 1   ram           3 non-null      int64  
+ 2   os            3 non-null      object 
+ 3   chip          3 non-null      object 
+ 4   manufacturer  3 non-null      object 
+ 5   log_ram       3 non-null      float64
+dtypes: float64(1), int64(1), object(4)
+memory usage: 272.0+ bytes
+
+# create a new column conditional on another column's value
+>>> df.loc[df["laptop"] == "Thinkpad T14", "gpu"] = True
+# --+ info
+>>> df.info()
+Data columns (total 7 columns):
+     Column        Non-Null Count  Dtype  
+---  ------        --------------  -----  
+ 0   laptop        3 non-null      object 
+ 1   ram           3 non-null      int64  
+ 2   os            3 non-null      object 
+ 3   chip          3 non-null      object 
+ 4   manufacturer  3 non-null      object 
+ 5   log_ram       3 non-null      float64
+ 6   gpu           1 non-null      object 
+dtypes: float64(1), int64(1), object(5)
+memory usage: 296.0+ bytes
+# --+ preview
+>>> df
+               laptop  ram              os           chip manufacturer  \
+0  MacBook Pro 13inch   16  macOS Monterey             M1        Apple   
+1        Thinkpad T14   48       Debian 11          Ryzen       Lenovo   
+2         Dell XPS 13    8      Windows 11  Intel Core i7         Dell   
+
+    log_ram   gpu  
+0  2.772589   NaN  
+1  3.871201  True  
+2  2.079442   NaN  
+\end{pythoncode}
+
+\begin{paracol}{2}
+	\question{\raggedright What is a missing value?}
+	\note{A missing value is a datapoint for which no information is available in the dataset. Mossong values can arise for many reasons. The most popular reasons are:
+	
+	\begin{itemize}
+		\item the case does not present a value for the variable. For example, it is not possible to record the stock market of a company before the IPO
+		\item the case does present a value for the variable. However, the value was not recorded because of the limitations of the data gathering process
+		\item the recorded value is not accurate/valid --- hence, it was removed from the dataset
+	\end{itemize}
+	}
+\end{paracol}
+\clearpage 
+
+\begin{paracol}{2}
+	\question{\raggedright How does Pandas represent missing values?}
+	\note{Pandas denote missing values using NumPy's floating representation \href{https://numpy.org/doc/stable/reference/constants.html?highlight=nan#numpy.NaN}{\texttt{numpy.NaN}}
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do I handle missing values in Pandas?}
+	\note{There are several approaches to cope with missing values:
+	\begin{itemize}
+		\item deleting all cases where a missing value is present
+		\item replacing missing values with a fixed value
+		\item replacing missing values with the mean of the column
+		\item replacing missing values with the estimate of a statical model
+	\end{itemize}
+	
+	The latter approach is the most sophisticaed one and falls beyond the remit of these notes. In Snippet 6.9, I show how to implement the first three approaches in Pandas. Line XX. Line XX. Line XX. 
+
+	.}
+\end{paracol}
+
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.9 --- handling missing values}
+# import numpy with the socially accepted alias "np"
+>>> import numpy as np
+# import pandas with the socially acceptable alias "pd"
+>>> import pandas as pd 
+
+# the dataframe
+>>> df = pd.DataFrame(
+	{
+	    "item": ["a", "b", "c", "d", "e"],
+	    "price": [16.32, 16.78, np.nan, np.nan, 16.41],
+	}
+)
+
+# preview 
+>>> df
+  item  price
+0    a  16.32
+1    b  16.78
+2    c    NaN
+3    d    NaN
+4    e  16.41
+
+# info 
+>>> df.info()
+Data columns (total 2 columns):
+     Column  Non-Null Count  Dtype  
+---  ------  --------------  -----  
+ 0   item    5 non-null      object 
+ 1   price   3 non-null      float64
+dtypes: float64(1), object(1)
+memory usage: 208.0+ bytes
+
+# approach 1 --- delete all cases where a missing value is present
+# --+ create df_, a new DataFrame with a sample of cases included in df  
+>>> df_ = df.dropna()
+# --+ 
+>>> print(df_)
+  item  price
+0    a  16.32
+1    b  16.78
+4    e  16.41
+
+# approach 2 --- replace missing values with a fixed value
+# --+ replace the missing values
+>>> df.fillna(value=16.99, inplace=False)
+  item  price
+0    a  16.32
+1    b  16.78
+2    c  16.99
+3    d  16.99
+4    e  16.41
+
+# approach 3 --- replace missing values with the mean of the column§
+>>> df.fillna(value=np.mean(df["price"]), inplace=False)
+  item      price
+0    a  16.320000
+1    b  16.780000
+2    c  16.503333
+3    d  16.503333
+4    e  16.410000
 \end{pythoncode}
 \section{Data Types and Pandas} 
 

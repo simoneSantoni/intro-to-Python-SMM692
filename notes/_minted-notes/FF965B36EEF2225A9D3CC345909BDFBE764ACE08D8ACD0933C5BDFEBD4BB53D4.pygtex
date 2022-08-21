@@ -1,0 +1,112 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially accepted alias 'pd'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} the df}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}
+        \PYG{p}{\PYGZob{}}
+            \PYG{l+s+s2}{\PYGZdq{}laptop\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}MacBook Pro 13inch\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Thinkpad T14\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Dell XPS 13\PYGZdq{}}\PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}16 GB\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}48 GB\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}8 GB\PYGZdq{}}\PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}os\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}macOS Monterey\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Debian 11\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Windows 11\PYGZdq{}}\PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}chip\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}M1\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Ryzen\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Intel Core i7\PYGZdq{}}\PYG{p}{],}
+        \PYG{p}{\PYGZcb{}}
+\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} create a new column, e.g., the name of the manufacturer}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}manufacturer\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Apple\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Lenovo\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Dell\PYGZdq{}}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}
+               \PYG{n}{laptop} \PYG{n}{ram}              \PYG{n}{os}           \PYG{n}{chip} \PYG{n}{manufacturer}
+\PYG{l+m+mi}{0}  \PYG{n}{MacBook} \PYG{n}{Pro} \PYG{l+m+mi}{13}\PYG{n}{inch}  \PYG{l+m+mi}{16}  \PYG{n}{macOS} \PYG{n}{Monterey}             \PYG{n}{M1}        \PYG{n}{Apple}
+\PYG{l+m+mi}{1}        \PYG{n}{Thinkpad} \PYG{n}{T14}  \PYG{l+m+mi}{48}       \PYG{n}{Debian} \PYG{l+m+mi}{11}          \PYG{n}{Ryzen}       \PYG{n}{Lenovo}
+\PYG{l+m+mi}{2}         \PYG{n}{Dell} \PYG{n}{XPS} \PYG{l+m+mi}{13}   \PYG{l+m+mi}{8}      \PYG{n}{Windows} \PYG{l+m+mi}{11}  \PYG{n}{Intel} \PYG{n}{Core} \PYG{n}{i7}         \PYG{n}{Dell}
+
+\PYG{c+c1}{\PYGZsh{} transform the column "ram" from string to number type}
+\PYG{c+c1}{\PYGZsh{} --+ step 1: get rid of non-number characters using a regular expression}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{str}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}[\PYGZca{}0\PYGZhy{}9]\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ alterntive way to carry out step 1: using Pandas string methods}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{str}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}sGB\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ step 2: convert the string to number type}
+\PYG{c+c1}{\PYGZsh{} ----+ check the type of "ram"}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{5} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}        \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}        \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{laptop}        \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{1}   \PYG{n}{ram}           \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{2}   \PYG{n}{os}            \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{3}   \PYG{n}{chip}          \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{4}   \PYG{n}{manufacturer}  \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ----+ surprise-surprise: we have not a number type yet}
+\PYG{c+c1}{\PYGZsh{} let us change dtype with Pandas astype method}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{astype}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ----+ check the data type again}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{5} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}        \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}        \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{laptop}        \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{1}   \PYG{n}{ram}           \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+ \PYG{l+m+mi}{2}   \PYG{n}{os}            \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{3}   \PYG{n}{chip}          \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{4}   \PYG{n}{manufacturer}  \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{int64}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{248.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{248.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+
+\PYG{c+c1}{\PYGZsh{} transform an existing column and assign the output to a new column}
+\PYG{c+c1}{\PYGZsh{} --+ import numpy to access the log function}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}log\PYGZus{}ram\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{log}\PYG{p}{(}\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{])}
+\PYG{c+c1}{\PYGZsh{} --+ preview}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+               \PYG{n}{laptop}  \PYG{n}{ram}              \PYG{n}{os}           \PYG{n}{chip} \PYG{n}{manufacturer}  \PYGZbs{}
+\PYG{l+m+mi}{0}  \PYG{n}{MacBook} \PYG{n}{Pro} \PYG{l+m+mi}{13}\PYG{n}{inch}   \PYG{l+m+mi}{16}  \PYG{n}{macOS} \PYG{n}{Monterey}             \PYG{n}{M1}        \PYG{n}{Apple}
+\PYG{l+m+mi}{1}        \PYG{n}{Thinkpad} \PYG{n}{T14}   \PYG{l+m+mi}{48}       \PYG{n}{Debian} \PYG{l+m+mi}{11}          \PYG{n}{Ryzen}       \PYG{n}{Lenovo}
+\PYG{l+m+mi}{2}         \PYG{n}{Dell} \PYG{n}{XPS} \PYG{l+m+mi}{13}    \PYG{l+m+mi}{8}      \PYG{n}{Windows} \PYG{l+m+mi}{11}  \PYG{n}{Intel} \PYG{n}{Core} \PYG{n}{i7}         \PYG{n}{Dell}
+
+    \PYG{n}{log\PYGZus{}ram}
+\PYG{l+m+mi}{0}  \PYG{l+m+mf}{2.772589}
+\PYG{l+m+mi}{1}  \PYG{l+m+mf}{3.871201}
+\PYG{l+m+mi}{2}  \PYG{l+m+mf}{2.079442}
+\PYG{c+c1}{\PYGZsh{} --+ info}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{6} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}        \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}        \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{laptop}        \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{1}   \PYG{n}{ram}           \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+ \PYG{l+m+mi}{2}   \PYG{n}{os}            \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{3}   \PYG{n}{chip}          \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{4}   \PYG{n}{manufacturer}  \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{5}   \PYG{n}{log\PYGZus{}ram}       \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{float64}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{float64}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n}{int64}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{4}\PYG{p}{)}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{272.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+
+\PYG{c+c1}{\PYGZsh{} create a new column conditional on another column's value}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[}\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}laptop\PYGZdq{}}\PYG{p}{]} \PYG{o}{==} \PYG{l+s+s2}{\PYGZdq{}Thinkpad T14\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}gpu\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{k+kc}{True}
+\PYG{c+c1}{\PYGZsh{} --+ info}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{7} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}        \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}        \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{laptop}        \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{1}   \PYG{n}{ram}           \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+ \PYG{l+m+mi}{2}   \PYG{n}{os}            \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{3}   \PYG{n}{chip}          \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{4}   \PYG{n}{manufacturer}  \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{5}   \PYG{n}{log\PYGZus{}ram}       \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{float64}
+ \PYG{l+m+mi}{6}   \PYG{n}{gpu}           \PYG{l+m+mi}{1} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{float64}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n}{int64}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{)}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{296.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+\PYG{c+c1}{\PYGZsh{} --+ preview}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}
+               \PYG{n}{laptop}  \PYG{n}{ram}              \PYG{n}{os}           \PYG{n}{chip} \PYG{n}{manufacturer}  \PYGZbs{}
+\PYG{l+m+mi}{0}  \PYG{n}{MacBook} \PYG{n}{Pro} \PYG{l+m+mi}{13}\PYG{n}{inch}   \PYG{l+m+mi}{16}  \PYG{n}{macOS} \PYG{n}{Monterey}             \PYG{n}{M1}        \PYG{n}{Apple}
+\PYG{l+m+mi}{1}        \PYG{n}{Thinkpad} \PYG{n}{T14}   \PYG{l+m+mi}{48}       \PYG{n}{Debian} \PYG{l+m+mi}{11}          \PYG{n}{Ryzen}       \PYG{n}{Lenovo}
+\PYG{l+m+mi}{2}         \PYG{n}{Dell} \PYG{n}{XPS} \PYG{l+m+mi}{13}    \PYG{l+m+mi}{8}      \PYG{n}{Windows} \PYG{l+m+mi}{11}  \PYG{n}{Intel} \PYG{n}{Core} \PYG{n}{i7}         \PYG{n}{Dell}
+
+    \PYG{n}{log\PYGZus{}ram}   \PYG{n}{gpu}
+\PYG{l+m+mi}{0}  \PYG{l+m+mf}{2.772589}   \PYG{n}{NaN}
+\PYG{l+m+mi}{1}  \PYG{l+m+mf}{3.871201}  \PYG{k+kc}{True}
+\PYG{l+m+mi}{2}  \PYG{l+m+mf}{2.079442}   \PYG{n}{NaN}
+\end{Verbatim}

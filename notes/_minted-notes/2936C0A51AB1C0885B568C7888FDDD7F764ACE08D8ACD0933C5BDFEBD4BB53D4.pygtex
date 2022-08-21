@@ -1,0 +1,62 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import numpy with the socially accepted alias "np"}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{numpy} \PYG{k}{as} \PYG{n+nn}{np}
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially acceptable alias "pd"}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} the dataframe}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{p}{(}
+	\PYG{p}{\PYGZob{}}
+	    \PYG{l+s+s2}{\PYGZdq{}item\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}b\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}c\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}d\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}e\PYGZdq{}}\PYG{p}{],}
+	    \PYG{l+s+s2}{\PYGZdq{}price\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mf}{16.32}\PYG{p}{,} \PYG{l+m+mf}{16.78}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{nan}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{nan}\PYG{p}{,} \PYG{l+m+mf}{16.41}\PYG{p}{],}
+	\PYG{p}{\PYGZcb{}}
+\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} preview}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}
+  \PYG{n}{item}  \PYG{n}{price}
+\PYG{l+m+mi}{0}    \PYG{n}{a}  \PYG{l+m+mf}{16.32}
+\PYG{l+m+mi}{1}    \PYG{n}{b}  \PYG{l+m+mf}{16.78}
+\PYG{l+m+mi}{2}    \PYG{n}{c}    \PYG{n}{NaN}
+\PYG{l+m+mi}{3}    \PYG{n}{d}    \PYG{n}{NaN}
+\PYG{l+m+mi}{4}    \PYG{n}{e}  \PYG{l+m+mf}{16.41}
+
+\PYG{c+c1}{\PYGZsh{} info}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{2} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}  \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{item}    \PYG{l+m+mi}{5} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{1}   \PYG{n}{price}   \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{float64}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{float64}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{208.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+
+\PYG{c+c1}{\PYGZsh{} approach 1: delete all cases where a missing value is present}
+\PYG{c+c1}{\PYGZsh{} --+ create df_, a new DataFrame with a sample of cases included in df}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df\PYGZus{}} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{dropna}\PYG{p}{()}
+\PYG{c+c1}{\PYGZsh{} --+}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df\PYGZus{}}\PYG{p}{)}
+  \PYG{n}{item}  \PYG{n}{price}
+\PYG{l+m+mi}{0}    \PYG{n}{a}  \PYG{l+m+mf}{16.32}
+\PYG{l+m+mi}{1}    \PYG{n}{b}  \PYG{l+m+mf}{16.78}
+\PYG{l+m+mi}{4}    \PYG{n}{e}  \PYG{l+m+mf}{16.41}
+
+\PYG{c+c1}{\PYGZsh{} approach 2: replace missing values with a fixed value}
+\PYG{c+c1}{\PYGZsh{} --+ replace the missing values}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{fillna}\PYG{p}{(}\PYG{n}{value}\PYG{o}{=}\PYG{l+m+mf}{16.99}\PYG{p}{,} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+  \PYG{n}{item}  \PYG{n}{price}
+\PYG{l+m+mi}{0}    \PYG{n}{a}  \PYG{l+m+mf}{16.32}
+\PYG{l+m+mi}{1}    \PYG{n}{b}  \PYG{l+m+mf}{16.78}
+\PYG{l+m+mi}{2}    \PYG{n}{c}  \PYG{l+m+mf}{16.99}
+\PYG{l+m+mi}{3}    \PYG{n}{d}  \PYG{l+m+mf}{16.99}
+\PYG{l+m+mi}{4}    \PYG{n}{e}  \PYG{l+m+mf}{16.41}
+
+\PYG{c+c1}{\PYGZsh{} approach 3: replace missing values with the mean of the column§}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{fillna}\PYG{p}{(}\PYG{n}{value}\PYG{o}{=}\PYG{n}{np}\PYG{o}{.}\PYG{n}{mean}\PYG{p}{(}\PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}price\PYGZdq{}}\PYG{p}{]),} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{False}\PYG{p}{)}
+  \PYG{n}{item}      \PYG{n}{price}
+\PYG{l+m+mi}{0}    \PYG{n}{a}  \PYG{l+m+mf}{16.320000}
+\PYG{l+m+mi}{1}    \PYG{n}{b}  \PYG{l+m+mf}{16.780000}
+\PYG{l+m+mi}{2}    \PYG{n}{c}  \PYG{l+m+mf}{16.503333}
+\PYG{l+m+mi}{3}    \PYG{n}{d}  \PYG{l+m+mf}{16.503333}
+\PYG{l+m+mi}{4}    \PYG{n}{e}  \PYG{l+m+mf}{16.410000}
+\end{Verbatim}

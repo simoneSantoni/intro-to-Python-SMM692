@@ -20,7 +20,7 @@
 
 \PYG{c+c1}{\PYGZsh{} create a DataFrame from the .csv file and display it}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{read\PYGZus{}csv}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}my\PYGZus{}data.csv\PYGZdq{}}\PYG{p}{)}
-\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{df}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}
    \PYG{n}{x}  \PYG{n}{y}
 \PYG{l+m+mi}{0}  \PYG{l+m+mi}{0}  \PYG{n}{A}
 \PYG{l+m+mi}{1}  \PYG{l+m+mi}{1}  \PYG{n}{B}
