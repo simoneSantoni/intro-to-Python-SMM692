@@ -43,6 +43,18 @@
  \PYG{l+m+mi}{2}   \PYG{n}{sales}    \PYG{l+m+mi}{9} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
 \PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{int64}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
 \PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{344.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+\PYG{c+c1}{\PYGZsh{} ----+ data view}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{molten}
+  \PYG{n}{product}  \PYG{n}{time}  \PYG{n}{sales}
+\PYG{l+m+mi}{0}       \PYG{n}{a}     \PYG{l+m+mi}{0}     \PYG{l+m+mi}{10}
+\PYG{l+m+mi}{1}       \PYG{n}{b}     \PYG{l+m+mi}{0}      \PYG{l+m+mi}{5}
+\PYG{l+m+mi}{2}       \PYG{n}{c}     \PYG{l+m+mi}{0}      \PYG{l+m+mi}{0}
+\PYG{l+m+mi}{3}       \PYG{n}{a}     \PYG{l+m+mi}{1}      \PYG{l+m+mi}{7}
+\PYG{l+m+mi}{4}       \PYG{n}{b}     \PYG{l+m+mi}{1}      \PYG{l+m+mi}{6}
+\PYG{l+m+mi}{5}       \PYG{n}{c}     \PYG{l+m+mi}{1}      \PYG{l+m+mi}{5}
+\PYG{l+m+mi}{6}       \PYG{n}{a}     \PYG{l+m+mi}{2}      \PYG{l+m+mi}{4}
+\PYG{l+m+mi}{7}       \PYG{n}{b}     \PYG{l+m+mi}{2}      \PYG{l+m+mi}{6}
+\PYG{l+m+mi}{8}       \PYG{n}{c}     \PYG{l+m+mi}{2}      \PYG{l+m+mi}{9}
 
 \PYG{c+c1}{\PYGZsh{} from long data to wide}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{wide} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{pivot\PYGZus{}table}\PYG{p}{(}

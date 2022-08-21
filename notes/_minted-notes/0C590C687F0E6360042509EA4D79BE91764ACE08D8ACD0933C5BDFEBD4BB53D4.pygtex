@@ -1,0 +1,40 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially accepted alias 'pd'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} create a long data frame}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}
+	\PYG{p}{\PYGZob{}}
+	    \PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}c\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}c\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}a\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}b\PYGZsq{}}\PYG{p}{,} \PYG{l+s+s1}{\PYGZsq{}c\PYGZsq{}}\PYG{p}{],}	
+	    \PYG{l+s+s2}{\PYGZdq{}month\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{],}
+	    \PYG{l+s+s2}{\PYGZdq{}sales\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{,}  \PYG{l+m+mi}{5}\PYG{p}{,}  \PYG{l+m+mi}{0}\PYG{p}{,}  \PYG{l+m+mi}{7}\PYG{p}{,}  \PYG{l+m+mi}{6}\PYG{p}{,}  \PYG{l+m+mi}{5}\PYG{p}{,}  \PYG{l+m+mi}{4}\PYG{p}{,}  \PYG{l+m+mi}{6}\PYG{p}{,}  \PYG{l+m+mi}{9}\PYG{p}{]}
+	\PYG{p}{\PYGZcb{}}
+    \PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} data view}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}
+  \PYG{n}{product}  \PYG{n}{time}  \PYG{n}{sales}
+\PYG{l+m+mi}{0}       \PYG{n}{a}     \PYG{l+m+mi}{0}     \PYG{l+m+mi}{10}
+\PYG{l+m+mi}{1}       \PYG{n}{b}     \PYG{l+m+mi}{0}      \PYG{l+m+mi}{5}
+\PYG{l+m+mi}{2}       \PYG{n}{c}     \PYG{l+m+mi}{0}      \PYG{l+m+mi}{0}
+\PYG{l+m+mi}{3}       \PYG{n}{a}     \PYG{l+m+mi}{1}      \PYG{l+m+mi}{7}
+\PYG{l+m+mi}{4}       \PYG{n}{b}     \PYG{l+m+mi}{1}      \PYG{l+m+mi}{6}
+\PYG{l+m+mi}{5}       \PYG{n}{c}     \PYG{l+m+mi}{1}      \PYG{l+m+mi}{5}
+\PYG{l+m+mi}{6}       \PYG{n}{a}     \PYG{l+m+mi}{2}      \PYG{l+m+mi}{4}
+\PYG{l+m+mi}{7}       \PYG{n}{b}     \PYG{l+m+mi}{2}      \PYG{l+m+mi}{6}
+\PYG{l+m+mi}{8}       \PYG{n}{c}     \PYG{l+m+mi}{2}      \PYG{l+m+mi}{9}
+
+\PYG{c+c1}{\PYGZsh{} group by}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{gr} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{groupby}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ what do we get if we call gr?}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{gr}
+\PYG{o}{\PYGZlt{}}\PYG{n}{pandas}\PYG{o}{.}\PYG{n}{core}\PYG{o}{.}\PYG{n}{groupby}\PYG{o}{.}\PYG{n}{generic}\PYG{o}{.}\PYG{n}{DataFrameGroupBy} \PYG{n+nb}{object} \PYG{n}{at} \PYG{l+m+mh}{0x7fb909d4f9d0}\PYG{o}{\PYGZgt{}}
+
+\PYG{c+c1}{\PYGZsh{} aggregate sales data around the grouping structure}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{gr}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}sales\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{aggregate}\PYG{p}{([}\PYG{n}{np}\PYG{o}{.}\PYG{n}{sum}\PYG{p}{,} \PYG{n}{np}\PYG{o}{.}\PYG{n}{mean}\PYG{p}{])}
+         \PYG{n+nb}{sum}      \PYG{n}{mean}
+\PYG{n}{product}
+\PYG{n}{a}         \PYG{l+m+mi}{21}  \PYG{l+m+mf}{7.000000}
+\PYG{n}{b}         \PYG{l+m+mi}{17}  \PYG{l+m+mf}{5.666667}
+\PYG{n}{c}         \PYG{l+m+mi}{14}  \PYG{l+m+mf}{4.666667}
+\end{Verbatim}
