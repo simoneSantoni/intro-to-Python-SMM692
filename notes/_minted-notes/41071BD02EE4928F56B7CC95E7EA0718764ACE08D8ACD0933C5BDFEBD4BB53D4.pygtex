@@ -12,7 +12,7 @@
 	\PYG{p}{\PYGZcb{}}
     \PYG{p}{)}
 
-\PYG{c+c1}{\PYGZsh{} preview}
+\PYG{c+c1}{\PYGZsh{} data view}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}
                \PYG{n}{laptop}    \PYG{n}{ram}              \PYG{n}{os}           \PYG{n}{chip}
 \PYG{l+m+mi}{0}  \PYG{n}{MacBook} \PYG{n}{Pro} \PYG{l+m+mi}{13}\PYG{n}{inch}  \PYG{l+m+mi}{16} \PYG{n}{GB}  \PYG{n}{macOS} \PYG{n}{Monterey}             \PYG{n}{M1}

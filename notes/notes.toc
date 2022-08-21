@@ -34,23 +34,23 @@
 \contentsline {section}{\numberline {5.10}File Input and Output (IO) with \texttt {ndarrays}}{109}{section.5.10}%
 \contentsline {chapter}{\numberline {6}Data Management with Pandas}{113}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Pandas 101}{113}{section.6.1}%
-\contentsline {section}{\numberline {6.2}The Pandas DataFrame}{114}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Checking a DataFrame's Attributes}{119}{section.6.3}%
-\contentsline {section}{\numberline {6.4}The Anatomy of a DataFrame}{120}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Querying DataFrames}{123}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Manipulating DataFrame Columns}{125}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Data Types and Pandas}{131}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Handling `Time' Data in Pandas}{132}{section.6.8}%
-\contentsline {section}{\numberline {6.9}Shaping and Reshaping DataFrames}{133}{section.6.9}%
-\contentsline {section}{\numberline {6.10}Group By Part I: Data Aggregation}{133}{section.6.10}%
-\contentsline {section}{\numberline {6.11}Group By Part II: Data Transformation}{133}{section.6.11}%
-\contentsline {section}{\numberline {6.12}Playing with Multiple DataFrames}{133}{section.6.12}%
-\contentsline {section}{\numberline {6.13}File Input and Output (IO) with Pandas}{133}{section.6.13}%
-\contentsline {chapter}{\numberline {7}Coda}{135}{chapter.7}%
+\contentsline {section}{\numberline {6.2}The Pandas DataFrame}{115}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Checking a DataFrame's Attributes}{120}{section.6.3}%
+\contentsline {section}{\numberline {6.4}The Anatomy of a DataFrame}{122}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Querying DataFrames}{125}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Manipulating DataFrame Columns}{128}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Data Types and Pandas}{135}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Handling `Time' Data in Pandas}{136}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Shaping and Reshaping DataFrames}{141}{section.6.9}%
+\contentsline {section}{\numberline {6.10}Group By Part I: Data Aggregation}{141}{section.6.10}%
+\contentsline {section}{\numberline {6.11}Group By Part II: Data Transformation}{141}{section.6.11}%
+\contentsline {section}{\numberline {6.12}Playing with Multiple DataFrames}{141}{section.6.12}%
+\contentsline {section}{\numberline {6.13}File Input and Output (IO) with Pandas}{141}{section.6.13}%
+\contentsline {chapter}{\numberline {7}Coda}{143}{chapter.7}%
 \contentsline {chapter}{Appendices}{}{section*.46}
-\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{139}{appendix.a.A}%
-\contentsline {section}{\numberline {A.1}Escapes}{139}{section.a.A.1}%
-\contentsline {section}{\numberline {A.2}String Methods}{140}{section.a.A.2}%
-\contentsline {section}{\numberline {A.3}NumPy Array Manipulation Routines}{142}{section.a.A.3}%
-\contentsline {section}{\numberline {A.4}Pandas Features for Handling Time-Related Data}{148}{section.a.A.4}%
-\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{151}{appendix.a.B}%
+\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{147}{appendix.a.A}%
+\contentsline {section}{\numberline {A.1}Escapes}{147}{section.a.A.1}%
+\contentsline {section}{\numberline {A.2}String Methods}{148}{section.a.A.2}%
+\contentsline {section}{\numberline {A.3}NumPy Array Manipulation Routines}{150}{section.a.A.3}%
+\contentsline {section}{\numberline {A.4}Pandas Features for Handling Time-Related Data}{156}{section.a.A.4}%
+\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{159}{appendix.a.B}%

@@ -1864,6 +1864,7 @@ Learning goals:
 \end{paracol}
 
 \section{NumPy \texttt{ndarray}}
+\label{sec:np_array}
 
 \begin{paracol}{2}
 	\question{\raggedright What is a NumPy \texttt{ndarray}?}
@@ -3648,6 +3649,7 @@ Learning goals:
 	
 	}
 \end{paracol}
+\clearpage
 
 \section{The Pandas DataFrame}
 
@@ -3661,9 +3663,8 @@ Learning goals:
 
 	Put simply (i.e., from a user standpoint), a DataFrame is a tabular data structure with rows and columns. Tipically, the rows are the cases (e.g., individuals, groups, firms, countries, etc), whereas the columns are the so-called fields, variables, or features (e.g., wage, job satistisfaction, stock-market value, etc.).\footnote{In the field of information systems and computer science, columns are oftentimes called fields; statisticians, economists, and analysts in general use the term variable to refer to a column; the term feature is common in the Machine Learning field.} Figure \ref{fig:pandas_dataframe} shows a stylized representation of a case-by-variable data strucuture, very common in Pandas.}
 \end{paracol}
-\clearpage
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\centering
 	\begin{tabular}{|c|c|c|c|c|c|c|}
 		\hline
@@ -3718,14 +3719,15 @@ Learning goals:
 		\multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume Pandas is loaded with the \texttt{pd} alias.} \\
 	\end{tabular}
 \end{sidewaystable}
-
 \clearpage
 
 \begin{paracol}{2}
 	\question{\raggedright \texttt{.DataFrame.from\_dict} in action}
-	\note{Snippet 6.1 shows how to create a DataFrame from one or more iterables that are loaded in the current Python session. In line 5, we create a dictionary whose keys are associated with variables --- i.e., the columns of the DataFrame. In line 10, we assign the variable \texttt{df} to the outoput of \texttt{.from\_dict} with the dictionary \texttt{my\_data} as input. In line 11, \texttt{df} is printed to the screen. You may have noticed that the mathematical progression reported on the left-right of the tabular data: that is the so-called Pandas `index,' a concept that we will see in Section \ref{sec:df_attrs}.
+	\note{
+		Snippet 6.1 shows how to create a DataFrame from one or more iterables that are loaded in the current Python session. In line 5, we create a dictionary whose keys are associated with variables --- i.e., the columns of the DataFrame. In line 10, we assign the variable \texttt{df} to the outoput of \texttt{.from\_dict} with the dictionary \texttt{my\_data} as input. In line 11, \texttt{df} is printed to the screen. You may have noticed that the mathematical progression reported on the left-right of the tabular data: that is the so-called Pandas `index,' a concept that we will see in Section \ref{sec:df_attrs}.
 	
-	\quad By default, \texttt{.from\_dict} parses the values of the input dictionary as columns. However, it is also possible to parse a dictionary's values as cases. That is what we achieve in line 30, where we populate the discretionary parameter \texttt{orient} with the value \texttt{index}, meaning Python must consider the dictionary keys as cases rather than columns. In line 38, we make a further adjustement by passing a list with the column names to the discretionary parameter \texttt{columns}. It is not necessary to do that, but it helps to interpret the columnsn --- which, when we set \texttt{orient="index"}, are named with a mathematical progression by default.}
+		\quad By default, \texttt{.from\_dict} parses the values of the input dictionary as columns. However, it is also possible to parse a dictionary's values as cases. That is what we achieve in line 30, where we populate the discretionary parameter \texttt{orient} with the value \texttt{index}, meaning Python must consider the dictionary keys as cases rather than columns. In line 38, we make a further adjustement by passing a list with the column names to the discretionary parameter \texttt{columns}. It is not necessary to do that, but it helps to interpret the columnsn --- which, when we set \texttt{orient="index"}, are named with a mathematical progression by default.
+	}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.1 --- creating a DataFrame from a dictionary}
@@ -3810,6 +3812,7 @@ f.close()
 1  1  B
 2  2  C
 \end{pythoncode}
+\clearpage
 
 \section{Checking a DataFrame's Attributes}
 \label{sec:df_attrs}
@@ -3876,6 +3879,7 @@ gdp_pc      24
 dtype: int64
 
 \end{pythoncode}
+\clearpage
 
 \section{The Anatomy of a DataFrame}
 
@@ -3992,6 +3996,7 @@ case_1    s1
 case_2    s2
 case_2    s3
 \end{pythoncode}
+\clearpage
 
 \section{Querying DataFrames}
 \label{sec:querying_df}
@@ -4101,6 +4106,8 @@ Name: price, dtype: float64
 1    8.63
 Name: price, dtype: float64
 \end{pythoncode}
+\clearpage
+
 \section{Manipulating DataFrame Columns}
 \label{sec:manipulating_df_columns}
 
@@ -4141,7 +4148,7 @@ Name: price, dtype: float64
 	}
     )
 
-# preview
+# data view
 >>> df
                laptop    ram              os           chip
 0  MacBook Pro 13inch  16 GB  macOS Monterey             M1
@@ -4339,12 +4346,11 @@ memory usage: 296.0+ bytes
 		\item replacing missing values with the estimate of a statical model
 	\end{itemize}
 	
-	The latter approach is the most sophisticaed one and falls beyond the remit of these notes. In Snippet 6.9, I show how to implement the first three approaches in Pandas. Line XX. Line XX. Line XX. 
-
-	.}
+	\quad The latter approach is the most sophisticaed one and falls beyond the remit of these notes. In Snippet 6.9, I show how to implement the first three approaches in Pandas. Line 34 uses the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html?highlight=dropna}{\texttt{.dropna()}} method to delete all cases presenting at least one missing value. Line 41 draws on the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.fillna.html?highlight=fillna#pandas.DataFrame.fillna}{\texttt{.fillna()}} method to replace the missing values with a fixed value (e.g., a value that the analyst considers `plausible' based on her/his contextual knowledge). Like line 41, line 50 relies the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.fillna.html?highlight=fillna#pandas.DataFrame.fillna}{\texttt{.fillna()}} method. However, it does not replace the missing values with a fixed value. Instead, it uses the mean value of \texttt{price}.
+	} 
 \end{paracol}
 
-\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.9 --- handling missing values}
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.9 --- handling missing values}.
 # import numpy with the socially accepted alias "np"
 >>> import numpy as np
 # import pandas with the socially acceptable alias "pd"
@@ -4358,7 +4364,7 @@ memory usage: 296.0+ bytes
 	}
 )
 
-# preview 
+# data view 
 >>> df
   item  price
 0    a  16.32
@@ -4378,17 +4384,13 @@ dtypes: float64(1), object(1)
 memory usage: 208.0+ bytes
 
 # approach 1 --- delete all cases where a missing value is present
-# --+ create df_, a new DataFrame with a sample of cases included in df  
->>> df_ = df.dropna()
-# --+ 
->>> print(df_)
+>>> df.dropna()
   item  price
 0    a  16.32
 1    b  16.78
 4    e  16.41
 
 # approach 2 --- replace missing values with a fixed value
-# --+ replace the missing values
 >>> df.fillna(value=16.99, inplace=False)
   item  price
 0    a  16.32
@@ -4397,7 +4399,7 @@ memory usage: 208.0+ bytes
 3    d  16.99
 4    e  16.41
 
-# approach 3 --- replace missing values with the mean of the column§
+# approach 3 --- replace missing values with the mean of the columns
 >>> df.fillna(value=np.mean(df["price"]), inplace=False)
   item      price
 0    a  16.320000
@@ -4406,19 +4408,20 @@ memory usage: 208.0+ bytes
 3    d  16.503333
 4    e  16.410000
 \end{pythoncode}
+\clearpage
 \section{Data Types and Pandas} 
 
 \begin{paracol}{2}
 	\question{\raggedright What are the data types admitted in a Pandas object?}
-	\note{Mainly, Pandas uses NumPy arrays as the concrete objects contained with a Index, Series, or DataFrame.}
+	\note{Mainly, Pandas uses NumPy arrays as the concrete objects contained with a Index, Series, or DataFrame. To recall the various NumPy dtypes, please refer to Sections \ref{sec:np_array}.}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright Can a Series contain multiple data types?}
-	\note{Yes, a Series can contain multiple data types (hence, a DataFrame can). In this sense, Pandas offers a more flexible data structure than NumPy arrays, which must contain objects of the same type. Snippet 6.6 shows that a list with mixed types is downgraded to a NumPy array with string objects. Instead, a Series preserves the type of each individual object (line 22 preserves it). }
+	\note{Yes, a Series can contain multiple data types (hence, a DataFrame can). In this sense, Pandas offers a more flexible data structure than NumPy arrays, which must contain objects of the same type. Snippet 6.10 shows that a list with mixed types is downgraded to a NumPy array with string objects. Instead, a Series preserves the type of each individual object (see line 22).}
 \end{paracol}
 
-\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.6 --- multiple data types in a Series}
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.10 --- multiple data types in a Series}
 # import numpy and pandas with the socially accepted alias 'np' and 'pd'
 >>> import numpy as np
 >>> import pandas as pd
@@ -4444,12 +4447,17 @@ memory usage: 208.0+ bytes
 -8.82
 \end{pythoncode}
 \clearpage
-
 \section{Handling `Time' Data in Pandas}
 
 \begin{paracol}{2}
-	\question{\raggedright }
-	\note{Pandas excels at handling time data, a key component of time series and panels. Specifically, Pandas has three kind of objects that can be used to strore and represent information on time-related quantities:
+	\question{\raggedright How good is Pandas at handling `time' data?}
+	\note{Pandas excels at handling time data, a key component of time series and panels.
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How many types of `time' data are supported in Pandas?}
+	\note{Pandas has three kind of objects that can be used to strore and represent information on time-related quantities:
 
 	\begin{itemize}
 		\item \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\textt{.Timestamp}}, the Pandas replacement for \href{https://docs.python.org/3/library/datetime.html}{Python's \texttt{Datatime}} object, represent a specific point in time 
@@ -4461,7 +4469,16 @@ memory usage: 208.0+ bytes
 	}
 \end{paracol}
 
-\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.7 --- Pandas Timestamp}
+\begin{paracol}{2}
+	\question{\raggedright \texttt{.Timestamp} and \texttt{.Timedelta} objects in action}
+	\note{Snippet 6.11 illustrates how to initialize and use \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\texttt{.Timestamp}} and \href{https://pandas.pydata.org/docs/reference/api/pandas.Timedelta.html}{\texttt{.Timedelta}} objects. The output of line 30 shows that the column \texttt{timestamp} has been parsed as a string. At this point, we cannot performn any operation on it (e.g., getting the time elapsed since an event). Hence, in line 43 we pass the values under the column \texttt{timestamp} to \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\texttt{.Timestamp}}. To apply the transformation column-wise, we draw on the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html}{\texttt{.apply()}} method, which takes a function as an argument. Specifically, we build our function using a \href{https://docs.python.org/3/tutorial/controlflow.html}{\texttt{lambda expression}} getting the \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\texttt{.Timestamp}} of an element \texttt{s} (that is, the individual values included in \texttt{timestamp}). The output of line 45 indicates that, after the transformation, the column \texttt{timestamp} contains \href{https://docs.python.org/3/library/datetime.html}{time quantities}.
+	
+	\quad The remainder of the snippet illustrates how to extract the individual attributes of a \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\texttt{.Timestamp}} object (see lines 58 - 68) and create a \href{https://pandas.pydata.org/docs/reference/api/pandas.Timedelta.html}{\texttt{.Timedelta}} object (see line 88).
+	}
+\end{paracol}
+\clearpage
+
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.11 --- working with Timestamp and Timedelta objects}
 # import pandas with the socially accepted alias 'pd'
 >>> import pandas as pd
 
@@ -4503,9 +4520,139 @@ Data columns (total 4 columns):
 dtypes: int64(1), object(3)
 memory usage: 224.0+ bytes
 
+# convert 'timestamp' from string to Timestemp type
+>>> df.loc[:, "timestamp"] = df["timestamp"].apply(lambda s: pd.Timestamp(s))
+# info shows that timestamp has datetime dtype  
+>>> df.info()
+Data columns (total 4 columns):
+     Column     Non-Null Count  Dtype         
+---  ------     --------------  -----         
+ 0   timestamp  3 non-null      datetime64[ns]
+ 1   product    3 non-null      object        
+ 2   reviewer   3 non-null      object        
+ 3   rating     3 non-null      int64         
+dtypes: datetime64[ns](1), int64(1), object(2)
+memory usage: 224.0+ bytes
+
+# extract the timestamp components and assign them to new columns
+# --+ year
+>>> df.loc[:, "year"] = df["timestamp"].dt.year
+# --+ month
+>>> df.loc[:, "month"] = df["timestamp"].dt.month
+# --+ day
+>>> df.loc[:, "day"] = df["timestamp"].dt.day
+# --+ hour
+>>> df.loc[:, "hour"] = df["timestamp"].dt.hour
+# --+ hour
+>>> df.loc[:, "minute"] = df["timestamp"].dt.minute
+# --+ second
+>>> df.loc[:, "second"] = df["timestamp"].dt.second
+# --+ data view
+            timestamp                    product reviewer  rating  year  \
+0 2017-10-08 12:03:05          Darth Vader plush  Sheldon       1  2017   
+1 2020-09-07 08:09:45  Obi-Wan Kenobi lightsaber  Sheldon       2  2020   
+2 2021-04-11 10:12:13               Yoda pijamas  Leonard       5  2021   
+
+   month  day  hour  minute  second  
+0     10    8    12       3       5  
+1      9    7     8       9      45  
+2      4   11    10      12      13 
+
+# calculate the time elapsed since the product launch and the review
+# --+ fake product launch timestamps 
+>>> df.loc[:, "launch"] = pd.to_datetime(
+	["2011-11-01 08:45:19", "2012-02-07 13:07:07", "2011-05-10 13:04:05"]
+	)
+# --+ get launch as a Timestamp object
+>>> df.loc[:, "launch"] = df["launch"].apply(lambda s: pd.Timestamp(s))
+# --+ here is a Timedelta object
+>>> df.loc[:, "deltat"] = df["timestamp"] - df["launch"]
+# --+ data view 
+            timestamp                    product reviewer  rating  year  \
+0 2017-10-08 12:03:05          Darth Vader plush  Sheldon       1  2017   
+1 2020-09-07 08:09:45  Obi-Wan Kenobi lightsaber  Sheldon       2  2020   
+2 2021-04-11 10:12:13               Yoda pijamas  Leonard       5  2021   
+
+   month  day  hour  minute  second              launch             deltat  
+0     10    8    12       3       5 2011-11-01 08:45:19 2168 days 03:17:46  
+1      9    7     8       9      45 2012-02-07 13:07:07 3134 days 19:02:38  
+2      4   11    10      12      13 2011-05-10 13:04:05 3623 days 21:08:08 
+# --+ data info 
+>>> df.info()
+Data columns (total 12 columns):
+     Column     Non-Null Count  Dtype          
+---  ------     --------------  -----          
+ 0   timestamp  3 non-null      datetime64[ns] 
+ 1   product    3 non-null      object         
+ 2   reviewer   3 non-null      object         
+ 3   rating     3 non-null      int64          
+ 4   year       3 non-null      int64          
+ 5   month      3 non-null      int64          
+ 6   day        3 non-null      int64          
+ 7   hour       3 non-null      int64          
+ 8   minute     3 non-null      int64          
+ 9   second     3 non-null      int64          
+ 10  launch     3 non-null      datetime64[ns] 
+ 11  deltat     3 non-null      timedelta64[ns]
+dtypes: datetime64[ns](2), int64(7), object(2), timedelta64[ns](1)
+memory usage: 416.0+ bytes
+
 \end{pythoncode}
 
+\begin{paracol}{2}
+	\question{\texttt{.Period} objects in action}
+	\note{\href{https://pandas.pydata.org/docs/reference/api/pandas.Period.html}{\texttt{.Period}} takes a string as input and returns an object of class \texttt{Period}, which has many attributes to establish the unit of time a timestamp falls on. For example, it is possible to assess a period's associated `day' (see Snippet 6.12, line 12), `day of the week' (line 16), `month' (line 20), `quarter' (line 24), or `week of the year' (line 28).
+	}
+\end{paracol}
+
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.12 --- working with Period objects}
+# import pandas with the socially acceptable alias pd
+>>> import pandas as pd
+
+# a timestamp as string 
+>>> s = "2011-11-01 23:17:01"
+
+# get a period object 
+>>> p = pd.Period(s, freq="s")
+
+# extract sampe information from p 
+# --+ calendar day
+>>> p.day
+1
+
+# --+ day of the week (Monday is 0)
+>>> p.dayofweek
+1 
+
+# --+ month 
+>>> p.month
+11
+
+# --+ quarter 
+>>> p.quarter
+4
+
+# --+ week of the year (ranginging from 0 to 59)
+>>> p.weekofyear
+4
+
+\end{pythoncode}
+\clearpage
+
 \section{Shaping and Reshaping DataFrames}
+
+\begin{paracol}{2}
+	\question{
+		\raggedright Wide Vs. long DataFrames
+		}
+	\note{
+		Oftentimes, we work with panel data, wherein a same statistical unit (e.g., an employer, a company, an administrative city) is observed repeatedly over time.
+	}
+\end{paracol}
+
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Shaping and Reshaping DataFrames}
+
+\end{pythoncode}
 
 \section{Group By Part I: Data Aggregation}
 

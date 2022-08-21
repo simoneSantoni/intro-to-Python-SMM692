@@ -1,0 +1,31 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially acceptable alias pd}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} a timestamp as string}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{s} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}2011\PYGZhy{}11\PYGZhy{}01 23:17:01\PYGZdq{}}
+
+\PYG{c+c1}{\PYGZsh{} get a period object}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{Period}\PYG{p}{(}\PYG{n}{s}\PYG{p}{,} \PYG{n}{freq}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}s\PYGZdq{}}\PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} extract sampe information from p}
+\PYG{c+c1}{\PYGZsh{} --+ calendar day}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{day}
+\PYG{l+m+mi}{1}
+
+\PYG{c+c1}{\PYGZsh{} --+ day of the week (Monday is 0)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{dayofweek}
+\PYG{l+m+mi}{1}
+
+\PYG{c+c1}{\PYGZsh{} --+ month}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{month}
+\PYG{l+m+mi}{11}
+
+\PYG{c+c1}{\PYGZsh{} --+ quarter}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{quarter}
+\PYG{l+m+mi}{4}
+
+\PYG{c+c1}{\PYGZsh{} --+ week of the year (ranginging from 0 to 59)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{p}\PYG{o}{.}\PYG{n}{weekofyear}
+\PYG{l+m+mi}{4}
+\end{Verbatim}

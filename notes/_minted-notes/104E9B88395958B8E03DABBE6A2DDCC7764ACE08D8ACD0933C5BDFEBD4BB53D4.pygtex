@@ -1,0 +1,119 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially accepted alias 'pd'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} fake product review data}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from}\PYGZbs{}\PYG{n}{\PYGZus{}dict}\PYG{p}{(}
+        \PYG{p}{\PYGZob{}}
+            \PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+                \PYG{l+s+s2}{\PYGZdq{}2017\PYGZhy{}10\PYGZhy{}08 12:03:05\PYGZdq{}}\PYG{p}{,}
+                \PYG{l+s+s2}{\PYGZdq{}2020\PYGZhy{}09\PYGZhy{}07 08:09:45\PYGZdq{}}\PYG{p}{,}
+                \PYG{l+s+s2}{\PYGZdq{}2021\PYGZhy{}04\PYGZhy{}11 10:12:13\PYGZdq{}}\PYG{p}{,}
+            \PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}
+		\PYG{l+s+s2}{\PYGZdq{}Darth Vader plush\PYGZdq{}}\PYG{p}{,}
+		\PYG{l+s+s2}{\PYGZdq{}Obi\PYGZhy{}Wan Kenobi lightsaber\PYGZdq{}}\PYG{p}{,}
+		\PYG{l+s+s2}{\PYGZdq{}Yoda pijamas\PYGZdq{}}
+       \PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}reviewer\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}Sheldon\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Sheldon\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}Leonard\PYGZdq{}}\PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}rating\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{],}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} data view}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{head}\PYG{p}{()}
+             \PYG{n}{timestamp}                    \PYG{n}{product} \PYG{n}{reviewer}  \PYG{n}{rating}
+\PYG{l+m+mi}{0}  \PYG{l+m+mi}{2017}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{08} \PYG{l+m+mi}{12}\PYG{p}{:}\PYG{l+m+mi}{03}\PYG{p}{:}\PYG{l+m+mi}{05}          \PYG{n}{Darth} \PYG{n}{Vader} \PYG{n}{plush}  \PYG{n}{Sheldon}       \PYG{l+m+mi}{1}
+\PYG{l+m+mi}{1}  \PYG{l+m+mi}{2020}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{09}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{07} \PYG{l+m+mi}{08}\PYG{p}{:}\PYG{l+m+mi}{09}\PYG{p}{:}\PYG{l+m+mi}{45}  \PYG{n}{Obi}\PYG{o}{\PYGZhy{}}\PYG{n}{Wan} \PYG{n}{Kenobi} \PYG{n}{lightsaber}  \PYG{n}{Sheldon}       \PYG{l+m+mi}{2}
+\PYG{l+m+mi}{2}  \PYG{l+m+mi}{2021}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{04}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{11} \PYG{l+m+mi}{10}\PYG{p}{:}\PYG{l+m+mi}{12}\PYG{p}{:}\PYG{l+m+mi}{13}               \PYG{n}{Yoda} \PYG{n}{pijamas}  \PYG{n}{Leonard}       \PYG{l+m+mi}{5}
+
+\PYG{c+c1}{\PYGZsh{} get basic info}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+\PYG{n}{RangeIndex}\PYG{p}{:} \PYG{l+m+mi}{3} \PYG{n}{entries}\PYG{p}{,} \PYG{l+m+mi}{0} \PYG{n}{to} \PYG{l+m+mi}{2}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{4} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}     \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}     \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{timestamp}  \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{1}   \PYG{n}{product}    \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{2}   \PYG{n}{reviewer}   \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{3}   \PYG{n}{rating}     \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{int64}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{224.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+
+\PYG{c+c1}{\PYGZsh{} convert 'timestamp' from string to Timestemp type}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{k}{lambda} \PYG{n}{s}\PYG{p}{:} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{Timestamp}\PYG{p}{(}\PYG{n}{s}\PYG{p}{))}
+\PYG{c+c1}{\PYGZsh{} info shows that timestamp has datetime dtype}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{4} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}     \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}     \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{timestamp}  \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{datetime64}\PYG{p}{[}\PYG{n}{ns}\PYG{p}{]}
+ \PYG{l+m+mi}{1}   \PYG{n}{product}    \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{2}   \PYG{n}{reviewer}   \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{3}   \PYG{n}{rating}     \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{datetime64}\PYG{p}{[}\PYG{n}{ns}\PYG{p}{](}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n}{int64}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{224.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+
+\PYG{c+c1}{\PYGZsh{} extract the timestamp components and assign them to new columns}
+\PYG{c+c1}{\PYGZsh{} --+ year}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}year\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{dt}\PYG{o}{.}\PYG{n}{year}
+\PYG{c+c1}{\PYGZsh{} --+ month}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}month\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{dt}\PYG{o}{.}\PYG{n}{month}
+\PYG{c+c1}{\PYGZsh{} --+ day}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}day\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{dt}\PYG{o}{.}\PYG{n}{day}
+\PYG{c+c1}{\PYGZsh{} --+ hour}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}hour\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{dt}\PYG{o}{.}\PYG{n}{hour}
+\PYG{c+c1}{\PYGZsh{} --+ hour}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}minute\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{dt}\PYG{o}{.}\PYG{n}{minute}
+\PYG{c+c1}{\PYGZsh{} --+ second}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}second\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{dt}\PYG{o}{.}\PYG{n}{second}
+\PYG{c+c1}{\PYGZsh{} --+ data view}
+            \PYG{n}{timestamp}                    \PYG{n}{product} \PYG{n}{reviewer}  \PYG{n}{rating}  \PYG{n}{year}  \PYGZbs{}
+\PYG{l+m+mi}{0} \PYG{l+m+mi}{2017}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{08} \PYG{l+m+mi}{12}\PYG{p}{:}\PYG{l+m+mi}{03}\PYG{p}{:}\PYG{l+m+mi}{05}          \PYG{n}{Darth} \PYG{n}{Vader} \PYG{n}{plush}  \PYG{n}{Sheldon}       \PYG{l+m+mi}{1}  \PYG{l+m+mi}{2017}
+\PYG{l+m+mi}{1} \PYG{l+m+mi}{2020}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{09}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{07} \PYG{l+m+mi}{08}\PYG{p}{:}\PYG{l+m+mi}{09}\PYG{p}{:}\PYG{l+m+mi}{45}  \PYG{n}{Obi}\PYG{o}{\PYGZhy{}}\PYG{n}{Wan} \PYG{n}{Kenobi} \PYG{n}{lightsaber}  \PYG{n}{Sheldon}       \PYG{l+m+mi}{2}  \PYG{l+m+mi}{2020}
+\PYG{l+m+mi}{2} \PYG{l+m+mi}{2021}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{04}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{11} \PYG{l+m+mi}{10}\PYG{p}{:}\PYG{l+m+mi}{12}\PYG{p}{:}\PYG{l+m+mi}{13}               \PYG{n}{Yoda} \PYG{n}{pijamas}  \PYG{n}{Leonard}       \PYG{l+m+mi}{5}  \PYG{l+m+mi}{2021}
+
+   \PYG{n}{month}  \PYG{n}{day}  \PYG{n}{hour}  \PYG{n}{minute}  \PYG{n}{second}
+\PYG{l+m+mi}{0}     \PYG{l+m+mi}{10}    \PYG{l+m+mi}{8}    \PYG{l+m+mi}{12}       \PYG{l+m+mi}{3}       \PYG{l+m+mi}{5}
+\PYG{l+m+mi}{1}      \PYG{l+m+mi}{9}    \PYG{l+m+mi}{7}     \PYG{l+m+mi}{8}       \PYG{l+m+mi}{9}      \PYG{l+m+mi}{45}
+\PYG{l+m+mi}{2}      \PYG{l+m+mi}{4}   \PYG{l+m+mi}{11}    \PYG{l+m+mi}{10}      \PYG{l+m+mi}{12}      \PYG{l+m+mi}{13}
+
+\PYG{c+c1}{\PYGZsh{} calculate the time elapsed since the product launch and the review}
+\PYG{c+c1}{\PYGZsh{} --+ fake product launch timestamps}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}launch\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{to\PYGZus{}datetime}\PYG{p}{(}
+	\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}2011\PYGZhy{}11\PYGZhy{}01 08:45:19\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}2012\PYGZhy{}02\PYGZhy{}07 13:07:07\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}2011\PYGZhy{}05\PYGZhy{}10 13:04:05\PYGZdq{}}\PYG{p}{]}
+	\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ get launch as a Timestamp object}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}launch\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}launch\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{k}{lambda} \PYG{n}{s}\PYG{p}{:} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{Timestamp}\PYG{p}{(}\PYG{n}{s}\PYG{p}{))}
+\PYG{c+c1}{\PYGZsh{} --+ here is a Timedelta object}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}deltat\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{]} \PYG{o}{\PYGZhy{}} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}launch\PYGZdq{}}\PYG{p}{]}
+\PYG{c+c1}{\PYGZsh{} --+ data view}
+            \PYG{n}{timestamp}                    \PYG{n}{product} \PYG{n}{reviewer}  \PYG{n}{rating}  \PYG{n}{year}  \PYGZbs{}
+\PYG{l+m+mi}{0} \PYG{l+m+mi}{2017}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{08} \PYG{l+m+mi}{12}\PYG{p}{:}\PYG{l+m+mi}{03}\PYG{p}{:}\PYG{l+m+mi}{05}          \PYG{n}{Darth} \PYG{n}{Vader} \PYG{n}{plush}  \PYG{n}{Sheldon}       \PYG{l+m+mi}{1}  \PYG{l+m+mi}{2017}
+\PYG{l+m+mi}{1} \PYG{l+m+mi}{2020}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{09}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{07} \PYG{l+m+mi}{08}\PYG{p}{:}\PYG{l+m+mi}{09}\PYG{p}{:}\PYG{l+m+mi}{45}  \PYG{n}{Obi}\PYG{o}{\PYGZhy{}}\PYG{n}{Wan} \PYG{n}{Kenobi} \PYG{n}{lightsaber}  \PYG{n}{Sheldon}       \PYG{l+m+mi}{2}  \PYG{l+m+mi}{2020}
+\PYG{l+m+mi}{2} \PYG{l+m+mi}{2021}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{04}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{11} \PYG{l+m+mi}{10}\PYG{p}{:}\PYG{l+m+mi}{12}\PYG{p}{:}\PYG{l+m+mi}{13}               \PYG{n}{Yoda} \PYG{n}{pijamas}  \PYG{n}{Leonard}       \PYG{l+m+mi}{5}  \PYG{l+m+mi}{2021}
+
+   \PYG{n}{month}  \PYG{n}{day}  \PYG{n}{hour}  \PYG{n}{minute}  \PYG{n}{second}              \PYG{n}{launch}             \PYG{n}{deltat}
+\PYG{l+m+mi}{0}     \PYG{l+m+mi}{10}    \PYG{l+m+mi}{8}    \PYG{l+m+mi}{12}       \PYG{l+m+mi}{3}       \PYG{l+m+mi}{5} \PYG{l+m+mi}{2011}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{11}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{01} \PYG{l+m+mi}{08}\PYG{p}{:}\PYG{l+m+mi}{45}\PYG{p}{:}\PYG{l+m+mi}{19} \PYG{l+m+mi}{2168} \PYG{n}{days} \PYG{l+m+mi}{03}\PYG{p}{:}\PYG{l+m+mi}{17}\PYG{p}{:}\PYG{l+m+mi}{46}
+\PYG{l+m+mi}{1}      \PYG{l+m+mi}{9}    \PYG{l+m+mi}{7}     \PYG{l+m+mi}{8}       \PYG{l+m+mi}{9}      \PYG{l+m+mi}{45} \PYG{l+m+mi}{2012}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{02}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{07} \PYG{l+m+mi}{13}\PYG{p}{:}\PYG{l+m+mi}{07}\PYG{p}{:}\PYG{l+m+mi}{07} \PYG{l+m+mi}{3134} \PYG{n}{days} \PYG{l+m+mi}{19}\PYG{p}{:}\PYG{l+m+mi}{02}\PYG{p}{:}\PYG{l+m+mi}{38}
+\PYG{l+m+mi}{2}      \PYG{l+m+mi}{4}   \PYG{l+m+mi}{11}    \PYG{l+m+mi}{10}      \PYG{l+m+mi}{12}      \PYG{l+m+mi}{13} \PYG{l+m+mi}{2011}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{05}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10} \PYG{l+m+mi}{13}\PYG{p}{:}\PYG{l+m+mi}{04}\PYG{p}{:}\PYG{l+m+mi}{05} \PYG{l+m+mi}{3623} \PYG{n}{days} \PYG{l+m+mi}{21}\PYG{p}{:}\PYG{l+m+mi}{08}\PYG{p}{:}\PYG{l+m+mi}{08}
+\PYG{c+c1}{\PYGZsh{} --+ data info}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{12} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}     \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}     \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{timestamp}  \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{datetime64}\PYG{p}{[}\PYG{n}{ns}\PYG{p}{]}
+ \PYG{l+m+mi}{1}   \PYG{n}{product}    \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{2}   \PYG{n}{reviewer}   \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{3}   \PYG{n}{rating}     \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+ \PYG{l+m+mi}{4}   \PYG{n}{year}       \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+ \PYG{l+m+mi}{5}   \PYG{n}{month}      \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+ \PYG{l+m+mi}{6}   \PYG{n}{day}        \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+ \PYG{l+m+mi}{7}   \PYG{n}{hour}       \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+ \PYG{l+m+mi}{8}   \PYG{n}{minute}     \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+ \PYG{l+m+mi}{9}   \PYG{n}{second}     \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+ \PYG{l+m+mi}{10}  \PYG{n}{launch}     \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{datetime64}\PYG{p}{[}\PYG{n}{ns}\PYG{p}{]}
+ \PYG{l+m+mi}{11}  \PYG{n}{deltat}     \PYG{l+m+mi}{3} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{timedelta64}\PYG{p}{[}\PYG{n}{ns}\PYG{p}{]}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{datetime64}\PYG{p}{[}\PYG{n}{ns}\PYG{p}{](}\PYG{l+m+mi}{2}\PYG{p}{),} \PYG{n}{int64}\PYG{p}{(}\PYG{l+m+mi}{7}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{),} \PYG{n}{timedelta64}\PYG{p}{[}\PYG{n}{ns}\PYG{p}{](}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{416.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+\end{Verbatim}
