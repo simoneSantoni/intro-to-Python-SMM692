@@ -38,14 +38,14 @@
 \contentsline {table}{\numberline {6.1}{\ignorespaces Creating a DataFrame from Data Loaded in the Python Session\relax }}{116}{table.caption.44}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{147}{table.caption.47}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{148}{table.caption.48}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{150}{table.caption.50}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{151}{table.caption.51}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{152}{table.caption.52}%
-\contentsline {table}{\numberline {A.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{153}{table.caption.53}%
-\contentsline {table}{\numberline {A.7}{\ignorespaces NumPy Array Manipulation Routines\relax }}{154}{table.caption.54}%
-\contentsline {table}{\numberline {A.8}{\ignorespaces Timestamp Objects: Functions, Methods, and Attributes\relax }}{156}{table.caption.57}%
-\contentsline {table}{\numberline {A.9}{\ignorespaces Timedelta Objects: Functions, Methods, and Attributes\relax }}{157}{table.caption.58}%
-\contentsline {table}{\numberline {A.10}{\ignorespaces Period Objects: Functions, Methods, and Attributes\relax }}{157}{table.caption.59}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{155}{table.caption.49}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{156}{table.caption.50}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{158}{table.caption.52}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{159}{table.caption.53}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{160}{table.caption.54}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{161}{table.caption.55}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces NumPy Array Manipulation Routines\relax }}{162}{table.caption.56}%
+\contentsline {table}{\numberline {A.8}{\ignorespaces Timestamp Objects: Functions, Methods, and Attributes\relax }}{164}{table.caption.59}%
+\contentsline {table}{\numberline {A.9}{\ignorespaces Timedelta Objects: Functions, Methods, and Attributes\relax }}{165}{table.caption.60}%
+\contentsline {table}{\numberline {A.10}{\ignorespaces Period Objects: Functions, Methods, and Attributes\relax }}{165}{table.caption.61}%
 \addvspace {10\p@ }

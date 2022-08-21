@@ -1,0 +1,56 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially accepted alias 'pd'}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} create a wide data frame}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}
+        \PYG{p}{\PYGZob{}}
+            \PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}a\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}b\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}c\PYGZdq{}}\PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}t0sales\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{0}\PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}t1sales\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{7}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{],}
+            \PYG{l+s+s2}{\PYGZdq{}t2sales\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{4}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{],}
+        \PYG{p}{\PYGZcb{}}
+    \PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} get a long data frame}
+\PYG{c+c1}{\PYGZsh{} --+ let us use the melt method}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{molten} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{melt}\PYG{p}{(}
+	\PYG{n}{frame} \PYG{o}{=} \PYG{n}{df}\PYG{p}{,} \PYG{n}{id\PYGZus{}vars}\PYG{o}{=}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{],} \PYG{n}{var\PYGZus{}name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}time\PYGZdq{}}\PYG{p}{,} \PYG{n}{value\PYGZus{}name}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}sales\PYGZdq{}}
+    \PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ the result is a long data frame}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{molten}
+  \PYG{n}{product}     \PYG{n}{time}  \PYG{n}{sales}
+\PYG{l+m+mi}{0}       \PYG{n}{a}  \PYG{n}{t0sales}     \PYG{l+m+mi}{10}
+\PYG{l+m+mi}{1}       \PYG{n}{b}  \PYG{n}{t0sales}      \PYG{l+m+mi}{5}
+\PYG{l+m+mi}{2}       \PYG{n}{c}  \PYG{n}{t0sales}      \PYG{l+m+mi}{0}
+\PYG{l+m+mi}{3}       \PYG{n}{a}  \PYG{n}{t1sales}      \PYG{l+m+mi}{7}
+\PYG{l+m+mi}{4}       \PYG{n}{b}  \PYG{n}{t1sales}      \PYG{l+m+mi}{6}
+\PYG{l+m+mi}{5}       \PYG{n}{c}  \PYG{n}{t1sales}      \PYG{l+m+mi}{5}
+\PYG{l+m+mi}{6}       \PYG{n}{a}  \PYG{n}{t2sales}      \PYG{l+m+mi}{4}
+\PYG{l+m+mi}{7}       \PYG{n}{b}  \PYG{n}{t2sales}      \PYG{l+m+mi}{6}
+\PYG{l+m+mi}{8}       \PYG{n}{c}  \PYG{n}{t2sales}      \PYG{l+m+mi}{9}
+\PYG{c+c1}{\PYGZsh{} --+ the time column is not clean, though. Let us clean it}
+\PYG{c+c1}{\PYGZsh{} ----+ get rid of non-numeric characters}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{molten}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}time\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{molten}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}time\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{str}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}t|sales\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ----+ convert the time column to an integer}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{molten}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}time\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{molten}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}time\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{astype}\PYG{p}{(}\PYG{n+nb}{int}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ----+ get info}
+\PYG{n}{Data} \PYG{n}{columns} \PYG{p}{(}\PYG{n}{total} \PYG{l+m+mi}{3} \PYG{n}{columns}\PYG{p}{):}
+     \PYG{n}{Column}   \PYG{n}{Non}\PYG{o}{\PYGZhy{}}\PYG{n}{Null} \PYG{n}{Count}  \PYG{n}{Dtype}
+\PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}   \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}  \PYG{o}{\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}\PYGZhy{}}
+ \PYG{l+m+mi}{0}   \PYG{n}{product}  \PYG{l+m+mi}{9} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n+nb}{object}
+ \PYG{l+m+mi}{1}   \PYG{n}{time}     \PYG{l+m+mi}{9} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+ \PYG{l+m+mi}{2}   \PYG{n}{sales}    \PYG{l+m+mi}{9} \PYG{n}{non}\PYG{o}{\PYGZhy{}}\PYG{n}{null}      \PYG{n}{int64}
+\PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{int64}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{344.0}\PYG{o}{+} \PYG{n+nb}{bytes}
+
+\PYG{c+c1}{\PYGZsh{} from long data to wide}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{wide} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{pivot\PYGZus{}table}\PYG{p}{(}
+	\PYG{n}{data} \PYG{o}{=} \PYG{n}{molten}\PYG{p}{,} \PYG{n}{index}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{,} \PYG{n}{columns}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}time\PYGZdq{}}\PYG{p}{,} \PYG{n}{values}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}sales\PYGZdq{}}
+    \PYG{p}{)}
+\PYG{n}{time}      \PYG{l+m+mi}{0}  \PYG{l+m+mi}{1}  \PYG{l+m+mi}{2}
+\PYG{n}{product}
+\PYG{n}{a}        \PYG{l+m+mi}{10}  \PYG{l+m+mi}{7}  \PYG{l+m+mi}{4}
+\PYG{n}{b}         \PYG{l+m+mi}{5}  \PYG{l+m+mi}{6}  \PYG{l+m+mi}{6}
+\PYG{n}{c}         \PYG{l+m+mi}{0}  \PYG{l+m+mi}{5}  \PYG{l+m+mi}{9}
+\end{Verbatim}

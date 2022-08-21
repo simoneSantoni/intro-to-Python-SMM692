@@ -42,15 +42,15 @@
 \contentsline {section}{\numberline {6.7}Data Types and Pandas}{135}{section.6.7}%
 \contentsline {section}{\numberline {6.8}Handling `Time' Data in Pandas}{136}{section.6.8}%
 \contentsline {section}{\numberline {6.9}Shaping and Reshaping DataFrames}{141}{section.6.9}%
-\contentsline {section}{\numberline {6.10}Group By Part I: Data Aggregation}{141}{section.6.10}%
-\contentsline {section}{\numberline {6.11}Group By Part II: Data Transformation}{141}{section.6.11}%
-\contentsline {section}{\numberline {6.12}Playing with Multiple DataFrames}{141}{section.6.12}%
-\contentsline {section}{\numberline {6.13}File Input and Output (IO) with Pandas}{141}{section.6.13}%
-\contentsline {chapter}{\numberline {7}Coda}{143}{chapter.7}%
-\contentsline {chapter}{Appendices}{}{section*.46}
-\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{147}{appendix.a.A}%
-\contentsline {section}{\numberline {A.1}Escapes}{147}{section.a.A.1}%
-\contentsline {section}{\numberline {A.2}String Methods}{148}{section.a.A.2}%
-\contentsline {section}{\numberline {A.3}NumPy Array Manipulation Routines}{150}{section.a.A.3}%
-\contentsline {section}{\numberline {A.4}Pandas Features for Handling Time-Related Data}{156}{section.a.A.4}%
-\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{159}{appendix.a.B}%
+\contentsline {section}{\numberline {6.10}Group By Part I: Data Aggregation}{145}{section.6.10}%
+\contentsline {section}{\numberline {6.11}Group By Part II: Data Transformation}{146}{section.6.11}%
+\contentsline {section}{\numberline {6.12}Playing with Multiple DataFrames}{147}{section.6.12}%
+\contentsline {section}{\numberline {6.13}File Input and Output (IO) with Pandas}{148}{section.6.13}%
+\contentsline {chapter}{\numberline {7}Coda}{151}{chapter.7}%
+\contentsline {chapter}{Appendices}{}{section*.48}
+\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{155}{appendix.a.A}%
+\contentsline {section}{\numberline {A.1}Escapes}{155}{section.a.A.1}%
+\contentsline {section}{\numberline {A.2}String Methods}{156}{section.a.A.2}%
+\contentsline {section}{\numberline {A.3}NumPy Array Manipulation Routines}{158}{section.a.A.3}%
+\contentsline {section}{\numberline {A.4}Pandas Features for Handling Time-Related Data}{164}{section.a.A.4}%
+\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{167}{appendix.a.B}%

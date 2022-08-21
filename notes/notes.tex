@@ -4643,28 +4643,235 @@ memory usage: 416.0+ bytes
 
 \begin{paracol}{2}
 	\question{
-		\raggedright Wide Vs. long DataFrames
-		}
+		\raggedright Panel data
+	}
 	\note{
-		Oftentimes, we work with panel data, wherein a same statistical unit (e.g., an employer, a company, an administrative city) is observed repeatedly over time.
+		Oftentimes, we work with panel data, wherein the same statistical unit (e.g., an employer, a company, an administrative city) is observed multiple times. An example is a security's price taken at different times of the day.
 	}
 \end{paracol}
 
+\begin{paracol}{2}
+	\question{
+		\raggedright Representing panel data: wide Vs. long data structures
+	}
+	\note{
+		Mainly, there are two approaches to repreent a panel dataset:
+
+		\begin{itemize}
+			\item the \textit{wide} data structure consists of creating one row per unit and as many columns as measurement occasions. Figure \ref{fig:wide_dataframe} provides a pictioral representation of the wide data structure
+			\item the \textit{long} data structure consists of creating pairs of measurement occasions and values that are nested within the same unit. In other words, the same unit is repeated across as many rows as measurement occasions. Figure \ref{fig:long_dataframe} provides a pictioral representation of the long data structure
+		\end{itemize}
+	}
+\end{paracol}
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		\textbf{Case} & \textbf{$p_{0}$} & \textbf{$p_{1}$} & \ldots & \textbf{$p_{i}$} & \ldots & \textbf{$p_{k}$} \\ \hline
+		\textbf{1}    & p_{1,0} & p_{1,1} & \ldots & p_{1,i} & \ldots & p_{1,k} \\
+		\textbf{2}    & p_{2,0} & p_{2,1} & \ldots & p_{2,i} & \ldots & p_{2,k} \\
+                \multicolumn{7}{c}{}\\
+		\textbf{j}    & p_{j,0} & p_{j,1} & \ldots & p_{j,i} & \ldots & p_{j,k} \\
+                \multicolumn{7}{c}{}\\
+		\textbf{n}    & p_{n,1} & p_{n,2} & \ldots & p_{n,j} & \ldots & p_{n,k} \\
+		\hline 
+	\end{tabular}
+	\caption{A stylized representation of a `wide' data structure}
+	\label{fig:wide_dataframe}
+\end{figure}
+
+\begin{paracol}{2}
+	\question{
+		\raggedright What are the pros and cons of a wide data structure?
+	}
+	\note{
+		\begin{itemize}
+			\item Pros:
+			\begin{itemize}
+				\item easier to work with for people coming from a spreadsheet environment
+				\item going through a row, one can make sense of the trend of a particular unit
+			\end{itemize}
+			\item Cons:
+			\begin{itemize}
+				\item the larger the number of measurement of occasions, the less readable the file, the larger the numeber of columns ($\rightarrow$ the more difficult to work with the data)
+				\item data manipulation activities must carry out column-by-column
+			\end{itemize}
+		\end{itemize}
+		}
+\end{paracol}
+
+
+\begin{paracol}{2}
+	\question{
+		\raggedright What are the pros and cons of a wide data structure?
+	}
+	\note{
+		\begin{itemize}
+			\item Pros:
+			\begin{itemize}
+				\item data manipulation activities are easier to carry out since there is only one column per case
+				\item it is easier to group and aggregate the data around cases
+			\end{itemize}
+			\item Cons:
+			\begin{itemize}
+				\item it is harder to inspect visually the data
+				\item this data strucuture is less familiar to people without information systems or programming background
+			\end{itemize}
+		\end{itemize}
+		}
+\end{paracol}
+
+\begin{figure}[!htbp]
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Case} & \textbf{Time} & \textbf{Value} \\ \hline
+		\textbf{1}    & 0 & p_{1,0}  \\
+		\textbf{1}    & 1 & p_{1,1}  \\
+ 		\textbf{1}    & 2 & p_{1,2}  \\
+		\ldots & \ldots & \ldots \\
+ 		\textbf{1}    & i & p_{1,i}  \\
+		\ldots & \ldots & \ldots \\
+ 		\textbf{1}    & k & p_{1,k}  \\ 
+		\textbf{2}    & 0 & p_{2,0}  \\
+		\textbf{2}    & 1 & p_{2,1}  \\
+ 		\textbf{2}    & 2 & p_{2,2}  \\
+		\ldots & \ldots & \ldots \\
+ 		\textbf{2}    & i & p_{2,i}  \\
+		\ldots & \ldots & \ldots \\
+ 		\textbf{2}    & k & p_{2,k}  \\ 
+		\multicolumn{3}{c}{}\\
+		\textbf{j}    & 0 & p_{j,0}  \\
+		\textbf{j}    & 1 & p_{j,1}  \\
+ 		\textbf{j}    & 2 & p_{j,2}  \\
+		\ldots & \ldots & \ldots \\
+ 		\textbf{j}    & i & p_{j,i}  \\
+		\ldots & \ldots & \ldots \\
+ 		\textbf{j}    & k & p_{j,k}  \\ 
+		\multicolumn{3}{c}{}\\
+		\textbf{n}    & 0 & p_{n,0}  \\
+		\textbf{n}    & 1 & p_{n,1}  \\
+ 		\textbf{n}    & 2 & p_{n,2}  \\
+		\ldots & \ldots & \ldots \\
+ 		\textbf{n}    & i & p_{n,i}  \\
+		\ldots & \ldots & \ldots \\
+ 		\textbf{n}    & k & p_{n,k}  \\ \hline
+	\end{tabular}
+	\caption{A stylized representation of a `long' data structure}
+	\label{fig:long_dataframe}
+\end{figure}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright How can I move from a wide to a long data structure or the other way around?}
+	\note{To get a long data stucture, one may want to use the Pandas function \href{https://pandas.pydata.org/docs/reference/api/pandas.melt.html?highlight=melt#pandas.melt}{\texttt{pd.melt()}}, and, to achieve a wide structure, the Pandas funtion \href{https://pandas.pydata.org/docs/reference/api/pandas.pivot.html?highlight=pivot#pandas.pivot}{\texttt{pd.pivot()}}.
+
+	\quad Per Snippet 6.13, typically we pass four inputs to \href{https://pandas.pydata.org/docs/reference/api/pandas.melt.html?highlight=melt#pandas.melt}{\texttt{pd.melt()}} (see line 16):
+	
+	\begin{itemize}
+		\item  \texttt{frame}: the source DataFrame to re-arrange 
+		\item  \texttt{id\_vars}: the column(s) that will be used to identify the cases
+		\item  \texttt{var\_name}: the name of the target DataFrame column that will contain the information regarding the measurement occasions (i.e. the time)
+		\item  \texttt{value\_name}: the name of the source DataFrame column contaning the values to re-arrange
+	\end{itemize}
+
+	\quad Snippet 6.13 shows also how to pass from a long to a wide data structure. In line 47, we pass the following inputs to \href{https://pandas.pydata.org/docs/reference/api/pandas.pivot.html?highlight=pivot#pandas.pivot}{\texttt{pd.pivot()}}:
+	
+	\begin{itemize}
+		\item \texttt{data}: the source DataFrame to re-arrange
+		\item \texttt{index}: the column(s) that will be used to identify the cases
+		\item \texttt{columns}: the name of the source DataFrame column(s) whose categories will be used to create the columns of the target DataFrame
+		\item \texttt{values}: the name of the source DataFrame column contaning the values to re-arrange
+	\end{itemize}
+	}
+\end{paracol}
+
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.13 --- from wide data to long and back}
+# import pandas with the socially accepted alias 'pd'
+>>> import pandas as pd
+
+# create a wide data frame
+>>> df = pd.DataFrame.from_dict(
+        {
+            "product": ["a", "b", "c"],
+            "t0sales": [10, 5, 0],
+            "t1sales": [7, 6, 5],
+            "t2sales": [4, 6, 9],
+        }
+    )
+
+# get a long data frame
+# --+ let us use the melt method 
+>>> molten = pd.melt(
+	frame = df, id_vars=["product"], var_name="time", value_name="sales"
+    )
+# --+ the result is a long data frame
+>>> molten
+  product     time  sales
+0       a  t0sales     10
+1       b  t0sales      5
+2       c  t0sales      0
+3       a  t1sales      7
+4       b  t1sales      6
+5       c  t1sales      5
+6       a  t2sales      4
+7       b  t2sales      6
+8       c  t2sales      9
+# --+ the time column is not clean, though. Let us clean it
+# ----+ get rid of non-numeric characters
+>>> molten.loc[:, "time"] = molten["time"].str.replace("t|sales", "")
+# ----+ convert the time column to an integer
+>>> molten.loc[:, "time"] = molten["time"].astype(int)
+# ----+ get info
+Data columns (total 3 columns):
+     Column   Non-Null Count  Dtype 
+---  ------   --------------  ----- 
+ 0   product  9 non-null      object
+ 1   time     9 non-null      int64 
+ 2   sales    9 non-null      int64 
+dtypes: int64(2), object(1)
+memory usage: 344.0+ bytes
+
+# from long data to wide 
+>>> wide = pd.pivot_table(
+	data = molten, index="product", columns="time", values="sales"
+    )
+time      0  1  2
+product          
+a        10  7  4
+b         5  6  6
+c         0  5  9
+\end{pythoncode}
+\clearpage
+\section{Group By Part I: Data Aggregation}
+
+...
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Shaping and Reshaping DataFrames}
+
+\end{pythoncode}
+\clearpage
+\section{Group By Part II: Data Transformation}
+
+...
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Shaping and Reshaping DataFrames}
+
+\end{pythoncode}
+\clearpage
+\section{Playing with Multiple DataFrames}
+
+...
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Shaping and Reshaping DataFrames}
+
+\end{pythoncode}
+\clearpage
+\section{File Input and Output (IO) with Pandas}
+\label{sec:pandas_io}
 \begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Shaping and Reshaping DataFrames}
 
 \end{pythoncode}
 
-\section{Group By Part I: Data Aggregation}
-
-
-\section{Group By Part II: Data Transformation}
-
-
-\section{Playing with Multiple DataFrames}
-
-\section{File Input and Output (IO) with Pandas}
-\label{sec:pandas_io}
-
+\clearpage
 \theendnotes
 
 \chapter{Coda}
