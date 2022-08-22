@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially accepted alias pd}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} concatenate along the first axis (axis = 0)}
+\PYG{c+c1}{\PYGZsh{} --+ the data frames}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df0} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}
+	\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}quarter\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}first\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}second\PYGZdq{}}\PYG{p}{],} \PYG{l+s+s2}{\PYGZdq{}sales\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{30}\PYG{p}{]\PYGZcb{}}
+    \PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df1} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}
+	\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}quarter\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}third\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}fourth\PYGZdq{}}\PYG{p}{],} \PYG{l+s+s2}{\PYGZdq{}sales\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{40}\PYG{p}{]\PYGZcb{}}
+    \PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ set the indices to match the data frames}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df0}\PYG{o}{.}\PYG{n}{set\PYGZus{}index}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}quarter\PYGZdq{}}\PYG{p}{,} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df1}\PYG{o}{.}\PYG{n}{set\PYGZus{}index}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}quarter\PYGZdq{}}\PYG{p}{,} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ concatenate the data frames}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{concat}\PYG{p}{([}\PYG{n}{df0}\PYG{p}{,} \PYG{n}{df1}\PYG{p}{],} \PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{0}\PYG{p}{)}
+         \PYG{n}{sales}
+\PYG{n}{quarter}
+\PYG{n}{first}       \PYG{l+m+mi}{10}
+\PYG{n}{second}      \PYG{l+m+mi}{30}
+\PYG{n}{third}       \PYG{l+m+mi}{10}
+\PYG{n}{fourth}      \PYG{l+m+mi}{40}
+
+\PYG{c+c1}{\PYGZsh{} concatenate along the second axis (axis = 1)}
+\PYG{c+c1}{\PYGZsh{} --+ the data frames}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df0} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}
+	\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{],} \PYG{l+s+s2}{\PYGZdq{}sales\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{30}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{]\PYGZcb{}}
+    \PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df1} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}
+	\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{],} \PYG{l+s+s2}{\PYGZdq{}units\PYGZus{}sold\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{6}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]\PYGZcb{}}
+    \PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ set the indices to match the data frames}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df0}\PYG{o}{.}\PYG{n}{set\PYGZus{}index}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{,} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df1}\PYG{o}{.}\PYG{n}{set\PYGZus{}index}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{,} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} --+ the concatenated data frame}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{concat}\PYG{p}{([}\PYG{n}{df0}\PYG{p}{,} \PYG{n}{df1}\PYG{p}{],} \PYG{n}{axis}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+         \PYG{n}{sales}  \PYG{n}{units\PYGZus{}sold}
+\PYG{n}{product}
+\PYG{l+m+mi}{1}           \PYG{l+m+mi}{10}           \PYG{l+m+mi}{3}
+\PYG{l+m+mi}{2}           \PYG{l+m+mi}{30}           \PYG{l+m+mi}{6}
+\PYG{l+m+mi}{3}           \PYG{l+m+mi}{20}           \PYG{l+m+mi}{2}
+\end{Verbatim}

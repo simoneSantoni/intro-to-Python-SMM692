@@ -6,6 +6,8 @@
 %% ========================= Essential packages ===========================
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{fontawesome}
+\newcommand{\seticon}[1]{\textcolor{black}{\csname #1\endcsname}}
 \usepackage[utf8]{inputenc}
 \usepackage[margin=2cm]{geometry}
 %\usepackage{color}
@@ -130,8 +132,24 @@ allcolors=tri_2,
 % title
 \title{%
         \begin{tcolorbox}[before skip = \baselineskip, after skip =-\baselineskip]
-            \centering\Huge\sffamily SMM692\\ Introduction to Programming in Python 
+            \centering\Huge\sffamily SMM692\\ Introduction to Programming in Python
+	    \footnote{These notes were type-setted in \LaTeX using the Cornell Notes Template} 
         \end{tcolorbox}
+
+	\vspace{5em}
+
+	\sffamily
+	Dr. Simone Santoni\\ 
+	Senior Lecturer in Strategy --- Bayes Business School\\
+	\seticon{faAt} simone.santoni.1@city.ac.uk\\
+	\seticon{faMapMarker}  106 Bunhill Row, London, EC1Y 8TZ\\
+	\seticon{faPhone} +44 (0)20 7040 0057\\
+
+	\vspace{5em}
+
+	\normalsize Version 1.0\\ 
+	(last edit, August 21$^{st}$ 2022)
+
 }
 
 % ============================ Document attrs ==============================
@@ -156,9 +174,20 @@ allcolors=tri_2,
 \clearpage
 
 \chapter*{Preface}
-\addcontentsline{toc}{chapter}{Preface}
 
-$\ldots$
+These notes condense more  than ten years of experience I developed using Python for industrial applications and research. At the same time, I tried to incorporate the feedback I collected from four different cohorts of Bayes MSc students, who I taught an introductory module on Python and other subjects that rely heavily on Python, such as network science, data visualization, and Natural Language Processing. 
+
+\quad I prepared these notes with two design principles in mind. First, the notes should have mimicked a conversation between a person interested in learning Python and a knowledge recipient (a robot or a human being, it does not matter really!).  The \href{https://en.wikipedia.org/wiki/Cornell_Notes}{Cornell Notes Template} helped me to highlight the questions, reported on the left-hand side of the page as blue boxes, and the answers, displayed on the right-hand side of the page.
+
+\quad Second, I designed the notes to be as practical as possible. For this reason, knowledge recipient's answer supported by a snippet of Python code. In total, there are 76 snippets the learner may want to scrutinize, reason with, run, and modify.
+
+\quad What to say? Have fun!
+
+\vspace{2em}
+
+---Simone Santoni
+
+\addcontentsline{toc}{chapter}{Preface}
 
 \chapter{Organization of the Module}
 
@@ -4923,7 +4952,6 @@ c         14  4.666667
 \clearpage
 \section{Group By Part II: Data Transformation}
 \label{sec:groupby_transform}
-...
 
 \begin{paracol}{2}
 	\question{\raggedright Aggregate Vs. transform}
@@ -4933,7 +4961,7 @@ c         14  4.666667
 	}
 \end{paracol}
 
-\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily --- data transformation with groupby}
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.15 --- data transformation with groupby}
 # import the pandas library with the socially accepted alias 'pd'
 >>> import pandas as pd
 
@@ -4952,7 +4980,7 @@ c         14  4.666667
 0       a      0     10
 1       b      0      5
 2       c      0      0
-3       a      1      
+3       a      1      7
 4       b      1      6
 5       c      1      5
 6       a      2      4
@@ -4991,38 +5019,246 @@ c         14  4.666667
 8       c      2      9                14
 \end{pythoncode}
 \clearpage
-\section{Playing with Multiple DataFrames}
+\section{Working with Multiple DataFrames}
 
 \begin{paracol}{2}
-	\question{\raggedright }
-	\note{
+	\question{\raggedright My data cut across data tables: how can I combine multiple them into a single DataFrame?}
+	\note{Oftentimes, the information we want to analyze is spread across different data tables. In this case, we must combine multiple DataFrame objects. Mainly, there are two approaches to data combination:
 		\begin{itemize}
-			\item Concatenate 
-			\item Merge 
+			\item Concatenate consists of stacking two or more data frames (either on the first axis or on the second axis)
+			\item Merge consists of joining two or more data frames on a common set of keys 
 		\end{itemize}
 	}
 \end{paracol}
 
-\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.17 --- concatenate}
-# 
-\end{pythoncode}
+\begin{paracol}{2}
+	\question{\raggedright How do I concatenate two DataFrame objects in Pandas?}
+	\note{The \href{https://pandas.pydata.org/docs/reference/api/pandas.concat.html?highlight=concat#pandas.concat}{\texttt{.concat()}} method is used to concatenate two or more data frames. The method takes an array of DataFrames as input and returns a new data frame with the rows or columns from all the input data frames.
+	
+	\quad In Snippet 6.15, we carry out the following:
+	
+	\begin{itemize}
+		\item We concatenate two DataFrame objects along the first axis (column-wise)
+		\item We concatenate two DataFrame objects along the second axis (row-wise
+	\end{itemize}
+	
+	\quad concatenate two data frames. The first data frame contains sales data for the first quarter of the year; the second data frame contains the data for the second quarter of the year.
+	}
+\end{paracol}
 
-\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.18 --- merge}
-#
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.16 --- concatenating two DataFrame objects}
+# import pandas with the socially accepted alias pd
+>>> import pandas as pd
+
+# concatenate along the first axis (axis = 0)
+# --+ the data frames 
+>>> df0 = pd.DataFrame.from_dict(
+	{"quarter": ["first", "second"], "sales": [10, 30]}
+    )
+>>> df1 = pd.DataFrame.from_dict(
+	{"quarter": ["third", "fourth"], "sales": [10, 40]}
+    )
+# --+ set the indices to match the data frames
+>>> df0.set_index("quarter", inplace=True)
+>>> df1.set_index("quarter", inplace=True)
+# --+ concatenate the data frames
+>>> pd.concat([df0, df1], axis=0)
+         sales
+quarter       
+first       10
+second      30
+third       10
+fourth      40
+
+# concatenate along the second axis (axis = 1) 
+# --+ the data frames
+>>> df0 = pd.DataFrame.from_dict(
+	{"product": [1, 2, 3], "sales": [10, 30, 20]}
+    )
+>>> df1 = pd.DataFrame.from_dict(
+	{"product": [1, 2, 3], "units_sold": [3, 6, 2]}
+    )
+# --+ set the indices to match the data frames
+>>> df0.set_index("product", inplace=True)
+>>> df1.set_index("product", inplace=True)
+# --+ the concatenated data frame
+>>> pd.concat([df0, df1], axis=1)
+         sales  units_sold
+product                   
+1           10           3
+2           30           6
+3           20           2
+
 \end{pythoncode}
 \clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright How do I merge two DataFrame objects in Pandas?}
+	\note{The \href{https://pandas.pydata.org/docs/reference/api/pandas.merge.html?highlight=merge#pandas.merge}{\texttt{.merge()}} method is used to merge two or more data frames. The method takes the following inputs:
+	
+	\begin{itemize}
+		\item \texttt{left} and \texttt{right} are the DataFrae objects to be merged
+		\item \texttt{on} is the column/list of columns on which the merge is to be performed
+		\item \texttt{how} is the type of merge to be performed
+		\begin{itemize}
+			\item \texttt{how="left"} --- all cases from the left DataFrame are preserved irrespective of the fact they are present in the right DataFrame
+			\item \texttt{how="right"} --- all cases from the right DataFrame are preserved irrespective of the fact they are present in the left DataFrame
+			\item \texttt{how = "inner"} --- only the cases that are present in both the left and right DataFrame are preserved
+			\item \texttt{how = "outer"} --- all cases from the left and right DataFrame are preserved irrespective of the fact they are present in the left or right DataFrame
+		\end{itemize}
+		\item optionally, one may want to set the parameters \texttt{left\_index} and \texttt{right\_index} to \texttt{True} in order to perform the merge on the indices of the DataFrames (default is \texttt{False}.)
+	\end{itemize}
+	}
+\end{paracol}
+
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Shaping and Reshaping DataFrames}
+# import pandas with the socially accepted alias pd
+>>> import pandas as pd
+
+# the data frames
+>>> df0 = pd.DataFrame.from_dict(
+	{"product": [1, 2, 3], "sales": [10, 30, 20]}
+    )
+>>> df1 = pd.DataFrame.from_dict(
+	{"product": [2, 3, 4], "margin": [0.13, 0.31, 0.21]}
+    )
+
+# merge the data frames
+# --+ keep all the cases from the left data frame
+>>> pd.merge(df0, df1, on="propduct", how="left")
+   product  sales  margin
+0        1     10     NaN
+1        2     30    0.13
+2        3     20    0.31
+# --+ keep all the cases from the right data frame
+>>> pd.merge(df0, df1, on="propduct", how="right")
+   product  sales  margin
+0        2   30.0    0.13
+1        3   20.0    0.31
+2        4    NaN    0.21
+# --+ keep all cases 
+>>> pd.merge(df0, df1, on="propduct", how="outer")
+   product  sales  margin
+0        1   10.0     NaN
+1        2   30.0    0.13
+2        3   20.0    0.31
+3        4    NaN    0.21
+# --+ keep the cases that are present in both data frames 
+>>> pd.merge(df0, df1, on="propduct", how="inner")
+   product  sales  margin
+0        2     30    0.13
+1        3     20    0.31
+# ---+ merge using the indices
+# ----+ set the indices
+>>> df0.set_index("product", inplace=True)
+>>> df1.set_index("product", inplace=True)
+# ----+ merge the data frames
+>>> pd.merge(df0, df1, left_index=True, right_index=True)
+         sales  margin
+product               
+2           30    0.13
+3           20    0.31
+\end{pythoncode}
+\clearpage
+
 \section{File Input and Output (IO) with Pandas}
 \label{sec:pandas_io}
-\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Shaping and Reshaping DataFrames}
 
-\end{pythoncode}
+\begin{paracol}{2}
+	\question{\raggedright What type of data formats can I read/write with Pandas}
+	\note{There are plenty of options, including proprietary statistical languages such as SAS, SPSS, and Stata,  Python's pickles, tabular data in CSV or TSV format, as well as data format widely adopted in online data sources, such as HTML, XML, and JSON. Table \ref{tab:io_pickles}, \ref{tab:io_excel}, \ref{tab:io_json}, \ref{tab:io_flat} illustrate some of the most popular IO utilities.\footnote{For the complete list of Pandas IO routines, please refer to \url{https://pandas.pydata.org/docs/reference/io.html}.}
+	}
+\end{paracol}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{Routines for Reading and Writing Data with Pandas: Pickles}
+	\label{tab:io_pickles}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{pd.read\_pickle(filepath\_or\_buffer[, ...])} & Load pickled pandas object (or any object) from file\\
+			\texttt{df.to\_pickle(path[, compression, ...])} & Pickle (serialize) object to file\\ 
+			\bottomrule \\[-1.8ex]
+		    \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume Pandas is loaded with the \texttt{pd} alias and there is a DataFrame loaded with name \texttt{df}.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{Routines for Reading and Writing Data with Pandas: Excel Spreadsheets}
+	\label{tab:io_excel}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{pd.read\_excel(io[, sheet\_name, header, names, ...])} & \\ 
+                        Read an Excel file into a pandas DataFrame.
+                        \texttt{df.to\_excel(excel\_writer[, ...])} & 
+                        Write object to an Excel sheet\\
+                        \texttt{pd.ExcelFile.parse([sheet\_name, header, names, ...])} & 
+                        Parse specified sheet(s) into a DataFrame\\
+                        \texttt{df.Styler.to\_excel(excel\_writer[, sheet\_name, ...])} & 
+                        Write Styler to an Excel sheet\\
+                        \texttt{df.ExcelWriter(path[, engine, date\_format, ...])} & 
+                        Class for writing DataFrame objects into excel sheets\\
+			\bottomrule \\[-1.8ex]
+		    \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume Pandas is loaded with the \texttt{pd} alias and there is a DataFrame loaded with name \texttt{df}.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{Routines for Reading and Writing Data with Pandas: JSON Files}
+	\label{tab:io_json}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{pd.read\_json([path\_or\_buf, orient, typ, dtype, ...])} &
+                        Convert a JSON string to pandas object\\
+                        \texttt{pd.json\_normalize(data[, record\_path, meta, ...])} &
+                        Normalize semi-structured JSON data into a flat table\\
+                        \texttt{df.to\_json([path\_or\_buf, orient, ...])} &
+                        Convert the object to a JSON string\\
+                        \texttt{df.build\_table\_schema(data[, index, ...])} & 
+                        Create a Table schema from data\\
+			\bottomrule \\[-1.8ex]
+		    \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume Pandas is loaded with the \texttt{pd} alias and there is a DataFrame loaded with name \texttt{df}.} \\
+	\end{tabular}
+\end{sidewaystable}
+
+\begin{sidewaystable}[!htbp]
+	\centering
+	\caption{Routines for Reading and Writing Data with Pandas: Flat Files}
+	\label{tab:io_flat}
+	\begin{tabular}{lp{12cm}}
+		\toprule \toprule
+			Routine & Synopsis \\
+			\midrule
+			\texttt{pd.read\_table(filepath\_or\_buffer[, sep, ...])} & 
+			Read general delimited file into DataFrame\\
+			\texttt{pd.read\_csv(filepath\_or\_buffer[, sep, ...])} &
+                        Read a comma-separated values (csv) file into DataFrame\\
+			\texttt{df.to\_csv([path\_or\_buf, sep, na\_rep, ...])} & 
+			Write object to a comma-separated values (csv) file\\ 
+			\texttt{pd.read\_fwf(filepath\_or\_buffer[, colspecs, ...])} &
+			Read a table of fixed-width formatted lines into DataFrame\\
+			\bottomrule \\[-1.8ex]
+		    \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume Pandas is loaded with the \texttt{pd} alias and there is a DataFrame loaded with name \texttt{df}.} \\
+	\end{tabular}
+\end{sidewaystable}
 
 \clearpage
+
 \theendnotes
 
 \chapter{Coda}
-\ldots
 
+In terms of \textit{scope}, these notes face emphasized the application of the Python Pogramming Language to `data science' tasks. Particularly, we went through through the basics of the language and considered two core modules such as NumPy --- focusing on technical and scientific computation --- and Pandas --- the \textit{de facto} industry standard for data management.
+
+\quad In terms of \textit{process}, learning the Python programming language takes months if not years. However, it is possible to acquire a minimum understanding of Python in a few weeks. To do that, you should resist the temptation to surf the web searching for the ultimate Python tutorial or off-the-shelf snippets that address your coding issues. Instead, you may want to spend time reading and digesting these notes off-line, paying particular attention to the various snippets I have provided. Why? Two arguments. First, learning a programming language requires to scrutinize and reason with coding snippets. Borrowing others' solution help to solve a problem but does not facilitate learning. Second, efficiency: the snippets have been selected to address the most common coding problems encountered in four previous cohorts ot Bayes Business Analytics MSc. Students. So, focus on what we have learned and do not waste time on material that is not relevant to proficiently attend the various Python-based modules included in the Business Analytics MSc. If you are a programming newbie, there will be times when you will find yourself asking questions such as: ``What is the best way to do this?'' or ``How can I do this in Python.'' Do not get frustrated --- that is an integral part of the learning process!! Instead, keep calm and reach out to the lecturer and the fellow students to share your thoughts and clarify your doubts.
 \clearpage
 
 \begin{appendices}

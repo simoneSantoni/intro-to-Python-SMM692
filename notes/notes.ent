@@ -157,3 +157,18 @@ or
 Jupyter
 sessions.
 \@endanenote 
+\@doanenote {20}
+macro:->For
+the
+complete
+list
+of
+Pandas
+IO
+routines,
+please
+refer
+to
+\url
+{https://pandas.pydata.org/docs/reference/io.html}.
+\@endanenote 

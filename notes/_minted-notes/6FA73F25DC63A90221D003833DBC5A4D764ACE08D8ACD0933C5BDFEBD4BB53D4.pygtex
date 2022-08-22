@@ -1,0 +1,48 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} import pandas with the socially accepted alias pd}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{import} \PYG{n+nn}{pandas} \PYG{k}{as} \PYG{n+nn}{pd}
+
+\PYG{c+c1}{\PYGZsh{} the data frames}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df0} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}
+	\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{],} \PYG{l+s+s2}{\PYGZdq{}sales\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{30}\PYG{p}{,} \PYG{l+m+mi}{20}\PYG{p}{]\PYGZcb{}}
+    \PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df1} \PYG{o}{=} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{DataFrame}\PYG{o}{.}\PYG{n}{from\PYGZus{}dict}\PYG{p}{(}
+	\PYG{p}{\PYGZob{}}\PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{4}\PYG{p}{],} \PYG{l+s+s2}{\PYGZdq{}margin\PYGZdq{}}\PYG{p}{:} \PYG{p}{[}\PYG{l+m+mf}{0.13}\PYG{p}{,} \PYG{l+m+mf}{0.31}\PYG{p}{,} \PYG{l+m+mf}{0.21}\PYG{p}{]\PYGZcb{}}
+    \PYG{p}{)}
+
+\PYG{c+c1}{\PYGZsh{} merge the data frames}
+\PYG{c+c1}{\PYGZsh{} --+ keep all the cases from the left data frame}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{merge}\PYG{p}{(}\PYG{n}{df0}\PYG{p}{,} \PYG{n}{df1}\PYG{p}{,} \PYG{n}{on}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}propduct\PYGZdq{}}\PYG{p}{,} \PYG{n}{how}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}left\PYGZdq{}}\PYG{p}{)}
+   \PYG{n}{product}  \PYG{n}{sales}  \PYG{n}{margin}
+\PYG{l+m+mi}{0}        \PYG{l+m+mi}{1}     \PYG{l+m+mi}{10}     \PYG{n}{NaN}
+\PYG{l+m+mi}{1}        \PYG{l+m+mi}{2}     \PYG{l+m+mi}{30}    \PYG{l+m+mf}{0.13}
+\PYG{l+m+mi}{2}        \PYG{l+m+mi}{3}     \PYG{l+m+mi}{20}    \PYG{l+m+mf}{0.31}
+\PYG{c+c1}{\PYGZsh{} --+ keep all the cases from the right data frame}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{merge}\PYG{p}{(}\PYG{n}{df0}\PYG{p}{,} \PYG{n}{df1}\PYG{p}{,} \PYG{n}{on}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}propduct\PYGZdq{}}\PYG{p}{,} \PYG{n}{how}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}right\PYGZdq{}}\PYG{p}{)}
+   \PYG{n}{product}  \PYG{n}{sales}  \PYG{n}{margin}
+\PYG{l+m+mi}{0}        \PYG{l+m+mi}{2}   \PYG{l+m+mf}{30.0}    \PYG{l+m+mf}{0.13}
+\PYG{l+m+mi}{1}        \PYG{l+m+mi}{3}   \PYG{l+m+mf}{20.0}    \PYG{l+m+mf}{0.31}
+\PYG{l+m+mi}{2}        \PYG{l+m+mi}{4}    \PYG{n}{NaN}    \PYG{l+m+mf}{0.21}
+\PYG{c+c1}{\PYGZsh{} --+ keep all cases}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{merge}\PYG{p}{(}\PYG{n}{df0}\PYG{p}{,} \PYG{n}{df1}\PYG{p}{,} \PYG{n}{on}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}propduct\PYGZdq{}}\PYG{p}{,} \PYG{n}{how}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}outer\PYGZdq{}}\PYG{p}{)}
+   \PYG{n}{product}  \PYG{n}{sales}  \PYG{n}{margin}
+\PYG{l+m+mi}{0}        \PYG{l+m+mi}{1}   \PYG{l+m+mf}{10.0}     \PYG{n}{NaN}
+\PYG{l+m+mi}{1}        \PYG{l+m+mi}{2}   \PYG{l+m+mf}{30.0}    \PYG{l+m+mf}{0.13}
+\PYG{l+m+mi}{2}        \PYG{l+m+mi}{3}   \PYG{l+m+mf}{20.0}    \PYG{l+m+mf}{0.31}
+\PYG{l+m+mi}{3}        \PYG{l+m+mi}{4}    \PYG{n}{NaN}    \PYG{l+m+mf}{0.21}
+\PYG{c+c1}{\PYGZsh{} --+ keep the cases that are present in both data frames}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{merge}\PYG{p}{(}\PYG{n}{df0}\PYG{p}{,} \PYG{n}{df1}\PYG{p}{,} \PYG{n}{on}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}propduct\PYGZdq{}}\PYG{p}{,} \PYG{n}{how}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}inner\PYGZdq{}}\PYG{p}{)}
+   \PYG{n}{product}  \PYG{n}{sales}  \PYG{n}{margin}
+\PYG{l+m+mi}{0}        \PYG{l+m+mi}{2}     \PYG{l+m+mi}{30}    \PYG{l+m+mf}{0.13}
+\PYG{l+m+mi}{1}        \PYG{l+m+mi}{3}     \PYG{l+m+mi}{20}    \PYG{l+m+mf}{0.31}
+\PYG{c+c1}{\PYGZsh{} ---+ merge using the indices}
+\PYG{c+c1}{\PYGZsh{} ----+ set the indices}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df0}\PYG{o}{.}\PYG{n}{set\PYGZus{}index}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{,} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df1}\PYG{o}{.}\PYG{n}{set\PYGZus{}index}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}product\PYGZdq{}}\PYG{p}{,} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} ----+ merge the data frames}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{merge}\PYG{p}{(}\PYG{n}{df0}\PYG{p}{,} \PYG{n}{df1}\PYG{p}{,} \PYG{n}{left\PYGZus{}index}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{right\PYGZus{}index}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+         \PYG{n}{sales}  \PYG{n}{margin}
+\PYG{n}{product}
+\PYG{l+m+mi}{2}           \PYG{l+m+mi}{30}    \PYG{l+m+mf}{0.13}
+\PYG{l+m+mi}{3}           \PYG{l+m+mi}{20}    \PYG{l+m+mf}{0.31}
+\end{Verbatim}

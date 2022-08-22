@@ -44,13 +44,13 @@
 \contentsline {section}{\numberline {6.9}Shaping and Reshaping DataFrames}{141}{section.6.9}%
 \contentsline {section}{\numberline {6.10}Group By Part I: Data Aggregation}{145}{section.6.10}%
 \contentsline {section}{\numberline {6.11}Group By Part II: Data Transformation}{147}{section.6.11}%
-\contentsline {section}{\numberline {6.12}Playing with Multiple DataFrames}{149}{section.6.12}%
-\contentsline {section}{\numberline {6.13}File Input and Output (IO) with Pandas}{150}{section.6.13}%
-\contentsline {chapter}{\numberline {7}Coda}{153}{chapter.7}%
-\contentsline {chapter}{Appendices}{}{section*.48}
-\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{157}{appendix.a.A}%
-\contentsline {section}{\numberline {A.1}Escapes}{157}{section.a.A.1}%
-\contentsline {section}{\numberline {A.2}String Methods}{158}{section.a.A.2}%
-\contentsline {section}{\numberline {A.3}NumPy Array Manipulation Routines}{160}{section.a.A.3}%
-\contentsline {section}{\numberline {A.4}Pandas Features for Handling Time-Related Data}{166}{section.a.A.4}%
-\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{169}{appendix.a.B}%
+\contentsline {section}{\numberline {6.12}Working with Multiple DataFrames}{149}{section.6.12}%
+\contentsline {section}{\numberline {6.13}File Input and Output (IO) with Pandas}{153}{section.6.13}%
+\contentsline {chapter}{\numberline {7}Coda}{159}{chapter.7}%
+\contentsline {chapter}{Appendices}{}{section*.52}
+\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{163}{appendix.a.A}%
+\contentsline {section}{\numberline {A.1}Escapes}{163}{section.a.A.1}%
+\contentsline {section}{\numberline {A.2}String Methods}{164}{section.a.A.2}%
+\contentsline {section}{\numberline {A.3}NumPy Array Manipulation Routines}{166}{section.a.A.3}%
+\contentsline {section}{\numberline {A.4}Pandas Features for Handling Time-Related Data}{172}{section.a.A.4}%
+\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{175}{appendix.a.B}%

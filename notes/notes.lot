@@ -36,16 +36,20 @@
 \contentsline {table}{\numberline {5.21}{\ignorespaces File Input and Output with NumPy Arrays\relax }}{110}{table.caption.41}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {6.1}{\ignorespaces Creating a DataFrame from Data Loaded in the Python Session\relax }}{116}{table.caption.44}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Routines for Reading and Writing Data with Pandas: Pickles\relax }}{154}{table.caption.47}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Routines for Reading and Writing Data with Pandas: Excel Spreadsheets\relax }}{155}{table.caption.48}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Routines for Reading and Writing Data with Pandas: JSON Files\relax }}{156}{table.caption.49}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces Routines for Reading and Writing Data with Pandas: Flat Files\relax }}{157}{table.caption.50}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{157}{table.caption.49}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{158}{table.caption.50}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{160}{table.caption.52}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{161}{table.caption.53}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{162}{table.caption.54}%
-\contentsline {table}{\numberline {A.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{163}{table.caption.55}%
-\contentsline {table}{\numberline {A.7}{\ignorespaces NumPy Array Manipulation Routines\relax }}{164}{table.caption.56}%
-\contentsline {table}{\numberline {A.8}{\ignorespaces Timestamp Objects: Functions, Methods, and Attributes\relax }}{166}{table.caption.59}%
-\contentsline {table}{\numberline {A.9}{\ignorespaces Timedelta Objects: Functions, Methods, and Attributes\relax }}{167}{table.caption.60}%
-\contentsline {table}{\numberline {A.10}{\ignorespaces Period Objects: Functions, Methods, and Attributes\relax }}{167}{table.caption.61}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{163}{table.caption.53}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{164}{table.caption.54}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{166}{table.caption.56}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{167}{table.caption.57}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{168}{table.caption.58}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{169}{table.caption.59}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces NumPy Array Manipulation Routines\relax }}{170}{table.caption.60}%
+\contentsline {table}{\numberline {A.8}{\ignorespaces Timestamp Objects: Functions, Methods, and Attributes\relax }}{172}{table.caption.63}%
+\contentsline {table}{\numberline {A.9}{\ignorespaces Timedelta Objects: Functions, Methods, and Attributes\relax }}{173}{table.caption.64}%
+\contentsline {table}{\numberline {A.10}{\ignorespaces Period Objects: Functions, Methods, and Attributes\relax }}{173}{table.caption.65}%
 \addvspace {10\p@ }
