@@ -2,54 +2,54 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Built-In Objects in Python\relax }}{18}{table.caption.5}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Number Type Objects in Python\relax }}{19}{table.caption.6}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces A Sample of Functions Provided by the \href {https://docs.python.org/3/library/math.html}{\texttt {math}} Module\relax }}{20}{table.caption.7}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Operator Precedence Hierarchy (Ascending Order)\relax }}{22}{table.caption.8}%
-\contentsline {table}{\numberline {4.5}{\ignorespaces Number Formatting Options in Python\relax }}{24}{table.caption.9}%
-\contentsline {table}{\numberline {4.6}{\ignorespaces Sample of String Literals and Operators\relax }}{29}{table.caption.10}%
-\contentsline {table}{\numberline {4.7}{\ignorespaces Popular list methods\relax }}{35}{table.caption.11}%
-\contentsline {table}{\numberline {4.8}{\ignorespaces Popular dictionary methods\relax }}{39}{table.caption.12}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces Popular file methods\relax }}{48}{table.caption.13}%
-\contentsline {table}{\numberline {4.10}{\ignorespaces Python Statements\relax }}{49}{table.caption.14}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Built-In Objects in Python\relax }}{22}{table.caption.8}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Number Type Objects in Python\relax }}{23}{table.caption.9}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces A Sample of Functions Provided by the \href {https://docs.python.org/3/library/math.html}{\texttt {math}} Module\relax }}{24}{table.caption.10}%
+\contentsline {table}{\numberline {4.4}{\ignorespaces Operator Precedence Hierarchy (Ascending Order)\relax }}{26}{table.caption.11}%
+\contentsline {table}{\numberline {4.5}{\ignorespaces Number Formatting Options in Python\relax }}{28}{table.caption.12}%
+\contentsline {table}{\numberline {4.6}{\ignorespaces Sample of String Literals and Operators\relax }}{33}{table.caption.13}%
+\contentsline {table}{\numberline {4.7}{\ignorespaces Popular list methods\relax }}{39}{table.caption.14}%
+\contentsline {table}{\numberline {4.8}{\ignorespaces Popular dictionary methods\relax }}{43}{table.caption.15}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces Popular file methods\relax }}{52}{table.caption.16}%
+\contentsline {table}{\numberline {4.10}{\ignorespaces Python Statements\relax }}{53}{table.caption.17}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Common Use Attributes of NumPy \texttt {array}\relax }}{64}{table.caption.16}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces NumPy Data Types\relax }}{66}{table.caption.17}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Routines for Creating Arrays from Shape or Value\relax }}{69}{table.caption.18}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Routines for Creating Arrays from Existing Data\relax }}{72}{table.caption.19}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Routines for Creating Record Arrays\relax }}{74}{table.caption.20}%
-\contentsline {table}{\numberline {5.6}{\ignorespaces Routines for Numerical Ranges\relax }}{77}{table.caption.22}%
-\contentsline {table}{\numberline {5.7}{\ignorespaces Routines for Building Matrices\relax }}{79}{table.caption.23}%
-\contentsline {table}{\numberline {5.8}{\ignorespaces Routines for the Matrix Class\relax }}{81}{table.caption.24}%
-\contentsline {table}{\numberline {5.9}{\ignorespaces NumPy Stastistical Routines: Order Statistics\relax }}{87}{table.caption.26}%
-\contentsline {table}{\numberline {5.10}{\ignorespaces numPy Statistical Routines: Average and Variances\relax }}{88}{table.caption.27}%
-\contentsline {table}{\numberline {5.11}{\ignorespaces NumPy Stastistical Routines: Correlating\relax }}{89}{table.caption.28}%
-\contentsline {table}{\numberline {5.12}{\ignorespaces NumPy Statistical Routines: Histograms\relax }}{90}{table.caption.29}%
-\contentsline {table}{\numberline {5.13}{\ignorespaces NumPy Linear Algebra Routines: Matrix and Vector Products\relax }}{93}{table.caption.30}%
-\contentsline {table}{\numberline {5.14}{\ignorespaces NumPy Linear Algebra Routines: Decompositions\relax }}{94}{table.caption.31}%
-\contentsline {table}{\numberline {5.15}{\ignorespaces NumPy Linear Algebra Routines: Matrix Eigenvalues\relax }}{95}{table.caption.32}%
-\contentsline {table}{\numberline {5.16}{\ignorespaces NumPy Linear Algebra Routines: Norms and Other Number\relax }}{96}{table.caption.33}%
-\contentsline {table}{\numberline {5.17}{\ignorespaces NumPy Linear Algebra Routines: Solving Equations and Inverting Matrices\relax }}{97}{table.caption.34}%
-\contentsline {table}{\numberline {5.18}{\ignorespaces NumPy Pseudorandom Generators: Simple Random Data\relax }}{102}{table.caption.36}%
-\contentsline {table}{\numberline {5.19}{\ignorespaces NumPy Pseudorandom Generators: Permutations\relax }}{103}{table.caption.37}%
-\contentsline {table}{\numberline {5.20}{\ignorespaces NumPy Pseudorandom Generators: Distributions\relax }}{104}{table.caption.38}%
-\contentsline {table}{\numberline {5.21}{\ignorespaces File Input and Output with NumPy Arrays\relax }}{110}{table.caption.41}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Common Use Attributes of NumPy \texttt {array}\relax }}{68}{table.caption.19}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces NumPy Data Types\relax }}{70}{table.caption.20}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Routines for Creating Arrays from Shape or Value\relax }}{73}{table.caption.21}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Routines for Creating Arrays from Existing Data\relax }}{76}{table.caption.22}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Routines for Creating Record Arrays\relax }}{78}{table.caption.23}%
+\contentsline {table}{\numberline {5.6}{\ignorespaces Routines for Numerical Ranges\relax }}{81}{table.caption.25}%
+\contentsline {table}{\numberline {5.7}{\ignorespaces Routines for Building Matrices\relax }}{83}{table.caption.26}%
+\contentsline {table}{\numberline {5.8}{\ignorespaces Routines for the Matrix Class\relax }}{85}{table.caption.27}%
+\contentsline {table}{\numberline {5.9}{\ignorespaces NumPy Stastistical Routines: Order Statistics\relax }}{91}{table.caption.29}%
+\contentsline {table}{\numberline {5.10}{\ignorespaces numPy Statistical Routines: Average and Variances\relax }}{92}{table.caption.30}%
+\contentsline {table}{\numberline {5.11}{\ignorespaces NumPy Stastistical Routines: Correlating\relax }}{93}{table.caption.31}%
+\contentsline {table}{\numberline {5.12}{\ignorespaces NumPy Statistical Routines: Histograms\relax }}{94}{table.caption.32}%
+\contentsline {table}{\numberline {5.13}{\ignorespaces NumPy Linear Algebra Routines: Matrix and Vector Products\relax }}{97}{table.caption.33}%
+\contentsline {table}{\numberline {5.14}{\ignorespaces NumPy Linear Algebra Routines: Decompositions\relax }}{98}{table.caption.34}%
+\contentsline {table}{\numberline {5.15}{\ignorespaces NumPy Linear Algebra Routines: Matrix Eigenvalues\relax }}{99}{table.caption.35}%
+\contentsline {table}{\numberline {5.16}{\ignorespaces NumPy Linear Algebra Routines: Norms and Other Number\relax }}{100}{table.caption.36}%
+\contentsline {table}{\numberline {5.17}{\ignorespaces NumPy Linear Algebra Routines: Solving Equations and Inverting Matrices\relax }}{101}{table.caption.37}%
+\contentsline {table}{\numberline {5.18}{\ignorespaces NumPy Pseudorandom Generators: Simple Random Data\relax }}{106}{table.caption.39}%
+\contentsline {table}{\numberline {5.19}{\ignorespaces NumPy Pseudorandom Generators: Permutations\relax }}{107}{table.caption.40}%
+\contentsline {table}{\numberline {5.20}{\ignorespaces NumPy Pseudorandom Generators: Distributions\relax }}{108}{table.caption.41}%
+\contentsline {table}{\numberline {5.21}{\ignorespaces File Input and Output with NumPy Arrays\relax }}{114}{table.caption.44}%
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Creating a DataFrame from Data Loaded in the Python Session\relax }}{116}{table.caption.44}%
-\contentsline {table}{\numberline {6.2}{\ignorespaces Routines for Reading and Writing Data with Pandas: Pickles\relax }}{154}{table.caption.47}%
-\contentsline {table}{\numberline {6.3}{\ignorespaces Routines for Reading and Writing Data with Pandas: Excel Spreadsheets\relax }}{155}{table.caption.48}%
-\contentsline {table}{\numberline {6.4}{\ignorespaces Routines for Reading and Writing Data with Pandas: JSON Files\relax }}{156}{table.caption.49}%
-\contentsline {table}{\numberline {6.5}{\ignorespaces Routines for Reading and Writing Data with Pandas: Flat Files\relax }}{157}{table.caption.50}%
+\contentsline {table}{\numberline {6.1}{\ignorespaces Creating a DataFrame from Data Loaded in the Python Session\relax }}{120}{table.caption.47}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces Routines for Reading and Writing Data with Pandas: Pickles\relax }}{158}{table.caption.50}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Routines for Reading and Writing Data with Pandas: Excel Spreadsheets\relax }}{159}{table.caption.51}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces Routines for Reading and Writing Data with Pandas: JSON Files\relax }}{160}{table.caption.52}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces Routines for Reading and Writing Data with Pandas: Flat Files\relax }}{161}{table.caption.53}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{163}{table.caption.53}%
-\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{164}{table.caption.54}%
-\contentsline {table}{\numberline {A.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{166}{table.caption.56}%
-\contentsline {table}{\numberline {A.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{167}{table.caption.57}%
-\contentsline {table}{\numberline {A.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{168}{table.caption.58}%
-\contentsline {table}{\numberline {A.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{169}{table.caption.59}%
-\contentsline {table}{\numberline {A.7}{\ignorespaces NumPy Array Manipulation Routines\relax }}{170}{table.caption.60}%
-\contentsline {table}{\numberline {A.8}{\ignorespaces Timestamp Objects: Functions, Methods, and Attributes\relax }}{172}{table.caption.63}%
-\contentsline {table}{\numberline {A.9}{\ignorespaces Timedelta Objects: Functions, Methods, and Attributes\relax }}{173}{table.caption.64}%
-\contentsline {table}{\numberline {A.10}{\ignorespaces Period Objects: Functions, Methods, and Attributes\relax }}{173}{table.caption.65}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{167}{table.caption.56}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{168}{table.caption.57}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{170}{table.caption.59}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{171}{table.caption.60}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{172}{table.caption.61}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{173}{table.caption.62}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces NumPy Array Manipulation Routines\relax }}{174}{table.caption.63}%
+\contentsline {table}{\numberline {A.8}{\ignorespaces Timestamp Objects: Functions, Methods, and Attributes\relax }}{176}{table.caption.66}%
+\contentsline {table}{\numberline {A.9}{\ignorespaces Timedelta Objects: Functions, Methods, and Attributes\relax }}{177}{table.caption.67}%
+\contentsline {table}{\numberline {A.10}{\ignorespaces Period Objects: Functions, Methods, and Attributes\relax }}{177}{table.caption.68}%
 \addvspace {10\p@ }

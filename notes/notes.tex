@@ -6,6 +6,20 @@
 %% ========================= Essential packages ===========================
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
+\usepackage{calc}
+\usepackage{tikz}
+\usetikzlibrary{arrows,
+                arrows.meta,
+                calc,
+		chains,
+                quotes,
+                positioning,
+		shapes,
+                shapes.geometric}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm,compat=1.17}
 \usepackage{fontawesome}
 \newcommand{\seticon}[1]{\textcolor{black}{\csname #1\endcsname}}
 \usepackage[utf8]{inputenc}
@@ -20,6 +34,12 @@
 \usepackage[titletoc]{appendix}
 \numberwithin{figure}{chapter}
 \numberwithin{table}{chapter}
+
+%% ========================== Colors ======================================
+\definecolor{base_c}{rgb}{0.6,0,0}
+\definecolor{comp_c}{rgb}{0.09803921568627451, 0.6901960784313725, 0.7529411764705882}
+\definecolor{tri_1}{rgb}{0.09803921568627451, 0.7686274509803922, 0.19215686274509805}
+\definecolor{tri_2}{rgb}{0.19215686274509805, 0.09803921568627451, 0.7686274509803922}
 
 %% ========================== Coding snippets =============================
 \usepackage[newfloat]{minted}
@@ -189,18 +209,258 @@ These notes condense more  than ten years of experience I developed using Python
 
 \addcontentsline{toc}{chapter}{Preface}
 
-\chapter{Organization of the Module}
+\chapter{Organization of the Notes}
+\label{ch:organization}
+\par\noindent\rule{\textwidth}{0.4pt}
 
+Learning goals:
+
+\begin{itemize}
+	\item \dots
+	\item \dots 
+	\item \dots 
+	\item \dots
+\end{itemize}
+
+\par\noindent\rule{\textwidth}{0.4pt}
 
 \vspace{1em}
 
+\section{Justification for an Introductory Module on Python}
 
-\vspace{1em}
+\begin{paracol}{2}
+	\question{\raggedright Why should I learn Python?}
+	\note{Python is a general-purpose, high-level programming language. So, why should business analytics (BA) professionals learn it? Mainly, there are two reasons:
+	
+	\begin{itemize}
+		\item First, Python is the center of one of the richest ecosystems of technical and scientific computation modules\footnote{All throughout the various chapters, I will use the terms module and library interchangably.}
+		\item Second, for a large number of developers and users `Python' and `data science' are largely overlapping categories (as Figure \ref{fig:python_pop} shows, the popularity surge of Python is strictly related with the emergence and development of the data science field, YR 2014 $\rightarrow$)
+	\end{itemize}
+	}
+\end{paracol}
+\clearpage 
 
-$\ldots$
+\begin{figure}[!htbp]
+	\centering
+	\sffamily
+        \begin{tikzpicture}[scale=1]
+        		\begin{axis}[
+        			title = Interest Over Time (Worldwide),
+        			xtick={0, 47, 95, 143},
+        			xticklabels={2010, 2014, 2018, 2022},
+        			xlabel = Time,
+        			ylabel = Google Trends Index,
+        			legend pos=north west
+        			]
+        		    \addplot[
+        			scatter,only marks,scatter src=explicit symbolic,
+        			scatter/classes={
+        			    python={mark=*,draw=base_c, fill=base_c!20},
+        			    r={mark=*,draw=tri_1, fill=tri_1!20},
+        			    julia={mark=*,draw=tri_2,fill=tri_2!20}
+        			}
+        		    ]
+        		    table[x=,y=y,meta=label]{data/google_trends.dat};
+        		    \legend{Python, R, Julia}
+        		\end{axis}
+        \end{tikzpicture}
+        \caption{Interest towards data-science related programming languages over time}
+        \caption*{Notes. --- Source is Google Trends}
+        \label{fig:python_pop}
+\end{figure}
 
+\begin{paracol}{2}
+	\question{\raggedright Why do I need to take a pre-course module on Python?}
+        \note{
+	There are at least three arguments:
+	\begin{itemize}
+		\item Modern BA curricula increasingly depart from a spreadsheet-based approach to teaching and learning
+		\item For example, the Bayes BA program builds heavily on the Python programming language
+		\begin{itemize}
+			\item There are \emph{four core modules} based on Python: Data Visualization, Deep Learning, Network Analytics, Value Creation in Digital Settings
+			\item Plus \emph{two elective modules}: Applied Machine Learning and Applied Natural Language Processing
+		\end{itemize}
+		\item You may want to get up and running with Python in advance, that is, before the start of Term I
+	\end{itemize}
+	}
+\end{paracol}
+
+\section{Scope of the Notes}
+
+\begin{paracol}{2}
+	\question{\raggedright What is the scope of SMM692?}
+	\note{The scope of SMM692 has been tailored on the learning needs of the Bayes MSc students. Specifically, these notes were created on the basis of the feedback comments provided by four cohorts of BA students. Hence, I warmly invited you to avoid to learn Python using the many (excellent) books and resources available on the web --- otherwise, you may miss core notions and tools or learn irrelevant ones!
+	}
+\end{paracol}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright So, do these notes cover the entire spectrum of the Python language?}	
+	\note{
+	\begin{itemize}
+		\item NO!
+		\item That would take substantial time --- Python has an extensive language reference!!
+		\item Some aspects of the Python language reference have limited added value for BA professionals, who are closer to Python users than developers
+	\end{itemize}
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Got it. Which parts of the Python language will I learn then?}
+	\note{
+
+	The attention revolves around the following subjects:
+
+		\begin{itemize}
+			\item Variables
+			\item Object
+			\item Some built-in functions and methods for strings, lists, dictionaries, and sets
+		\end{itemize}
+	
+	Learning the basics of the Python language will put you in the position to carry out technical and scentific computation tasks --- namely, the essence of data science X BA
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Which technical and scientific modules will I learn in these notes?}
+	\note{There are two foundational modules that support stastitical analysis, Viz, ML, and DL: NumPy and Pandas. These two modules are the focus of SMM692's second part.
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Can you recap the subjects covered in these notes?}
+	\note{Of course. These notes cover the following topics:
+	
+	\begin{itemize}
+		\item Getting started with Python (Chapter \ref{ch:getting_started})
+		\item Python language fundamentals (Chapter \ref{ch:fundamentals})
+		\item Python objects (Chapter \ref{ch:objects})
+		\item Technical and scientific computation with NumPy (Chapter \ref{ch:tech_sci_computation})
+		\item Data management with Pandas (Chapter \ref{ch:data_management})
+	\end{itemize}
+	}
+\end{paracol}
+
+\section{Learning and Teaching Activities}
+
+\begin{paracol}{2}
+	\question{\raggedright What is the phylosophy behing these notes?}
+	\note{Mainly, there are two pillars:
+	
+	\begin{itemize}
+		\item LESS IS MORE: Focus on few core Python notions at a time and practice them
+		\item LEARN BY DOING: The best way to learn Python is by addressing concrete problems
+	\end{itemize}
+	
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright I am a Programming Newbie: How Do I Learn Python?}
+	\note{
+		Here is an approach the proved to be effcective according to the pedagogical literature on learnning programming languages:
+
+	\begin{itemize}
+		\item Step 1: Focus on \emph{few core notions} at a time (e.g., `string methods')
+		\item Step 2: Learn the selected core notions `pen \& paper'  (stay away from the computer!)
+		\item Step 3: Open a Python session and practice the few core notions 
+		\item Step 4: Critically self-assess your learning (if your code is not working, Python will force you to understand what's wrong!)
+	\end{itemize}
+
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedrith How do I assess my learning outcome?}
+	\note{You may want to assess your learning frequently, at the end of each chapter, or, possibly every two or three sections of the chapter. As Figure \ref{fig:assessement} suggests, the key idea is to adopt a sequential approach. Subject-by-subject, you may want to:
+	\begin{itemize}
+		\item Open a learning circle by wathching the hook video and study the notes closely
+		\item Test your understanding by taking a quiz
+		\item If your learning is satisfactory, try solve some practical coding problems
+	\end{itemize}
+	}
+\end{paracol}
+\clearpage 
+
+\tikzstyle{decision} = [
+	diamond,
+	draw,  
+	text width=8em,
+	text centered, 
+	node distance=2cm, 
+	inner sep=0pt
+	]
+\tikzstyle{block} = [
+	rectangle, 
+	draw,
+	text width=8em,
+	text centered,
+	rounded corners,
+	minimum height=2em
+	]
+\tikzstyle{arrow} = [
+	draw,
+	-latex',
+	rounded corners
+	]
+\tikzstyle{line} = [
+	draw
+	]
+\tikzstyle{invisible4} = [
+	rectangle
+	]
+\tikzstyle{invisible5} = [
+	rectangle
+	]
+\tikzstyle{circular} = [
+	draw,
+	circle,
+	radius=1.0cm,
+	]
+
+\begin{sidewaysfigure}[h]
+    \sffamily
+    \centering
+    \begin{tikzpicture}[
+	scale=1, every node/.style={scale=1},
+	node distance = 2cm,
+	auto,
+	->,
+	]
+        %% nodes
+	\node [block] (start) {\small Start / open the learning circle};
+        \node [block, right = 6.4cm of start] (stop) {\small Stop / close the learning circle};
+        \node [block, below of = start] (hv) {\small Watch the hook videos};
+        \node [block, below of = hv] (notes) {\small Study the notes, including programming notions and examples};
+        \node [block, below of = notes] (quiz) {\small Take the quiz};
+	\node [decision, below=0.5cm of quiz] (decision_1) {Is your learning satisfying?};
+        \node [block, right=1.25cm of decision_1] (ps) {\small Analyze the problem set};
+        \node [decision, right=1.25cm of ps] (decision_2) {\small Can you address the problem set?};
+        \node [decision, right=1.25cm of decision_2] (decision_3) {\small Why not?};
+	% \node [block, above = 1 cm of decision_2] (tr) {\small Analyze the traceback of the error};
+	%% arrows
+	\path[]
+	  (start) edge node [] {} (hv)
+	  (hv) edge node [] {} (notes)
+	  (notes) edge node [] {} (quiz)
+	  (quiz) edge node [] {} (decision_1)
+	  (decision_1) edge node [] {Yes} (ps)
+	  (decision_1.west) edge[bend left=90] node [] {No} (notes.west)
+	  (ps) edge node[] {} (decision_2)
+	  (decision_2.north) edge[] node [] {Yes} (stop.south)
+	  (decision_2) edge node [] {No} (decision_3)
+	  (decision_3.south) edge[bend left=45] node [] {Problem set is unclear} (ps.south)
+	  (decision_3.north) edge[bend right=14] node [] {Errors in my code} (notes.east);
+	\end{tikzpicture}
+	\caption{The learning circle}
+	\label{fig:assessement}
+\end{sidewaysfigure}
+
+\clearpage
+
+\theendnotes
 \chapter{Getting Started with Python}
-
+\label{ch:getting_started}
 
 \vspace{1em}
 
@@ -224,7 +484,7 @@ $\ldots$
 $\ldots$
 
 \chapter{Python Language Fundamentals}
-
+\label{ch:fundamentals}
 
 \vspace{1em}
 
@@ -244,7 +504,7 @@ $\ldots$
 $\ldots$
 
 \chapter{Python Objects}
-
+\label{ch:objects}
 
 \vspace{1em}
 
@@ -1862,6 +2122,7 @@ L2 = []
 \theendnotes
 
 \chapter{Technical \& Scientific Computation with NumPy}
+\label{ch:tech_sci_computation}
 
 \vspace{1em}
 
@@ -3634,6 +3895,7 @@ array([[ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90],
 \theendnotes
 
 \chapter{Data Management with Pandas}
+\label{ch:data_management}
 
 \par\noindent\rule{\textwidth}{0.4pt}
 
