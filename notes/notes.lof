@@ -2,17 +2,20 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces Interest towards data-science related programming languages over time\relax }}{12}{figure.caption.5}%
 \contentsline {figure}{\numberline {1.2}{\ignorespaces The learning circle\relax }}{15}{figure.caption.6}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A screenshot showing a sample of applications accessible from within Anaconda Navigator\relax }}{19}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A stylized representation of Python's execution model\relax }}{20}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces A screenshot showing the execution of the minimal script included in Snippet 1.1\relax }}{22}{figure.caption.10}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces A contour plot showing the associations among X, Y, and Z\relax }}{80}{figure.caption.24}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Visual representation of NumPy \href {https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt {.sin}} and \href {https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt {.cos}} functions as per Snippet 5.12.\relax }}{90}{figure.caption.28}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces A visual illustration of the least-square estimation carried out in Snippet 5.16\relax }}{104}{figure.caption.38}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces A visual illustration of the Normal and Poisson data generated in Snippet 5.18\relax }}{112}{figure.caption.43}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces A contour plot showing the associations among X, Y, and Z\relax }}{84}{figure.caption.27}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Visual representation of NumPy \href {https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt {.sin}} and \href {https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt {.cos}} functions as per Snippet 5.12.\relax }}{94}{figure.caption.31}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces A visual illustration of the least-square estimation carried out in Snippet 5.16\relax }}{108}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces A visual illustration of the Normal and Poisson data generated in Snippet 5.18\relax }}{116}{figure.caption.46}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces A stylized representation of a case-by-variable data structure\relax }}{119}{figure.caption.46}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces A stylized representation of a `wide' data structure\relax }}{145}{figure.caption.48}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces A stylized representation of a `long' data structure\relax }}{146}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces A stylized representation of a case-by-variable data structure\relax }}{123}{figure.caption.49}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces A stylized representation of a `wide' data structure\relax }}{149}{figure.caption.51}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces A stylized representation of a `long' data structure\relax }}{150}{figure.caption.52}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

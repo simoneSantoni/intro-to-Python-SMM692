@@ -195,7 +195,7 @@ allcolors=tri_2,
 
 \chapter*{Preface}
 
-These notes condense more  than ten years of experience I developed using Python for industrial applications and research. At the same time, I tried to incorporate the feedback I collected from four different cohorts of Bayes MSc students, who I taught an introductory module on Python and other subjects that rely heavily on Python, such as network science, data visualization, and Natural Language Processing. 
+These notes were prepared for the Summer Module `SMM-692 --- Introduction to Programming in Python.' The materialse I present condense more than ten years of experience I developed using Python for industrial applications and research. At the same time, I tried to incorporate the feedback I collected from four different cohorts of Bayes MSc students, who I taught an introductory module on Python and other subjects that rely heavily on Python, such as network science, data visualization, and Natural Language Processing. 
 
 \quad I prepared these notes with two design principles in mind. First, the notes should have mimicked a conversation between a person interested in learning Python and a knowledge recipient (a robot or a human being, it does not matter really!).  The \href{https://en.wikipedia.org/wiki/Cornell_Notes}{Cornell Notes Template} helped me to highlight the questions, reported on the left-hand side of the page as blue boxes, and the answers, displayed on the right-hand side of the page.
 
@@ -209,17 +209,16 @@ These notes condense more  than ten years of experience I developed using Python
 
 \addcontentsline{toc}{chapter}{Preface}
 
-\chapter{Organization of the Notes}
+\chapter{Organization of the Notes and SMM692}
 \label{ch:organization}
 \par\noindent\rule{\textwidth}{0.4pt}
 
-Learning goals:
+In this chapter, the reader is supposed to appreciate:
 
 \begin{itemize}
-	\item \dots
-	\item \dots 
-	\item \dots 
-	\item \dots
+	\item The justification for an introductory module on Python for Business Analytics students
+	\item The scope of the teaching materials included in these notes 
+	\item The learning and teaching activities that form `SMM692 --- Introduction to Programming in Python'
 \end{itemize}
 
 \par\noindent\rule{\textwidth}{0.4pt}
@@ -272,7 +271,7 @@ Learning goals:
 \begin{paracol}{2}
 	\question{\raggedright Why do I need to take a pre-course module on Python?}
         \note{
-	There are at least three arguments:
+	There are at least three arguments to take a module such as SMM692:
 	\begin{itemize}
 		\item Modern BA curricula increasingly depart from a spreadsheet-based approach to teaching and learning
 		\item For example, the Bayes BA program builds heavily on the Python programming language
@@ -328,7 +327,7 @@ Learning goals:
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright Can you recap the subjects covered in these notes?}
+	\question{\raggedright Can you summarize the subjects covered in these notes?}
 	\note{Of course. These notes cover the following topics:
 	
 	\begin{itemize}
@@ -459,25 +458,192 @@ Learning goals:
 \clearpage
 
 \theendnotes
+
 \chapter{Getting Started with Python}
 \label{ch:getting_started}
 
-\vspace{1em}
+\par\noindent\rule{\textwidth}{0.4pt}
 
+At the end of the chapter, you will be able to:
+
+\begin{itemize}
+	\item Get Python work in your machine
+	\item Run Python code from a script file and interactively 
+	\item Configure a Python environment
+\end{itemize}
+
+\par\noindent\rule{\textwidth}{0.4pt}
 
 \vspace{1em}
 
 \section{Installing Python}
 
-$\ldots$
+\begin{paracol}{2}
+	\question{\raggedright How can I install Python?}
+	\note{There are two options:
+	\begin{itemize}
+		\item Using the \href{https://www.google.com/search?client=safari&rls=en&q=python+official+isntaller&ie=UTF-8&oe=UTF-8}{official installer}
+		\item Using the \href{https://www.anaconda.com/products/distribution}{Anaconda Distribution} of Python (preferred option)
+	\end{itemize}
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright What are the distinctive features of Anaconda?}
+	\note{
+	\begin{itemize}
+		\item Anaconda is `battery-included' --- it comes with a humongous number of modules for data science
+		\begin{itemize}
+			\item If you use the official Python installation, then you have to install the modules you need on your own!
+		\end{itemize}
+		\item  Anaconda is a bundle of various pieces of software:
+		\begin{itemize}
+			\item \texttt{conda} is the Swiss army knife to manage Python modules and environments
+			\item \texttt{anaconda-navigator} is the graphical interface from within to access Python IDEs and related desktop/web applications
+		\end{itemize}
+	\end{itemize}
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright What are the steps to install Anaconda?}
+	\note{
+
+	\begin{enumerate}
+		\item Downaload the installer for your operating system (unless you have a very old machine running Win, go for the 64-Bit version)
+		\item Run the installer
+		\begin{itemize}
+			\item For Linux: navigate to the folder where you have downloaded the installer as per step 1, open a shell session, then run \texttt{\$ bash ./Anaconda3-XXXX.XX-Linux-x86-64.sh}
+			\item For Win and Mac OS: just run the graphical installer downloaded in step 1
+		\end{itemize}
+		\item Accept the terms proposed by the Anaconda people to use their software, comprising Python, the \texttt{conda} package manager, and a bundle of modules for data science
+		\item That's it!
+		\begin{itemize}
+		\item For Linux users: if you accepted the default installation options, an environmental variable has been created either in your \texttt{.bashrc} or \texttt{.zshrc}. That means you can access the various pieces of software included in the Anaconda installation (e.g., Anaconda Navigator) from a shell session
+		\item For Win and Mac OS users: the various pieces of software included in the Anaconda installation are available from the menu of your system
+		\end{itemize}
+	\end{enumerate}
+
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright What are the pieces of software included in Anaconda?}
+	\note{There are plenty of applications included in the Anaconda installation. These applications can be accessed from within Anaconda Navigator (see Figure \ref{fig:anaconda_nav}), available in the launcher of your operating system.}
+	}
+\end{paracol}
+
+\begin{sidewaysfigure}
+	\centering 
+	\scalebox{1}{
+	\includegraphics[width=1\textwidth]{anaconda_navigator}
+	}
+	\caption{A screenshot showing a sample of applications accessible from within Anaconda Navigator}
+	\label{fig:anaconda_nav}
+\end{sidewaysfigure}
+\clearpage
 
 \section{How Python Runs Programs}
 
-$\ldots$
+\begin{paracol}{2}
+	\question{Is Python a programming language or an interprete?}
+	\note{Short answer: BOTH. Typically, we refer to Python as a programming language. However, Python is also a software package called an interpreter, a kind of program that executes other programs. When we write a Python program, the Python interpreter reads your program and carries out the instructions it contains. In effect, the interpreter is a layer of software logic between our code and the computer hardware on our machine.
+	}
+\end{paracol}	
+
+\begin{paracol}{2}
+	\question{\raggedright How does an interpreter work?}
+	\note{
+	\begin{itemize}
+		\item When you instruct Python to run your script (e.g., `script.py'), there are a few steps the interpreter carries out before your code actually starts crunching away
+		\item First, the code is compiled to something called `byte code'
+		\begin{itemize}
+			\item This step happens behind the scenes (there is nothing to do for the programmer!)
+    			\item A file called `script.pyc', automatically generated, contains the translation of your code into lower-level code instructions
+		\end{itemize}
+		\item Then, the compiled code is routed to something called a `Python Virtual Machine' (PVM)
+		\begin{itemize}
+			\item This step is hidden to the programmer like the previous one
+			\item Mainly, it iterates through your byte code instructions, one by one, to carry out their operations
+		\end{itemize}
+	\end{itemize}
+	}
+\end{paracol}
+
+\begin{figure}[!htbp]
+	\centering
+	\sffamily
+	\begin{tikzpicture}[
+		->
+	]
+		\node [] (step) {\textbf{Step}};
+	        \node [right=of step] (file) {\textbf{Entity}}; 
+	        \node [below=of step] (source) {Source};
+		\node [below=of file, align=right] (sourcef) {script.py};
+		\node [below=of source] (byte) {Byte code};
+		\node [below=of sourcef, align=right] (bytef) {script.pyc};
+		\node [below=of byte] (pvm) {Runtime};
+		\node [below=of bytef, align=right] (pvmf) {PVM};
+		\path[]
+			(source) edge node [] {} (byte)
+			(byte) edge node [] {} (pvm);
+	\end{tikzpicture}
+	\caption{A stylized representation of Python's execution model}
+	\label{fig:python_interpreter}
+\end{figure}
 
 \section{How We Run Python Programs}
 
-$\ldots$
+\begin{paracol}{2}
+	\question{\raggedright What are the alterntive ways to run some Python code?}
+	\note{There are two alternatives:
+	\begin{itemize}
+		\item The non-interactive way consists of preparing a Python script and running it from the command line
+		\item The interactive way consist of preparing and running one or a few Python statements from within a Python shell 
+	\end{itemize}
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do I run a Python script in the non-interactive way?}
+	\note{One has to go through a two-step process:
+	
+	\begin{itemize}
+		\item First, the script has to be prepared using a text editor (being basic or  sophisticated, it is up to you)
+		\item Second, the script has be executed from the shel
+	\end{itemize}
+
+	\quad Snippet 1.1 shows a minimal Python script. Such a script can be created using the built-in text editor of your operating system or an advanced text editor such as \href{https://atom.io}{Atom}, \href{https://www.gnu.org/software/emacs/}{Emacs}, \href{https://www.gnu.org/software/emacs/}{Vim}/\href{https://neovim.io}{Neovim}, \href{https://www.sublimetext.com}{Sublime Text}, and \href{https://code.visualstudio.com}{Visual Studio Code}.
+
+	\quad Once the script is saved to a file with extension \texttt{.py}, we can execute it from the command line by typing the following command in the shell session of our choice:
+
+	\vspace{1em}
+
+	\texttt{\$ python filename.py}
+
+	\vspace{1em}
+
+	\quad Figure \ref{fig:simple_script} shows how to run the Python script containing the code displayed in Snippet 1.1 (named \texttt{simple_script.py}. The first line of code includes the command \texttt{\$ python} which instructs the shell to execute the script. The second line of code includes the name of the script to be executed.
+	}
+\end{paracol}
+
+\begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 1.1 --- a minimal Python script}
+# Print a string object
+print("Bazinga")
+
+# Print the result of an algebraic operation
+print(2 + 4)
+\end{pythoncode}
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.5\textwidth]{simple_script}
+	\end{center}
+	\caption{A screenshot showing the execution of the minimal script included in Snippet 1.1}
+	\label{fig:simple_script}
+\end{figure}
+
+\
 
 \section{Managing Python Environments}
 
