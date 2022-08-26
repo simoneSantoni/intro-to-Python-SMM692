@@ -16,8 +16,11 @@
                 positioning,
 		shapes,
                 shapes.geometric}
-\usepackage{graphicx}
-\usepackage{graphics}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{anyfontsize}
+\usepackage{sectsty}
 \usepackage{pgfplots}
 \pgfplotsset{width=7cm,compat=1.17}
 \usepackage{fontawesome}
@@ -152,13 +155,14 @@ allcolors=tri_2,
 % title
 \title{%
         \begin{tcolorbox}[before skip = \baselineskip, after skip =-\baselineskip]
-            \centering\Huge\sffamily SMM692\\ Introduction to Programming in Python
+            \centering\LARGE\sffamily SMM692\\ Introduction to Programming in Python
 	    \footnote{These notes were type-setted in \LaTeX using the Cornell Notes Template} 
         \end{tcolorbox}
 
 	\vspace{5em}
 
 	\sffamily
+	\normalsize
 	Dr. Simone Santoni\\ 
 	Senior Lecturer in Strategy --- Bayes Business School\\
 	\seticon{faAt} simone.santoni.1@city.ac.uk\\
@@ -167,7 +171,8 @@ allcolors=tri_2,
 
 	\vspace{5em}
 
-	\normalsize Version 1.0\\ 
+	\normalsize
+	\textcolor{blue}{Version 1.0}\\ 
 	(last edit, August 21$^{st}$ 2022)
 
 }
@@ -180,9 +185,115 @@ allcolors=tri_2,
 % ========================== Document contents ============================= 
 
 \begin{document}
-    
-\maketitle  
 
+\begin{tikzpicture}[overlay,remember picture]
+
+% Background color
+\fill[
+black!2]
+(current page.south west) rectangle (current page.north east);
+
+% Rectangles
+\shade[
+left color=Dandelion, 
+right color=Dandelion!40,
+transform canvas ={rotate around ={45:($(current page.north west)+(0,-6)$)}}] 
+($(current page.north west)+(0,-6)$) rectangle ++(9,1.5);
+
+\shade[
+left color=lightgray,
+right color=lightgray!50,
+rounded corners=0.75cm,
+transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}]
+($(current page.north west)+(0.5,-10)$) rectangle ++(15,1.5);
+
+\shade[
+left color=lightgray,
+rounded corners=0.3cm,
+transform canvas ={rotate around ={45:($(current page.north west)+(.5,-10)$)}}] ($(current page.north west)+(1.5,-9.55)$) rectangle ++(7,.6);
+
+\shade[
+left color=tri_2!80,
+right color=tri_2!1,
+rounded corners=0.4cm,
+transform canvas ={rotate around ={45:($(current page.north)+(-1.5,-3)$)}}]
+($(current page.north)+(-1.5,-3)$) rectangle ++(9,0.8);
+
+\shade[
+left color=tri_1!80,
+right color=tri_1!1,
+rounded corners=0.9cm,
+transform canvas ={rotate around ={45:($(current page.north)+(-3,-8)$)}}] ($(current page.north)+(-3,-8)$) rectangle ++(15,1.8);
+
+\shade[
+left color=base_c!80,
+right color=base_c!1,
+rounded corners=0.9cm,
+transform canvas ={rotate around ={45:($(current page.north west)+(4,-15.5)$)}}]
+($(current page.north west)+(4,-15.5)$) rectangle ++(30,1.8);
+
+\shade[
+left color=comp_c,
+right color=comp_c!25,
+rounded corners=0.75cm,
+transform canvas ={rotate around ={45:($(current page.north west)+(13,-10)$)}}]
+($(current page.north west)+(13,-10)$) rectangle ++(15,1.5);
+
+\shade[
+left color=gray,
+rounded corners=0.3cm,
+transform canvas ={rotate around ={45:($(current page.north west)+(18,-8)$)}}]
+($(current page.north west)+(18,-8)$) rectangle ++(15,0.6);
+
+\shade[
+left color=lightgray,
+rounded corners=0.4cm,
+transform canvas ={rotate around ={45:($(current page.north west)+(19,-5.65)$)}}]
+($(current page.north west)+(19,-5.65)$) rectangle ++(15,0.8);
+
+\shade[
+left color=black!75,
+right color=black!20,
+rounded corners=0.6cm,
+transform canvas ={rotate around ={45:($(current page.north west)+(20,-9)$)}}] 
+($(current page.north west)+(20,-9)$) rectangle ++(14,1.2);
+
+% Year
+\draw[ultra thick,gray]
+($(current page.center)+(5,2)$) -- ++(0,-3cm) 
+node[
+midway,
+left=0.25cm,
+text width=5cm,
+align=right,
+black!75
+]
+{
+{\fontsize{25}{30} \selectfont \bf SMM692 \\[10pt] NOTES}
+} 
+node[
+midway,
+right=0.25cm,
+text width=6cm,
+align=left,
+base_c]
+{
+{\fontsize{72}{86.4} \selectfont 2022}
+};
+
+% Title
+\node[align=center] at ($(current page.center)+(0,-5)$) 
+{
+{\fontsize{50}{60} \selectfont {{Introduction to }}} \\[0.3cm]
+{\fontsize{50}{60} \selectfont {{Programming in Python}}} \\[1cm]
+{\fontsize{16}{19.2} \selectfont \textcolor{base_c}{ \bf Dr. Simone Santoni}}\\[3pt]
+Bayes Business School\\[3pt]
+106 Bunhill Row, London, EC1Y 8TZ\\[3pt]
+}
+\end{tikzpicture}
+
+\vspace{9em}
+\centering (Version 1.1 --- last edit, August 21$^{st}$ 2022)
 \clearpage
 
 \tableofcontents
@@ -195,7 +306,7 @@ allcolors=tri_2,
 
 \chapter*{Preface}
 
-These notes were prepared for the Summer Module `SMM-692 --- Introduction to Programming in Python.' The materialse I present condense more than ten years of experience I developed using Python for industrial applications and research. At the same time, I tried to incorporate the feedback I collected from four different cohorts of Bayes MSc students, who I taught an introductory module on Python and other subjects that rely heavily on Python, such as network science, data visualization, and Natural Language Processing. 
+\raggedright These notes were prepared for the Summer Module `SMM-692 --- Introduction to Programming in Python.' The materialse I present condense more than ten years of experience I developed using Python for industrial applications and research. At the same time, I tried to incorporate the feedback I collected from four different cohorts of Bayes MSc students, who I taught an introductory module on Python and other subjects that rely heavily on Python, such as network science, data visualization, and Natural Language Processing. 
 
 \quad I prepared these notes with two design principles in mind. First, the notes should have mimicked a conversation between a person interested in learning Python and a knowledge recipient (a robot or a human being, it does not matter really!).  The \href{https://en.wikipedia.org/wiki/Cornell_Notes}{Cornell Notes Template} helped me to highlight the questions, reported on the left-hand side of the page as blue boxes, and the answers, displayed on the right-hand side of the page.
 
@@ -884,35 +995,35 @@ print(2 + 4)
 
 \theendnotes
 
-\chapter{Python Language Fundamentals}
-\label{ch:fundamentals}
-
-\par\noindent\rule{\textwidth}{0.4pt}
-
-At the end of the chapter, you will be able to:
-
-\begin{itemize}
-	\item Get Python work in your machine
-	\item Run Python code from a script file and interactively 
-	\item Configure a Python environment
-\end{itemize}
-
-\par\noindent\rule{\textwidth}{0.4pt}
-
-\vspace{1em}
-
-
-\section{Variables}
-
-$\ldots$
-
-\section{Objects}
-
-$\ldots$
-
-\section{References}
-
-$\ldots$
+%\chapter{Python Language Fundamentals}
+%\label{ch:fundamentals}
+%
+%\par\noindent\rule{\textwidth}{0.4pt}
+%
+%At the end of the chapter, you will be able to:
+%
+%\begin{itemize}
+%	\item Get Python work in your machine
+%	\item Run Python code from a script file and interactively 
+%	\item Configure a Python environment
+%\end{itemize}
+%
+%\par\noindent\rule{\textwidth}{0.4pt}
+%
+%\vspace{1em}
+%
+%
+%\section{Variables}
+%
+%$\ldots$
+%
+%\section{Objects}
+%
+%$\ldots$
+%
+%\section{References}
+%
+%$\ldots$
 
 \chapter{Python Objects}
 \label{ch:objects}
