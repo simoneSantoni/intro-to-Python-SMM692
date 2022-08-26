@@ -10,17 +10,21 @@
 \contentsline {figure}{\numberline {2.6}{\ignorespaces A screenshot of a Jupyter notebook session\relax }}{24}{figure.caption.13}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces A screenshot of an interactve IPython shell in Visual Studio Code\relax }}{24}{figure.caption.14}%
 \contentsline {figure}{\numberline {2.8}{\ignorespaces A screenshot of a Jupyter notebook session in Visual Studio Code\relax }}{25}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces A screenshot showing how to create a Python environment using \texttt {conda} from the command line\relax }}{28}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces A screenshot showing how to populate a Python environment using \texttt {conda} from the command line\relax }}{28}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces A screenshot showing how to create a new environement from within the `Environments' section of Anaconda Navigator.\relax }}{30}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces A screenshot showing how to add Python modules to a (newly created) environment from within the `Environments' section of Anaconda Navigator.\relax }}{31}{figure.caption.19}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces A contour plot showing the associations among X, Y, and Z\relax }}{90}{figure.caption.32}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Visual representation of NumPy \href {https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt {.sin}} and \href {https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt {.cos}} functions as per Snippet 5.12.\relax }}{100}{figure.caption.36}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces A visual illustration of the least-square estimation carried out in Snippet 5.16\relax }}{114}{figure.caption.46}%
-\contentsline {figure}{\numberline {5.4}{\ignorespaces A visual illustration of the Normal and Poisson data generated in Snippet 5.18\relax }}{122}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces A contour plot showing the associations among X, Y, and Z\relax }}{94}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Visual representation of NumPy \href {https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt {.sin}} and \href {https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt {.cos}} functions as per Snippet 5.12.\relax }}{104}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces A visual illustration of the least-square estimation carried out in Snippet 5.16\relax }}{118}{figure.caption.51}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces A visual illustration of the Normal and Poisson data generated in Snippet 5.18\relax }}{126}{figure.caption.56}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces A stylized representation of a case-by-variable data structure\relax }}{129}{figure.caption.54}%
-\contentsline {figure}{\numberline {6.2}{\ignorespaces A stylized representation of a `wide' data structure\relax }}{155}{figure.caption.56}%
-\contentsline {figure}{\numberline {6.3}{\ignorespaces A stylized representation of a `long' data structure\relax }}{156}{figure.caption.57}%
+\contentsline {figure}{\numberline {6.1}{\ignorespaces A stylized representation of a case-by-variable data structure\relax }}{133}{figure.caption.59}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces A stylized representation of a `wide' data structure\relax }}{159}{figure.caption.61}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces A stylized representation of a `long' data structure\relax }}{160}{figure.caption.62}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

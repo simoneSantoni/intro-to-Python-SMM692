@@ -802,33 +802,105 @@ print(2 + 4)
 
 \begin{paracol}{2}
 	\question{\raggedright How do I create a Python environment?}
-	\note{The procedure to create a Python environment depends on the package manager we use (hence, the Python installation we have). For instance, to create a Python environment using \texttt{conda}, we can run the following command in the shell:
+	\note{
+	The procedure to create a Python environment depends on the package
+	manager we use (hence, the Python installation we have).  Here, I focus
+	on the the case in which conda is the adopted package manager.\footnote{\texttt{pip} users are warmly encouraged to read the \href{https://docs.python.org/3/tutorial/venv.html}{Virtual Environments and Packages} section of the official Python Tutorial.}
+	}
+\end{paracol} 
+
+\begin{paracol}{2}
+	\question{\raggedright How do I use \texttt{conda} from the command line to create and populate a Python environment?}
+	\note{
+	To create a Python environment using \texttt{conda}, we can run the following command in the shell:
+	
+	\vspace{1em}
 
 	\texttt{\$ conda create --name myenv python=3.X}
 
-	It is also possible to create a Python environment from within the Anaconda Navigator (Figures \ref{fig:anaconda_venv_0} and \ref{fig:anaconda_venv_1} illustrate the procedure pictorially).
+	\vspace{1em}
+
+	where \texttt{conda} is the name of the package manager, \texttt{create}
+	is the operation to run,\footnote{The
+	\href{https://docs.conda.io/projects/conda/en/latest/commands.html}{Conda
+	Command reference} illustrates the various commands Conda provides for
+	managing packages and environments.} \texttt{myenv} is the name of the
+	environment, and \texttt{python=3.X} is the version of Python to use (e.g., 3.10).
+	
+	\quad To use the newly created environment, one as to activate it by running the following command in the shell:
+
+	\vspace{1em}
+
+	\texttt{\$ conda activate myenv}
+
+	\vspace{1em}
+	
+	\quad At this point, one can install packages in the activated environment using the following command:
+
+	\vspace{1em}
+
+	\texttt{\$ conda install package\_name}
+
+	\vspace{1em}
+
+	\quad Figures \ref{fig:conda_env_cl_0} and \ref{fig:conda_env_cl_1} show a concrete example wherein a new Python environment is created and populated using \texttt{conda} from the command line.
 	}
 \end{paracol}
 
-\begin{sidewaysfigure}
-	\includegraphics[width=0.45\textwidth]{anaconda_nav_env_0.png}
-	\caption{}
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.70\textwidth]{conda_env_0}
+	\caption{A screenshot showing how to create a Python environment using \texttt{conda} from the command line}
+	\label{fig:conda_env_cl_0}
+\end{figure}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{conda_env_1}
+	\caption{A screenshot showing how to populate a Python environment using \texttt{conda} from the command line}
+	\label{fig:conda_env_cl_1}
+\end{figure}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright How do I use Anaconda Navigator to create and populate a Python environment?}
+	\note{
+	\quad It is also possible to create a Python environment from within the Anaconda Navigator (Figures \ref{fig:anaconda_venv_0} and \ref{fig:anaconda_venv_1} provide a pictorial illustration of how to create a new environment and populate it with modules).
+	}
+\end{paracol}
+
+\begin{sidewaysfigure}[!htbp]
+	\includegraphics[width=1\textwidth]{anaconda_nav_env_0.png}
+	\caption{A screenshot showing how to create a new environement from within the `Environments' section of Anaconda Navigator.}
 	\label{fig:anaconda_venv_0}
 \end{sidewaysfigure}
 
-\begin{sidewaysfigure}
-	\includegraphics[width=0.45\textwidth]{anaconda_nav_env_1.png}
-	\caption{}
+\begin{sidewaysfigure}[!htbp]
+	\includegraphics[width=1\textwidth]{anaconda_nav_env_1.png}
+	\caption{A screenshot showing how to add Python modules to a (newly created) environment from within the `Environments' section of Anaconda Navigator.}
 	\label{fig:anaconda_venv_1}
 \end{sidewaysfigure}
+\clearpage
+
+\theendnotes
 
 \chapter{Python Language Fundamentals}
 \label{ch:fundamentals}
 
+\par\noindent\rule{\textwidth}{0.4pt}
+
+At the end of the chapter, you will be able to:
+
+\begin{itemize}
+	\item Get Python work in your machine
+	\item Run Python code from a script file and interactively 
+	\item Configure a Python environment
+\end{itemize}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
 \vspace{1em}
 
-
-\vspace{1em}
 
 \section{Variables}
 
