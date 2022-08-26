@@ -779,7 +779,7 @@ print(2 + 4)
 		\item The more likely inconsistencies will arise within the web of dependencies; that is
 		\begin{itemize}
 		\item The less likely we will be able to install the modules we need
-		\item The more likley modules previosuly installed may stop to work
+		\item The more likley modules previosuly installed will stop to work
 		\end{itemize}
 	\end{itemize}
 	If we care about not breaking some essential features of the operating system, then, we should avoid using `syteme Python' for or projects requiring Python.
@@ -802,8 +802,25 @@ print(2 + 4)
 
 \begin{paracol}{2}
 	\question{\raggedright How do I create a Python environment?}
-	\note{}
+	\note{The procedure to create a Python environment depends on the package manager we use (hence, the Python installation we have). For instance, to create a Python environment using \texttt{conda}, we can run the following command in the shell:
+
+	\texttt{\$ conda create --name myenv python=3.X}
+
+	It is also possible to create a Python environment from within the Anaconda Navigator (Figures \ref{fig:anaconda_venv_0} and \ref{fig:anaconda_venv_1} illustrate the procedure pictorially).
+	}
 \end{paracol}
+
+\begin{sidewaysfigure}
+	\includegraphics[width=0.45\textwidth]{anaconda_nav_env_0.png}
+	\caption{}
+	\label{fig:anaconda_venv_0}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}
+	\includegraphics[width=0.45\textwidth]{anaconda_nav_env_1.png}
+	\caption{}
+	\label{fig:anaconda_venv_1}
+\end{sidewaysfigure}
 
 \chapter{Python Language Fundamentals}
 \label{ch:fundamentals}
