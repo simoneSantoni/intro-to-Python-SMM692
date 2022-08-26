@@ -546,7 +546,7 @@ At the end of the chapter, you will be able to:
 \section{How Python Runs Programs}
 
 \begin{paracol}{2}
-	\question{Is Python a programming language or an interprete?}
+	\question{Is Python a programming language or an interpreter?}
 	\note{Short answer: BOTH. Typically, we refer to Python as a programming language. However, Python is also a software package called an interpreter, a kind of program that executes other programs. When we write a Python program, the Python interpreter reads your program and carries out the instructions it contains. In effect, the interpreter is a layer of software logic between our code and the computer hardware on our machine.
 	}
 \end{paracol}	
@@ -595,7 +595,7 @@ At the end of the chapter, you will be able to:
 \section{How We Run Python Programs}
 
 \begin{paracol}{2}
-	\question{\raggedright What are the alterntive ways to run some Python code?}
+	\question{\raggedright What are the alternative ways to run some Python code?}
 	\note{There are two alternatives:
 	\begin{itemize}
 		\item The non-interactive way consists of preparing a Python script and running it from the command line
@@ -615,7 +615,7 @@ At the end of the chapter, you will be able to:
 
 	\quad Snippet 1.1 shows a minimal Python script. Such a script can be created using the built-in text editor of your operating system or an advanced text editor such as \href{https://atom.io}{Atom}, \href{https://www.gnu.org/software/emacs/}{Emacs}, \href{https://www.gnu.org/software/emacs/}{Vim}/\href{https://neovim.io}{Neovim}, \href{https://www.sublimetext.com}{Sublime Text}, and \href{https://code.visualstudio.com}{Visual Studio Code}.
 
-	\quad Once the script is saved to a file with extension \texttt{.py}, we can execute it from the command line by typing the following command in the shell session of our choice:
+	\quad Once the script is saved to a file with extension \texttt{.py}, you can execute it from the command line by typing the following command in the shell session of our choice:
 
 	\vspace{1em}
 
@@ -623,9 +623,21 @@ At the end of the chapter, you will be able to:
 
 	\vspace{1em}
 
-	\quad Figure \ref{fig:simple_script} shows how to run the Python script containing the code displayed in Snippet 1.1 (named \texttt{simple_script.py}. The first line of code includes the command \texttt{\$ python} which instructs the shell to execute the script. The second line of code includes the name of the script to be executed.
+	\quad Let us unpack that command. The \texttt{\$} symbol denotes the
+	statement has to be run in a shell session; the \texttt{python} command
+	tells shell to use the Python interpreter to evaluate the script;
+	\texttt{filename.py} is the file name of the script. Figure
+	\ref{fig:simple_script} shows how to run the Python script containing
+	the code displayed in Snippet 1.1 (named \texttt{simple\_script.py}.
+	\footnote{The example shown in the screenshot assumes the Python script
+	\texttt{snmple\_script.py} is saved in the current working directory. If
+	the script is saved in a different directory, you have to specify the
+	full path to the script in the command line.} It is self-evident the
+	outcome of the script is disaplyed in the active shell session (we will
+	see the \texttt{print} function in action many times over the next few
+	chapters).
 	}
-\end{paracol}
+	\end{paracol}
 
 \begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 1.1 --- a minimal Python script}
 # Print a string object
@@ -635,7 +647,7 @@ print("Bazinga")
 print(2 + 4)
 \end{pythoncode}
 
-\begin{figure}
+\begin{figure}[!htbp]
 	\begin{center}
 		\includegraphics[width=0.5\textwidth]{simple_script}
 	\end{center}
@@ -643,11 +655,155 @@ print(2 + 4)
 	\label{fig:simple_script}
 \end{figure}
 
-\
+\begin{paracol}{2}
+	\question{\raggedright How do I run a Python script in the interactive way?}
+	\note{Mainly, there are three ways to do that:
+	\begin{itemize}
+		\item Running a Python shell in the terminal
+		\item Running an IPyhton shell in the terminal
+		\item Interacting with a Python or IPython shell through and Integrated Development Environment (IDE)
+	\end{itemize}
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do I run Python code interactively using a Python or IPython shell?}
+	\note{The first step is opening the terminal emulator of your choice (e.g., Windows Terminal, Cmder, Iterm, Terminator, Kitty). Then, you run the command \texttt{\$ python} or \texttt{\$ ipython} to start a Python and IPython shell respectively (see Figures \ref{fig:python_session} and \ref{fig:ipython_session}).
+	}
+\end{paracol}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{python_session}
+	\caption{A screenshot of an interactive Python shell}
+	\label{fig:python_session}
+\end{figure}
+\clearpage
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.75\textwidth]{ipython_session}
+	\caption{A screenshot of an interactive IPython shell}
+	\label{fig:ipython_session}
+\end{figure}
+
+\begin{paracol}{2}
+	\question{\raggedright What are the most popular Python IDEs?}
+	\note{There are plenty of Python IDEs in the market, including:
+	
+	\begin{itemize}
+		\item Colab (online)
+		\item IDLE
+		\item Datalore (online)
+		\item Jupyter/Jupyterlab 
+		\item PyCharm
+		\item Qt Console
+		\item Spyder
+		\item Thonny
+		\item Wing
+	\end{itemize}
+
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Shall I start using Jupyter?}
+	\note{Based on my experience, Jupyter sustains novices' programming learning in at least two ways. First, the graphical interface of a Jupyter notebook (see Figure \ref{fig:jupyter_session} allows learners to embrace a trial and error approach to coding by dissecting a script into manageable snippets --- or even single lines --- that can be better examined, understood, and tested. Second, the text boxes and rich media content typically included in a notebook provide learners with critical cognitive anchors to understand a script's logical structure and background.
+
+	}
+\end{paracol}
+\clearpage
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{jupyter}
+	\caption{A screenshot of a Jupyter notebook session}
+	\label{fig:jupyter_session}
+\end{figure}	
+
+\begin{paracol}{2}
+	\question{\raggedright Can I turn an advanced text editor into a Python IDE?}
+	\note{Of course. By installing a couple of plugins, the following (advanced) text editors can turn into Python IDEs
+	
+	\begin{itemize}
+		\item Emacs 
+		\item Vm/Neovim 
+		\item Visual Studio Code (VSCode)
+	\end{itemize}
+
+	Figures \ref{fig:ipython_in_vscode} and \ref{fig:jupyter_in_vscode} show how to run an IPython and Jupyter session in VSCode respectively.
+	}
+\end{paracol}	
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{vscode}
+	\caption{A screenshot of an interactve IPython shell in Visual Studio Code}
+	\label{fig:ipython_in_vscode}
+\end{figure}	
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{jupyter_in_vscode}
+	\caption{A screenshot of a Jupyter notebook session in Visual Studio Code}
+	\label{fig:jupyter_in_vscode}
+\end{figure}	
+\clearpage
 
 \section{Managing Python Environments}
 
-$\ldots$
+\begin{paracol}{2}
+	\question{\raggedright What is a Python environment?}
+	\note{A Python environment is a collection of Python packages and their dependencies. In other words, a Python environment is a self-contained directory that contains a Python interpreter, a set of Python packages, and their dependencies.
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Why should I use a Python environment?}
+	\note{Mainly, there are two reasons:
+	\begin{enumerate}
+		\item To protect the system-wise installation of Python
+		\item To create collections of Python modules to deploy in specific projects/types of projects 
+	\end{enumerate}
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright Why should I protect my system Python?}
+	\note{
+	The large majoity of operating systems come with Python installed by default. Such an installation is called `system Python' and is responsible for a large number of essential operating systems processes. 
+
+	\quad Every time we install a new Python module $A$, the package manager (e.g, conda) checks the libraries on which $A$ depends. If a dependency $D(A)$ is not installed, the package manager will install it for us. Since a single module can depend on many libraries, the larger the number of libraries:
+	\begin{itemize}
+		\item The longer the installation process (checking te web of dependencies take substantial time!)
+		\item The more likely inconsistencies will arise within the web of dependencies; that is
+		\begin{itemize}
+		\item The less likely we will be able to install the modules we need
+		\item The more likley modules previosuly installed may stop to work
+		\end{itemize}
+	\end{itemize}
+	If we care about not breaking some essential features of the operating system, then, we should avoid using `syteme Python' for or projects requiring Python.
+	}
+\end{paracol}
+\clearpage
+
+\begin{paracol}{2}
+	\question{\raggedright Why do Python environments work well for specific projects?}
+	\note{
+	% A Python environment is a Python installation that has nothing to do with `system Python.' In other words, a Python environments is not used by default for any processes regarding the operating systems
+	% \end{itemize}
+	Typically, we create a Python environment to carry out a specific project or a class of projects (e.g., Machine Learning projects). The advantage is twofold:
+	\begin{itemize}
+		\item Reliability $\rightarrow$ the web of dependencies is relatively simple insofar as we install only the few modules that are required by the project or project class. Likely as not, we will not come across installation issues!
+		\item Reproducibility $\rightarrow$ the environment explicates the modules are necessary to carry out a certain project. Hence, a user who wants to reproduce our project's results knows which modules to install
+	\end{itemize}
+	}
+\end{paracol}
+
+\begin{paracol}{2}
+	\question{\raggedright How do I create a Python environment?}
+	\note{}
+\end{paracol}
 
 \chapter{Python Language Fundamentals}
 \label{ch:fundamentals}

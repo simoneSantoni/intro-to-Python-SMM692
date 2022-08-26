@@ -7,53 +7,53 @@
 \contentsline {section}{\numberline {2.1}Installing Python}{17}{section.2.1}%
 \contentsline {section}{\numberline {2.2}How Python Runs Programs}{20}{section.2.2}%
 \contentsline {section}{\numberline {2.3}How We Run Python Programs}{21}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Managing Python Environments}{21}{section.2.4}%
-\contentsline {chapter}{\numberline {3}Python Language Fundamentals}{23}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Variables}{23}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Objects}{23}{section.3.2}%
-\contentsline {section}{\numberline {3.3}References}{23}{section.3.3}%
-\contentsline {chapter}{\numberline {4}Python Objects}{25}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Number Type Fundamentals}{26}{section.4.1}%
-\contentsline {section}{\numberline {4.2}String Type Fundamentals}{33}{section.4.2}%
-\contentsline {section}{\numberline {4.3}List and Dictionaries}{41}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Dictionaries}{45}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Tuples}{48}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Sets}{50}{section.4.6}%
-\contentsline {section}{\numberline {4.7}Files}{52}{section.4.7}%
-\contentsline {section}{\numberline {4.8}Python Statements and Syntax}{55}{section.4.8}%
-\contentsline {section}{\numberline {4.9}Control Flow (or If-Then Statements)}{58}{section.4.9}%
-\contentsline {section}{\numberline {4.10}While and For Loops}{60}{section.4.10}%
-\contentsline {section}{\numberline {4.11}Iterations and Comprehensions}{64}{section.4.11}%
-\contentsline {chapter}{\numberline {5}Technical \& Scientific Computation with NumPy}{69}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Installing NumPy}{69}{section.5.1}%
-\contentsline {section}{\numberline {5.2}NumPy \texttt {ndarray}}{69}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Array Creation Routines}{75}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Array Manipulation Routines}{90}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Universal Functions in NumPy}{92}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Mathematical Functions}{92}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Statistics}{94}{section.5.7}%
-\contentsline {section}{\numberline {5.8}Linear Algebra}{100}{section.5.8}%
-\contentsline {section}{\numberline {5.9}Pseudorandom Number Generation}{109}{section.5.9}%
-\contentsline {section}{\numberline {5.10}File Input and Output (IO) with \texttt {ndarrays}}{117}{section.5.10}%
-\contentsline {chapter}{\numberline {6}Data Management with Pandas}{121}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Pandas 101}{121}{section.6.1}%
-\contentsline {section}{\numberline {6.2}The Pandas DataFrame}{123}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Checking a DataFrame's Attributes}{128}{section.6.3}%
-\contentsline {section}{\numberline {6.4}The Anatomy of a DataFrame}{130}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Querying DataFrames}{133}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Manipulating DataFrame Columns}{136}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Data Types and Pandas}{143}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Handling `Time' Data in Pandas}{144}{section.6.8}%
-\contentsline {section}{\numberline {6.9}Shaping and Reshaping DataFrames}{149}{section.6.9}%
-\contentsline {section}{\numberline {6.10}Group By Part I: Data Aggregation}{153}{section.6.10}%
-\contentsline {section}{\numberline {6.11}Group By Part II: Data Transformation}{155}{section.6.11}%
-\contentsline {section}{\numberline {6.12}Working with Multiple DataFrames}{157}{section.6.12}%
-\contentsline {section}{\numberline {6.13}File Input and Output (IO) with Pandas}{161}{section.6.13}%
-\contentsline {chapter}{\numberline {7}Coda}{167}{chapter.7}%
-\contentsline {chapter}{Appendices}{}{section*.58}
-\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{171}{appendix.a.A}%
-\contentsline {section}{\numberline {A.1}Escapes}{171}{section.a.A.1}%
-\contentsline {section}{\numberline {A.2}String Methods}{172}{section.a.A.2}%
-\contentsline {section}{\numberline {A.3}NumPy Array Manipulation Routines}{174}{section.a.A.3}%
-\contentsline {section}{\numberline {A.4}Pandas Features for Handling Time-Related Data}{180}{section.a.A.4}%
-\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{183}{appendix.a.B}%
+\contentsline {section}{\numberline {2.4}Managing Python Environments}{26}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Python Language Fundamentals}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Variables}{29}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Objects}{29}{section.3.2}%
+\contentsline {section}{\numberline {3.3}References}{29}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Python Objects}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Number Type Fundamentals}{32}{section.4.1}%
+\contentsline {section}{\numberline {4.2}String Type Fundamentals}{39}{section.4.2}%
+\contentsline {section}{\numberline {4.3}List and Dictionaries}{47}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Dictionaries}{51}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Tuples}{54}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Sets}{56}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Files}{58}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Python Statements and Syntax}{61}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Control Flow (or If-Then Statements)}{64}{section.4.9}%
+\contentsline {section}{\numberline {4.10}While and For Loops}{66}{section.4.10}%
+\contentsline {section}{\numberline {4.11}Iterations and Comprehensions}{70}{section.4.11}%
+\contentsline {chapter}{\numberline {5}Technical \& Scientific Computation with NumPy}{75}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Installing NumPy}{75}{section.5.1}%
+\contentsline {section}{\numberline {5.2}NumPy \texttt {ndarray}}{75}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Array Creation Routines}{81}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Array Manipulation Routines}{96}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Universal Functions in NumPy}{98}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Mathematical Functions}{98}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Statistics}{100}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Linear Algebra}{106}{section.5.8}%
+\contentsline {section}{\numberline {5.9}Pseudorandom Number Generation}{115}{section.5.9}%
+\contentsline {section}{\numberline {5.10}File Input and Output (IO) with \texttt {ndarrays}}{123}{section.5.10}%
+\contentsline {chapter}{\numberline {6}Data Management with Pandas}{127}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Pandas 101}{127}{section.6.1}%
+\contentsline {section}{\numberline {6.2}The Pandas DataFrame}{129}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Checking a DataFrame's Attributes}{134}{section.6.3}%
+\contentsline {section}{\numberline {6.4}The Anatomy of a DataFrame}{136}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Querying DataFrames}{139}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Manipulating DataFrame Columns}{142}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Data Types and Pandas}{149}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Handling `Time' Data in Pandas}{150}{section.6.8}%
+\contentsline {section}{\numberline {6.9}Shaping and Reshaping DataFrames}{155}{section.6.9}%
+\contentsline {section}{\numberline {6.10}Group By Part I: Data Aggregation}{159}{section.6.10}%
+\contentsline {section}{\numberline {6.11}Group By Part II: Data Transformation}{161}{section.6.11}%
+\contentsline {section}{\numberline {6.12}Working with Multiple DataFrames}{163}{section.6.12}%
+\contentsline {section}{\numberline {6.13}File Input and Output (IO) with Pandas}{167}{section.6.13}%
+\contentsline {chapter}{\numberline {7}Coda}{173}{chapter.7}%
+\contentsline {chapter}{Appendices}{}{section*.63}
+\contentsline {chapter}{Appendix \numberline {A}Cheat Sheets}{177}{appendix.a.A}%
+\contentsline {section}{\numberline {A.1}Escapes}{177}{section.a.A.1}%
+\contentsline {section}{\numberline {A.2}String Methods}{178}{section.a.A.2}%
+\contentsline {section}{\numberline {A.3}NumPy Array Manipulation Routines}{180}{section.a.A.3}%
+\contentsline {section}{\numberline {A.4}Pandas Features for Handling Time-Related Data}{186}{section.a.A.4}%
+\contentsline {chapter}{Appendix \numberline {B}Collaborative and Versioning Tools}{189}{appendix.a.B}%

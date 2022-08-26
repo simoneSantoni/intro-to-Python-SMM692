@@ -1,100 +1,99 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2022.1.11)  25 AUG 2022 16:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  26 AUG 2022 09:20
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
 **notes.tex
 (./notes.tex
 LaTeX2e <2020-10-01> patch level 4
-L3 programming layer <2021-02-18>
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/book.cls
+L3 programming layer <2021-01-09> xparse <2020-03-03>
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/bk11.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk11.clo
 File: bk11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
-\c@part=\count179
-\c@chapter=\count180
-\c@section=\count181
-\c@subsection=\count182
-\c@subsubsection=\count183
-\c@paragraph=\count184
-\c@subparagraph=\count185
-\c@figure=\count186
-\c@table=\count187
+\c@part=\count177
+\c@chapter=\count178
+\c@section=\count179
+\c@subsection=\count180
+\c@subsubsection=\count181
+\c@paragraph=\count182
+\c@subparagraph=\count183
+\c@figure=\count184
+\c@table=\count185
 \abovecaptionskip=\skip47
 \belowcaptionskip=\skip48
 \bibindent=\dimen138
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen139
 \Gin@req@width=\dimen140
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count188
-\calc@Bcount=\count189
+\calc@Acount=\count186
+\calc@Bcount=\count187
 \calc@Adimen=\dimen141
 \calc@Bdimen=\dimen142
 \calc@Askip=\skip49
 \calc@Bskip=\skip50
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count190
+\calc@Ccount=\count188
 \calc@Cskip=\skip51
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.te
-x
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks18
 \pgfutil@tempdima=\dimen143
 \pgfutil@tempdimb=\dimen144
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-li
-sts.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
+ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box47
-) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/pgf.revision.tex)
 Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
 ))
 Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks19
 \pgfkeys@temptoks=\toks20
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
-ode.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.t
+ex
 \pgfkeys@tmptoks=\toks21
 ))
 \pgf@x=\dimen145
@@ -109,41 +108,39 @@ ode.tex
 \pgf@yd=\dimen154
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count191
-\c@pgf@countb=\count192
-\c@pgf@countc=\count193
-\c@pgf@countd=\count194
+\c@pgf@counta=\count189
+\c@pgf@countb=\count190
+\c@pgf@countc=\count191
+\c@pgf@countd=\count192
 \t@pgf@toka=\toks22
 \t@pgf@tokb=\toks23
 \t@pgf@tokc=\toks24
-\pgf@sys@id@count=\count195
-
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+\pgf@sys@id@count=\count193
+ (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
 )
 Driver file for pgf: pgfsys-pdftex.def
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.d
-ef
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
 File: pgfsys-pdftex.def 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-p
-df.def
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.de
+f
 File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
 )))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
-code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
+tex
 File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfsyssoftpath@smallbuffer@items=\count196
-\pgfsyssoftpath@bigbuffer@items=\count197
+\pgfsyssoftpath@smallbuffer@items=\count194
+\pgfsyssoftpath@bigbuffer@items=\count195
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
-code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
+tex
 File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)) (/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
@@ -157,42 +154,43 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen155
-\pgfmath@count=\count198
+\pgfmath@count=\count196
 \pgfmath@box=\box48
 \pgfmath@toks=\toks25
 \pgfmath@stack@operand=\toks26
 \pgfmath@stack@operation=\toks27
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.
-tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonomet
+ric.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.cod
+e.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison
 .code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigo
-nometric.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.rando
-m.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.compa
-rison.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.
-code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round
-.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.
-code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
-erarithmetics.code.tex)))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count199
-)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
-de.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.
+tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
+thmetics.code.tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count197
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
+x
 File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@picminx=\dimen156
 \pgf@picmaxx=\dimen157
@@ -209,128 +207,119 @@ File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@zx=\dimen168
 \pgf@zy=\dimen169
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconst
-ruct.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
+code.tex
 File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@path@lastx=\dimen170
 \pgf@path@lasty=\dimen171
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage
-.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
+.tex
 File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@shorten@end@additional=\dimen172
 \pgf@shorten@start@additional=\dimen173
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.co
-de.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
+x
 File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfpic=\box49
 \pgf@hbox=\box50
 \pgf@layerbox@main=\box51
-\pgf@picture@serial@count=\count266
+\pgf@picture@serial@count=\count198
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
-ate.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
+ode.tex
 File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgflinewidth=\dimen174
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransform
-ations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
+s.code.tex
 File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@pt@x=\dimen175
 \pgf@pt@y=\dimen176
 \pgf@pt@temp=\dimen177
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.cod
-e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.c
-ode.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.t
+ex
 File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathproce
-ssing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing
+.code.tex
 File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.co
-de.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
+x
 File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfarrowsep=\dimen178
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.cod
-e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@max=\dimen179
-\pgf@sys@shading@range@num=\count267
-\pgf@shadingcount=\count268
+\pgf@sys@shading@range@num=\count199
+\pgf@shadingcount=\count266
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
-e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.
-code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.
+tex
 File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfexternal@startupbox=\box52
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.co
-de.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.te
+x
 File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretranspare
-ncy.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.c
+ode.tex
 File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.
-code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.
+tex
 File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.
-tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
 File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.cod
-e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfnodeparttextbox=\box53
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.
-tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--0-65.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
+.sty
 Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
 \pgf@nodesepstart=\dimen180
 \pgf@nodesepend=\dimen181
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version
--1-18.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
+.sty
 Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
-))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/math/pgfmath.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/usr/share/texlive/texmf-dist/tex/latex/pgf/math/pgfmath.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
 \pgffor@iter=\dimen182
 \pgffor@skip=\dimen183
 \pgffor@stack=\toks28
 \pgffor@toks=\toks29
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.cod
-e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
-dlers.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
+.code.tex
 File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@plot@mark@count=\count269
+\pgf@plot@mark@count=\count267
 \pgfplotmarksize=\dimen184
 )
 \tikz@lastx=\dimen185
@@ -345,103 +334,102 @@ File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \tikz@figbox@bg=\box55
 \tikz@tempbox=\box56
 \tikz@tempbox@bg=\box57
-\tikztreelevel=\count270
-\tikznumberofchildren=\count271
-\tikznumberofcurrentchild=\count272
-\tikz@fig@count=\count273
+\tikztreelevel=\count268
+\tikznumberofchildren=\count269
+\tikznumberofcurrentchild=\count270
+\tikz@fig@count=\count271
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
-e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfmatrixcurrentrow=\count274
-\pgfmatrixcurrentcolumn=\count275
-\pgf@matrix@numberofcolumns=\count276
+\pgfmatrixcurrentrow=\count272
+\pgfmatrixcurrentcolumn=\count273
+\pgf@matrix@numberofcolumns=\count274
 )
-\tikz@expandcount=\count277
+\tikz@expandcount=\count275
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarytopaths.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryarrows.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
-code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
+tex
 File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \arrowsize=\dimen193
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
-meta.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.
+code.tex
 File: pgflibraryarrows.meta.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfarrowinset=\dimen194
 \pgfarrowlength=\dimen195
 \pgfarrowwidth=\dimen196
 \pgfarrowlinewidth=\dimen197
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarycalc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarychains.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarychains.code.tex
 File: tikzlibrarychains.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarypositioning.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryquotes.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryquotes.code.tex
 File: tikzlibraryquotes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.geometric.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.geometric.code.tex
 File: tikzlibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.geometric.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.geometric.code.tex
 File: pgflibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.misc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.misc.code.tex
 File: tikzlibraryshapes.misc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.misc.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.misc.code.tex
 File: pgflibraryshapes.misc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.symbols.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.symbols.code.tex
 File: tikzlibraryshapes.symbols.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.symbols.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.symbols.code.tex
 File: pgflibraryshapes.symbols.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.arrows.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.arrows.code.tex
 File: tikzlibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.arrows.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.arrows.code.tex
 File: pgflibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.callouts.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.callouts.code.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryshapes.multipart.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.callouts.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.callouts.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryshapes.multipart.code.tex
 File: tikzlibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
-shapes.multipart.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshape
+s.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfnodepartlowerbox=\box58
 \pgfnodeparttwobox=\box59
@@ -464,105 +452,100 @@ File: pgflibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \pgfnodepartsixbox=\box76
 \pgfnodepartfivebox=\box77
 )))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/pgfplots/pgfplots.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/pgfplots/pgfplots.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
 Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
 \t@pgfplots@toka=\toks30
 \t@pgfplots@tokb=\toks31
 \t@pgfplots@tokc=\toks32
 \pgfplots@tmpa=\dimen198
-\c@pgfplots@coordindex=\count278
-\c@pgfplots@scanlineindex=\count279
+\c@pgfplots@coordindex=\count276
+\c@pgfplots@scanlineindex=\count277
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric
-.code.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.c
-ode.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplot
-soldpgfsupp_loader.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.cod
-e.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code
-.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
-liststructure.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
-liststructureext.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
-array.code.tex
-\c@pgfplotsarray@tmp=\count280
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
+.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldp
+gfsupp_loader.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructure.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotslists
+tructureext.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
+.code.tex
+\c@pgfplotsarray@tmp=\count278
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
-matrix.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstable
-shared.code.tex
-\c@pgfplotstable@counta=\count281
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
+x.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
+d.code.tex
+\c@pgfplotstable@counta=\count279
 \t@pgfplotstable@a=\toks33
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/liststructure/pgfplots
-deque.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.co
-de.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.da
-ta.code.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
 .code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplot
-s.surfshading.code.tex
-\c@pgfplotslibrarysurf@no=\count282
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.te
+x
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.co
+de.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code
+.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
+fshading.code.tex
+\c@pgfplotslibrarysurf@no=\count280
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots
-.surfshading.pgfsys-pdftex.def)))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.
-code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.cod
-e.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.c
-ode.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.c
-ode.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandle
-r.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.
-code.tex)))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.
-tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessin
-g.code.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.cod
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
+shading.pgfsys-pdftex.def)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.
+tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex
+))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.t
+ex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.t
+ex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.cod
+e.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.
+tex)))
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.cod
 e.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.
-tex)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.te
-x)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarydecorations.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduledecoration
-s.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex
+) (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex)
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
+e.tex
 \pgfdecoratedcompleteddistance=\dimen199
 \pgfdecoratedremainingdistance=\dimen256
 \pgfdecoratedinputsegmentcompleteddistance=\dimen257
 \pgfdecoratedinputsegmentremainingdistance=\dimen258
 \pgf@decorate@distancetomove=\dimen259
-\pgf@decorate@repeatstate=\count283
+\pgf@decorate@repeatstate=\count281
 \pgfdecorationsegmentamplitude=\dimen260
 \pgfdecorationsegmentlength=\dimen261
 )
 \tikz@lib@dec@box=\box78
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarydecorations.pathmorphing.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
-brarydecorations.pathmorphing.code.tex))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibrarydecorations.pathreplacing.code.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgfli
-brarydecorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count284
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathmorphing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathmorphing.code.tex))
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibrarydecorations.pathreplacing.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
+decorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count282
 \pgfplots@xmin@reg=\dimen262
 \pgfplots@xmax@reg=\dimen263
 \pgfplots@ymin@reg=\dimen264
@@ -570,38 +553,37 @@ brarydecorations.pathreplacing.code.tex))
 \pgfplots@zmin@reg=\dimen266
 \pgfplots@zmax@reg=\dimen267
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
-s/tikzlibraryplotmarks.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
+zlibraryplotmarks.code.tex
 File: tikzlibraryplotmarks.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmar
-ks.code.tex
+(/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.co
+de.tex
 File: pgflibraryplotmarks.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-)))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/fontawesome/fontawesome.sty
+))) (/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesome.sty
 Package: fontawesome 2016/05/15 v4.6.3.1 font awesome icons
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifxetex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifluatex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
 Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-ge
-neric.tex)
-(/usr/local/texlive/2021/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pd
-ftex.tex)) (/usr/local/texlive/2021/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-generic
+.tex)
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/fontawesomesymbols-pdftex.
+tex)) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/ifvtex.sty
+(/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count285
-\Gm@cntv=\count286
-\c@Gm@tempcnt=\count287
+\Gm@cnth=\count283
+\Gm@cntv=\count284
+\c@Gm@tempcnt=\count285
 \Gm@bindingoffset=\dimen268
 \Gm@wd@mp=\dimen269
 \Gm@odd@mp=\dimen270
@@ -612,34 +594,34 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutvoffset=\dimen275
 \Gm@dimlist=\toks34
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 Package: tcolorbox 2020/10/09 version 4.42 text color boxes
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/verbatim.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks35
 \verbatim@line=\toks36
 \verbatim@in@stream=\read3
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/environ/environ.sty
+(/usr/share/texlive/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+(/usr/share/texlive/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 \@envbody=\toks37
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count288
+\etb@tempcnta=\count286
 )
 \tcb@titlebox=\box79
 \tcb@upperbox=\box80
 \tcb@lowerbox=\box81
 \tcb@phantombox=\box82
-\c@tcbbreakpart=\count289
-\c@tcblayer=\count290
-\c@tcolorbox@number=\count291
+\c@tcbbreakpart=\count287
+\c@tcblayer=\count288
+\c@tcolorbox@number=\count289
 \tcb@temp=\box83
 \tcb@temp=\box84
 \tcb@temp=\box85
@@ -647,51 +629,51 @@ Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \tcb@out=\write4
 \tcb@record@out=\write5
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lineno/lineno.sty
+(/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count292
+\linenopenalty=\count290
 \output=\toks38
-\linenoprevgraf=\count293
+\linenoprevgraf=\count291
 \linenumbersep=\dimen276
 \linenumberwidth=\dimen277
-\c@linenumber=\count294
-\c@pagewiselinenumber=\count295
-\c@LN@truepage=\count296
-\c@internallinenumber=\count297
-\c@internallinenumbers=\count298
+\c@linenumber=\count292
+\c@pagewiselinenumber=\count293
+\c@LN@truepage=\count294
+\c@internallinenumber=\count295
+\c@internallinenumbers=\count296
 \quotelinenumbersep=\dimen278
 \bframerule=\dimen279
 \bframesep=\dimen280
 \bframebox=\box87
 LaTeX Info: Redefining \\ on input line 3056.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
 \@mathmargin=\skip52
 
 For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks39
 \ex@=\dimen281
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen282
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count299
+\inf@bad=\count297
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count300
-\leftroot@=\count301
+\uproot@=\count298
+\leftroot@=\count299
 LaTeX Info: Redefining \overline on input line 399.
-\classnum@=\count302
-\DOTSCASE@=\count303
+\classnum@=\count300
+\DOTSCASE@=\count301
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -700,15 +682,15 @@ LaTeX Info: Redefining \cdots on input line 620.
 \big@size=\dimen283
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count304
-\c@MaxMatrixCols=\count305
+\macc@depth=\count302
+\c@MaxMatrixCols=\count303
 \dotsspace@=\muskip16
-\c@parentequation=\count306
-\dspbrk@lvl=\count307
+\c@parentequation=\count304
+\dspbrk@lvl=\count305
 \tag@help=\toks40
-\row@=\count308
-\column@=\count309
-\maxfields@=\count310
+\row@=\count306
+\column@=\count307
+\maxfields@=\count308
 \andhelp@=\toks41
 \eqnshift@=\dimen284
 \alignsep@=\dimen285
@@ -723,111 +705,109 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
 LaTeX Info: Redefining \[ on input line 2923.
 LaTeX Info: Redefining \] on input line 2924.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/endnotes/endnotes.sty
+(/usr/share/texlive/texmf-dist/tex/latex/endnotes/endnotes.sty
 Package: endnotes 2020-01-02 endnotes package
-\c@endnote=\count311
+\c@endnote=\count309
 \endnotesep=\dimen290
 \@enotes=\write6
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/appendix/appendix.sty
+(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
-\c@@pps=\count312
-\c@@ppsavesec=\count313
-\c@@ppsaveapp=\count314
+\c@@pps=\count310
+\c@@ppsavesec=\count311
+\c@@ppsaveapp=\count312
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/minted/minted.sty
+(/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/fvextra/fvextra.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
 Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count315
+\FV@CodeLineNo=\count313
 \FV@InFile=\read4
 \FV@TabBox=\box90
-\c@FancyVerbLine=\count316
-\FV@StepNumber=\count317
+\c@FancyVerbLine=\count314
+\FV@StepNumber=\count315
 \FV@OutFile=\write7
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/upquote/upquote.sty
+(/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-\c@FV@TrueTabGroupLevel=\count318
-\c@FV@TrueTabCounter=\count319
+\c@FV@TrueTabGroupLevel=\count316
+\c@FV@TrueTabCounter=\count317
 \FV@TabBox@Group=\box91
 \FV@TmpLength=\skip55
-\c@FV@HighlightLinesStart=\count320
-\c@FV@HighlightLinesStop=\count321
-\FV@LoopCount=\count322
+\c@FV@HighlightLinesStart=\count318
+\c@FV@HighlightLinesStop=\count319
+\FV@LoopCount=\count320
 \FV@NCharsBox=\box92
 \FV@BreakIndent=\dimen291
-\FV@BreakIndentNChars=\count323
+\FV@BreakIndentNChars=\count321
 \FV@BreakSymbolSepLeft=\dimen292
-\FV@BreakSymbolSepLeftNChars=\count324
+\FV@BreakSymbolSepLeftNChars=\count322
 \FV@BreakSymbolSepRight=\dimen293
-\FV@BreakSymbolSepRightNChars=\count325
+\FV@BreakSymbolSepRightNChars=\count323
 \FV@BreakSymbolIndentLeft=\dimen294
-\FV@BreakSymbolIndentLeftNChars=\count326
+\FV@BreakSymbolIndentLeftNChars=\count324
 \FV@BreakSymbolIndentRight=\dimen295
-\FV@BreakSymbolIndentRightNChars=\count327
-\c@FancyVerbLineBreakLast=\count328
+\FV@BreakSymbolIndentRightNChars=\count325
+\c@FancyVerbLineBreakLast=\count326
 \FV@LineBox=\box93
 \FV@LineIndentBox=\box94
 \FV@LineWidth=\dimen296
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/shellesc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
 Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/catchfile/catchfile.sty
+(/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
 Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+(/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 ))
 runsystem(uname -s > "notes.w18")...executed.
 
-
-(./notes.w18)
+ (./notes.w18)
 runsystem(rm -- "notes.w18")...executed.
 
-)
-(/usr/local/texlive/2021/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/local/texlive/2021/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count329
-\decimalpart=\count330
+) (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty
+(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count327
+\decimalpart=\count328
 )
 Package: xstring 2019/02/06 v1.83 String manipulations (CT)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/framed/framed.sty
+(/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip56
 \fb@frw=\dimen297
@@ -835,19 +815,19 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen299
 \FrameSep=\dimen300
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/newfloat/newfloat.sty
+(/usr/share/texlive/texmf-dist/tex/latex/newfloat/newfloat.sty
 Package: newfloat 2019/09/02 v1.1l Defining new floating environments (AR)
 Package newfloat Info: Document class `book' detected.
 )
 \minted@appexistsfile=\read5
 \minted@bgbox=\box95
 \minted@code=\write8
-\c@minted@FancyVerbLineTemp=\count331
-\c@minted@pygmentizecounter=\count332
+\c@minted@FancyVerbLineTemp=\count329
+\c@minted@pygmentizecounter=\count330
 Package newfloat Info: New float `listing' with options `fileext=lol,placement=
 tbp' on input line 1151.
-\c@listing=\count333
-\newfloat@ftype=\count334
+\c@listing=\count331
+\newfloat@ftype=\count332
 Package newfloat Info: float type `listing'=8 on input line 1151.
 )
 runsystem(mkdir -p _minted-notes)...executed.
@@ -872,26 +852,22 @@ Adding the global options:
 to your \documentclass declaration may fix this.
 Try typing  <return>  to proceed.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbminted.code.tex
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbminted.code.tex
 Library (tcolorbox): 'tcbminted.code.tex' version '4.42'
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.te
-x
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcblistingscore.code.tex
 Library (tcolorbox): 'tcblistingscore.code.tex' version '4.42'
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbprocessing.code.tex
 Library (tcolorbox): 'tcbprocessing.code.tex' version '4.42'
 )
-\c@tcblisting=\count335
-)) (/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
+\c@tcblisting=\count333
+)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '4.42'
 \tcb@waterbox=\box96
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
+(/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '4.42'
-))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
+)) (/usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
 Library (tcolorbox): 'tcbbreakable.code.tex' version '4.42'
-(/usr/local/texlive/2021/texmf-dist/tex/generic/oberdiek/pdfcol.sty
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdfcol.sty
 Package: pdfcol 2019/12/29 v1.6 Handle new color stacks for pdfTeX (HO)
 )
 Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
@@ -899,7 +875,7 @@ Package pdfcol Info: New color stack `tcb@breakable' = 1 on input line 23.
 \tcb@totalupperbox=\box98
 \tcb@totallowerbox=\box99
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen301
 \lightrulewidth=\dimen302
@@ -911,18 +887,18 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen308
 \cmidrulekern=\dimen309
 \defaultaddspace=\dimen310
-\@cmidla=\count336
-\@cmidlb=\count337
+\@cmidla=\count334
+\@cmidlb=\count335
 \@aboverulesep=\dimen311
 \@belowrulesep=\dimen312
-\@thisruleclass=\count338
-\@lastruleclass=\count339
+\@thisruleclass=\count336
+\@lastruleclass=\count337
 \@thisrulewidth=\dimen313
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/tabularx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \col@sep=\dimen314
 \ar@mcellbox=\box100
@@ -937,17 +913,16 @@ Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
 \TX@old@col=\dimen318
 \TX@target=\dimen319
 \TX@delta=\dimen320
-\TX@cols=\count340
+\TX@cols=\count338
 \TX@ftn=\toks45
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/ragged2e/ragged2e.sty
-Package: ragged2e 2021/02/05 v3.0 ragged2e Package
+(/usr/share/texlive/texmf-dist/tex/latex/ragged2e/ragged2e.sty
+Package: ragged2e 2019/07/28 v2.2 ragged2e Package (MS)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/everysel/everysel.sty
+(/usr/share/texlive/texmf-dist/tex/latex/everysel/everysel.sty
 Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/everysel/everysel-2011-10-28.sty)
-)
+(/usr/share/texlive/texmf-dist/tex/latex/everysel/everysel-2011-10-28.sty))
 \CenteringLeftskip=\skip59
 \RaggedLeftLeftskip=\skip60
 \RaggedRightLeftskip=\skip61
@@ -962,55 +937,54 @@ Package: everysel 2021/01/20 v2.1 EverySelectfont Package (MS)
 \RaggedLeftParindent=\skip70
 \RaggedRightParindent=\skip71
 \JustifyingParindent=\skip72
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
-Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+)
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/01/29 v2.7 Span multiple rows of a table
 \multirow@colwidth=\skip73
-\multirow@cntb=\count341
+\multirow@cntb=\count339
 \multirow@dima=\skip74
 \bigstrutjot=\dimen321
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/siunitx/siunitx.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
-Package: expl3 2021-02-18 L3 programming layer (loader) 
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-01-09 L3 programming layer (loader) 
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count342
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2020-01-29 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count340
 \l__pdf_internal_box=\box102
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-
-01.sty
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.
-tex)))
-Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-10-27 L3 Experimental document command parser
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
-Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex))
+Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
+(/usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-10-27 LaTeX2e option processing using LaTeX3 keys
 )
 \l__siunitx_tmp_box=\box103
 \l__siunitx_tmp_dim=\dimen322
-\l__siunitx_tmp_int=\count343
-\l__siunitx_number_mantissa_length_int=\count344
-\l__siunitx_number_uncert_length_int=\count345
-\l__siunitx_round_int=\count346
-\l__siunitx_process_decimal_int=\count347
-\l__siunitx_process_uncertainty_int=\count348
-\l__siunitx_process_fixed_int=\count349
-\l__siunitx_process_integer_min_int=\count350
-\l__siunitx_process_precision_int=\count351
-\l__siunitx_group_min_int=\count352
+\l__siunitx_tmp_int=\count341
+\l__siunitx_number_mantissa_length_int=\count342
+\l__siunitx_number_uncert_length_int=\count343
+\l__siunitx_round_int=\count344
+\l__siunitx_process_decimal_int=\count345
+\l__siunitx_process_uncertainty_int=\count346
+\l__siunitx_process_fixed_int=\count347
+\l__siunitx_process_integer_min_int=\count348
+\l__siunitx_process_precision_int=\count349
+\l__siunitx_group_min_int=\count350
 \l__siunitx_angle_marker_box=\box104
 \l__siunitx_angle_unit_box=\box105
 \l__siunitx_angle_marker_dim=\dimen323
 \l__siunitx_angle_unit_dim=\dimen324
-\l__siunitx_unit_int=\count353
-\l__siunitx_unit_denominator_int=\count354
-\l__siunitx_unit_numerator_int=\count355
-\l__siunitx_unit_prefix_int=\count356
-\l__siunitx_unit_prefix_base_int=\count357
-\l__siunitx_unit_prefix_gram_int=\count358
-\l__siunitx_number_product_int=\count359
+\l__siunitx_unit_int=\count351
+\l__siunitx_unit_denominator_int=\count352
+\l__siunitx_unit_numerator_int=\count353
+\l__siunitx_unit_prefix_int=\count354
+\l__siunitx_unit_prefix_base_int=\count355
+\l__siunitx_unit_prefix_gram_int=\count356
+\l__siunitx_number_product_int=\count357
 \c__siunitx_one_fill_skip=\skip75
 \l__siunitx_table_unit_align_skip=\skip76
 \l__siunitx_table_exponent_dim=\dimen325
@@ -1028,31 +1002,32 @@ Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
 \l__siunitx_table_result_box=\box109
 \l__siunitx_table_number_align_skip=\skip77
 \l__siunitx_table_text_align_skip=\skip78
-(/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator.sty
+
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator.sty
 Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex
-(/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
 \XKV@toks=\toks46
 \XKV@tempa@toks=\toks47
 )
-\XKV@depth=\count360
+\XKV@depth=\count358
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
 -ends (calc, etex, pgfmath)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/trimclip.sty
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/trimclip.sty
 Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/collectbox/collectbox.sty
+(/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box110
 )
@@ -1062,7 +1037,7 @@ Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \tc@ury=\dimen337
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+(/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 ))
 \adjbox@Width=\dimen338
@@ -1074,32 +1049,33 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 \adjbox@pdepth=\dimen344
 \adjbox@ptotalheight=\dimen345
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count361
+\c@checkoddpage=\count359
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/varwidth/varwidth.sty
+(/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box111
-\sift@deathcycles=\count362
+\sift@deathcycles=\count360
 \@vwid@loff=\dimen346
 \@vwid@roff=\dimen347
 ))
-(/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/rotating.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
-\c@r@tfl@t=\count363
+\c@r@tfl@t=\count361
 \rotFPtop=\skip79
 \rotFPbot=\skip80
 \rot@float@box=\box112
 \rot@mess@toks=\toks48
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+(/usr/share/texlive/texmf-dist/tex/latex/threeparttable/threeparttable.sty
 Package: threeparttable 2003/06/13  v 3.0
 \@tempboxb=\box113
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \captionmargin=\dimen348
 \captionmargin@=\dimen349
@@ -1110,23 +1086,23 @@ Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
 \caption@hangindent=\dimen354
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count364
-\c@continuedfloat=\count365
+\c@caption@flags=\count362
+\c@continuedfloat=\count363
 Package caption Info: rotating package is loaded.
 Package caption Info: threeparttable package is loaded.
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/paracol/paracol.sty
+(/usr/share/texlive/texmf-dist/tex/latex/paracol/paracol.sty
 Package: paracol 2018/12/31 v1.35 
-\pcol@currcol=\count366
-\pcol@nextcol=\count367
-\pcol@ncol=\count368
-\pcol@ncolleft=\count369
-\pcol@page=\count370
-\pcol@basepage=\count371
-\pcol@toppage=\count372
-\pcol@footnotebase=\count373
-\pcol@nfootnotes=\count374
-\pcol@mcid=\count375
+\pcol@currcol=\count364
+\pcol@nextcol=\count365
+\pcol@ncol=\count366
+\pcol@ncolleft=\count367
+\pcol@page=\count368
+\pcol@basepage=\count369
+\pcol@toppage=\count370
+\pcol@footnotebase=\count371
+\pcol@nfootnotes=\count372
+\pcol@mcid=\count373
 \pcol@prevdepth=\dimen355
 \pcol@colht=\dimen356
 \pcol@textfloatsep=\dimen357
@@ -1145,127 +1121,118 @@ Package: paracol 2018/12/31 v1.35
 )
 \mybox=\box120
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+(/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
 Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+(/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
 Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+(/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+(/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+(/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
 \@linkdim=\dimen360
-\Hy@linkcounter=\count376
-\Hy@pagecounter=\count377
+\Hy@linkcounter=\count374
+\Hy@pagecounter=\count375
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
-File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel la
-nguages
-) (/usr/local/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count378
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
-Now handling font encoding PU ...
-... no UTF-8 mapping file for font encoding PU
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 4073.
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing OFF on input line 4212.
+\Hy@SavedSpaceFactor=\count376
+Package hyperref Info: Option `colorlinks' set `true' on input line 4338.
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4445.
-\c@Hy@tempcnt=\count379
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count377
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty
+(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4804.
+LaTeX Info: Redefining \url on input line 5076.
 \XeTeXLinkMargin=\dimen361
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+(/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count380
+\Fld@menulength=\count378
 \Field@Width=\dimen362
 \Fld@charsize=\dimen363
-Package hyperref Info: Hyper figures OFF on input line 6075.
-Package hyperref Info: Link nesting OFF on input line 6080.
-Package hyperref Info: Hyper index ON on input line 6083.
-Package hyperref Info: backreferencing OFF on input line 6090.
-Package hyperref Info: Link coloring ON on input line 6093.
-Package hyperref Info: Link coloring with OCG OFF on input line 6100.
-Package hyperref Info: PDF/A mode OFF on input line 6105.
-LaTeX Info: Redefining \ref on input line 6145.
-LaTeX Info: Redefining \pageref on input line 6149.
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring ON on input line 6365.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
 ge
 with kernel methods
 )
-\Hy@abspage=\count381
-\c@Item=\count382
-\c@Hfootnote=\count383
+\Hy@abspage=\count379
+\c@Item=\count380
+\c@Hfootnote=\count381
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
 e
 with kernel methods
 )
-\Fld@listcount=\count384
-\c@bookmark@seq@number=\count385
+\Fld@listcount=\count382
+\c@bookmark@seq@number=\count383
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+(/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
 
-(/usr/local/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+(/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 86.
 )
 \Hy@SectionHShift=\skip83
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/lipsum/lipsum.sty
-Package: lipsum 2021-03-03 v2.3 150 paragraphs of Lorem Ipsum dummy text
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
-File: lipsum.ltd.tex 2021-03-03 v2.3 The Lorem ipsum dummy text
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
 ))
 runsystem(which pygmentize && touch notes.aex)...executed.
 
 runsystem(rm notes.aex)...executed.
 
-
-(./notes.aux)
+ (./notes.aux)
 \openout1 = `notes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 182.
@@ -1284,28 +1251,26 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 182.
 LaTeX Font Info:    ... okay on input line 182.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 182.
 LaTeX Font Info:    ... okay on input line 182.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 182.
-LaTeX Font Info:    ... okay on input line 182.
 
-(/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count386
+\scratchcounter=\count384
 \scratchdimen=\dimen364
 \scratchbox=\box121
-\nofMPsegments=\count387
-\nofMParguments=\count388
+\nofMPsegments=\count385
+\nofMParguments=\count386
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count389
+\MPscratchCnt=\count387
 \MPscratchDim=\dimen365
-\MPnumerator=\count390
-\makeMPintoPDFobject=\count391
+\MPnumerator=\count388
+\makeMPintoPDFobject=\count389
 \everyMPtoPDFconversion=\toks51
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -1350,47 +1315,46 @@ Package newfloat Info: `rotating' package detected.
 ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 182.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
-(/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dicti
-onary-English.dict
+(/usr/share/texlive/texmf-dist/tex/latex/translator/translator-basic-dictionary
+-English.dict
 Dictionary: translator-basic-dictionary, Language: English 
 )
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring ON on input line 182.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
-ty
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count392
+\c@section@level=\count390
 )
 LaTeX Info: Redefining \ref on input line 182.
 LaTeX Info: Redefining \pageref on input line 182.
 LaTeX Info: Redefining \nameref on input line 182.
- (./notes.out) (./notes.out)
+
+(./notes.out) (./notes.out)
 \@outlinefile=\write9
 \openout9 = `notes.out'.
 
 LaTeX Font Info:    Trying to load font information for U+fontawesomeone on inp
 ut line 185.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/fontawesome/ufontawesomeone.fd
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/ufontawesomeone.fd
 File: ufontawesomeone.fd 2016/05/22 Font definitions for U/fontawesomeone.
 )
 LaTeX Font Info:    Trying to load font information for U+fontawesometwo on inp
 ut line 185.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
+(/usr/share/texlive/texmf-dist/tex/latex/fontawesome/ufontawesometwo.fd
 File: ufontawesometwo.fd 2016/05/22 Font definitions for U/fontawesometwo.
 )
 
@@ -1399,11 +1363,11 @@ LaTeX Warning: No \author given.
 [1
 
 
-{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 
-] (./notes.toc [3])
+] (./notes.toc
+[3])
 \tf@toc=\write10
 \openout10 = `notes.toc'.
 
@@ -1422,8 +1386,7 @@ LaTeX Warning: No \author given.
  [8] [9
 
 
-]
-[10
+] [10
 
 ]
 Chapter 1.
@@ -1477,7 +1440,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
 527.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/ts1cmtt.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 Underfull \hbox (badness 4072) in paragraph at lines 527--527
@@ -1525,7 +1488,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-<anaconda_navigator.png, id=525, 1222.5675pt x 662.475pt>
+<anaconda_navigator.png, id=535, 1222.5675pt x 662.475pt>
 File: anaconda_navigator.png Graphic file (type png)
 <use anaconda_navigator.png>
 Package pdftex.def Info: anaconda_navigator.png  used on input line 540.
@@ -1553,44 +1516,95 @@ Underfull \hbox (badness 2951) in paragraph at lines 570--570
 [20
 
 ]
+\openout6 = `notes.ent'.
+
 \openout4 = `notes.listing'.
 
  (./_minted-notes/default-pyg-prefix.pygstyle) (./_minted-notes/vs.pygstyle)
 (./_minted-notes/4BA959FC9F1D6EC5C0E4BE5CBBFEF515764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex)
-<simple_script.png, id=552, 382.42876pt x 291.0875pt>
+<simple_script.png, id=562, 382.42876pt x 291.0875pt>
 File: simple_script.png Graphic file (type png)
 <use simple_script.png>
-Package pdftex.def Info: simple_script.png  used on input line 636.
+Package pdftex.def Info: simple_script.png  used on input line 652.
 (pdftex.def)             Requested size: 241.84843pt x 184.08342pt.
- [21] [22 <./simple_script.png>]
-Chapter 3.
-[23
 
-] [24
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21]
+<python_session.png, id=570, 625.33624pt x 305.14pt>
+File: python_session.png Graphic file (type png)
+<use python_session.png>
+Package pdftex.def Info: python_session.png  used on input line 677.
+(pdftex.def)             Requested size: 362.77264pt x 177.02321pt.
+
+[22 <./simple_script.png> <./python_session.png>]
+<ipython_session.png, id=577, 625.33624pt x 305.14pt>
+File: ipython_session.png Graphic file (type png)
+<use ipython_session.png>
+Package pdftex.def Info: ipython_session.png  used on input line 685.
+(pdftex.def)             Requested size: 362.77264pt x 177.02321pt.
+ [23
+
+ <./ipython_session.png>]
+<jupyter.png, id=584, 1783.66376pt x 789.95125pt>
+File: jupyter.png Graphic file (type png)
+<use jupyter.png>
+Package pdftex.def Info: jupyter.png  used on input line 719.
+(pdftex.def)             Requested size: 386.95897pt x 171.36702pt.
+<vscode.png, id=587, 1711.39375pt x 1002.74625pt>
+File: vscode.png Graphic file (type png)
+<use vscode.png>
+Package pdftex.def Info: vscode.png  used on input line 740.
+(pdftex.def)             Requested size: 459.51054pt x 269.23033pt.
+<jupyter_in_vscode.png, id=588, 856.19875pt x 503.8825pt>
+File: jupyter_in_vscode.png Graphic file (type png)
+<use jupyter_in_vscode.png>
+Package pdftex.def Info: jupyter_in_vscode.png  used on input line 747.
+(pdftex.def)             Requested size: 459.51054pt x 270.42407pt.
+
+[24
+
+ <./jupyter.png> <./vscode.png>] [25 <./jupyter_in_vscode.png>]
+Underfull \hbox (badness 1237) in paragraph at lines 768--768
+[]\OT1/cmr/m/n/10.95 To pro-tect the system-wise in-stal-la-tion of
+ []
+
+
+Underfull \hbox (badness 2142) in paragraph at lines 786--786
+[]\OT1/cmr/m/n/10.95 The more likely in-con-sis-ten-cies will arise
+ []
+
+[26
+
+] [27
+
+] [28
+
+]
+Chapter 3.
+[29] [30
 
 ]
 Chapter 4.
-\openout6 = `notes.ent'.
 
-
-Underfull \hbox (badness 1668) in paragraph at lines 684--684
+Underfull \hbox (badness 1668) in paragraph at lines 845--845
 []\OT1/cmr/m/it/10.95 in Python, we do things with stuff.
  []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 7
-18.
+ [31]
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 8
+79.
 
-(/usr/local/texlive/2021/texmf-dist/tex/latex/base/omscmr.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 718.
- [26
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 879.
+ [32
 
 ]
 \openout4 = `notes.listing'.
@@ -1598,65 +1612,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 
 (./_minted-notes/50DA700E56856207B8578FFAE39EF61F764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex)
-Underfull \hbox (badness 3769) in paragraph at lines 755--755
+Underfull \hbox (badness 3769) in paragraph at lines 916--916
 []\OT1/cmr/m/n/10.95 Besides in-te-gers and float-ing points num-bers,
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [27
-
-]
-[28]
-\openout4 = `notes.listing'.
-
-
-(./_minted-notes/DBE2334814879018F08053510C443709764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [29
-
-]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [30
-
-]
-\openout4 = `notes.listing'.
-
-
-(./_minted-notes/86683875D6C030DA1191F34469800475764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex)
-LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
-941.
-LaTeX Font Info:    No file OMScmtt.fd. on input line 941.
-
-
-LaTeX Font Warning: Font shape `OMS/cmtt/m/n' undefined
-(Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbraceleft' on input line 941.
-
-[31]
-LaTeX Font Info:    Trying to load font information for OML+cmtt on input line 
-960.
-LaTeX Font Info:    No file OMLcmtt.fd. on input line 960.
-
-
-LaTeX Font Warning: Font shape `OML/cmtt/m/n' undefined
-(Font)              using `OML/cmm/m/it' instead
-(Font)              for symbol `textgreater' on input line 960.
-
-\openout4 = `notes.listing'.
-
-
-(./_minted-notes/7422D78E46051525105100B3E707158F764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [32
-
-]
-\openout4 = `notes.listing'.
-
-
-(./_minted-notes/A32FDE08938F9AF90BAC21ECE523C061764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [33
@@ -1666,40 +1626,93 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \openout4 = `notes.listing'.
 
 
-(./_minted-notes/FBA5F4FB84AEF234D445AC316EB88E44764ACE08D8ACD0933C5BDFEBD4BB53
+(./_minted-notes/DBE2334814879018F08053510C443709764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex) [35
 
-] [36
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-] [37
+ [36
 
 ]
 \openout4 = `notes.listing'.
 
 
-(./_minted-notes/7E6C092D79B3B89D3735A9F57C98CAB9764ACE08D8ACD0933C5BDFEBD4BB53
+(./_minted-notes/86683875D6C030DA1191F34469800475764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex)
+LaTeX Font Info:    Trying to load font information for OMS+cmtt on input line 
+1102.
+ (/usr/share/texmf/tex/latex/R/tex/latex/omscmtt.fd
+File: omscmtt.fd 
+)
+LaTeX Font Info:    Font shape `OMS/cmtt/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1102.
+
+ [37]
+LaTeX Font Info:    Trying to load font information for OML+cmtt on input line 
+1121.
+LaTeX Font Info:    No file OMLcmtt.fd. on input line 1121.
+
+
+LaTeX Font Warning: Font shape `OML/cmtt/m/n' undefined
+(Font)              using `OML/cmm/m/it' instead
+(Font)              for symbol `textgreater' on input line 1121.
+
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/7422D78E46051525105100B3E707158F764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex) [38
 
 ]
 \openout4 = `notes.listing'.
 
 
+(./_minted-notes/A32FDE08938F9AF90BAC21ECE523C061764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39
+
+]
+[40]
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/FBA5F4FB84AEF234D445AC316EB88E44764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex) [41
+
+] [42
+
+] [43
+
+]
+\openout4 = `notes.listing'.
+
+
+(./_minted-notes/7E6C092D79B3B89D3735A9F57C98CAB9764ACE08D8ACD0933C5BDFEBD4BB53
+D4.pygtex) [44
+
+]
+\openout4 = `notes.listing'.
+
+
 (./_minted-notes/1A96ECB8032A91326FEBEAB60961966D764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [39
+D4.pygtex) [45
 
 ]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/D59B78B46668A255A2DBA9FE73776612764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [40
+D4.pygtex) [46
 
 ]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/C3FFC4212412C258AF63920566DF9552764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [41
+D4.pygtex) [47
 
 ]
 \openout4 = `notes.listing'.
@@ -1719,12 +1732,12 @@ D4.pygtex)
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [42
+ [48
 
 ]
 Underfull \vbox (badness 1303) has occurred while \output is active []
 
- [43]
+ [49]
 \openout4 = `notes.listing'.
 
 
@@ -1734,19 +1747,19 @@ D4.pygtex)
 
 
 (./_minted-notes/82837FE20863933F1E2DDF8F5B6F3121764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [44]
+D4.pygtex) [50]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/515895B1D8C40802B4ABEB29B92AECE8764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [45
+D4.pygtex) [51
 
 ]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/8E7D3D59DECDC496828A28CF5B8BA78B764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [46
+D4.pygtex) [52
 
 ]
 \openout4 = `notes.listing'.
@@ -1754,18 +1767,18 @@ D4.pygtex) [46
 
 (./_minted-notes/AD7C409334E078678AFF5AC7B16A28DE764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex)
-Underfull \hbox (badness 1184) in paragraph at lines 1520--1520
+Underfull \hbox (badness 1184) in paragraph at lines 1681--1681
 []\OT1/cmr/m/n/10.95 Like for lists, Python of-fers many [][]\OT1/cmtt/m/n/10.9
 5 methods to
  []
 
 
-Underfull \hbox (badness 2020) in paragraph at lines 1520--1520
+Underfull \hbox (badness 2020) in paragraph at lines 1681--1681
 \OT1/cmtt/m/n/10.95 .values() .items()\OT1/cmr/m/n/10.95 , get the con-sti-tu-t
 ive el-e-
  []
 
-[47
+[53
 
 ]
 \openout4 = `notes.listing'.
@@ -1775,7 +1788,7 @@ ive el-e-
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48]
+ [54]
 \openout4 = `notes.listing'.
 
 
@@ -1785,12 +1798,12 @@ D4.pygtex)
 
 
 (./_minted-notes/26B748FF565D4068675B1B7D7E8BE165764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [49]
+D4.pygtex) [55]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/D46F5C704D40B819755AA09618EA8822764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [50
+D4.pygtex) [56
 
 ]
 \openout4 = `notes.listing'.
@@ -1802,7 +1815,7 @@ D4.pygtex)
 
 
 (./_minted-notes/D59E1B047169E16DD6A0E06D6D6068A3764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [51
+D4.pygtex) [57
 
 ]
 \openout4 = `notes.listing'.
@@ -1812,15 +1825,15 @@ D4.pygtex) [51
 D4.pygtex)
 Underfull \vbox (badness 8189) has occurred while \output is active []
 
- [52
+ [58
 
 ]
-[53]
+[59]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/C10F51FD5313FD897394FF2504599BFB764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [54
+D4.pygtex) [60
 
 ]
 \openout4 = `notes.listing'.
@@ -1834,24 +1847,24 @@ D4.pygtex)
 (./_minted-notes/72A8B9B30A88BB616C3BA38739B52C97764ACE08D8ACD0933C5BDFEBD4BB53
 D4.pygtex)
 
-LaTeX Warning: Characters dropped after `\end{pythoncode}' on input line 1833.
+LaTeX Warning: Characters dropped after `\end{pythoncode}' on input line 1994.
 
 
 Underfull \vbox (badness 1838) has occurred while \output is active []
 
- [55
+ [61
 
 ]
-Underfull \hbox (badness 1715) in paragraph at lines 1878--1878
+Underfull \hbox (badness 1715) in paragraph at lines 2039--2039
 []\OT1/cmr/m/it/10.95 In sim-ple terms, state-ments are the
  []
 
 
-Underfull \hbox (badness 1014) in paragraph at lines 1878--1878
+Underfull \hbox (badness 1014) in paragraph at lines 2039--2039
 \OT1/cmr/m/it/10.95 gested [omit-ted], pro-grams ``do things
  []
 
-[56] [57]
+[62] [63]
 \openout4 = `notes.listing'.
 
 
@@ -1862,7 +1875,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58
+ [64
 
 
 ]
@@ -1878,17 +1891,17 @@ D4.pygtex)
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59]
+ [65]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/27B642D0B8B0E1D8D32730ADB59FABB9764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [60]
+D4.pygtex) [66]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/889290B4532C718D94B3303450D0C180764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [61
+D4.pygtex) [67
 
 ]
 \openout4 = `notes.listing'.
@@ -1900,7 +1913,7 @@ D4.pygtex)
 
 
 (./_minted-notes/872ADDC5215F6893FBD1B486E3A513CC764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [62
+D4.pygtex) [68
 
 ]
 \openout4 = `notes.listing'.
@@ -1911,7 +1924,7 @@ D4.pygtex)
 ! Undefined control sequence.
 <argument> ...ement that contains multiple \textt 
                                                   {for} loops is a nested \t...
-l.2132 ... can do something with it (see line 8).}
+l.2293 ... can do something with it (see line 8).}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1923,14 +1936,14 @@ and I'll forget about whatever was undefined.
 
 
 (./_minted-notes/299B0631796C987E50C0FE86A50ADA35764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [63
+D4.pygtex) [69
 
 ]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/B5ACEFC255B8C347ED43479B42697F2E764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [64
+D4.pygtex) [70
 
 ]
 \openout4 = `notes.listing'.
@@ -1942,7 +1955,7 @@ D4.pygtex)
 
 
 (./_minted-notes/D9AB99930269DBCE855E8129343E594A764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [65
+D4.pygtex) [71
 
 ]
 \openout4 = `notes.listing'.
@@ -1954,21 +1967,21 @@ D4.pygtex)
 
 
 (./_minted-notes/731064C23BCBBE64237ED22B2A83408B764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) (./notes.ent
-Overfull \hbox (15.67305pt too wide) in paragraph at lines 117--167
+D4.pygtex) (./notes.ent [72
+
+]
+Overfull \hbox (15.67305pt too wide) in paragraph at lines 161--211
 [][]\OT1/cmr/m/n/9 If en-cod-ing is not spec-i-fied the en-cod-ing used is plat
 form-dependent. Specif-i-cally, \OT1/cmtt/m/n/9 locale.getpreferredencoding(Fal
 se)
  []
 
-[66
-
-]) [67] [68
+) [73] [74
 
 ]
 Chapter 5.
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2317.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2478.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1976,7 +1989,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [69]
+ [75]
 \openout4 = `notes.listing'.
 
 
@@ -1987,25 +2000,25 @@ D4.pygtex)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [70]
+ [76]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/0F851F565EA65A73B1B20B5E6CC6A4F6764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [71
+D4.pygtex) [77
 
 ]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/06BD3D91D2D5B97927C7A9262973A042764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [72
+D4.pygtex) [78
 
 ]
 ! Undefined control sequence.
 <argument> \texxttt 
                     {dtypes}
-l.2474 ... is known in NumPy as \texttt{float64}.}
+l.2635 ... is known in NumPy as \texttt{float64}.}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2016,7 +2029,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <argument> \textttt 
                     {dtype}
-l.2479 ...array.astype.html}{\texttt{.astype()}}.}
+l.2640 ...array.astype.html}{\texttt{.astype()}}.}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2028,9 +2041,9 @@ and I'll forget about whatever was undefined.
 
 
 (./_minted-notes/110AC5DB8237DD890B9C771E85CFF14A764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [73
+D4.pygtex) [79
 
-] [74] [75
+] [80] [81
 
 
 ]
@@ -2038,9 +2051,9 @@ D4.pygtex) [73
 
 
 (./_minted-notes/C242DD3276A444CA35DF51DE6CE64CCC764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [76
+D4.pygtex) [82
 
-] [77]
+] [83]
 \openout4 = `notes.listing'.
 
 
@@ -2057,16 +2070,16 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-) [78
+) [84
 
-] [79] [80]
+] [85] [86]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/2412612A10D149EBD64F4851B8398DBC764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [81
+D4.pygtex) [87
 
-] [82]
+] [88]
 \openout4 = `notes.listing'.
 
 
@@ -2074,26 +2087,26 @@ D4.pygtex) [81
 D4.pygtex)
 Underfull \vbox (badness 2608) has occurred while \output is active []
 
- [83
+ [89
 
 ]
-(./contour.pgf) [84] [85]
+(./contour.pgf) [90] [91]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/1EC865C36D8626E5EE031DBAA16B308E764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [86
+D4.pygtex) [92
 
-] [87]
+] [93]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/76F0F624F0D8067D116EF7D0100388C4764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [88
+D4.pygtex) [94
 
-] [89]
+] [95]
 ! Extra }, or forgotten \endgroup.
-l.3008 	}
+l.3169 	}
          
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2101,20 +2114,20 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[90
+[96
 
 ]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/CC6E1DAEC54D7DDEE16A9EC7F7110811764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [91
+D4.pygtex) [97
 
 ]
 ! Undefined control sequence.
 <argument> \rggedright 
                        What is a universal function?
-l.3067 ...ggedright What is a universal function?}
+l.3228 ...ggedright What is a universal function?}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2122,20 +2135,20 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[92
+[98
 
 ]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/A27584FFF67BD7F358661A72C78662ED764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [93
+D4.pygtex) [99
 
 ] (./sine.pgf) (./cosine.pgf)
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.3171 ... module for machine learning in Python.}
+l.3332 ... module for machine learning in Python.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2144,7 +2157,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.3171 ... module for machine learning in Python.}
+l.3332 ... module for machine learning in Python.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2153,18 +2166,18 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    s
-l.3171 ... module for machine learning in Python.}
+l.3332 ... module for machine learning in Python.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-[94]
-Overfull \hbox (21.33426pt too wide) in paragraph at lines 3179--3196
+[100]
+Overfull \hbox (21.33426pt too wide) in paragraph at lines 3340--3357
  [][] 
  []
 
-[95] [96] [97] [98]
+[101] [102] [103] [104]
 \openout4 = `notes.listing'.
 
 
@@ -2172,14 +2185,14 @@ Overfull \hbox (21.33426pt too wide) in paragraph at lines 3179--3196
 D4.pygtex)
 Underfull \vbox (badness 5652) has occurred while \output is active []
 
- [99
+ [105
 
 
 ]
 ! Undefined control sequence.
 <argument> \rggedright 
                        Can I calaculate Pearson's correlaton coefficients in...
-l.3317 ...son's correlaton coefficients in NumPy?}
+l.3478 ...son's correlaton coefficients in NumPy?}
                                                   
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2191,7 +2204,7 @@ and I'll forget about whatever was undefined.
 
 
 (./_minted-notes/E320E8328B93103498FE167469E65BB2764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [100] [101] [102] [103] [104] [105]
+D4.pygtex) [106] [107] [108] [109] [110] [111]
 \openout4 = `notes.listing'.
 
 
@@ -2199,14 +2212,14 @@ D4.pygtex) [100] [101] [102] [103] [104] [105]
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [106
+ [112
 
 ]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/91D9D88AB44D89D91E45ACBC50CB296C764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [107]
+D4.pygtex) [113]
 \openout4 = `notes.listing'.
 
 
@@ -2214,14 +2227,14 @@ D4.pygtex) [107]
 D4.pygtex) (./ols.pgf)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [108
+ [114
 
 ]
-[109] [110] [111] [112] [113]
+[115] [116] [117] [118] [119]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.3815 ...he outcome I got, displayed in line 26.}
+l.3976 ...he outcome I got, displayed in line 26.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2230,7 +2243,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.3815 ...he outcome I got, displayed in line 26.}
+l.3976 ...he outcome I got, displayed in line 26.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2239,7 +2252,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.3815 ...he outcome I got, displayed in line 26.}
+l.3976 ...he outcome I got, displayed in line 26.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2249,15 +2262,15 @@ are all screwed up? I'm going to assume that you meant ##.
 
 
 (./_minted-notes/4CC1538D05063AA916093EDEFC14CC77764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [114
+D4.pygtex) [120
 
 ]
-Underfull \hbox (badness 6876) in paragraph at lines 3860--3860
+Underfull \hbox (badness 6876) in paragraph at lines 4021--4021
 [] \OT1/cmr/m/n/10.95 In lines 22 and 27, we cre-ate two ar-
  []
 
 
-Underfull \hbox (badness 6461) in paragraph at lines 3860--3860
+Underfull \hbox (badness 6461) in paragraph at lines 4021--4021
 \OT1/cmr/m/n/10.95 mal (see [][]\OT1/cmtt/m/n/10.95 .random.normal[][]\OT1/cmr/
 m/n/10.95 ) and Pois-son (see
  []
@@ -2269,15 +2282,15 @@ m/n/10.95 ) and Pois-son (see
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [115
+ [121
 
 ]
 (./norm.pgf) (./poisson.pgf)
 Underfull \vbox (badness 7468) has occurred while \output is active []
 
- [116]
+ [122]
 ! Extra }, or forgotten \endgroup.
-l.3960 	}
+l.4121 	}
          
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2285,7 +2298,7 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[117] [118]
+[123] [124]
 \openout4 = `notes.listing'.
 
 
@@ -2293,26 +2306,26 @@ deleted material, e.g., by typing `I$}'.
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [119
+ [125
 
 ]
-(./notes.ent) [120]
+(./notes.ent) [126]
 Chapter 6.
 \openout6 = `notes.ent'.
 
-[121
+[127
 
-] [122
+] [128
 
 ]
-Underfull \hbox (badness 2521) in paragraph at lines 4116--4116
+Underfull \hbox (badness 2521) in paragraph at lines 4277--4277
 []\OT1/cmr/m/n/10.95 Put sim-ply (i.e., from a user stand-point), a
  []
 
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4124 		\textbf{1}    & a_
+l.4285 		\textbf{1}    & a_
                            {1} & b_{1} & \ldots & i_{1} & \ldots & k_{1} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2320,7 +2333,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4124 		\textbf{1}    & a_{1} &
+l.4285 		\textbf{1}    & a_{1} &
                                  b_{1} & \ldots & i_{1} & \ldots & k_{1} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2331,7 +2344,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4124 		\textbf{1}    & a_{1} & b_
+l.4285 		\textbf{1}    & a_{1} & b_
                                    {1} & \ldots & i_{1} & \ldots & k_{1} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2339,7 +2352,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4124 		\textbf{1}    & a_{1} & b_{1} &
+l.4285 		\textbf{1}    & a_{1} & b_{1} &
                                          \ldots & i_{1} & \ldots & k_{1} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2350,7 +2363,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4124 ...xtbf{1}    & a_{1} & b_{1} & \ldots & i_
+l.4285 ...xtbf{1}    & a_{1} & b_{1} & \ldots & i_
                                                   {1} & \ldots & k_{1} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2358,7 +2371,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4124 ...1}    & a_{1} & b_{1} & \ldots & i_{1} &
+l.4285 ...1}    & a_{1} & b_{1} & \ldots & i_{1} &
                                                    \ldots & k_{1} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2369,7 +2382,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4124 ...} & b_{1} & \ldots & i_{1} & \ldots & k_
+l.4285 ...} & b_{1} & \ldots & i_{1} & \ldots & k_
                                                   {1} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2377,7 +2390,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4125 		\textbf
+l.4286 		\textbf
                 {2}    & a_{2} & b_{2} & \ldots & i_{2} & \ldots & k_{2} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2388,7 +2401,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4125 		\textbf{2}    & a_
+l.4286 		\textbf{2}    & a_
                            {2} & b_{2} & \ldots & i_{2} & \ldots & k_{2} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2396,7 +2409,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4125 		\textbf{2}    & a_{2} &
+l.4286 		\textbf{2}    & a_{2} &
                                  b_{2} & \ldots & i_{2} & \ldots & k_{2} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2407,7 +2420,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4125 		\textbf{2}    & a_{2} & b_
+l.4286 		\textbf{2}    & a_{2} & b_
                                    {2} & \ldots & i_{2} & \ldots & k_{2} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2415,7 +2428,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4125 		\textbf{2}    & a_{2} & b_{2} &
+l.4286 		\textbf{2}    & a_{2} & b_{2} &
                                          \ldots & i_{2} & \ldots & k_{2} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2426,7 +2439,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4125 ...xtbf{2}    & a_{2} & b_{2} & \ldots & i_
+l.4286 ...xtbf{2}    & a_{2} & b_{2} & \ldots & i_
                                                   {2} & \ldots & k_{2} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2434,7 +2447,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4125 ...2}    & a_{2} & b_{2} & \ldots & i_{2} &
+l.4286 ...2}    & a_{2} & b_{2} & \ldots & i_{2} &
                                                    \ldots & k_{2} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2445,7 +2458,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4125 ...} & b_{2} & \ldots & i_{2} & \ldots & k_
+l.4286 ...} & b_{2} & \ldots & i_{2} & \ldots & k_
                                                   {2} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2453,7 +2466,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4126                 \multicolumn
+l.4287                 \multicolumn
                                    {7}{c}{}\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2464,7 +2477,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4127 		\textbf{j}    & a_
+l.4288 		\textbf{j}    & a_
                            {j} & b_{j} & \ldots & i_{j} & \ldots & k_{j} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2472,7 +2485,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4127 		\textbf{j}    & a_{j} &
+l.4288 		\textbf{j}    & a_{j} &
                                  b_{j} & \ldots & i_{j} & \ldots & k_{j} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2483,7 +2496,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4127 		\textbf{j}    & a_{j} & b_
+l.4288 		\textbf{j}    & a_{j} & b_
                                    {j} & \ldots & i_{j} & \ldots & k_{j} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2491,7 +2504,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4127 		\textbf{j}    & a_{j} & b_{j} &
+l.4288 		\textbf{j}    & a_{j} & b_{j} &
                                          \ldots & i_{j} & \ldots & k_{j} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2502,7 +2515,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4127 ...xtbf{j}    & a_{j} & b_{j} & \ldots & i_
+l.4288 ...xtbf{j}    & a_{j} & b_{j} & \ldots & i_
                                                   {j} & \ldots & k_{j} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2510,7 +2523,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4127 ...j}    & a_{j} & b_{j} & \ldots & i_{j} &
+l.4288 ...j}    & a_{j} & b_{j} & \ldots & i_{j} &
                                                    \ldots & k_{j} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2521,7 +2534,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4127 ...} & b_{j} & \ldots & i_{j} & \ldots & k_
+l.4288 ...} & b_{j} & \ldots & i_{j} & \ldots & k_
                                                   {j} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2529,7 +2542,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4128                 \multicolumn
+l.4289                 \multicolumn
                                    {7}{c}{}\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2540,7 +2553,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4129 		\textbf{n}    & a_
+l.4290 		\textbf{n}    & a_
                            {n} & b_{n} & \ldots & i_{n} & \ldots & k_{n} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2548,7 +2561,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4129 		\textbf{n}    & a_{n} &
+l.4290 		\textbf{n}    & a_{n} &
                                  b_{n} & \ldots & i_{n} & \ldots & k_{n} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2559,7 +2572,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4129 		\textbf{n}    & a_{n} & b_
+l.4290 		\textbf{n}    & a_{n} & b_
                                    {n} & \ldots & i_{n} & \ldots & k_{n} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2567,7 +2580,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4129 		\textbf{n}    & a_{n} & b_{n} &
+l.4290 		\textbf{n}    & a_{n} & b_{n} &
                                          \ldots & i_{n} & \ldots & k_{n} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2578,7 +2591,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4129 ...xtbf{n}    & a_{n} & b_{n} & \ldots & i_
+l.4290 ...xtbf{n}    & a_{n} & b_{n} & \ldots & i_
                                                   {n} & \ldots & k_{n} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2586,7 +2599,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4129 ...n}    & a_{n} & b_{n} & \ldots & i_{n} &
+l.4290 ...n}    & a_{n} & b_{n} & \ldots & i_{n} &
                                                    \ldots & k_{n} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2597,7 +2610,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4129 ...} & b_{n} & \ldots & i_{n} & \ldots & k_
+l.4290 ...} & b_{n} & \ldots & i_{n} & \ldots & k_
                                                   {n} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -2605,7 +2618,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.4130 		\hline
+l.4291 		\hline
                
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -2616,7 +2629,7 @@ my insertion and my current dilemma will both disappear.
 ! Undefined control sequence.
 <argument> \textttt 
                     {.DataFrame}
-l.4144 	}
+l.4305 	}
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2625,20 +2638,20 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 4156--4156
+Underfull \hbox (badness 10000) in paragraph at lines 4317--4317
 [][][]\OT1/cmtt/m/n/10.95 .DataFrame.from[]dict[][]\OT1/cmr/m/n/10.95 , which c
 re-ates a
  []
 
 
-Underfull \hbox (badness 6220) in paragraph at lines 4156--4156
+Underfull \hbox (badness 6220) in paragraph at lines 4317--4317
 [][][]\OT1/cmtt/m/n/10.95 .DataFrame.sparse.from[]spmatrix[][]\OT1/cmr/m/n/10.9
 5 , which
  []
 
-[123
+[129
 
-] [124]
+] [130]
 \openout4 = `notes.listing'.
 
 
@@ -2646,13 +2659,13 @@ Underfull \hbox (badness 6220) in paragraph at lines 4156--4156
 D4.pygtex)
 Underfull \vbox (badness 1888) has occurred while \output is active []
 
- [125
+ [131
 
 ]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4236 ...d familiarize with the various options.}
+l.4397 ...d familiarize with the various options.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2661,7 +2674,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4236 ...d familiarize with the various options.}
+l.4397 ...d familiarize with the various options.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2670,7 +2683,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4236 ...d familiarize with the various options.}
+l.4397 ...d familiarize with the various options.}
                                                   
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2680,9 +2693,9 @@ are all screwed up? I'm going to assume that you meant ##.
 
 
 (./_minted-notes/0A1F3828C71430053F3D964ED151853D764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [126] [127]
+D4.pygtex) [132] [133]
 ! Extra }, or forgotten \endgroup.
-l.4285 	}
+l.4446 	}
          
 I've deleted a group-closing symbol because it seems to be
 spurious, as in `$x}$'. But perhaps the } is legitimate and
@@ -2690,14 +2703,14 @@ you forgot something else, as in `\hbox{$x}'. In such cases
 the way to recover is to insert both the forgotten and the
 deleted material, e.g., by typing `I$}'.
 
-[128
+[134
 
 ]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/937A7604F040C846696ED36B4FEA5C02764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [129
+D4.pygtex) [135
 
 ]
 \openout4 = `notes.listing'.
@@ -2707,18 +2720,18 @@ D4.pygtex) [129
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [130
+ [136
 
 ]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/C4EE28927FE7FCC59CEB9316672DB107764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [131] [132]
+D4.pygtex) [137] [138]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4488 	}
+l.4649 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2727,7 +2740,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4488 	}
+l.4649 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2736,7 +2749,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4488 	}
+l.4649 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2745,7 +2758,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4488 	}
+l.4649 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2754,7 +2767,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4488 	}
+l.4649 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2763,7 +2776,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4488 	}
+l.4649 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2772,7 +2785,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4488 	}
+l.4649 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2781,7 +2794,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4488 	}
+l.4649 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2790,18 +2803,18 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4488 	}
+l.4649 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 4488--4488
+Underfull \hbox (badness 1173) in paragraph at lines 4649--4649
 []\OT1/cmr/m/n/10.95 line 33 se-lects the first two cases of the
  []
 
-[133
+[139
 
 ]
 \openout4 = `notes.listing'.
@@ -2811,14 +2824,14 @@ Underfull \hbox (badness 1173) in paragraph at lines 4488--4488
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [134
+ [140
 
 ]
-[135]
+[141]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4585 	}
+l.4746 	}
          	
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2827,7 +2840,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4585 	}
+l.4746 	}
          	
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2836,7 +2849,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4585 	}
+l.4746 	}
          	
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2845,7 +2858,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4585 	}
+l.4746 	}
          	
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2854,7 +2867,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4585 	}
+l.4746 	}
          	
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2863,13 +2876,13 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4585 	}
+l.4746 	}
          	
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
-[136
+[142
 
 ]
 \openout4 = `notes.listing'.
@@ -2879,13 +2892,13 @@ are all screwed up? I'm going to assume that you meant ##.
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [137
+ [143
 
 ]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4656 	}
+l.4817 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2894,7 +2907,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4656 	}
+l.4817 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2903,7 +2916,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4656 	}
+l.4817 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2912,7 +2925,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4656 	}
+l.4817 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2921,7 +2934,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4656 	}
+l.4817 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2930,7 +2943,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4656 	}
+l.4817 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2939,7 +2952,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4656 	}
+l.4817 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2948,7 +2961,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4656 	}
+l.4817 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2957,7 +2970,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4656 	}
+l.4817 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2970,21 +2983,12 @@ are all screwed up? I'm going to assume that you meant ##.
 D4.pygtex)
 Underfull \vbox (badness 2158) has occurred while \output is active []
 
- [138]
-[139] [140]
+ [144]
+[145] [146]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.4788 	}
-         
-You meant to type ## instead of #, right?
-Or maybe a } was forgotten somewhere earlier, and things
-are all screwed up? I'm going to assume that you meant ##.
-
-! Illegal parameter number in definition of \Hy@tempa.
-<to be read again> 
-                   n
-l.4788 	}
+l.4949 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -2993,7 +2997,16 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    n
-l.4788 	}
+l.4949 	}
+         
+You meant to type ## instead of #, right?
+Or maybe a } was forgotten somewhere earlier, and things
+are all screwed up? I'm going to assume that you meant ##.
+
+! Illegal parameter number in definition of \Hy@tempa.
+<to be read again> 
+                   n
+l.4949 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3002,7 +3015,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4802 	}
+l.4963 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3011,7 +3024,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4802 	}
+l.4963 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3020,7 +3033,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4802 	}
+l.4963 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3029,7 +3042,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4802 	}
+l.4963 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3038,7 +3051,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4802 	}
+l.4963 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3047,7 +3060,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.4802 	}
+l.4963 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3057,20 +3070,20 @@ are all screwed up? I'm going to assume that you meant ##.
 
 
 (./_minted-notes/DFD5BE9347183C035E42F6E069E878BF764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [141
+D4.pygtex) [147
 
-] [142]
+] [148]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/019F1608FBF8EB28D01B10AD91BDB35C764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [143
+D4.pygtex) [149
 
 ]
 ! Undefined control sequence.
 <argument> \textt 
                   {.Timestamp}
-l.4921 	}
+l.5082 	}
          
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3079,11 +3092,11 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 3229) in paragraph at lines 4921--4921
+Underfull \hbox (badness 3229) in paragraph at lines 5082--5082
 [][][]\OT1/cmr/m/n/10.95 .Timestamp[][], the Pan-das re-place-ment for
  []
 
-[144
+[150
 
 ]
 \openout4 = `notes.listing'.
@@ -3093,19 +3106,19 @@ Underfull \hbox (badness 3229) in paragraph at lines 4921--4921
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [145
+ [151
 
 ]
-[146]
+[152]
 \openout4 = `notes.listing'.
 
 
 (./_minted-notes/F425703A4BB43D3C674DDE7FEA93D609764ACE08D8ACD0933C5BDFEBD4BB53
-D4.pygtex) [147] [148]
+D4.pygtex) [153] [154]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5125 		\textbf{1}    & p_
+l.5286 		\textbf{1}    & p_
                            {1,0} & p_{1,1} & \ldots & p_{1,i} & \ldots & p_{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3113,7 +3126,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5125 		\textbf{1}    & p_{1,0} &
+l.5286 		\textbf{1}    & p_{1,0} &
                                    p_{1,1} & \ldots & p_{1,i} & \ldots & p_{...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3124,7 +3137,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5125 		\textbf{1}    & p_{1,0} & p_
+l.5286 		\textbf{1}    & p_{1,0} & p_
                                      {1,1} & \ldots & p_{1,i} & \ldots & p_{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3132,7 +3145,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5125 		\textbf{1}    & p_{1,0} & p_{1,1} &
+l.5286 		\textbf{1}    & p_{1,0} & p_{1,1} &
                                              \ldots & p_{1,i} & \ldots & p_{...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3143,7 +3156,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5125 ...{1}    & p_{1,0} & p_{1,1} & \ldots & p_
+l.5286 ...{1}    & p_{1,0} & p_{1,1} & \ldots & p_
                                                   {1,i} & \ldots & p_{1,k} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3151,7 +3164,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5125 ...& p_{1,0} & p_{1,1} & \ldots & p_{1,i} &
+l.5286 ...& p_{1,0} & p_{1,1} & \ldots & p_{1,i} &
                                                    \ldots & p_{1,k} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3162,7 +3175,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5125 ...p_{1,1} & \ldots & p_{1,i} & \ldots & p_
+l.5286 ...p_{1,1} & \ldots & p_{1,i} & \ldots & p_
                                                   {1,k} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3170,7 +3183,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5126 		\textbf
+l.5287 		\textbf
                 {2}    & p_{2,0} & p_{2,1} & \ldots & p_{2,i} & \ldots & p_{...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3181,7 +3194,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5126 		\textbf{2}    & p_
+l.5287 		\textbf{2}    & p_
                            {2,0} & p_{2,1} & \ldots & p_{2,i} & \ldots & p_{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3189,7 +3202,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5126 		\textbf{2}    & p_{2,0} &
+l.5287 		\textbf{2}    & p_{2,0} &
                                    p_{2,1} & \ldots & p_{2,i} & \ldots & p_{...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3200,7 +3213,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5126 		\textbf{2}    & p_{2,0} & p_
+l.5287 		\textbf{2}    & p_{2,0} & p_
                                      {2,1} & \ldots & p_{2,i} & \ldots & p_{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3208,7 +3221,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5126 		\textbf{2}    & p_{2,0} & p_{2,1} &
+l.5287 		\textbf{2}    & p_{2,0} & p_{2,1} &
                                              \ldots & p_{2,i} & \ldots & p_{...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3219,7 +3232,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5126 ...{2}    & p_{2,0} & p_{2,1} & \ldots & p_
+l.5287 ...{2}    & p_{2,0} & p_{2,1} & \ldots & p_
                                                   {2,i} & \ldots & p_{2,k} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3227,7 +3240,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5126 ...& p_{2,0} & p_{2,1} & \ldots & p_{2,i} &
+l.5287 ...& p_{2,0} & p_{2,1} & \ldots & p_{2,i} &
                                                    \ldots & p_{2,k} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3238,7 +3251,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5126 ...p_{2,1} & \ldots & p_{2,i} & \ldots & p_
+l.5287 ...p_{2,1} & \ldots & p_{2,i} & \ldots & p_
                                                   {2,k} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3246,7 +3259,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5127                 \multicolumn
+l.5288                 \multicolumn
                                    {7}{c}{}\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3257,7 +3270,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5128 		\textbf{j}    & p_
+l.5289 		\textbf{j}    & p_
                            {j,0} & p_{j,1} & \ldots & p_{j,i} & \ldots & p_{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3265,7 +3278,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5128 		\textbf{j}    & p_{j,0} &
+l.5289 		\textbf{j}    & p_{j,0} &
                                    p_{j,1} & \ldots & p_{j,i} & \ldots & p_{...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3276,7 +3289,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5128 		\textbf{j}    & p_{j,0} & p_
+l.5289 		\textbf{j}    & p_{j,0} & p_
                                      {j,1} & \ldots & p_{j,i} & \ldots & p_{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3284,7 +3297,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5128 		\textbf{j}    & p_{j,0} & p_{j,1} &
+l.5289 		\textbf{j}    & p_{j,0} & p_{j,1} &
                                              \ldots & p_{j,i} & \ldots & p_{...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3295,7 +3308,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5128 ...{j}    & p_{j,0} & p_{j,1} & \ldots & p_
+l.5289 ...{j}    & p_{j,0} & p_{j,1} & \ldots & p_
                                                   {j,i} & \ldots & p_{j,k} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3303,7 +3316,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5128 ...& p_{j,0} & p_{j,1} & \ldots & p_{j,i} &
+l.5289 ...& p_{j,0} & p_{j,1} & \ldots & p_{j,i} &
                                                    \ldots & p_{j,k} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3314,7 +3327,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5128 ...p_{j,1} & \ldots & p_{j,i} & \ldots & p_
+l.5289 ...p_{j,1} & \ldots & p_{j,i} & \ldots & p_
                                                   {j,k} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3322,7 +3335,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5129                 \multicolumn
+l.5290                 \multicolumn
                                    {7}{c}{}\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3333,7 +3346,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5130 		\textbf{n}    & p_
+l.5291 		\textbf{n}    & p_
                            {n,1} & p_{n,2} & \ldots & p_{n,j} & \ldots & p_{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3341,7 +3354,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5130 		\textbf{n}    & p_{n,1} &
+l.5291 		\textbf{n}    & p_{n,1} &
                                    p_{n,2} & \ldots & p_{n,j} & \ldots & p_{...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3352,7 +3365,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5130 		\textbf{n}    & p_{n,1} & p_
+l.5291 		\textbf{n}    & p_{n,1} & p_
                                      {n,2} & \ldots & p_{n,j} & \ldots & p_{...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3360,7 +3373,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5130 		\textbf{n}    & p_{n,1} & p_{n,2} &
+l.5291 		\textbf{n}    & p_{n,1} & p_{n,2} &
                                              \ldots & p_{n,j} & \ldots & p_{...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3371,7 +3384,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5130 ...{n}    & p_{n,1} & p_{n,2} & \ldots & p_
+l.5291 ...{n}    & p_{n,1} & p_{n,2} & \ldots & p_
                                                   {n,j} & \ldots & p_{n,k} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3379,7 +3392,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5130 ...& p_{n,1} & p_{n,2} & \ldots & p_{n,j} &
+l.5291 ...& p_{n,1} & p_{n,2} & \ldots & p_{n,j} &
                                                    \ldots & p_{n,k} \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3390,7 +3403,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5130 ...p_{n,2} & \ldots & p_{n,j} & \ldots & p_
+l.5291 ...p_{n,2} & \ldots & p_{n,j} & \ldots & p_
                                                   {n,k} \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3398,7 +3411,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5131 		\hline
+l.5292 		\hline
                
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3409,13 +3422,13 @@ my insertion and my current dilemma will both disappear.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [149
+ [155
 
 ]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5183 		\textbf{1}    & 0 & p_
+l.5344 		\textbf{1}    & 0 & p_
                                {1,0}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3423,7 +3436,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5184 		\textbf
+l.5345 		\textbf
                 {1}    & 1 & p_{1,1}  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3434,7 +3447,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5184 		\textbf{1}    & 1 & p_
+l.5345 		\textbf{1}    & 1 & p_
                                {1,1}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3442,7 +3455,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5185  		\textbf
+l.5346  		\textbf
                  {1}    & 2 & p_{1,2}  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3453,7 +3466,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5185  		\textbf{1}    & 2 & p_
+l.5346  		\textbf{1}    & 2 & p_
                                 {1,2}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3461,7 +3474,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5186 		\ldots
+l.5347 		\ldots
                 & \ldots & \ldots \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3472,7 +3485,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5187  		\textbf{1}    & i & p_
+l.5348  		\textbf{1}    & i & p_
                                 {1,i}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3480,7 +3493,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5188 		\ldots
+l.5349 		\ldots
                 & \ldots & \ldots \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3491,7 +3504,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5189  		\textbf{1}    & k & p_
+l.5350  		\textbf{1}    & k & p_
                                 {1,k}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3499,7 +3512,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5190 		\textbf
+l.5351 		\textbf
                 {2}    & 0 & p_{2,0}  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3510,7 +3523,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5190 		\textbf{2}    & 0 & p_
+l.5351 		\textbf{2}    & 0 & p_
                                {2,0}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3518,7 +3531,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5191 		\textbf
+l.5352 		\textbf
                 {2}    & 1 & p_{2,1}  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3529,7 +3542,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5191 		\textbf{2}    & 1 & p_
+l.5352 		\textbf{2}    & 1 & p_
                                {2,1}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3537,7 +3550,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5192  		\textbf
+l.5353  		\textbf
                  {2}    & 2 & p_{2,2}  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3548,7 +3561,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5192  		\textbf{2}    & 2 & p_
+l.5353  		\textbf{2}    & 2 & p_
                                 {2,2}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3556,7 +3569,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5193 		\ldots
+l.5354 		\ldots
                 & \ldots & \ldots \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3567,7 +3580,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5194  		\textbf{2}    & i & p_
+l.5355  		\textbf{2}    & i & p_
                                 {2,i}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3575,7 +3588,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5195 		\ldots
+l.5356 		\ldots
                 & \ldots & \ldots \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3586,7 +3599,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5196  		\textbf{2}    & k & p_
+l.5357  		\textbf{2}    & k & p_
                                 {2,k}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3594,7 +3607,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5197 		\multicolumn
+l.5358 		\multicolumn
                      {3}{c}{}\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3605,7 +3618,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5198 		\textbf{j}    & 0 & p_
+l.5359 		\textbf{j}    & 0 & p_
                                {j,0}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3613,7 +3626,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5199 		\textbf
+l.5360 		\textbf
                 {j}    & 1 & p_{j,1}  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3624,7 +3637,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5199 		\textbf{j}    & 1 & p_
+l.5360 		\textbf{j}    & 1 & p_
                                {j,1}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3632,7 +3645,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5200  		\textbf
+l.5361  		\textbf
                  {j}    & 2 & p_{j,2}  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3643,7 +3656,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5200  		\textbf{j}    & 2 & p_
+l.5361  		\textbf{j}    & 2 & p_
                                 {j,2}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3651,7 +3664,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5201 		\ldots
+l.5362 		\ldots
                 & \ldots & \ldots \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3662,7 +3675,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5202  		\textbf{j}    & i & p_
+l.5363  		\textbf{j}    & i & p_
                                 {j,i}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3670,7 +3683,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5203 		\ldots
+l.5364 		\ldots
                 & \ldots & \ldots \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3681,7 +3694,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5204  		\textbf{j}    & k & p_
+l.5365  		\textbf{j}    & k & p_
                                 {j,k}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3689,7 +3702,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5205 		\multicolumn
+l.5366 		\multicolumn
                      {3}{c}{}\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3700,7 +3713,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5206 		\textbf{n}    & 0 & p_
+l.5367 		\textbf{n}    & 0 & p_
                                {n,0}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3708,7 +3721,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5207 		\textbf
+l.5368 		\textbf
                 {n}    & 1 & p_{n,1}  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3719,7 +3732,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5207 		\textbf{n}    & 1 & p_
+l.5368 		\textbf{n}    & 1 & p_
                                {n,1}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3727,7 +3740,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5208  		\textbf
+l.5369  		\textbf
                  {n}    & 2 & p_{n,2}  \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3738,7 +3751,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5208  		\textbf{n}    & 2 & p_
+l.5369  		\textbf{n}    & 2 & p_
                                 {n,2}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3746,7 +3759,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5209 		\ldots
+l.5370 		\ldots
                 & \ldots & \ldots \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3757,7 +3770,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5210  		\textbf{n}    & i & p_
+l.5371  		\textbf{n}    & i & p_
                                 {n,i}  \\
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3765,7 +3778,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5211 		\ldots
+l.5372 		\ldots
                 & \ldots & \ldots \\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3776,7 +3789,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5212  		\textbf{n}    & k & p_
+l.5373  		\textbf{n}    & k & p_
                                 {n,k}  \\ \hline
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -3784,7 +3797,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5212  		\textbf{n}    & k & p_{n,k}  \\ \hline
+l.5373  		\textbf{n}    & k & p_{n,k}  \\ \hline
                                                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -3792,11 +3805,11 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[150]
+[156]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5240 	}
+l.5401 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3805,7 +3818,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5240 	}
+l.5401 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3814,7 +3827,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5240 	}
+l.5401 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3823,7 +3836,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5240 	}
+l.5401 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3832,7 +3845,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5240 	}
+l.5401 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3841,7 +3854,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5240 	}
+l.5401 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3850,7 +3863,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5240 	}
+l.5401 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3859,7 +3872,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5240 	}
+l.5401 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3868,21 +3881,21 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5240 	}
+l.5401 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
 
-Underfull \hbox (badness 7869) in paragraph at lines 5240--5240
+Underfull \hbox (badness 7869) in paragraph at lines 5401--5401
 []\OT1/cmtt/m/n/10.95 value[]name\OT1/cmr/m/n/10.95 : the name of the source
  []
 
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5240 	}
+l.5401 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3891,7 +3904,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5240 	}
+l.5401 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3900,7 +3913,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5240 	}
+l.5401 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3913,14 +3926,14 @@ are all screwed up? I'm going to assume that you meant ##.
 D4.pygtex)
 Underfull \vbox (badness 6625) has occurred while \output is active []
 
- [151
+ [157
 
 ]
-[152]
+[158]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5332 	}
+l.5493 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3929,7 +3942,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5332 	}
+l.5493 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3938,21 +3951,21 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5332 	}
+l.5493 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
 are all screwed up? I'm going to assume that you meant ##.
 
 
-Underfull \hbox (badness 3668) in paragraph at lines 5332--5332
+Underfull \hbox (badness 3668) in paragraph at lines 5493--5493
 []\OT1/cmr/m/n/10.95 Pandas has a class to help with this task,
  []
 
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5332 	}
+l.5493 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3961,7 +3974,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5332 	}
+l.5493 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3970,7 +3983,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5332 	}
+l.5493 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3979,7 +3992,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5332 	}
+l.5493 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3988,7 +4001,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5332 	}
+l.5493 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -3997,7 +4010,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5332 	}
+l.5493 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -4010,14 +4023,14 @@ are all screwed up? I'm going to assume that you meant ##.
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [153
+ [159
 
 ]
-[154]
+[160]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5384 	}
+l.5545 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -4026,7 +4039,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5384 	}
+l.5545 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -4035,7 +4048,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5384 	}
+l.5545 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -4048,14 +4061,14 @@ are all screwed up? I'm going to assume that you meant ##.
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [155
+ [161
 
 ]
-[156]
+[162]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5469 	}
+l.5630 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -4064,7 +4077,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5469 	}
+l.5630 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -4073,7 +4086,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5469 	}
+l.5630 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -4086,14 +4099,14 @@ are all screwed up? I'm going to assume that you meant ##.
 D4.pygtex)
 Underfull \vbox (badness 5245) has occurred while \output is active []
 
- [157
+ [163
 
 ]
-[158]
+[164]
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5534 	}
+l.5695 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -4102,7 +4115,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5534 	}
+l.5695 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -4111,7 +4124,7 @@ are all screwed up? I'm going to assume that you meant ##.
 ! Illegal parameter number in definition of \Hy@tempa.
 <to be read again> 
                    p
-l.5534 	}
+l.5695 	}
          
 You meant to type ## instead of #, right?
 Or maybe a } was forgotten somewhere earlier, and things
@@ -4124,52 +4137,51 @@ are all screwed up? I'm going to assume that you meant ##.
 D4.pygtex)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [159
+ [165
 
 ]
-[160]
-Overfull \hbox (35.54823pt too wide) in paragraph at lines 5615--5632
+[166]
+Overfull \hbox (35.54823pt too wide) in paragraph at lines 5776--5793
  [][] 
  []
 
-[161
+[167
 
-] [162] [163] [164] [165] (./notes.ent
+] [168] [169] [170] [171] (./notes.ent
 Overfull \hbox (2.06192pt too wide) in paragraph at lines 93--132
 [][]\OT1/cmr/m/n/9 In the field of in-for-ma-tion sys-tems and com-puter sci-en
 ce, columns are of-ten-times called fields; statis-ti-cians, economists,
  []
 
-) [166
+) [172
 
 ]
 Chapter 7.
-[167
+[173
 
-] [168
+] [174
 
 
-] [169] [170]
+] [175] [176]
 Appendix A.
-[171
+[177
 
 ]
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 5
-729.
- (/usr/local/texlive/2021/texmf-dist/tex/latex/base/omlcmr.fd
+890.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 5729.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 5890.
 
- [172
+ [178
 
-]
-[173]
+] [179]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5831 true_
+l.5992 true_
             divide(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -4177,7 +4189,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5832 &
+l.5993 &
          Divide arguments element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -4188,7 +4200,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5833 floor_
+l.5994 floor_
              divide(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -4196,7 +4208,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5834 &
+l.5995 &
          Return the largest integer smaller or equal to the division of the ...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -4207,7 +4219,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5841 float_
+l.6002 float_
              power(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -4215,7 +4227,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5842 &
+l.6003 &
          First array elements raised to powers from second array, element-wi...
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -4224,17 +4236,17 @@ really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
 
-Overfull \hbox (5.19728pt too wide) in paragraph at lines 5813--5881
+Overfull \hbox (5.19728pt too wide) in paragraph at lines 5974--6042
  [][] 
  []
 
-[174
+[180
 
-] [175] [176]
+] [181] [182]
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5985 greater_
+l.6146 greater_
                equal(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -4242,7 +4254,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5986 &
+l.6147 &
          Return the truth value of (x1 >= x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -4253,7 +4265,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5989 less_
+l.6150 less_
             equal(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -4261,7 +4273,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5990 &
+l.6151 &
          Return the truth value of (x1 <= x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -4272,7 +4284,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5991 not_
+l.6152 not_
            equal(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -4280,7 +4292,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5992 &
+l.6153 &
          Return (x1 != x2) element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -4291,7 +4303,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5995 logical_
+l.6156 logical_
                and(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -4299,7 +4311,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5996 &
+l.6157 &
          Compute the truth value of x1 AND x2 element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -4310,7 +4322,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5997 logical_
+l.6158 logical_
                or(x1, x2, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -4318,7 +4330,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5998 &
+l.6159 &
          Compute the truth value of x1 OR x2 element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -4329,7 +4341,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.5999 logical_
+l.6160 logical_
                xor(x1, x2, /[, out, where, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -4337,7 +4349,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.6000 &
+l.6161 &
          Compute the truth value of x1 XOR x2, element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -4348,7 +4360,7 @@ my insertion and my current dilemma will both disappear.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.6001 logical_
+l.6162 logical_
                not(x, /[, out, where, casting, ...])
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
@@ -4356,7 +4368,7 @@ you left one out. Proceed, with fingers crossed.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.6002 &
+l.6163 &
          Compute the truth value of NOT x element-wise\\
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -4364,121 +4376,122 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
-[177]
-Underfull \hbox (badness 10000) in paragraph at lines 6082--6082
+[183]
+Underfull \hbox (badness 10000) in paragraph at lines 6243--6243
 []|\OT1/cmtt/m/n/10.95 np.asanyarray(a[, dtype, order,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6090--6090
+Underfull \hbox (badness 10000) in paragraph at lines 6251--6251
 []|\OT1/cmtt/m/n/10.95 np.ascontiguousarray(a[, dtype,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6092--6092
+Underfull \hbox (badness 10000) in paragraph at lines 6253--6253
 []|\OT1/cmtt/m/n/10.95 np.asarray[]chkfinite(a[, dtype,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6094--6094
+Underfull \hbox (badness 10000) in paragraph at lines 6255--6255
 []|\OT1/cmtt/m/n/10.95 np.require(a[, dtype, requirements,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6099--6099
+Underfull \hbox (badness 10000) in paragraph at lines 6260--6260
 []|\OT1/cmtt/m/n/10.95 np.concatenate([axis, out, dtype,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6118--6118
+Underfull \hbox (badness 10000) in paragraph at lines 6279--6279
 []|\OT1/cmtt/m/n/10.95 np.split(ary, indices[]or[]sections[,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6120--6120
+Underfull \hbox (badness 10000) in paragraph at lines 6281--6281
 []|\OT1/cmtt/m/n/10.95 np.array[]split(ary,
  []
 
-[178] [179]
-Underfull \hbox (badness 10000) in paragraph at lines 6156--6156
+[184] [185]
+Underfull \hbox (badness 10000) in paragraph at lines 6317--6317
 []|\OT1/cmtt/m/n/10.95 np.unique(ar[, return[]index,
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 6164--6165
+Underfull \hbox (badness 3009) in paragraph at lines 6325--6326
 []|\OT1/cmr/m/n/10.95 Reverse the or-der of el-e-ments along axis 1
  []
 
 
-Underfull \hbox (badness 3009) in paragraph at lines 6166--6167
+Underfull \hbox (badness 3009) in paragraph at lines 6327--6328
 []|\OT1/cmr/m/n/10.95 Reverse the or-der of el-e-ments along axis 0
  []
 
 
-Overfull \hbox (5.90599pt too wide) in paragraph at lines 6135--6176
+Overfull \hbox (5.90599pt too wide) in paragraph at lines 6296--6337
 [][] 
  []
 
-[180
+[186
 
 
 
 
 
-] [181] [182
+] [187] [188
 
 ]
 Appendix B.
-[183] (./notes.aux)
+[189] (./notes.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `notes.out' has not changed.
-(rerunfilecheck)             Checksum: DF6EA32179A344C7F61F6247A7D99147;10356.
+(rerunfilecheck)             Checksum: 5A3C348794850AA1FB34F2BB2434AE63;4015.
  ) 
 Here is how much of TeX's memory you used:
- 48197 strings out of 478994
- 1148218 string characters out of 5858184
- 1898633 words of memory out of 5000000
- 64297 multiletter control sequences out of 15000+600000
+ 45689 strings out of 479304
+ 1112243 string characters out of 5869778
+ 1879380 words of memory out of 5000000
+ 61489 multiletter control sequences out of 15000+600000
  422952 words of font info for 99 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,19n,117p,2405b,2479s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo
-.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/fontawesome/fontawesom
-eone.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/fontawesome/Fon
-tAwesome.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mcsc10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mex10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
-.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.p
-fb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb>
-</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></u
-sr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
-local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/loc
-al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/loc
-al/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/loca
-l/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local
-/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local
-/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
-texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
-xlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/tex
-live/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texli
-ve/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texliv
-e/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive
-/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2
-021/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/202
-1/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on notes.pdf (183 pages, 1037899 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texli
+ve/texmf-dist/fonts/enc/dvips/fontawesome/fontawesometwo.enc}{/usr/share/texliv
+e/texmf-dist/fonts/enc/dvips/fontawesome/fontawesomeone.enc}</usr/share/texlive
+/texmf-dist/fonts/type1/public/fontawesome/FontAwesome.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmss17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texmf/fon
+ts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-s
+uper/sftt1095.pfb>
+Output written on notes.pdf (189 pages, 1536078 bytes).
 PDF statistics:
- 1716 PDF objects out of 1728 (max. 8388607)
- 1482 compressed objects within 15 object streams
- 319 named destinations out of 1000 (max. 500000)
- 487 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1772 PDF objects out of 2073 (max. 8388607)
+ 1521 compressed objects within 16 object streams
+ 332 named destinations out of 1000 (max. 500000)
+ 512 words of extra memory for PDF output out of 10000 (max. 10000000)
 
