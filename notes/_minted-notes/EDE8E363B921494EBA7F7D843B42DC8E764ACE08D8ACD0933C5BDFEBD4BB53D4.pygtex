@@ -5,7 +5,7 @@
 
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{y} \PYG{o}{=} \PYG{l+m+mf}{4.0}	
 
-\PYG{c+c1}{\PYGZsh{} subtracting an integer from variable 'x.'}
+\PYG{c+c1}{\PYGZsh{} subtracting an integer from variable 'x'}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}
 \PYG{l+m+mi}{1}
 

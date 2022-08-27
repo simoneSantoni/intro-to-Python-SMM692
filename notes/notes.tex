@@ -17,7 +17,6 @@
 		shapes,
                 shapes.geometric}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{tikz}
 \usetikzlibrary{calc}
 \usepackage{anyfontsize}
 \usepackage{sectsty}
@@ -34,9 +33,9 @@
 \usepackage{amsmath}
 \usepackage{endnotes}
 \let\footnote=\endnote
-\usepackage[titletoc]{appendix}
-\numberwithin{figure}{chapter}
-\numberwithin{table}{chapter}
+\renewcommand\enoteformat{\rightskip=0pt \leftskip=0pt \parindent=0em
+  \leavevmode\makeenmark\raggedright}
+ 
 
 %% ========================== Colors ======================================
 \definecolor{base_c}{rgb}{0.6,0,0}
@@ -306,11 +305,11 @@ Bayes Business School\\[3pt]
 
 \chapter*{Preface}
 
-\raggedright These notes were prepared for the Summer Module `SMM-692 --- Introduction to Programming in Python.' The materialse I present condense more than ten years of experience I developed using Python for industrial applications and research. At the same time, I tried to incorporate the feedback I collected from four different cohorts of Bayes MSc students, who I taught an introductory module on Python and other subjects that rely heavily on Python, such as network science, data visualization, and Natural Language Processing. 
+\raggedright These notes were prepared for the Summer Module `SMM-692 --- Introduction to Programming in Python.' The materials I present condense more than ten years of experience I developed using Python for industrial applications and research. At the same time, the materials incorporate the feedback from four different cohorts of Bayes MSc students who took SMM692 and other modules for which Python is a prerequisite, such as `SMM638 --- Network Analytics,' `SMM635 --- Data Visualization,' and `SMM694 --- Natural Language Processing.' 
 
-\quad I prepared these notes with two design principles in mind. First, the notes should have mimicked a conversation between a person interested in learning Python and a knowledge recipient (a robot or a human being, it does not matter really!).  The \href{https://en.wikipedia.org/wiki/Cornell_Notes}{Cornell Notes Template} helped me to highlight the questions, reported on the left-hand side of the page as blue boxes, and the answers, displayed on the right-hand side of the page.
+\quad I prepared these notes with two design principles in mind. First, the notes should have mimicked a conversation between a person interested in learning Python and a knowledge recipient (a robot or a human being, it does not matter!).  The \href{https://en.wikipedia.org/wiki/Cornell_Notes}{Cornell Notes Template} helped me to emphasize the conversational structure of the notes: the left-hand side of the page is reserved for questions, reported as blue boxes; answers are displayed on the right-hand side of the page.
 
-\quad Second, I designed the notes to be as practical as possible. For this reason, knowledge recipient's answer supported by a snippet of Python code. In total, there are 76 snippets the learner may want to scrutinize, reason with, run, and modify.
+\quad Second, I designed the notes to be as practical as possible. For this reason, the knowledge recipient's answer is supported by a Python code snippet. In total, there are 76 snippets the learner may want to scrutinize, reason with, run, and modify.
 
 \quad What to say? Have fun!
 
@@ -340,11 +339,11 @@ In this chapter, the reader is supposed to appreciate:
 
 \begin{paracol}{2}
 	\question{\raggedright Why should I learn Python?}
-	\note{Python is a general-purpose, high-level programming language. So, why should business analytics (BA) professionals learn it? Mainly, there are two reasons:
+	\note{Python is a general-purpose, high-level programming language. So, why should business professionals learn it? Mainly, there are two reasons:
 	
 	\begin{itemize}
-		\item First, Python is the center of one of the richest ecosystems of technical and scientific computation modules\footnote{All throughout the various chapters, I will use the terms module and library interchangably.}
-		\item Second, for a large number of developers and users `Python' and `data science' are largely overlapping categories (as Figure \ref{fig:python_pop} shows, the popularity surge of Python is strictly related with the emergence and development of the data science field, YR 2014 $\rightarrow$)
+		\item First, Python is the center of one of the richest ecosystems of modules\footnote{Throughout the various chapters, I will use the terms module, library, and package interchangeably.} for technical and scientific computation, which plays a key role in the quantitative analysis of organizations and markets.
+		\item Second, for a large number of developers and users, `Python' and `data science' are largely overlapping skills (as Figure \ref{fig:python_pop} shows, the popularity surge of Python is strictly related to the emergence and development of the data science field, YR 2014 $\rightarrow$)
 	\end{itemize}
 	}
 \end{paracol}
@@ -375,6 +374,7 @@ In this chapter, the reader is supposed to appreciate:
         		\end{axis}
         \end{tikzpicture}
         \caption{Interest towards data-science related programming languages over time}
+        \vspace{-1em}
         \caption*{Notes. --- Source is Google Trends}
         \label{fig:python_pop}
 \end{figure}
@@ -382,10 +382,10 @@ In this chapter, the reader is supposed to appreciate:
 \begin{paracol}{2}
 	\question{\raggedright Why do I need to take a pre-course module on Python?}
         \note{
-	There are at least three arguments to take a module such as SMM692:
+	There are at least three arguments for taking a module such as SMM692:
 	\begin{itemize}
-		\item Modern BA curricula increasingly depart from a spreadsheet-based approach to teaching and learning
-		\item For example, the Bayes BA program builds heavily on the Python programming language
+		\item Modern quantitative curricula increasingly depart from a spreadsheet-based approach to teaching and learning
+		\item For example, the Bayes Business Analytics MSc builds heavily on the Python programming language
 		\begin{itemize}
 			\item There are \emph{four core modules} based on Python: Data Visualization, Deep Learning, Network Analytics, Value Creation in Digital Settings
 			\item Plus \emph{two elective modules}: Applied Machine Learning and Applied Natural Language Processing
@@ -399,7 +399,7 @@ In this chapter, the reader is supposed to appreciate:
 
 \begin{paracol}{2}
 	\question{\raggedright What is the scope of SMM692?}
-	\note{The scope of SMM692 has been tailored on the learning needs of the Bayes MSc students. Specifically, these notes were created on the basis of the feedback comments provided by four cohorts of BA students. Hence, I warmly invited you to avoid to learn Python using the many (excellent) books and resources available on the web --- otherwise, you may miss core notions and tools or learn irrelevant ones!
+	\note{The scope of SMM692 has been tailored to the learning needs of the Bayes MSc students. Specifically, these notes were created based on the feedback comments provided by four cohorts of students. Hence, I warmly invite you to focus on these notes instead of learning Python using the many books and resources available on the web --- otherwise, you may miss core notions and tools or learn irrelevant ones!
 	}
 \end{paracol}
 \clearpage
@@ -410,7 +410,7 @@ In this chapter, the reader is supposed to appreciate:
 	\begin{itemize}
 		\item NO!
 		\item That would take substantial time --- Python has an extensive language reference!!
-		\item Some aspects of the Python language reference have limited added value for BA professionals, who are closer to Python users than developers
+		\item Some aspects of the Python language reference have limited added value for business professionals, who are closer to Python users than developers
 	\end{itemize}
 	}
 \end{paracol}
@@ -427,13 +427,13 @@ In this chapter, the reader is supposed to appreciate:
 			\item Some built-in functions and methods for strings, lists, dictionaries, and sets
 		\end{itemize}
 	
-	Learning the basics of the Python language will put you in the position to carry out technical and scentific computation tasks --- namely, the essence of data science X BA
+	\quad Learning the basics of the Python language will put you in the position to carry out technical and scientific computation tasks --- namely, the essence of data science X BA
 	}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright Which technical and scientific modules will I learn in these notes?}
-	\note{There are two foundational modules that support stastitical analysis, Viz, ML, and DL: NumPy and Pandas. These two modules are the focus of SMM692's second part.
+	\note{Two foundational modules support statistical analysis, Viz, ML, and DL: NumPy and Pandas. These two modules are the focus of SMM692's second part.
 	}
 \end{paracol}
 
@@ -443,7 +443,6 @@ In this chapter, the reader is supposed to appreciate:
 	
 	\begin{itemize}
 		\item Getting started with Python (Chapter \ref{ch:getting_started})
-		\item Python language fundamentals (Chapter \ref{ch:fundamentals})
 		\item Python objects (Chapter \ref{ch:objects})
 		\item Technical and scientific computation with NumPy (Chapter \ref{ch:tech_sci_computation})
 		\item Data management with Pandas (Chapter \ref{ch:data_management})
@@ -454,12 +453,12 @@ In this chapter, the reader is supposed to appreciate:
 \section{Learning and Teaching Activities}
 
 \begin{paracol}{2}
-	\question{\raggedright What is the phylosophy behing these notes?}
+	\question{\raggedright What is the philosophy behind these notes?}
 	\note{Mainly, there are two pillars:
 	
 	\begin{itemize}
-		\item LESS IS MORE: Focus on few core Python notions at a time and practice them
-		\item LEARN BY DOING: The best way to learn Python is by addressing concrete problems
+		\item LESS IS MORE --- that is, focus on a few core Python notions at a time and practice them
+		\item LEARN BY DOING --- that is, the best way to learn Python is by addressing concrete problems
 	\end{itemize}
 	
 	}
@@ -468,7 +467,8 @@ In this chapter, the reader is supposed to appreciate:
 \begin{paracol}{2}
 	\question{\raggedright I am a Programming Newbie: How Do I Learn Python?}
 	\note{
-		Here is an approach the proved to be effcective according to the pedagogical literature on learnning programming languages:
+		Here is an approach that proved effective according to the pedagogical literature on learning programming languages:\footnote{See for example i) Mayer, Richard E. 1981. ``The Psychology of how Novices Learn Computer Programming.'' \textit{ACM Computing Surveys} (CSUR) 13 (1): 121–141, ii) Robins, Anthony, Janet Rountree, and Nathan Rountree. 2003. ``Learning and Teaching Programming: A Review and Discussion.'' \textit{Computer Science Education} 13 (2): 137–172, and iii) Soloway, Elliot, and James C Spohrer. 2013. \textit{Studying the Novice Programmer}. PsychologyPress.}
+    }
 
 	\begin{itemize}
 		\item Step 1: Focus on \emph{few core notions} at a time (e.g., `string methods')
@@ -482,11 +482,11 @@ In this chapter, the reader is supposed to appreciate:
 
 \begin{paracol}{2}
 	\question{\raggedrith How do I assess my learning outcome?}
-	\note{You may want to assess your learning frequently, at the end of each chapter, or, possibly every two or three sections of the chapter. As Figure \ref{fig:assessement} suggests, the key idea is to adopt a sequential approach. Subject-by-subject, you may want to:
+	\note{You may want to assess your learning frequently, at the end of each chapter or, possibly every two or three sections of the chapter. As Figure \ref{fig:assessement} suggests, the key idea is to adopt a sequential approach. Subject-by-subject, you may want to:
 	\begin{itemize}
-		\item Open a learning circle by wathching the hook video and study the notes closely
+		\item Open a learning circle by watching the hook video and study the notes closely
 		\item Test your understanding by taking a quiz
-		\item If your learning is satisfactory, try solve some practical coding problems
+		\item If your learning is satisfactory, try to solve some practical coding problems (i.e., problem sets)
 	\end{itemize}
 	}
 \end{paracol}
@@ -562,13 +562,13 @@ In this chapter, the reader is supposed to appreciate:
 	  (decision_3.south) edge[bend left=45] node [] {Problem set is unclear} (ps.south)
 	  (decision_3.north) edge[bend right=14] node [] {Errors in my code} (notes.east);
 	\end{tikzpicture}
-	\caption{The learning circle}
+	\caption{The suggested workflow to learn to code}
 	\label{fig:assessement}
 \end{sidewaysfigure}
 
 \clearpage
 
-\theendnotes
+\raggedright{\theendnotes}
 
 \chapter{Getting Started with Python}
 \label{ch:getting_started}
@@ -605,12 +605,12 @@ At the end of the chapter, you will be able to:
 	\begin{itemize}
 		\item Anaconda is `battery-included' --- it comes with a humongous number of modules for data science
 		\begin{itemize}
-			\item If you use the official Python installation, then you have to install the modules you need on your own!
+			\item If you use the official Python installation, you must install the modules you need on your own!
 		\end{itemize}
 		\item  Anaconda is a bundle of various pieces of software:
 		\begin{itemize}
 			\item \texttt{conda} is the Swiss army knife to manage Python modules and environments
-			\item \texttt{anaconda-navigator} is the graphical interface from within to access Python IDEs and related desktop/web applications
+			\item Anaconda Navigator is the graphical interface from within to access Python IDEs and related desktop/web applications
 		\end{itemize}
 	\end{itemize}
 	}
@@ -625,13 +625,13 @@ At the end of the chapter, you will be able to:
 		\item Run the installer
 		\begin{itemize}
 			\item For Linux: navigate to the folder where you have downloaded the installer as per step 1, open a shell session, then run \texttt{\$ bash ./Anaconda3-XXXX.XX-Linux-x86-64.sh}
-			\item For Win and Mac OS: just run the graphical installer downloaded in step 1
+			\item For Windows and Mac OS: just run the graphical installer downloaded in step 1
 		\end{itemize}
 		\item Accept the terms proposed by the Anaconda people to use their software, comprising Python, the \texttt{conda} package manager, and a bundle of modules for data science
 		\item That's it!
 		\begin{itemize}
-		\item For Linux users: if you accepted the default installation options, an environmental variable has been created either in your \texttt{.bashrc} or \texttt{.zshrc}. That means you can access the various pieces of software included in the Anaconda installation (e.g., Anaconda Navigator) from a shell session
-		\item For Win and Mac OS users: the various pieces of software included in the Anaconda installation are available from the menu of your system
+		\item For Linux users: if you accepted the default installation options, an environmental variable is created either in your \texttt{.bashrc} or \texttt{.zshrc}. That means you can access the various pieces of software included in the Anaconda installation (e.g., Anaconda Navigator) from a shell session
+		\item For Windows and Mac OS users: the various pieces of software included in the Anaconda installation are available from the menu of your system
 		\end{itemize}
 	\end{enumerate}
 
@@ -658,7 +658,7 @@ At the end of the chapter, you will be able to:
 
 \begin{paracol}{2}
 	\question{Is Python a programming language or an interpreter?}
-	\note{Short answer: BOTH. Typically, we refer to Python as a programming language. However, Python is also a software package called an interpreter, a kind of program that executes other programs. When we write a Python program, the Python interpreter reads your program and carries out the instructions it contains. In effect, the interpreter is a layer of software logic between our code and the computer hardware on our machine.
+	\note{Short answer: BOTH. Typically, we refer to Python as a programming language. However, Python is also a software package called an interpreter, a kind of program that executes other programs. When you write a Python program, the Python interpreter reads your program and carries out the instructions it contains. In effect, the interpreter is a layer of software logic between your code and the computer hardware on your machine.
 	}
 \end{paracol}	
 
@@ -666,7 +666,7 @@ At the end of the chapter, you will be able to:
 	\question{\raggedright How does an interpreter work?}
 	\note{
 	\begin{itemize}
-		\item When you instruct Python to run your script (e.g., `script.py'), there are a few steps the interpreter carries out before your code actually starts crunching away
+		\item When you instruct Python to run your script (e.g., `script.py'), there are a few steps the interpreter carries out before your code starts crunching away (see Figure \ref{fig:python_interpreter})
 		\item First, the code is compiled to something called `byte code'
 		\begin{itemize}
 			\item This step happens behind the scenes (there is nothing to do for the programmer!)
@@ -736,15 +736,15 @@ At the end of the chapter, you will be able to:
 
 	\quad Let us unpack that command. The \texttt{\$} symbol denotes the
 	statement has to be run in a shell session; the \texttt{python} command
-	tells shell to use the Python interpreter to evaluate the script;
+	tells the shell to use the Python interpreter to evaluate the script;
 	\texttt{filename.py} is the file name of the script. Figure
 	\ref{fig:simple_script} shows how to run the Python script containing
-	the code displayed in Snippet 1.1 (named \texttt{simple\_script.py}.
+	the code displayed in Snippet 1.1 (named \texttt{simple\_script.py}).
 	\footnote{The example shown in the screenshot assumes the Python script
-	\texttt{snmple\_script.py} is saved in the current working directory. If
+	\texttt{sample\_script.py} is saved in the current working directory. If
 	the script is saved in a different directory, you have to specify the
 	full path to the script in the command line.} It is self-evident the
-	outcome of the script is disaplyed in the active shell session (we will
+	outcome of the script is displayed in the active shell session (we will
 	see the \texttt{print} function in action many times over the next few
 	chapters).
 	}
@@ -767,12 +767,12 @@ print(2 + 4)
 \end{figure}
 
 \begin{paracol}{2}
-	\question{\raggedright How do I run a Python script in the interactive way?}
+	\question{\raggedright How do I interactively run a Python script?}
 	\note{Mainly, there are three ways to do that:
 	\begin{itemize}
 		\item Running a Python shell in the terminal
-		\item Running an IPyhton shell in the terminal
-		\item Interacting with a Python or IPython shell through and Integrated Development Environment (IDE)
+		\item Running an IPython shell in the terminal
+		\item Interacting with a Python or IPython shell through an Integrated Development Environment (IDE)
 	\end{itemize}
 	}
 \end{paracol}
@@ -819,7 +819,7 @@ print(2 + 4)
 
 \begin{paracol}{2}
 	\question{\raggedright Shall I start using Jupyter?}
-	\note{Based on my experience, Jupyter sustains novices' programming learning in at least two ways. First, the graphical interface of a Jupyter notebook (see Figure \ref{fig:jupyter_session} allows learners to embrace a trial and error approach to coding by dissecting a script into manageable snippets --- or even single lines --- that can be better examined, understood, and tested. Second, the text boxes and rich media content typically included in a notebook provide learners with critical cognitive anchors to understand a script's logical structure and background.
+	\note{Based on my experience, Jupyter sustains novices' programming learning in at least two ways. First, the graphical interface of a Jupyter notebook (see Figure \ref{fig:jupyter_session} allows learners to embrace a trial and error approach to coding by dissecting a script into manageable snippets --- or even single lines --- that can be better examined, understood, and tested. Second, the text boxes and rich media content typically included in a notebook provide learners with explanations to understand a script's logical structure and background.
 
 	}
 \end{paracol}
@@ -842,21 +842,21 @@ print(2 + 4)
 		\item Visual Studio Code (VSCode)
 	\end{itemize}
 
-	Figures \ref{fig:ipython_in_vscode} and \ref{fig:jupyter_in_vscode} show how to run an IPython and Jupyter session in VSCode respectively.
+	Figures \ref{fig:ipython_in_vscode} and \ref{fig:jupyter_in_vscode} show how to run an IPython and Jupyter session in VSCode respectively.\footnote{Please refer to the \href{https://code.visualstudio.com/docs/languages/python}{official documentation} on how to use Python in VSCode.}
 	}
 \end{paracol}	
 
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.95\textwidth]{vscode}
-	\caption{A screenshot of an interactve IPython shell in Visual Studio Code}
+	\caption{A screenshot of an interactive IPython shell in VSCode}
 	\label{fig:ipython_in_vscode}
 \end{figure}	
 
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.95\textwidth]{jupyter_in_vscode}
-	\caption{A screenshot of a Jupyter notebook session in Visual Studio Code}
+	\caption{A screenshot of a Jupyter notebook session in VSCode}
 	\label{fig:jupyter_in_vscode}
 \end{figure}	
 \clearpage
@@ -865,7 +865,7 @@ print(2 + 4)
 
 \begin{paracol}{2}
 	\question{\raggedright What is a Python environment?}
-	\note{A Python environment is a collection of Python packages and their dependencies. In other words, a Python environment is a self-contained directory that contains a Python interpreter, a set of Python packages, and their dependencies.
+	\note{A Python environment is a self-contained directory that contains a Python interpreter, a set of Python packages, and their dependencies.
 	}
 \end{paracol}
 
@@ -882,27 +882,25 @@ print(2 + 4)
 \begin{paracol}{2}
 	\question{\raggedright Why should I protect my system Python?}
 	\note{
-	The large majoity of operating systems come with Python installed by default. Such an installation is called `system Python' and is responsible for a large number of essential operating systems processes. 
+	The large majority of operating systems come with Python installed by default. Such an installation is called `system Python' and is responsible for many essential operating systems processes. 
 
-	\quad Every time we install a new Python module $A$, the package manager (e.g, conda) checks the libraries on which $A$ depends. If a dependency $D(A)$ is not installed, the package manager will install it for us. Since a single module can depend on many libraries, the larger the number of libraries:
+	\quad Every time we install a new Python module $A$, the package manager (e.g, conda) checks the libraries on which $A$ depends. If a dependency $D(A)$ is not installed, the package manager will install it for us. The larger the number of libraries:
 	\begin{itemize}
-		\item The longer the installation process (checking te web of dependencies take substantial time!)
+		\item The longer it takes to install a library (checking the web of dependencies takes substantial time!)
 		\item The more likely inconsistencies will arise within the web of dependencies; that is
 		\begin{itemize}
 		\item The less likely we will be able to install the modules we need
-		\item The more likley modules previosuly installed will stop to work
+		\item The more likely modules previously installed will stop work
 		\end{itemize}
 	\end{itemize}
-	If we care about not breaking some essential features of the operating system, then, we should avoid using `syteme Python' for or projects requiring Python.
+	Ultimately, if you care about not breaking some essential features of the operating system, then you should avoid using `system Python' for projects requiring Python.
 	}
 \end{paracol}
 \clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Why do Python environments work well for specific projects?}
+	\question{\raggedright Why Python environments work well for specific projects?}
 	\note{
-	% A Python environment is a Python installation that has nothing to do with `system Python.' In other words, a Python environments is not used by default for any processes regarding the operating systems
-	% \end{itemize}
 	Typically, we create a Python environment to carry out a specific project or a class of projects (e.g., Machine Learning projects). The advantage is twofold:
 	\begin{itemize}
 		\item Reliability $\rightarrow$ the web of dependencies is relatively simple insofar as we install only the few modules that are required by the project or project class. Likely as not, we will not come across installation issues!
@@ -915,8 +913,8 @@ print(2 + 4)
 	\question{\raggedright How do I create a Python environment?}
 	\note{
 	The procedure to create a Python environment depends on the package
-	manager we use (hence, the Python installation we have).  Here, I focus
-	on the the case in which conda is the adopted package manager.\footnote{\texttt{pip} users are warmly encouraged to read the \href{https://docs.python.org/3/tutorial/venv.html}{Virtual Environments and Packages} section of the official Python Tutorial.}
+	manager you use (hence, the Python installation we have).  Here, I focus
+	on the case where conda is the adopted package manager.\footnote{\texttt{pip} users are warmly encouraged to read the \href{https://docs.python.org/3/tutorial/venv.html}{Virtual Environments and Packages} section of the official Python Tutorial.}
 	}
 \end{paracol} 
 
@@ -936,9 +934,9 @@ print(2 + 4)
 	\href{https://docs.conda.io/projects/conda/en/latest/commands.html}{Conda
 	Command reference} illustrates the various commands Conda provides for
 	managing packages and environments.} \texttt{myenv} is the name of the
-	environment, and \texttt{python=3.X} is the version of Python to use (e.g., 3.10).
+	environment and \texttt{python=3.X} is the version of Python to use (e.g., 3.10).
 	
-	\quad To use the newly created environment, one as to activate it by running the following command in the shell:
+	\quad To use the newly created environment, one has to activate it by running the following command in the shell:
 
 	\vspace{1em}
 
@@ -968,7 +966,7 @@ print(2 + 4)
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[width=0.75\textwidth]{conda_env_1}
-	\caption{A screenshot showing how to populate a Python environment using \texttt{conda} from the command line}
+	\caption{A screenshot showing how to populate a Python environment with libraries using \texttt{conda} from the command line}
 	\label{fig:conda_env_cl_1}
 \end{figure}
 \clearpage
@@ -982,66 +980,39 @@ print(2 + 4)
 
 \begin{sidewaysfigure}[!htbp]
 	\includegraphics[width=1\textwidth]{anaconda_nav_env_0.png}
-	\caption{A screenshot showing how to create a new environement from within the `Environments' section of Anaconda Navigator.}
+	\caption{A screenshot showing how to create a new environment from within the `Environments' section of Anaconda Navigator}
 	\label{fig:anaconda_venv_0}
 \end{sidewaysfigure}
 
 \begin{sidewaysfigure}[!htbp]
 	\includegraphics[width=1\textwidth]{anaconda_nav_env_1.png}
-	\caption{A screenshot showing how to add Python modules to a (newly created) environment from within the `Environments' section of Anaconda Navigator.}
+	\caption{A screenshot showing how to add Python modules to a (newly created) environment from within the `Environments' section of Anaconda Navigator}
 	\label{fig:anaconda_venv_1}
 \end{sidewaysfigure}
 \clearpage
 
 \theendnotes
 
-%\chapter{Python Language Fundamentals}
-%\label{ch:fundamentals}
-%
-%\par\noindent\rule{\textwidth}{0.4pt}
-%
-%At the end of the chapter, you will be able to:
-%
-%\begin{itemize}
-%	\item Get Python work in your machine
-%	\item Run Python code from a script file and interactively 
-%	\item Configure a Python environment
-%\end{itemize}
-%
-%\par\noindent\rule{\textwidth}{0.4pt}
-%
-%\vspace{1em}
-%
-%
-%\section{Variables}
-%
-%$\ldots$
-%
-%\section{Objects}
-%
-%$\ldots$
-%
-%\section{References}
-%
-%$\ldots$
-
 \chapter{Python Objects}
 \label{ch:objects}
 
-\vspace{1em}
+\par\noindent\rule{\textwidth}{0.4pt}
 
-
-\vspace{1em}
-
-In this chapter, we pursue the following learning objectives:
+At the end of the chapter, you will be able to evaluate the various types of Python objects in regard to:
 
 \begin{itemize}
-	\item ....
+	\item Key features
+	\item Use cases/roles
+	\item Available methods
 \end{itemize}
+
+\par\noindent\rule{\textwidth}{0.4pt}
+
+\vspace{1em}
 
 \begin{paracol}{2}
     \question{\raggedright What is a Python object?} 
-    \note{In essence, Python objects are pieces of data. Mark Lutz, the author of the popular book \href{https://www.google.co.uk/books/edition/Learning_Python/4pgQfXQvekcC?hl=en&gbpv=0}{Learning Python}\footnote{Lutz, Mark. \textit{Learning Python: Powerful object-oriented programming.} O'Reilly Media, Inc., 2013.}, points out \quote{\textit{in Python, we do things with stuff. ``Things'' take the form of operations like addition and concatenation, and ``stuff'' refers to the objects on which we perform those operations}}. 
+    \note{In essence, Python objects are pieces of data. Mark Lutz, the author of the popular book \href{https://www.google.co.uk/books/edition/Learning_Python/4pgQfXQvekcC?hl=en&gbpv=0}{Learning Python}\footnote{Lutz, Mark. \textit{Learning Python: Powerful object-oriented programming.} O'Reilly Media, Inc., 2013.}, points out \quote{``\textit{... in Python, we do things with stuff. ``Things'' take the form of operations like addition and concatenation, and ``stuff'' refers to the objects on which we perform those operations}''}. 
     }
 \end{paracol}
 
@@ -1049,23 +1020,23 @@ In this chapter, we pursue the following learning objectives:
     \question{\raggedright Built-in and ad-hoc objects}
     \note{In Python, there are two families of objects: built-in objects provided by the Python language itself and ad-hoc objects --- called \href{https://docs.python.org/3/tutorial/classes.html}{classes} --- we can create to accomplish specific goals.}
 \end{paracol}
+\clearpage
 
 \begin{paracol}{2}
     \question{\raggedright Why do built-in Python objects matter?} 
     \note{
     Typically, we do not need to create ad-hoc objects. Python provides us with diverse built-in objects that make our job easier:
     \begin{itemize}
-    	\item built-in objects make coding efficient and easy. For example, using the \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{string} object, we can represent and manipulate a piece of text --- e.g., a newspaper article --- without loading any \href{https://docs.python.org/3/tutorial/modules.html}{module}
-    	\item built-in objects are flexible. For example, we can deploy built-in objects to create a \href{https://docs.python.org/3/tutorial/classes.html}{class}
-    	\item built-in objects have been created and refined over time by a large community of expert developers. Hence, they are  often  more  efficient  than  ad-hoc objects (unless the creator of the ad-hoc object really knows her business!)
+    	\item Built-in objects make coding efficient and easy. For example, using the \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{string} object, we can represent and manipulate a piece of text --- e.g., a newspaper article --- without loading any \href{https://docs.python.org/3/tutorial/modules.html}{module}
+    	\item Built-in objects are flexible. For example, we can deploy built-in objects to create a \href{https://docs.python.org/3/tutorial/classes.html}{class}
+    	\item Built-in objects have been created and refined over time by a large community of expert developers. Hence, they are  often  more  efficient  than  ad-hoc objects (unless the creator of the ad-hoc object knows her business!)
     \end{itemize}
     }
 \end{paracol}
-\clearpage
 
 \begin{paracol}{2}
-    \question{\raggedright The core built-in Python objects} 
-	\note{Table \ref{tab:built_in_objects} illustrates the types of built-in Python objects. For example, \href{https://docs.python.org/3/tutorial/introduction.html\#numbers}{Numbers} and \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{strings} objects are used to represent numeric and textual data respectively. \href{https://docs.python.org/3/tutorial/introduction.html\#lists}{Lists} and \href{https://docs.python.org/3/tutorial/datastructures.html\#dictionaries}{dictionaries} are --- likely as not --- the two most popular \href{https://docs.python.org/3/tutorial/datastructures.html}{data structures} in Python. Lists are ordered collections of other objects (any type!!). Dictionaries are pairs of keys (e.g., a product identifier) and objects (e.g., the price of the product). No worries: we will go through each built-in type in the following sections of this document. Caveat: in the interest of logical coherence, the various built-in types will not be presented in the order adopted in Table \ref{tab:built_in_objects}.} 
+    \question{\raggedright What are the core built-in Python objects?} 
+	\note{Table \ref{tab:built_in_objects} illustrates the types of built-in Python objects. For example, \href{https://docs.python.org/3/tutorial/introduction.html\#numbers}{Numbers} and \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{strings} objects are used to represent numeric and textual data respectively. \href{https://docs.python.org/3/tutorial/introduction.html\#lists}{Lists} and \href{https://docs.python.org/3/tutorial/datastructures.html\#dictionaries}{dictionaries} are --- likely as not --- the two most popular \href{https://docs.python.org/3/tutorial/datastructures.html}{data structures} in Python. Lists are ordered collections of other objects (any type!!). Dictionaries are pairs of keys (e.g., a product identifier) and objects (e.g., the product's price). No worries: we will go through each built-in type in the following sections of this document. Caveat: in the interest of logical coherence, the various built-in types will not be presented in the order adopted in Table \ref{tab:built_in_objects}.} 
 \end{paracol}
 
 \begin{table}[!htbp]
@@ -1087,14 +1058,14 @@ Program unit types   & Functions, modules, classes                              
 Implementation types & Compiled code, stack tracebacks                                      \\ \bottomrule
 \end{tabular}
 \end{table}
+\clearpage
 
 \section{Number Type Fundamentals}
 
 \begin{paracol}{2}
-    \question{\raggedright Types of `number' objects}
-	\note{Snippet 4.1, ``Doing stuff with numbers,'' highlights the two most popular \href{https://docs.python.org/3/tutorial/introduction.html\#numbers}{`number'} instances in Python: integers and floating-point numbers. Integers are whole numbers such as 0, 4, or -12. Floating-point numbers are the representation of real numbers such as 0.5, 3.1415, or -1.6e-19. However, floating points in Python do not have --- in general --- the same value as the real number they represent.\footnote{Floating numbers are stored in binaries with an assigned level of precision that is typically equivalent to 15 or 16 decimals.} It is worth noticing that any single number with a period `.' is considered a floating point in Python. Also, Snippet 4.1 shows that the multiplication of an integer by a floating point yields a floating point. That happens because Python first converts operands up to the type of the most complicated operand.} %
+    \question{\raggedright What are the types of `number' objects?}
+	\note{Snippet 4.1, ``Doing stuff with numbers,'' highlights the two most popular \href{https://docs.python.org/3/tutorial/introduction.html\#numbers}{`number'} instances in Python: integers and floating-point numbers. Integers are whole numbers such as 0, 4, or -12. Floating-point numbers represent real numbers such as 0.5, 3.1415, or -1.6e-19. However, floating points in Python do not have --- in general --- the same value as the real number they represent.\footnote{Floating numbers are stored in binaries with an assigned level of precision typically equivalent to 15 or 16 decimals.} It is worth noticing that any single number with a period `.' is considered a floating point in Python. Also, Snippet 4.1 shows that the multiplication of an integer by a floating point yields a floating point. That happens because Python first converts operands to the type of the most complicated operand.} 
 \end{paracol}
-\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.1 --- doing `stuff' with numbers}
 # integer addition
@@ -1112,7 +1083,7 @@ Implementation types & Compiled code, stack tracebacks                          
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright Besides integers and floating points}
+	\question{\raggedright Are there any other number types besides integers and floating points?}
     \note{Besides integers and floating points numbers, Python includes fixed-precision, rational numbers, Booleans, and sets instances --- see Table \ref{tab:number_types_in_python}.}
 \end{paracol}
 
@@ -1134,9 +1105,10 @@ Implementation types & Compiled code, stack tracebacks                          
 		 \bottomrule
 	\end{tabular}
 \end{table}
+\clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Basic arithmetic operations in Python}
+	\question{\raggedright How do I carry out basic arithmetic operations in Python?}
 	\note{Numbers in Python support the usual mathematical operations:
 		\begin{itemize}
 			\item \texttt{+} $\rightarrow$ addition
@@ -1151,7 +1123,7 @@ Implementation types & Compiled code, stack tracebacks                          
 \end{paracol}
 
 \begin{paracol}{2}
-    \question{\raggedright Advanced mathematical operations}
+    \question{\raggedright How do I carry out advanced mathematical operations?}
     \note{Besides the mathematical operations shown above, there are many \href{https://docs.python.org/3/library/numeric.html}{modules shipped with Python} that carry out advanced/specific numerical analysis. For example, the \href{https://docs.python.org/3/library/math.html}{\texttt{math}} module provides access to the mathematical functions defined by the \href{https://en.wikipedia.org/wiki/C_standard_library}{C standard}.\footnote{As per the documentation of the Python programming language, \href{https://docs.python.org/3/library/math.html}{\texttt{math}} cannot be used with complex numbers.} Table \ref{tab:math_module_functions} reports a sample of these functions. To use them \href{https://docs.python.org/3/library/math.html}{\texttt{math}}, we have to import the module as shown in Snippet 4.2. Another popular module shipped with Python is \href{https://docs.python.org/3/library/random.html}{\texttt{random}}, implementing pseudo-random number generators for various distributions (see the lower section of Example 2).}
 \end{paracol}
 
@@ -1191,7 +1163,7 @@ Implementation types & Compiled code, stack tracebacks                          
 \end{table}
 \clearpage
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.2 --- advanced mathematical operations with the modules shipped with Python}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.2 --- advanced mathematical operations with the math module}
 # import the math module
 >>> import math
 	
@@ -1226,7 +1198,7 @@ Implementation types & Compiled code, stack tracebacks                          
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{Operator precedence}
+	\question{What is the precedence order among Python operators?}
     \note{As shown in Snippet 4.2, line 30, Python expressions can string together multiple operators. So, how does Python know which operation to perform first? The answer to this question lies in operator precedence. When you write an expression with more than one operator, Python groups its parts according to what is called precedence rules,\footnote{The official Python documentation has an extensive section on operator precedence rules in the section dedicated to \href{https://docs.python.org/3/reference/expressions.html}{syntax of expressions}} and this grouping determines the order in which the expression’s parts are computed. Table \ref{tab:operator_precedence} reports the precedence hierarchy concerning the most common operators. Note that operators lower in the table have higher precedence. Parentheses can be used to create sub-expressions that override operator precedence rules.}
 \end{paracol}
 \clearpage
@@ -1252,13 +1224,14 @@ Implementation types & Compiled code, stack tracebacks                          
 \end{table}
 
 \begin{paracol}{2}
-	\question{\raggedright Technical and scientific computation with Python}
-	\note{Python is at the center of a rich ecosystem of modules for technical and scientific computation. In the following chapter, the attention will revolve around two of the most prominent modules: \href{https://numpy.org/}{NumPy} and \href{https://scipy.org/}{SciPy}. In a nutshell, \href{https://numpy.org/}{NumPy} offers the infrastructure for the efficient manipulation of (potentially massive) data structures, while \href{https://scipy.org/}{SciPy} implements many algorithms across the fields of statistics, linear algebra, optimization, calculus, signal processing,  image processing, and others. Another core module in the technical and scientific domain is \href{https://www.sympy.org/en/index.html}{SimPy}, a library for symbolic mathematics. Note that none of these three modules are shipped with Python and should be installed with the package manager of your choice (e.g., \texttt{conda}).}
+	\question{\raggedright How do I carry out technical and scientific computation with Python?}
+	\note{Python is at the center of a rich ecosystem of modules for technical and scientific computation. In the following chapter, the attention will revolve around one of the most prominent modules, namely, \href{https://numpy.org/}{NumPy}. In a nutshell, \href{https://numpy.org/}{NumPy} offers the infrastructure for efficiently manipulating data structures. \href{https://scipy.org/}{SciPy} builds on \href{https://numpy.org/}{NumPy} to implement many algorithms across the fields of statistics, linear algebra, optimization, calculus, signal processing,  image processing, and others. Another core module in the technical and scientific domain is \href{https://www.sympy.org/en/index.html}efficiently manipulatingSimPy}, a library for symbolic mathematics. Note that none of these three modules are shipped with Python and should be installed with the package manager of your choice (e.g., \texttt{conda}).}
 \end{paracol}
+\clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Variables and Basic Expressions}
-	\note{Variables are simply names—created by you or Python—that are used to keep track of information in your program. In Python:
+	\question{\raggedright What is a Python variable?}
+	\note{Variables are simply names --- created by you or Python --- that are used to keep track of information in your program. In Python:
 	\begin{itemize}
 		\item Variables are created when they are first assigned values
 		\item Variables are replaced with their values when used in expressions
@@ -1276,7 +1249,7 @@ Implementation types & Compiled code, stack tracebacks                          
 
 >>> y = 4.0	
 
-# subtracting an integer from variable 'x.'
+# subtracting an integer from variable 'x'
 >>> x - 1
 1
 
@@ -1296,12 +1269,12 @@ Implementation types & Compiled code, stack tracebacks                          
 >>> z = 3 * x - 5 * y
 
 \end{pythoncode}
+\clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Displaying number objects}
-	\note{Snippet 4.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the outcome of the expression `as is (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we have to prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. Snippet 4.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html\#str.format}{\texttt{format}}.}
+	\question{\raggedright How do I display number objects in a readable way?}
+	\note{Snippet 4.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the outcome of the expression `as is (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we must prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. Snippet 4.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html\#str.format}{\texttt{format}}.}
 \end{paracol}
-\clearpage
 
 \begin{table}[!htbp]
 	\centering
@@ -1348,7 +1321,6 @@ Implementation types & Compiled code, stack tracebacks                          
 	\question{\raggedright{How do I compare number objects?}}
 	\note{Comparisons are used frequently to create control \href{https://docs.python.org/3/tutorial/controlflow.html}{flows}, a topic we will discuss later in this chapter. Normal comparisons in Python regard two number objects and return a Boolean result. Chained comparisons concern three or more objects and, like normal comparisons, yield a Boolean result. Snippet 4.5 provides a sample of normal comparisons (between lines 1 and 15) and chained comparisons (between lines 21 and 30). As evident in the example, comparisons can regard both numbers and variables assigned to numbers. Chained comparisons can take the form of a range test (see line 21), a joined, `AND' test of the truth of multiple expressions (see line 25), or a disjoined, `OR' test of the truth of multiple expressions (see line 29).}
 \end{paracol}
-\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.5 --- comparing numeric objects}
 # less than
@@ -1383,6 +1355,7 @@ True
 True 
 
 \end{pythoncode}
+\clearpage
 
 \section{String Type Fundamentals}
 
@@ -1400,10 +1373,17 @@ True
 	\question{Is \texttt{abc} a Python string?}
 	\note{Nope. Python strings are enclosed in single quotes (`...') \textit{or} double quotes (``...'') with the same result. Hence, ``\texttt{abc}'' can be Python string, while \texttt{abc} cannot. \texttt{abc} can be a variable name, though.}
 \end{paracol}
+\clearpage
 
 \begin{paracol}{2}
-	\question{String indexing and slicing}
-	\note{The fact that strings are immutable sequences affects how we manipulate textual data in Python. In Snippet 4.6, we fetch the individual elements of \texttt{S}, a variable assigned to ``\texttt{Python 3.X}.'' As per the built-in function \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{\texttt{len}}, \texttt{S} contains six unitary strings. That means that each element in \texttt{S} is associated with a position in the numerical progression $\{0, 1, 2, 3, 4, 5\}$. Now, you may be surprised to see the first element of the list is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has an index of $0$, while the last element has an index \texttt{len(obj)} - 1.  Fetching the individual elements of a string, such as \texttt{S}, requires passing the desired index between brackets, as shown in line 9 (where we get the first unitary string, namely, ``\texttt{P}''.), line 13 (where we get the last unitary string, namely, ``\texttt{X}''), and line 21 (where we get the unitary string with index $3$, i.e., the fourth unitary string appearing in \texttt{S}, ``\texttt{h}''). Note that line 17 is an alternative indexing strategy to the one presented in line 13: it is possible to retrieve the last unitary string by counting `backward'; that is, getting the first element starting from the right-hand side of the string, which equates to index \texttt{-1}. In lines 26 and 30, we exploit the indices of \texttt{S} to retrieve multiple unitary strings in a row. What we pass among brackets is not a single index. Instead, we specify a range of indices \texttt{i:j}. It is worth noticing that, in Python, the element associated with the lower bound index \texttt{} is returned, whereas the element associated with the upper bound index \texttt{j} is not. In line 26, we fetch the unitary strings between index \texttt{2} --- equating to third unitary string of \texttt{S} --- and index \texttt{5} excluded --- namely, the fifth unitary string of \texttt{S}. In line 30, we adopt the `backward' approach to retrieve the unitary string with index \texttt{-3} --- the third string counting from the right-hand side of \texttt{S} --- as well as any other unitary strings following index \texttt{-3}. To do that, we leave the upper bound index blank.} 
+	\question{How do I manipulate string objects?}
+	\note{The fact that strings are immutable sequences affects how we manipulate textual data in Python. In Snippet 4.6, we fetch the individual elements of \texttt{S}, a variable assigned to ``\texttt{Python 3.X}.'' As per the built-in function \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{\texttt{len}}, \texttt{S} contains six unitary strings. That means that each element in \texttt{S} is associated with a position in the numerical progression $\{0, 1, 2, 3, 4, 5\}$.
+	
+	\quad Now, you may be surprised to see the first element of the list is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has an index of $0$, while the last element has an index \texttt{len(obj)} - 1.
+	
+	\quad Fetching the individual elements of a string, such as \texttt{S}, requires passing the desired index between brackets, as shown in line 9 (where we get the first unitary string, namely, ``\texttt{P}''.), line 13 (where we get the last unitary string, namely, ``\texttt{X}''), and line 21 (where we get the unitary string with index $3$, i.e., the fourth unitary string appearing in \texttt{S}, ``\texttt{h}''). Note that line 17 is an alternative indexing strategy to the one presented in line 13: it is possible to retrieve the last unitary string by counting `backward'; that is, getting the first element starting from the right-hand side of the string, which equates to index \texttt{-1}.
+	
+	\quad In lines 26 and 31, we exploit the indices of \texttt{S} to retrieve multiple unitary strings in a row. What we pass among brackets is not a single index. Instead, we specify a range of indices \texttt{i:j}. It is worth noticing that, in Python, the element associated with the lower bound index \texttt{} is returned. In contrast, the element associated with the upper bound index \texttt{j} is not. In line 26, we fetch the unitary strings between index \texttt{2} --- equating to third unitary string of \texttt{S} --- and index \texttt{5} excluded --- namely, the fifth unitary string of \texttt{S}. In line 30, we adopt the `backward' approach to retrieve the unitary string with index \texttt{-3} --- the third string counting from the right-hand side of \texttt{S} --- as well as any other unitary strings following index \texttt{-3}. To do that, we leave the upper bound index blank.} 
 \end{paracol}
 \clearpage
 
@@ -1445,10 +1425,15 @@ True
 \clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Common string literals and operators}
-	\note{Snippet 4.6 deals with string indexing and slicing, two of the many operations we can carry out on strings. Table \ref{tab:string_literals_and_operators} reports a sample of common string literals and operators. The first two lines of Table \ref{tab:string_literals_and_operators} remind us that single and double quotes are equivalent when it comes to assigning a variable to a string object. However, we must refrain from mixing and matching single and double quotes. In other words, a string object requires the leading and trailing quotes are of the same type (i.e., double-double or single-single). In the interest of consistency, it is a good idea to make a policy choice, such as ``in my Python code, I use double quotes only'', and to stick with that throughout the various lines of the script. I prefer using double quotes because the single quote symbol is relatively popular in natural language (consider, for example, the Saxon genitive). As shown in the third line of Table \ref{tab:string_literals_and_operators}, the single quote is treated as a unitary string insofar as double quotes are used to delimit the string object. Should the string object be delimited by single quotes, we should tell Python not to treat the single quote symbol after \texttt{m} as a Python special character but as a unitary string. To do that, we use the escape symbol $\setminus$  as shown in the fourth line of Table \ref{tab:string_literals_and_operators}. Table \ref{tab:helpful_escapes} provides several escaping examples.}
+	\question{\raggedright What are the most common string literals and operators?}
+	\note{Snippet 4.6 deals with string indexing and slicing, two of the many operations we can carry out on strings. Table \ref{tab:string_literals_and_operators} reports a sample of common string literals and operators.
+	
+	\quad The first two lines of Table \ref{tab:string_literals_and_operators} remind us that single and double quotes are equivalent when assigning a variable to a string object. However, we must refrain from mixing and matching single and double quotes. In other words, a string object requires the leading and trailing quotes are of the same type (i.e., double-double or single-single).
+	
+	\quad In the interest of consistency, it is a good idea to make a policy choice, such as ``in my Python code, I use double quotes only'', and to stick with that throughout the various lines of the script. I prefer using double quotes because the single quote symbol is relatively popular in natural language (consider, for example, the Saxon genitive).
+	
+	\quad As shown in the third line of Table \ref{tab:string_literals_and_operators}, the single quote is treated as a unitary string insofar as double quotes are used to delimit the string object. Should the string object be delimited by single quotes, we should tell Python not to treat the single quote symbol after \texttt{m} as a Python special character but as a unitary string. To do that, we use the escape symbol $\setminus$  as shown in the fourth line of Table \ref{tab:string_literals_and_operators}. Table \ref{tab:helpful_escapes} provides several escaping examples.}
 \end{paracol}
-\clearpage
 
 \begin{table}[!htbp]
 	\centering
@@ -1484,8 +1469,8 @@ True
 \end{table}
 
 \begin{paracol}{2}
-	\question{\raggedright String manipulation tasks}
-		\note{Snippet 4.7 presents a sample of miscellaneous string manipulation tasks. In lines 6 and 9, we check the length of the variables \texttt{S1} and \texttt{S2}. In line 13, we display five repetitions of \texttt{S1}. In line 17, we use the algebraic operator ``$+$'' to concatenate \texttt{S1} and \texttt{S2}. In line 21, we expand on the previous input by separating \texttt{S1} and \texttt{S2} by a white-space. In line 25, we carry out the same task as line 17 --- however, we rely on the built-in \href{https://docs.python.org/3/library/stdtypes.html\#str.join}{\texttt{join}} function to join \texttt{S1} and \texttt{S2} with whitespace. The argument taken by \href{https://docs.python.org/3/library/stdtypes.html\#str.join}{\texttt{join}} is a Python \texttt{list}, the subject of paragraph 5.3. In line 29, \texttt{S1} and \texttt{S2} are joined with a custom string object, namely, \texttt{" Vs. "}. Finally, in line 33, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html\#str.format}{\texttt{format}} function (see also Snippet 4.4) to display a string object including \texttt{S1} and \texttt{S2}. For a comprehensive list of string methods, see Table \ref{tab:string_methods}.}
+	\question{\raggedright Can you share some concrete examples of string manipulation tasks?}
+		\note{Snippet 4.7 presents a sample of `common' miscellaneous string manipulation tasks. In lines 6 and 9, we check the length of the variables \texttt{S1} and \texttt{S2}. In line 13, we display five repetitions of \texttt{S1}. In line 17, we use the algebraic operator ``$+$'' to concatenate \texttt{S1} and \texttt{S2}. In line 21, we expand on the previous input by separating \texttt{S1} and \texttt{S2} by a white-space. In line 25, we carry out the same task as line 17 --- however, we rely on the built-in \href{https://docs.python.org/3/library/stdtypes.html\#str.join}{\texttt{join}} function to join \texttt{S1} and \texttt{S2} with whitespace. The argument taken by \href{https://docs.python.org/3/library/stdtypes.html\#str.join}{\texttt{join}} is a Python \texttt{list}, the subject of paragraph 5.3. In line 29, \texttt{S1} and \texttt{S2} are joined with a custom string object, namely, \texttt{" Vs. "}. Finally, in line 33, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html\#str.format}{\texttt{format}} function (see also Snippet 4.4) to display a string object including \texttt{S1} and \texttt{S2}. For a comprehensive list of string methods, see Table \ref{tab:string_methods}.}
 \end{paracol}
 \clearpage
 
@@ -1525,10 +1510,9 @@ True
 >>> "Both {} and {} have outstanding ML modules".format(S1, S2) 
 "Both Python 3.X and Julia have outstanding ML modules"
 \end{pythoncode}
-\clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright String editing}
+	\question{\raggedright Can you share some concrete examples of string editing tasks?}
 	\note{Snippet 4.8 illustrates some string editing tasks. In line 5, we use \href{https://docs.python.org/3/library/stdtypes.html\#str.format}{lstrip} --- a variation of the built-in function \href{https://docs.python.org/3/library/stdtypes.html\#str.format}{strip} --- that returns a copy of the string with leading characters removed. In line 9, we use the built-in \href{https://docs.python.org/3/library/stdtypes.html}{replace} to return a copy of the string with all occurrences of substring \texttt{old} (first argument taken by the function) replaced by \texttt{new} (second argument taken by the function). Finally, in line 17, we use the built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{lower}} to return a copy of the string with all the cased characters converted to lowercase.} 
 \end{paracol}
 
@@ -1552,10 +1536,9 @@ True
 >>> S.lower() 
 "both python 3.x and julia have outstanding ml modules"
 \end{pythoncode}
-\clearpage
 
 \begin{paracol}{2}
-\question{Testing and searching strings}
+\question{How do I test or search string attributes?}
 \note{Snippet 4.9 presents a series of string test and search tasks. The built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{find}} (see lines 5 and 9) returns the lowest index in the string where substring sub is found within the slice \texttt{S[start:end]} or -1 if substring is not found.	The built-in function \href{https://docs.python.org/3/library/stdtypes.html}{\texttt{isdigit}} return \texttt{True} if all characters in the string are digits and there is at least one character, \texttt{False} otherwise. Finally, the built-in function \href{https://docs.python.org/3/library/stdtypes.html}{endswith} returns \texttt{True} if the string ends with the specified suffix, otherwise returns \texttt{False}.}
 \end{paracol}
 
@@ -1594,11 +1577,10 @@ True
 >>> S.endswith(SS)
 True
 \end{pythoncode}
-\clearpage
 
 \begin{paracol}{2}
-\question{\raggedright Multiline string printing}
-\note{In the previous examples, we came across the built-in function \href{https://docs.python.org/3/library/functions.html\#print}{\texttt{print}}. Such a function can be used to print both number- and string-type objects. Sometimes, what we want to print fits into a single line. In other circumstances, we are interested in visualizing rich data, which can span multiple lines. Snippet 4.9 how to print objects across multiple lines with the triple-quoted block string (see line ). As evident from the Python code included in lines 8-13, any line between triple-quotes is considered part of the same string object.}	
+\question{\raggedright Can I display `complex' string objects?}
+\note{We just came across the built-in function \href{https://docs.python.org/3/library/functions.html\#print}{\texttt{print}}. Such a function can print both number- and string-type objects. Sometimes, what we want to print fits into a single line. In other circumstances, we are interested in visualizing rich data which can span multiple lines. Snippet 4.9 how to print objects across multiple lines with the triple-quoted block string (see line ). As evident from the Python code in lines 8-13, any line between triple quotes is considered part of the same string object.}	
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.9 --- multiline string printing}
@@ -1635,7 +1617,7 @@ NOTES: this table has fake data
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright Why do we use lists?}
+	\question{\raggedright Why should I use lists?}
 	\note{Lists are just places to collect other objects so you can treat them as groups.}
 \end{paracol}
 
@@ -1643,7 +1625,6 @@ NOTES: this table has fake data
 	\question{\raggedright What type of objects can we include in a list?}
 	\note{Lists can contain any sort of object: numbers, strings, and even other lists. See Snippet 4.10.}
 \end{paracol}
-\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.10 --- sample lists with different items}
 # an empty list
@@ -1658,9 +1639,10 @@ NOTES: this table has fake data
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright List indexing}
-	\note{We can retrieve one or more list component objects via indexing. That is possible because list items are ordered by their position  (similarly to strings). Since Python is a zero-based indexed programming language, to fetch the first item of a list we have to call the index \texttt{0} (see Snippet 4.11, line 5). A list nested in another list can be fetched by using multiple indices (line 13). The first index refers to the outer list, while any subsequent index refers to an inner list. In our case, we have two indices, one for each list; that is, \texttt{L} and its sub-list \texttt{["abc", 8.98]}.}
+	\question{\raggedright How can I fetch a list's elements?}
+	\note{We can retrieve one or more list component objects via indexing. That is possible because list items are ordered by their position  (similarly to strings). Since Python is a zero-based indexed programming language, to fetch the first item of a list, we have to call the index \texttt{0} (see Snippet 4.11, line 5). A list nested in another list can be fetched by using multiple indices (line 13). The first index refers to the outer list, while any subsequent index refers to an inner list. In our case, we have two indices, one for each list; that is, \texttt{L} and its sub-list \texttt{["abc", 8.98]}.}
 \end{paracol}
+\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.11 --- list indexing and slicing}
 # the list
