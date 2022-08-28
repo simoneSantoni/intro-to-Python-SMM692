@@ -311,6 +311,8 @@ Bayes Business School\\[3pt]
 
 \quad Second, I designed the notes to be as practical as possible. For this reason, the knowledge recipient's answer is supported by a Python code snippet. In total, there are 76 snippets the learner may want to scrutinize, reason with, run, and modify.
 
+
+
 \quad What to say? Have fun!
 
 \vspace{2em}
@@ -1663,7 +1665,7 @@ NOTES: this table has fake data
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright List mutability}
+	\question{\raggedright Can I edit a list's elements?}
 	\note{Lists are mutable objects, which may be changed in place by assignment to offsets and slices, list method calls, deletion statements, and more. Snippet 4.12 illustrates some snippets to change a list's items. In the first part of the example, we change the items using indexing (line 5) and slicing (line 10). In the second half, we use Python's \href{https://docs.python.org/3/reference/simple_stmts.html}{\texttt{del}} statement to delete the items using indexing (line 15) and slicing (line 20).}
 \end{paracol}
 
@@ -1694,12 +1696,12 @@ NOTES: this table has fake data
 \end{pythoncode}
 
 \begin{paracol}{2}
-\question{\raggedright List manipulation with built-in methods}
-\note{Python offers many \href{https://docs.python.org/3/tutorial/datastructures.html}{methods to manipulate and test list objects}. Table \ref{tab:list_methods} reports some of the most popular methods along with synopses. The first three methods --- \texttt{.append()}, \texttt{.insert()}, and \texttt{.extend()} --- expand an existing list. The fourth method, \texttt{.index} test for the presence of an item in an existing list. Note this method raises a \href{https://docs.python.org/3/library/exceptions.html\#ValueError}{\texttt{ValueError}} if there is no such item.The remaining methods produce in-place changes in an existing list's items.}
+\question{\raggedright What are the built-in methods to manipulate a list?}
+\note{Python offers many \href{https://docs.python.org/3/tutorial/datastructures.html}{methods to manipulate and test list objects}. Table \ref{tab:list_methods} reports some of the most popular methods and synopses. The first three methods --- \texttt{.append()}, \texttt{.insert()}, and \texttt{.extend()} --- expand an existing list. The fourth method, \texttt{.index} test for the presence of an item in an existing list. Note this method raises a \href{https://docs.python.org/3/library/exceptions.html\#ValueError}{\texttt{ValueError}} if there is no such item.The remaining methods produce in-place changes in an existing list's items.}
 \end{paracol}
 
 \begin{table}[!htbp]
-	\caption{Popular list methods}
+	\caption{Popular List Methods}
 	\label{tab:list_methods}
 	\centering
 	\begin{tabular}{ll}
@@ -1722,8 +1724,8 @@ NOTES: this table has fake data
 \end{table}
 
 \begin{paracol}{2}
-	\question{\raggedright Expanding an existing list}
-	\note{Both the \texttt{.append()} and \texttt{.extend()} methods can be used to expand an existing list as per Snippet 4.13. However, they accomplish different goals and should not be confused: \texttt{.append()} adds a new item (of any type) to the end of the list (see line 6); \texttt{.extend()} extend the list by appending all the items from another iterable (e.g., another list, see line 11).}
+	\question{\raggedright How can I expand an existing list?}
+	\note{Both the \texttt{.append()} and \texttt{.extend()} methods can be used to expand an existing list as per Snippet 4.13. However, they accomplish different goals and should not be confused: \texttt{.append()} adds a new item (of any type) to the end of the list (see line 6); \texttt{.extend()} extend the list by appending all the items from another iterable object (e.g., another list, see line 11).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.13 --- methods for expanding an existing list}
@@ -1744,8 +1746,8 @@ NOTES: this table has fake data
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright In-place change of an existing list's items}
-	\note{One of the most common list manipulation task consists of changing the order of an item's list. As shown in Snippet 4.14, it is possible to use the \texttt{.reverse()} method to reverse the elements of the list in place (see line 5), while sorting an item's list can be carried out with the \texttt{.sort()} method.}
+	\question{\raggedright Can I change the order of a list's elements?}
+	\note{One of the most common list manipulation tasks consists of changing the order of an item's list. As shown in Snippet 4.14, it is possible to use the \texttt{.reverse()} method to reverse the elements of the list in place (see line 5), while sorting an item's list can be carried out with the \texttt{.sort()} method.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.14 --- methods for changing list items in place}
@@ -1763,7 +1765,6 @@ NOTES: this table has fake data
 ["Amy", "Bernadette", "Howard", "Priya", "Raj"]
 
 \end{pythoncode}
-\clearpage
 
 \section{Dictionaries}
 \label{sec:dictionaries}
@@ -1774,18 +1775,19 @@ NOTES: this table has fake data
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright Why do we use dictionaries?}
+	\question{\raggedright Why should I use a dictionary?}
 	\note{Dictionaries take the place of records, search tables, and any other sort of aggregation where item names are more meaningful than item positions.}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright What type of objects can we include in a dictionary?}
+	\question{\raggedright What type of objects can I include in a dictionary?}
 	\note{Like lists, dictionaries can contain objects of any type, and they support nesting to any depth(they can contain lists, other dictionaries, and so on). Each key can have just one associated value, but that value can be a collection of multiple objects if needed, and a given value can be stored under any number of keys.}
 \end{paracol}
+\clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright How do we create a dictionary?}
-	\note{Snippet 4.15 shows two different ways to create a dictionary. A dictionary can be created by including key-value pairs among braces (see line 2). In the example, there are three keys, associated with Marvel characters, and as many values, which can be thought as the characters' position in an ideal power rank. A colon separates a key and its associated value. The second way to create a dictionary is based on Python's builtin \href{https://docs.python.org/3/library/stdtypes.html\#dict}{\texttt{dict}}, mapping key onto values, and \href{https://docs.python.org/3/library/functions.html\#zip}{\texttt{zip}}, which iterates over two elements in parallel. Specifically, \href{https://docs.python.org/3/library/functions.html\#zip}{\texttt{zip}} creates the one-to-one correspondence between keys (characters) and values (characaters' power) that is passed as the argument of \href{https://docs.python.org/3/library/stdtypes.html\#dict}{\texttt{dict}}. We will analyze the topic of iterations extensively in sections \ref{sec:while_and_for_loops} and \ref{sec:iterations_and_comprhensions}.}
+	\question{\raggedright How do I create a dictionary?}
+	\note{Snippet 4.15 shows two different ways to create a dictionary. A dictionary can be created by including key-value pairs among curly braces (see line 2). In the example, there are three keys associated with Marvel characters and as many values, which can be thought of as the characters' position in an ideal power rank. A colon separates a key and its associated value. The second way to create a dictionary is based on Python's builtin \href{https://docs.python.org/3/library/stdtypes.html\#dict}{\texttt{dict}}, mapping key onto values, and \href{https://docs.python.org/3/library/functions.html\#zip}{\texttt{zip}}, which iterates over two elements in parallel. Specifically, \href{https://docs.python.org/3/library/functions.html\#zip}{\texttt{zip}} creates the one-to-one correspondence between keys (characters) and values (character's power) that is passed as the argument of \href{https://docs.python.org/3/library/stdtypes.html\#dict}{\texttt{dict}}. We will analyze the topic of iterations extensively in sections \ref{sec:while_and_for_loops} and \ref{sec:iterations_and_comprhensions}.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.15 --- initializing a new dictionary object}
@@ -1799,12 +1801,12 @@ NOTES: this table has fake data
 >>> print(D)
 {"Captain Marvel": 3, "Living Tribunal": 2, "One-Above-All": 1}
 \end{pythoncode}
-\clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Accessing a dictionary's values}
+	\question{\raggedright How do I fetch a dictionary's values?}
 	\note{Dictionaries' items cannot be accessed via positional offsets --- like lists. Instead, we fetch the individual items by using the dictionary keys as shown in Snippet 4.16 (see line 5). The reference key is passed among brackets. When the dictionary at hand contains nested dictionaries (see line 9), it is possible to concatenate multiple queries, namely, sequences of keys between brackets (see line 21).}
 \end{paracol}
+\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.16 --- fetching dictionary items}
 # the dictionary 
@@ -1833,9 +1835,8 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 \question{\raggedright Are dictionaries mutable?}
-\note{Dictionsries, like lists, are mutable. Thus, we can change, expand, and shrink them in place without making new dictionaries: simply assign a value to a key to change or create an entry. The del statement works here, too; it deletes the entry associated with the key specified as an index (see Snippet 4.17).}
+\note{Dictionaries, like lists, are mutable. Thus, we can change, expand, and shrink them in place without making new dictionaries: simply assign a value to a key to change or create an entry. The del statement works here, too; it deletes the entry associated with the key specified as an index (see Snippet 4.17).}
 \end{paracol}
-\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.17 --- dictionary mutability examples}
 # the dictionary 
@@ -1859,12 +1860,12 @@ NOTES: this table has fake data
 \end{pythoncode}
 
 \begin{paracol}{2}
-\question{\raggedright Dictionary manipulation with built-in methods}
-\note{Like for lists, Python offers many \href{https://docs.python.org/3/tutorial/datastructures.html\#dictionaries}{\texttt{methods to manipulate dictionary objects}}. Table \ref{tab:dictionary_methods} reports some of the most common methods along with synopses. The first three methods, \texttt{.keys()} \texttt{.values()} \texttt{.items()}, get the constitutive elements of dictionaries: keys, values, and key-value pairs respectively. The fourth method, \texttt{.get(key, default?)} gets the value for a specific key. The fifth method, \texttt{.update()}, updates the value for a specific key. Like \texttt{.update()}, \texttt{.popitem()}, \texttt{.pop()}, and \texttt{d.clear()} alter the information of a dictionary in place. The first removes the value of a certain key; the second removes the item (a key-value pair) for a certain key; the latter delete all dictionary items. Finally, \texttt{.copy()} creates a \href{https://docs.python.org/3/library/copy.html}{shallow copy} of an existing dictionary.}
+\question{\raggedright What are the most common methods to manipulate a dictionary?}
+\note{Like for lists, Python offers many \href{https://docs.python.org/3/tutorial/datastructures.html\#dictionaries}{\texttt{methods to manipulate dictionary objects}}. Table \ref{tab:dictionary_methods} reports some of the most common methods along with synopses. The first three methods, \texttt{.keys()} \texttt{.values()} \texttt{.items()}, get the constitutive elements of dictionaries: keys, values, and key-value pairs, respectively. The fourth method, \texttt{.get(key, default?)} gets the value for a specific key. The fifth method, \texttt{.update()}, updates the value for a specific key. Like \texttt{.update()}, \texttt{.popitem()}, \texttt{.pop()}, and \texttt{d.clear()} alter the information of a dictionary in place. The first removes the value of a certain key; the second removes the item (a key-value pair) for a certain key; the latter deletes all dictionary items. Finally, \texttt{.copy()} creates a \href{https://docs.python.org/3/library/copy.html}{shallow copy} of an existing dictionary.}
 \end{paracol}
 
 \begin{table}[!htbp]
-	\caption{Popular dictionary methods}
+	\caption{Popular Dictionary Methods}
 	\label{tab:dictionary_methods}
 	\centering
 	\begin{tabular}{ll}
@@ -1885,9 +1886,10 @@ NOTES: this table has fake data
 \end{table}
 
 \begin{paracol}{2}
-\question{\raggedright How do we access the information in a dictionary?}
-\note{Snippet 4.18 shows how to use builtin methods to carry out three fundamental tasks: accessing dictionary keys (see line 5), values (see line 9), and items (i.e., key-value pairs, see line 13). It is worth noticing that the three methods illustrated in the example yield specific \href{https://docs.python.org/3/c-api/dict.html}{dictionary objects} such as \texttt{dict\_keys}, \texttt{dict\_values}, and \texttt{dict\_items}. Translating one of these dictionary objects into a list --- if needed --- is straightforward (see line 17).}
+\question{\raggedright How do I access the information in a dictionary?}
+\note{Snippet 4.18 shows how to use built-in methods to carry out three fundamental tasks: accessing dictionary keys (see line 5), values (see line 9), and items (i.e., key-value pairs, see line 13). It is worth noticing that the three methods illustrated in the example yield specific \href{https://docs.python.org/3/c-api/dict.html}{dictionary objects} such as \texttt{dict\_keys}, \texttt{dict\_values}, and \texttt{dict\_items}. Translating one of these dictionary objects into a list --- if needed --- is straightforward (see line 17).}
 \end{paracol}
+\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.18 --- accessing the information included in a dictionary}
 # the dictionary 
@@ -1918,22 +1920,22 @@ dict_items([("Captain Marvel", 3), ("Living Tribunal", 2), ("One-Above-All", 1)]
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright Tuples are immutable!}
+	\question{\raggedright Are Tuples mutable?}
 	\note{Tuples are immutable, which means that once they are created, they cannot be changed!! }
 \end{paracol}
 
 \begin{paracol}{2}
-\question{\raggedright Why do we use tuples?}
-\note{Tuples are useful for storing data that is not to be changed, such as the coordinates of a point in a two-dimensional space. In general, we use tuples any time information integrity is a concern --- in other words when we want to make sure the information included in an object will not change because of another reference somewhere in our program.}
+\question{\raggedright Why should I use tuples?}
+\note{Tuples are useful for storing data that is not to be changed, such as the coordinates of a point in a two-dimensional space. In general, we use tuples any time information integrity is a concern --- in other words, when we want to make sure the information included in an object will not change because of another reference somewhere in our program.}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright How do we create a tuple?}
+	\question{\raggedright How do I create a tuple?}
 	\note{Python objects, separated by a comma, must be included between parentheses (see Snippet 4.19, line 2).}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright How do we access the information in a tuple?}
+	\question{\raggedright How do I access the information in a tuple?}
 	\note{By positional offsets, like lists (see Snippet 4.19, lines 5 and 9).}
 \end{paracol}
 
@@ -1951,8 +1953,8 @@ dict_items([("Captain Marvel", 3), ("Living Tribunal", 2), ("One-Above-All", 1)]
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright Can we convert a tuple into a list?}
-	\note{Yes, we can. To do that, we pass the tuple as the argument of \texttt{list} (see Snippet 4.20).}
+	\question{\raggedright Can I convert a tuple into a list?}
+	\note{Yes, you can. To do that, you must pass the tuple as the argument of \texttt{list} (see Snippet 4.20).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.20 --- tuple conversion}
@@ -1974,7 +1976,7 @@ dict_items([("Captain Marvel", 3), ("Living Tribunal", 2), ("One-Above-All", 1)]
 \clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Tuples with the \href{https://docs.python.org/3/library/collections.html}{\texttt{collections}} module}
+	\question{\raggedright Can I create an advanced data container based on a tuple?}
 	\note{\href{https://docs.python.org/3/library/collections.html}{\texttt{collections}} is a module that is shipped with Python and provides data containers that are alternative to Python's general purpose built-in containers, i.e., \texttt{dict}, \texttt{list}, \texttt{set}, and \texttt{tuple}. One of these containers can be created with the function \href{https://docs.python.org/3/library/collections.html\#collections.namedtuple}{\texttt{namedtuple}} (see Snippet 4.21), which allows annotating the tuple items with names. In line 2, we import the function \href{https://docs.python.org/3/library/collections.html\#collections.namedtuple}{\texttt{namedtuple}} from the \href{https://docs.python.org/3/library/collections.html\#collections}{\texttt{collections}} module. In line 5, we create an ad hoc class that best represents the structure of our sample data, concerning Marvel characters' names and the year in which they first appeared in the comic series. The first argument taken by the function is customary and regards the name of the class we are about to create. The second argument is a list with the names of the attributes included in our data structure. In line 8, we use the newly created class \texttt{Rec} to create a tuple, which is eventually printed as per line 11.}
 \end{paracol}
 
@@ -2023,7 +2025,7 @@ Rec(character="Iron Man", first_appearance=1963)
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright Why do we use sets?}
+	\question{\raggedright Why should I use sets?}
 	\note{Sets made this way support common mathematical set operations (see Snippet 4.23). Hence, they have a variety of applications, especially in numeric and database-focused work. }
 \end{paracol}
 
@@ -2059,8 +2061,8 @@ False
 \section{Files}
 
 \begin{paracol}{2}
-	\question{\raggedright How do the files in our OS relate with Python?}
-	\note{Our Python program may involve input and/or output operations. In other words, we may want to read data from a file stored in our machine and/or write the outcome of our analysis to a file. The built-in function \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}} creates a Python file object, which serves as a link to a file residing on your machine. As Lutz notes:
+	\question{\raggedright How do the files in my operating system relate with Python?}
+	\note{Your Python program may involve input and/or output operations. In other words, you may want to read data from a file stored in your machine and/or write the outcome of your analysis to a file. The built-in function \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}} creates a Python file object, which serves as a link to a file residing on your machine. As Lutz notes:
 	\begin{quote}
 		\textit{
 		``Compared to the types you've seen so far, file objects are somewhat unusual. They are considered a core type because they are created by a built-in function, but they're not numbers, sequences, or mappings, and they don't respond to expression operators; they export only methods for common file-processing tasks'' (page 282)
@@ -2069,14 +2071,15 @@ False
 \end{paracol}
 
 \begin{paracol}{2}
-\question{\raggedright How do we open a file?}
-\note{We open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}. The output of the function is a \texttt{file} object. }
+\question{\raggedright How do I open a file?}
+\note{You open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}. The output of the function is a \texttt{file} object. }
 \end{paracol}
 
 \begin{paracol}{2}
-\question{\raggedright How do we source the data stored in a file?}
-\note{We open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}. The output of the function is a \texttt{file} object. Snippet 4.24 illustrates how to use \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}} for data sourcing. In the first part of the snippet, we create a \texttt{file} object to read the data included in the existing file \texttt{my\_file.txt}.\footnote{For the sake of simplicity, we assume the target file is located in the same directory as the Python script.} At least, we have to pass one argument to \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}: the path pointing to the file. A second optional argument is \texttt{mode}, which specifies the mode in which the file is opened to source. It defaults to \texttt{r}, which means open for reading in text mode. Other common values are \texttt{w} for writing,\footnote{By deafult, \texttt{w} truncates the file if it already exists} \texttt{x} for exclusive creation, and \texttt{a} for appending. \footnote{If encoding is not specified the encoding used is platform-dependent. Specifically, \texttt{locale.getpreferredencoding(False)} is called to get the current locale encoding. Character encoding is the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.} To read a file's contents, we use the \href{https://docs.python.org/3/tutorial/inputoutput.html\#methods-of-file-objects}{\texttt{.read()}} method (see line 9), returning a string object (see line 10). }
+\question{\raggedright How do I source the data stored in a file?}
+\note{You open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}. The output of the function is a \texttt{file} object. Snippet 4.24 illustrates how to use \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}} for data sourcing. In the first part of the snippet, we create a \texttt{file} object to read the data included in the existing file \texttt{my\_file.txt}.\footnote{For the sake of simplicity, we assume the target file is located in the same directory as the Python script.} At least, we have to pass one argument to \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}: the path pointing to the file. A second optional argument is \texttt{mode}, which specifies the mode in which the file is opened to source. It defaults to \texttt{r}, which means open for reading in text mode. Other common values are \texttt{w} for writing,\footnote{By deafult, \texttt{w} truncates the file if it already exists} \texttt{x} for exclusive creation, and \texttt{a} for appending. \footnote{If encoding is not specified the encoding used is platform-dependent. Specifically, \texttt{locale.getpreferredencoding(False)} is called to get the current locale encoding. Character encoding is the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.} To read a file's contents, we use the \href{https://docs.python.org/3/tutorial/inputoutput.html\#methods-of-file-objects}{\texttt{.read()}} method (see line 9), returning a string object (see line 10). }
 \end{paracol}
+\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.24 --- data input with \texttt{open}}
 # create a pipe to a file
@@ -2094,7 +2097,6 @@ Hi there
 # close the pipe
 >>> file.close()
 \end{pythoncode}
-\clearpage 
 
 \begin{paracol}{2}
 \question{\raggedright How do we write the data in the current Python session to a file?}
@@ -2122,12 +2124,12 @@ Hi there
 # close the pipe
 >>> file.close()
 \end{pythoncode}
+\clearpage
 	
 \begin{paracol}{2}
 	\question{\raggedright How about reading a single line from a file?}
 	\note{Hold on: what is a line? A string whose last character is \texttt{$\backslash$n}. We can read a single line from a file using the \href{https://docs.python.org/3/tutorial/inputoutput.html\#methods-of-file-objects}{\texttt{.readline()}} method (see Snippet 4.26). Such a method starts by reading the first line included in the file (see line 11); then, it reads any subsequent lines included in the file (see line 15); when it reaches the end of the file (EOF), it returns the empty string \texttt{""} (see line 19).}
 \end{paracol}
-\clearpage 
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.26 --- reading one line at a time with \texttt{.readline()}}
 # the strings (data) to save permanently to a file
@@ -2156,6 +2158,7 @@ Hi there
 	\question{\raggedright How about reading multiple lines at a time?}
 	\note{The \texttt{.readlines()} method reads the lines from a file and returns them as a list (see Snippet 4.27).}
 \end{paracol}
+\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.27 --- reading multiple lines at a time with \texttt{.readlines())}}
 # the strings (data) to save permanently to a file
@@ -2171,8 +2174,6 @@ Hi there
 >>> file.readlines()
 ['A\n', 'B\n', 'C\n', 'D']
 
-# equivalently to the previous line, we can use 'list'
-['A\n', 'B\n', 'C\n', 'D']
 \end{pythoncode}	
 
 \begin{paracol}{2}
@@ -2181,7 +2182,7 @@ Hi there
 \end{paracol}
 
 \begin{table}[!htbp]
-	\caption{Popular file methods}
+	\caption{Popular File Methods}
 	\label{tab:file-methods}
 	\centering
 	\begin{tabular}{ll}
@@ -2208,6 +2209,7 @@ Hi there
 		\multicolumn{2}{l}{Notes: \texttt{file} is a fictionary object used to illustrate the usage of the file methods.} \\
 	\end{tabular}
 \end{table}
+\clearpage
 
 \section{Python Statements and Syntax}
 \label{sec:statements_syntax}
@@ -2222,7 +2224,7 @@ Hi there
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright What are Python's statements?}
+	\question{\raggedright What are the most common Python statements?}
 	\note{Table \ref{tab:python_statements} illustrates common Python statements, their role, and application examples. Some of these statements were used in the examples considered so far. Other statements --- the majority --- will be faced in the next sections of the current chapter and/or in the subsequent chapters.}
 \end{paracol}
 \clearpage
@@ -2277,12 +2279,12 @@ Customers who bought x also bought Air Jordan 7 Retro Miro
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright End of line $\rightarrow$ end of the statement}
+	\question{\raggedright Does `end of the line' mean `end of the statement'?}
 	\note{Any Python statements are contained in the same line --- the end of the line equates to the statement end. In the interest of redundancy, Python statements do not traverse multiple lines. In Snippet 4.28, the if statement is in line 5; the then statement is in line 6.} 
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright The `:' character is required for nested statements!}
+	\question{\raggedright How do I create a nested statement?}
 	\note{The colon character is required to separate the if statement from the `then' statement (see Snippet 4.28 line 5).}
 \end{paracol}	
 
@@ -2292,12 +2294,12 @@ Customers who bought x also bought Air Jordan 7 Retro Miro
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright End of indentation $\rightarrow$ end of nested statements}
+	\question{\raggedright Does `end of indentation' mean `end of nested statements'?}
 	\note{`Then' statements are indented (with a tab or four consecutive spaces). In Snippet 4.28, the indentation in line 6 makes lines 5 and 6 to be evaluated together.}
 \end{paracol}
 
 \begin{paracol}{2}
-\question{\raggedright Multiple `then' statements}
+\question{\raggedright How do I concatenate multiple `then' statements}
 \note{Exmple 4.29 shows how to use \texttt{elif} to concatenate multiple `if-then' statements in the same control flow. Like in Snippet 4.28, the `else' statement defines the residual behavior of the control flow; that is, what Python does when both the `if' and `elif' statements evaluate to `False.'}
 \end{paracol}
 
@@ -3923,39 +3925,39 @@ array([526.31578947, -52.63157895])
 \end{pythoncode}
 \clearpage
 
-%\begin{paracol}{2}
-%\question{\raggedrigt Least-square estimation}
-%\note{The least-square estimator is a popular choice for estimating the relationship between two variables, one of the most common tasks in statistics and econometrics.\footnote{Students who want to familiarize with the field of econometrics are warmly encouraged to read Angrist, Joshua D., and Jörn-Steffen Pischke. \href{https://www.mostlyharmlesseconometrics.com/}{Mostly harmless econometrics: An empiricist's companion}. Princeton university press, 2009.} Specifcally, the least-square estimator is defined as follows:
-%
-%\begin{equation}
-%	\hat{\beta} = (X^T X)^{-1} X^T y
-%\end{equation}
-%
-%where $\hat{\beta}$ is the estimate of the regression coefficients, $X$ is the matrix of regressors, $y$ is the outcome vector, and $X^T X$.
-%
-%In Snippet 5.16, we create two arrays, \texttt{x} --- playing the role of the regressor --- and \texttt{y} --- which we pretend to be the outcome variable. Then, we arrange the data in an array containing \texttt{x}  and a vector of ones. In this way, we add an intercept to the model, namely a scalar that does not change across the observations in the data (see line 11). Finally, we estimate the two regression coefficients of interest:
-%
-%\begin{itemize}
-%	\item the regression coefficient for \texttt{x}, capturing the expected change in \texttt{y} for a unitary increase in \texttt{x}
-%	\item the regression coefficient for the intercept, namely, the exepected value of \texttt{y} when the association between \texttt{x} and \texttt{y} is partialled-out
-%\end{itemize}
-%
-%\quad Let me stress that \href{https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html#numpy.linalg.lstsq}{\texttt{.linalg.lstsq}} returns four pieces of information:
-%
-%\begin{itemize}
-%	\item an array with the estimated regression coefficients
-%	\item the sums of squared residuals (i.e., the differences between the observed \texttt{y} and the values predicted by the model)
-%	\item the rank of the matrix containing the regressors
-%	\item the singular values of the matrix containing the regressors
-%\end{itemize}
-%
-%\quad Thus, in line 28, we fetch the first element of the returned array, i.e., the regression coefficients.
-%
-%\quad Figure \ref{fig:ols} provides a visual representation of the least-square estimator.
-%
-%}
-%\end{paracol}
-%\clearpage
+\begin{paracol}{2}
+\question{\raggedrigt How do I carry out a least-square estimation in NumPy?}
+\note{The least-square estimator is a popular choice for estimating the relationship between two variables, one of the most common tasks in statistics and econometrics.\footnote{Students who want to familiarize with the field of econometrics are warmly encouraged to read Angrist, Joshua D., and Jörn-Steffen Pischke. \href{https://www.mostlyharmlesseconometrics.com/}{Mostly harmless econometrics: An empiricist's companion}. Princeton university press, 2009.} Specifcally, the least-square estimator is defined as follows:
+
+\begin{equation}
+	\hat{\beta} = (X^T X)^{-1} X^T y
+\end{equation}
+
+where $\hat{\beta}$ is the estimate of the regression coefficients, $X$ is the matrix of regressors, $y$ is the outcome vector, and $X^T X$.
+
+\quad In Snippet 5.16, we create two arrays, \texttt{x} --- playing the role of the regressor --- and \texttt{y} --- which we pretend to be the outcome variable. Then, we arrange the data in an array containing \texttt{x}  and a vector of ones. In this way, we add an intercept to the model, namely a scalar that does not change across the observations in the data (see line 11). Finally, we estimate the two regression coefficients of interest:
+
+\begin{itemize}
+	\item The regression coefficient for \texttt{x}, capturing the expected change in \texttt{y} for a unitary increase in \texttt{x}
+	\item The regression coefficient for the intercept, namely, the exepected value of \texttt{y} when the association between \texttt{x} and \texttt{y} is partialled-out
+\end{itemize}
+
+\quad Let me stress that \href{https://numpy.org/doc/stable/reference/generated/numpy.linalg.lstsq.html#numpy.linalg.lstsq}{\texttt{.linalg.lstsq}} returns four pieces of information:
+
+\begin{itemize}
+	\item An array with the estimated regression coefficients
+	\item The sums of squared residuals (i.e., the differences between the observed \texttt{y} and the values predicted by the model)
+	\item The rank of the matrix containing the regressors
+	\item Tshe singular values of the matrix containing the regressors
+\end{itemize}
+
+\quad Thus, in line 28, we fetch the first element of the returned array, i.e., the regression coefficients.
+
+\quad Figure \ref{fig:ols} provides a visual representation of the least-square estimator.
+
+}
+\end{paracol}
+\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.16 --- computing the least-square solutions to a linear matrix equation}
 # import numpy with the socially accepted alias 'np'
@@ -4403,10 +4405,15 @@ array([[ 0, 10, 20, 30, 40, 50, 60, 70, 80, 90],
 
 \par\noindent\rule{\textwidth}{0.4pt}
 
-Learning goals:
+At the end of the chapter, you will be able to:
 
 \begin{itemize}
-	\item \dots
+	\item Create a DataFrame
+	\item Manipulate the individual columns of a DataFrame
+	\item Arrange a DataFrame in the way that best fits your data analysis needs
+	\item Group the cases of DataFrame to perform aggregation and transformation tasks
+	\item Work with multiple DataFrames
+	\item Read and write data in a variety of formats
 \end{itemize}
 
 \par\noindent\rule{\textwidth}{0.4pt}
