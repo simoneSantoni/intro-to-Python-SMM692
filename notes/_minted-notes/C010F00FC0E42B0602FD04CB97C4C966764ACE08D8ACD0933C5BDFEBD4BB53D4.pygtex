@@ -1,5 +1,5 @@
 \begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
-\PYG{c+c1}{\PYGZsh{} import the namedtuple function from the module collection}
+\PYG{c+c1}{\PYGZsh{} import the named tuple function from the module collection}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k+kn}{from} \PYG{n+nn}{collections} \PYG{k+kn}{import} \PYG{n}{namedtuple}
 
 \PYG{c+c1}{\PYGZsh{} create an ad hoc class object 'Rec' that fits our data structure}

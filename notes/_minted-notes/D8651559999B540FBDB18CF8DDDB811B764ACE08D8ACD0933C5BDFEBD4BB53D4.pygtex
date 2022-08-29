@@ -25,7 +25,7 @@
              \PYG{n}{timestamp}                    \PYG{n}{product} \PYG{n}{reviewer}  \PYG{n}{rating}
 \PYG{l+m+mi}{0}  \PYG{l+m+mi}{2017}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{08} \PYG{l+m+mi}{12}\PYG{p}{:}\PYG{l+m+mi}{03}\PYG{p}{:}\PYG{l+m+mi}{05}          \PYG{n}{Darth} \PYG{n}{Vader} \PYG{n}{plush}  \PYG{n}{Sheldon}       \PYG{l+m+mi}{1}
 \PYG{l+m+mi}{1}  \PYG{l+m+mi}{2020}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{09}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{07} \PYG{l+m+mi}{08}\PYG{p}{:}\PYG{l+m+mi}{09}\PYG{p}{:}\PYG{l+m+mi}{45}  \PYG{n}{Obi}\PYG{o}{\PYGZhy{}}\PYG{n}{Wan} \PYG{n}{Kenobi} \PYG{n}{lightsaber}  \PYG{n}{Sheldon}       \PYG{l+m+mi}{2}
-\PYG{l+m+mi}{2}  \PYG{l+m+mi}{2021}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{04}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{11} \PYG{l+m+mi}{10}\PYG{p}{:}\PYG{l+m+mi}{12}\PYG{p}{:}\PYG{l+m+mi}{13}               \PYG{n}{Yoda} \PYG{n}{pijamas}  \PYG{n}{Leonard}       \PYG{l+m+mi}{5}
+\PYG{l+m+mi}{2}  \PYG{l+m+mi}{2021}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{04}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{11} \PYG{l+m+mi}{10}\PYG{p}{:}\PYG{l+m+mi}{12}\PYG{p}{:}\PYG{l+m+mi}{13}               \PYG{n}{Yoda} \PYG{n}{pajamas}  \PYG{n}{Leonard}       \PYG{l+m+mi}{5}
 
 \PYG{c+c1}{\PYGZsh{} get basic info}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}
@@ -40,7 +40,7 @@
 \PYG{n}{dtypes}\PYG{p}{:} \PYG{n}{int64}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{),} \PYG{n+nb}{object}\PYG{p}{(}\PYG{l+m+mi}{3}\PYG{p}{)}
 \PYG{n}{memory} \PYG{n}{usage}\PYG{p}{:} \PYG{l+m+mf}{224.0}\PYG{o}{+} \PYG{n+nb}{bytes}
 
-\PYG{c+c1}{\PYGZsh{} convert 'timestamp' from string to Timestemp type}
+\PYG{c+c1}{\PYGZsh{} convert 'timestamp' from string to Timestamp type}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}timestamp\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{apply}\PYG{p}{(}\PYG{k}{lambda} \PYG{n}{s}\PYG{p}{:} \PYG{n}{pd}\PYG{o}{.}\PYG{n}{Timestamp}\PYG{p}{(}\PYG{n}{s}\PYG{p}{))}
 \PYG{c+c1}{\PYGZsh{} info shows that timestamp has datetime dtype}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{info}\PYG{p}{()}

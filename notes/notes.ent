@@ -19,8 +19,8 @@ R's
 {https://rdatatable.gitlab.io/data.table/}{data.tables}
 and
 Julia's
-D\href
-{https://dataframes.juliadata.org/stable/}{DataFrames}
+\href
+{https://dataframes.juliadata.org/stable/}{DataFrames}.
 \@endanenote 
 \@doanenote {22}
 macro:->A
@@ -30,7 +30,7 @@ is
 a
 set
 of
-dapoints
+points
 arranged
 in
 chronological
@@ -49,12 +49,13 @@ are
 multidimensional
 datasets
 wherein
+the
 same
 statistical
 units
 are
+repeatedly
 observed
-repeatadel
 over
 time.
 \@endanenote 
@@ -70,7 +71,6 @@ may
 want
 to
 read
-the
 article
 on/interview
 with
@@ -91,7 +91,6 @@ science.''}
 \@endanenote 
 \@doanenote {25}
 macro:->In
-the
 field
 of
 information
@@ -101,7 +100,7 @@ computer
 science,
 columns
 are
-oftentimes
+often
 called
 fields;
 statisticians,
@@ -131,8 +130,7 @@ Learning
 field.
 \@endanenote 
 \@doanenote {26}
-macro:->All
-throughout
+macro:->throughout
 the
 book,
 I

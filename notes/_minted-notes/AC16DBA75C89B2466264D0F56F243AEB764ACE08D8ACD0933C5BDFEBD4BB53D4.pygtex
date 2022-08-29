@@ -23,7 +23,7 @@
 \PYG{c+c1}{\PYGZsh{} transform the column "ram" from string to number type}
 \PYG{c+c1}{\PYGZsh{} --+ step 1: get rid of non-number characters using a regular expression}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{str}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}[\PYGZca{}0\PYGZhy{}9]\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
-\PYG{c+c1}{\PYGZsh{} --+ alterntive way to carry out step 1: using Pandas string methods}
+\PYG{c+c1}{\PYGZsh{} --+ alternative way to carry out step 1: using Pandas string methods}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{df}\PYG{o}{.}\PYG{n}{loc}\PYG{p}{[:,} \PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{]} \PYG{o}{=} \PYG{n}{df}\PYG{p}{[}\PYG{l+s+s2}{\PYGZdq{}ram\PYGZdq{}}\PYG{p}{]}\PYG{o}{.}\PYG{n}{str}\PYG{o}{.}\PYG{n}{replace}\PYG{p}{(}\PYG{l+s+sa}{r}\PYG{l+s+s2}{\PYGZdq{}\PYGZbs{}sGB\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{} --+ step 2: convert the string to number type}
 \PYG{c+c1}{\PYGZsh{} ----+ check the type of "ram"}

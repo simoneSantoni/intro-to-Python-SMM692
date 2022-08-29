@@ -1,47 +1,36 @@
-% !TeX document-id = {623e3a94-4cb1-4158-99bf-bcee8b7d3f42}
 %% =========================== Document class =============================
 \documentclass[a4paper,11pt]{book}
-% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+!TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
 
 %% ========================= Essential packages ===========================
 \usepackage[utf8]{inputenc}
-\usepackage{graphicx}
-\usepackage{calc}
-\usepackage{tikz}
-\usetikzlibrary{arrows,
-                arrows.meta,
-                calc,
-		chains,
-                quotes,
-                positioning,
-		shapes,
-                shapes.geometric}
-\usepackage[dvipsnames]{xcolor}
 \usetikzlibrary{calc}
 \usepackage{anyfontsize}
 \usepackage{sectsty}
-\usepackage{pgfplots}
 \pgfplotsset{width=7cm,compat=1.17}
 \usepackage{fontawesome}
 \newcommand{\seticon}[1]{\textcolor{black}{\csname #1\endcsname}}
-\usepackage[utf8]{inputenc}
 \usepackage[margin=2cm]{geometry}
 %\usepackage{color}
 %\usepackage[dvipsnames]{xcolor}
 \usepackage{tcolorbox}
 \usepackage{lineno}
 \usepackage{amsmath}
+\usepackage{appendix}
 \usepackage{endnotes}
 \let\footnote=\endnote
 \renewcommand\enoteformat{\rightskip=0pt \leftskip=0pt \parindent=0em
   \leavevmode\makeenmark\raggedright}
- 
 
 %% ========================== Colors ======================================
+\usepackage[dvipsnames]{xcolor}
 \definecolor{base_c}{rgb}{0.6,0,0}
 \definecolor{comp_c}{rgb}{0.09803921568627451, 0.6901960784313725, 0.7529411764705882}
 \definecolor{tri_1}{rgb}{0.09803921568627451, 0.7686274509803922, 0.19215686274509805}
 \definecolor{tri_2}{rgb}{0.19215686274509805, 0.09803921568627451, 0.7686274509803922}
+%\definecolor{tetra_1}{rgb}{}
+%\definecolor{tetra_2}{rgb}{}
+%\definecolor{tetra_3}{rgb}{}
 
 %% ========================== Coding snippets =============================
 \usepackage[newfloat]{minted}
@@ -76,27 +65,20 @@
 \usepackage{threeparttable}
 \usepackage[justification=centering]{caption}
 \captionsetup[table]{labelfont=sc, labelsep=newline}
-%\renewcommand{\figurename}{\itshape Fig.}
-%\renewcommand{\thetable}{\Roman{table}}
 
-%% ====================== To implement the Cornell ========================
-\usepackage{paracol} % added <<<<<<<<<<<<<<<<<<<<<
-\makeatletter
-\newbox\mybox
-\def\pcol@makenormalcol{%
-  \ifvoid\footins 
-  \else
-\global\setbox\mybox\box\footins
-   \fi
-\setbox\@outputbox\box\@holdpg
-  \let\@elt\relax
-  \xdef\@freelist{\@freelist\@midlist}%
-  \global\let\@midlist\@empty
-  \@combinefloats}
-
-\makeatother
-
-%% ============================ Plots ====================================
+%% ============================ Plots and infographics ====================
+\usepackage{graphicx}
+\usepackage{calc}
+\usepackage{tikz}
+\usetikzlibrary{arrows,
+                arrows.meta,
+                calc,
+		chains,
+                quotes,
+                positioning,
+		shapes,
+                shapes.geometric}
+\usepackage{pgfplots}
 \usepackage{pgf}
 
 
@@ -119,6 +101,21 @@ allcolors=tri_2,
 \usepackage{lipsum}% generate filler text
 
 % ========================= Cornell Notes stuff ============================
+\usepackage{paracol} % added <<<<<<<<<<<<<<<<<<<<<
+\makeatletter
+\newbox\mybox
+\def\pcol@makenormalcol{%
+  \ifvoid\footins 
+  \else
+\global\setbox\mybox\box\footins
+   \fi
+\setbox\@outputbox\box\@holdpg
+  \let\@elt\relax
+  \xdef\@freelist{\@freelist\@midlist}%
+  \global\let\@midlist\@empty
+  \@combinefloats}
+
+\makeatother
 % question
 \newcommand{\question}[1]{% Ask the question
     \begin{tcolorbox}[colback=comp_c!10,colframe=comp_c,sidebyside align=top,width=\linewidth,before skip=1ex]
@@ -133,7 +130,6 @@ allcolors=tri_2,
         #1
     \end{tcolorbox}
 }
-
 % summary
 \newcommand{\summary}[2][]{%
 \begin{minipage}[b]{\textwidth}
@@ -145,7 +141,6 @@ allcolors=tri_2,
     \end{tcolorbox}
 \end{minipage}
 #1}
-
 % proportions
 \setcolumnwidth{0.4\textwidth/20pt,0.60\textwidth}% column separation =20pt
 \setlength{\columnseprule}{2pt} % column width
@@ -307,7 +302,7 @@ Bayes Business School\\[3pt]
 
 \raggedright These notes were prepared for the Summer Module `SMM-692 --- Introduction to Programming in Python.' The materials I present condense more than ten years of experience I developed using Python for industrial applications and research. At the same time, the materials incorporate the feedback from four different cohorts of Bayes MSc students who took SMM692 and other modules for which Python is a prerequisite, such as `SMM638 --- Network Analytics,' `SMM635 --- Data Visualization,' and `SMM694 --- Natural Language Processing.' 
 
-\quad I prepared these notes with two design principles in mind. First, the notes should have mimicked a conversation between a person interested in learning Python and a knowledge recipient (a robot or a human being, it does not matter!).  The \href{https://en.wikipedia.org/wiki/Cornell_Notes}{Cornell Notes Template} helped me to emphasize the conversational structure of the notes: the left-hand side of the page is reserved for questions, reported as blue boxes; answers are displayed on the right-hand side of the page.
+\quad I prepared these notes with two design principles in mind. First, the notes should have mimicked a conversation between a person interested in learning Python and a knowledge recipient (a robot or a human being, it does not matter!).  The \href{https://en.wikipedia.org/wiki/Cornell_Notes}{Cornell Notes Template} helped me emphasize the notes' conversational structure: the left-hand side of the page is reserved for questions, reported as blue boxes; answers are displayed on the right-hand side of the page.
 
 \quad Second, I designed the notes to be as practical as possible. For this reason, the knowledge recipient's answer is supported by a Python code snippet. In total, there are 76 snippets the learner may want to scrutinize, reason with, run, and modify.
 
@@ -330,7 +325,7 @@ In this chapter, the reader is supposed to appreciate:
 \begin{itemize}
 	\item The justification for an introductory module on Python for Business Analytics students
 	\item The scope of the teaching materials included in these notes 
-	\item The learning and teaching activities that form `SMM692 --- Introduction to Programming in Python'
+	\item The learning and teaching activities that form `SMM692 --- Introduction to Programming in Python
 \end{itemize}
 
 \par\noindent\rule{\textwidth}{0.4pt}
@@ -377,7 +372,7 @@ In this chapter, the reader is supposed to appreciate:
         \end{tikzpicture}
         \caption{Interest towards data-science related programming languages over time}
         \vspace{-1em}
-        \caption*{Notes. --- Source is Google Trends}
+        \caption*{\textit{Notes.} --- Source is Google Trends}
         \label{fig:python_pop}
 \end{figure}
 
@@ -408,12 +403,7 @@ In this chapter, the reader is supposed to appreciate:
 
 \begin{paracol}{2}
 	\question{\raggedright So, do these notes cover the entire spectrum of the Python language?}	
-	\note{
-	\begin{itemize}
-		\item NO!
-		\item That would take substantial time --- Python has an extensive language reference!!
-		\item Some aspects of the Python language reference have limited added value for business professionals, who are closer to Python users than developers
-	\end{itemize}
+	\note{NO! Covering the entire spectrum of the language would take substantial time --- Python has extensive language references!! Also, some aspects of the Python language reference have limited added value for business professionals closer to Python users than developers.
 	}
 \end{paracol}
 
@@ -459,12 +449,13 @@ In this chapter, the reader is supposed to appreciate:
 	\note{Mainly, there are two pillars:
 	
 	\begin{itemize}
-		\item LESS IS MORE --- that is, focus on a few core Python notions at a time and practice them
+		\item LESS IS MORE --- that is, you may want to focus on a few core Python notions at a time and practice them
 		\item LEARN BY DOING --- that is, the best way to learn Python is by addressing concrete problems
 	\end{itemize}
 	
 	}
 \end{paracol}
+\clearpage
 
 \begin{paracol}{2}
 	\question{\raggedright I am a Programming Newbie: How Do I Learn Python?}
@@ -484,7 +475,7 @@ In this chapter, the reader is supposed to appreciate:
 
 \begin{paracol}{2}
 	\question{\raggedrith How do I assess my learning outcome?}
-	\note{You may want to assess your learning frequently, at the end of each chapter or, possibly every two or three sections of the chapter. As Figure \ref{fig:assessement} suggests, the key idea is to adopt a sequential approach. Subject-by-subject, you may want to:
+	\note{You may want to assess your learning frequently, at the end of each chapter or, possibly, every two or three sections of the chapter. As Figure \ref{fig:assessement} suggests, the key idea is to adopt a sequential approach. Subject-by-subject, you may want to:
 	\begin{itemize}
 		\item Open a learning circle by watching the hook video and study the notes closely
 		\item Test your understanding by taking a quiz
@@ -621,9 +612,11 @@ At the end of the chapter, you will be able to:
 \begin{paracol}{2}
 	\question{\raggedright What are the steps to install Anaconda?}
 	\note{
+	
+	Here are the steps:
 
 	\begin{enumerate}
-		\item Downaload the installer for your operating system (unless you have a very old machine running Win, go for the 64-Bit version)
+		\item Downaload the installer for your operating system (unless you have a very old machine running Windows, go for the 64-Bit version)
 		\item Run the installer
 		\begin{itemize}
 			\item For Linux: navigate to the folder where you have downloaded the installer as per step 1, open a shell session, then run \texttt{\$ bash ./Anaconda3-XXXX.XX-Linux-x86-64.sh}
@@ -669,14 +662,14 @@ At the end of the chapter, you will be able to:
 	\note{
 	\begin{itemize}
 		\item When you instruct Python to run your script (e.g., `script.py'), there are a few steps the interpreter carries out before your code starts crunching away (see Figure \ref{fig:python_interpreter})
-		\item First, the code is compiled to something called `byte code'
+		\item First, the code is compiled into something called `byte code.'
 		\begin{itemize}
 			\item This step happens behind the scenes (there is nothing to do for the programmer!)
-    			\item A file called `script.pyc', automatically generated, contains the translation of your code into lower-level code instructions
+    			\item A file called `script. pyc', automatically generated, contains the translation of your code into lower-level code instructions
 		\end{itemize}
 		\item Then, the compiled code is routed to something called a `Python Virtual Machine' (PVM)
 		\begin{itemize}
-			\item This step is hidden to the programmer like the previous one
+			\item This step is hidden from the programmer like the previous one
 			\item Mainly, it iterates through your byte code instructions, one by one, to carry out their operations
 		\end{itemize}
 	\end{itemize}
@@ -691,8 +684,8 @@ At the end of the chapter, you will be able to:
 	]
 		\node [] (step) {\textbf{Step}};
 	        \node [right=of step] (file) {\textbf{Entity}}; 
-	        \node [below=of step] (source) {Source};
-		\node [below=of file, align=right] (sourcef) {script.py};
+	        \node [below=0.3cm of step] (source) {Source};
+		\node [below=0.3cm of file, align=right] (sourcef) {script.py};
 		\node [below=of source] (byte) {Byte code};
 		\node [below=of sourcef, align=right] (bytef) {script.pyc};
 		\node [below=of byte] (pvm) {Runtime};
@@ -712,18 +705,18 @@ At the end of the chapter, you will be able to:
 	\note{There are two alternatives:
 	\begin{itemize}
 		\item The non-interactive way consists of preparing a Python script and running it from the command line
-		\item The interactive way consist of preparing and running one or a few Python statements from within a Python shell 
+		\item The interactive way consists of preparing and running one or a few Python statements from within a Python shell 
 	\end{itemize}
 	}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright How do I run a Python script in the non-interactive way?}
+	\question{\raggedright How do I run a Python script in a non-interactive way?}
 	\note{One has to go through a two-step process:
 	
 	\begin{itemize}
 		\item First, the script has to be prepared using a text editor (being basic or  sophisticated, it is up to you)
-		\item Second, the script has be executed from the shel
+		\item Second, the script has to be executed from the shell
 	\end{itemize}
 
 	\quad Snippet 1.1 shows a minimal Python script. Such a script can be created using the built-in text editor of your operating system or an advanced text editor such as \href{https://atom.io}{Atom}, \href{https://www.gnu.org/software/emacs/}{Emacs}, \href{https://www.gnu.org/software/emacs/}{Vim}/\href{https://neovim.io}{Neovim}, \href{https://www.sublimetext.com}{Sublime Text}, and \href{https://code.visualstudio.com}{Visual Studio Code}.
@@ -739,7 +732,7 @@ At the end of the chapter, you will be able to:
 	\quad Let us unpack that command. The \texttt{\$} symbol denotes the
 	statement has to be run in a shell session; the \texttt{python} command
 	tells the shell to use the Python interpreter to evaluate the script;
-	\texttt{filename.py} is the file name of the script. Figure
+	\texttt{filename.py} is the script's file name. Figure
 	\ref{fig:simple_script} shows how to run the Python script containing
 	the code displayed in Snippet 1.1 (named \texttt{simple\_script.py}).
 	\footnote{The example shown in the screenshot assumes the Python script
@@ -886,7 +879,7 @@ print(2 + 4)
 	\note{
 	The large majority of operating systems come with Python installed by default. Such an installation is called `system Python' and is responsible for many essential operating systems processes. 
 
-	\quad Every time we install a new Python module $A$, the package manager (e.g, conda) checks the libraries on which $A$ depends. If a dependency $D(A)$ is not installed, the package manager will install it for us. The larger the number of libraries:
+	\quad Every time we install a new Python module $A$, the package manager (e.g., conda) checks the libraries on which $A$ depends. If a dependency $D(A)$ is not installed, the package manager will install it for us. The larger the number of libraries:
 	\begin{itemize}
 		\item The longer it takes to install a library (checking the web of dependencies takes substantial time!)
 		\item The more likely inconsistencies will arise within the web of dependencies; that is
@@ -895,7 +888,7 @@ print(2 + 4)
 		\item The more likely modules previously installed will stop work
 		\end{itemize}
 	\end{itemize}
-	Ultimately, if you care about not breaking some essential features of the operating system, then you should avoid using `system Python' for projects requiring Python.
+	Ultimately, if you care about not breaking some essential operating system features, you should avoid using `system Python' for projects requiring Python.
 	}
 \end{paracol}
 \clearpage
@@ -905,8 +898,8 @@ print(2 + 4)
 	\note{
 	Typically, we create a Python environment to carry out a specific project or a class of projects (e.g., Machine Learning projects). The advantage is twofold:
 	\begin{itemize}
-		\item Reliability $\rightarrow$ the web of dependencies is relatively simple insofar as we install only the few modules that are required by the project or project class. Likely as not, we will not come across installation issues!
-		\item Reproducibility $\rightarrow$ the environment explicates the modules are necessary to carry out a certain project. Hence, a user who wants to reproduce our project's results knows which modules to install
+		\item Reliability $\rightarrow$ the web of dependencies is relatively simple insofar as we install only a few modules that are required by the project or project class. Likely as not, we will not come across installation issues!
+		\item Reproducibility $\rightarrow$ the environment explains the modules necessary to carry out a project. Hence, a user who wants to reproduce our project's results knows which modules to install
 	\end{itemize}
 	}
 \end{paracol}
@@ -1000,8 +993,7 @@ print(2 + 4)
 
 \par\noindent\rule{\textwidth}{0.4pt}
 
-At the end of the chapter, you will be able to evaluate the various types of Python objects in regard to:
-
+At the end of the chapter, you will be able to evaluate the various types of Python objects in regarding
 \begin{itemize}
 	\item Key features
 	\item Use cases/roles
@@ -1085,7 +1077,7 @@ Implementation types & Compiled code, stack tracebacks                          
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright Are there any other number types besides integers and floating points?}
+	\question{\raggedright Are there other number types besides integers and floating points?}
     \note{Besides integers and floating points numbers, Python includes fixed-precision, rational numbers, Booleans, and sets instances --- see Table \ref{tab:number_types_in_python}.}
 \end{paracol}
 
@@ -1275,7 +1267,7 @@ Implementation types & Compiled code, stack tracebacks                          
 
 \begin{paracol}{2}
 	\question{\raggedright How do I display number objects in a readable way?}
-	\note{Snippet 4.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the outcome of the expression `as is (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we must prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything that is not contained in braces is considered literal text, which is copied unchanged to the output. Snippet 4.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html\#str.format}{\texttt{format}}.}
+	\note{Snippet 4.3 includes some expressions whose result is not passed to a new variable (e.g., lines 8, 12, 16, 20). In those cases, the IPython session displays the expression's outcome as is (e.g., 0.0547945205479452). However, a number with more than three or four decimals may not suit the table or report we must prepare. Python has powerful \href{https://docs.python.org/3/library/string.html}{string formatting} capabilities to display number objects in a readable and nice manner. Table \ref{tab:number_formatting} illustrates various number formatting options with concrete cases. Format strings contain `replacement fields' surrounded by curly braces \texttt{\{\}}. Anything not contained in braces is considered literal text, copied unchanged to the output. Snippet 4.4 presents a fully-fledged number formatting case. First, we assign the variable \texttt{a} to a floating-point number (line 2). Then, we pass the formatting option \texttt{\{:.2f\}} over the variable \texttt{a} using the Python built-in function \href{https://docs.python.org/3/library/stdtypes.html\#str.format}{\texttt{format}}.}
 \end{paracol}
 
 \begin{table}[!htbp]
@@ -1306,7 +1298,7 @@ Implementation types & Compiled code, stack tracebacks                          
 	\end{tabular}
 \end{table}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.4 --- number formatting in Python}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.4 --- number formatting examples}
 # assign the variable 'a' to a floating-point number
 >>> a = 0.67544908755
 
@@ -1368,7 +1360,7 @@ True
 
 \begin{paracol}{2}
 	\question{How do we use strings?}
-	\note{Strings are used to record words, contents of text files loaded into memory, Internet addresses, Python source code, and so on. Strings can also be used to hold the raw bytes used for media files and network transfers and both the encoded and decoded forms of non-ASCII Unicode text used in internationalized programs.}
+	\note{Strings are used to record words, contents of text files loaded into memory, Internet addresses, Python source code, and so on. Strings can also hold the raw bytes used for media files and network transfers and the encoded and decoded forms of non-ASCII Unicode text used in internationalized programs.}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -1381,7 +1373,7 @@ True
 	\question{How do I manipulate string objects?}
 	\note{The fact that strings are immutable sequences affects how we manipulate textual data in Python. In Snippet 4.6, we fetch the individual elements of \texttt{S}, a variable assigned to ``\texttt{Python 3.X}.'' As per the built-in function \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{\texttt{len}}, \texttt{S} contains six unitary strings. That means that each element in \texttt{S} is associated with a position in the numerical progression $\{0, 1, 2, 3, 4, 5\}$.
 	
-	\quad Now, you may be surprised to see the first element of the list is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has an index of $0$, while the last element has an index \texttt{len(obj)} - 1.
+	\quad Now, you may be surprised that the list's first element is $0$ instead of $1$. The reason is that Python is a zero-based indexed programming language: the first element of a series has an index of $0$, while the last part has an index \texttt{len(obj)} - 1.
 	
 	\quad Fetching the individual elements of a string, such as \texttt{S}, requires passing the desired index between brackets, as shown in line 9 (where we get the first unitary string, namely, ``\texttt{P}''.), line 13 (where we get the last unitary string, namely, ``\texttt{X}''), and line 21 (where we get the unitary string with index $3$, i.e., the fourth unitary string appearing in \texttt{S}, ``\texttt{h}''). Note that line 17 is an alternative indexing strategy to the one presented in line 13: it is possible to retrieve the last unitary string by counting `backward'; that is, getting the first element starting from the right-hand side of the string, which equates to index \texttt{-1}.
 	
@@ -1642,7 +1634,7 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright How can I fetch a list's elements?}
-	\note{We can retrieve one or more list component objects via indexing. That is possible because list items are ordered by their position  (similarly to strings). Since Python is a zero-based indexed programming language, to fetch the first item of a list, we have to call the index \texttt{0} (see Snippet 4.11, line 5). A list nested in another list can be fetched by using multiple indices (line 13). The first index refers to the outer list, while any subsequent index refers to an inner list. In our case, we have two indices, one for each list; that is, \texttt{L} and its sub-list \texttt{["abc", 8.98]}.}
+	\note{We can retrieve one or more list component objects via indexing. That is possible because list items are ordered by their position  (similarly to strings). Since Python is a zero-based indexed programming language, to fetch the first item of a list, we have to call the index \texttt{0} (see Snippet 4.11, line 5). A list nested in another list can be fetched using multiple indices (line 13). The first index refers to the outer list, while any subsequent index refers to an inner list. In our case, we have two indices, one for each list; that is, \texttt{L} and its sub-list \texttt{["abc", 8.98]}.}
 \end{paracol}
 \clearpage
 
@@ -1709,7 +1701,7 @@ NOTES: this table has fake data
 		Method & Synopsis \\
 		\midrule 
 		\texttt{L.append(X)} & Append an item to an existing list\\
-		\texttt{L.insert(i, X)} & Append an item to an exisintg list in position $i$ \\
+		\texttt{L.insert(i, X)} & Append an item to an existing list in position $i$ \\
 		\texttt{L.extend([X0, X1, X2])} & Extend an existing list with the items from another list\\
 		\texttt{L.index(X)} & Get the index of the first instance of the argument in an existing list\\
 		\texttt{L.count(X)} & Get the cardinality of an item in an existing list\\
@@ -1747,7 +1739,7 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright Can I change the order of a list's elements?}
-	\note{One of the most common list manipulation tasks consists of changing the order of an item's list. As shown in Snippet 4.14, it is possible to use the \texttt{.reverse()} method to reverse the elements of the list in place (see line 5), while sorting an item's list can be carried out with the \texttt{.sort()} method.}
+	\note{One of the most common list manipulation tasks consists of changing the order of an item's list. As shown in Snippet 4.14, it is possible to use the \texttt{.reverse()} method to reverse the elements of the list in place (see line 5) while sorting an item's list can be carried out with the \texttt{.sort()} method.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.14 --- methods for changing list items in place}
@@ -1771,7 +1763,7 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright What is a dictionary?}
-	\note{Along with lists, dictionaries are one of the most flexible built-in data types in Python. If you think of lists as ordered collections of objects, you can think of dictionaries as unordered collections; the chief distinction is that in dictionaries, items are stored and fetched by \emph{key}, instead of by \emph{positional offset}.}
+	\note{Along with lists, dictionaries are one of the most flexible built-in data types in Python. If you think of lists as ordered collections of objects, you can think of dictionaries as unordered collections; the chief distinction is that in dictionaries, items are stored and fetched by \emph{key} instead of by \emph{positional offset}.}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -1804,7 +1796,7 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 	\question{\raggedright How do I fetch a dictionary's values?}
-	\note{Dictionaries' items cannot be accessed via positional offsets --- like lists. Instead, we fetch the individual items by using the dictionary keys as shown in Snippet 4.16 (see line 5). The reference key is passed among brackets. When the dictionary at hand contains nested dictionaries (see line 9), it is possible to concatenate multiple queries, namely, sequences of keys between brackets (see line 21).}
+	\note{Dictionaries' items cannot be accessed via positional offsets --- like lists. Instead, we fetch the individual items using the dictionary keys shown in Snippet 4.16 (see line 5). The reference key is passed among brackets. When the dictionary at hand contains nested dictionaries (see line 9), it is possible to concatenate multiple queries, namely, sequences of keys between brackets (see line 21).}
 \end{paracol}
 \clearpage
 
@@ -1861,7 +1853,7 @@ NOTES: this table has fake data
 
 \begin{paracol}{2}
 \question{\raggedright What are the most common methods to manipulate a dictionary?}
-\note{Like for lists, Python offers many \href{https://docs.python.org/3/tutorial/datastructures.html\#dictionaries}{\texttt{methods to manipulate dictionary objects}}. Table \ref{tab:dictionary_methods} reports some of the most common methods along with synopses. The first three methods, \texttt{.keys()} \texttt{.values()} \texttt{.items()}, get the constitutive elements of dictionaries: keys, values, and key-value pairs, respectively. The fourth method, \texttt{.get(key, default?)} gets the value for a specific key. The fifth method, \texttt{.update()}, updates the value for a specific key. Like \texttt{.update()}, \texttt{.popitem()}, \texttt{.pop()}, and \texttt{d.clear()} alter the information of a dictionary in place. The first removes the value of a certain key; the second removes the item (a key-value pair) for a certain key; the latter deletes all dictionary items. Finally, \texttt{.copy()} creates a \href{https://docs.python.org/3/library/copy.html}{shallow copy} of an existing dictionary.}
+\note{Like for lists, Python offers many \href{https://docs.python.org/3/tutorial/datastructures.html\#dictionaries}{\texttt{methods to manipulate dictionary objects}}. Table \ref{tab:dictionary_methods} reports some of the most common methods and synopses. The first three methods, \texttt{.keys()} \texttt{.values()} \texttt{.items()}, get the constitutive elements of dictionaries: keys, values, and key-value pairs, respectively. The fourth method, \texttt{.get(key, default?)} gets the value for a specific key. The fifth method, \texttt{.update()}, updates the value for a specific key. Like \texttt{.update()}, \texttt{.popitem()}, \texttt{.pop()}, and \texttt{d.clear()} alter the information of a dictionary in place. The first removes the value of a certain key; the second removes the item (a key-value pair) for a certain key; the latter deletes all dictionary items. Finally, \texttt{.copy()} creates a \href{https://docs.python.org/3/library/copy.html}{shallow copy} of an existing dictionary.}
 \end{paracol}
 
 \begin{table}[!htbp]
@@ -1926,7 +1918,7 @@ dict_items([("Captain Marvel", 3), ("Living Tribunal", 2), ("One-Above-All", 1)]
 
 \begin{paracol}{2}
 \question{\raggedright Why should I use tuples?}
-\note{Tuples are useful for storing data that is not to be changed, such as the coordinates of a point in a two-dimensional space. In general, we use tuples any time information integrity is a concern --- in other words, when we want to make sure the information included in an object will not change because of another reference somewhere in our program.}
+\note{Tuples are useful for storing data that is not to be changed, such as the coordinates of a point in a two-dimensional space. In general, we use tuples any time information integrity is a concern --- in other words when we want to ensure the information included in an object will not change because of another reference in our program.}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -1977,11 +1969,11 @@ dict_items([("Captain Marvel", 3), ("Living Tribunal", 2), ("One-Above-All", 1)]
 
 \begin{paracol}{2}
 	\question{\raggedright Can I create an advanced data container based on a tuple?}
-	\note{\href{https://docs.python.org/3/library/collections.html}{\texttt{collections}} is a module that is shipped with Python and provides data containers that are alternative to Python's general purpose built-in containers, i.e., \texttt{dict}, \texttt{list}, \texttt{set}, and \texttt{tuple}. One of these containers can be created with the function \href{https://docs.python.org/3/library/collections.html\#collections.namedtuple}{\texttt{namedtuple}} (see Snippet 4.21), which allows annotating the tuple items with names. In line 2, we import the function \href{https://docs.python.org/3/library/collections.html\#collections.namedtuple}{\texttt{namedtuple}} from the \href{https://docs.python.org/3/library/collections.html\#collections}{\texttt{collections}} module. In line 5, we create an ad hoc class that best represents the structure of our sample data, concerning Marvel characters' names and the year in which they first appeared in the comic series. The first argument taken by the function is customary and regards the name of the class we are about to create. The second argument is a list with the names of the attributes included in our data structure. In line 8, we use the newly created class \texttt{Rec} to create a tuple, which is eventually printed as per line 11.}
+	\note{\href{https://docs.python.org/3/library/collections.html}{\texttt{collections}} is a module that is shipped with Python and provides data containers that are alternative to Python's general purpose built-in containers, i.e., \texttt{dict}, \texttt{list}, \texttt{set}, and \texttt{tuple}. One of these containers can be created with the function \href{https://docs.python.org/3/library/collections.html\#collections.namedtuple}{\texttt{namedtuple}} (see Snippet 4.21), which allows annotating the tuple items with names. In line 2, we import the function \href{https://docs.python.org/3/library/collections.html\#collections.namedtuple}{\texttt{namedtuple}} from the \href{https://docs.python.org/3/library/collections.html\#collections}{\texttt{collections}} module. In line 5, we create an ad hoc class that best represents the structure of our sample data concerning Marvel characters' names and the year they first appeared in the comic series. The first argument taken by the function is customary and regards the name of the class we are about to create. The second argument is a list with the names of the attributes included in our data structure. In line 8, we use the newly created class \texttt{Rec} to create a tuple, which is eventually printed as per line 11.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.21 --- creating an annotated tuple with the collection module}
-# import the namedtuple function from the module collection
+# import the named tuple function from the module collection
 >>> from collections import namedtuple
 
 # create an ad hoc class object 'Rec' that fits our data structure
@@ -2065,7 +2057,7 @@ False
 	\note{Your Python program may involve input and/or output operations. In other words, you may want to read data from a file stored in your machine and/or write the outcome of your analysis to a file. The built-in function \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}} creates a Python file object, which serves as a link to a file residing on your machine. As Lutz notes:
 	\begin{quote}
 		\textit{
-		``Compared to the types you've seen so far, file objects are somewhat unusual. They are considered a core type because they are created by a built-in function, but they're not numbers, sequences, or mappings, and they don't respond to expression operators; they export only methods for common file-processing tasks'' (page 282)
+		``Compared to the types you've seen so far, file objects are somewhat unusual. They are considered a core type because a built-in function creates them, but they're not numbers, sequences, or mappings, and they don't respond to expression operators; they export only methods for common file-processing tasks'' (page 282)
 		}
 	\end{quote}}
 \end{paracol}
@@ -2077,7 +2069,7 @@ False
 
 \begin{paracol}{2}
 \question{\raggedright How do I source the data stored in a file?}
-\note{You open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}. The output of the function is a \texttt{file} object. Snippet 4.24 illustrates how to use \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}} for data sourcing. In the first part of the snippet, we create a \texttt{file} object to read the data included in the existing file \texttt{my\_file.txt}.\footnote{For the sake of simplicity, we assume the target file is located in the same directory as the Python script.} At least, we have to pass one argument to \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}: the path pointing to the file. A second optional argument is \texttt{mode}, which specifies the mode in which the file is opened to source. It defaults to \texttt{r}, which means open for reading in text mode. Other common values are \texttt{w} for writing,\footnote{By deafult, \texttt{w} truncates the file if it already exists} \texttt{x} for exclusive creation, and \texttt{a} for appending. \footnote{If encoding is not specified the encoding used is platform-dependent. Specifically, \texttt{locale.getpreferredencoding(False)} is called to get the current locale encoding. Character encoding is the process of assigning numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.} To read a file's contents, we use the \href{https://docs.python.org/3/tutorial/inputoutput.html\#methods-of-file-objects}{\texttt{.read()}} method (see line 9), returning a string object (see line 10). }
+\note{You open a pipe to a file using the built-in function \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}. The output of the function is a \texttt{file} object. Snippet 4.24 illustrates how to use \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}} for data sourcing. In the first part of the snippet, we create a \texttt{file} object to read the data included in the existing file \texttt{my\_file.txt}.\footnote{For the sake of simplicity, we assume the target file is located in the same directory as the Python script.} At least, we have to pass one argument to \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}}: the path pointing to the file. A second optional argument is \texttt{mode}, which specifies the mode in which the file is opened to the source. It defaults to \texttt{r}, which means open for reading in text mode. Other common values are \texttt{w} for writing,\footnote{By default, \texttt{w} truncates the file if it already exists} \texttt{x} for exclusive creation, and \texttt{a} for appending. \footnote{If encoding is not specified, the encoding used is platform-dependent. Specifically, \texttt{locale.getpreferredencoding(False)} is called to get the current locale encoding. Character encoding assigns numbers to graphical characters, especially the written characters of human language, allowing them to be stored, transmitted, and transformed using digital computers.} To read a file's contents, we use the \href{https://docs.python.org/3/tutorial/inputoutput.html\#methods-of-file-objects}{\texttt{.read()}} method (see line 9), returning a string object (see line 10). }
 \end{paracol}
 \clearpage
 
@@ -2218,14 +2210,14 @@ Hi there
 	\question{\raggedright What is a Python statement?}
 	\note{In his popular book `Learning Python,' Lutz provides a concise and effective description of what a Python statement is:
 		\begin{quote}
-			\textit{In simple terms, statements are the things you write to tell Python what your programs should do. If, as suggested [omitted], programs ``do things with stuff,'' then statements are the way you specify what sort of things a program does. Less informally, Python is a procedural, statement-based language; by combining statements, you specify a procedure that Python performs to satisfy a program's goals.} 
+			\textit{In simple terms, statements are the things you write to tell Python what your programs should do. If, as suggested [omitted], programs ``do things with stuff,'' then statements are the way you specify what sort of things a program does. Less informally, Python is a procedural, statement-based language; by combining statements, you specify a procedure Python performs to satisfy a program's goals.} 
 		\end{quote}
 	}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright What are the most common Python statements?}
-	\note{Table \ref{tab:python_statements} illustrates common Python statements, their role, and application examples. Some of these statements were used in the examples considered so far. Other statements --- the majority --- will be faced in the next sections of the current chapter and/or in the subsequent chapters.}
+	\note{Table \ref{tab:python_statements} illustrates common Python statements, their role, and application examples. Some of these statements were used in the examples considered so far. Other statements --- the majority --- will be faced in the next sections of the current chapter and/or the subsequent chapters.}
 \end{paracol}
 \clearpage
 
@@ -2263,10 +2255,10 @@ Hi there
 
 \begin{paracol}{2}
 \question{\raggedright What is control flow in Python?}
-\note{Many Python statements we write are compound statements: there is one statement nested inside another. The outer statement is called the `if' statement and the inner statement is called the `then' statement. The `if' statement is used to determine whether to execute the `then' statement. Specifically, the `then' statement is executed insofar as the `if' statement evaluates to `True.' Snippet 4.28 illustrates a control flow case, a simple rule-based product recommender that suggests products based on users' purchasing patterns. If product \texttt{x} belongs to a user's set of past purchases, then a certain item is recommended; otherwise, no recommendation is offered (see lines 7 and 8, containing the \texttt{else} statement).} 
+\note{Many Python statements we write are compound statements: there is one statement nested inside another. The outer statement is called the `if' statement, and the inner statement is called the `then' statement. The `if' statement determines whether to execute the `then' statement. Specifically, the `then' statement is executed insofar as the `if' statement evaluates to `True.' Snippet 4.28 illustrates a control flow case, a simple rule-based product recommender that suggests products based on users' purchasing patterns. If product \texttt{x} belongs to a user's set of past purchases, then a certain item is recommended; otherwise, no recommendation is offered (see lines 7 and 8, containing the \texttt{else} statement).} 
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.28 --- an example of control flow in Python}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.28 --- an example of control flow}
 # a set with a customer's past purchases
 >>> S = set(["a", "x", "u"])
 
@@ -2289,8 +2281,8 @@ Customers who bought x also bought Air Jordan 7 Retro Miro
 \end{paracol}	
 
 \begin{paracol}{2}
-	\question{\raggedright Indentation has substantive meaning in Python!}
-	\note{`Then' statements are indented (with a tab or four consecutive spaces). Do not creatively use indents to embellish your code --- that is not consistent with Python's rules and design principles (see Snippet 4.28 line 6).}
+	\question{\raggedright Does indentation have substantive meaning in Python?}
+	\note{Yes, it does. `Then' statements are indented (with a tab or four consecutive spaces). Do not creatively use indents to embellish your code --- that is not consistent with Python's rules and design principles (see Snippet 4.28 line 6).}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -2299,11 +2291,11 @@ Customers who bought x also bought Air Jordan 7 Retro Miro
 \end{paracol}
 
 \begin{paracol}{2}
-\question{\raggedright How do I concatenate multiple `then' statements}
+\question{\raggedright How do I concatenate multiple `then' statements?}
 \note{Exmple 4.29 shows how to use \texttt{elif} to concatenate multiple `if-then' statements in the same control flow. Like in Snippet 4.28, the `else' statement defines the residual behavior of the control flow; that is, what Python does when both the `if' and `elif' statements evaluate to `False.'}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.29 --- an example of control flow with multiple `if-then' statements in Python}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.29 --- an example of control flow with multiple `if-then' statements}
 # a list with a customer's past purchases
 >>> S = set(["a", "w", "u"])
 
@@ -2318,11 +2310,11 @@ How about Converse Chuck Taylor All Star?
 \end{pythoncode}
 
 \begin{paracol}{2}
-\question{\raggedright Nested if-then statements}
+\question{\raggedright How do I create nested if-then statements?}
 \note{In Python, it is possible to nest an if-then statement into another. In Snippet 4.30, the `if' statements in lines 6 and 8 are nested inside the `if' statement in line 5. It is worth noticing that lines 7 and 9 --- regarding `then' statements --- are indented twice because they terminate distinct if-then statements nested in the broader if-then statement commencing on line 5.}
 \end{paracol}
 
-\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.30 --- an example of nested control flow in Python}
+\begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.30 --- an example of nested control flow}
 # a list with a customer's past purchases
 >>> S = set(["a", "x", "b"])
 
@@ -2341,8 +2333,8 @@ Customers who bought x & a also bought Air Force
 \label{sec:while_and_for_loops}
 
 \begin{paracol}{2}
-	\question{\raggedright Looping!}
-	\note{Oftentimes, we write Python statements that repeat a same task --- i,e., they loop a certain number of times or over multiple items.}
+	\question{\raggedright Loops?!}
+	\note{Oftentimes, we write Python statements that repeat the same task --- i,e. they loop a certain number of times or over multiple items.}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -2389,13 +2381,13 @@ s
 \clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright \texttt{while} loops in action}
-	\note{\href{https://docs.python.org/3/reference/compound_stmts.html\#while}{\texttt{while}} statements run a code block insforar as a test evaluates to True. In the upper section of Exmple 4.31, we assing a \texttt{i} to a number. Then we create a for loop with the following elements: the first one is a statementing testing wether \texttt{i} is smaller or equal 3 (see line 3); the second element is the loop body (indented), which is repeated as long as the test evaluates to \texttt{True}. It is worth noticing that every iteration of the loop body produces a unitary increase in \texttt{i} --- therefore, the program leaves the loop after four iterations. In the lower section of Snippet 4.31, we assigng the variable \texttt{x} to a string (line 13), which we eventually print (line 14) and  slice (line 15) until we get an empty string (line 13x).}
+	\question{\raggedright Can you give an example of a \texttt{while} loop?}
+	\note{\href{https://docs.python.org/3/reference/compound_stmts.html\#while}{\texttt{while}} statements run a code block insofar as a test evaluates to True. In the upper section of Example 4.31, we assign a \texttt{i} to a number. Then we create a for loop with the following elements: the first one is a statement testing whether \texttt{i} is smaller or equal to 3 (see line 3); the second element is the loop body (indented), which is repeated as long as the test evaluates to \texttt{True}. It is worth noticing that every iteration of the loop body produces a unitary increase in \texttt{i} --- the program leaves the loop after four iterations. In the lower section of Snippet 4.31, we assign the variable \texttt{x} to a string (line 13), which we eventually print (line 14) and slice (line 15) until we get an empty string (line 13x).}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright \texttt{for} loops in action}
-	\note{\href{https://docs.python.org/3/reference/compound_stmts.html\#for}{\texttt{for}} steps through a sequence of items and carries out a task. In the upper section of Snippet 4.32, we print the result of a mathematical operation that is deployed over the items of a \texttt{list} (an example of Python iterable object). The code included in line 2 assigngs temporarily the variable \texttt{item} to an element of iterable. Then, the code block (indented) is executed over the temporary object. In the lower section of Snippet 4.32, the execution of the loop operates a mathematical expression over the items of a first list and appends the outcome to a second list (line 10).}
+	\question{\raggedright Can you give an example of a \texttt{for} loop?}
+	\note{\href{https://docs.python.org/3/reference/compound_stmts.html\#for}{\texttt{for}} steps through a sequence of items and carries out a task. In the upper section of Snippet 4.32, we print the result of a mathematical operation deployed over the items of a \texttt{list} (an example of a Python iterable object). The code included in line 2 assigns the variable \texttt{item} to an element of iterable temporarily. Then, the code block (indented) is executed over the temporary object. In the lower section of Snippet 4.32, the execution of the loop operates a mathematical expression over the items of a first list and appends the outcome to a second list (line 10).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.32 --- a \texttt{for} loop example}
@@ -2415,7 +2407,7 @@ s
 \clearpage
 	
 \begin{paracol}{2}
-	\question{\raggedright \texttt{for} loops with dictionaries}
+	\question{\raggedright How do I use\texttt{for} loops with dictionaries?}
 	\note{Like lists, dictionaries are iterable objects. In the upper section of Snippet 4.33, we create a dictionary and iterate over its items printing a simple predicate. As we know from section \ref{sec:dictionaries}, we access a dictionary's values by keys. Hence, in line 5, we retrieve the keys of \texttt{D}. Then, in line 12, we fetch the value of the temporary object \texttt{k}, namely, \texttt{D[k]}. Particularly, we print the temporary object \texttt{k}, the string object \texttt{IS}, and the value associated with \texttt{k}; that is, \texttt{D[k]}. In Snippet 34, we accomplish the same task of Snippet 33. However, the loop regards a dictionary's items --- i.e., key-value pairs --- instead of keys (that is self-evident from the comparison of Snippet 33's line 55 and Snippet 34's line 5). }
 \end{paracol}
 
@@ -2454,7 +2446,7 @@ Wanda Maximoff IS human
 \clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Counter \texttt{for} loops}
+	\question{\raggedright Why are counter \texttt{for} loops so popular?}
 	\note{The built-in class \href{https://docs.python.org/3/library/functions.html\#func-range}{\texttt{range}} provides an immutable sequence that is particularly helpful for loops that repeat an action a certain number of times. Snippet 35 shows an example of a for loop with \href{https://docs.python.org/3/library/functions.html\#func-range}{\texttt{range}}.}
 \end{paracol}
 
@@ -2472,9 +2464,9 @@ Wanda Maximoff IS human
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright Nested \texttt{for} loops}
+	\question{\raggedright What is a nested \texttt{for} loop?}
     \note{A Python statement that contains multiple \textt{for} loops is a nested \texttt{for} loop. Mainly, a
-    \texttt{for} loop allows to carry out a task over the elements of two iterables jointly. The outer loop considers the individual items of the first iterable (see Snippet 4.26, line 6); the inner loop (indented) considers the individual items of the second list (see line 7). Once we have created a pair of temporary objects, we can do something with it (see line 8).}
+    \texttt{for} loop allows to jointly carry out a task over the elements of two iterables. The outer loop considers the individual items of the first iterable (see Snippet 4.26, line 6); the inner loop (indented) considers the individual items of the second list (see line 7). Once we have created a pair of temporary objects, we can do something with it (see line 8).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.36 --- a nested loop example}
@@ -2499,8 +2491,8 @@ z  <->  red
 \clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright Nested \texttt{for} loops Vs. \texttt{zip} for loops}
-	\note{Contrarily to the nested \texttt{for} loops, which considers all permutations containing multiple iterables' items, the built-in \href{https://docs.python.org/3/library/functions.html\#zip}{zip} steps through several iterables \emph{in parallel}, producing tuples with an item from each one. As shown in Snippet 4.37, there is neither an inner nor an outer for loop in this case --- instead, there is a single loop considering two temporary objects, \texttt{i} and \texttt{j}, that occupy the same position in the offset of the iterables at hand (see line 6; the first item from the first iterable goes with the first item from the second iterable, the second item from the first iterable goes with the second item from the second iterable, and so on and so forth).}
+	\question{\raggedright Nested \texttt{for} loops Vs. \texttt{zip} for loops?}
+	\note{Contrarily to the nested \texttt{for} loops, which considers all permutations containing multiple iterables' items, the built-in \href{https://docs.python.org/3/library/functions.html\#zip}{zip} steps through several iterables \emph{in parallel}, producing tuples with an item from each one. As shown in Snippet 4.37, there is neither an inner nor an outer for loop in this case --- instead, there is a single loop considering two temporary objects, \texttt{i} and \texttt{j}, that occupy the same position in the offset of the iterables at hand (see line 6; the first item from the first iterable goes with the first item from the second iterable, the second item from the first iterable goes with the second item from the second iterable, and so on).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 4.37 --- looping over two iterables in parallel with \texttt{zip} }
@@ -2520,17 +2512,17 @@ z  <->  red
 \label{sec:iterations_and_comprhensions}
 
 \begin{paracol}{2}
-	\question{\raggedright Over and beyond \texttt{while} and \texttt{for} loops}
-	\note{As we know from the previous section, \texttt{while} and \texttt{for} loops can handle most repetitive tasks programs need to perform. However, Python provides further tools to make loops \emph{easier to write/read} and \emph{more efficient}. One of the most prominent tools is \href{https://docs.python.org/3/tutorial/datastructures.html}{\texttt{list comprehension}}.}
+	\question{\raggedright Is there any other Python iterator besides \texttt{while} and \texttt{for} loops?}
+	\note{As we know from the previous section, \texttt{while} and \texttt{for} loops can handle most repetitive tasks programs need to perform. However, Python provides additional tools to make loops \emph{easier to write/read} and \emph{more efficient}. One of the most prominent tools is \href{https://docs.python.org/3/tutorial/datastructures.html}{\texttt{list comprehension}}.}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright Why do we use \texttt{list comprehensions?}}
+	\question{\raggedright Why do I use \texttt{list comprehensions?}}
 	\note{To create a list containing the outcome of an action repeated over an iterable's items (see Snippet 4.38, line 14).}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright How do we create \texttt{list comprehensions}?}
+	\question{\raggedright How do I create \texttt{list comprehensions}?}
 	\note{We include a Python statement containing a \texttt{for} clause among brackets (see Snippet 4.38, line 12).}
 \end{paracol}
 \clearpage
@@ -2554,7 +2546,7 @@ L = []
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright How do we implement a nested \texttt{for} loop in list comprehensions?}
+	\question{\raggedright How do I implement a nested \texttt{for} loop in list comprehensions?}
 	\note{As Snippet 4.39 shows, a nested for loop becomes a one-liner in a list comprehension. The first \texttt{for} clause in line 7 would correspond to the outer \texttt{for} loop reported in Snippet 4.36, whereas the second \texttt{for} clause in line 7 would correspond to the inner \texttt{for} loop reported in Snippet 4.36.}
 \end{paracol}
 
@@ -2577,8 +2569,8 @@ L = []
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright Can we use the \texttt{zip} generator within a list comprehension?}
-	\note{Yes, we can. To do that, the \texttt{for} clause must consider two iterables at once (see Snippet 4.40, line 6).}
+	\question{\raggedright Can I use the \texttt{zip} generator within a list comprehension?}
+	\note{Yes, we can. To do that, the \texttt{for} clause must consider two iterables simultaneously (see Snippet 4.40, line 6).}
 \end{paracol}
 \clearpage
 
@@ -2651,12 +2643,12 @@ Learning goals:
 
 \begin{paracol}{2}
 	\question{\raggedright I am an Anaconda user: do I need to install NumPy `separately'?}
-	\note{No, you do not. NumPy is included in `base', the default environment of Anaconda. However, if you create a new environment, you need to install NumPy --- as well as all the other modules you need --- with the package manager \texttt{conda}.}
+	\note{No, you do not. NumPy is included in `base,' the default environment of Anaconda. However, if you create a new environment, you need to install NumPy --- and all the other modules you need --- with the package manager \texttt{conda}.}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright How do I install NumPy?}
-	\note{The easiest way is using the command line. Anaconda users run \texttt{\$ conda install numpy scipy}, whereas Python official release users run \texttt{\$ pip install numpy scipy}. Having said that, Anaconda users can also install the modules they need from within Anaconda-Navigator.}
+	\note{The easiest way is using the command line. Anaconda users run \texttt{\$ conda install numpy scipy}, whereas Python official release users run \texttt{\$ pip install numpy scipy}. Anaconda users can also install the modules they need from within Anaconda-Navigator.}
 \end{paracol}
 
 \section{NumPy \texttt{ndarray}}
@@ -2706,7 +2698,7 @@ array([[[1, 2],
 
 \begin{paracol}{2}
 	\question{\raggedright What are the distinctive features of \texttt{ndarrays}?}
-	\note{\texttt{ndarrays} have been designed --- and tuned over time --- with flexibility and efficiency in mind. For example, \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}} allow to carry out computations on arrays with a syntax similar to scalar values. As shown in Snippet 5.2, we can multiply an array by a scalar (line 10) as well as add two vectors (14). That is not possible if we use pure Python code. Multiplying a list by a scalar $N$ replicates the ordered collection of items $N$ times (see line 23). Adding two lists yields concatenation (see line 30). At the same time, \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}} support the analysis of large volumes of data\footnote{The Internet has many blog posts showing the performance of NumPy in linear algebra tasks is comparable to compiled languages, such as C.}.}
+	\note{\texttt{ndarrays} have been designed --- and tuned over time --- with flexibility and efficiency in mind. For example, \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}} allows to carry out computations on arrays with a syntax similar to scalar values. As shown in Snippet 5.2, we can multiply an array by a scalar (line 10) and add two vectors (14). That is not possible if we use pure Python code. Multiplying a list by a scalar $N$ replicates the ordered collection of items $N$ times (see line 23). Adding two lists yields concatenation (see line 30). At the same time, \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}} support the analysis of large volumes of data\footnote{The Internet has many blog posts showing the performance of NumPy in linear algebra tasks is comparable to compiled languages, such as C.}.}
 \end{paracol}
 \clearpage 
 
@@ -2816,7 +2808,7 @@ import numpy as np
 
 \begin{paracol}{2}
 	\question{\raggedright I know that a NumPy array must contain homogenous data --- but which object types are allowed?}
-	\note{Table \ref{tab:array_data_types} reports the NumPy data types. Python beginners are not supposed to appreciate the distinctive attributes of each type. Instead, they may want to get a clear understanding of the high-level types, namely, floating points, complex, integer, boolean, string, or general Python objects. When it comes to working on sophisticated projects, requiring more control over the storage types, then it is highly suggested to get a thorough knowledge of the types in Table \ref{tab:array_data_types}. It is worth noticing that \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\texxttt{dtypes}} are a source of NumPy's flexibility for interacting with data coming from other systems. In most cases, they provide a mapping directly onto an underlying disk or memory representation, which makes it easy to read and write binary streams of data to disk and also to connect to code written in a low-level language like C or Fortran. The numerical \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\texttt{dtypes}} are named the same way: a type name, like \texttt{float} or \texttt{int}, followed by a number indicating the number of bits per element. A standard double-precision floating-point value takes up 8 bytes or 64 bits. Thus, this type is known in NumPy as \texttt{float64}.}
+	\note{Table \ref{tab:array_data_types} reports the NumPy data types. Python beginners are not supposed to appreciate the distinctive attributes of each type. Instead, they may want to get a clear understanding of the high-level types, namely, floating points, complex, integer, boolean, string, or general Python objects. When working on sophisticated projects requiring more control over the storage types, it is highly suggested to get a thorough knowledge of the types in Table \ref{tab:array_data_types}. It is worth noticing that \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\texxttt{dtypes}} are a source of NumPy's flexibility for interacting with data coming from other systems. In most cases, they map directly onto an underlying disk or memory representation, making it easy to read and write binary data streams to disk and connect to code written in a low-level language like C or Fortran. The numerical \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.dtype.html}{\texttt{dtypes}} are named the same way: a type name, like \texttt{float} or \texttt{int}, followed by a number indicating the number of bits per element. A standard double-precision floating-point value takes up 8 bytes or 64 bits. Thus, this type is known in NumPy as \texttt{float64}.}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -2864,8 +2856,8 @@ dtype('float64')
 			int16, uint16\dotfill & i2, u2 & Signed and unsigned 16-bit integer types \\
 			int32, uint32\dotfill & i4, u4 & Signed and unsigned 32-bit integer types \\ 
 			int64, uint64\dotfill & i8, u8 & Signed and unsigned 64-bit integer types \\
-			float16\dotfill & f2 & Half-precision floating point float32 f4 or f Standard single-precision floating point; compatible with C float\\ 
-			float64\dotfill & f8 or d & Standard double-precision floating point; compatible with C double and Python\\ 
+			float16\dotfill & f2 & Half-precision floating point float32 f4 or f Standard single-precision floating-point; compatible with C float\\ 
+			float64\dotfill & f8 or d & Standard double-precision floating-point; compatible with C double and Python\\ 
 			float object\dotfill & float128 f16 or g & Extended-precision floating point \\  
 			complex64, complex128, complex256\dotfill & c8, c16, c32 & Complex numbers represented by two 32, 64, or 128 floats, respectively  \\ 
 			bool\dotfill & ? & Boolean type storing True and False values \\ 
@@ -2895,7 +2887,7 @@ dtype('float64')
 
 \begin{paracol}{2}
 	\question{\raggedright Creating arrays from shape or value}
-	\note{This family of routines creates arrays with a certain number of dimensions, shape, values, and attributes. Snippet 5.5. shows how to create:
+	\note{This family of routines creates arrays with a certain number of dimensions, shapes, values, and attributes. Snippet 5.5. shows how to create:
 	\begin{itemize}
 		\item an array with a certain shape and a constant scalar (see lines 5 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.zeros.html\#numpy.zeros}{\texttt{.zeros}}, 12 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.ones.html\#numpy.ones}{\texttt{.ones}}, 19 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.full.html\#numpy.full}{\texttt{full}}), and
 		\item an array containing an identity matrix (see lines 26 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.eye.html\#numpy.eye}{\texttt{.eye}} --- and 33 --- \href{https://numpy.org/doc/stable/reference/generated/numpy.identity.html\#numpy.identity}{\texttt{.identity}})
@@ -2968,7 +2960,7 @@ array([[1., 0., 0., 0.],
 
 \begin{paracol}{2}
 	\question{\raggedright Creating arrays from existing data}
-	\note{In Snippets 5.1 -- 5.4, we saw how to use \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html\#numpy.array}{\texttt{array}} for passing data to a NumPy array. Snippet 5.6 shows further routines to create NumPy arrays from existing data include for example:
+	\note{In Snippets 5.1 -- 5.4, we saw how to use \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html\#numpy.array}{\texttt{array}} for passing data to a NumPy array. Snippet 5.6 shows other routines to create NumPy arrays from existing data, including for example:
 	\begin{itemize}
 		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.fromfunction.html\#numpy.fromfunction}{\texttt{.fromfunction}}, creating an array by executing a function over each coordinate (line 8)
 		\item \href{https://numpy.org/doc/stable/reference/generated/numpy.fromfile.html\#numpy.fromfile}{\texttt{.fromfile}}, creating an array from data in a text or binary file (line 19)
@@ -3078,7 +3070,7 @@ array((b'Jordan, Michael Jeffrey', b'17-02-1963', 6, 30.1),
 
 \begin{paracol}{2}
 	\question{\raggedright Record arrays}
-	\note{NumPy arrays do no contain any information about the attributes of the data. For example, a NumPy array cannot accommodate any meta-data, such as the names of the fields included in the data. Here is where \href{https://numpy.org/doc/stable/reference/routines.array-creation.html}{\texttt{.rec}} kick in (see Table \ref{tab:array_for_record_arrays}). For example, \href{https://numpy.org/doc/stable/reference/generated/numpy.core.records.array.html\#numpy.core.records.array}{.core.records.array} allows to flexibly specify a field's type and name (see Snippet 5.7, line 8). Once a `recarray' is created, it is possible to fetch its data by field name (see Snippet 5.7, line 11).}
+	\note{NumPy arrays do not contain any information about the attributes of the data. For example, a NumPy array cannot accommodate any meta-data, such as the fields' names in the data. Here is where \href{https://numpy.org/doc/stable/reference/routines.array-creation.html}{\texttt{.rec}} kick in (see Table \ref{tab:array_for_record_arrays}). For example, \href{https://numpy.org/doc/stable/reference/generated/numpy.core.records.array.html\#numpy.core.records.array}{.core.records.array} allows to flexibly specify a field's type and name (see Snippet 5.7, line 8). Once a `recarray' is created, it is possible to fetch its data by field name (see Snippet 5.7, line 11).}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.7 --- creating record arrays}
@@ -3106,7 +3098,7 @@ array(['51.5072° N', '35.6762° N'], dtype='<U12')
 			Routine & Synopsis \\
 			\midrule
 			\texttt{np.core.records.array(obj[, dtype, shape, ...])} &
-			Construct a record array from a wide-variety of objects\\
+			Construct a record array from a wide variety of objects\\
 			\texttt{np.core.records.fromarrays(arrayList[, dtype, ...])} &
 			Create a record array from a (flat) list of arrays\\
 			\texttt{np.core.records.fromrecords(recList[, dtype, ...])} &
@@ -3123,7 +3115,7 @@ array(['51.5072° N', '35.6762° N'], dtype='<U12')
 
 \begin{paracol}{2}
 	\question{\raggedright Creating numerical ranges}
-	\note{One may want to create a numerical range for different reasons, including running functional analysis or computer simulation. NumPy has a bunch of array-creating routines for numerical ranges (see Table \ref{tab:array_from_numerical_ranges}), some of which that are quite popular in the fields of technical and scientific computation as well as data science. For example, \href{https://numpy.org/doc/stable/reference/generated/numpy.arange.html\#numpy.arange}{\texttt{np.arange}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.linspace.html\#numpy.linspace}{\texttt{np.linspace}} frequently appear in Python programs when it comes to create evenly spaced values in a certain interval and evely spaced samples respectively (see Snippet 5.8, lines XX and XX). Another popular routine is \href{https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html\#numpy.meshgrid}{\texttt{.meshgrid}}, returning coordinate matrices from coordinate vectors.}
+	\note{One may want to create a numerical range for different reasons, including running functional analysis or computer simulation. NumPy has a bunch of array-creating routines for numerical ranges (see Table \ref{tab:array_from_numerical_ranges}), some of which are quite popular in technical and scientific computation as well as data science. For example, \href{https://numpy.org/doc/stable/reference/generated/numpy.arange.html\#numpy.arange}{\texttt{np.arange}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.linspace.html\#numpy.linspace}{\texttt{np.linspace}} frequently appear in Python programs when it comes to create evenly spaced values in a certain interval and evenly spaced samples respectively (see Snippet 5.8, lines XX and XX). Another popular routine is \href{https://numpy.org/doc/stable/reference/generated/numpy.meshgrid.html\#numpy.meshgrid}{\texttt{.meshgrid}}, returning coordinate matrices from coordinate vectors.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.8 --- creating numerical ranges}
@@ -3282,7 +3274,7 @@ array([[1., 0., 0., 0., 0., 0., 0., 0., 0., 0.],
 
 \begin{paracol}{2}
 	\question{\raggedright The Matrix Class} 
-	\note{In Snippet 5.9, line 17, I claim to create a matrix. Actually, the outcome displayed in line 18 is consistent with the concept of `matrix' we have been taught in a typical linear algebra class: what a human being sees is a set of numbers arranged in rows and columns. However, in NumPy terms, the object displayed in line 18 is an array with two dimensions. If we want to create a NumPy Matrix Class object\footnote{The documentation of numPy 1.23 states that \textit{It is no longer recommended to use this class, even for linear algebra. Instead use regular arrays. The class may be removed in the future}.}, we have to call \href{https://numpy.org/doc/stable/reference/generated/numpy.matrix.html\#numpy.matrix}{\texttt{np.matrix}}, a subclass of \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html\#numpy.ndarray}{\texttt{np.ndarray}}. Table \ref{tab:array_for_matrix_class} illustrates the two matrix-creating routines of NumPy.}
+	\note{In Snippet 5.9, line 17, I claim to create a matrix. The outcome displayed in line 18 is consistent with the concept of `matrix' we have been taught in a typical linear algebra class: what a human being sees is a set of numbers arranged in rows and columns. However, in NumPy terms, the object displayed in line 18 is an array with two dimensions. If we want to create a NumPy Matrix Class object\footnote{The documentation of NumPy 1.23 states that \textit{It is no longer recommended to use this class, even for linear algebra. Instead, use regular arrays. The class may be removed in the future}.}, we have to call \href{https://numpy.org/doc/stable/reference/generated/numpy.matrix.html\#numpy.matrix}{\texttt{np.matrix}}, a subclass of \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html\#numpy.ndarray}{\texttt{np.ndarray}}. Table \ref{tab:array_for_matrix_class} illustrates the two matrix-creating routines of NumPy.}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -3337,19 +3329,19 @@ matrix([[-1.60040278e+00,  1.98412698e-03, -1.19642857e-03],
 	\note{NumPy offers many array manipulation routines (see Table \ref{tab:numpy_array_manipulation}), which can be grouped around the following families:
 	
 	\begin{itemize}
-		\item basic operations
-		\item changing array shape 
-		\item transpose-like operations
-		\item changing number of dimensions 
-		\item changing kind of array
-		\item joining arrays 
-		\item splitting arrays 
-		\item tiling arrays 
-		\item adding and removing elements 
-		\item rearranging elements
+		\item Basic operations
+		\item Changing array shape 
+		\item Transpose-like operations
+		\item Changing number of dimensions 
+		\item Changing kind of array
+		\item Joining arrays 
+		\item Splitting arrays 
+		\item Tiling arrays 
+		\item Adding and removing elements 
+		\item Rearranging elements
 	\end{itemize}
 	
-        Presenting every NumPy array manipulation routine would require writing a dedicated book (and certainly falls beyond the remit of an introductory module on Python). That said, let me whet the reader's appetite by illustrating a sample of miscellaneous routines (see Snippet 5.11). Here is the sequence of tasks we accomplish: first, we create an array of shape \texttt{(6,)} (see line 5); then, we change the shape of the array (line 10) and transpose its rows and columns (line 16); in the lower section of the snippet we join two arrays using several routines: \href{https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html\#numpy.concatenate}{\texttt{.concatenate}} joins two arrays along the desired axis (the default axis is the first one, meaning the second arrays are concatenated row-wise); \href{https://numpy.org/doc/stable/reference/generated/numpy.vstack.html\#numpy.vstack}{\texttt{.vstack}} requires to pass a tuple of arrays to stack row-wise; \href{https://numpy.org/doc/stable/reference/generated/numpy.hstack.html\#numpy.hstack}{\texttt{.hstack}} requires to pass a tuple of arrays to stack column-wise. It is worth noticing that the rules for vector/matrix manipulation we learned at school apply to the routines that join arrays. In other words, two NumPy arrays can be joined if and only have the same length on the joining axis. For example, it is possible to stack vertically two arrays with shape \texttt{(3, 3)} and \texttt{(2, 3)} because they have the same number of columns.}  
+        Presenting every NumPy array manipulation routine would require writing a dedicated book (and certainly falls beyond the remit of an introductory module on Python). That said, let me whet the reader's appetite by illustrating a sample of miscellaneous routines (see Snippet 5.11). Here is the sequence of tasks we accomplish: first, we create an array of shape \texttt{(6,)} (see line 5); then, we change the shape of the array (line 10) and transpose its rows and columns (line 16); in the lower section of the snippet we join two arrays using several routines: \href{https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html\#numpy.concatenate}{\texttt{.concatenate}} joins two arrays along the desired axis (the default axis is the first one, meaning the second arrays are concatenated row-wise); \href{https://numpy.org/doc/stable/reference/generated/numpy.vstack.html\#numpy.vstack}{\texttt{.vstack}} requires to pass a tuple of arrays to stack row-wise; \href{https://numpy.org/doc/stable/reference/generated/numpy.hstack.html\#numpy.hstack}{\texttt{.hstack}} requires to pass a tuple of arrays to stack column-wise. It is worth noticing that the rules for vector/matrix manipulation we learned at school apply to the routines that join arrays. In other words, two NumPy arrays can be joined if and only have the same length on the joining axis. For example, it is possible to stack vertically two arrays with the shape \texttt{(3, 3)} and \texttt{(2, 3)} because they have the same number of columns.}  
 	}
 \end{paracol}
 \clearpage
@@ -3442,7 +3434,7 @@ array([[0, 1, 2, 6],
 \begin{paracol}{2}
 \question{\raggedright What are the mathematical functions available in NumPy?}
 \note{
-Similar to the case of array-manipulating routines, a detailed discussion of every NumPy mathematical function exceeds the scope of these notes. However, every function can be accessed using the same procedure; mainly, we need a set of values to pass to the argument of the function --- that is it! Snippet 5.12 shows the procedure to use a NumPy mathematical functions by means of two trignometric functions, namely, \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt{.cos}}. In line 9, we create a range of values to assign to the variable \texttt{X}; then, in line 11, we create two further arrays assigned to the outcome of \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt{.cos}} respectively; finally, we use the Matplotlib module to visualize the two functions (if you do not get the Matplotlib code logic, do not worry at all --- you will familiarize with it in the Fall Term module `SMM635, Data Visualization.')}
+Similar to the case of array-manipulating routines, a detailed discussion of every NumPy mathematical function exceeds the scope of these notes. However, every function can be accessed using the same procedure; we need a set of values to pass to the function's argument- that is it! Snippet 5.12 shows the procedure to use a NumPy mathematical functions by means of two trigonometric functions, namely, \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt{.cos}}. In line 9, we create a range of values to assign to the variable \texttt{X}; then, in line 11, we create two further arrays assigned to the outcome of \href{https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt{.sin}} and \href{https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt{.cos}} respectively; finally, we use the Matplotlib module to visualize the two functions (if you do not get the Matplotlib code logic, do not worry at all --- you will familiarize yourself with it in the Fall Term module `SMM635, Data Visualization.')}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.12 --- NumPy trigonometric functions in action}
@@ -3500,7 +3492,7 @@ Similar to the case of array-manipulating routines, a detailed discussion of eve
 
 \begin{paracol}{2}
 	\question{\raggedright What are the statistical functions available in NumPy?}
-	\note{NumPy offers essential statistical functions, sufficient to implement an Exploratory Data Analysis/descritive stastistics. Specifically, there are four familieis of statistical routines (see Tables \ref{tab:order_stats}, \ref{tab:average_and_variances}, \ref{tab:correlating}, and \ref{tab:histograms}):
+	\note{NumPy offers essential statistical functions sufficient to implement an Exploratory Data Analysis/descriptive statistics. Specifically, there are four families of statistical routines (see Tables \ref{tab:order_stats}, \ref{tab:average_and_variances}, \ref{tab:correlating}, and \ref{tab:histograms}):
 	
 	\begin{itemize}
 		\item order statistics (e.g., quantiles)
@@ -3513,20 +3505,20 @@ Similar to the case of array-manipulating routines, a detailed discussion of eve
 
 \begin{paracol}{2}
 	\question{\raggedright Can I run multivariate statistical analysis with NumPy}
-	\note{Short answer: no. There are dedicated Python modules to run multivariate analyses, though. For example \href{https://bashtage.github.io/linearmodels/index.html}{linearmodels} and \href{https://www.statsmodels.org/stable/generated/statsmodels.sandbox.regression.gmm.IV2SLS.html?highlight=2sls#statsmodels.sandbox.regression.gmm.IV2SLS}{statsmodels} are two popular modules to carry out econometric models in Python, while \href{https://scikit-learn.org/stable/}{scikit-learn} is the acclaimed module for machine learning in Python.}
+	\note{Short answer: no. There are dedicated Python modules to run multivariate analyses, though. For example \href{https://bashtage.github.io/linearmodels/index.html}{linearmodels} and \href{https://www.statsmodels.org/stable/generated/statsmodels.sandbox.regression.gmm.IV2SLS.html?highlight=2sls#statsmodels.sandbox.regression.gmm.IV2SLS}{statsmodels} are two popular modules to carry out econometric models in Python; \href{https://scikit-learn.org/stable/}{scikit-learn} is the acclaimed module for machine learning in Python.}
 \end{paracol}
 \clearpage
 
 \begin{sidewaystable}[!htbp]
 	\centering
-	\caption{NumPy Stastistical Routines: Order Statistics}
+	\caption{NumPy Statistical Routines: Order Statistics}
 	\label{tab:order_stats}
 	\begin{tabular}{ll}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
                         \texttt{np.ptp(a[, axis, out, keepdims])}&
-                        Range of values (maximum - minimum) along an axis\\
+                        Range of values (maximum-minimum) along an axis\\
                         \texttt{np.percentile(a, q[, axis, out, \ldots])}&
                         Compute the q-th percentile of the data along the specified axis\\
                         \texttt{np.nanpercentile(a, q[, axis, out, \ldots])}&
@@ -3605,11 +3597,11 @@ Similar to the case of array-manipulating routines, a detailed discussion of eve
                         \texttt{np.histogramdd(sample[, bins, range, normed, \ldots])}&
                         Compute the multidimensional histogram of some data\\
                         \texttt{np.bincount(x, /[, weights, minlength])}&
-                        Count number of occurrences of each value in array of non-negative ints\\
+                        Count the number of occurrences of each value in an array of non-negative ints\\
                         \texttt{np.histogram\_bin\_edges(a[, bins, range, weights])}&
                         Function to calculate only the edges of the bins used by the histogram function\\
                         \texttt{np.digitize(x, bins[, right])}&
-                        Return the indices of the bins to which each value in input array belongs\\
+                        Return the indices of the bins to which each value in the input array belongs\\
 	     	\bottomrule \\[-1.8ex]
 	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
 	\end{tabular}
@@ -3617,8 +3609,8 @@ Similar to the case of array-manipulating routines, a detailed discussion of eve
 
 \clearpage
 \begin{paracol}{2}
-	\question{\raggedright So, how do I product a set of summary stats in NumPy?}
-	\note{Snippet 5.13 shows how to create a typical set of summary stats including an array's mean, standard deviation, minimum, maximum, and some percentiles of interest. Mainly, the snippet has three steps. First, we create an array (line 8). Second, we assign a couple of variables to NumPy statistical functions such as \href{https://numpy.org/doc/stable/reference/generated/numpy.mean.html\#numpy.mean}{\texttt{.mean}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.std.html\#numpy.std}{\texttt{.std}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.min.html}{\texttt{.min}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.max.html}{\texttt{np.max}}, and \href{https://numpy.org/doc/stable/reference/generated/numpy.percentile. html\#numpy.percentile}{\texttt{.percentile}} (see lines 11-17). It is worth noticng that \texttt{min} and \texttt{max} are keywords reserved for Python builtin functions. To avoid any name conflict and poterntial sources of confusion, in lines 13 and 14, we use the names \texttt{min\_} and \texttt{max\_}. Finally, we create a table displaying the variables created in the previous step (see lnes 21, 23, and 27).} 
+	\question{\raggedright So, how do I produce a set of summary stats in NumPy?}
+	\note{Snippet 5.13 shows how to create a typical set of summary stats, including an array's mean, standard deviation, minimum, maximum, and some percentiles of interest. Mainly, the snippet has three steps. First, we create an array (line 8). Second, we assign a couple of variables to NumPy statistical functions such as \href{https://numpy.org/doc/stable/reference/generated/numpy.mean.html\#numpy.mean}{\texttt{.mean}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.std.html\#numpy.std}{\texttt{.std}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.min.html}{\texttt{.min}}, \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.max.html}{\texttt{np.max}}, and \href{https://numpy.org/doc/stable/reference/generated/numpy.percentile. html\#numpy.percentile}{\texttt{.percentile}} (see lines 11-17). It is worth noting that \texttt{min} and \texttt{max} are keywords reserved for Python built-in functions. To avoid any name conflict and potential sources of confusion, in lines 13 and 14, we use the names \texttt{min\_} and \texttt{max\_}. Finally, we create a table displaying the variables created in the previous step (see lines 21, 23, and 27).} 
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.12 --- NumPy trigonometric functions in action}
@@ -3659,7 +3651,7 @@ Similar to the case of array-manipulating routines, a detailed discussion of eve
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\rggedright Can I calaculate Pearson's correlaton coefficients in NumPy?}
+	\question{\rggedright Can I calculate Pearson's correlation coefficients in NumPy?}
 	\note{Yes, you can. Snippet 5.13 shows how to do so by using \href{https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html}{\texttt{.corrcoef}}, one of the functions included in Table \ref{tab:correlating}.}
 \end{paracol}
 
@@ -3681,8 +3673,8 @@ array([[1.        , 0.19763628],
 \section{Linear Algebra}
 
 \begin{paracol}{2}
-\question{\raggedright Is NumPy a good choice when it comes doing linear algebra?}
-\note{Yes, it is. NumPy offers a rich set of routines, comparable to Matalab's one.\footnote{Matlab is a numeric computing environment that is particularly popular in academia and industry.} Currently, there are five families of routines concerning thefield linear algebra at large:
+\question{\raggedright Is NumPy a good choice for linear algebra?}
+\note{Yes, it is. NumPy offers a rich set of routines comparable to Matalab's one.\footnote{Matlab is a numeric computing environment that is particularly popular in academia and industry.} Currently, there are five families of routines concerning the field of linear algebra at large:
 
 \begin{itemize}
 	\item products
@@ -3741,7 +3733,7 @@ For an overview of numPy's linear algebra routines, see Tables \ref{tab:matrix_a
                         \texttt{np.linalg.cholesky(a)} &
                         Cholesky decomposition\\
                         \texttt{np.linalg.qr(a[, mode])} & 
-                        Compute the qr factorization of a matrix\\`
+                        Compute the qr factorization of a matrix\\
                         \texttt{np.linalg.svd(a[, full\_matrices, compute\_uv, ...])} & 
                         Singular Value Decomposition\\
 	     	\bottomrule \\[-1.8ex]
@@ -3830,21 +3822,21 @@ For an overview of numPy's linear algebra routines, see Tables \ref{tab:matrix_a
     	x \cdot y = \sum_{i=1}^n x_{i} y_{i} 
     \end{equation}
 
-    where $x$ and $y$ are vectors of length $n$. 
+    Where $x$ and $y$ are vectors of length $n$. 
 
     \begin{equation}
 	\label{eq:inner}
 	\langle x, y\rangle = x^{T} y
     \end{equation}
     
-    where $x^{T}$ is the transpose of $x$. 
+    Where $x^{T}$ is the transpose of $x$. 
     
     \begin{equation}
 	\label{eq:outer}
 	x \otimes y = x y^{T}
     \end{equation}
 
-    where $y^{T}$ is the transpose of $y$.
+    Where $y^{T}$ is the transpose of $y$.
     }
 \end{paracol}
 
@@ -3927,13 +3919,13 @@ array([526.31578947, -52.63157895])
 
 \begin{paracol}{2}
 \question{\raggedrigt How do I carry out a least-square estimation in NumPy?}
-\note{The least-square estimator is a popular choice for estimating the relationship between two variables, one of the most common tasks in statistics and econometrics.\footnote{Students who want to familiarize with the field of econometrics are warmly encouraged to read Angrist, Joshua D., and Jörn-Steffen Pischke. \href{https://www.mostlyharmlesseconometrics.com/}{Mostly harmless econometrics: An empiricist's companion}. Princeton university press, 2009.} Specifcally, the least-square estimator is defined as follows:
+\note{The least-square estimator is a popular choice for estimating the relationship between two variables, one of the most common tasks in statistics and econometrics.\footnote{Students who want to familiarize with the field of econometrics are warmly encouraged to read Angrist, Joshua D., and Jörn-Steffen Pischke. \href{https://www.mostlyharmlesseconometrics.com/}{Mostly harmless econometrics: An empiricist's companion}. Princeton university press, 2009.} Specifically, the least-square estimator is defined as follows:
 
 \begin{equation}
 	\hat{\beta} = (X^T X)^{-1} X^T y
 \end{equation}
 
-where $\hat{\beta}$ is the estimate of the regression coefficients, $X$ is the matrix of regressors, $y$ is the outcome vector, and $X^T X$.
+Where $\hat{\beta}$ is the estimate of the regression coefficients, $X$ is the matrix of regressors, $y$ is the outcome vector, and $X^T X$.
 
 \quad In Snippet 5.16, we create two arrays, \texttt{x} --- playing the role of the regressor --- and \texttt{y} --- which we pretend to be the outcome variable. Then, we arrange the data in an array containing \texttt{x}  and a vector of ones. In this way, we add an intercept to the model, namely a scalar that does not change across the observations in the data (see line 11). Finally, we estimate the two regression coefficients of interest:
 
@@ -3948,7 +3940,7 @@ where $\hat{\beta}$ is the estimate of the regression coefficients, $X$ is the m
 	\item An array with the estimated regression coefficients
 	\item The sums of squared residuals (i.e., the differences between the observed \texttt{y} and the values predicted by the model)
 	\item The rank of the matrix containing the regressors
-	\item Tshe singular values of the matrix containing the regressors
+	\item The singular values of the matrix containing the regressors
 \end{itemize}
 
 \quad Thus, in line 28, we fetch the first element of the returned array, i.e., the regression coefficients.
@@ -4003,7 +3995,7 @@ array([2.15714286, 2.23333333])
 
 \begin{paracol}{2}
 \question{\raggedright Why do I need pseudorandom number generators?}
-\note{Psedudorenadom number generators play a central role in computer simulation, a flexible and powerful tool that can be used in different ways, e.g., to get a better understanding  of real-world data, to appreciate the functioning of complex systems, or for scenario analysis.\footnote{The students who want to familiarize with the role of computer simulation in understanding economc and social formationsmay want to refer to: i) Axelrod, R. The complexity of cooperation, Princeton University Press, 1997; ii) Schelling, T. C. Micromotives and macrobehavior. WW Norton \& Company, 1978; iii) Epstein, J. M. \& Axtell, R. Growing Artificial Societies—Social Science from the Bottom Up. Artif Life 3, 237–242, 1997.}}
+\note{Psedudorenadom number generators play a central role in a computer simulation, a flexible and powerful tool that can be used in different ways, e.g., to get a better understanding of real-world data, to appreciate the functioning of complex systems, or for scenario analysis.\footnote{The students who want to familiarize themselves with the role of computer simulation in understanding economics and social formations may want to refer to i) Axelrod, R. The complexity of cooperation, Princeton University Press, 1997; ii) Schelling, T. C. Micromotives and macrobehavior. WW Norton \& Company, 1978; iii) Epstein, J. M. \& Axtell, R. Growing Artificial Societies—Social Science from the Bottom Up. Artif Life 3, 237–242, 1997.}}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -4048,11 +4040,11 @@ array([2.15714286, 2.23333333])
 			Routine & Synopsis \\
 			\midrule
 			\texttt{shuffle(x[, axis])} &
-                        Modify an array or sequence in-place by shuffling its contents\\
+                        Modify an array or sequence in place by shuffling its contents\\
                         \texttt{permutation(x[, axis])} &
                         Randomly permute a sequence, or return a permuted range\\
                         \texttt{permuted(x[, axis, out])} &
-                        Randomly permute x along axis axis\\
+                        Randomly permute x along axis \\
 	     	\bottomrule \\[-1.8ex]
 	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume \texttt{numpy.random.Generator} has been imported.} \\
 	\end{tabular}
@@ -4120,7 +4112,7 @@ array([2.15714286, 2.23333333])
 \texttt{normal([loc, scale, size])} &
                         Draw random samples from a normal (Gaussian) distribution\\
 \texttt{pareto(a[, size])} &
-                        Draw samples from a Pareto II or Lomax distribution with specified shape\\
+                        Draw samples from a Pareto II or Lomax distribution with a specified shape\\
 \texttt{poisson([lam, size])} &
                         Draw samples from a Poisson distribution\\
 \texttt{power(a[, size])} &
@@ -4157,7 +4149,7 @@ array([2.15714286, 2.23333333])
 
 \begin{paracol}{2}
 	\question{\raggedright Permutation in NumPy}
-	\note{Permuting means changing the order of the elements in an array. Array permutation can be done `in-place' (see Snippet 5.17, line 13), so the original array is modified, or creating a copy (see line 17). Note the outcome of the \texttt{np.random} functions is not reproducible. Put simply, running the same NumPy generator $n$ times might return $n$ different outcomes. To ensure the reproducibility of NumPy code, we must initialize a random generator instance as shown in the lower section of Snippet 5.17. Specifically, in line 23, we assign the object \texttt{rgn} to the outcome of \href{https://numpy.org/doc/stable/reference/random/generator.html#numpy.random.Generator}{\texttt{.default\_rng}}. The parameter passed to the generator, known as `seed,' is an arbitrary number object. If you reproduce the lines 23-25, you will get the outcome I got, displayed in line 26.}
+	\note{Permuting means changing the order of the elements in an array. Array permutations can be done `in-place' (see Snippet 5.17, line 13), so the original array is modified, or a copy is created (see line 17). Note the outcome of the \texttt{np.random} functions are not reproducible. Simply, running the same NumPy generator $n$ times might return $n$ different outcomes. To ensure the reproducibility of NumPy code, we must initialize a random generator instance, as shown in the lower section of Snippet 5.17. Specifically, in line 23, we assign the object \texttt{rgn} to the outcome of \href{https://numpy.org/doc/stable/reference/random/generator.html#numpy.random.Generator}{\texttt{.default\_rng}}. The parameter passed to the generator, known as `seed,' is an arbitrary number object. If you reproduce lines 23-25, you will get the outcome I got, displayed in line 26.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.17 --- \texttt{.shuffle} Vs. \texttt{.permutation}}
@@ -4179,7 +4171,7 @@ array([7, 6, 5, 2, 1, 8, 0, 4, 9, 3])
 >>> A
 array([6, 9, 3, 8, 7, 2, 4, 1, 0, 5])
 
-# shuffling an existing array and ensure reproduciblity
+# shuffling an existing array and ensuring reproducibility
 # --+ the array
 >>> B = [0, 1, 2, 3]
 # --+ initialize a random generator instance
@@ -4199,7 +4191,7 @@ array([6, 9, 3, 8, 7, 2, 4, 1, 0, 5])
 		\item to sample from a theoretical distribution
 	\end{itemize}
 	
-	\quad Lines 9 and 12 included in Snippet 5.18 show how to sample a given number of elements (see parameter \texttt{size}) from an existing array. The code in line 12 differes from the code in line 9 because of the optional parameter \texttt{replace} that is set to \texttt{False} (default is \texttt{True}). In so doing, an element can be sampled once and once only.
+	\quad Lines 9 and 12 included in Snippet 5.18 show how to sample a given number of elements (see parameter \texttt{size}) from an existing array. The code in line 12 differs from the code in line 9 because of the optional parameter \texttt{replace} that is set to \texttt{False} (default is \texttt{True}). In so doing, an element can be sampled once and once only.
 	
 	\quad In lines 22 and 27, we create two arrays of shape \texttt{(10000,)} from the random normal (see \href{https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.normal.html}{\texttt{.random.normal}}) and Poisson (see \href{https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.poisson.html}{\texttt{.random.poisson}}) distribution respectively. In the interesting of redundancy, \href{https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.normal.html}{\texttt{.random.normal}} takes three mandatory arguments: the mean of the distribution (\texttt{loc}), the standard deviation of the distribution (\texttt{scale}), and the size of the array (\texttt{size}); (see \href{https://numpy.org/doc/stable/reference/random/generated/numpy.random.Generator.poisson.html}{\texttt{.random.poisson}}) takes two mandatory arguments: the expected value/variance of the distribution (\texttt{lam}) and the size of the distribution (\texttt{size}). In lines 32 - 50, we use Matplotlib to visualize the distribution of the two arrays (see Figure \ref{fig:normal_and_poisson_distros}) 
 	}
@@ -4225,8 +4217,8 @@ array([4, 2, 6, 3, 1, 0, 5])
 array([4, 3, 2, 3])
 
 # sampling from a theoretical distribution
-# --+ 10,000 items from a the normal distribution with mean 10 and 
-# standard deviation 10
+# --+ 10,000 items from a normal distribution with a mean of 10 and 
+# standard deviation of 10
 >>> N = np.random.norm(loc=10, scale=10, size=10000)
 >>> N
 array([-1.80532765,  1.43318889,  1.14774224, ...,  0.38328412,
@@ -4235,7 +4227,7 @@ array([-1.80532765,  1.43318889,  1.14774224, ...,  0.38328412,
 >>> P = np.random.poisson(lam=10, size=10000)
 >>> P
 array([11,  7,  7, ...,  9,  6,  7])
-# --+ viualize the two arrays
+# --+ visualize the two arrays
 # ----+ Normal distribution
 fig = plt.figure(figsize=(3, 3))
 ax = fig.add_subplot(111)
@@ -4279,7 +4271,7 @@ plt.show()
 	\note{There are several advantages:
 	\begin{itemize}
 		\item Efficiency! Efficiency!! Efficiency!!! IO with NumPy arrays is easy to code and fast to operate
-		\item We do not have to care about carachter encoding aspects
+		\item We do not have to care about character encoding aspects
 		\item It is possible to wrap multiple arrays up in the same file
 	\end{itemize}
 	}
@@ -4299,7 +4291,7 @@ plt.show()
 		\item Multiple array case: lines 35 - 60 illustrate how to write and read an \texttt{.npz} file (accepting multiple arrays)
 	\end{itemize}
 
-	Regarding the `multiple array case,' it is worth noticing that it is possible to write the arrays to a file preserving the variable names asssigned to the arrays (e.g., \texttt{A}, \texttt{B}, \texttt{C}, see line 55). Such an option is particularly helpful when the variable names are meaningful and, perhaps, we expect to load the data back sometime in the future, when we may or may not remember `what is what.'
+	Regarding the `multiple array case,' it is worth noticing that it is possible to write the arrays to a file preserving the variable names assigned to the arrays (e.g., \texttt{A}, \texttt{B}, \texttt{C}, see line 55). Such an option is beneficial when the variable names are meaningful and, perhaps, we expect to load the data back sometime in the future, when we may or may not remember `what is what.'
 	}
 
 	}
@@ -4361,7 +4353,7 @@ array([[ 0,  1,  2,  3,  4,  5,  6,  7,  8,  9],
 # --+ save A and its transpose into a single file in uncompressed format
 >>> np.savez('AAT.npz', A, A.T)
 # --+ load the arrays back
-# ----+ create an NpzFile object
+# ----+ create a NpzFile object
 >>> my_arrays = np.load('AAT.npz')
 # ----+ check the arrays with the file attribute files
 >>> my_arrays.files
@@ -4411,7 +4403,7 @@ At the end of the chapter, you will be able to:
 	\item Create a DataFrame
 	\item Manipulate the individual columns of a DataFrame
 	\item Arrange a DataFrame in the way that best fits your data analysis needs
-	\item Group the cases of DataFrame to perform aggregation and transformation tasks
+	\item Group, the cases of DataFrame, to perform aggregation and transformation tasks
 	\item Work with multiple DataFrames
 	\item Read and write data in a variety of formats
 \end{itemize}
@@ -4422,11 +4414,11 @@ At the end of the chapter, you will be able to:
 
 \begin{paracol}{2}
 	\question{\raggedright What is special about Pandas?}
-	\note{Pandas is the \textit{de facto} standard when it come managing data (in general, not only in Python!). So, what is special about Pandas?	
+	\note{Pandas is the \textit{de facto} standard when it comes to managing data (in general, not only in Python!). So, what is special about Pandas?	
 	
         \begin{itemize}
-        	\item Compared to competing frameworks for data management,\footnote{The set of competing frameworks include Python's \href{https://www.pytables.org}{PyTables} and \href{https://www.dask.org}{Dask}, as well as R's \href{https://rdatatable.gitlab.io/data.table/}{data.tables} and Julia's D\href{https://dataframes.juliadata.org/stable/}{DataFrames}} Pandas offers a unique combination of features, including ease of use, flexibility, and performance
-        	\item Pandas has an edge in the area of time series\footnote{A time series is a set of dapoints arranged in chronological order.} and panel data \footnote{Panel data, widely adopted in economics and finance, are multidimensional datasets wherein same statistical units are observed repeatadel over time.}--- which is not surprising since Pandas was created for quantitative financial analysts and it is still very popular in the field of finance at large\footnote{Students interested in the origins of Pandas may want to read the article on/interview with Wes McKinney \href{https://qz.com/1126615/the-story-of-the-most-important-tool-in-data-science/}{``Meet the man behind the most important tool in data science.''}} 
+        	\item Compared to competing frameworks for data management,\footnote{The set of competing frameworks include Python's \href{https://www.pytables.org}{PyTables} and \href{https://www.dask.org}{Dask}, as well as R's \href{https://rdatatable.gitlab.io/data.table/}{data.tables} and Julia's \href{https://dataframes.juliadata.org/stable/}{DataFrames}.} Pandas offers a unique combination of features, including ease of use, flexibility, and performance
+        	\item Pandas has an edge in the area of time series\footnote{A time series is a set of points arranged in chronological order.} and panel data \footnote{Panel data, widely adopted in economics and finance, are multidimensional datasets wherein the same statistical units are repeatedly observed over time.}--- which is not surprising since Pandas was created for quantitative financial analysts, and it is still prevalent in the field of finance at large\footnote{Students interested in the origins of Pandas may want to read article on/interview with Wes McKinney \href{https://qz.com/1126615/the-story-of-the-most-important-tool-in-data-science/}{``Meet the man behind the most important tool in data science.''}} 
         	\item Pandas builds on NumPy. That means access to a large variety of vectorized functions; that is, users/developers do not have to write boring and inefficient loops to perform operations on data
         	\item The quality of the documentation covering Pandas is off-the-chart. The \href{https://pandas.pydata.org/docs/reference/index.html\#api}{API} is well-documented and well-tested, while the \href{https://pandas.pydata.org/docs/user_guide/index.html}{user guide} has plenty of examples showing Panda's features in action
         \end{itemize}
@@ -4436,17 +4428,17 @@ At the end of the chapter, you will be able to:
 
 \begin{paracol}{2}
 	\question{\raggedright Is Pandas a must-have skill and why?}
-	\note{Yes, it is. The reason is pretty straightforward: in an idea world, data are clean and easy to work with. In a real world, data are messy and difficult to work with. So, it is important to have a tool that can help you work with data. Also, junior analysists are --- oftentimes --- required to carry out a substantial amount of data management. So you may want to get prepared before you land in the industry \ldots}
+	\note{Yes, it is. The reason is straightforward: data are clean and easy to work with in an ideal world. In the real world, data are messy and difficult to work with. So, it is important to have a tool that can help you work with data. Also, junior analysts are --- often --- required to carry out a substantial amount of data management. So you may want to get prepared before you land in the industry \ldots}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright Got it: Pandas is a must-have skill. But what can I achieve with it?}
-	\note{Data scientists and quantitative analysts use Pandas to carry out tasks falling in the following families:
+	\note{Data scientists and quantitative analysts use Pandas to carry out tasks falling into the following families:
 
 	\begin{itemize}
-		\item \textit{Data preparation}, consisting of maximizing the quality of the data at hand; that is, getting information offering the most accurate representation of the business, economic, or financial process of interest. An example is cleaning the outcome of web-crawling project targeting an online community of, say, beer enthusiasts
-		\item \textit{Data augmentation}, consisting of expanding on the raw information to create the variables that best capture the process we want to analyze. An example is creating a measure of customer satisifaction based on the data acquired using web-crawling 
-		\item \textit{Data transformation}, consisting of arranging the data in the way that best supports a data visualization or analysis task. An example is converting a long data table, whereing observations are nested in one or multiple grouping variable, to a wide structure (hold your horses, we will see a concrete example later on in thi chapter)
+		\item \textit{Data preparation}, consisting of maximizing the quality of the data at hand; that is, getting information offering the most accurate representation of the business, economic, or financial process of interest. An example is cleaning the outcome of a web-crawling project targeting an online community of, say, beer enthusiasts
+		\item \textit{Data augmentation}, consisting of expanding on the raw information to create the variables that best capture the process we want to analyze. An example is creating a measure of customer satisfaction based on the data acquired using web-crawling 
+		\item \textit{Data transformation}, consisting of arranging the data in the way that best supports a data visualization or analysis task. An example is converting a long data table, wherein observations are nested in one or multiple grouping variables, to a wide structure (hold your horses, we will see a concrete example later on in this chapter)
 	\end{itemize}
 	
 	}
@@ -4463,7 +4455,7 @@ At the end of the chapter, you will be able to:
 		\textit{``two-dimensional, size-mutable, potentially heterogeneous tabular data''}
 	\end{quote}
 
-	Put simply (i.e., from a user standpoint), a DataFrame is a tabular data structure with rows and columns. Tipically, the rows are the cases (e.g., individuals, groups, firms, countries, etc), whereas the columns are the so-called fields, variables, or features (e.g., wage, job satistisfaction, stock-market value, etc.).\footnote{In the field of information systems and computer science, columns are oftentimes called fields; statisticians, economists, and analysts in general use the term variable to refer to a column; the term feature is common in the Machine Learning field.} Figure \ref{fig:pandas_dataframe} shows a stylized representation of a case-by-variable data strucuture, very common in Pandas.}
+	Put simply (i.e., from a user standpoint), a DataFrame is a tabular data structure with rows and columns. Typically, the rows are the cases (e.g., individuals, groups, firms, countries, etc.), and the columns are the so-called fields, variables, or features (e.g., wage, job satisfaction, stock-market value, etc.).\footnote{In field of information systems and computer science, columns are often called fields; statisticians, economists, and analysts in general use the term variable to refer to a column; the term feature is common in the Machine Learning field.} Figure \ref{fig:pandas_dataframe} shows a stylized representation of a case-by-variable data structure, very common in Pandas.}
 \end{paracol}
 
 \begin{figure}[!htbp]
@@ -4488,14 +4480,14 @@ At the end of the chapter, you will be able to:
 	\note{Mainly, there are two alternatives:
 	
 	\begin{itemize}
-	\item Option 1: passing iterables loaded onto the current Python session\footnote{All throughout the book, I refer to Python sessions without loss of generality. The points I make are valid also for IPython or Jupyter sessions.} to the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html}{\textttt{.DataFrame}} class
+	\item Option 1: passing tables loaded onto the current Python session\footnote{throughout the book, I refer to Python sessions without loss of generality. The points I make are valid also for IPython or Jupyter sessions.} to the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html}{\textttt{.DataFrame}} class
 	\item Option 2: sourcing external data, available in a local file or on a server,  
 	\end{itemize}
 	}
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright Passing iterables to the DataFrame class}
+	\question{\raggedright How do I pass an iterable to the DataFrame class?}
 	\note{Table \ref{tab:read_methods} shows three functions that can be used to create a DataFrame from existing iterables, namely:
 	
 	\begin{itemize}
@@ -4524,11 +4516,11 @@ At the end of the chapter, you will be able to:
 \clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright \texttt{.DataFrame.from\_dict} in action}
+	\question{\raggedright \texttt{Can you show me .DataFrame.from\_dict} in action?}
 	\note{
-		Snippet 6.1 shows how to create a DataFrame from one or more iterables that are loaded in the current Python session. In line 5, we create a dictionary whose keys are associated with variables --- i.e., the columns of the DataFrame. In line 10, we assign the variable \texttt{df} to the outoput of \texttt{.from\_dict} with the dictionary \texttt{my\_data} as input. In line 11, \texttt{df} is printed to the screen. You may have noticed that the mathematical progression reported on the left-right of the tabular data: that is the so-called Pandas `index,' a concept that we will see in Section \ref{sec:df_attrs}.
+		Snippet 6.1 shows how to create a DataFrame from one or more iterables loaded in the current Python session. In line 5, we create a dictionary whose keys are associated with variables --- i.e., the columns of the DataFrame. In line 10, we assign the variable \texttt{df} to the output of \texttt{.from\_dict} with the dictionary \texttt{my\_data} as input. In line 11, \texttt{df} is printed to the screen. You may have noticed that the mathematical progression reported on the left-right of the tabular data is the so-called Pandas `index,' a concept we will see in Section \ref{sec:df_attrs}.
 	
-		\quad By default, \texttt{.from\_dict} parses the values of the input dictionary as columns. However, it is also possible to parse a dictionary's values as cases. That is what we achieve in line 30, where we populate the discretionary parameter \texttt{orient} with the value \texttt{index}, meaning Python must consider the dictionary keys as cases rather than columns. In line 38, we make a further adjustement by passing a list with the column names to the discretionary parameter \texttt{columns}. It is not necessary to do that, but it helps to interpret the columnsn --- which, when we set \texttt{orient="index"}, are named with a mathematical progression by default.
+		\quad By default, \texttt{.from\_dict} parses the values of the input dictionary as columns. However, it is also possible to parse a dictionary's values as cases. We achieve that in line 30, where we populate the discretionary parameter \texttt{orient} with the value \texttt{index}, meaning Python must consider the dictionary keys as cases rather than columns. In line 38, we make a further adjustment by passing a list with the column names to the discretionary parameter \texttt{columns}. It is not necessary to do that, but it helps to interpret the columns --- which, when we set \texttt{orient="index"}, are named with a mathematical progression by default.
 	}
 \end{paracol}
 
@@ -4582,8 +4574,8 @@ case_2  Goofy      dog
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright Creating a DataFrame from `external' data}
-	\note{As we will see in Section \ref{sec:pandas_io}, there are plenty of Pandas IO utilities that target alrternative file formats/extensions (e.g., \texttt{.json, .csv, .xlsx}). In this section, I focus on one specific case, namely, the creation of a DataFrame from a CSV file. The first part of the snippet, up until line 27, create fake data and write them to a local .csv file. Creating a DataFrame from a CSV file is a simple matter of passing the name of the file (or a file path) to the \href{https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html?highlight=read_csv#pandas.read_csv}{\texttt{.read\_csv}}. Such a function has a substantial number of discretionary parameters --- I warmly encourage you to go through the documentation and familiarize with the various options.}
+	\question{\raggedright How do I create a DataFrame from `external' data?}
+	\note{As we will see in Section \ref{sec:pandas_io}, there are plenty of Pandas IO utilities that target alternative file formats/extensions (e.g., \texttt{.json, .csv, .xlsx}). In this section, I focus on one specific case: creating a DataFrame from a CSV file. In the first part of the snippet, up until line 27, create fake data and write them to a local .csv file. Creating a DataFrame from a CSV file is a simple matter of passing the name of the file (or a file path) to the \href{https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html?highlight=read_csv#pandas.read_csv}{\texttt{.read\_csv}}. Such a function has a substantial number of discretionary parameters --- I warmly encourage you to go through the documentation and familiarize with the various options.}
 \end{paracol}
 
 \begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.2 --- creating a DataFrame from a CSV file}
@@ -4596,7 +4588,7 @@ case_2  Goofy      dog
 # --+ column values
 >>> x = [0, 1, 2]
 >>> y = ["A", "B", "C"]
-# --+ write teh data to a file
+# --+ write the data to a file
 >>> with open("my_data.csv", "w") as f:
         # write the column names first
         f.write(",".join(columns) + "\n")
@@ -4614,13 +4606,12 @@ f.close()
 1  1  B
 2  2  C
 \end{pythoncode}
-\clearpage
 
 \section{Checking a DataFrame's Attributes}
 \label{sec:df_attrs}
 \begin{paracol}{2}
 	\question{\raggedright What are the key attributes of a DataFrame?}
-	\note{Pandas DataFrame can be characterized along a number of attributes, such as:
+	\note{Pandas DataFrame can be characterized along several attributes, such as:
 	\begin{itemize}
 		\item shape 
 		\item size 
@@ -4634,7 +4625,6 @@ f.close()
 	\quad The bottom section of Snippet 6.3 shows how to access the individual attributes of a DataFrame using \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.shape.html}{\texttt{.shape}}, \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.size.html}{\texttt{.size}}, \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.ndim.html}{\texttt{.ndim}}, and \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.memory_usage.html}{\texttt{.memony\_usage}}.}
 	}
 \end{paracol}
-\clearpage
 
 \begin{pythoncode}[linenos=true]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.3 --- accessing a DataFrame's attributes with \texttt{.info}}
 # import pandas with the socially accepted alias 'pd'
@@ -4681,7 +4671,6 @@ gdp_pc      24
 dtype: int64
 
 \end{pythoncode}
-\clearpage
 
 \section{The Anatomy of a DataFrame}
 
@@ -4690,25 +4679,26 @@ dtype: int64
 	\note{Mainly, DataFrames have two components:
 	
 	\begin{itemize}
-		\item an \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.index.html}{\texttt{index}}
-		\item a set of columns, each of which is a \href{https://pandas.pydata.org/docs/reference/series.html}{\texttt{Pandas Series}}
+		\item An \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.index.html}{\texttt{index}}
+		\item A set of columns, each of which is a \href{https://pandas.pydata.org/docs/reference/series.html}{\texttt{Pandas Series}}
 	\end{itemize}
 	}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright What is the index of a DataFrame?}
-	\note{Put simple, it is a Python object that is associated with a case or cases in a DataFrame. The index is the primary key for a DataFrame.}
+	\note{Put simple, it is a Python object associated with a case or cases in a DataFrame. The index is the primary key for a DataFrame.}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright How does a DataFrame index matter?}
 	\note{The index is the primary key for a DataFrame and makes data querying easier and more efficient (we will see this in Section \ref{sec:querying_df}.}
 \end{paracol}
+\clearpage
 
 \begin{paracol}{2}
 	\question{\raggedright Is it mandatory to pass an index when I create a DataFrame?}
-	\note{In general, it is not necessary. When we do not pass an index, Pandas will create a mathematical progression and assign it to the index for us (see for example Snippet 6.3).}
+	\note{In general, it is not necessary. When we do not pass an index, Pandas will create a mathematical progression and assign it to the index (see Snippet 6.3).}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -4718,7 +4708,7 @@ dtype: int64
 
 \begin{paracol}{2}
 	\question{\raggedright Can I edit a DataFrame index?}
-	\note{Yes, you can. Snippet 6.4 illustrates how to assign a DataFrame's to an iterable object (line 24). To change the index, it is also possible to use the function \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.set_index.html}{\texttt{.set\_index}} (see Section \ref{sec:manipulating_df_columns}.)}
+	\note{Yes, you can. Snippet 6.4 illustrates assigning a DataFrame to an iterable object (line 24). To change the index, it is also possible to use the function \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.set_index.html}{\texttt{.set\_index}} (see Section \ref{sec:manipulating_df_columns}.)}
 \end{paracol}
 
 \begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.4 --- accessing and amending a DataFrame's index}
@@ -4753,9 +4743,10 @@ case_2  s2   8
 case_3  s3   0
 
 \end{pythoncode}
+\clearpage
 
 \begin{paracol}{2}
-	\question{\raggedright What is a Pandas Series}
+	\question{\raggedright What is a Pandas Series?}
 	\note{A \href{https://pandas.pydata.org/docs/reference/series.html}{\texttt{Pandas Series}} is a one-dimensional object. The columns of a DataFrame are a collection of Series objects.}
 \end{paracol}
 
@@ -4805,39 +4796,38 @@ case_2    s3
 
 \begin{paracol}{2}
 	\question{\raggedright What is data querying?}
-	\note{Data queries can take two non-mututally exclusive forms. One may want to:
+	\note{Data queries can take two non-mutually exclusive forms. One may want to:
 	
 	\begin{itemize}
-		\item select a subset of cases 
-		\item select a subset of columns
+		\item Select a subset of cases 
+		\item Select a subset of columns
 	\end{itemize}
 	}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright How do I query data in Pandas?}
-	\note{Pandas DataFrame objects have a property called \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} that allows to access a group of rows and columns by label(s) or a boolean array. To use \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}}, one has to pass two inputs among brackets:
+	\note{Pandas DataFrame objects have a property called \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} that allows accessing a group of rows and columns by label(s) or a boolean array. To use \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}}, one has to pass two inputs among brackets:
 	
 	\begin{itemize}
-		\item the set of cases to select (the left-hand side element among brackets)
-		\item the set of columns to select (the right-hand side element among brackets)
+		\item The set of cases to select (the left-hand side element among brackets)
+		\item The set of columns to select (the right-hand side element among brackets)
 	\end{itemize}
 
 	\quad Snippet 6.6 shows a couple of use cases for the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} property:
 
 	\begin{itemize}
-		\item line 33 selects the first two cases of the DataFrame
-		\item line 39 selects the column ``price'' first two rows of the DataFrame
-		\item line 46 selects  the columns ``price'' and ``color'' for all cases included in the DataFrame
-		\item line 52 selects the cases for which the column ``price'' is less than or equal to 8.00
-		\item line 59 selects the cases for which the column ``price'' is less than 9.00 \textbf{and} the column ``color'' is equal to ``green''
-		\item line 65 expands on line 59 by selecting the column "price" when "price" is less than 9.00 \textbf{and} ``color'' is equal to ``green''
+		\item Line 33 selects the first two cases of the DataFrame
+		\item Line 39 selects the column ``price'' first two rows of the DataFrame
+		\item Line 46 selects  the columns ``price'' and ``color'' for all cases included in the DataFrame
+		\item Line 52 selects the cases for which the column ``price'' is less than or equal to 8.00
+		\item Line 59 selects the cases for which the column ``price'' is less than 9.00 \textbf{and} the column ``color'' is equal to ``green''
+		\item Line 65 expands on line 59 by selecting the column "price" when "price" is less than 9.00 \textbf{and} ``color'' is equal to ``green''
 	\end{itemize}
 
 	\quad Please refer to sections \ref{sec:statements_syntax} and \ref{sec§:control_flow} to consolidate your knowledge on the Python syntax of statements and control flow.
 	}
 \end{paracol}
-\clearpage
 
 \begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.6 --- querying data in Pandas with \texttt{.loc}}
 # import pandas with the socially accepted alias 'pd'
@@ -4854,7 +4844,7 @@ case_2    s3
 
 # data preview
 >>> df
-  product  price colror
+  product  price  color
 0       a   9.87  green
 1       b   8.63  green
 2       c   6.45   blue
@@ -4877,7 +4867,7 @@ memory usage: 200.0+ bytes
     0       a   9.87  green
     1       b   8.63  green
 
-# select the column "price" for the first the two cases using a boolean array
+# select the column "price" for the first two cases using a boolean array
 >>> df.loc[0:2, "price"]
 0    9.87
 1    8.63
@@ -4896,7 +4886,7 @@ Name: price, dtype: float64
 0       a   9.87  green
 1       b   8.63  green
 
-# select all cases for which the column "price" is less than to 9.00 and 
+# select all cases for which the column "price" is less than 9.00 and 
 # "color" is equal to "green"
 >>> df.loc[(df["price"] < 9.00) & (df["color"] == "green" ), ]
   product  price  color
@@ -4908,7 +4898,6 @@ Name: price, dtype: float64
 1    8.63
 Name: price, dtype: float64
 \end{pythoncode}
-\clearpage
 
 \section{Manipulating DataFrame Columns}
 \label{sec:manipulating_df_columns}
@@ -4917,10 +4906,10 @@ Name: price, dtype: float64
 	\question{\raggedright What are the main operations on a DataFrame's columns?}
 	\note{Mainly, one may want to:
 	\begin{itemize}
-		\item rename a column
-		\item drop a column
-		\item create a new column
-		\item amend an existing column's values
+		\item Rename a column
+		\item Drop a column
+		\item Create a new column
+		\item Amend an existing column's values
 	\end{itemize}
 	}
 \end{paracol}
@@ -4929,12 +4918,11 @@ Name: price, dtype: float64
 	\question{\raggedright How do I rename or drop a column in Pandas?}
 	\note{As shown in Snippet 6.7, Pandas has two methods, \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.rename.html?highlight=rename#pandas.DataFrame.rename}{\texttt{.rename()}} and \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html?highlight=drop#pandas.DataFrame.drop}{\texttt{.drop()}}, to rename and drop columns respectively.
 
-	\quad Line 35 shows how to rename a column. The first argumet is a dictionary mapping the new name onto the old name (the dictionary's key). The second argument is a boolean flag that indicates whether to make the change effective (if ``True'') or not (if ``False'').
+	\quad Line 35 shows how to rename a column. A first argument is a dictionary mapping the new name onto the old name (the dictionary's key). The second argument is a boolean flag that indicates whether to make the change effective (if ``True'') or not (if ``False'').
 
 	\quad Lines 45 and 51 show how to drop a column. The first argument is an array with the name(s) of the column(s) to delete. The second argument is a boolean flag that indicates whether to make the change effective (if ``True'') or not (if ``False'').
 	}	
 \end{paracol}
-\clearpage
 
 \begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.7 --- renaming and dropping DataFrame columns}
 # import pandas with the socially accepted alias 'pd'
@@ -5000,9 +4988,9 @@ memory usage: 224.0+ bytes
 	\question{\raggedright How do I create a new column or amend an existing Pandas column?}
 	\note{The \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} method is the most appropriate way to create a new column or alter an existing column's values. Snippet 6.8 illustrates a couple of common tasks. In line 15, we assign a list of string objects to a new column called \texttt{manufacturer} for all cases included in \texttt{df}. 
 	
-	\quad In lines 24/26, 41, and 58 we amend the valued of an existing column. First, we manipulate the strings included under RAM so to replace the substring \texttt{"$\backslash$sGB"} with an empty string (lines 24/26). Second, we change the type of the column from \texttt{string} to \texttt{integer} using the Pandas' \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.astype.html?highlight=astype#pandas.DataFrame.astype}{\texttt{.astype()}} method (line 41). Then, we take the log of \texttt{ram} and assign it to the new column \texttt{log\_ram} (line 58). 
+	\quad In lines 24/26, 41, and 58 we amend the value of an existing column. First, we manipulate the strings included under RAM to replace the substring \texttt{"$\backslash$sGB"} with an empty string (lines 24/26). Second, we change the type of the column from \texttt{string} to \texttt{integer} using the Pandas' \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.astype.html?highlight=astype#pandas.DataFrame.astype}{\texttt{.astype()}} method (line 41). Then, we take the log of \texttt{ram} and assign it to the new column \texttt{log\_ram} (line 58). 
 	
-	\quad In line 85, we use \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} to create a new variable for a subset of cases only. Soecifically, we populate the column \texttt{gpu} provided the value of \texttt{laptop} is ``Thinkpad T14.''
+	\quad In line 85, we use \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html?highlight=loc#pandas.DataFrame.loc}{\texttt{.loc}} to create a new variable for a subset of cases only. Specifically, we populate the column \texttt{gpu} provided the value of \texttt{laptop} is ``Thinkpad T14.''
 	}
 \end{paracol}
 
@@ -5031,7 +5019,7 @@ memory usage: 224.0+ bytes
 # transform the column "ram" from string to number type 
 # --+ step 1: get rid of non-number characters using a regular expression 
 >>> df.loc[:, "ram"] = df.loc[:, "ram"].str.replace(r"[^0-9]", "")
-# --+ alterntive way to carry out step 1: using Pandas string methods 
+# --+ alternative way to carry out step 1: using Pandas string methods 
 >>> df.loc[:, "ram"] = df["ram"].str.replace(r"\sGB", "")
 # --+ step 2: convert the string to number type
 # ----+ check the type of "ram"
@@ -5121,7 +5109,7 @@ memory usage: 296.0+ bytes
 
 \begin{paracol}{2}
 	\question{\raggedright What is a missing value?}
-	\note{A missing value is a datapoint for which no information is available in the dataset. Mossong values can arise for many reasons. The most popular reasons are:
+	\note{A missing value is a datapoint for which no information is available in the dataset. Missing values can arise for many reasons. The most popular reasons are:
 	
 	\begin{itemize}
 		\item the case does not present a value for the variable. For example, it is not possible to record the stock market of a company before the IPO
@@ -5130,13 +5118,13 @@ memory usage: 296.0+ bytes
 	\end{itemize}
 	}
 \end{paracol}
-\clearpage 
 
 \begin{paracol}{2}
 	\question{\raggedright How does Pandas represent missing values?}
 	\note{Pandas denote missing values using NumPy's floating representation \href{https://numpy.org/doc/stable/reference/constants.html?highlight=nan#numpy.NaN}{\texttt{numpy.NaN}}
 	}
 \end{paracol}
+\clearpage
 
 \begin{paracol}{2}
 	\question{\raggedright How do I handle missing values in Pandas?}
@@ -5148,7 +5136,7 @@ memory usage: 296.0+ bytes
 		\item replacing missing values with the estimate of a statical model
 	\end{itemize}
 	
-	\quad The latter approach is the most sophisticaed one and falls beyond the remit of these notes. In Snippet 6.9, I show how to implement the first three approaches in Pandas. Line 34 uses the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html?highlight=dropna}{\texttt{.dropna()}} method to delete all cases presenting at least one missing value. Line 41 draws on the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.fillna.html?highlight=fillna#pandas.DataFrame.fillna}{\texttt{.fillna()}} method to replace the missing values with a fixed value (e.g., a value that the analyst considers `plausible' based on her/his contextual knowledge). Like line 41, line 50 relies the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.fillna.html?highlight=fillna#pandas.DataFrame.fillna}{\texttt{.fillna()}} method. However, it does not replace the missing values with a fixed value. Instead, it uses the mean value of \texttt{price}.
+	\quad The latter approach is the most sophisticated one and falls beyond the remit of these notes. In Snippet 6.9, I show how to implement the first three approaches in Pandas. Line 34 uses the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dropna.html?highlight=dropna}{\texttt{.dropna()}} method to delete all cases presenting at least one missing value. Line 41 draws on the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.fillna.html?highlight=fillna#pandas.DataFrame.fillna}{\texttt{.fillna()}} method to replace the missing values with a fixed value (e.g., a value that the analyst considers `plausible' based on her/his contextual knowledge). Like line 41, line 50 relies the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.fillna.html?highlight=fillna#pandas.DataFrame.fillna}{\texttt{.fillna()}} method. However, it does not replace the missing values with a fixed value. Instead, it uses the mean value of \texttt{price}.
 	} 
 \end{paracol}
 
@@ -5215,7 +5203,7 @@ memory usage: 208.0+ bytes
 
 \begin{paracol}{2}
 	\question{\raggedright What are the data types admitted in a Pandas object?}
-	\note{Mainly, Pandas uses NumPy arrays as the concrete objects contained with a Index, Series, or DataFrame. To recall the various NumPy dtypes, please refer to Sections \ref{sec:np_array}.}
+	\note{Mainly, Pandas uses NumPy arrays as the concrete objects contained with an Index, Series, or DataFrame. To recall the various NumPy dtypes, please refer to Sections \ref{sec:np_array}.}
 \end{paracol}
 
 \begin{paracol}{2}
@@ -5259,7 +5247,7 @@ memory usage: 208.0+ bytes
 
 \begin{paracol}{2}
 	\question{\raggedright How many types of `time' data are supported in Pandas?}
-	\note{Pandas has three kind of objects that can be used to strore and represent information on time-related quantities:
+	\note{Pandas has three kinds of objects that can be used to store and represent information on time-related quantities:
 
 	\begin{itemize}
 		\item \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\textt{.Timestamp}}, the Pandas replacement for \href{https://docs.python.org/3/library/datetime.html}{Python's \texttt{Datatime}} object, represent a specific point in time 
@@ -5272,8 +5260,8 @@ memory usage: 208.0+ bytes
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright \texttt{.Timestamp} and \texttt{.Timedelta} objects in action}
-	\note{Snippet 6.11 illustrates how to initialize and use \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\texttt{.Timestamp}} and \href{https://pandas.pydata.org/docs/reference/api/pandas.Timedelta.html}{\texttt{.Timedelta}} objects. The output of line 30 shows that the column \texttt{timestamp} has been parsed as a string. At this point, we cannot performn any operation on it (e.g., getting the time elapsed since an event). Hence, in line 43 we pass the values under the column \texttt{timestamp} to \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\texttt{.Timestamp}}. To apply the transformation column-wise, we draw on the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html}{\texttt{.apply()}} method, which takes a function as an argument. Specifically, we build our function using a \href{https://docs.python.org/3/tutorial/controlflow.html}{\texttt{lambda expression}} getting the \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\texttt{.Timestamp}} of an element \texttt{s} (that is, the individual values included in \texttt{timestamp}). The output of line 45 indicates that, after the transformation, the column \texttt{timestamp} contains \href{https://docs.python.org/3/library/datetime.html}{time quantities}.
+	\question{\raggedright Can you give me an example of \texttt{.Timestamp} and \texttt{.Timedelta} objects?}
+	\note{Snippet 6.11 illustrates how to initialize and use \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\texttt{.Timestamp}} and \href{https://pandas.pydata.org/docs/reference/api/pandas.Timedelta.html}{\texttt{.Timedelta}} objects. The output of line 30 shows that the column \texttt{timestamp} has been parsed as a string. At this point, we cannot perform any operation on it (e.g., getting the time elapsed since an event). Hence, in line 43 we pass the values under the column \texttt{timestamp} to \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\texttt{.Timestamp}}. To apply the transformation column-wise, we draw on the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html}{\texttt{.apply()}} method, which takes a function as an argument. Specifically, we build our function using a \href{https://docs.python.org/3/tutorial/controlflow.html}{\texttt{lambda expression}} getting the \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\texttt{.Timestamp}} of an element \texttt{s} (that is, the individual values included in \texttt{timestamp}). The output of line 45 indicates that, after the transformation, the column \texttt{timestamp} contains \href{https://docs.python.org/3/library/datetime.html}{time quantities}.
 	
 	\quad The remainder of the snippet illustrates how to extract the individual attributes of a \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\texttt{.Timestamp}} object (see lines 58 - 68) and create a \href{https://pandas.pydata.org/docs/reference/api/pandas.Timedelta.html}{\texttt{.Timedelta}} object (see line 88).
 	}
@@ -5307,7 +5295,7 @@ memory usage: 208.0+ bytes
              timestamp                    product reviewer  rating
 0  2017-10-08 12:03:05          Darth Vader plush  Sheldon       1
 1  2020-09-07 08:09:45  Obi-Wan Kenobi lightsaber  Sheldon       2
-2  2021-04-11 10:12:13               Yoda pijamas  Leonard       5
+2  2021-04-11 10:12:13               Yoda pajamas  Leonard       5
 
 # get basic info
 >>> df.info()
@@ -5322,7 +5310,7 @@ Data columns (total 4 columns):
 dtypes: int64(1), object(3)
 memory usage: 224.0+ bytes
 
-# convert 'timestamp' from string to Timestemp type
+# convert 'timestamp' from string to Timestamp type
 >>> df.loc[:, "timestamp"] = df["timestamp"].apply(lambda s: pd.Timestamp(s))
 # info shows that timestamp has datetime dtype  
 >>> df.info()
@@ -5402,7 +5390,7 @@ memory usage: 416.0+ bytes
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\texttt{.Period} objects in action}
+	\question{Can you give me an example of a \texttt{.Period} object?}
 	\note{\href{https://pandas.pydata.org/docs/reference/api/pandas.Period.html}{\texttt{.Period}} takes a string as input and returns an object of class \texttt{Period}, which has many attributes to establish the unit of time a timestamp falls on. For example, it is possible to assess a period's associated `day' (see Snippet 6.12, line 12), `day of the week' (line 16), `month' (line 20), `quarter' (line 24), or `week of the year' (line 28).
 	}
 \end{paracol}
@@ -5411,13 +5399,13 @@ memory usage: 416.0+ bytes
 # import pandas with the socially acceptable alias pd
 >>> import pandas as pd
 
-# a timestamp as string 
+# a timestamp as a string 
 >>> s = "2011-11-01 23:17:01"
 
 # get a period object 
 >>> p = pd.Period(s, freq="s")
 
-# extract sampe information from p 
+# extract sample information from p 
 # --+ calendar day
 >>> p.day
 1
@@ -5434,35 +5422,34 @@ memory usage: 416.0+ bytes
 >>> p.quarter
 4
 
-# --+ week of the year (ranginging from 0 to 59)
+# --+ week of the year (ranging from 0 to 59)
 >>> p.weekofyear
 4
 
 \end{pythoncode}
-\clearpage
 
 \section{Shaping and Reshaping DataFrames}
 \label{sec:wide_long}
 
 \begin{paracol}{2}
 	\question{
-		\raggedright Panel data
+		\raggedright What is `panel data'?
 	}
 	\note{
-		Oftentimes, we work with panel data, wherein the same statistical unit (e.g., an employer, a company, an administrative city) is observed multiple times. An example is a security's price taken at different times of the day.
+		Often, we work with panel data, wherein the same statistical unit (e.g., an employer, a company, an administrative city) is observed multiple times. An example is a security's price taken at different times of the day.
 	}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{
-		\raggedright Representing panel data: wide Vs. long data structures
+		\raggedright What are the alternative ways for representing panel data?
 	}
 	\note{
-		Mainly, there are two approaches to repreent a panel dataset:
+		Mainly, there are two approaches to representing a panel dataset:
 
 		\begin{itemize}
-			\item the \textit{wide} data structure consists of creating one row per unit and as many columns as measurement occasions. Figure \ref{fig:wide_dataframe} provides a pictioral representation of the wide data structure
-			\item the \textit{long} data structure consists of creating pairs of measurement occasions and values that are nested within the same unit. In other words, the same unit is repeated across as many rows as measurement occasions. Figure \ref{fig:long_dataframe} provides a pictioral representation of the long data structure
+			\item The \textit{wide} data structure consists of creating one row per unit and as many columns as measurement occasions. Figure \ref{fig:wide_dataframe} provides a pictorial representation of the wide data structure
+			\item The \textit{long} data structure consists of creating pairs of measurement occasions and values nested within the same unit. In other words, the same unit is repeated across as many rows as measurement occasions. Figure \ref{fig:long_dataframe} provides a pictorial representation of the long data structure
 		\end{itemize}
 	}
 \end{paracol}
@@ -5483,6 +5470,7 @@ memory usage: 416.0+ bytes
 	\caption{A stylized representation of a `wide' data structure}
 	\label{fig:wide_dataframe}
 \end{figure}
+\clearpage
 
 \begin{paracol}{2}
 	\question{
@@ -5497,7 +5485,7 @@ memory usage: 416.0+ bytes
 			\end{itemize}
 			\item Cons:
 			\begin{itemize}
-				\item the larger the number of measurement of occasions, the less readable the file, the larger the numeber of columns ($\rightarrow$ the more difficult to work with the data)
+				\item the larger the number of measurement of occasions, the less readable the file, the larger the number of columns ($\rightarrow$ the more difficult to work with the data)
 				\item data manipulation activities must carry out column-by-column
 			\end{itemize}
 		\end{itemize}
@@ -5519,7 +5507,7 @@ memory usage: 416.0+ bytes
 			\item Cons:
 			\begin{itemize}
 				\item it is harder to inspect visually the data
-				\item this data strucuture is less familiar to people without information systems or programming background
+				\item this data structure is less familiar to people without information systems or programming background
 			\end{itemize}
 		\end{itemize}
 		}
@@ -5568,24 +5556,24 @@ memory usage: 416.0+ bytes
 
 \begin{paracol}{2}
 	\question{\raggedright How can I move from a wide to a long data structure or the other way around?}
-	\note{To get a long data stucture, one may want to use the Pandas function \href{https://pandas.pydata.org/docs/reference/api/pandas.melt.html?highlight=melt#pandas.melt}{\texttt{pd.melt()}}, and, to achieve a wide structure, the Pandas funtion \href{https://pandas.pydata.org/docs/reference/api/pandas.pivot.html?highlight=pivot#pandas.pivot}{\texttt{pd.pivot()}}.
+	\note{To get a long data structure, one may want to use the Pandas function \href{https://pandas.pydata.org/docs/reference/api/pandas.melt.html?highlight=melt#pandas.melt}{\texttt{pd.melt()}}, and, to achieve a wide structure, the Pandas function \href{https://pandas.pydata.org/docs/reference/api/pandas.pivot.html?highlight=pivot#pandas.pivot}{\texttt{pd.pivot()}}.
 
 	\quad Per Snippet 6.13, typically we pass four inputs to \href{https://pandas.pydata.org/docs/reference/api/pandas.melt.html?highlight=melt#pandas.melt}{\texttt{pd.melt()}} (see line 16):
 	
 	\begin{itemize}
 		\item  \texttt{frame}: the source DataFrame to re-arrange 
 		\item  \texttt{id\_vars}: the column(s) that will be used to identify the cases
-		\item  \texttt{var\_name}: the name of the target DataFrame column that will contain the information regarding the measurement occasions (i.e. the time)
-		\item  \texttt{value\_name}: the name of the source DataFrame column contaning the values to re-arrange
+		\item  \texttt{var\_name}: the name of the target DataFrame column that will contain the information regarding the measurement occasions (i.e., the time)
+		\item  \texttt{value\_name}: the name of the source DataFrame column containing the values to re-arrange
 	\end{itemize}
 
-	\quad Snippet 6.13 shows also how to pass from a long to a wide data structure. In line 47, we pass the following inputs to \href{https://pandas.pydata.org/docs/reference/api/pandas.pivot.html?highlight=pivot#pandas.pivot}{\texttt{pd.pivot()}}:
+	\quad Snippet 6.13 also passes from a long to a wide data structure. In line 47, we pass the following inputs to \href{https://pandas.pydata.org/docs/reference/api/pandas.pivot.html?highlight=pivot#pandas.pivot}{\texttt{pd.pivot()}}:
 	
 	\begin{itemize}
 		\item \texttt{data}: the source DataFrame to re-arrange
 		\item \texttt{index}: the column(s) that will be used to identify the cases
 		\item \texttt{columns}: the name of the source DataFrame column(s) whose categories will be used to create the columns of the target DataFrame
-		\item \texttt{values}: the name of the source DataFrame column contaning the values to re-arrange
+		\item \texttt{values}: the name of the source DataFrame column containing the values to re-arrange
 	\end{itemize}
 	}
 \end{paracol}
@@ -5663,22 +5651,22 @@ c         0  5  9
 \label{sec:groupby_aggr}
 
 \begin{paracol}{2}
-	\question{\raggedright Long data re-crossing}
+	\question{\raggedright Long data re-crossing the road?}
 	\note{As we saw in the previous section (\ref{sec:wide_long}), long data present a `nested structure' since values cluster around cases.}
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright So what?}
-	\note{The nested structure of the data plays a key role when it comes to aggregate the data. For example, one may want to aggregate daily sales data into monthly or quarterly sales data. In so doing, one trades off the granularity of the data (e.g., daily sales records) for the possibility to best appreciate a general trend in the data (e.g., comparing the sales of two contiguous quarters).} 
+	\note{The nested structure of the data plays a key role in aggregating the data. For example, one may want to aggregate daily sales data into monthly or quarterly sales data. In so doing, one trades off the granularity of the data (e.g., daily sales records) for the possibility to best appreciate a general trend in the data (e.g., comparing the sales of two contiguous quarters).} 
 \end{paracol}
 
 \begin{paracol}{2}
 	\question{\raggedright Got it. How can I do this in Pandas?}
 	\note{Pandas has a class to help with this task, namely,\href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html#pandas.DataFrame.groupby}{\texttt{.groupby}}. Mainly, this class captures the nested structure of the data and allows to aggregate or transform the data (see next section \ref{sec:groupby_transform}) according to the nested structure.
 	
-	\quad Snippet 6.14 shows how to use \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html#pandas.DataFrame.groupby}{\texttt{.groupby}} for aggregation purposes. The sample DataFrame contains monthly sales data for three products, each of which is observed for three months (line 14). First-thing-first, we have to tell Pandas what grouping data to consider. We do that in line 27, wherein we pass the name of the column that will be used to group the data. In this example, we use the \texttt{product} column. That means we will pass from product-time datapoints (i.e., monthly data) to product datapoints (e.g., the total sales for each product over the three month period). Since the grouping structure is defined by one column only, the input is a string with the name of the column. If the grouping structure is based on multiple columns, an array of strings must be passed.
+	\quad Snippet 6.14 shows how to use \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.groupby.html#pandas.DataFrame.groupby}{\texttt{.groupby}} for aggregation purposes. The sample DataFrame contains monthly sales data for three products, each observed for three months (line 14). First, we must tell Pandas what grouping data to consider. We do that in line 27, wherein we pass the column name used to group the data. In this example, we use the \texttt{product} column. That means we will pass from product-time data points (i.e., monthly data) to product data points (e.g., the total sales for each product over the three months). Since the grouping structure is defined by one column only, the input is a string with the column's name. An array of strings must be passed if the grouping structure is based on multiple columns.
 	
-	\quad As shown in line 27, calling the object \texttt{gr} does not produce any effect on the data. Instead, the signature of the object is displayed. To aggregate the data, we must the deploy \texttt{gr} as shown in line 33. The string between bracket is the target column whose values we want to consider; \href{https://pandas.pydata.org/docs/reference/api/pandas.core.groupby.DataFrameGroupBy.aggregate.html?highlight=aggregate#pandas.core.groupby.DataFrameGroupBy.aggregate}{\texttt{.aggregate()}} defines the operation to carry out based on the grouping; the array of NumPy functions is the set of mathematical operations to perform as the data are aggregated. In our example, we ask for the total sales for each product and the average monthly sales over the three month period (see line 34).
+	\quad As shown in line 27, calling the object \texttt{gr} does not affect the data. Instead, the signature of the object is displayed. To aggregate the data, we must deploy \texttt{gr} as shown in line 33. The string between brackets is the target column whose values we want to consider; \href{https://pandas.pydata.org/docs/reference/api/pandas.core.groupby.DataFrameGroupBy.aggregate.html?highlight=aggregate#pandas.core.groupby.DataFrameGroupBy.aggregate}{\texttt{.aggregate()}} defines the operation to carry out based on the grouping; the array of NumPy functions is the set of mathematical operations to perform as the data are aggregated. In our example, we ask for the total sales for each product and the average monthly sales over the three months (see line 34).
 	}
 \end{paracol}
 
@@ -5728,9 +5716,9 @@ c         14  4.666667
 
 \begin{paracol}{2}
 	\question{\raggedright Aggregate Vs. transform}
-	\note{Once we have created a grouping structure, we can use it for aggregating the data (i.e., passing from a monthly to yearly data points, see the previous section \ref{sec:groupby_aggr}) as well as for expanding the source data. Such a procedure is called transformation and does not affect the number of rows included the DataFrame.
+	\note{Once we have created a grouping structure, we can use it for aggregating the data (i.e., passing from monthly to yearly data points, see the previous section \ref{sec:groupby_aggr}) as well as for expanding the source data. This procedure is called transformation and does not affect the number of rows in the DataFrame.
 	
-	\quad In Snippet 6.15, we get the cumulative sum of a product's sales for each period of time (the output of line 28 shows the structure of the data). Having defined the grouping structure (line 41), we use the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.transform.html?highlight=transform#pandas.DataFrame.transform}{\texttt{.transform()}} method to apply NumPy's \href{https://numpy.org/doc/stable/reference/generated/numpy.cumsum.html}{\texttt{cumsum}} function to the values of \texttt{sales} that regard the same product. As shown in line 44, the outcome of the transformation is assigned to the new column \texttt{cumulative\_size}.
+	\quad In Snippet 6.15, we get the cumulative sum of a product's sales for each period (the output of line 28 shows the structure of the data). Having defined the grouping structure (line 41), we use the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.transform.html?highlight=transform#pandas.DataFrame.transform}{\texttt{.transform()}} method to apply NumPy's \href{https://numpy.org/doc/stable/reference/generated/numpy.cumsum.html}{\texttt{cumsum}} function to the values of \texttt{sales} that regard the same product. As shown in line 44, the outcome of the transformation is assigned to the new column \texttt{cumulative\_size}.
 	}
 \end{paracol}
 
@@ -5791,18 +5779,19 @@ c         14  4.666667
 5       c      1      5                 5
 8       c      2      9                14
 \end{pythoncode}
-\clearpage
+
 \section{Working with Multiple DataFrames}
 
 \begin{paracol}{2}
 	\question{\raggedright My data cut across data tables: how can I combine multiple them into a single DataFrame?}
-	\note{Oftentimes, the information we want to analyze is spread across different data tables. In this case, we must combine multiple DataFrame objects. Mainly, there are two approaches to data combination:
+	\note{Often, the information we want to analyze is spread across different data tables. In this case, we must combine multiple DataFrame objects. Mainly, there are two approaches to data combination:
 		\begin{itemize}
 			\item Concatenate consists of stacking two or more data frames (either on the first axis or on the second axis)
 			\item Merge consists of joining two or more data frames on a common set of keys 
 		\end{itemize}
 	}
 \end{paracol}
+\clearpage
 
 \begin{paracol}{2}
 	\question{\raggedright How do I concatenate two DataFrame objects in Pandas?}
@@ -5815,7 +5804,7 @@ c         14  4.666667
 		\item We concatenate two DataFrame objects along the second axis (row-wise
 	\end{itemize}
 	
-	\quad concatenate two data frames. The first data frame contains sales data for the first quarter of the year; the second data frame contains the data for the second quarter of the year.
+	\quad concatenate two data frames. The first data frame contains sales data for the year's first quarter; the second data frame includes the information for the second quarter.
 	}
 \end{paracol}
 
@@ -5863,7 +5852,6 @@ product
 3           20           2
 
 \end{pythoncode}
-\clearpage
 
 \begin{paracol}{2}
 	\question{\raggedright How do I merge two DataFrame objects in Pandas?}
@@ -5879,10 +5867,11 @@ product
 			\item \texttt{how = "inner"} --- only the cases that are present in both the left and right DataFrame are preserved
 			\item \texttt{how = "outer"} --- all cases from the left and right DataFrame are preserved irrespective of the fact they are present in the left or right DataFrame
 		\end{itemize}
-		\item optionally, one may want to set the parameters \texttt{left\_index} and \texttt{right\_index} to \texttt{True} in order to perform the merge on the indices of the DataFrames (default is \texttt{False}.)
+		\item Optionally, one may want to set the parameters \texttt{left\_index} and \texttt{right\_index} to \texttt{True} in order to perform the merge on the indices of the DataFrames (default is \texttt{False}.)
 	\end{itemize}
 	}
 \end{paracol}
+\clearpage
 
 \begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Shaping and Reshaping DataFrames}
 # import pandas with the socially accepted alias pd
@@ -5939,7 +5928,7 @@ product
 
 \begin{paracol}{2}
 	\question{\raggedright What type of data formats can I read/write with Pandas}
-	\note{There are plenty of options, including proprietary statistical languages such as SAS, SPSS, and Stata,  Python's pickles, tabular data in CSV or TSV format, as well as data format widely adopted in online data sources, such as HTML, XML, and JSON. Table \ref{tab:io_pickles}, \ref{tab:io_excel}, \ref{tab:io_json}, \ref{tab:io_flat} illustrate some of the most popular IO utilities.\footnote{For the complete list of Pandas IO routines, please refer to \url{https://pandas.pydata.org/docs/reference/io.html}.}
+	\note{There are plenty of options, including proprietary statistical languages such as SAS, SPSS, and Stata,  Python's pickles, tabular data in CSV or TSV format, and data formats widely adopted online data sources, such as HTML, XML, and JSON. Table \ref{tab:io_pickles}, \ref{tab:io_excel}, \ref{tab:io_json}, \ref{tab:io_flat} illustrate some of the most popular IO utilities.\footnote{For the complete list of Pandas IO routines, please refer to \url{https://pandas.pydata.org/docs/reference/io.html}.}
 	}
 \end{paracol}
 
@@ -6026,12 +6015,13 @@ product
 \clearpage
 
 \theendnotes
+\clearpage
 
 \chapter{Coda}
 
-In terms of \textit{scope}, these notes face emphasized the application of the Python Pogramming Language to `data science' tasks. Particularly, we went through through the basics of the language and considered two core modules such as NumPy --- focusing on technical and scientific computation --- and Pandas --- the \textit{de facto} industry standard for data management.
+\raggedright In terms of \textit{scope}, these notes emphasized the application of the Python Programming Language to `data science' tasks. Mainly, we went through the basics of the language and considered two core modules: NumPy --- focusing on technical and scientific computation --- and Pandas --- the \textit{de facto} industry standard for data management.
 
-\quad In terms of \textit{process}, learning the Python programming language takes months if not years. However, it is possible to acquire a minimum understanding of Python in a few weeks. To do that, you should resist the temptation to surf the web searching for the ultimate Python tutorial or off-the-shelf snippets that address your coding issues. Instead, you may want to spend time reading and digesting these notes off-line, paying particular attention to the various snippets I have provided. Why? Two arguments. First, learning a programming language requires to scrutinize and reason with coding snippets. Borrowing others' solution help to solve a problem but does not facilitate learning. Second, efficiency: the snippets have been selected to address the most common coding problems encountered in four previous cohorts ot Bayes Business Analytics MSc. Students. So, focus on what we have learned and do not waste time on material that is not relevant to proficiently attend the various Python-based modules included in the Business Analytics MSc. If you are a programming newbie, there will be times when you will find yourself asking questions such as: ``What is the best way to do this?'' or ``How can I do this in Python.'' Do not get frustrated --- that is an integral part of the learning process!! Instead, keep calm and reach out to the lecturer and the fellow students to share your thoughts and clarify your doubts.
+\quad In terms of \textit{process}, learning the Python programming language takes months, if not years. However, acquiring a minimum understanding of Python in a few weeks is possible. To do that, you should resist the temptation to search the web for the ultimate Python tutorial or off-the-shelf snippets that address your coding issues. Instead, you may want to spend time reading and digesting these notes offline, paying particular attention to the various snippets I have provided. Why? Two arguments. First, learning a programming language requires scrutinizing and reasoning with coding snippets. Borrowing others' solution help to solve a problem but does not facilitate learning. Second, efficiency: the snippets have been selected to address the most common coding problems encountered in four previous Bayes Business Analytics MSc cohorts. Students. So, focus on what we have learned and do not waste time on material not relevant to proficiently attending the various Python-based modules included in the Business Analytics MSc. If you are a programming newbie, there will be times when you will find yourself asking questions such as: ``What is the best way to do this?'' or ``How can I do this in Python?'' Do not get frustrated --- that is an integral part of the learning process!! Instead, keep calm and reach out to the lecturer and fellow students to share your thoughts and clarify your doubts.
 \clearpage
 
 \begin{appendices}
@@ -6096,7 +6086,7 @@ s.count(s2)              & Count of s2 in s                                     
 \textit{Whitespace I}             &                                                                                                                                                 \\ \midrule
 s.center(width)          & Center s with blank padding of width \# 'hi' =\textgreater ' hi '                                                                               \\
 s.isspace()              & Return true if s only contains whitespace characters                                                                                            \\
-s.ljust(width)           & Left justifiy s with total size of width \# 'hello' =\textgreater 'hello '                                                                      \\
+s.ljust(width)           & Left justify s with total size of width \# 'hello' =\textgreater 'hello '                                                                      \\
 s.rjust(width)           & Right justify s with total size of width \# 'hello' =\textgreater ' hello'                                                                      \\
 s.strip()                & Remove leading and trailing whitespace from s \# ' hello ' =\textgreater 'hello'                                                                \\ \midrule
 \textit{Find / Replace I}         &                                                                                                                                                 \\ \midrule
@@ -6291,9 +6281,9 @@ isfinite(x, /[, out, where, casting, order, ...])
 isinf(x, /[, out, where, casting, order, ...])
 &  Test element-wise for positive or negative infinity\\
 isnan(x, /[, out, where, casting, order, ...])
-& Test element-wise for NaN and return result as a boolean array\\
+& Test element-wise for NaN and return the result as a boolean array\\
 isnat(x, /[, out, where, casting, order, ...])
-& Test element-wise for NaT (not a time) and return result as a boolean array\\
+& Test element-wise for NaT (not a time) and return the result as a boolean array\\
 fabs(x, /[, out, where, casting, order, ...])
 & Compute the absolute values element-wise\\
 signbit(x, /[, out, where, casting, order, ...])
@@ -6457,7 +6447,7 @@ fmin(x1, x2, /[, out, where, casting, ...])
                 \texttt{np.hstack(tup)} &
                 Stack arrays in sequence horizontally (column wise)\\
                 \texttt{np.dstack(tup)} &
-                Stack arrays in sequence depth wise (along third axis)\\
+                Stack arrays in sequence depth wise (along the third axis)\\
                 \texttt{np.column\_stack(tup)} &
                 Stack 1-D arrays as columns into a 2-D array\\
                 \texttt{np.row\_stack(tup)} &

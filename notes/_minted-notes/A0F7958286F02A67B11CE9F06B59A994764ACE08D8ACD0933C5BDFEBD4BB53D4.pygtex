@@ -36,7 +36,7 @@
 \PYG{c+c1}{\PYGZsh{} --+ save A and its transpose into a single file in uncompressed format}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{np}\PYG{o}{.}\PYG{n}{savez}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}AAT.npz\PYGZsq{}}\PYG{p}{,} \PYG{n}{A}\PYG{p}{,} \PYG{n}{A}\PYG{o}{.}\PYG{n}{T}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{} --+ load the arrays back}
-\PYG{c+c1}{\PYGZsh{} ----+ create an NpzFile object}
+\PYG{c+c1}{\PYGZsh{} ----+ create a NpzFile object}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{my\PYGZus{}arrays} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{load}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}AAT.npz\PYGZsq{}}\PYG{p}{)}
 \PYG{c+c1}{\PYGZsh{} ----+ check the arrays with the file attribute files}
 \PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{my\PYGZus{}arrays}\PYG{o}{.}\PYG{n}{files}

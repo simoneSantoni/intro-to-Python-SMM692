@@ -20,7 +20,7 @@
 \contentsline {table}{\numberline {4.6}{\ignorespaces Routines for Numerical Ranges\relax }}{95}{table.caption.38}%
 \contentsline {table}{\numberline {4.7}{\ignorespaces Routines for Building Matrices\relax }}{97}{table.caption.39}%
 \contentsline {table}{\numberline {4.8}{\ignorespaces Routines for the Matrix Class\relax }}{99}{table.caption.40}%
-\contentsline {table}{\numberline {4.9}{\ignorespaces NumPy Stastistical Routines: Order Statistics\relax }}{105}{table.caption.42}%
+\contentsline {table}{\numberline {4.9}{\ignorespaces NumPy Statistical Routines: Order Statistics\relax }}{105}{table.caption.42}%
 \contentsline {table}{\numberline {4.10}{\ignorespaces numPy Statistical Routines: Average and Variances\relax }}{106}{table.caption.43}%
 \contentsline {table}{\numberline {4.11}{\ignorespaces NumPy Stastistical Routines: Correlating\relax }}{107}{table.caption.44}%
 \contentsline {table}{\numberline {4.12}{\ignorespaces NumPy Statistical Routines: Histograms\relax }}{108}{table.caption.45}%
@@ -35,20 +35,20 @@
 \contentsline {table}{\numberline {4.21}{\ignorespaces File Input and Output with NumPy Arrays\relax }}{129}{table.caption.57}%
 \addvspace {10\p@ }
 \contentsline {table}{\numberline {5.1}{\ignorespaces Creating a DataFrame from Data Loaded in the Python Session\relax }}{136}{table.caption.60}%
-\contentsline {table}{\numberline {5.2}{\ignorespaces Routines for Reading and Writing Data with Pandas: Pickles\relax }}{174}{table.caption.63}%
-\contentsline {table}{\numberline {5.3}{\ignorespaces Routines for Reading and Writing Data with Pandas: Excel Spreadsheets\relax }}{175}{table.caption.64}%
-\contentsline {table}{\numberline {5.4}{\ignorespaces Routines for Reading and Writing Data with Pandas: JSON Files\relax }}{176}{table.caption.65}%
-\contentsline {table}{\numberline {5.5}{\ignorespaces Routines for Reading and Writing Data with Pandas: Flat Files\relax }}{177}{table.caption.66}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Routines for Reading and Writing Data with Pandas: Pickles\relax }}{170}{table.caption.63}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Routines for Reading and Writing Data with Pandas: Excel Spreadsheets\relax }}{171}{table.caption.64}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces Routines for Reading and Writing Data with Pandas: JSON Files\relax }}{172}{table.caption.65}%
+\contentsline {table}{\numberline {5.5}{\ignorespaces Routines for Reading and Writing Data with Pandas: Flat Files\relax }}{173}{table.caption.66}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Helpful Escapes\relax }}{181}{table.caption.68}%
-\contentsline {table}{\numberline {7.2}{\ignorespaces Comprehensive List of String Methods\relax }}{182}{table.caption.69}%
-\contentsline {table}{\numberline {7.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{184}{table.caption.71}%
-\contentsline {table}{\numberline {7.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{185}{table.caption.72}%
-\contentsline {table}{\numberline {7.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{186}{table.caption.73}%
-\contentsline {table}{\numberline {7.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{187}{table.caption.74}%
-\contentsline {table}{\numberline {7.7}{\ignorespaces NumPy Array Manipulation Routines\relax }}{188}{table.caption.75}%
-\contentsline {table}{\numberline {7.8}{\ignorespaces Timestamp Objects: Functions, Methods, and Attributes\relax }}{190}{table.caption.78}%
-\contentsline {table}{\numberline {7.9}{\ignorespaces Timedelta Objects: Functions, Methods, and Attributes\relax }}{191}{table.caption.79}%
-\contentsline {table}{\numberline {7.10}{\ignorespaces Period Objects: Functions, Methods, and Attributes\relax }}{191}{table.caption.80}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Helpful Escapes\relax }}{179}{table.caption.69}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Comprehensive List of String Methods\relax }}{180}{table.caption.70}%
+\contentsline {table}{\numberline {A.3}{\ignorespaces NumPy Universal Functions: Mathematical Operations\relax }}{182}{table.caption.72}%
+\contentsline {table}{\numberline {A.4}{\ignorespaces NumPy Universal Functions: Trigonometric Operations\relax }}{183}{table.caption.73}%
+\contentsline {table}{\numberline {A.5}{\ignorespaces NumPy Universal Functions: Floating Operations\relax }}{184}{table.caption.74}%
+\contentsline {table}{\numberline {A.6}{\ignorespaces NumPy Universal Functions: Comparison Operations\relax }}{185}{table.caption.75}%
+\contentsline {table}{\numberline {A.7}{\ignorespaces NumPy Array Manipulation Routines\relax }}{186}{table.caption.76}%
+\contentsline {table}{\numberline {A.8}{\ignorespaces Timestamp Objects: Functions, Methods, and Attributes\relax }}{188}{table.caption.79}%
+\contentsline {table}{\numberline {A.9}{\ignorespaces Timedelta Objects: Functions, Methods, and Attributes\relax }}{189}{table.caption.80}%
+\contentsline {table}{\numberline {A.10}{\ignorespaces Period Objects: Functions, Methods, and Attributes\relax }}{189}{table.caption.81}%
 \addvspace {10\p@ }
