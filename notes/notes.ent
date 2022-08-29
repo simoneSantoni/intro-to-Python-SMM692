@@ -90,6 +90,29 @@ data
 science.''}
 \@endanenote 
 \@doanenote {25}
+macro:->Pandas'
+\href
+{https://pandas.pydata.org/docs/reference/index.html\#api}{API}
+is
+well-documented
+and
+well-tested.
+Also,
+the
+\href
+{https://pandas.pydata.org/docs/user_guide/index.html}{user
+guide}
+has
+plenty
+of
+examples
+showing
+Panda's
+features
+in
+action.
+\@endanenote 
+\@doanenote {26}
 macro:->In
 field
 of
@@ -129,7 +152,7 @@ Machine
 Learning
 field.
 \@endanenote 
-\@doanenote {26}
+\@doanenote {27}
 macro:->throughout
 the
 book,
@@ -155,7 +178,7 @@ or
 Jupyter
 sessions.
 \@endanenote 
-\@doanenote {27}
+\@doanenote {28}
 macro:->For
 the
 complete

@@ -993,7 +993,7 @@ print(2 + 4)
 
 \par\noindent\rule{\textwidth}{0.4pt}
 
-At the end of the chapter, you will be able to evaluate the various types of Python objects in regarding
+At the end of the chapter, you will be able to evaluate the various types of Python objects regarding:
 \begin{itemize}
 	\item Key features
 	\item Use cases/roles
@@ -1359,7 +1359,7 @@ True
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{How do we use strings?}
+	\question{How do I use strings?}
 	\note{Strings are used to record words, contents of text files loaded into memory, Internet addresses, Python source code, and so on. Strings can also hold the raw bytes used for media files and network transfers and the encoded and decoded forms of non-ASCII Unicode text used in internationalized programs.}
 \end{paracol}
 
@@ -1616,7 +1616,7 @@ NOTES: this table has fake data
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright What type of objects can we include in a list?}
+	\question{\raggedright What type of objects can I include in a list?}
 	\note{Lists can contain any sort of object: numbers, strings, and even other lists. See Snippet 4.10.}
 \end{paracol}
 
@@ -2091,7 +2091,7 @@ Hi there
 \end{pythoncode}
 
 \begin{paracol}{2}
-\question{\raggedright How do we write the data in the current Python session to a file?}
+\question{\raggedright How do I write the data in the current Python session to a file?}
 \note{Snippet 4.25 illustrates how to use \href{https://docs.python.org/3/library/functions.html\#open}{\texttt{open}} for data writing. In the first part of the snippet, we create three strings --- i.e., the information we are manipulating in the active Python session (see lines 2, 4, and 6). Then, we create a file object in `writing' mode (see the value passed to \texttt{mode}, line 9). Finally, we manipulate the three strings (as a sample task, in line 12, we concatenate \texttt{FIRSTLAW}, \texttt{SECONDLAW}, \texttt{THIRDLAW}) and write the result to a file (line 16).}
 \end{paracol}
 
@@ -2338,7 +2338,7 @@ Customers who bought x & a also bought Air Force
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright How do we write loops in Python?}
+	\question{\raggedright How do I write loops in Python?}
 	\note{Using \href{https://docs.python.org/3/reference/compound_stmts.html\#for}{\texttt{for}} and \href{https://docs.python.org/3/reference/compound_stmts.html\#while}{\texttt{while}} statements.}
 \end{paracol}
 
@@ -2585,7 +2585,7 @@ L = []
 \end{pythoncode}
 
 \begin{paracol}{2}
-	\question{\raggedright Can we use embed control flow in a list comprehension?}
+	\question{\raggedright Can I embed control flow in a list comprehension?}
 	\note{Yes, we can. To do that, the \texttt{for} clause must be preceded by an \texttt{if} statement and, at least, an \texttt{else} statement (see for example Snippet 4.40's line 22). }
 \end{paracol}
 
@@ -2622,15 +2622,18 @@ L2 = []
 \chapter{Technical \& Scientific Computation with NumPy}
 \label{ch:tech_sci_computation}
 
-\vspace{1em}
+\par\noindent\rule{\textwidth}{0.4pt}
 
-Learning goals:
-
+At the end of the chapter, you will be able to:
 \begin{itemize}
-	\item 
-	\item 
+	\item Create efficient data structures called \texttt{ndarrays}
+	\item Populate \texttt{ndarrays} with simulated or real-world data
+	\item Manipulated \texttt{ndarrays} with a variety of scalable routines
+	\item Carry out exploratory data analysis with NumPy
+	\item Read and write \texttt{ndarrays} in a number of formats
 \end{itemize}
 
+\par\noindent\rule{\textwidth}{0.4pt}
 
 \vspace{1em}
 
@@ -2650,6 +2653,7 @@ Learning goals:
 	\question{\raggedright How do I install NumPy?}
 	\note{The easiest way is using the command line. Anaconda users run \texttt{\$ conda install numpy scipy}, whereas Python official release users run \texttt{\$ pip install numpy scipy}. Anaconda users can also install the modules they need from within Anaconda-Navigator.}
 \end{paracol}
+\clearpage
 
 \section{NumPy \texttt{ndarray}}
 \label{sec:np_array}
@@ -2665,7 +2669,7 @@ Learning goals:
 \end{paracol}
 
 \begin{paracol}{2}
-	\question{\raggedright How do we create an \texttt{ndarray}?}
+	\question{\raggedright How do I create an \texttt{ndarray}?}
 	\note{As shown in Snippet 5.1, we pass an object to \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html\#numpy.array}{\texttt{numpy.array}}. If the object we pass is a scalar, a 0-dimensional array containing object is returned (line 5). Passing a list to \href{https://numpy.org/doc/stable/reference/generated/numpy.array.html\#numpy.array}{\texttt{numpy.array}} produces a one-dimensional array (line 9); passing a list of lists produces a two-dimensional array (line 13); finally, passing a list of lists of lists produces a three-dimensional array (line 18).}
 \end{paracol}
 
@@ -2695,12 +2699,12 @@ array([[[1, 2],
         [7, 8]]])
 
 \end{pythoncode}
+\clearpage
 
 \begin{paracol}{2}
 	\question{\raggedright What are the distinctive features of \texttt{ndarrays}?}
 	\note{\texttt{ndarrays} have been designed --- and tuned over time --- with flexibility and efficiency in mind. For example, \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}} allows to carry out computations on arrays with a syntax similar to scalar values. As shown in Snippet 5.2, we can multiply an array by a scalar (line 10) and add two vectors (14). That is not possible if we use pure Python code. Multiplying a list by a scalar $N$ replicates the ordered collection of items $N$ times (see line 23). Adding two lists yields concatenation (see line 30). At the same time, \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}} support the analysis of large volumes of data\footnote{The Internet has many blog posts showing the performance of NumPy in linear algebra tasks is comparable to compiled languages, such as C.}.}
 \end{paracol}
-\clearpage 
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.2 --- NumPy allows to manipulate vectors with an expressive syntax}
 # import numpy with the socially accepted alias 'np'
@@ -2738,6 +2742,7 @@ import numpy as np
 -0.4414402896845323, -0.4445109735283278, 0.31997294069261617
 ]
 \end{pythoncode}
+\clearpage
 
 \begin{paracol}{2}
 	\question{\raggedright How do I check an \texttt{array}'s number of dimensions?}
@@ -2748,7 +2753,6 @@ import numpy as np
 	\question{\raggedright How do I check an \texttt{array}'s shape?}
 	\note{The lower section of Snippet 5.3 shows how to access \href{https://numpy.org/doc/stable/reference/generated/numpy.ndarray.shape.html\#numpy.ndarray.shape}{\texttt{.shape}}, the \href{https://numpy.org/doc/stable/reference/arrays.ndarray.html}{\texttt{ndarrays}}'s attribute concerning the shape. In the example, each dimension of the \texttt{DATA} has size 2.}
 \end{paracol}
-\clearpage
 
 \begin{pythoncode}[linenos=true,]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 5.3 --- an array's number of dimensions and shape}
 # import numpy with the socially accepted alias 'np'
@@ -3179,7 +3183,8 @@ array([[0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  , 0.  ],
 \begin{figure}[!htbp]
 \input{contour.pgf}
 \caption{A contour plot showing the associations among X, Y, and Z}
-\caption*{Notes: the data behind this plot come from Snippet 5.8, lines 22 - 44.}
+\vspace{-0.75em}
+\caption*{\textit{Notes}. --- the data behind this plot come from Snippet 5.8, lines 22 - 44.}
 \label{fig:contour_plot}
 \end{figure}
 
@@ -3341,7 +3346,7 @@ matrix([[-1.60040278e+00,  1.98412698e-03, -1.19642857e-03],
 		\item Rearranging elements
 	\end{itemize}
 	
-        Presenting every NumPy array manipulation routine would require writing a dedicated book (and certainly falls beyond the remit of an introductory module on Python). That said, let me whet the reader's appetite by illustrating a sample of miscellaneous routines (see Snippet 5.11). Here is the sequence of tasks we accomplish: first, we create an array of shape \texttt{(6,)} (see line 5); then, we change the shape of the array (line 10) and transpose its rows and columns (line 16); in the lower section of the snippet we join two arrays using several routines: \href{https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html\#numpy.concatenate}{\texttt{.concatenate}} joins two arrays along the desired axis (the default axis is the first one, meaning the second arrays are concatenated row-wise); \href{https://numpy.org/doc/stable/reference/generated/numpy.vstack.html\#numpy.vstack}{\texttt{.vstack}} requires to pass a tuple of arrays to stack row-wise; \href{https://numpy.org/doc/stable/reference/generated/numpy.hstack.html\#numpy.hstack}{\texttt{.hstack}} requires to pass a tuple of arrays to stack column-wise. It is worth noticing that the rules for vector/matrix manipulation we learned at school apply to the routines that join arrays. In other words, two NumPy arrays can be joined if and only have the same length on the joining axis. For example, it is possible to stack vertically two arrays with the shape \texttt{(3, 3)} and \texttt{(2, 3)} because they have the same number of columns.}  
+        \quad Presenting every NumPy array manipulation routine would require writing a dedicated book (and certainly falls beyond the remit of an introductory module on Python). That said, let me whet the reader's appetite by illustrating a sample of miscellaneous routines (see Snippet 5.11). Here is the sequence of tasks we accomplish: first, we create an array of shape \texttt{(6,)} (see line 5); then, we change the shape of the array (line 10) and transpose its rows and columns (line 16); in the lower section of the snippet we join two arrays using several routines: \href{https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html\#numpy.concatenate}{\texttt{.concatenate}} joins two arrays along the desired axis (the default axis is the first one, meaning the second arrays are concatenated row-wise); \href{https://numpy.org/doc/stable/reference/generated/numpy.vstack.html\#numpy.vstack}{\texttt{.vstack}} requires to pass a tuple of arrays to stack row-wise; \href{https://numpy.org/doc/stable/reference/generated/numpy.hstack.html\#numpy.hstack}{\texttt{.hstack}} requires to pass a tuple of arrays to stack column-wise. It is worth noticing that the rules for vector/matrix manipulation we learned at school apply to the routines that join arrays. In other words, two NumPy arrays can be joined if and only have the same length on the joining axis. For example, it is possible to stack vertically two arrays with the shape \texttt{(3, 3)} and \texttt{(2, 3)} because they have the same number of columns.}  
 	}
 \end{paracol}
 \clearpage
@@ -3421,12 +3426,12 @@ array([[0, 1, 2, 6],
 \question{\raggedright What are the mathematical functions available in NumPy?}
 \note{There are many \href{https://numpy.org/doc/stable/reference/routines.math.html}{mathematical functions available in NumPy}, some of which are implemented as universal functions (for a complete list of universal functions, see Tables \ref{tab:numpy_math_ufuncs}). The available routines can be grouped into:
 \begin{itemize}
-\item trigonometric functions 
-\item hyperbolic functions 
-\item rounding functions 
-\item sums, products, and differences 
-\item exponential and logarithmic functions
-\item extrema finding  
+\item Trigonometric functions 
+\item Hyperbolic functions 
+\item Rounding functions 
+\item Sums, products, and differences 
+\item Exponential and logarithmic functions
+\item Extrema finding  
 \end{itemize}}
 \end{paracol}
 \clearpage
@@ -3495,10 +3500,10 @@ Similar to the case of array-manipulating routines, a detailed discussion of eve
 	\note{NumPy offers essential statistical functions sufficient to implement an Exploratory Data Analysis/descriptive statistics. Specifically, there are four families of statistical routines (see Tables \ref{tab:order_stats}, \ref{tab:average_and_variances}, \ref{tab:correlating}, and \ref{tab:histograms}):
 	
 	\begin{itemize}
-		\item order statistics (e.g., quantiles)
-		\item average and variances
-		\item correlations 
-		\item histograms
+		\item Order statistics (e.g., quantiles)
+		\item Average and variances
+		\item Correlations 
+		\item Histograms
 	\end{itemize}
 	}
 \end{paracol}
@@ -4002,11 +4007,12 @@ array([2.15714286, 2.23333333])
 	\question{\raggedright What is the gamut of pseudorandom numbers available in NumPy?}
 	\note{NumPy has three families of \href{https://numpy.org/doc/stable/reference/random/generator.html}{pseudorandom number generators}:
 	\begin{itemize}
-		\item simple random data 
-		\item permutations
-		\item distributions
+		\item Simple random data 
+		\item Permutations
+		\item Distributions
 	\end{itemize}
-	Tables \ref{tab:random_simple_data}, \ref{tab:random_permutations}, and \ref{tab:random_distros} provide a summary of the available generators.
+	
+	\quad Tables \ref{tab:random_simple_data}, \ref{tab:random_permutations}, and \ref{tab:random_distros} provide a summary of the available generators.
 	}
 \end{paracol}
 
@@ -4291,7 +4297,7 @@ plt.show()
 		\item Multiple array case: lines 35 - 60 illustrate how to write and read an \texttt{.npz} file (accepting multiple arrays)
 	\end{itemize}
 
-	Regarding the `multiple array case,' it is worth noticing that it is possible to write the arrays to a file preserving the variable names assigned to the arrays (e.g., \texttt{A}, \texttt{B}, \texttt{C}, see line 55). Such an option is beneficial when the variable names are meaningful and, perhaps, we expect to load the data back sometime in the future, when we may or may not remember `what is what.'
+	\quad Regarding the `multiple array case,' it is worth noticing that it is possible to write the arrays to a file preserving the variable names assigned to the arrays (e.g., \texttt{A}, \texttt{B}, \texttt{C}, see line 55). Such an option is beneficial when the variable names are meaningful and, perhaps, we expect to load the data back sometime in the future, when we may or may not remember `what is what.'
 	}
 
 	}
@@ -4420,7 +4426,7 @@ At the end of the chapter, you will be able to:
         	\item Compared to competing frameworks for data management,\footnote{The set of competing frameworks include Python's \href{https://www.pytables.org}{PyTables} and \href{https://www.dask.org}{Dask}, as well as R's \href{https://rdatatable.gitlab.io/data.table/}{data.tables} and Julia's \href{https://dataframes.juliadata.org/stable/}{DataFrames}.} Pandas offers a unique combination of features, including ease of use, flexibility, and performance
         	\item Pandas has an edge in the area of time series\footnote{A time series is a set of points arranged in chronological order.} and panel data \footnote{Panel data, widely adopted in economics and finance, are multidimensional datasets wherein the same statistical units are repeatedly observed over time.}--- which is not surprising since Pandas was created for quantitative financial analysts, and it is still prevalent in the field of finance at large\footnote{Students interested in the origins of Pandas may want to read article on/interview with Wes McKinney \href{https://qz.com/1126615/the-story-of-the-most-important-tool-in-data-science/}{``Meet the man behind the most important tool in data science.''}} 
         	\item Pandas builds on NumPy. That means access to a large variety of vectorized functions; that is, users/developers do not have to write boring and inefficient loops to perform operations on data
-        	\item The quality of the documentation covering Pandas is off-the-chart. The \href{https://pandas.pydata.org/docs/reference/index.html\#api}{API} is well-documented and well-tested, while the \href{https://pandas.pydata.org/docs/user_guide/index.html}{user guide} has plenty of examples showing Panda's features in action
+        	\item The quality of the documentation covering Pandas is off-the-chart.\footnote{Pandas' \href{https://pandas.pydata.org/docs/reference/index.html\#api}{API} is well-documented and well-tested. Also, the \href{https://pandas.pydata.org/docs/user_guide/index.html}{user guide} has plenty of examples showing Panda's features in action.}
         \end{itemize}
 	}
 \end{paracol}
@@ -4613,11 +4619,11 @@ f.close()
 	\question{\raggedright What are the key attributes of a DataFrame?}
 	\note{Pandas DataFrame can be characterized along several attributes, such as:
 	\begin{itemize}
-		\item shape 
-		\item size 
-		\item number of dimensions 
-		\item set of column names
-		\item set of case indices 
+		\item Shape 
+		\item Size 
+		\item Number of dimensions 
+		\item Set of column names
+		\item Set of case indices 
 	\end{itemize}
 
 	\quad A convenient way to access multiple DataFrame's attributes in a row is by using the \href{https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.info.html}{\texttt{.info}} method. Per Snippet 6.3 (see lines 18-26), we know that \texttt{df} has three entries and as many indices, two columns (an object, \texttt{country}, and a float \texttt{gdp\_pc}), and occupies circa 176 bytes in memory.
@@ -4983,6 +4989,7 @@ memory usage: 224.0+ bytes
 2         Dell XPS 13   8 GB      Windows 11
 
 \end{pythoncode}
+\clearpage
 
 \begin{paracol}{2}
 	\question{\raggedright How do I create a new column or amend an existing Pandas column?}
@@ -5198,7 +5205,7 @@ memory usage: 208.0+ bytes
 3    d  16.503333
 4    e  16.410000
 \end{pythoncode}
-\clearpage
+
 \section{Data Types and Pandas} 
 
 \begin{paracol}{2}
@@ -5210,6 +5217,7 @@ memory usage: 208.0+ bytes
 	\question{\raggedright Can a Series contain multiple data types?}
 	\note{Yes, a Series can contain multiple data types (hence, a DataFrame can). In this sense, Pandas offers a more flexible data structure than NumPy arrays, which must contain objects of the same type. Snippet 6.10 shows that a list with mixed types is downgraded to a NumPy array with string objects. Instead, a Series preserves the type of each individual object (see line 22).}
 \end{paracol}
+\clearpage
 
 \begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.10 --- multiple data types in a Series}
 # import numpy and pandas with the socially accepted alias 'np' and 'pd'
@@ -5236,7 +5244,8 @@ memory usage: 208.0+ bytes
 >>> S[1]/2
 -8.82
 \end{pythoncode}
-\clearpage
+
+
 \section{Handling `Time' Data in Pandas}
 
 \begin{paracol}{2}
@@ -5255,9 +5264,9 @@ memory usage: 208.0+ bytes
 		\item \href{https://pandas.pydata.org/docs/reference/api/pandas.Period.html}{\texttt{.Period}} represents a period of time
 	\end{itemize}
 
-	Tables \ref{tab:pandas_timestamp}, \ref{tab:pandas_timedelta}, and \ref{tab:pandas_period}, included in Appendix \ref{app:cheatsheets}, provide a cheatsheet of the Pandas functions, methods, and attributes that apply to time data.
 	}
 \end{paracol}
+\clearpage
 
 \begin{paracol}{2}
 	\question{\raggedright Can you give me an example of \texttt{.Timestamp} and \texttt{.Timedelta} objects?}
@@ -5266,7 +5275,6 @@ memory usage: 208.0+ bytes
 	\quad The remainder of the snippet illustrates how to extract the individual attributes of a \href{https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.html}{\texttt{.Timestamp}} object (see lines 58 - 68) and create a \href{https://pandas.pydata.org/docs/reference/api/pandas.Timedelta.html}{\texttt{.Timedelta}} object (see line 88).
 	}
 \end{paracol}
-\clearpage
 
 \begin{pythoncode}[linenos=True]{colback=base_c!5, colframe=base_c, title=\sffamily Snippet 6.11 --- working with Timestamp and Timedelta objects}
 # import pandas with the socially accepted alias 'pd'
@@ -5388,6 +5396,7 @@ dtypes: datetime64[ns](2), int64(7), object(2), timedelta64[ns](1)
 memory usage: 416.0+ bytes
 
 \end{pythoncode}
+\clearpage
 
 \begin{paracol}{2}
 	\question{Can you give me an example of a \texttt{.Period} object?}
@@ -5470,7 +5479,6 @@ memory usage: 416.0+ bytes
 	\caption{A stylized representation of a `wide' data structure}
 	\label{fig:wide_dataframe}
 \end{figure}
-\clearpage
 
 \begin{paracol}{2}
 	\question{
@@ -5491,7 +5499,7 @@ memory usage: 416.0+ bytes
 		\end{itemize}
 		}
 \end{paracol}
-
+\clearpage
 
 \begin{paracol}{2}
 	\question{
@@ -5936,7 +5944,7 @@ product
 	\centering
 	\caption{Routines for Reading and Writing Data with Pandas: Pickles}
 	\label{tab:io_pickles}
-	\begin{tabular}{lp{12cm}}
+	\begin{tabular}{lp{10cm}}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
@@ -5951,7 +5959,7 @@ product
 	\centering
 	\caption{Routines for Reading and Writing Data with Pandas: Excel Spreadsheets}
 	\label{tab:io_excel}
-	\begin{tabular}{lp{12cm}}
+	\begin{tabular}{lp{10cm}}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
@@ -5974,7 +5982,7 @@ product
 	\centering
 	\caption{Routines for Reading and Writing Data with Pandas: JSON Files}
 	\label{tab:io_json}
-	\begin{tabular}{lp{12cm}}
+	\begin{tabular}{lp{10cm}}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
@@ -5995,7 +6003,7 @@ product
 	\centering
 	\caption{Routines for Reading and Writing Data with Pandas: Flat Files}
 	\label{tab:io_flat}
-	\begin{tabular}{lp{12cm}}
+	\begin{tabular}{lp{10cm}}
 		\toprule \toprule
 			Routine & Synopsis \\
 			\midrule
@@ -6021,7 +6029,9 @@ product
 
 \raggedright In terms of \textit{scope}, these notes emphasized the application of the Python Programming Language to `data science' tasks. Mainly, we went through the basics of the language and considered two core modules: NumPy --- focusing on technical and scientific computation --- and Pandas --- the \textit{de facto} industry standard for data management.
 
-\quad In terms of \textit{process}, learning the Python programming language takes months, if not years. However, acquiring a minimum understanding of Python in a few weeks is possible. To do that, you should resist the temptation to search the web for the ultimate Python tutorial or off-the-shelf snippets that address your coding issues. Instead, you may want to spend time reading and digesting these notes offline, paying particular attention to the various snippets I have provided. Why? Two arguments. First, learning a programming language requires scrutinizing and reasoning with coding snippets. Borrowing others' solution help to solve a problem but does not facilitate learning. Second, efficiency: the snippets have been selected to address the most common coding problems encountered in four previous Bayes Business Analytics MSc cohorts. Students. So, focus on what we have learned and do not waste time on material not relevant to proficiently attending the various Python-based modules included in the Business Analytics MSc. If you are a programming newbie, there will be times when you will find yourself asking questions such as: ``What is the best way to do this?'' or ``How can I do this in Python?'' Do not get frustrated --- that is an integral part of the learning process!! Instead, keep calm and reach out to the lecturer and fellow students to share your thoughts and clarify your doubts.
+\quad In terms of \textit{process}, learning the Python programming language takes months, if not years. However, it is possible to acquire a minimum understanding of Python in a few weeks. To do that, you should resist the temptation to search the web for the ultimate Python tutorial or off-the-shelf snippets that address your coding issues. Instead, you may want to spend time reading and digesting these notes offline. Why? Two arguments. First, learning a programming language requires scrutinizing and reasoning with coding snippets. Borrowing others' solutions helps to solve a problem but does not facilitate learning. Second, efficiency: the snippets reported in these notes have been selected to address the most common coding problems encountered in four previous Bayes Business Analytics MSc cohorts. So, you may not want to waste time on materials not relevant to the various Python-based modules offered at Bayes.
+
+\quad Finally, if you are a programming newbie, there will be times when you will find yourself asking questions such as: ``What is the best way to do this?'' or ``How can I do this in Python?'' Do not get frustrated --- that is an integral part of the learning process!! Instead, keep calm and reach out to the lecturer and fellow students to share your thoughts and clarify your doubts.
 \clearpage
 
 \begin{appendices}
@@ -6063,45 +6073,45 @@ product
 \centering
 \caption{Comprehensive List of String Methods}
 \label{tab:string_methods}
-\begin{tabular}{lp{12cm}}
+\begin{tabular}{lp{11cm}}
 \toprule \toprule
 \textit{Cases I}          &                                                                                                                                               \\ \midrule
-s.capitalize()           & Capitalize s \# 'hello' =\textgreater 'Hello'                                                                                                   \\
-s.lower()                & Lowercase s \# 'HELLO' =\textgreater 'hello'                                                                                                    \\
-s.swapcase()             & Swap cases of all characters in s \# 'Hello' =\textgreater "hELLO"                                                                              \\
-s.title()                & Titlecase s \# 'hello world' =\textgreater 'Hello World'                                                                                        \\
-s.upper()                & Uppercase s \# 'hello' =\textgreater 'HELLO'                                                                                                    \\ \midrule
+\texttt{s.capitalize()         }  & Capitalize s \# 'hello' =\textgreater 'Hello'                                                                                                   \\
+\texttt{s.lower()               } & Lowercase s \# 'HELLO' =\textgreater 'hello'                                                                                                    \\
+\texttt{s.swapcase()           }  & Swap cases of all characters in s \# 'Hello' =\textgreater "hELLO"                                                                              \\
+\texttt{s.title()              }  & Titlecase s \# 'hello world' =\textgreater 'Hello World'                                                                                        \\
+\texttt{s.upper()             }   & Uppercase s \# 'hello' =\textgreater 'HELLO'                                                                                                    \\ \midrule
 \textit{Sequence Operations I}    &                                                                                                                                                 \\ \midrule
-s2 in s                  & Return true if s contains s2                                                                                                                    \\
-s + s2                   & Concat s and s2                                                                                                                                 \\
-len(s)                   & Length of s                                                                                                                                     \\
-min(s)                   & Smallest character of s                                                                                                                         \\
-max(s)                   & Largest character of s                                                                                                                          \\ \midrule 
+\texttt{s2 in s              }    & Return true if s contains s2                                                                                                                    \\
+\texttt{s + s2                }   & Concat s and s2                                                                                                                                 \\
+\texttt{len(s)               }    & Length of s                                                                                                                                     \\
+\texttt{min(s)              }     & Smallest character of s                                                                                                                         \\
+\texttt{max(s)              }     & Largest character of s                                                                                                                          \\ \midrule 
 \textit{Sequence Operations II}   &                                                                                                                                                 \\ \midrule
-s2 not in s              & Return true if s does not contain s2                                                                                                            \\
-s * integer              & Return integer copies of s concatenated \# 'hello' =\textgreater 'hellohellohello'                                                              \\
-s{[}index{]}             & Character at index of s                                                                                                                         \\
-s{[}i:j:k{]}             & Slice of s from i to j with step k                                                                                                              \\
-s.count(s2)              & Count of s2 in s                                                                                                                                \\ \midrule
+\texttt{s2 not in s        }      & Return true if s does not contain s2                                                                                                            \\
+\texttt{s * integer           }   & Return integer copies of s concatenated \# 'hello' =\textgreater 'hellohellohello'                                                              \\
+\texttt{s{[}index{]}           }  & Character at index of s                                                                                                                         \\
+\texttt{s{[}i:j:k{]}          }   & Slice of s from i to j with step k                                                                                                              \\
+\texttt{s.count(s2)           }   & Count of s2 in s                                                                                                                                \\ \midrule
 \textit{Whitespace I}             &                                                                                                                                                 \\ \midrule
-s.center(width)          & Center s with blank padding of width \# 'hi' =\textgreater ' hi '                                                                               \\
-s.isspace()              & Return true if s only contains whitespace characters                                                                                            \\
-s.ljust(width)           & Left justify s with total size of width \# 'hello' =\textgreater 'hello '                                                                      \\
-s.rjust(width)           & Right justify s with total size of width \# 'hello' =\textgreater ' hello'                                                                      \\
-s.strip()                & Remove leading and trailing whitespace from s \# ' hello ' =\textgreater 'hello'                                                                \\ \midrule
+\texttt{s.center(width)      }    & Center s with blank padding of width \# 'hi' =\textgreater ' hi '                                                                               \\
+\texttt{s.isspace()          }    & Return true if s only contains whitespace characters                                                                                            \\
+\texttt{s.ljust(width)      }     & Left justify s with total size of width \# 'hello' =\textgreater 'hello '                                                                      \\
+\texttt{s.rjust(width)     }      & Right justify s with total size of width \# 'hello' =\textgreater ' hello'                                                                      \\
+\texttt{s.strip()                } & Remove leading and trailing whitespace from s \# ' hello ' =\textgreater 'hello'                                                                \\ \midrule
 \textit{Find / Replace I}         &                                                                                                                                                 \\ \midrule
-s.index(s2, i, j)        & Index of first occurrence of s2 in s after index i and before index j                                                                           \\
-s.find(s2)               & Find and return lowest index of s2 in s                                                                                                         \\
-s.index(s2)              & Return lowest index of s2 in s (but raise ValueError if not found)                                                                              \\
-s.replace(s2, s3)        & Replace s2 with s3 in s                                                                                                                         \\
-s.replace(s2, s3, count) & Replace s2 with s3 in s at most count times                                                                                                     \\
-s.rfind(s2)              & Return highest index of s2 in s                                                                                                                 \\
-s.rindex(s2)             & Return highest index of s2 in s (raise ValueError if not found)                                                                                 \\ \midrule
+\texttt{s.index(s2, i, j)       } & Index of first occurrence of s2 in s after index i and before index j                                                                           \\
+\texttt{s.find(s2)              } & Find and return lowest index of s2 in s                                                                                                         \\
+\texttt{s.index(s2)            }  & Return lowest index of s2 in s (but raise ValueError if not found)                                                                              \\
+\texttt{s.replace(s2, s3)     }   & Replace s2 with s3 in s                                                                                                                         \\
+\texttt{s.replace(s2, s3, count)} & Replace s2 with s3 in s at most count times                                                                                                     \\
+\texttt{s.rfind(s2)     }         & Return highest index of s2 in s                                                                                                                 \\
+\texttt{s.rindex(s2)   }          & Return highest index of s2 in s (raise ValueError if not found)                                                                                 \\ \midrule
 \textit{Cases II}                 &                                                                                                                                                 \\ \midrule
-s.casefold()             & Casefold s (aggressive lowercasing for caseless matching) \# 'ßorat' =\textgreater 'ssorat'                                                     \\
-s.islower()              & Return true if s is lowercase                                                                                                                   \\
-s.istitle()              & Return true if s is titlecased \# 'Hello World' =\textgreater true                                                                              \\
-s.isupper()              & Return true if s is uppercase                                                                                                                   \\ \midrule                                         
+\texttt{s.casefold()  }           & Casefold s (aggressive lowercasing for caseless matching) \# 'ßorat' =\textgreater 'ssorat'                                                     \\
+\texttt{s.islower()  }            & Return true if s is lowercase                                                                                                                   \\
+\texttt{s.istitle() }             & Return true if s is titlecased \# 'Hello World' =\textgreater true                                                                              \\
+\texttt{s.isupper()}              & Return true if s is uppercase                                                                                                                   \\ \midrule                                         
 \end{tabular}
 \end{table}
 
@@ -6109,35 +6119,35 @@ s.isupper()              & Return true if s is uppercase                        
 \centering
 \caption*{\textsc{Table A.2} \\ (Cont'ed)}
 \label{tab:string_methods_cted}
-\begin{tabular}{lp{12cm}}
+\begin{tabular}{lp{11cm}}
 \\ \midrule
 \textit{Inspection I}             &                                                                                                                                                 \\ \midrule
-s.endswith(s2)           & Return true if s ends with s2                                                                                                                   \\
-s.isalnum()              & Return true if s is alphanumeric                                                                                                                \\
-s.isalpha()              & Return true if s is alphabetic                                                                                                                  \\
-s.isdecimal()            & Return true if s is decimal                                                                                                                     \\
-s.isnumeric()            & Return true if s is numeric                                                                                                                     \\
-s.startswith(s2)         & Return true is s starts with s2                                                                                                                 \\          
+\texttt{s.endswith(s2)   }        & Return true if s ends with s2                                                                                                                   \\
+\texttt{s.isalnum()       }       & Return true if s is alphanumeric                                                                                                                \\
+\texttt{s.isalpha()        }      & Return true if s is alphabetic                                                                                                                  \\
+\texttt{s.isdecimal()       }     & Return true if s is decimal                                                                                                                     \\
+\texttt{s.isnumeric()        }    & Return true if s is numeric                                                                                                                     \\
+\texttt{s.startswith(s2)      }   & Return true is s starts with s2                                                                                                                 \\          
 \midrule
 \textit{Splitting I}              &                                                                                                                                                 \\ \midrule
-s.join('123')            & Return s joined by iterable '123' \# 'hello' =\textgreater '1hello2hello3'                                                                      \\
-s.partition(sep)         & Partition string at sep and return 3-tuple with part before, the sep itself, and part after \# 'hello' =\textgreater ('he', 'l', 'lo')          \\
-s.rpartition(sep)        & Partition string at last occurrence of sep, return 3-tuple with part before, the sep, and part after \# 'hello' =\textgreater ('hel', 'l', 'o') \\
-s.rsplit(sep, maxsplit)  & Return list of s split by sep with rightmost maxsplits performed                                                                                \\
-s.split(sep, maxsplit)   & Return list of s split by sep with leftmost maxsplits performed                                                                                 \\
-s.splitlines()           & Return a list of lines in s \# 'hello\textbackslash{}nworld' =\textgreater {[}'hello', 'world'{]}                                               \\ \midrule
+\texttt{s.join('123')          }  & Return s joined by iterable '123' \# 'hello' =\textgreater '1hello2hello3'                                                                      \\
+\texttt{s.partition(sep)        } & Partition string at sep and return 3-tuple with part before, the sep itself, and part after \# 'hello' =\textgreater ('he', 'l', 'lo')          \\
+\texttt{s.rpartition(sep)      }  & Partition string at last occurrence of sep, return 3-tuple with part before, the sep, and part after \# 'hello' =\textgreater ('hel', 'l', 'o') \\
+\texttt{s.rsplit(sep, maxsplit)}  & Return list of s split by sep with rightmost maxsplits performed                                                                                \\
+\texttt{s.split(sep, maxsplit)}   & Return list of s split by sep with leftmost maxsplits performed                                                                                 \\
+\texttt{s.splitlines()     }      & Return a list of lines in s \# 'hello\textbackslash{}nworld' =\textgreater {[}'hello', 'world'{]}                                               \\ \midrule
 \textit{Inspection II}            &                                                                                                                                                 \\ \midrule
-s{[}i:j{]}               & Slice of s from i to j                                                                                                                          \\
-s.endswith((s1, s2, s3)) & Return true if s ends with any of string tuple s1, s2, and s3                                                                                   \\
-s.isdigit()              & Return true if s is digit                                                                                                                       \\
-s.isidentifier()         & Return true if s is a valid identifier                                                                                                          \\
-s.isprintable()          & Return true is s is printable                                                                                                                   \\ \midrule
+\texttt{s{[}i:j{]}        }       & Slice of s from i to j                                                                                                                          \\
+\texttt{s.endswith((s1, s2, s3))} & Return true if s ends with any of string tuple s1, s2, and s3                                                                                   \\
+\texttt{s.isdigit()           }   & Return true if s is digit                                                                                                                       \\
+\texttt{s.isidentifier()      }   & Return true if s is a valid identifier                                                                                                          \\
+\texttt{s.isprintable()      }    & Return true is s is printable                                                                                                                   \\ \midrule
 \textit{Whitespace II}            &                                                                                                                                                 \\ \midrule
-s.center(width, pad)     & Center s with padding pad of width \# 'hi' =\textgreater 'padpadhipadpad'                                                                       \\
-s.expandtabs(integer)    & Replace all tabs with spaces of tabsize integer \# 'hello\textbackslash{}tworld' =\textgreater 'hello world'                                    \\
-s.lstrip()               & Remove leading whitespace from s \# ' hello ' =\textgreater 'hello '                                                                            \\
-s.rstrip()               & Remove trailing whitespace from s \# ' hello ' =\textgreater ' hello'                                                                           \\
-s.zfill(width)           & Left fill s with ASCII '0' digits with total length width \# '42' =\textgreater '00042'  
+\texttt{s.center(width, pad)  }   & Center s with padding pad of width \# 'hi' =\textgreater 'padpadhipadpad'                                                                       \\
+\texttt{s.expandtabs(integer)}    & Replace all tabs with spaces of tabsize integer \# 'hello\textbackslash{}tworld' =\textgreater 'hello world'                                    \\
+\texttt{s.lstrip()        }       & Remove leading whitespace from s \# ' hello ' =\textgreater 'hello '                                                                            \\
+\texttt{s.rstrip()       }        & Remove trailing whitespace from s \# ' hello ' =\textgreater ' hello'                                                                           \\
+\texttt{s.zfill(width)  }         & Left fill s with ASCII '0' digits with total length width \# '42' =\textgreater '00042'  
    \\                                                      
 \bottomrule
 \end{tabular}
@@ -6146,217 +6156,154 @@ s.zfill(width)           & Left fill s with ASCII '0' digits with total length w
 
 \section{NumPy Array Manipulation Routines}
 
-\begin{table}[!htbp]
+\begin{sidewaystable}[!htbp]
 \caption{NumPy Universal Functions: Mathematical Operations}
 \label{tab:numpy_math_ufuncs}
 \centering
-\begin{tabular}{lp{8.5cm}}
+\begin{tabular}{lp{13cm}}
 \toprule \toprule 
 Universal Function & Synopsis \\
 \midrule
-add(x1, x2, /[, out, where, casting, order, ...])
-& Add arguments element-wise\\
-subtract(x1, x2, /[, out, where, casting, ...])
-& Subtract arguments, element-wise\\
-multiply(x1, x2, /[, out, where, casting, ...])
-& Multiply arguments element-wise\\
-matmul(x1, x2, /[, out, casting, order, ...])
-& Matrix product of two arrays\\
-divide(x1, x2, /[, out, where, casting, ...])
-& Divide arguments element-wise\\
-logaddexp(x1, x2, /[, out, where, casting, ...])
-& Logarithm of the sum of exponentiations of the inputs\\
-logaddexp2(x1, x2, /[, out, where, casting, ...])
-& Logarithm of the sum of exponentiations of the inputs in base-2\\
-true_divide(x1, x2, /[, out, where, ...])
-& Divide arguments element-wise\\
-floor_divide(x1, x2, /[, out, where, ...])
-& Return the largest integer smaller or equal to the division of the inputs\\
-negative(x, /[, out, where, casting, order, ...])
-& Numerical negative, element-wise\\
-positive(x, /[, out, where, casting, order, ...])
-& Numerical positive, element-wise\\
-power(x1, x2, /[, out, where, casting, ...])
-& First array elements raised to powers from second array, element-wise\\
-float_power(x1, x2, /[, out, where, ...])
-& First array elements raised to powers from second array, element-wise\\
-remainder(x1, x2, /[, out, where, casting, ...])
-& Returns the element-wise remainder of division\\
-mod(x1, x2, /[, out, where, casting, order, ...])
-& Returns the element-wise remainder of division\\
-fmod(x1, x2, /[, out, where, casting, ...])
-& Returns the element-wise remainder of division\\
-divmod(x1, x2[, out1, out2], / [[, out, ...])
-& Return element-wise quotient and remainder simultaneously\\
-absolute(x, /[, out, where, casting, order, ...])
-& Calculate the absolute value element-wise\\
-fabs(x, /[, out, where, casting, order, ...])
-& Compute the absolute values element-wise\\
-rint(x, /[, out, where, casting, order, ...])
-& Round elements of the array to the nearest integer\\
-sign(x, /[, out, where, casting, order, ...])
-& Returns an element-wise indication of the sign of a number\\
-heaviside(x1, x2, /[, out, where, casting, ...])
-& Compute the Heaviside step function\\
-conj(x, /[, out, where, casting, order, ...])
-& Return the complex conjugate, element-wise\\
-conjugate(x, /[, out, where, casting, ...])
-& Return the complex conjugate, element-wise\\
-exp(x, /[, out, where, casting, order, ...])
-& Calculate the exponential of all elements in the input array\\
-exp2(x, /[, out, where, casting, order, ...])
-& Calculate 2**p for all p in the input array\\
-log(x, /[, out, where, casting, order, ...])
-& Natural logarithm, element-wise\\
-log2(x, /[, out, where, casting, order, ...])
-& Base-2 logarithm of x\\
-log10(x, /[, out, where, casting, order, ...])
-& Return the base 10 logarithm of the input array, element-wise\\
-expm1(x, /[, out, where, casting, order, ...])
-& Calculate exp(x) - 1 for all elements in the array\\
-sqrt(x, /[, out, where, casting, order, ...])
-& Return the non-negative square-root of an array, element-wise\\
+\texttt{add(x1, x2, /[, out, where, casting, order, ...])}& Add arguments element-wise}\\
+\texttt{subtract(x1, x2, /[, out, where, cas:ting, ...])}& Subtract arguments, element-wise}\\
+\texttt{multiply(x1, x2, /[, out, where, castin:g, ...])}& Multiply arguments element-wise}\\
+\texttt{matmul(x1, x2, /[, out, casting, order, ...])}& Matrix product of two arrays}\\
+\texttt{divide(x1, x2, /[, out, where, casting, ...])}& Divide arguments element-wise}\\
+\texttt{logaddexp(x1, x2, /[, out, where, casting, ...])}& Logarithm of the sum of exponentiations of the inputs}\\
+\texttt{logaddexp2(x1, x2, /[, out, where, casting, ...])}& Logarithm of the sum of exponentiations of the inputs in base-2}\\
+\texttt{true\_divide(x1, x2, /[, out, where, ...])}& Divide arguments element-wise}\\
+\texttt{floor\_divide(x1, x2, /[, out, where, ...])}& Return the largest integer smaller or equal to the division of the inputs}\\
+\texttt{negative(x, /[, out, where, casting, order, ...])}& Numerical negative, element-wise}\\
+\texttt{positive(x, /[, out, where, casting, order, ...])}& Numerical positive, element-wise}\\
+\texttt{power(x1, x2, /[, out, where, casting, ...])}& First array elements raised to powers from second array, element-wise}\\
+\texttt{float\_power(x1, x2, /[, out, where, ...])}& First array elements raised to powers from second array, element-wise}\\
+\texttt{remainder(x1, x2, /[, out, where, casting, ...])}& Returns the element-wise remainder of division}\\
+\texttt{mod(x1, x2, /[, out, where, casting, order, ...])}& Returns the element-wise remainder of division}\\
+\texttt{fmod(x1, x2, /[, out, where, casting, ...])}& Returns the element-wise remainder of division}\\
+\texttt{divmod(x1, x2[, out1, out2], / [[, out, ...])}& Return element-wise quotient and remainder simultaneously}\\
+\texttt{absolute(x, /[, out, where, casting, order, ...])}& Calculate the absolute value element-wise}\\
+\texttt{fabs(x, /[, out, where, casting, order, ...])}& Compute the absolute values element-wise}\\
+\texttt{rint(x, /[, out, where, casting, order, ...])}& Round elements of the array to the nearest integer}\\
+\texttt{sign(x, /[, out, where, casting, order, ...])}& Returns an element-wise indication of the sign of a number}\\
+\texttt{heaviside(x1, x2, /[, out, where, casting, ...])}& Compute the Heaviside step function}\\
+\texttt{conj(x, /[, out, where, casting, order, ...])}& Return the complex conjugate, element-wise}\\
+\texttt{conjugate(x, /[, out, where, casting, ...])}& Return the complex conjugate, element-wise}\\
+\texttt{exp(x, /[, out, where, casting, order, ...])}& Calculate the exponential of all elements in the input array}\\
+\texttt{exp2(x, /[, out, where, casting, order, ...])}& Calculate 2**p for all p in the input array}\\
+\texttt{log(x, /[, out, where, casting, order, ...])}& Natural logarithm, element-wise}\\
+\texttt{log2(x, /[, out, where, casting, order, ...])}& Base-2 logarithm of x}\\
+\texttt{log10(x, /[, out, where, casting, order, ...])}& Return the base 10 logarithm of the input array, element-wise}\\
+\texttt{expm1(x, /[, out, where, casting, order, ...])}& Calculate exp(x) - 1 for all elements in the array}\\
+\texttt{sqrt(x, /[, out, where, casting, order, ...])}& Return the non-negative square-root of an array, element-wise}\\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{sidewaystable}
 \clearpage
 
-\begin{table}
+\begin{sidewaystable}
 \caption{NumPy Universal Functions: Trigonometric Operations}
 \centering
-\begin{tabular}{lp{8.5cm}}
+\begin{tabular}{lp{13cm}}
 \toprule \toprule 
-Universal Function & Synopsis \\
+Universal Function & Synopsis }\\
 \midrule
-sin(x, /[, out, where, casting, order, ...])
-& Trigonometric sine, element-wise\\
-cos(x, /[, out, where, casting, order, ...])
-& Cosine element-wise\\
-tan(x, /[, out, where, casting, order, ...])
-& Compute tangent element-wise\\
-arcsin(x, /[, out, where, casting, order, ...])
-& Inverse sine, element-wise\\
-arccos(x, /[, out, where, casting, order, ...])
-& Trigonometric inverse cosine, element-wise\\
-arctan(x, /[, out, where, casting, order, ...])
-& Trigonometric inverse tangent, element-wise\\
-arctan2(x1, x2, /[, out, where, casting, ...])
-& Element-wise arc tangent of x1/x2 choosing the quadrant correctly\\
-hypot(x1, x2, /[, out, where, casting, ...])
-& Given the "legs" of a right triangle, return its hypotenuse\\
-sinh(x, /[, out, where, casting, order, ...])
-& Hyperbolic sine, element-wise\\
-cosh(x, /[, out, where, casting, order, ...])
-& Hyperbolic cosine, element-wise\\
-tanh(x, /[, out, where, casting, order, ...])
-& Compute hyperbolic tangent element-wise\\
-arcsinh(x, /[, out, where, casting, order, ...])
-& Inverse hyperbolic sine element-wise\\
-arccosh(x, /[, out, where, casting, order, ...])
-& Inverse hyperbolic cosine, element-wise\\
-arctanh(x, /[, out, where, casting, order, ...])
-& Inverse hyperbolic tangent element-wise\\
-degrees(x, /[, out, where, casting, order, ...])
-& Convert angles from radians to degrees\\
-radians(x, /[, out, where, casting, order, ...])
-& Convert angles from degrees to radians\\
-deg2rad(x, /[, out, where, casting, order, ...])
-& Convert angles from degrees to radians\\
-rad2deg(x, /[, out, where, casting, order, ...])
-& Convert angles from radians to degrees\\
+\texttt{sin(x, /[, out, where, casting, order, ...])} & Trigonometric sine, element-wise}\\
+\texttt{cos(x, /[, out, where, casting, order, ...])} & Cosine element-wise}\\
+\texttt{tan(x, /[, out, where, casting, order, ...])} & Compute tangent element-wise}\\
+\texttt{arcsin(x, /[, out, where, casting, order, ...])} & Inverse sine, element-wise}\\
+\texttt{arccos(x, /[, out, where, casting, order, ...])} & Trigonometric inverse cosine, element-wise}\\
+\texttt{arctan(x, /[, out, where, casting, order, ...])} & Trigonometric inverse tangent, element-wise}\\
+\texttt{arctan2(x1, x2, /[, out, where, casting, ...])} & Element-wise arc tangent of x1/x2 choosing the quadrant correctly}\\
+\texttt{hypot(x1, x2, /[, out, where, casting, ...])} & Given the "legs" of a right triangle, return its hypotenuse}\\
+\texttt{sinh(x, /[, out, where, casting, order, ...])} & Hyperbolic sine, element-wise}\\
+\texttt{cosh(x, /[, out, where, casting, order, ...])} & Hyperbolic cosine, element-wise\\
+\texttt{tanh(x, /[, out, where, casting, order, ...])} & Compute hyperbolic tangent element-wise\\
+\texttt{arcsinh(x, /[, out, where, casting, order, ...])} & Inverse hyperbolic sine element-wise\\
+\texttt{arccosh(x, /[, out, where, casting, order, ...])} & Inverse hyperbolic cosine, element-wise\\
+\texttt{arctanh(x, /[, out, where, casting, order, ...])} & Inverse hyperbolic tangent element-wise\\
+\texttt{degrees(x, /[, out, where, casting, order, ...])} & Convert angles from radians to degrees\\
+\texttt{radians(x, /[, out, where, casting, order, ...])} & Convert angles from degrees to radians\\
+\texttt{deg2rad(x, /[, out, where, casting, order, ...])} & Convert angles from degrees to radians\\
+\texttt{rad2deg(x, /[, out, where, casting, order, ...])} & Convert angles from radians to degrees\\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{sidewaystable}
 \clearpage
 
-\begin{table}
+\begin{sidewaystable}
 \caption{NumPy Universal Functions: Floating Operations}
 \centering
-\begin{tabular}{lp{8.5cm}}
+\begin{tabular}{lp{14cm}}
 \toprule \toprule 
 Universal Function & Synopsis \\
 \midrule
-isfinite(x, /[, out, where, casting, order, ...])
-& Test element-wise for finiteness (not infinity and not Not a Number)\\
-isinf(x, /[, out, where, casting, order, ...])
-&  Test element-wise for positive or negative infinity\\
-isnan(x, /[, out, where, casting, order, ...])
-& Test element-wise for NaN and return the result as a boolean array\\
-isnat(x, /[, out, where, casting, order, ...])
-& Test element-wise for NaT (not a time) and return the result as a boolean array\\
-fabs(x, /[, out, where, casting, order, ...])
-& Compute the absolute values element-wise\\
-signbit(x, /[, out, where, casting, order, ...])
-& Returns element-wise True where signbit is set (less than zero)\\
-copysign(x1, x2, /[, out, where, casting, ...])
-& Change the sign of x1 to that of x2, element-wise\\
-nextafter(x1, x2, /[, out, where, casting, ...])
-& Return the next floating-point value after x1 towards x2, element-wise\\
-spacing(x, /[, out, where, casting, order, ...])
-& Return the distance between x and the nearest adjacent number\\
-modf(x[, out1, out2], / [[, out, where, ...])
-& Return the fractional and integral parts of an array, element-wise\\
-ldexp(x1, x2, /[, out, where, casting, ...])
-& Returns x1 * 2**x2, element-wise\\
-frexp(x[, out1, out2], / [[, out, where, ...])
-& Decompose the elements of x into mantissa and twos exponent\\
-fmod(x1, x2, /[, out, where, casting, ...])
-& Returns the element-wise remainder of division\\
-floor(x, /[, out, where, casting, order, ...])
-& Return the floor of the input, element-wise\\
-ceil(x, /[, out, where, casting, order, ...])
-& Return the ceiling of the input, element-wise\\
-trunc(x, /[, out, where, casting, order, ...])
-& Return the truncated value of the input, element-wise\\
+\texttt{isfinite(x, /[, out, where, casting, order, ...])}& Test element-wise for finiteness (not infinity and not Not a Number)\\
+\texttt{isinf(x, /[, out, where, casting, order, ...])}&  Test element-wise for positive or negative infinity\\
+\texttt{isnan(x, /[, out, where, casting, order, ...])}& Test element-wise for NaN and return the result as a boolean array\\
+\texttt{isnat(x, /[, out, where, casting, order, ...])}& Test element-wise for NaT (not a time) and return the result as a boolean array\\
+\texttt{fabs(x, /[, out, where, casting, order, ...])}& Compute the absolute values element-wise\\
+\texttt{signbit(x, /[, out, where, casting, order, ...])}& Returns element-wise True where signbit is set (less than zero)\\
+\texttt{copysign(x1, x2, /[, out, where, casting, ...])}& Change the sign of x1 to that of x2, element-wise\\
+\texttt{nextafter(x1, x2, /[, out, where, casting, ...])}& Return the next floating-point value after x1 towards x2, element-wise\\
+\texttt{spacing(x, /[, out, where, casting, order, ...])}& Return the distance between x and the nearest adjacent number\\
+\texttt{modf(x[, out1, out2], / [[, out, where, ...])}& Return the fractional and integral parts of an array, element-wise\\
+\texttt{ldexp(x1, x2, /[, out, where, casting, ...])}& Returns x1 * 2**x2, element-wise\\
+\texttt{frexp(x[, out1, out2], / [[, out, where, ...])}& Decompose the elements of x into mantissa and twos exponent\\
+\texttt{fmod(x1, x2, /[, out, where, casting, ...])}& Returns the element-wise remainder of division\\
+\texttt{floor(x, /[, out, where, casting, order, ...])}& Return the floor of the input, element-wise\\
+\texttt{ceil(x, /[, out, where, casting, order, ...])}& Return the ceiling of the input, element-wise\\
+\texttt{trunc(x, /[, out, where, casting, order, ...])}& Return the truncated value of the input, element-wise\\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{sidewaystable}
 \clearpage
 
-\begin{table}
+\begin{sidewaystable}
+	\centering
 \caption{NumPy Universal Functions: Comparison Operations}
 \label{tab:numpy_comparison_ufuncs}
 \centering
-\begin{tabular}{lp{8.5cm}}
+\begin{tabular}{lp{13cm}}
 \toprule \toprule 
 Universal Function & Synopsis \\ \midrule
-greater(x1, x2, /[, out, where, casting, ...])
-& Return the truth value of (x1 > x2) element-wise\\
-greater_equal(x1, x2, /[, out, where, ...])
-& Return the truth value of (x1 >= x2) element-wise\\
-less(x1, x2, /[, out, where, casting, ...])
-& Return the truth value of (x1 < x2) element-wise\\
-less_equal(x1, x2, /[, out, where, casting, ...])
-& Return the truth value of (x1 <= x2) element-wise\\
-not_equal(x1, x2, /[, out, where, casting, ...])
-& Return (x1 != x2) element-wise\\
-equal(x1, x2, /[, out, where, casting, ...])
-& Return (x1 == x2) element-wise\\
-logical_and(x1, x2, /[, out, where, ...])
+\texttt{greater(x1, x2, /[, out, where, casting, ...])}
+& Return the truth value of (x1 > x2)} element-wise\\
+\texttt{greater\_equal(x1, x2, /[, out, where, ...])}
+& Return the truth value of (x1 >= x2)} element-wise\\
+\texttt{less(x1, x2, /[, out, where, casting, ...])}
+& Return the truth value of (x1 < x2)} element-wise\\
+\texttt{less\_equal(x1, x2, /[, out, where, casting, ...])}
+& Return the truth value of (x1 <= x2)} element-wise\\
+\texttt{not\_equal(x1, x2, /[, out, where, casting, ...])}
+& Return (x1 != x2)} element-wise\\
+\texttt{equal(x1, x2, /[, out, where, casting, ...])}
+& Return (x1 == x2)} element-wise\\
+\texttt{logical\_and(x1, x2, /[, out, where, ...])}
 & Compute the truth value of x1 AND x2 element-wise\\
-logical_or(x1, x2, /[, out, where, casting, ...])
+\texttt{logical\_or(x1, x2, /[, out, where, casting, ...])}
 & Compute the truth value of x1 OR x2 element-wise\\
-logical_xor(x1, x2, /[, out, where, ...])
+\texttt{logical\_xor(x1, x2, /[, out, where, ...])}
 & Compute the truth value of x1 XOR x2, element-wise\\
-logical_not(x, /[, out, where, casting, ...])
+\texttt{logical\_not(x, /[, out, where, casting, ...])}
 & Compute the truth value of NOT x element-wise\\
-maximum(x1, x2, /[, out, where, casting, ...])
+\texttt{maximum(x1, x2, /[, out, where, casting, ...])}
 & Element-wise maximum of array elements\\
-minimum(x1, x2, /[, out, where, casting, ...])
+\texttt{minimum(x1, x2, /[, out, where, casting, ...])}
 & Element-wise minimum of array elements\\
-fmax(x1, x2, /[, out, where, casting, ...])
+\texttt{fmax(x1, x2, /[, out, where, casting, ...])}
 & Element-wise maximum of array elements\\
-fmin(x1, x2, /[, out, where, casting, ...])
+\texttt{fmin(x1, x2, /[, out, where, casting, ...])}
 & Element-wise minimum of array elements\\
 \bottomrule
 \end{tabular}
-\end{table}
+\end{sidewaystable}
 \clearpage
 
-\begin{table}
+\begin{sidewaystable}
+	\centering
 	\caption{NumPy Array Manipulation Routines}
 	\label{tab:numpy_array_manipulation}
-	\begin{tabular}{lp{8.5cm}}
+	\begin{tabular}{lp{13cm}}
 		\toprule \toprule
 		Routine & Synopsis \\ \midrule
 		\multicolumn{1}{l}{\textit{Basic operations}} \\ 
@@ -6409,11 +6356,12 @@ fmin(x1, x2, /[, out, where, casting, ...])
                 Remove axes of length one from a\\
 		\midrule
 	\end{tabular}
-\end{table}
+\end{sidewaystable}
 
-\begin{table}
+\begin{sidewaystable}
+	\centering 
 	\caption*{\textsc{Table A.7} (cont'd)}
-	\begin{tabular}{p{7.5cm}p{8.5cm}}
+	\begin{tabular}{p{7.5cm}p{13cm}}
 		\midrule
 		\multicolumn{1}{l}{\textit{Changing kind of array}} \\ 
 		\midrule
@@ -6467,12 +6415,13 @@ fmin(x1, x2, /[, out, where, casting, ...])
                 Split an array into multiple sub-arrays vertically (row-wise)\\
 		\midrule
 	\end{tabular}
-\end{table}
+\end{sidewaystable}
 \clearpage
 
-\begin{table}
+\begin{sidewaystable}
+	\centering
 	\caption*{\textsc{Table A.7} (cont'd)}
-	\begin{tabular}{p{7.5cm}p{8.5cm}}
+	\begin{tabular}{p{7.5cm}p{13cm}}
 		\midrule
 		\multicolumn{1}{l}{\textit{Tiling elements}} \\ 
 		\midrule
@@ -6513,49 +6462,8 @@ fmin(x1, x2, /[, out, where, casting, ...])
 		\bottomrule \\[-1.8ex]
 	        \multicolumn{2}{l}{Notes: the statements included in the `Routine' column assume NumPy is loaded with the \texttt{np} alias.} \\
 	\end{tabular}
-\end{table}
-
-\section{Pandas Features for Handling Time-Related Data}
-\label{sec:pandas_time}
-
-\begin{table}
-	\caption{Timestamp Objects: Functions, Methods, and Attributes}
-	\label{tab:pandas_timestamp}
-	\begin{tabular}{p{7.5cm}p{8.5cm}}
-		\toprule\toprule
-		Routine & Synopsys \\
-		\midrule
-		\texttt{pd.} & 
-                \\
-		\bottomrule
-      	\end{tabular}
-\end{table}
-
-\begin{table}
-	\caption{Timedelta Objects: Functions, Methods, and Attributes}
-	\label{tab:pandas_timedelta}
-	\begin{tabular}{p{7.5cm}p{8.5cm}}
-		\toprule\toprule
-		Routine & Synopsys \\
-		\midrule
-		\texttt{pd.} & 
-                \\
-		\bottomrule
-      	\end{tabular}
-\end{table}
-
-\begin{table}
-	\caption{Period Objects: Functions, Methods, and Attributes}
-	\label{tab:pandas_period}
-	\begin{tabular}{p{7.5cm}p{8.5cm}}
-		\toprule\toprule
-		Routine & Synopsys \\
-		\midrule
-		\texttt{pd.} & 
-                \\
-		\bottomrule
-      	\end{tabular}
-\end{table}
+\end{sidewaystable}
+\clearpage
 
 \chapter{Collaborative and Versioning Tools}
 
