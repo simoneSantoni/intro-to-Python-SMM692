@@ -1,29 +1,36 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Interest towards data-science related programming languages over time\relax }}{12}{figure.caption.5}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces The suggested workflow to learn to code\relax }}{15}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Interest towards data-science related programming languages over time\relax }}{4}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces The suggested workflow to learn to code\relax }}{7}{figure.caption.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces A screenshot showing a sample of applications accessible from within Anaconda Navigator\relax }}{19}{figure.caption.8}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces A stylized representation of Python's execution model\relax }}{20}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces A screenshot showing the execution of the minimal script included in Snippet 1.1\relax }}{22}{figure.caption.10}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces A screenshot of an interactive Python shell\relax }}{22}{figure.caption.11}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces A screenshot of an interactive IPython shell\relax }}{23}{figure.caption.12}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces A screenshot of a Jupyter notebook session\relax }}{24}{figure.caption.13}%
-\contentsline {figure}{\numberline {2.7}{\ignorespaces A screenshot of an interactive IPython shell in VSCode\relax }}{24}{figure.caption.14}%
-\contentsline {figure}{\numberline {2.8}{\ignorespaces A screenshot of a Jupyter notebook session in VSCode\relax }}{25}{figure.caption.15}%
-\contentsline {figure}{\numberline {2.9}{\ignorespaces A screenshot showing how to create a Python environment using \texttt {conda} from the command line\relax }}{28}{figure.caption.16}%
-\contentsline {figure}{\numberline {2.10}{\ignorespaces A screenshot showing how to populate a Python environment with libraries using \texttt {conda} from the command line\relax }}{28}{figure.caption.17}%
-\contentsline {figure}{\numberline {2.11}{\ignorespaces A screenshot showing how to create a new environment from within the `Environments' section of Anaconda Navigator\relax }}{30}{figure.caption.18}%
-\contentsline {figure}{\numberline {2.12}{\ignorespaces A screenshot showing how to add Python modules to a (newly created) environment from within the `Environments' section of Anaconda Navigator\relax }}{31}{figure.caption.19}%
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces A contour plot showing the associations among X, Y, and Z\relax }}{94}{figure.caption.37}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Visual representation of NumPy \href {https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt {.sin}} and \href {https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt {.cos}} functions as per Snippet 5.12.\relax }}{104}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces A visual illustration of the least-square estimation carried out in Snippet 5.16\relax }}{119}{figure.caption.51}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces A visual illustration of the Normal and Poisson data generated in Snippet 5.18\relax }}{127}{figure.caption.56}%
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces A stylized representation of a case-by-variable data structure\relax }}{135}{figure.caption.59}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces A stylized representation of a `wide' data structure\relax }}{157}{figure.caption.61}%
-\contentsline {figure}{\numberline {5.3}{\ignorespaces A stylized representation of a `long' data structure\relax }}{158}{figure.caption.62}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces A screenshot showing a sample of applications accessible from within Anaconda Navigator\relax }}{11}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces A stylized representation of Python's execution model\relax }}{12}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces A screenshot showing the execution of the minimal script included in Snippet 1.1\relax }}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A screenshot of an interactive Python shell\relax }}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces A screenshot of an interactive IPython shell\relax }}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces A screenshot of a Jupyter notebook session\relax }}{16}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces A screenshot of an interactive IPython shell in VSCode\relax }}{16}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces A screenshot of a Jupyter notebook session in VSCode\relax }}{17}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces A screenshot showing how to create a Python environment using \texttt {conda} from the command line\relax }}{20}{figure.caption.16}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces A screenshot showing how to populate a Python environment with libraries using \texttt {conda} from the command line\relax }}{20}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces A screenshot showing how to create a new environment from within the `Environments' section of Anaconda Navigator\relax }}{22}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces A screenshot showing how to add Python modules to a (newly created) environment from within the `Environments' section of Anaconda Navigator\relax }}{23}{figure.caption.19}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A contour plot showing the associations among X, Y, and Z\relax }}{86}{figure.caption.37}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Visual representation of NumPy \href {https://numpy.org/doc/stable/reference/generated/numpy.sin.html\#numpy.sin}{\texttt {.sin}} and \href {https://numpy.org/doc/stable/reference/generated/numpy.cos.html\#numpy.cos}{\texttt {.cos}} functions as per Snippet 5.12.\relax }}{96}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces A visual illustration of the least-square estimation carried out in Snippet 5.16\relax }}{111}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces A visual illustration of the Normal and Poisson data generated in Snippet 5.18\relax }}{119}{figure.caption.56}%
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces A stylized representation of a case-by-variable data structure\relax }}{127}{figure.caption.59}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces A stylized representation of a `wide' data structure\relax }}{149}{figure.caption.61}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces A stylized representation of a `long' data structure\relax }}{150}{figure.caption.62}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces The distinctive features of GitHub \textit {vis a' vis} traditional LMS\relax }}{184}{figure.caption.79}%
+\contentsline {figure}{\numberline {B.2}{\ignorespaces A screenshot of the GitHub repository behind \href {https://github.com/simoneSantoni/net-analysis-smm638}{SMM638 --- Network analytics}. Please refer to: \url {https://github.com/simoneSantoni/net-analysis-smm638}\relax }}{185}{figure.caption.80}%
+\contentsline {figure}{\numberline {B.3}{\ignorespaces A screenshot of the GitHub desktop application webpage\relax }}{186}{figure.caption.81}%
+\contentsline {figure}{\numberline {B.4}{\ignorespaces A screenshot showing how to login into a Github account from within GitHub Desktop\relax }}{187}{figure.caption.82}%
+\contentsline {figure}{\numberline {B.5}{\ignorespaces A screeshot showing how to search for a repository name and then clone it\relax }}{187}{figure.caption.83}%
+\contentsline {figure}{\numberline {B.6}{\ignorespaces A screenshot showing how to clone a repo using its URL\relax }}{188}{figure.caption.84}%
+\contentsline {figure}{\numberline {B.7}{\ignorespaces A screenshot showing the actions available through GitHub Desktop\relax }}{188}{figure.caption.85}%

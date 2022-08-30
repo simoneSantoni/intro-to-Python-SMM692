@@ -81,7 +81,6 @@
 \usepackage{pgfplots}
 \usepackage{pgf}
 
-
 %% =========================== Color options ==============================
 % custom colors
 \definecolor{base_c}{rgb}{0.6,0,0}
@@ -97,8 +96,11 @@ allcolors=tri_2,
 %urlcolor=CadetBlue
 ]{hyperref}%
 
-% =========================== Utilities ===================================
-\usepackage{lipsum}% generate filler text
+% =========================== Copyright ===================================
+\makepagestyle{mystyle}% Define 'mystyle' page style
+  \makeevenfoot{mystyle}{\textcopyright\ Author name}{\thepage}{}% Even page footer
+  \makeoddfoot{mystyle}{}{\thepage}{\textcopyright\ Author name}% Odd page footer
+\pagestyle{mystyle}% Set page style to 'mystyle'
 
 % ========================= Cornell Notes stuff ============================
 \usepackage{paracol} % added <<<<<<<<<<<<<<<<<<<<<
@@ -172,13 +174,16 @@ allcolors=tri_2,
 }
 
 % ============================ Document attrs ==============================
+\usepackage[object=pgfhan]{pgfornament}
+
+% ============================ Document attrs ==============================
 \date{}
 \parindent=0pt
 
-
 % ========================== Document contents ============================= 
-
 \begin{document}
+
+\frontmatter
 
 \begin{tikzpicture}[overlay,remember picture]
 
@@ -286,8 +291,24 @@ Bayes Business School\\[3pt]
 }
 \end{tikzpicture}
 
-\vspace{9em}
-\centering (Version 1.1 --- last edit, August 21$^{st}$ 2022)
+\clearpage
+\centering 
+
+\pgfornament[width = 3cm, color = base_c]{7}
+
+\vspace{6em}
+
+\textbf{Copyright}
+
+\copyright Dr. Simone Santoni (simone.santoni.1@city.ac.uk)
+
+Do not share or distribute without permission
+
+\vspace{3em}
+
+\textbf{Version}
+
+Current version is 1.0 --- last edited on August 21$^{st}$ 2022
 \clearpage
 
 \tableofcontents
@@ -298,6 +319,7 @@ Bayes Business School\\[3pt]
 
 \clearpage
 
+\mainmatter
 \chapter*{Preface}
 
 \raggedright These notes were prepared for the Summer Module `SMM-692 --- Introduction to Programming in Python.' The materials I present condense more than ten years of experience I developed using Python for industrial applications and research. At the same time, the materials incorporate the feedback from four different cohorts of Bayes MSc students who took SMM692 and other modules for which Python is a prerequisite, such as `SMM638 --- Network Analytics,' `SMM635 --- Data Visualization,' and `SMM694 --- Natural Language Processing.' 
@@ -6465,9 +6487,108 @@ Universal Function & Synopsis \\ \midrule
 \end{sidewaystable}
 \clearpage
 
-\chapter{Collaborative and Versioning Tools}
+\chapter{GitHub: The World-Leading Collaborative and Versioning Tool}
 
-...
+\section{GitHub in a Nuthshell}
+
+GitHub is one of the most prominent --- if not the most prominent --- Internet hosting service for software development and version control using Git, the free and OSS for distributed version control. Mainly, GitHub allows to:
+
+\begin{itemize}
+	\item Host and manage repositories containing source code
+	\item Share a repository with other users, publicly or privately
+	\item Track changes to the source code
+	\item Collaborate with other users to develop the source code
+\end{itemize}
+
+\section{GitHub in the Education Sector}
+
+Since the 2018/19 academic year, my Python-related teaching has based on the versioning system and collaborative platform GitHub. According to recent research, GitHub has many distinctive features (see Figure \ref{fig:github_features}) that make it a valuable teaching tool in teaching quantiative business subjects. Particularly, Zagalsky and colleagues\footnote{Zagalsky, Alexey, Joseph Feliciano, Margaret-Anne Storey, Yiyun Zhao, and Weiliang Wang. ``The emergence of github as a collaborative platform for education'' In \textit{Proceedings of the 18th ACM conference on computer supported cooperative work & social computing}, pp. 1906-1917. 2015.} identify the following benefits of using GitHub for education:
+
+\begin{itemize}
+	\item Transparency of activities
+	\item Encouraging learners' participation
+	\item Industry relevance
+	\item Ease of use
+	\item Free academic licensing
+	\item Shared spaces and course versioning
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{github_features.png}
+\caption{The distinctive features of GitHub \textit{vis a' vis} traditional LMS}
+\vspace{-1em}
+\caption*{\textit{Notes.} --- Source is Zagalsky et al. 2015.}
+\label{fig:github_features}
+\end{figure}
+
+\quad Considering the characteristics of many Bayes Business Analytics modules, I think GitHub offers several advantages. \textit{First}, it allows lecturers to share a substantial volume of computer code efficiently and transparently without creating a sense of information overload for learners. Below is a quote regarding the module `SMM638, Network Analytics' offered in the 2019-20 academic year, when I started to use GitHub in my teaching:
+
+\begin{quote}
+\textit{``I think GitHub is a very efficient platform for our study. It's mainly because our teacher always updates all information in advance, so we can easily find everything we want.''}
+\end{quote}
+
+\quad Unlike a traditional Moodle page, GitHub has a very granular and public logging system and visualisations that highlight any change in the set of materials hosted in a repository (see, for example, Figure \ref{fig:github_repo}). Furthermore, learners can decide how and to what extent to receive notifications on the changes affecting a GitHub repository.\footnote{Especially, GitHub users can fine-tune the amount of information to receive by selecting the following options: i) by following the user owning a repository, a learner gets their GitHub homepage with the recent activities performed by that user; ii) by starring a repository, a learner has access to shortcuts to quickly and conveniently access a GitHub repository; iii) by watching a repository, a learner receives emails regarding any edit regarding a GitHub repository.} Regarding `SMM694, Applied Natural Language Processing' --- delivered between May and July 2022 --- 15 students out of 67 (22\%) decided `to watch' the GitHub repository hosting my teaching materials. Hence, they received real-time notifications on any edits of the 81 commits I made in the Summer Term;\footnote{The inter-temporal distribution of commits regarding SMM694 is available at \url{https://github.com/simoneSantoni/NLP-orgs-markets/graphs/commit-activity}} 43 students out of 67 (64\%) added my GitHub repository to their personal library; \R{-108} 31 out of 67 (42\%) reused my repository's material for a new project.
+
+\quad \textit{Second}, by engaging with GitHub, learners familiarise themselves with the industry-standard versioning software and collaborative platform. \textit{Third}, GitHub is a piece of open-source and free software. As such, it presents no entry barriers for learners and can be deployed to sustain inclusive forms of teaching over and beyond the boundaries of individual academic institutions.\footnote{Iiyoshi, Toru, and M. S. V. Kumar. \textit{Opening up education: The collective advancement of education through open technology, open content, and open knowledge}. The MIT Press, 2010.} According to the tracking system of GitHub, as of today, there are 154 projects (a.k.a., forks) that build on my teaching materials covering Python, network analytics, data visualisation, and NLP. \texit{Finally}, in the case of hybrid teaching, the public logging system of GitHub provides the group of face-to-face learners and the group of remote learners with equivalent information about the functioning of the module and teaching materials. In other words, GitHub can prevent the formation of information asymmetry that potentially penalise remote learners because of their lack of physical proximity to the lecturer and fellow learners.
+
+\begin{sidewaysfigure}[!htbp]
+\centering
+\includegraphics[width=0.8\textwidth]{github_repo.png}
+\caption{A screenshot of the GitHub repository behind \href{https://github.com/simoneSantoni/net-analysis-smm638}{SMM638 --- Network analytics}. Please refer to: \url{https://github.com/simoneSantoni/net-analysis-smm638}}.
+\label{fig:github_repo}
+\end{sidewaysfigure}
+\clearpage
+
+\section{Getting Started with GitHub}
+
+In order to work with GitHub, you need to have an account. You can create one for free at \url{https://github.com}. Programming newbies may want to interact with GitHub through GitHub Desktop (see Figure \ref{fig:github_desktop}) rather than through the command line. The graphical installer of GitHub Desktop is available at \url{https://desktop.github.com/downloads} and is free to use.
+
+\begin{figure}[!htbp]
+	\centerin
+	\includegraphics[width=0.95\textwidth]{github_desktop}
+	\caption{A screenshot of the GitHub desktop application webpage}
+	\label{fig:github_desktop}
+\end{figure}
+
+\quad Once GitHub Desktop is  installed on your computer, you have to login to your account. You can do this via the `Preferences' menu (see Figure \ref{fig:github_login}). At this point, it is possible to interact with GitHub. For example, you may `clone' a repository hosted on GitHub. To do that, you search for a repository name (see Figure \ref{fig:fetch_name_and_clone}) or pass the URL of the repository (see Figure \ref{fig:clone_with_url}). Then, you have a local copy of the repository at the exact moment in time when you cloned it. 
+
+\quad GihubDesktop has point-and-click structure (see Figure \ref{}):
+
+\begin{itemize}
+	\item The left-hand side button, named  is for selecting the cloned repository one wants to work with 
+	\item Fetch the changes intervened in the repository since the clone (or the last fetch)
+	\item 
+\end{itemize}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\textwidth]{github_desktop_login}
+	\caption{A screenshot showing how to login into a Github account from within GitHub Desktop}
+	\label{fig:github_login}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=1\textwidth]{fetch_name_and_clone}
+	\caption{A screeshot showing how to search for a repository name and then clone it}
+	\label{fig:fetch_name_and_clone}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=1\textwidth]{clone_with_url}
+	\caption{A screenshot showing how to clone a repo using its URL}
+	\label{fig:clone_with_url}
+\end{figure}
+
+\begin{figure}
+	\includegraphics[width=1\textwidth]{github_options}
+	\caption{A screenshot showing the actions available through GitHub Desktop}
+	\label{fig:github_options}
+\end{figure}
+
+\clearpage
+
+\theendnotes
 
 \end{appendices}
 
