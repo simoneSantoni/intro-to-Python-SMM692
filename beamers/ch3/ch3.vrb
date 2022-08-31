@@ -1,0 +1,29 @@
+\frametitle{List Type Fundamentals}
+\begin{columns}
+    \begin{column}{0.35\textwidth}
+    \quad \textbf{What:} A Python \href{https://docs.python.org/3/tutorial/datastructures.html}{\texttt{list}} is an \emph{ordered}, \emph{mutable} array of objects. A list is constructed by specifying the objects, separated by commas, between square brackets, \texttt{[]}
+
+    \vspace{1em}
+
+    \quad \textbf{How and why:} Lists are just places to collect other objects --- being numbers, strings, or even other lists --- so you can treat them as groups.
+    \end{column}
+    \begin{column}{0.6\textwidth}
+    \normalsize Snippet 4.11 --- list indexing and slicing
+    \rule{\textwidth}{1pt}
+        \scriptsize
+        \begin{minted}{python}
+# the list
+>>> L = [4, ["abc", 8.98]]
+# get the first item of L
+>>> L[0]
+4
+# get the second element of L
+>>> L[1]
+["abc", 8.98]
+# get the first item of L's second item
+>>> L[1][0]
+"abc"
+        \end{minted}
+    \rule{\textwidth}{1pt}
+    \end{column}
+\end{columns}

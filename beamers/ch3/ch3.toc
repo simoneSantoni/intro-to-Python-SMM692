@@ -2,8 +2,8 @@
 \beamer@sectionintoc {2}{Python Objects Fundamentals}{6}{0}{2}
 \beamer@sectionintoc {3}{Built-In Python Object Types }{9}{0}{3}
 \beamer@subsectionintoc {3}{1}{Numbers \& Strings}{9}{0}{3}
-\beamer@subsectionintoc {3}{2}{Data Containers}{12}{0}{3}
-\beamer@subsectionintoc {3}{3}{Files}{17}{0}{3}
-\beamer@subsectionintoc {3}{4}{Python Statements, Syntax, and Control Flow}{19}{0}{3}
-\beamer@subsectionintoc {3}{5}{Iterators }{21}{0}{3}
-\beamer@sectionintoc {4}{Wrap-Up}{23}{0}{4}
+\beamer@subsectionintoc {3}{2}{Data Containers}{15}{0}{3}
+\beamer@subsectionintoc {3}{3}{Files}{21}{0}{3}
+\beamer@subsectionintoc {3}{4}{Python Statements, Syntax, and Control Flow}{23}{0}{3}
+\beamer@subsectionintoc {3}{5}{Iterators }{25}{0}{3}
+\beamer@sectionintoc {4}{Wrap-Up}{27}{0}{4}

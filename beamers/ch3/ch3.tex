@@ -1,5 +1,4 @@
 % !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
-
 % =========================================================================
 \documentclass[aspectratio=1610]{beamer}
 
@@ -25,6 +24,22 @@
 \usepackage{graphics}
 \usepackage{pgfplots}
 \pgfplotsset{width=7cm,compat=1.17}
+
+%% ============================== Tabular =================================
+\usepackage{booktabs}
+\usepackage{tabularx,ragged2e}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{siunitx}
+  \sisetup{detect-all}
+\usepackage{adjustbox}
+\usepackage{rotating}
+\usepackage{threeparttable}
+\usepackage[justification=centering]{caption}
+
+%% ========================== Coding snippets =============================
+% Default fixed font does not support bold face
+\usepackage{minted}
 
 % ========================= Infor on authors ==============================
 \title{Intro to Python --- SMM692}
@@ -146,10 +161,10 @@
 \section{Built-In Python Object Types }
 \subsection{Numbers \& Strings}
 
-\begin{frame}
-    \frametitle{Number Type Fundamentals}
-    \begin{columns}
-        \begin{column}{0.5\textwidth}
+\begin{frame}[fragile]{Integers and Floating Points}
+	\begin{columns}[t]
+		\begin{column}{0.45\textwidth}		
+            
             The most common number types are integers and floating-point numbers:
             \begin{itemize}
                 \item Integers are whole numbers such as 0, 4, or -12
@@ -161,28 +176,206 @@
                     is considered a floating point in Python 
                 \end{itemize}
             \end{itemize}
+	
+    \end{column}
+    
+    \begin{column}{0.45\textwidth}
+        
+        Snippet 4.1 --- doing `stuff' with numbers
+        \rule{\textwidth}{1pt}
+        \scriptsize
+        \begin{minted}{python}
+# integer addition
+>>> 1 + 1
+2
+
+# floating-point multiplication
+>>> 10 * 0.5
+5.0
+
+# 3 to the power 100
+>>> 3 ** 100
+515377520732011331036461129765621272702107522001
+
+        \end{minted}
+        \rule{\textwidth}{1pt}
+		
+    \end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Number Type Objects in Python}
+    \begin{table}[!htbp]
+    	\centering
+    	\caption*{Number Type Objects in Python}
+    	\label{tab:number_types_in_python}
+    	\begin{tabular}{ll}
+    		\toprule \toprule
+    		Literal & Interpretation\\
+    		\midrule
+    		 1234, -24, 0, 99999999999999 & Integers (unlimited size)\\
+    		 1.23, 1., 3.14e-10, 4E210, 4.0e+210 & Floating-point numbers \\
+    		 0o177, 0x9ff, 0b101010 & Octal, hex, and binary literals in 3.X \\
+    		 0177, 0o177, 0x9ff, 0b101010 & Octal, octal, hex, and binary literals in 2.X \\
+    		 3+4j, 3.0+4.0j, 3J & Complex number literals \\
+    		 set(`spam'), \{1, 2, 3, 4\} & Sets: 2.X and 3.X construction forms\\ Decimal(`1.0'), Fraction(1, 3) & Decimal and fraction extension types\\
+    		 bool(X), True, False & Boolean type and constants\\
+    		 \bottomrule
+    	\end{tabular}
+    \end{table}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{String Type Fundamentals}
+    \begin{columns}
+        \begin{column}{0.35\textwidth}
+            \quad \textbf{What:} A Python string is a positionally ordered collection of other
+            objects. Strictly speaking, strings are \textit{immutable
+            sequences} of one-character strings; other, more general sequence
+            types include lists and tuples, covered later.
+
+            \vspace{1em}
+            
+            \quad \textbf{How and why:} Strings are used to record words, contents of text files loaded into memory, Internet addresses, Python source code, and so on.
         \end{column}
-        \begin{column}{0.5\textwidth}
-            \begin{minted}{python}
-# Print a string object
-print("Bazinga")
-# Print the result of an algebraic operation
-print(2 + 4)
-	        \end{minted}
-		\rule{\textwidth}{1pt}
+        \begin{column}{0.60\textwidth}
+        \normalsize Snippet 4.6 --- Python strings as sequences
+        \rule{\textwidth}{1pt}
+        \scriptsize
+        \begin{minted}{python}
+           
+# the string
+>>> S = "Python 3.X"
+# check the length of S
+>>> len(S)
+6
+# access the first unitary string in the sequence behind S 	
+>>> S[0]
+"P"
+# access the last unitary string in the sequence behind S
+>>> S[len(S)-1]
+"X"
+# or, equivalently
+>>> S[-1]
+"X"
+# access the unitary strings between the i-th and j-th positions in the 
+# sequence behind S
+>>> S[2:5]
+"tho"
+        \end{minted}
+        \rule{\textwidth}{1pt}
         \end{column}
     \end{columns}
 \end{frame}
 
 \begin{frame}
-    \frametitle{String Type Fundamentals}
+    \frametitle{Sting Literals and Operators}
+    \begin{table}[!htbp]
+    	\centering
+    	\begin{tabular}{ll}
+    		\toprule \toprule
+    		Literal/operation & Interpretation \\
+    		\midrule
+    		\texttt{S = ""} &  Empty string \\
+    		\texttt{S = `'} &   Single quotes, same as double quotes \\
+    		\texttt{S = "spam's"} & Single quote as a string \\
+    		\texttt{S = `spam$\setminus$'s'} & Escape symbol \\
+    		\texttt{length(S)} & Length \\
+    		\texttt{S[i]} & Index \\
+    		\texttt{S[i:j]} & Slice \\
+    		\texttt{S1 + S2} & Concatenate \\
+    		\texttt{S * 3} & Repeat S $n$ times (e.g., three times)\\
+    		\texttt{"text".join(strlist)} & Join multiple strings on a character (e.g., ``text'')\\
+    		\texttt{"\{\}".format()} & String formatting expression \\ 
+   		\bottomrule
+    	\end{tabular}
+    \end{table}
+\end{frame}
+
+\begin{frame}
+    \frametitle{String Literals and Operators (cont'd)}	
+    \begin{table}[!htbp]
+        \centering
+        \begin{tabular}{ll}
+    		\toprule \toprule
+    		Literal/operation & Interpretation \\
+    		\midrule
+     		\texttt{S.strip()} & Remove white spaces \\
+    		\texttt{S.replace("pa", "xx")} & Replacement \\
+    		\texttt{S.split(",")} & Split on a character (e.g., ``,'') \\
+    		\texttt{S.lower()} & Case conversion --- to lower case \\
+    		\texttt{S.upper()} & Case conversion --- to upper case \\
+            \texttt{S.find("text")} & Search substring (e.g., "text") \\
+    		\texttt{S.isdigit()} & Test if the string is a digit \\
+    		\texttt{S.endswith("spam")} & End test \\
+            \texttt{S.startswith("spam")} & Start test \\
+    		\texttt{S = """...multiline..."""} & Triple-quoted block strings \\
+    		\bottomrule
+    	\end{tabular}
+    \end{table}
 \end{frame}
 
 \subsection{Data Containers}
 
-\begin{frame}
+\begin{frame}[fragile]
     \frametitle{List Type Fundamentals}
+\begin{columns}
+    \begin{column}{0.35\textwidth}
+    \quad \textbf{What:} A Python \href{https://docs.python.org/3/tutorial/datastructures.html}{\texttt{list}} is an \emph{ordered}, \emph{mutable} array of objects. A list is constructed by specifying the objects, separated by commas, between square brackets, \texttt{[]}
+    
+    \vspace{1em}
+
+    \quad \textbf{How and why:} Lists are just places to collect other objects --- being numbers, strings, or even other lists --- so you can treat them as groups.
+    \end{column}
+    \begin{column}{0.6\textwidth}
+    \normalsize Snippet 4.11 --- list indexing and slicing 
+    \rule{\textwidth}{1pt}
+        \scriptsize
+        \begin{minted}{python}          
+# the list
+>>> L = [4, ["abc", 8.98]]
+# get the first item of L
+>>> L[0]
+4
+# get the second element of L
+>>> L[1]
+["abc", 8.98]
+# get the first item of L's second item
+>>> L[1][0]
+"abc"
+        \end{minted}
+    \rule{\textwidth}{1pt}
+    \end{column}
+\end{columns}
 \end{frame}
+
+\begin{frame}
+    \frametitle{Popular List Methods}
+    \begin{table}[!htbp]
+    	\centering
+        \small
+    	\begin{tabular}{lp{10cm}}
+    		\toprule \toprule
+    		Method & Synopsis \\
+    		\midrule 
+    		\texttt{L.append(X)} & Append an item to an existing list\\
+    		\texttt{L.insert(i, X)} & Append an item to an existing list in position $i$ \\
+    		\texttt{L.extend([X0, X1, X2])} & Extend an existing list with the items from another list\\
+    		\texttt{L.index(X)} & Get the index of the first instance of the argument in an existing list\\
+    		\texttt{L.count(X)} & Get the cardinality of an item in an existing list\\
+    		\texttt{L.sort()} & Sort the items in an existing list\\
+    		\texttt{L.reverse()} & Reverse the order of the items in an existing list\\
+    		\texttt{L.copy()} & Get a copy of an existing list\\
+    		\texttt{L.pop(i)} & Remove the item at the given position in the list, and return it\\
+    		\texttt{L.remove(X)} & Remove the first instance of an item in an existing list\\
+    		\texttt{L.clear()} & Remove all items in an existing list\\
+    		\bottomrule 
+    	\end{tabular}
+    \end{table}
+\end{frame}
+
+
 \begin{frame}
     \frametitle{Dictionary Type Fundamentals}
 \end{frame}
