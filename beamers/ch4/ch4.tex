@@ -1,0 +1,61 @@
+% =========================================================================
+\documentclass[aspectratio=1610]{beamer}
+
+% ========================= Theme =========================================
+\usetheme{CambridgeUS}
+\usecolortheme{default}
+
+% ========================= Packages ======================================
+\usepackage{calc}
+\usepackage{tikz}
+\usetikzlibrary{arrows,
+                arrows.meta,
+                calc,
+		chains,
+                quotes,
+                positioning,
+		shapes,
+                shapes.geometric}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{pgfplots}
+\pgfplotsset{width=7cm,compat=1.17}
+
+% ========================= Infor on authors ==============================
+\title{Intro to Python --- SMM692}
+\subtitle{Organization of the Module}
+\author{Simone Santoni}
+\institute{Bayes Business School}
+\date{MSc Pre-Course Series}
+
+% ============================ Colors =====================================
+\definecolor{base_c}{rgb}{0.6,0,0}
+\definecolor{comp_c}{rgb}{0.09803921568627451, 0.6901960784313725, 0.7529411764705882}
+\definecolor{tri_1}{rgb}{0.09803921568627451, 0.7686274509803922, 0.19215686274509805}
+\definecolor{tri_2}{rgb}{0.19215686274509805, 0.09803921568627451, 0.7686274509803922}
+
+% ========================= TOC  ==========================================
+\AtBeginSubsection[]
+{
+    \begin{frame}
+        \frametitle{Outline}
+        \tableofcontents[currentsection,currentsubsection]
+    \end{frame}
+}
+
+% ========================= Document  ====================================
+\begin{document}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+	\tableofcontents
+\end{frame}
+
+% ------------------------- Background -----------------------------------
+
+\section{Background}
+
+\end{document}
