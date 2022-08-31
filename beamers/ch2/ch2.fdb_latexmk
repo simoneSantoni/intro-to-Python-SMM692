@@ -1,10 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1658957777 "/Users/sbbk475/githubRepos/intro-to-Python-SMM692/beamers/ch2/ch2.tex" "/Users/sbbk475/githubRepos/intro-to-Python-SMM692/beamers/ch2/ch2.pdf" "ch2" 1658957777
-  "/Users/sbbk475/githubRepos/intro-to-Python-SMM692/beamers/ch2/ch2.aux" 1658957777 8 a94a2480d3289e625eea47cd1b285758 ""
+["pdflatex"] 1661948863 "/Users/sbbk475/githubRepos/intro-to-Python-SMM692/beamers/ch2/ch2.tex" "/Users/sbbk475/githubRepos/intro-to-Python-SMM692/beamers/ch2/ch2.pdf" "ch2" 1661948863
+  "/Users/sbbk475/githubRepos/intro-to-Python-SMM692/beamers/ch2/ch2.aux" 1661948863 8 a94a2480d3289e625eea47cd1b285758 ""
   "/Users/sbbk475/githubRepos/intro-to-Python-SMM692/beamers/ch2/ch2.nav" 0 -1 0 ""
   "/Users/sbbk475/githubRepos/intro-to-Python-SMM692/beamers/ch2/ch2.tex" 1658957649 13101 ab4032540f4ed8e1d584c93349642ca2 ""
   "/Users/sbbk475/githubRepos/intro-to-Python-SMM692/beamers/ch2/ch2.toc" 0 -1 0 ""
-  "/dev/null" 1658957777 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "/dev/null" 1661948868 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/jknappen/ec/tctt1000.tfm" 1136768653 1536 c5729d01ab121276cf99b309129349a0 ""
@@ -326,14 +326,14 @@
   "images/simple_script.png" 1658936231 89056 6993bb9347bc467dbd1d009f05eeda74 ""
   "images/vscode.png" 1658936231 173142 3fd04b9f36699a8ae57d798c29b19874 ""
   (generated)
+  "ch2.aux"
+  "/Users/sbbk475/githubRepos/intro-to-Python-SMM692/beamers/ch2/ch2.log"
   "/Users/sbbk475/githubRepos/intro-to-Python-SMM692/beamers/ch2/ch2.pdf"
   "ch2.vrb"
-  "ch2.aux"
-  "ch2.pdf"
-  "/Users/sbbk475/githubRepos/intro-to-Python-SMM692/beamers/ch2/ch2.log"
+  "ch2.log"
   "ch2.pyg"
   "ch2.toc"
-  "ch2.log"
   "ch2.snm"
-  "ch2.nav"
   "ch2.out"
+  "ch2.nav"
+  "ch2.pdf"

@@ -1,3 +1,5 @@
+% !TeX TXS-program:compile = txs:///pdflatex/[--shell-escape]
+
 % =========================================================================
 \documentclass[aspectratio=1610]{beamer}
 
@@ -5,7 +7,10 @@
 \usetheme{CambridgeUS}
 \usecolortheme{default}
 
-% ========================= Packages ======================================
+% ========================= Essential packages ============================
+\usepackage{hyperref}
+
+% ========================= Plotting ======================================
 \usepackage{calc}
 \usepackage{tikz}
 \usetikzlibrary{arrows,
@@ -23,7 +28,7 @@
 
 % ========================= Infor on authors ==============================
 \title{Intro to Python --- SMM692}
-\subtitle{Organization of the Module}
+\subtitle{Python Objects}
 \author{Simone Santoni}
 \institute{Bayes Business School}
 \date{MSc Pre-Course Series}
@@ -56,6 +61,162 @@
 
 % ------------------------- Background -----------------------------------
 
-\section{Background}
+\section{The Chapter in a Nutshell}
+
+\begin{frame}
+    \frametitle{Scope}
+    In Chapter 3, the attention revolves around the following topics:
+
+    \begin{itemize}
+        \item The concept of Python object 
+        \item The types of Python objects
+        \item The characteristics of each Python object
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Why Shall I Learn About Python Objects?}
+    \begin{itemize}
+    	\item Built-in objects make coding efficient and easy
+        \begin{itemize}
+            \item  For example, using the \href{https://docs.python.org/3/tutorial/introduction.html\#strings}{string} object, we can represent and manipulate a piece of text --- e.g., a newspaper article --- without loading any \href{https://docs.python.org/3/tutorial/modules.html}{module}
+        \end{itemize}
+           	\item Built-in objects are flexible
+            \begin{itemize}
+                \item For example, we can deploy built-in objects to create a \href{https://docs.python.org/3/tutorial/classes.html}{class}
+            \end{itemize}
+    	\item Built-in objects have been created and refined over time by a large community of expert developers. Hence, they are  often  more  efficient  than  ad-hoc objects (unless the creator of the ad-hoc object knows her business!)
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Learning Goals}
+    At the end of the chapter, you will be able to evaluate the various types of Python objects regarding:
+    \begin{itemize}
+        \item Key features
+        \item Use cases/roles
+        \item Available methods
+    \end{itemize}
+\end{frame}
+
+\section{Python Objects Fundamentals}
+
+\begin{frame}
+    \frametitle{What is a Python Object?}
+    
+    In essence, Python objects are pieces of data. Mark Lutz, the author of the popular book \href{https://www.google.co.uk/books/edition/Learning_Python/4pgQfXQvekcC?hl=en&gbpv=0}{\textcolor{blue}{Learning Python}}, points out
+
+    \vspace{2em}
+    
+    \begin{quote}
+    \textit{``... in Python, we do things with stuff. ``Things'' take the form of operations like addition and concatenation, and ``stuff'' refers to the objects on which we perform those operations''}
+    \end{quote}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{What Are the Main Families of Python Objects?}
+    In Python, there are two families of objects:
+    
+    \begin{itemize}
+        \item Built-in objects provided by the Python language itself
+        \item Ad-hoc objects --- called \href{https://docs.python.org/3/tutorial/classes.html}{classes} --- we can create to accomplish specific goals
+    \end{itemize}
+    
+    \end{frame}
+
+\begin{frame}
+    \frametitle{What Are the Main Types of Built-In Python Objects?}
+    \begin{itemize}
+        \item Strings
+        \item Numbers
+        \item Data containers
+        \begin{itemize} 
+            \item Lists 
+            \item Dictionaries
+            \item Tuples 
+            \item Sets 
+        \end{itemize}
+        \item Files 
+        \item Python statements, syntax, and control flow
+        \item Iterators 
+    \end{itemize}
+\end{frame}
+
+\section{Built-In Python Object Types }
+\subsection{Numbers \& Strings}
+
+\begin{frame}
+    \frametitle{Number Type Fundamentals}
+    \begin{columns}
+        \begin{column}{0.5\textwidth}
+            The most common number types are integers and floating-point numbers:
+            \begin{itemize}
+                \item Integers are whole numbers such as 0, 4, or -12
+                \item Floating-point numbers represent real numbers such as 0.5, 3.1415, or -1.6e-19
+                \begin{itemize}
+                    \item However, floating points in Python do not have --- in general
+                    --- the same value as the real number they represent
+                    \item It is worth noticing that any single number with a period `.'
+                    is considered a floating point in Python 
+                \end{itemize}
+            \end{itemize}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \begin{minted}{python}
+# Print a string object
+print("Bazinga")
+# Print the result of an algebraic operation
+print(2 + 4)
+	        \end{minted}
+		\rule{\textwidth}{1pt}
+        \end{column}
+    \end{columns}
+\end{frame}
+
+\begin{frame}
+    \frametitle{String Type Fundamentals}
+\end{frame}
+
+\subsection{Data Containers}
+
+\begin{frame}
+    \frametitle{List Type Fundamentals}
+\end{frame}
+\begin{frame}
+    \frametitle{Dictionary Type Fundamentals}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Tuple Type Fundamentals}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Set Type Fundamentals}
+\end{frame}
+
+\subsection{Files}
+
+\begin{frame}
+    \frametitle{...}
+\end{frame}
+
+\subsection{Python Statements, Syntax, and Control Flow}
+
+\begin{frame}
+    \frametitle{...}
+\end{frame}
+
+\subsection{Iterators }
+
+\begin{frame}
+    \frametitle{...}
+\end{frame}
+
+\section{Wrap-Up}
+
+\begin{frame}
+    \frametitle{At the End of the Chapter, You Will Be Able to...}
+\end{frame}
 
 \end{document}
