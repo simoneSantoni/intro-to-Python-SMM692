@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{\PYGZsh{} print the result of a mathematical operation carried out over a list of items}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{item} \PYG{o+ow}{in} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{99}\PYG{p}{,} \PYG{l+m+mi}{13}\PYG{p}{,} \PYG{l+m+mf}{6.54}\PYG{p}{]:}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{item} \PYG{o}{**} \PYG{l+m+mf}{0.5}\PYG{p}{)}
+\PYG{l+m+mf}{0.0}
+\PYG{p}{(}\PYG{l+m+mf}{6.092540900222253e\PYGZhy{}16}\PYG{o}{+}\PYG{l+m+mi}{99498743710662}\PYG{n}{j}\PYG{p}{)}
+\PYG{l+m+mi}{3605551275463989}
+\PYG{l+m+mf}{2.5573423705088842}
+\PYG{c+c1}{\PYGZsh{} run a mathematical operation on a list of items and append the outcome}
+\PYG{c+c1}{\PYGZsh{} to a second list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{input} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{output} \PYG{o}{=} \PYG{p}{[]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{item} \PYG{o+ow}{in} \PYG{n+nb}{input}\PYG{p}{:}
+\PYG{o}{...}    \PYG{n}{output}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{item} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{output}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}
+\end{Verbatim}

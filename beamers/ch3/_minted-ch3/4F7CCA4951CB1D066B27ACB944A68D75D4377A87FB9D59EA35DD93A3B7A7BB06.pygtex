@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} the tuple}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{T} \PYG{o}{=} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} access a tuple element}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{T}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}
+\PYG{l+s+s2}{\PYGZdq{}Captain Marvel\PYGZdq{}}
+\PYG{c+c1}{\PYGZsh{} access a tuple element}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{T}\PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{l+m+mi}{3}
+\end{Verbatim}

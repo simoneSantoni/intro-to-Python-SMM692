@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} loop until reaching a numeric threshold}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{while} \PYG{n}{i} \PYG{o}{\PYGZlt{}=} \PYG{l+m+mi}{3}\PYG{p}{:}
+\PYG{o}{...}     \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{i}\PYG{p}{)}
+\PYG{o}{...}     \PYG{n}{i} \PYG{o}{=} \PYG{n}{i} \PYG{o}{+} \PYG{l+m+mi}{1}
+\PYG{l+m+mi}{0}
+\PYG{l+m+mi}{1}
+\PYG{l+m+mi}{2}
+\PYG{l+m+mi}{3}
+\PYG{c+c1}{\PYGZsh{} run a mathematical operation on a list of items and}
+\PYG{c+c1}{\PYGZsh{} append the outcome to a second list}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{input} \PYG{o}{=} \PYG{p}{[}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{8}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n}{output} \PYG{o}{=} \PYG{p}{[]}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{k}{for} \PYG{n}{item} \PYG{o+ow}{in} \PYG{n+nb}{input}\PYG{p}{:}
+\PYG{o}{...}    \PYG{n}{output}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{item} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{o}{\PYGZgt{}\PYGZgt{}\PYGZgt{}} \PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{output}\PYG{p}{)}
+\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{9}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{]}
+\end{Verbatim}
