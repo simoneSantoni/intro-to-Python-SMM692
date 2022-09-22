@@ -1,6 +1,0 @@
-\beamer@sectionintoc {1}{Background}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{Justification for SMM692}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{Scope of SMM692}{6}{0}{1}
-\beamer@sectionintoc {2}{Learning/Teaching Actitivies}{10}{0}{2}
-\beamer@subsectionintoc {2}{1}{Phylosophy Behind SMM692}{10}{0}{2}
-\beamer@subsectionintoc {2}{2}{Assessment}{13}{0}{2}

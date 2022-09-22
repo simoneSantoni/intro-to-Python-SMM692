@@ -1,9 +1,0 @@
-\beamer@sectionintoc {1}{The Chapter in a Nutshell}{3}{0}{1}
-\beamer@sectionintoc {2}{Python Objects Fundamentals}{6}{0}{2}
-\beamer@sectionintoc {3}{Built-In Python Object Types }{9}{0}{3}
-\beamer@subsectionintoc {3}{1}{Numbers \& Strings}{9}{0}{3}
-\beamer@subsectionintoc {3}{2}{Data Containers}{15}{0}{3}
-\beamer@subsectionintoc {3}{3}{Files}{24}{0}{3}
-\beamer@subsectionintoc {3}{4}{Python Statements, Syntax, and Control Flow}{27}{0}{3}
-\beamer@subsectionintoc {3}{5}{Iterators }{30}{0}{3}
-\beamer@sectionintoc {4}{Wrap-Up}{33}{0}{4}
